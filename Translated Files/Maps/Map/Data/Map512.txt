@@ -1,0 +1,559 @@
+Display Name = "北のお化け屋敷 第1層"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    TintScreen(["Tone(@red=-68.0, @green=-68.0, @blue=-68.0, @gray=0.0)", 1, false])
+    EraseEvent([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([12, "$game_player.x == 9 && $game_player.direction == 4 && $game_player.y >= 22"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=42, @parameters=[200])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=42, @parameters=[200])"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([12, "$game_player.x == 9 && $game_player.direction == 6 && $game_player.y >= 22"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=42, @parameters=[255])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=42, @parameters=[255])"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([12, "$game_player.x == 4 && $game_player.y >= 8"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=42, @parameters=[200])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=42, @parameters=[200])"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([12, "$game_player.x == 5 && $game_player.y >= 8"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=42, @parameters=[255])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=42, @parameters=[255])"])
+      Empty([])
+
+    BranchEnd([])
+    Wait([2])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 513, 70, 71, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 513, 42, 43, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 551, 11, 3, 4, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 513, 57, 43, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["doll_fc1", 2, 0, 2])
+      ShowText(["【呪いの人形娘】"])
+      ShowText(["このお屋敷、間取りが変になっちゃった。"])
+      ShowText(["いつも迷っちゃうの……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["doll_fc1", 2, 0, 2])
+      ShowText(["【呪いの人形娘】"])
+      ShowText(["世界が平和になったんだって。"])
+      ShowText(["でも、変になったお屋敷は戻らないね……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 551, 11, 3, 4, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["ghost_fc1", 0, 0, 2])
+    ShowText(["【ゴースト】"])
+    ShowText(["合一前は、ここにドアがあったんだけど……"])
+    ShowText(["壁に埋まっちゃったみたいね。"])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    TintScreen(["Tone(@red=0.0, @green=0.0, @blue=0.0, @gray=0.0)", 1, false])
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 222, 235, 0, 0])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    TintScreen(["Tone(@red=0.0, @green=0.0, @blue=0.0, @gray=0.0)", 1, false])
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 222, 235, 0, 0])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    TintScreen(["Tone(@red=0.0, @green=0.0, @blue=0.0, @gray=0.0)", 1, false])
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 222, 235, 0, 0])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 513, 29, 71, 0, 0])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    TintScreen(["Tone(@red=0.0, @green=0.0, @blue=0.0, @gray=0.0)", 1, false])
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 222, 235, 0, 0])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    TintScreen(["Tone(@red=0.0, @green=0.0, @blue=0.0, @gray=0.0)", 1, false])
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 222, 235, 0, 0])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    TintScreen(["Tone(@red=0.0, @green=0.0, @blue=0.0, @gray=0.0)", 1, false])
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 222, 235, 0, 0])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ConditionalBranch([1, 1316, 0, 0, 0])
+      ConditionalBranch([0, 1005, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["ここは、北のお化け屋敷だな。"])
+        ShowText(["クロムが根城にしていた場所だが――"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1006, 0])
+        ShowTextAttributes(["alice_fc1", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["ここは、北のお化け屋敷だな。"])
+        ShowText(["クロムが根城にしていた場所だが――"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1007, 0])
+        ShowTextAttributes(["alice_fc7", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["ここは、北のお化け屋敷だな。"])
+        ShowText(["クロムが根城にしていた場所だが――"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1316, 0, 1, 0])
+      ConditionalBranch([0, 1005, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["さて、北のお化け屋敷に到着したな。"])
+        ShowText(["クロムのゾンビがさまよっているという噂は、果たして――"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1006, 0])
+        ShowTextAttributes(["alice_fc1", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["さて、北のお化け屋敷に到着したな。"])
+        ShowText(["クロムのゾンビがさまよっているという噂は、果たして――"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1007, 0])
+        ShowTextAttributes(["alice_fc7", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["さて、北のお化け屋敷に到着したな。"])
+        ShowText(["クロムのゾンビがさまよっているという噂は、果たして――"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["……何か来る！"])
+    ControlSwitches([31, 31, 0])
+    SetMoveRoute([19, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Wait([30])
+    ShowPicture([5, "80_dragonbone_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["dragonbone_fc1", 0, 0, 2])
+    ShowText(["【？？？】"])
+    ShowText(["……………………"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["そこに現れたのは、得体の知れない妖魔だった。"])
+    ShowText(["間違ってこの世界に迷い込んでしまったような、異質な気配。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["しかもその顔は、クロムに似ている――"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["あの、君は……"])
+    ShowTextAttributes(["dragonbone_fc1", 0, 0, 2])
+    ShowText(["【？？？】"])
+    ShowText(["……………………"])
+    ErasePicture([5])
+    SetMoveRoute([19, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["謎の妖魔は、僕達を一瞥すると立ち去ってしまった――"])
+    Wait([30])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["やけに奇妙な妖魔だったな……"])
+      ShowText(["いや、淫魔なのか？　"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["やけに奇妙な妖魔だったな……"])
+      ShowText(["いや、淫魔なのか？　"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["やけに奇妙な妖魔だったな……"])
+      ShowText(["いや、淫魔なのか？　"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 21, 0])
+      ShowTextAttributes(["tamamo_fc1", 3, 0, 2])
+      ShowText(["【たまも】"])
+      ShowText(["ウチにも分からん……"])
+      ShowText(["あんな虚ろな気配は初めてじゃ……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 22, 0])
+      ShowTextAttributes(["tamamo_fc2", 0, 0, 2])
+      ShowText(["【玉藻】"])
+      ShowText(["ウチにも分からん……"])
+      ShowText(["あんな虚ろな気配は初めてじゃ……"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["奇妙な事に、さっきの妖魔が何なのかよく分からない。"])
+    ShowText(["ひどく胡乱で虚ろ、現世に生きている存在に見えないのだ。"])
+    ShowTextAttributes(["kagetumugi_fc7", 2, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["今のは、いったい何なのです……？"])
+    ShowText(["ああまで奇妙なモノは、私でさえ見た事がありません。"])
+    ShowTextAttributes(["kagetumugi_fc7", 2, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["ゾンビやゴーストなどのアンデッド要素も混じっていました。"])
+    ShowText(["奇妙な事に、ゾンビなのかゴーストなのか判然としない……"])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["影紬……貴様は魔芸師、人形やゴーストにも通じているな。"])
+      ShowText(["魔王人形などを造った貴様ならば、ゾンビにも詳しいはず。"])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["それなのに、さっきのアレが何なのか……"])
+      ShowText(["貴様でも分からんというのか？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["影紬……貴様は魔芸師、人形やゴーストにも通じているな。"])
+      ShowText(["魔王人形などを造った貴様ならば、ゾンビにも詳しいはず。"])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["それなのに、さっきのアレが何なのか……"])
+      ShowText(["貴様でも分からんというのか？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["影紬……貴様は魔芸師、人形やゴーストにも通じているな。"])
+      ShowText(["魔王人形などを造った貴様ならば、ゾンビにも詳しいはず。"])
+      ShowTextAttributes(["alice_fc7", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["それなのに、さっきのアレが何なのか……"])
+      ShowText(["貴様でも分からんというのか？"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["kagetumugi_fc7", 2, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["見当がつきません。"])
+    ShowText(["ただ、確かなのは……あれは人工の産物であるということ。"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["自然に生まれたのではなく、誰かが造ったもの……"])
+    ShowText(["それがあなたの見解なのですね。"])
+    ShowTextAttributes(["kagetumugi_fc7", 4, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["あれは、何者かの「作品」です。"])
+    ShowText(["間違っていたら腹を斬っても構いませんよ……"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["残念ながら、あなたにハラキリ機能はありませんよ。"])
+    ShowText(["ともかく、まったく得体の知れない相手ですね……"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["クロムを探しに来て、奇妙な存在に遭遇した。"])
+    ShowText(["しかもそれが、クロム本人なのかもしれない――"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["とにかく、後を追おう。"])
+    ShowText(["あの妖魔が何者なのか、調べるんだ。"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["あの妖魔は、正面にまっすぐ進んでいきました。"])
+    ShowText(["おそらく、地下通路に向かったのでしょう。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["このまままっすぐ進んだ先――"])
+    ShowText(["二つの階段の間に、地下への階段があったはず。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["おそらく、そこを降りて地下に向かったのだ。"])
+    ShowText(["あの妖魔の後を追い、クロムとの関連を調べよう――"])
+    ConditionalBranch([4, 698, 0])
+      ShowTextAttributes(["sinigami_fc1", 0, 0, 2])
+      ShowText(["【死神】"])
+      ShowText(["あんなものが歩いているとは……"])
+      ShowText(["死神の面目が丸潰れだな……"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["えっ？　何か言った……？"])
+      ShowTextAttributes(["sinigami_fc1", 0, 0, 2])
+      ShowText(["【死神】"])
+      ShowText(["いや……何でもない。"])
+      Empty([])
+
+    BranchEnd([])
+    ControlVariables([1316, 1316, 0, 0, 2])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["宝箱はミミック娘だった！"])
+    BattleProcessing([0, 2346, false, false])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([4398, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["宝箱はミミック娘だった！"])
+    BattleProcessing([0, 2346, false, false])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([850, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["doll_fc1", 0, 0, 2])
+    ShowText(["【呪いの人形娘】"])
+    ShowText(["お台所は、こっち……"])
+    ShowText(["つまみ食いは、ダメだよ。"])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    CallCommonEvent([9021])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    CallCommonEvent([9021])
+    Empty([])
+
+  Page 1
+    Empty([])

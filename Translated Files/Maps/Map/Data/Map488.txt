@@ -1,0 +1,250 @@
+Display Name = "レミナ研究所 第二区画"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    CallCommonEvent([410])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["それでラプラス、次の部屋はどこだ？"])
+    ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+    ShowText(["【ラプラス】"])
+    ShowText(["真っ直ぐ進んで、西への通路を曲がります。"])
+    ShowText(["しばらく進んで、突き当たりを北に。"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["上、左、上か……"])
+    ShowText(["要は、この区画の入り口から直進して正面の部屋だな。"])
+    ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+    ShowText(["【ラプラス】"])
+    ShowText(["はい、その通りです。"])
+    ShowText(["敵の電子妨害も激しくなっています、どうかお急ぎを。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["分かった……さあ、急ごう！"])
+    ConditionalBranch([4, 774, 0])
+      ShowTextAttributes(["pramia_fc2", 0, 0, 2])
+      ShowText(["【プッチーナ】"])
+      ShowText(["私の冷気で、道を切り開いてあげるわ……"])
+      ConditionalBranch([4, 354, 0])
+        ShowTextAttributes(["shirokuma_fc1", 0, 0, 2])
+        ShowText(["【クヌート】"])
+        ShowText(["さむさむ……"])
+        ShowTextAttributes(["pramia_fc2", 2, 0, 2])
+        ShowText(["【プッチーナ】"])
+        ShowText(["この子が、私から露骨に距離を置いている……"])
+        ShowText(["ちょっと寂しい……"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ControlSelfSwitch(["A", 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 40, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["ドアは厳重にロックされている……"])
+      ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+      ShowText(["【ラプラス】"])
+      ShowText(["その部屋ではありません。"])
+      ShowText(["そこから南に進み、曲がり角を東、突き当たりを南です。"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["alice_fc1", 3, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["次はこの部屋で良いのだな……"])
+      ShowText(["よし、入るぞ。"])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 489, 20, 35, 0, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 41, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["ドアは厳重にロックされている……"])
+      ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+      ShowText(["【ラプラス】"])
+      ShowText(["そこは時空転送装置のある部屋ですが……"])
+      ShowText(["まずは、別室でロックを解除して下さい。"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["ドアのロックは解除されている……"])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ここが、時空転送装置のある部屋だな。"])
+      ShowText(["よし、入るぞ……"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["ああ……"])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    ControlSwitches([34, 34, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 490, 18, 37, 0, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 491, 10, 4, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 491, 10, 4, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 491, 10, 4, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 487, 14, 3, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 487, 14, 3, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 487, 14, 3, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+    ShowText(["【ラプラス】"])
+    ShowText(["それでは、残り二カ所のロック解除をお願いします。"])
+    ShowText(["まずは――"])
+    ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+    ShowText(["【ラプラス】"])
+    ShowText(["少し進むと分かれ道がありますので、東に曲がって下さい。"])
+    ShowText(["突き当たりを南、その正面にある部屋です。"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["少し進んで東、突き当たりを南……だな。"])
+    ShowText(["分かった、今から行く。"])
+    ConditionalBranch([4, 382, 0])
+      ShowTextAttributes(["morrigan_fc1", 0, 0, 2])
+      ShowText(["【モリガン】"])
+      ShowText(["えっと……どういうルートだったっけ？"])
+      ShowText(["まあ、みんなについて行けばいいや！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 776, 0])
+      ShowTextAttributes(["dragonp_fc2", 0, 0, 2])
+      ShowText(["【グランパピー】"])
+      ShowText(["散発的にだが、敵の妨害もあるだろう。"])
+      ShowText(["我が槍の振るいどころは不足しそうにないな……"])
+      Empty([])
+
+    BranchEnd([])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    CallCommonEvent([410])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    CallCommonEvent([410])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "通行止め"
+
+  Page 0
+    Empty([])

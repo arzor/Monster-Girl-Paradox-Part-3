@@ -1,0 +1,240 @@
+Display Name = "Château des Romances"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 874, 10, 48, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 874, 10, 48, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 874, 10, 48, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([1, 1208, 0, 13, 2])
+      ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+      ShowText(["\\n<Rigeo>We can't turn back just yet..."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Wait([30])
+    PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 328, 187, 2, 1])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>We've managed to escape somehow..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Let's get started with the strategy meeting.\nEveryone, come to the Pocket Castle."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Alice took out the Pocket Castle!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Let's get started with the strategy meeting.\nEveryone, come to the Pocket Castle."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Ilias took out the Pocket Castle!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["byakunen_fc1", 1, 0, 2])
+    ShowText(["\\n<Hakunen>To think we can go inside such a little castle...\nWhat a mysterious tool!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 1, 0, 2])
+      ShowText(["\\n<Alice>Fufufu, amazing, isn't it...?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+      ShowText(["\\n<Ilias>Fufufu, this thing sure is good.\nI took it from the Monster Lord of this world..."])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+    FadeoutBGM([1])
+    FadeoutScreen([])
+    Wait([60])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["All of us gathered in a room of the Pocket Castle to plan a strategy for the final battle against the Queen of Dreams--"])
+    Wait([60])
+    ChangeTransparency([0])
+    ControlSwitches([31, 31, 1])
+    TransferPlayer([0, 943, 22, 19, 0, 2])
+    FadeinScreen([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Script(["keep_all_equip"])
+    Script(["set_temp_actors(807,808,812,815,811,813,816,817)"])
+    RecoverAll([0, 0])
+    ShowPicture([1, "iv_castle1", 0, 0, 0, 0, 100, 100, 255, 0])
+    FadeinScreen([])
+    PlayBGM(["RPG::BGM(@name=\"boss0\", @volume=100, @pitch=100)"])
+    Wait([60])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>So that's the Château des Romances..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It's definitely a sight that makes me doubt my own eyes.\nThere's no way that this huge, bizarre castle could possibly be real."])
+    ShowTextAttributes(["rejeo_fc1", 1, 0, 2])
+    ShowText(["\\n<Rigeo>Oh no, we were too late..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["In the end, we were unable to stop the summoning of the Demonic Castle that Fulbeua mentioned. Something had come up just before we reached Grand Noah..."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>However... The Land of Night appears to be spreading slower than I imagined. There might've been a mistake when she summoned the Demonic Castle..."])
+    ShowTextAttributes(["byakunen_fc1", 0, 0, 2])
+    ShowText(["\\n<Hakunen>Does that mean...we still have time?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["If the Demonic Castle had appeared, this world should've fallen towards ruin immediately. But it doesn't appear to be that way right now..."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>But it's only a matter of time.\nEven as we speak, the power of dreams from the Demonic Castle is encroaching upon reality."])
+    ShowTextAttributes(["magatu_fc1", 2, 0, 2])
+    ShowText(["\\n<Magatsu>In that case, we'd better act fast.\nWhat can we do about this, Rigeo?"])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>...I can feel some connection with the Land of Night inside the castle. Perhaps...there is a gate to another world inside?"])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>If we can seal that gate...\nWould that mean this world would be saved?"])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That's\\*\\fi if\\*\\fi we are able to seal it...\nBut how might we do that...?"])
+    ShowTextAttributes(["byakunen_fc1", 0, 0, 2])
+    ShowText(["\\n<Hakunen>This gate is like that black vortex, right?\nThe ones that sucked us into this world...?"])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Yes, but I imagine this one is much larger.\nI wouldn't know how to close it..."])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>At any rate, none of us have seen it.\nI can only imagine what it is..."])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>Instead of scratching our heads here...\nShouldn't we be trying different things once we come across the real deal?"])
+    ShowTextAttributes(["byakunen_fc1", 2, 0, 2])
+    ShowText(["\\n<Hakunen>Didn't we just escape from that game...?\nI'm a little worried..."])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>If we waste this chance, our options will be narrowed. We need to take action while we still have time."])
+    ShowTextAttributes(["magatu_fc1", 2, 0, 2])
+    ShowText(["\\n<Magatsu>Even if things are getting desperate, we gotta do this--right?"])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>...In the end, we're just going to have to take this head-on. There's no other way we can go about this, is there?"])
+    ShowTextAttributes(["lawrat_fc1", 0, 0, 2])
+    ShowText(["\\n<Lauratt>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Lauratt quietly nodded.\nA strong determination could be seen in his eyes."])
+    ShowTextAttributes(["lanpass_fc2", 3, 0, 2])
+    ShowText(["\\n<Lampas>Weelll, I'm gonna leave the hard stuff to you guys. Me, I'm just going to spread my pollen around."])
+    ShowTextAttributes(["youkosan_fc1", 0, 0, 2])
+    ShowText(["\\n<Dream Fox>Same here.\nI'm just a fox to be honest."])
+    ShowTextAttributes(["mukuro_fc1", 3, 0, 2])
+    ShowText(["\\n<Mukuro>I'm not familiar with the circumstances of this world. My only purpose is to protect Kazuya."])
+    ShowTextAttributes(["mukuro_fc1", 3, 0, 2])
+    ShowText(["\\n<Mukuro>Will Kazuya return to his own world when this is done? If so, then I shall take this on with all my strength."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It's settled then.\nWe will be entering the Château des Romances from the front..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Reckless as this may be, we have no other choice.\nIf we just stand around with our hands behind our backs, this world will fall into ruin."])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>Everyone's prepared...? All right, let's go!"])
+    ShowTextAttributes(["byakunen_fc1", 0, 0, 2])
+    ShowText(["\\n<Hakunen>Understood, I'll accompany you!"])
+    ShowTextAttributes(["lawrat_fc1", 0, 0, 2])
+    ShowText(["\\n<Lauratt>......!!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Thus, the heroes set forth towards the Demonic Castle..."])
+    PlaySE(["RPG::SE(@name=\"mon_asioto3\", @pitch=100, @volume=100)"])
+    FadeoutBGM([1])
+    FadeoutScreen([])
+    Wait([120])
+    ErasePicture([1])
+    FadeinScreen([])
+    ShowTextAttributes(["byakunen_fc1", 0, 0, 2])
+    ShowText(["\\n<Hakunen>There's something really strange about this atmosphere... It feels both horrific and peaceful at the same time."])
+    ScrollMap([8, 5, 4])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>The Château des Romances... I was never able to explore much of it, but what I see before us looks almost no different from the Demonic Castle of our world."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Rigeo cautiously checks her surroundings..."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>But these gargoyles aren't moving...\nI wonder why they aren't attacking us...?"])
+    ScrollMap([2, 5, 4])
+    ShowTextAttributes(["magatu_fc1", 2, 0, 2])
+    ShowText(["\\n<Magatsu>What's a gargoyle...?"])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>They're those stone statues, and they too are Nightmares. Normally, they would attack us as soon as we approach them..."])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>Well, I guess that means we won't have to do any extra fighting. Okay then, let's proceed with caution..."])
+    ControlVariables([1208, 1208, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])

@@ -1,0 +1,203 @@
+Display Name = "レミナ研究所"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 780, 8, 55, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 778, 57, 49, 8, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 778, 57, 49, 8, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 778, 57, 49, 8, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([4401, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShotBalloonIcon([8, 1, false])
+    Wait([60])
+    SetMoveRoute([8, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=14, @parameters=[5, 0])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[5, 0])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ShowPicture([5, "80_zoloct_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["zoloct_fc1", 0, 0, 2])
+    ShowText(["【ゾルオクト】"])
+    ShowText(["あら、侵入者ですね。"])
+    ShowText(["生物は捕獲して、サンプルとしましょう……"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["見た事もないアポトーシスだな。"])
+    ShowText(["こいつらが、研究所を占拠したのか……？"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["敵は機械タイプのようですね……"])
+    ShowText(["とにかく応戦しますよ！"])
+    ConditionalBranch([4, 383, 0])
+      ShowTextAttributes(["eden_fc1", 0, 0, 2])
+      ShowText(["【エデン】"])
+      ShowText(["了解致しました、イリアス様……"])
+      ShowText(["この者を破壊します！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 523, 0])
+      ShowTextAttributes(["marcellus_fc1", 0, 0, 2])
+      ShowText(["【マルケルス】"])
+      ShowText(["では、道を斬り開くか……"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ControlSwitches([81, 81, 0])
+    BattleProcessing([0, 2007, false, false])
+    ControlSwitches([81, 81, 1])
+    ControlVariables([1308, 1308, 0, 0, 5])
+    ConditionalBranch([4, 756, 0])
+      ShowTextAttributes(["azidahaka_fc1", 3, 0, 2])
+      ShowText(["【アジ・ダハーカ】"])
+      ShowText(["ふはははは！　一蹴してやったわ！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["研究所内には、こいつらがウヨウヨしているようだな。"])
+      ShowText(["機械型のアポトーシスが、一体どこから湧いて出た？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["研究所内には、こいつらがウヨウヨしているようだな。"])
+      ShowText(["機械型のアポトーシスが、一体どこから湧いて出た？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["研究所内には、こいつらがウヨウヨしているようだな。"])
+      ShowText(["機械型のアポトーシスが、一体どこから湧いて出た？"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["少なくとも、市街は平和な様子だった。"])
+    ShowText(["だとすると、研究所の中から発生したのか……？"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["確かめる必要があるね……"])
+    ShowText(["先に進もう！"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["あれ、いない……"])
+    ShowText(["ラディオがここに隠れたはずなのに。"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["戦闘中、こっそりと先に進んだようですよ。"])
+    ShowText(["扉の先で待っているのでしょう。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1433, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])

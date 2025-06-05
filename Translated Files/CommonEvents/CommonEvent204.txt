@@ -1,0 +1,24 @@
+CommonEvent 204
+Name = "会話誘惑４　各敵の会話部分"
+
+  999([204])
+  ConditionalBranch([5, 0, 0, 1])
+    CallCommonEvent([202])
+    Comment(["スイッチ11がオフなら、敵が有効ではないので中断"])
+    ConditionalBranch([0, 11, 1])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Comment(["スイッチ12をオフにすることで、この後の誘惑と会話をキャンセル"])
+    ControlSwitches([12, 12, 1])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The enemy politely opens a conversation!"])
+    CallCommonEvent([205])
+    ControlVariables([12, 12, 0, 1, 14])
+    CallCommonEvent([1000])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  Empty([])

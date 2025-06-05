@@ -1,0 +1,1954 @@
+Display Name = "Sabasa"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The door is firmly shut."])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The door is firmly shut."])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The door is firmly shut."])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The door is firmly shut."])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The door is firmly shut."])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["vendetta_fc1", 0, 0, 2])
+    ShowText(["\\n<Vendetta>Fufu, what a tasty-looking boy...\nShall I teach you some of the pleasures adults enjoy?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Boy>S-someone help..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Get away from him!"])
+    ConditionalBranch([4, 118, 0])
+      ShowTextAttributes(["meia_fc1", 3, 0, 2])
+      ShowText(["\\n<Meia>Hands off that boy!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 810, false, false])
+    ControlSwitches([2237, 2237, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Boy>Thanks, hero!\nHere, take this!"])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ChangeItems([1, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ConditionalBranch([0, 2237, 1])
+      ShowTextAttributes(["vendetta_fc1", 0, 0, 2])
+      ShowText(["\\n<Vendetta>Fufu, what a tasty-looking boy...\nShall I teach you some of the pleasures adults enjoy?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Young Boy>S-someone help..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2237, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Young Boy>I'm gonna grow up to be a cool and strong hero like you!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["conquista_fc1", 0, 0, 2])
+    ShowText(["\\n<Conquista>A hero? I'll be preying on you next!"])
+    ConditionalBranch([4, 520, 0])
+      ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+      ShowText(["\\n<Lazarus>That's nice, but I didn't think vampires were the religious sort..."])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 808, false, false])
+    EraseEvent([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Thug>They sucked me dry..."])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The door is firmly shut."])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Queen Sara...\nI missed you so much..."])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["", 2, 0, 2])
+    ShowText(["\\n<Knight>I won't turn my back no matter how powerful you monsters are!"])
+    ShowTextAttributes(["vendetta_fc1", 0, 0, 2])
+    ShowText(["\\n<Vendetta>Excellent. The blood of strong humans is my favorite."])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["", 2, 0, 2])
+    ShowText(["\\n<Knight>I won't turn my back no matter how powerful you monsters are!"])
+    ShowTextAttributes(["vendetta_fc1", 0, 0, 2])
+    ShowText(["\\n<Vendetta>Excellent. The blood of strong humans is my favorite."])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>Give me your blood..."])
+    ShowTextAttributes(["wani_fc1", 0, 0, 2])
+    ShowText(["\\n<Alligator Girl>Gaa..."])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>...Huh? Did that come from over by the water?"])
+    ControlSwitches([31, 31, 0])
+    Wait([30])
+    PlaySE(["RPG::SE(@name=\"Water1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([72, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    SetMoveRoute([72, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=29, @parameters=[6])\", \"RPG::MoveCommand(@code=30, @parameters=[5])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=29, @parameters=[6])"])
+    Unnamed(["RPG::MoveCommand(@code=30, @parameters=[5])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ControlSwitches([2240, 2240, 0])
+    ControlSwitches([31, 31, 1])
+    PlaySE(["RPG::SE(@name=\"Water1\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["vampire_fc1", 2, 0, 2])
+    ShowText(["\\n<Vampire>Kyaaa!!"])
+    ShowTextAttributes(["wani_fc1", 0, 0, 2])
+    ShowText(["\\n<Alligator Girl>Gobble, gobble..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>........."])
+    ConditionalBranch([4, 154, 0])
+      ShowTextAttributes(["wani_fc1", 1, 0, 2])
+      ShowText(["\\n<Gaa>Nicely done! ♪"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Man>Is this the end of Sabasa?"])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>Auuu..."])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>If only I had trained harder..."])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["vendetta_fc1", 0, 0, 2])
+    ShowText(["\\n<Vendetta>Will you give me your bodily fluids?\nI'll give you lots and lots of pleasure in return..."])
+    ConditionalBranch([4, 283, 0])
+      ShowTextAttributes(["maccubus_fc1", 3, 0, 2])
+      ShowText(["\\n<Melissa>Okay, shall we play?"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 809, false, false])
+    EraseEvent([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>My body... so cold..."])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>........."])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 477, 131, 98, 0, 0])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 103, 293, 2, 0])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 103, 293, 2, 0])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 103, 293, 2, 0])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 103, 293, 2, 0])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 103, 293, 2, 0])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["conquista_fc1", 0, 0, 2])
+    ShowText(["\\n<Conquista>A hero? You're my next victim!"])
+    ConditionalBranch([4, 213, 0])
+      ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+      ShowText(["\\n<Caesar>A vampire? A worthy foe!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 808, false, false])
+    EraseEvent([])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Lady>Are you okay?! Let me treat you!"])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 103, 293, 2, 0])
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Tch, Sabasa is in bad shape too!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>They're under attack by the vampire army.\nVampires are high ranking monsters, so this isn't going to be easy for us, either."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>They're under attack by the vampire army.\nVampires are high ranking monsters, so prepare for some difficult battles ahead."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 45, 0])
+      ShowTextAttributes(["alicetromeria_fc1", 4, 0, 2])
+      ShowText(["\\n<Alicetroemeria>Monsters of the night are having an afternoon tea party? I hope they aren't cut to ribbons by rays of sunlight."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["sara_fc1", 3, 0, 2])
+    ShowText(["\\n<Sara>Forgive me, but I need to leave the party and take command of my army."])
+    ControlSwitches([31, 31, 0])
+    ControlSwitches([1529, 1529, 1])
+    ChangePartyMember([529, 1, 0])
+    SetMoveRoute([87, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    ControlSwitches([31, 31, 1])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Sara has temporarily left the party."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>I hope she's going to be okay...\nSeeing her country being attacked must be rough..."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I hope she's going to be okay...\nSeeing her country being attacked must be rough..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 531, 0])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>She's as capable a monarch as any, but the situation here does look bleak."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Up against the vampire army, even Sabasa's excellent knights won't hold out for long."])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>We need to take out their leader as quickly as possible! That's the only way our position is going to improve!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Up against the vampire army, even Sabasa's excellent knights likely will not hold out for long."])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>We need to take out their leader as quickly as possible! That's our only hope of improving our position!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 218, 0])
+      ShowTextAttributes(["nyumaou_fc1", 0, 0, 2])
+      ShowText(["\\n<Cow Demon Queen>Hmph! What do these damn vampires think they're doing?! I'll give them a sound beating!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 66, 0])
+      ShowTextAttributes(["vgirl_fc1", 2, 0, 2])
+      ShowText(["\\n<Vanilla>I don't really want to fight my kin..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 302, 0])
+      ShowTextAttributes(["vampire_fc1", 2, 0, 2])
+      ShowText(["\\n<Wilhemina>Well this is embarrassing..."])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>Forgive me..."])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>I've lost so much blood..."])
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ConditionalBranch([0, 2234, 1])
+      ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+      ShowText(["\\n<Vampire>I shall suck every last drop of your blood!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>Get away! Ah, aaaaah!!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2234, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>Having a vampire suck my blood felt so good...\nI think I'd have been better off never knowing that..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Woman>She sucked so much blood...\nI feel weak..."])
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>Those fiends..."])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Forgive me, Queen Sara..."])
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>Someone... Please save Sabasa..."])
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Salesgirl>Aaah, save us, save us..."])
+    ConditionalBranch([4, 531, 0])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>Keep yourself hidden here. It'd be more dangerous to attempt escape."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Salesgirl>My... store..."])
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Lady>I'm safe hiding here.\nGo help the others!"])
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>Ugh... Ngh..."])
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Hold the line! Don't give them an inch!"])
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>The Sabasan Cavalry is no pushover it seems..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Hold the line! Don't give them an inch!"])
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>The Sabasan Cavalry is no pushover it seems..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>They're too strong..."])
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Man>No way... Ngh..."])
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Merchant>A couple of vampires just passed by...\nI've never seen a scarier monster than those two."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["66"])
+    ShowTextAttributes(["vgirl_fc1", 2, 0, 2])
+    ShowText(["\\n<Vanilla>They were probably the queen's confidants, Carmilla and Elizabeth. I'm super scared about having to fight them."])
+    ExitEventProcessing([])
+    Label(["302"])
+    ShowTextAttributes(["vampire_fc1", 2, 0, 2])
+    ShowText(["\\n<Wilhemina>The queen's left and right hands, Carmilla and Elizabeth. I really do not want to fight them."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Hold the line! Don't give them an inch!"])
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>The Sabasan Cavalry is no pushover it seems..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Ggggghh..."])
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Burly Man>Eeek!\nWh-what the hell was that?!"])
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>Waaaaa!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Boy>Help us!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["525"])
+    ShowTextAttributes(["sonia_fc1", 4, 0, 2])
+    ShowText(["\\n<Sonya>It'll be all right...\nStay safe here, and I'll go kick some butts for you."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>Waaaaa!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Boy>Help us!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["525"])
+    ShowTextAttributes(["sonia_fc1", 4, 0, 2])
+    ShowText(["\\n<Sonya>It'll be all right...\nStay safe here, and I'll go kick some butts for you."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"boss0\", @volume=100, @pitch=100)"])
+    ScrollMap([8, 4, 4])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Wait([90])
+    ShowPicture([6, "80_sara_st03", 0, 0, -150, 0, 100, 100, 0, 0])
+    ShowPicture([5, "80_elisabeth_st01", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([6, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([5, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["elisabeth_fc1", 0, 0, 2])
+    ShowText(["\\n<Elizabeth>Kukuku, we've got you surrounded!\nSabasa is as good as ours now!"])
+    ShowTextAttributes(["sara_fc1", 4, 0, 2])
+    ShowText(["\\n<Sara>You vampires want to rule this country?\nWhat would you even do with an entire country?"])
+    ShowTextAttributes(["elisabeth_fc1", 0, 0, 2])
+    ShowText(["\\n<Elizabeth>That's obvious. Everyone living here will be vampire slaves. They'll give us their blood and semen and serve us with their lives."])
+    ShowTextAttributes(["elisabeth_fc1", 0, 0, 2])
+    ShowText(["\\n<Elizabeth>You'll be our plaything too, Queen Sara!\nWe'll get you addicted to having your blood sucked then pass you around between all the vampires!"])
+    ShowTextAttributes(["sara_fc1", 4, 0, 2])
+    ShowText(["\\n<Sara>You actually think we'll be your slaves?"])
+    ShowTextAttributes(["elisabeth_fc1", 0, 0, 2])
+    ShowText(["\\n<Elizabeth>Oh yes! I'll drink your blood in front of your people and let them see you writhe in pleasure!"])
+    ShowPicture([6, "80_sara_st06", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["sara_fc1", 5, 0, 2])
+    ShowText(["\\n<Sara>You vampires are nothing more than an offshoot of the succubus bloodline created by the Great Ancestor Minagi. Dependent on blood, you're an inferior, dead-end evolution."])
+    ShowTextAttributes(["elisabeth_fc1", 2, 0, 2])
+    ShowText(["\\n<Elizabeth>...What are you talking about?"])
+    ShowTextAttributes(["sara_fc1", 5, 0, 2])
+    ShowText(["\\n<Sara>You peons think to make me your slave?\nI, who descend from Sphinx?\nI, who was awakened by the hand of Lilith herself?"])
+    ShowTextAttributes(["elisabeth_fc1", 2, 0, 2])
+    ShowText(["\\n<Elizabeth>J-just what are you?!"])
+    ErasePicture([5])
+    ErasePicture([6])
+    Wait([60])
+    PlayBGM(["RPG::BGM(@name=\"kiki4\", @volume=100, @pitch=100)"])
+    ShowAnimation([78, 1170, false])
+    Wait([60])
+    ControlSwitches([31, 31, 0])
+    Wait([60])
+    ShowPicture([5, "80_saraevil_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["sara_fc4", 0, 0, 2])
+    ShowText(["\\n<Sara>Ahahaha... You've got it all backwards!\nYou're the ones who are going to be\\*\\fi my\\*\\fi slaves!"])
+    ErasePicture([5])
+    Wait([60])
+    ShowAnimation([95, 522, false])
+    Wait([60])
+    SetMoveRoute([113, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=14, @parameters=[3, -2])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[3, -2])"])
+    SetMoveRoute([93, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=14, @parameters=[4, -1])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[4, -1])"])
+    SetMoveRoute([96, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=14, @parameters=[-3, -3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[-3, -3])"])
+    SetMoveRoute([95, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=14, @parameters=[-3, -1])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[-3, -1])"])
+    SetMoveRoute([97, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=14, @parameters=[-2, 2])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[-2, 2])"])
+    SetMoveRoute([94, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=14, @parameters=[2, 1])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[2, 1])"])
+    SetMoveRoute([114, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=14, @parameters=[-2, 3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[-2, 3])"])
+    ControlSwitches([32, 32, 0])
+    ShowTextAttributes(["vampire_fc1", 2, 0, 2])
+    ShowText(["\\n<Vampire>Kyaaaaa!"])
+    Wait([60])
+    ShowPicture([6, "80_saraevil_st01", 0, 0, -150, 0, 100, 100, 0, 0])
+    ShowPicture([5, "80_elisabeth_st03", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([6, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([5, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["elisabeth_fc1", 2, 0, 2])
+    ShowText(["\\n<Elizabeth>I see... You have the blood of the royal families, the blood of Sphinx, and a touch of the mighty power of Lilith as well."])
+    ShowTextAttributes(["elisabeth_fc1", 2, 0, 2])
+    ShowText(["\\n<Elizabeth>Who knew that Sabasa was ruled by such a monstrosity..."])
+    ErasePicture([5])
+    ErasePicture([6])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Sara! Are you okay?!"])
+    SetMoveRoute([78, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=14, @parameters=[-2, 3])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[-2, 3])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([98, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    Wait([60])
+    ShowPicture([5, "80_saraevil_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["sara_fc4", 0, 0, 2])
+    ShowText(["\\n<Sara>Ufufu, I'm fully in control of myself.\nAnd I feel grrrrrrreat...♪"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>Are you sure you're really in control?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Are you sure you're really in control?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 284, 0])
+      ShowTextAttributes(["minccubus_fc1", 3, 0, 2])
+      ShowText(["\\n<Serra>I know that feeling..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Either way, fight alongside us, Sara!\nIf we defeat Elizabeth, the vampire army will fall apart!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Either way, use that power to help us, Sara!\nWe can defeat Elizabeth and crush the vampire army in one stroke!"])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([33, 33, 0])
+    ErasePicture([5])
+    ControlSwitches([7013, 7013, 0])
+    Script(["add_actor_ex(530)"])
+    ConditionalBranch([12, "actor_class_level_over?(529, 177, 1)"])
+      Empty([])
+
+    Else([])
+      Script(["gain_actor_exp(529, :base, 760000, false, false)"])
+      Script(["set_class_level(529, 158, 10, false, false)"])
+      ScriptMore(["set_class_level(529, 159, 10, false, false)"])
+      ScriptMore(["set_class_level(529, 160, 1, false, false)"])
+      ScriptMore(["set_class_level(529, 175, 10, false, false)"])
+      ScriptMore(["set_class_level(529, 176, 10, false, false)"])
+      ScriptMore(["set_class_level(529, 177, 1, false, true)"])
+      RecoverAll([0, 530])
+      Empty([])
+
+    BranchEnd([])
+    PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Sara has rejoined the party!"])
+    Wait([60])
+    ShowPicture([5, "80_elisabeth_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["sara_fc4", 0, 0, 2])
+    ShowText(["\\n<Sara>Now... Let's pay this vampire back for each and every citizen of this country they've molested..."])
+    ShowPicture([5, "80_elisabeth_st02", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["elisabeth_fc1", 1, 0, 2])
+    ShowText(["\\n<Elizabeth>Hah! Don't be so full of yourself!\nI'm a high ranking monster only one step below Queen Vampire!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>We won't let you cause any more harm to Sabasa!\nThis ends now!"])
+    ConditionalBranch([4, 185, 0])
+      ShowTextAttributes(["radio_fc1", 0, 0, 2])
+      ShowText(["\\n<Radio>Monster of the night...\nReturn to the night..."])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ErasePicture([6])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss1\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 813, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    PlayBGM(["RPG::BGM(@name=\"scene_epilogue2\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_elisabeth_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["sara_fc4", 1, 0, 2])
+    ShowText(["\\n<Sara>Ahaha, how disappointing..."])
+    ShowTextAttributes(["elisabeth_fc1", 2, 0, 2])
+    ShowText(["\\n<Elizabeth>Damn you...\nWe'll withdraw our forces for now."])
+    ShowPicture([5, "80_elisabeth_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["elisabeth_fc1", 0, 0, 2])
+    ShowText(["\\n<Elizabeth>But this is nothing more than a strategic retreat! Even more vampires are waiting in reserve at Vampire Castle!"])
+    ShowTextAttributes(["elisabeth_fc1", 0, 0, 2])
+    ShowText(["\\n<Elizabeth>Don't think you can hold us off forever!\nThis land will be ours eventually!"])
+    ShowTextAttributes(["elisabeth_fc1", 0, 0, 2])
+    ShowText(["\\n<Elizabeth>Bwhahahaha! See ya!"])
+    ErasePicture([5])
+    Wait([60])
+    PlaySE(["RPG::SE(@name=\"mon_warp\", @pitch=100, @volume=80)"])
+    ControlSwitches([34, 34, 0])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>She's quite the poor loser, but she's also right.\nQueen Vampire still has considerable military power at her disposal."])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>This won't end unless we take the fight to them and defeat her at Vampire Castle.\nThat said, a win is a win, even if only temporary."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>She's quite the poor loser, but she's not wrong.\nQueen Vampire still has considerable military power at her disposal."])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>To achieve complete victory, we need to assault Vampire Castle and overthrow her. That said, we did manage to repel the vampire hordes for a while."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 45, 0])
+      ShowTextAttributes(["alicetromeria_fc1", 4, 0, 2])
+      ShowText(["\\n<Alicetroemeria>The bat party here appears to be over.\nWe hadn't even gotten to the main dish..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([5, "80_saraevil_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["sara_fc4", 0, 0, 2])
+    ShowText(["\\n<Sara>Ufufu... I'll keep traveling with your party.\nLet's keep having lots of fun together♪"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>Is that such a good idea?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Is that such a good idea?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 1, 0, 2])
+      ShowText(["\\n<Alice>We turned things around here thanks to her.\nSo what's there to complain about?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>I may have complained in the past, but oh well. The ends justify the means."])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ControlSwitches([2163, 2163, 0])
+    RecoverAll([0, 0])
+    CallCommonEvent([328])
+    ConditionalBranch([0, 2273, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Now that we have that settled, let's move!\nThere are other countries still under attack!"])
+    FadeoutScreen([])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    ControlSwitches([34, 34, 1])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Thus, we repelled the vampire army. However, there's no time to celebrate as we leave Sabasa behind."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The Monster Lord's grand offensive is against all four major powers. It will take everything we've got to defend them all."])
+    Wait([60])
+    TransferPlayer([0, 2, 103, 294, 2, 0])
+    FadeinScreen([])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 57
+Name = "EV057"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>They sucked my blood... and semen..."])
+    Empty([])
+
+CommonEvent 60
+Name = "EV060"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>Oooh... Ngh..."])
+    Empty([])
+
+CommonEvent 61
+Name = "EV061"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>I'm stabilizing the victims that are brought here. Let me fix you up too."])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+    RecoverAll([0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The party's HP and MP have been fully restored!"])
+    Empty([])
+
+CommonEvent 64
+Name = "EV064"
+
+  Page 0
+    CallCommonEvent([356])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 67
+Name = "EV067"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard Captain>Queen Sara... Your Majesty... Forgive me..."])
+    Empty([])
+
+CommonEvent 69
+Name = "EV069"
+
+  Page 0
+    ConditionalBranch([0, 2236, 1])
+      ShowTextAttributes(["conquista_fc1", 0, 0, 2])
+      ShowText(["\\n<Conquista>You thought you weaklings could defend your country? Don't make me laugh!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>Gah... Wh-where are our reinforcements!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2236, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>I realize how insufficient we were now...\nMy wounds are deep. I won't be able to move for a while."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 72
+Name = "EV072"
+
+  Page 0
+    Empty([])
+
+CommonEvent 75
+Name = "EV075"
+
+  Page 0
+    CallCommonEvent([356])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 78
+Name = "EV078"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 83
+Name = "EV083"
+
+  Page 0
+    ShowTextAttributes(["dog_fc1", 4, 0, 2])
+    ShowText(["\\n<Dog Girl>Woof, woof! I'm scared!"])
+    ConditionalBranch([4, 60, 0])
+      ShowTextAttributes(["dog_fc1", 1, 0, 2])
+      ShowText(["\\n<Pochi>Don't worry, we'll beat them all up!"])
+      ShowTextAttributes(["dog_fc1", 4, 0, 2])
+      ShowText(["\\n<Dog Girl>*whimper*"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 85
+Name = "EV085"
+
+  Page 0
+    Empty([])
+
+CommonEvent 87
+Name = "EV087"
+
+  Page 0
+    Empty([])
+
+CommonEvent 90
+Name = "EV090"
+
+  Page 0
+    ShowTextAttributes(["e_vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Elder Vampire>Are you my next victims?\nCome, be my prey..."])
+    ConditionalBranch([4, 522, 0])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>An elder one? Should this get me fired up?"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 811, false, false])
+    EraseEvent([])
+    Empty([])
+
+CommonEvent 91
+Name = "EV091"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Minstrel>I don't want to write songs about this country's demise..."])
+    Empty([])
+
+CommonEvent 92
+Name = "EV092"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>The vampires are absurdly strong..."])
+    Empty([])
+
+CommonEvent 93
+Name = "EV093"
+
+  Page 0
+    ShowTextAttributes(["conquista_fc1", 0, 0, 2])
+    ShowText(["\\n<Conquista>......"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 94
+Name = "EV094"
+
+  Page 0
+    ShowTextAttributes(["vendetta_fc1", 0, 0, 2])
+    ShowText(["\\n<Vendetta>......"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 95
+Name = "EV095"
+
+  Page 0
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>......"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 96
+Name = "EV096"
+
+  Page 0
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>......"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 97
+Name = "EV097"
+
+  Page 0
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>......"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 98
+Name = "EV098"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 99
+Name = "EV099"
+
+  Page 0
+    Empty([])
+
+CommonEvent 100
+Name = "EV100"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>You shall not pass!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 101
+Name = "EV101"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 102
+Name = "EV102"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>Tch, have at you!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 103
+Name = "EV103"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>They're so strong..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 104
+Name = "EV104"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>All of us... In the blink of an eye..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 105
+Name = "EV105"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 106
+Name = "EV106"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>Ngh... Gaah..."])
+    Empty([])
+
+CommonEvent 107
+Name = "EV107"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Paralyzed... Can't move..."])
+    Empty([])
+
+CommonEvent 108
+Name = "EV108"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>They're so strong..."])
+    Empty([])
+
+CommonEvent 109
+Name = "EV109"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>Guh... Ungh..."])
+    Empty([])
+
+CommonEvent 111
+Name = "EV111"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Queen's Guard>I failed to protect Queen Sara..."])
+    Empty([])
+
+CommonEvent 112
+Name = "EV112"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Queen's Guard>We Queen's Guards were defeated... so easily..."])
+    Empty([])
+
+CommonEvent 113
+Name = "EV113"
+
+  Page 0
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>......"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 114
+Name = "EV114"
+
+  Page 0
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>......"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 115
+Name = "EV115"
+
+  Page 0
+    ShowTextAttributes(["", 2, 0, 2])
+    ShowText(["\\n<Knight>I shall defend my homeland!"])
+    ShowTextAttributes(["vampire_fc1", 1, 0, 2])
+    ShowText(["\\n<Vampire>Oh, a human with some backbone?\nMy favorite type of blood..."])
+    Empty([])
+
+CommonEvent 116
+Name = "EV116"
+
+  Page 0
+    ShowTextAttributes(["", 2, 0, 2])
+    ShowText(["\\n<Knight>I shall defend my homeland!"])
+    ShowTextAttributes(["vampire_fc1", 1, 0, 2])
+    ShowText(["\\n<Vampire>Oh, a human with some backbone?\nMy favorite type of blood..."])
+    Empty([])
+
+CommonEvent 117
+Name = "EV117"
+
+  Page 0
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>I'll drink your blood down to the last drop..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>Please don't... Ah, aaaaaaah!!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Get away from him!"])
+    ConditionalBranch([4, 204, 0])
+      ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Stacy>The navy will not permit you to assault citizens!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 760, false, false])
+    ControlSwitches([2234, 2234, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>That felt wonderful, but I almost died...\nTake this as thanks."])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ChangeItems([30, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 118
+Name = "EV118"
+
+  Page 0
+    ShowTextAttributes(["", 2, 0, 2])
+    ShowText(["\\n<Knight>Don't underestimate the army of Sabasa! Gooooo!!"])
+    ShowTextAttributes(["conquista_fc1", 0, 0, 2])
+    ShowText(["\\n<Conquista>Not bad. This is getting fun!"])
+    Empty([])
+
+CommonEvent 119
+Name = "EV119"
+
+  Page 0
+    ShowTextAttributes(["", 2, 0, 2])
+    ShowText(["\\n<Knight>Don't underestimate the army of Sabasa! Gooooo!!"])
+    ShowTextAttributes(["conquista_fc1", 0, 0, 2])
+    ShowText(["\\n<Conquista>Not bad. This is getting fun!"])
+    Empty([])
+
+CommonEvent 120
+Name = "EV120"
+
+  Page 0
+    ConditionalBranch([0, 2235, 1])
+      ShowTextAttributes(["vendetta_fc1", 0, 0, 2])
+      ShowText(["\\n<Vendetta>Ooh, an entire family of three for me to suck.\nFufu, I'll get my fill of blood today."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>I won't let you lay a finger on my family, you monster!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Woman>D-Dear..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Young Girl>S-someone help!!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2235, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>Thanks, you're a lifesaver!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Woman>Aah, our savior..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Young Girl>You're so cool!\nJust like the legendary Heinrich!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 121
+Name = "EV121"
+
+  Page 0
+    ConditionalBranch([0, 2235, 1])
+      ShowTextAttributes(["vendetta_fc1", 0, 0, 2])
+      ShowText(["\\n<Vendetta>Ooh, an entire family of three for me to suck.\nFufu, I'll get my fill of blood today."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>I won't let you lay a finger on my family, you monster!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Woman>D-Dear..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Young Girl>S-someone help!!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2235, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>Thanks, you're a lifesaver!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Woman>Aah, our savior..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Young Girl>You're so cool!\nJust like the legendary Heinrich!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 122
+Name = "EV122"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Thug>G-go away! You'll lead the vampires to me!"])
+    Empty([])
+
+CommonEvent 123
+Name = "EV123"
+
+  Page 0
+    ShowTextAttributes(["vendetta_fc1", 0, 0, 2])
+    ShowText(["\\n<Vendetta>Ooh, an entire family of three for me to suck.\nFufu, I'll get my fill of blood today."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Man>I won't let you lay a finger on my family, you monster!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Woman>D-Dear..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>S-someone help!!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Get away from them! Fight me instead!"])
+    ConditionalBranch([4, 288, 0])
+      ShowTextAttributes(["d_succubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Natasha>You bare your fangs at a defenseless family when I'm around? You'll pay for that..."])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 809, false, false])
+    ControlSwitches([2235, 2235, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Man>Thanks, you're a lifesaver!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Woman>Aah, our savior..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>You're so cool!\nJust like the legendary Heinrich!"])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ChangeItems([8, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 124
+Name = "EV124"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>I must... defend the people..."])
+    Empty([])
+
+CommonEvent 125
+Name = "EV125"
+
+  Page 0
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>Let me taste your blood..."])
+    ConditionalBranch([4, 239, 0])
+      ShowTextAttributes(["rafi_fc1", 0, 0, 2])
+      ShowText(["\\n<Raffia>Let me taste your flesh..."])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 892, false, false])
+    EraseEvent([])
+    Empty([])
+
+CommonEvent 126
+Name = "EV126"
+
+  Page 0
+    ShowTextAttributes(["conquista_fc1", 0, 0, 2])
+    ShowText(["\\n<Conquista>You thought you weaklings could defend your country? Don't make me laugh!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>Gah... Wh-where are our reinforcements!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>I'm here!"])
+    ConditionalBranch([4, 298, 0])
+      ShowTextAttributes(["dragon_fc1", 0, 0, 2])
+      ShowText(["\\n<Grande>Lording over weak humans? Don't make ME laugh!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 808, false, false])
+    ControlSwitches([2236, 2236, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>You saved me...\nI'm embarrassed at how weak I am..."])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ChangeItems([24, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 127
+Name = "EV127"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Hold the line! Don't give them an inch!"])
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>The Sabasan Cavalry is no pushover it seems..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 128
+Name = "EV128"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Hold the line! Don't give them an inch!"])
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>The Sabasan Cavalry is no pushover it seems..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 129
+Name = "EV129"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Hold the line! Don't give them an inch!"])
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>The Sabasan Cavalry is no pushover it seems..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 130
+Name = "EV130"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Hold the line! Don't give them an inch!"])
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>The Sabasan Cavalry is no pushover it seems..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 131
+Name = "EV131"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Hold the line! Don't give them an inch!"])
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>The Sabasan Cavalry is no pushover it seems..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 132
+Name = "EV132"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Hold the line! Don't give them an inch!"])
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>The Sabasan Cavalry is no pushover it seems..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 133
+Name = "EV133"
+
+  Page 0
+    CallCommonEvent([349])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 134
+Name = "EV134"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Hold the line! Don't give them an inch!"])
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>The Sabasan Cavalry is no pushover it seems..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 135
+Name = "EV135"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Hold the line! Don't give them an inch!"])
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>The Sabasan Cavalry is no pushover it seems..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 136
+Name = "EV136"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Hold the line! Don't give them an inch!"])
+    ShowTextAttributes(["vampire_fc1", 0, 0, 2])
+    ShowText(["\\n<Vampire>The Sabasan Cavalry is no pushover it seems..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The street is blocked.\nLet's go around them!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 137
+Name = "EV137"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>S-so strong..."])
+    Empty([])
+
+CommonEvent 138
+Name = "EV138"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Is she some big shot monster?"])
+    Empty([])
+
+CommonEvent 139
+Name = "EV139"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>She's not someone we can beat..."])
+    Empty([])
+
+CommonEvent 140
+Name = "EV140"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>How are we supposed to fight that..."])
+    Empty([])
+
+CommonEvent 141
+Name = "EV141"
+
+  Page 0
+    CallCommonEvent([349])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 142
+Name = "EV142"
+
+  Page 0
+    CallCommonEvent([349])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 143
+Name = "EV143"
+
+  Page 0
+    CallCommonEvent([349])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 144
+Name = "EV144"
+
+  Page 0
+    CallCommonEvent([349])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 145
+Name = "EV145"
+
+  Page 0
+    CallCommonEvent([349])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 146
+Name = "EV146"
+
+  Page 0
+    CallCommonEvent([349])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 147
+Name = "EV147"
+
+  Page 0
+    CallCommonEvent([349])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 148
+Name = "EV148"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Woman>Ilias save us..."])
+    Empty([])
+
+CommonEvent 149
+Name = "EV149"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>I can... still fight..."])
+    Empty([])
+
+CommonEvent 150
+Name = "EV150"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Nnngh..."])
+    Empty([])
+
+CommonEvent 151
+Name = "EV151"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Town Girl>Are you okay? Here are some herbs!"])
+    Empty([])
+
+CommonEvent 152
+Name = "EV152"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>Guh..."])
+    Empty([])
+
+CommonEvent 153
+Name = "EV153"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Th-thank you..."])
+    Empty([])
+
+CommonEvent 154
+Name = "EV154"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>Hang in there!\nCan you still move?"])
+    Empty([])
+
+CommonEvent 155
+Name = "EV155"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>My squad mates... still fighting..."])
+    Empty([])
+
+CommonEvent 156
+Name = "EV156"
+
+  Page 0
+    ShowTextAttributes(["saboten_fc1", 2, 0, 2])
+    ShowText(["\\n<Cactus Girl>I wonder if I'll ever get a chance to rest..."])
+    ShowTextAttributes(["conquista_fc1", 0, 0, 2])
+    ShowText(["\\n<Conquista>You'll prick me..."])
+    Empty([])
+
+CommonEvent 157
+Name = "EV157"
+
+  Page 0
+    ShowTextAttributes(["saboten_fc1", 2, 0, 2])
+    ShowText(["\\n<Cactus Girl>I wonder if I'll ever get a chance to rest..."])
+    ShowTextAttributes(["conquista_fc1", 0, 0, 2])
+    ShowText(["\\n<Conquista>You'll prick me..."])
+    Empty([])

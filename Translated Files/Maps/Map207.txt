@@ -1,0 +1,983 @@
+Display Name = "Tanuki Village"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([12, "$game_player.x == 0"])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 2, 396, 160, 2, 0])
+      Wait([1])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([12, "$game_player.x == 39"])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 2, 396, 160, 2, 0])
+      Wait([1])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([12, "$game_player.y == 44"])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 2, 396, 160, 2, 0])
+      Wait([1])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Comment(["明かり設定2160500"])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Comment(["明かり設定2160500"])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Comment(["明かり設定2160500"])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Comment(["明かり設定2160500"])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 211, 8, 13, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 211, 33, 32, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 211, 11, 32, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 211, 11, 54, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 211, 31, 11, 0, 0])
+    Empty([])
+
+CommonEvent 68
+Name = "EV068"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 211, 34, 54, 0, 0])
+    Empty([])
+
+CommonEvent 69
+Name = "EV069"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 6, 2])
+      ShowTextAttributes(["mametanuki_fc1", 2, 0, 2])
+      ShowText(["\\n<Junior Tanuki>"])
+      ShowText(["Wh-what should we do?!\nMiss Black Tanuki! Waaah~!"])
+      ShowTextAttributes(["mametanuki_fc1", 2, 0, 2])
+      ShowText(["\\n<Junior Tanuki>"])
+      ShowText(["...Welcome to the Tanuki Village...\n*sniff*... Where do you want to go...?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Junior Tanuki>"])
+      ShowText(["Welcome to Tanuki Village!\nWhere do you want to go?"])
+      Empty([])
+
+    BranchEnd([])
+    Script(["unlimited_choices(11, [\"Snack Bar\","])
+    ScriptMore(["\"Item Shop\",\"Black Tanuki's House\"])"])
+    ConditionalBranch([1, 11, 0, 0, 0])
+      TransferPlayer([0, 207, 37, 25, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 1, 0])
+      TransferPlayer([0, 207, 4, 20, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 2, 0])
+      TransferPlayer([0, 207, 17, 14, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 3, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 70
+Name = "EV070"
+
+  Page 0
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["All right, we've reached the Tanuki Village.\nLet's start by talking with their leader-"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["All right, we reached the Tanuki Village.\nLet's first talk with their head of clan-"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["mametanuki_fc1", 2, 0, 2])
+    ShowText(["\\n<Junior Tanuki>"])
+    ShowText(["Uwaaan!\nMiss Black Tanuki was kidnapped by the Kitsune Clan!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 6, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["What?\nWhat on earth's going on here?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["Huh?!\nWhat on earth is happening here?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 106, 0])
+      ShowTextAttributes(["nanabi_fc1", 3, 0, 2])
+      ShowText(["\\n<Nanabi>"])
+      ShowText(["What absurdism is this?\nIs some other force impersonating us?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["mametanuki_fc1", 2, 0, 2])
+    ShowText(["\\n<Junior Tanuki>"])
+    ShowText(["We received a letter from the Kitsune Clan just earlier, saying they kidnapped Miss Black Tanuki..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["We've heard nothing of the sort from the Kitsune Clan; their hands are full with Tamamo's kidnapping."])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["This must be someone else's scheme.\nSomeone who aims to ignite the flames of war between Kitsune and Tanuki..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["We've heard of no such thing from the Kitsune Clan; I find it hard to believe that this was their work."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["This is definitely the work of a third party.\nThey seek to incite war between the Kitsune and Tanuki from the shadows."])
+      ShowTextAttributes(["eden_fc1", 0, 0, 2])
+      ShowText(["\\n<Eden>"])
+      ShowText(["This is reminiscent of your splendid plan, hundreds of years ago, to pit the lamia and scylla against each other."])
+      ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["That plan went off without a hitch.\nThe flames of war fanned out instantly, and both their populations crashed..."])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["...Wait, no, that's not important right now!\nWhat matters is this plot to bring the Kitsune and Tanuki to war!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Is it maybe Black Alice's work...?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["Whether it's her directly or a subordinate, she's almost certainly involved, yeah."])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["At any rate, let's gather info.\nWe'll ask around and see what we can figure out."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["It's unclear whether it's her or her subordinate... but yes, she is definitely involved."])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["For now, let's gather information.\nWe'll ask around and see what we can figure out."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 266, 0])
+      ShowTextAttributes(["kunoitisanbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Minamo>"])
+      ShowText(["If Black Tanuki is absent...\nthen it would be best to ask her aide, Inugami-Gyobu."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 267, 0])
+      ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Izuna>"])
+      ShowText(["We must prevent any unnecessary fighting, especially with Tamamo's whereabouts unknown like this."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 406, 0])
+      ShowTextAttributes(["queenroach_fc1", 0, 0, 2])
+      ShowText(["\\n<Groys>"])
+      ShowText(["Let's search for strong men while we're at it...\nWe can always use more of them."])
+      Empty([])
+
+    BranchEnd([])
+    ControlSelfSwitch(["A", 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 71
+Name = "EV071"
+
+  Page 0
+    ShowTextAttributes(["baketanuki_fc1", 0, 0, 2])
+    ShowText(["\\n<Bakedanuki>"])
+    ShowText(["I refuse to abide by the Kitsune's violence any longer! We'll charge into their village and save Miss Black Tanuki!"])
+    ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+    ShowText(["\\n<Junior Tanuki>"])
+    ShowText(["Yeah!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Riled-up Tanuki seem to be holding a pep rally..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["We must hurry and get to the bottom of this.\nEvery second brings us closer to a river of bloodshed..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["They seem all ready to go...\nBut given it's Black Alice behind this, I can't turn a blind eye."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 72
+Name = "EV072"
+
+  Page 0
+    ShowTextAttributes(["zyoutanuki_fc1", 0, 0, 2])
+    ShowText(["\\n<High Tanuki>"])
+    ShowText(["Down with the Kitsune! Down with the Kitsune!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 73
+Name = "EV073"
+
+  Page 0
+    ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+    ShowText(["\\n<Junior Tanuki>"])
+    ShowText(["Tanuki hurray! Tanuki hurray!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 74
+Name = "EV074"
+
+  Page 0
+    ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+    ShowText(["\\n<Junior Tanuki>"])
+    ShowText(["I'll never forgive them for kidnapping Miss Black Tanuki!!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 75
+Name = "EV075"
+
+  Page 0
+    ShowTextAttributes(["zyoutanuki_fc1", 0, 0, 2])
+    ShowText(["\\n<High Tanuki>"])
+    ShowText(["The Kitsune Clan has gone too far this time!\nIt's time to beat them down!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 76
+Name = "EV076"
+
+  Page 0
+    ShowTextAttributes(["shinobitanuki_fc1", 0, 0, 2])
+    ShowText(["\\n<Shinobitanuki>"])
+    ShowText(["Tanuki hurray! Down with the Kitsune!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 77
+Name = "EV077"
+
+  Page 0
+    ShowTextAttributes(["shinobitanuki_fc1", 0, 0, 2])
+    ShowText(["\\n<Shinobitanuki>"])
+    ShowText(["I'll never forgive that Kitsune Clan!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 78
+Name = "EV078"
+
+  Page 0
+    ShowTextAttributes(["baketanuki_fc1", 0, 0, 2])
+    ShowText(["\\n<Bakedanuki>"])
+    ShowText(["It has come time for battle!\nWe are to save Miss Black Tanuki at any cost!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 79
+Name = "EV079"
+
+  Page 0
+    ShowTextAttributes(["zyoutanuki_fc1", 0, 0, 2])
+    ShowText(["\\n<High Tanuki>"])
+    ShowText(["It's time for a Tanuki pep rally!\nWe can't accept the Kitsune Clan's oppression any longer!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 80
+Name = "EV080"
+
+  Page 0
+    ShowTextAttributes(["shinobitanuki_fc1", 0, 0, 2])
+    ShowText(["\\n<Shinobitanuki>"])
+    ShowText(["We hate war as much as anyone else. But if the Kitsune Clan is kidnapping our leader, we will fight back!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 81
+Name = "EV081"
+
+  Page 0
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["All right, time to search the Tanuki Village for Tamamo. To that end--"])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["Mephisto, can you search to see if Tamamo is held here? Investigative magic is your forte."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["Well then, let's search the Tanuki Village for Tamamo. To start with--"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["Mephisto, can you search for if Tamamo is here? Search magic has always been your favorite toy."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["\\n<Mephisto>"])
+    ShowText(["Understood.\nI shall spread a search network over the whole village..."])
+    PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["\\n<Mephisto>"])
+    ShowText(["......"])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["\\n<Mephisto>"])
+    ShowText(["...There is no trace of her.\nLady Tamamo is not in this village."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["It's not that I was doubting what they were saying... but this confirms it. The Tanuki were not involved in Tamamo's capture."])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["In that case, let's search the village for signs of Black Alice's--"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["I can't accept the words of the Tanuki, but this is proof I can believe. The Tanuki were not involved in Tamamo's capture."])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["In that case, let's search the village for signs of Black Alice's--"])
+      Empty([])
+
+    BranchEnd([])
+    ScrollMap([2, 4, 5])
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["baketanuki_fc1", 0, 0, 2])
+    ShowText(["\\n<Bakedanuki>"])
+    ShowText(["Our preparations are complete!\nIt's time to move out and save Miss Black Tanuki!"])
+    ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+    ShowText(["\\n<Junior Tanuki>"])
+    ShowText(["All Tanuki, march onward!"])
+    ShowTextAttributes(["zyoutanuki_fc1", 0, 0, 2])
+    ShowText(["\\n<High Tanuki>"])
+    ShowText(["We will save Miss Black Tanuki without fail!"])
+    PlaySE(["RPG::SE(@name=\"mon_asioto2\", @pitch=100, @volume=80)"])
+    SetMoveRoute([72, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([73, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([74, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([75, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([76, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([77, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([78, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([79, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([80, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([71, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ScrollMap([8, 4, 5])
+    ControlVariables([1137, 1137, 0, 0, 4])
+    ConditionalBranch([4, 265, 0])
+      ShowTextAttributes(["kitunezyu_fc1", 2, 0, 2])
+      ShowText(["\\n<Haruka>"])
+      ShowText(["Hey, isn't this really bad?!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["No way!\nThe attack on Kitsune Village has already started!"])
+      ShowTextAttributes(["alice_fc6", 1, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["There's no getting them to turn back now!\nLeave the proof for later, we need to go to Kitsune Village now!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["What?!\nThe attack on Kitsune Village is already starting!"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["There's no more time to dispute their evidence!\nWe need to go back to Kitsune Village to lessen the damage!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Kh... Is there no way to avoid bloodshed?!"])
+    ConditionalBranch([4, 538, 0])
+      ShowTextAttributes(["heinrich_fc1", 0, 0, 2])
+      ShowText(["\\n<Heinrich>"])
+      ShowText(["Both sides believe the other to be the mastermind here. It'll be hard to mediate this fight."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 102, 0])
+      ShowTextAttributes(["youko_fc1", 2, 0, 2])
+      ShowText(["\\n<Kitsu>"])
+      ShowText(["What's going to happen to our home?!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 103, 0])
+      ShowTextAttributes(["kamuro_fc1", 2, 0, 2])
+      ShowText(["\\n<Kamuro>"])
+      ShowText(["W-we shouldn't fight in our village..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 106, 0])
+      ShowTextAttributes(["nanabi_fc1", 3, 0, 2])
+      ShowText(["\\n<Nanabi>"])
+      ShowText(["At this rate, we'll lose the village and Lady Tamamo..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["This has turned into an emergency.\nWe must hurry to the Kitsune Village..."])
+    PlayBGM(["RPG::BGM(@name=\"mura7\", @volume=100, @pitch=100)"])
+    ControlSwitches([100, 100, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 82
+Name = "EV082"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 6, 2])
+      ShowTextAttributes(["shinobitanuki_fc1", 2, 0, 2])
+      ShowText(["\\n<Shinobitanuki>"])
+      ShowText(["The Tanuki and Kitsune Clans have been on bad terms... but at worst this has been in the form of pranks pulled in each village."])
+      ShowTextAttributes(["shinobitanuki_fc1", 2, 0, 2])
+      ShowText(["\\n<Shinobitanuki>"])
+      ShowText(["To think that they would kidnap Miss Black Tanuki like this... This won't be treated as some prank!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["shinobitanuki_fc1", 2, 0, 2])
+      ShowText(["\\n<Shinobitanuki>"])
+      ShowText(["Black Alice's faction led us by the nose the whole way... Not many people were hurt, but this stings my pride!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 83
+Name = "EV083"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 6, 2])
+      ShowTextAttributes(["zyoutanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<High Tanuki>"])
+      ShowText(["Miss Inugami-Gyobu is the most capable Tanuki in the whole village. She'll definitely think of something..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["zyoutanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<High Tanuki>"])
+      ShowText(["Miss Inugami-Gyobu didn't do anything useful there, huh. People that only look smart do more harm than good."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 84
+Name = "EV084"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 6, 2])
+      ShowTextAttributes(["zyoutanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<High Tanuki>"])
+      ShowText(["I do not believe we should act so soon.\nMiss Inugami-Gyobu will surely come up with some plan..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["zyoutanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<High Tanuki>"])
+      ShowText(["The village fields have gotten much quieter now. All the Tanuki are busy sleeping at home now."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 85
+Name = "EV085"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 3, 2])
+      ShowTextAttributes(["shinobitanuki_fc1", 2, 0, 2])
+      ShowText(["\\n<Shinobitanuki>"])
+      ShowText(["Most of the Tanuki believe we should immediately raid the Kitsune Village to retrieve Miss Black Tanuki..."])
+      ShowTextAttributes(["shinobitanuki_fc1", 2, 0, 2])
+      ShowText(["\\n<Shinobitanuki>"])
+      ShowText(["Even now, they're holding pep rallies over there to get fired up. What's going to happen now..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 4, 1])
+      ConditionalBranch([1, 1137, 0, 6, 2])
+        ShowTextAttributes(["shinobitanuki_fc1", 2, 0, 2])
+        ShowText(["\\n<Shinobitanuki>"])
+        ShowText(["Oh no, bad news!\nEveryone's gone and invaded the Kitsune Village!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["shinobitanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Shinobitanuki>"])
+      ShowText(["The village has become much more peaceful now.\nThis peace is what the village is always like."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 86
+Name = "EV086"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 6, 2])
+      ShowTextAttributes(["mametanuki_fc1", 2, 0, 2])
+      ShowText(["\\n<Junior Tanuki>"])
+      ShowText(["I don't want to go to war..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Junior Tanuki>"])
+      ShowText(["It's a good thing no war broke out.\nYou're the ones who thwarted Black Alice's schemes, right?"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 87
+Name = "EV087"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 6, 2])
+      ShowTextAttributes(["mametanuki_fc1", 2, 0, 2])
+      ShowText(["\\n<Junior Tanuki>"])
+      ShowText(["*sniffle, whimper*...\n*munch, chew*..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Junior Tanuki>"])
+      ShowText(["I'm glad we're at peace again♪"])
+      ShowText(["*munch munch, chew*..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 88
+Name = "EV088"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 6, 2])
+      ShowTextAttributes(["shinobitanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Shinobitanuki>"])
+      ShowText(["Recently, strong yoma have often come to visit Miss Black Tanuki. I wonder if that's related to her current disappearance..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["shinobitanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Shinobitanuki>"])
+      ShowText(["That Izanami and Himiko have been passing through the village for a while now. Dressed as humans, we never thought they were ancient gods..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 89
+Name = "EV089"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 6, 2])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Junior Tanuki>"])
+      ShowText(["The Kitsune are so mean...\nAll they do is try to fight us."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Junior Tanuki>"])
+      ShowText(["Both the Tanuki and the Kitsune were fools here... it's a good thing nothing seriously bad happened."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 90
+Name = "EV090"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 6, 2])
+      ShowTextAttributes(["baketanuki_fc1", 2, 0, 2])
+      ShowText(["\\n<Bakedanuki>"])
+      ShowText(["Miss Black Tanuki loved her practical jokes, but she never did anything comparable to kidnapping."])
+      ShowTextAttributes(["baketanuki_fc1", 2, 0, 2])
+      ShowText(["\\n<Bakedanuki>"])
+      ShowText(["The Kitsune Clan needled us back in kind.\nThis sudden barbarism has left us stunned."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["baketanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Bakedanuki>"])
+      ShowText(["There are many things for us to reflect on from this incident... Most of us were quick to action, leaping straight to invasion."])
+      ShowTextAttributes(["baketanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Bakedanuki>"])
+      ShowText(["Just fanning the flames of hatred was enough to put us on the verge of a great war... Mob mentality is terrifying."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 91
+Name = "EV091"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([32, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 92
+Name = "EV092"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 6, 2])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Junior Tanuki>"])
+      ShowText(["I wonder if I should reinforce my house...\nIf it'll stop the Kitsune from burning it down..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["mametanuki_fc1", 2, 0, 2])
+      ShowText(["\\n<Junior Tanuki>"])
+      ShowText(["During the panic, I fixed boards all over the walls, but I didn't need them and now they're a pain to pull down..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 93
+Name = "EV093"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 6, 2])
+      ShowTextAttributes(["shinobitanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Shinobitanuki>"])
+      ShowText(["Let's get them before they get us!\nThe Kitsune's animosity is obvious, and the time to strike is now!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["shinobitanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Shinobitanuki>"])
+      ShowText(["The truth is, I'm actually not a Tanuki...\nI'm a raccoon."])
+      ShowTextAttributes(["shinobitanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Shinobitanuki>"])
+      ShowText(["...Don't tell anybody, okay?♪"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 94
+Name = "EV094"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 6, 2])
+      ShowTextAttributes(["shinobitanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Shinobitanuki>"])
+      ShowText(["I can't believe that they could capture Miss Black Tanuki so easily... She's on the same level as a queen monster."])
+      ShowTextAttributes(["shinobitanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Shinobitanuki>"])
+      ShowText(["That means it had to have been Tamamo that kidnapped her... which makes this a declaration of all-out war from the Kitsune..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["shinobitanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Shinobitanuki>"])
+      ShowText(["I still hate the Kitsune...\nbut I hate war even more."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 95
+Name = "EV095"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 6, 2])
+      ShowTextAttributes(["mametanuki_fc1", 2, 0, 2])
+      ShowText(["\\n<Junior Tanuki>"])
+      ShowText(["This is Miss Black Tanuki's house... but since she's currently captured by the Kitsune... *sniffle*..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Junior Tanuki>"])
+      ShowText(["This is Miss Black Tanuki's house.\nMake sure to be respectful!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 96
+Name = "EV096"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 6, 2])
+      ShowTextAttributes(["zyoutanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<High Tanuki>"])
+      ShowText(["According to race categorization, Tanuki monsters are categorized as Kitsune. There is no greater possible insult to us than that..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["zyoutanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<High Tanuki>"])
+      ShowText(["I'd like them to add a Tanuki race you could race change into. Where can I protest for this?"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 97
+Name = "EV097"
+
+  Page 0
+    ShowTextAttributes(["shinobitanuki_fc1", 0, 0, 2])
+    ShowText(["\\n<Shinobitanuki>"])
+    ShowText(["This is the Tanuki Dojo!\nWith the mess going on right now, outsiders aren't allowed in!"])
+    Empty([])
+
+  Page 1
+    Empty([])

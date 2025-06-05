@@ -1,0 +1,41 @@
+CommonEvent 630
+Name = "イベント：プチラミア"
+
+  999([630])
+  ControlSwitches([73, 73, 0])
+  ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+  ShowText(["\\n<Tiny Lamia>Welcome to Tiny Lamia's traveling inn!\nWould you like to stay the night for 20G?"])
+  ShowText([""])
+  ShowText([""])
+  ShowChoices([["はい", "いいえ"], 2])
+  When([0, "はい"])
+    ConditionalBranch([7, 20, 0])
+      ChangeGold([1, 0, 20])
+      FadeoutScreen([])
+      PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+      Wait([150])
+      RecoverAll([0, 0])
+      ErasePicture([5])
+      FadeinScreen([])
+      ControlSwitches([73, 73, 1])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+      ShowText(["\\n<Tiny Lamia>It doesn't look like you have enough money."])
+      ShowText([""])
+      ControlSwitches([73, 73, 1])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  When([1, "いいえ"])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  ChoicesEnd([])
+  Empty([])

@@ -1,0 +1,26 @@
+CommonEvent 649
+Name = "イベント：サキュバス"
+
+  999([649])
+  ControlSwitches([73, 73, 0])
+  ConditionalBranch([0, 428, 0])
+    ShowTextAttributes(["succubus_fc1", 4, 0, 2])
+    ShowText(["\\n<Succubus>If you're hungry, have a potato.\n...Do you want one?"])
+    ShowText([""])
+    ShowText([""])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ShowTextAttributes(["succubus_fc1", 4, 0, 2])
+  ShowText(["\\n<Succubus>I'll share my succubus aura..."])
+  ShowText([""])
+  ControlSwitches([428, 428, 0])
+  PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["Succubus emanates a strange aura!\nUntil the next boss floor, the power of sexcraft techniques will be doubled!"])
+  ShowText([""])
+  ControlSwitches([73, 73, 1])
+  ExitEventProcessing([])
+  Empty([])

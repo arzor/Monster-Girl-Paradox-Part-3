@@ -1,0 +1,297 @@
+Display Name = "イリアス神殿 第4層"
+Parallax Name = "CloudySky1"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 326, 29, 55, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 326, 29, 55, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 326, 29, 55, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 324, 29, 13, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 324, 30, 13, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 324, 10, 27, 6, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 324, 10, 27, 6, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 324, 10, 27, 6, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 3"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([721, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1030, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"scene_kanasimi3\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_iriasu_st33", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["……………………"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["イリアス……もはや、貴様は我々に敵うまい。"])
+    ShowText(["それでも、立ち塞がるというのか……？"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["一つだけ、条件があります。"])
+    ShowText(["それが叶えば、私はここから去りましょう。"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["条件が一つとは、珍しく譲歩したものだな。"])
+    ShowText(["さあ、言ってみろ……"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["あなたは、箱船計画を否定しました。"])
+    ShowText(["選ばれた者のみが、救われる事など許容できないと――"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["それを曲げた上で、条件が……"])
+    ShowText(["……いえ、頼みがあります。"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["私の僕、プルエルとイヌエル……"])
+    ShowText(["この両名を、生きたまま合一世界に保護して下さい。"])
+    ShowTextAttributes(["alice_fc1", 4, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["……………………"])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["……分かった、その二人をポケット魔王城に保護しよう。"])
+    ShowText(["肉体ごと合一世界に連れていくと約束する。"])
+    ShowTextAttributes(["slime_fc1", 2, 0, 2])
+    ShowText(["【プルエル】"])
+    ShowText(["でも、イリアス様は……？"])
+    ShowTextAttributes(["dog_fc1", 2, 0, 2])
+    ShowText(["【イヌエル】"])
+    ShowText(["イリアス様を、置いていけないよう……"])
+    ShowPicture([5, "80_iriasu_st32", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["……私は大丈夫です。"])
+    ShowText(["創世の女神なのですから、どうにでもなりますよ。"])
+    ShowPicture([5, "80_iriasu_st31", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["そういうわけで、二人とも魔王達と一緒に行きなさい。"])
+    ShowText(["私が戻るまで、良い子にしているのですよ……"])
+    ShowTextAttributes(["slime_fc1", 2, 0, 2])
+    ShowText(["【プルエル】"])
+    ShowText(["う、うん……"])
+    ShowTextAttributes(["dog_fc1", 4, 0, 2])
+    ShowText(["【イヌエル】"])
+    ShowText(["ちゃんと戻ってきてね、約束だよ……"])
+    ErasePicture([5])
+    Wait([30])
+    SetMoveRoute([12, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    SetMoveRoute([13, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["プルエルとイヌエルは、ポケット魔王城に入っていった……"])
+    Wait([30])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ShowPicture([5, "80_iriasu_st33", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["それでは、約束通り道を開けましょう……"])
+    ShowText(["私の頼みを聞いてもらい、感謝します。"])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["それで、貴様はどうするのだ……？"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["さあ、どうなるのでしょう。"])
+    ShowText(["この先の展開は、もはや神でさえ読めません……"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["それでは、行きなさい。"])
+    ShowText(["この冒険の終着点は、もう目前なのですから……"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["……………………"])
+    ErasePicture([5])
+    Wait([30])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["……なぜ、プルエル達を助けてくれたのです？"])
+    ShowText(["選ばれた者だけを救うのは、あなたの信念に反するのでは？"])
+    Wait([30])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["絶対者が、生きるべき者と死すべき者を取捨選択する……"])
+    ShowText(["余は、その傲慢さを唾棄する。"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["だが、あの二人を救いたかった貴様の願いは違う……"])
+    ShowText(["それは、傲慢とは相反する精神から来ているはずだ。"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["余も貴様も、世界を救うため駆けずり回った者同士。"])
+    ShowText(["貴様とて、少しは報われても良いはずだ……"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["……………………"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["気をつけなさい……もう一人の私は強いですよ。"])
+    FadeoutBGM([1])
+    ShowAnimation([0, 501, false])
+    Wait([60])
+    ControlSwitches([2505, 2505, 0])
+    Wait([120])
+    PlayBGM(["RPG::BGM(@name=\"dungeon_irias\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["イリアス様……"])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["……行くぞ。"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["slime_fc1", 2, 0, 2])
+    ShowText(["【プルエル】"])
+    ShowText(["なんだか、外が大変な事になってるよ。"])
+    ShowText(["邪神軍が攻めてきたんだって……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["dog_fc1", 3, 0, 2])
+    ShowText(["【イヌエル】"])
+    ShowText(["神殿の外、すごくイヤな匂いがする……"])
+    ShowText(["きっと、いっぱい死んでる……"])
+    Empty([])
+
+  Page 1
+    Empty([])

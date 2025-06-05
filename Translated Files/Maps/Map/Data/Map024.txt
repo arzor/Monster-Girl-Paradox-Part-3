@@ -1,0 +1,557 @@
+Display Name = "ラダイト村"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["いや、おかしいでしょう！"])
+    ShowText(["どのツラ下げて、私達が宴なんて開いてるのよ！"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカントＡ】"])
+    ShowText(["気にするな……"])
+    ShowText(["勘違いこそあれ、この村に客人は初めてだ。"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカントＢ】"])
+    ShowText(["それに、この村には野菜しかない。"])
+    ShowText(["肉や酒など、一生味わえると思わなかった御馳走だ……"])
+    ShowTextAttributes(["tatunoko_k_fc2", 1, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["りんごジュースもいっぱいあるのです！"])
+    ShowTextAttributes(["umiusi_k_fc2", 1, 0, 2])
+    ShowText(["【そらうし空兵】"])
+    ShowText(["こんぶもワカメもたっぷりですよ！"])
+    ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["村を土下座行脚する覚悟だったのに……"])
+    ShowText(["なんだか、やりにくいなぁ……"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["申し訳ない気持ちも、多分にあるが――"])
+    ShowText(["こうして、異種間交流とも言える宴が始まった！"])
+    RecoverAll([0, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([1, 1150, 0, 17, 0])
+      ControlVariables([1150, 1150, 0, 0, 18])
+      ShowTextAttributes(["sabasa_fc4", 1, 0, 2])
+      ShowText(["【サラサ】"])
+      ShowText(["あんた達には、世話になったね。"])
+      ShowText(["まずは今回の礼だよ。"])
+      PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+      ChangeItems([768, 0, 0, 1])
+      ChangeWeapons([4416, 0, 0, 1, false])
+      ShowTextAttributes(["sabasa_fc4", 1, 0, 2])
+      ShowText(["【サラサ】"])
+      ShowText(["ところで、さっきアリスから聞いたよ。"])
+      ShowText(["あんた達は、並行世界から来たんだってね。"])
+      ShowTextAttributes(["sabasa_fc4", 1, 0, 2])
+      ShowText(["【サラサ】"])
+      ShowText(["そして、あたしが異世界出身ってのも納得いったよ。"])
+      ShowText(["あんた達の語る向こうの世界とやら、あたしの記憶通りだ。"])
+      ShowTextAttributes(["alice_fc1", 3, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["それで、これからの事なのだが――"])
+      SetMoveRoute([3, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      ShowTextAttributes(["sabasa_fc4", 1, 0, 2])
+      ShowText(["【サラサ】"])
+      ShowText(["分かってるさ……"])
+      ShowText(["あたしを、あんた達の仲間に加えてもらえないかい？"])
+      ShowTextAttributes(["sabasa_fc4", 1, 0, 2])
+      ShowText(["【サラサ】"])
+      ShowText(["飛行船を失い、サラサ空賊団もしばらく動けない。"])
+      ShowText(["でも、天使の横暴を黙って見てる気はないんでね……"])
+      ShowTextAttributes(["alice_fc1", 1, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["もちろん、大歓迎だ。"])
+      ShowText(["……構わんな、サラよ。"])
+      ShowTextAttributes(["sara_fc1", 1, 0, 2])
+      ShowText(["【サラ】"])
+      ShowText(["ええ……私も賛成よ。"])
+      ShowText(["正直、ちょっとまだ慣れないけど……"])
+      ShowTextAttributes(["sabasa_fc4", 4, 0, 2])
+      ShowText(["【サラサ】"])
+      ShowText(["そりゃ私が父親だってんだから、慣れなくて当然さ！"])
+      ShowText(["ともかく、今後ともよろしくね！"])
+      PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["サラサが正式に仲間に加わった！"])
+      ControlSwitches([7087, 7087, 0])
+      Wait([60])
+      ShowTextAttributes(["alice_fc1", 1, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["うむ、話は丸く収まったか。"])
+      ShowText(["これで、サバサ王の欠片のうち一人が見つかった事になるな。"])
+      ShowTextAttributes(["sabasa_fc4", 3, 0, 2])
+      ShowText(["【サラサ】"])
+      ShowText(["サバサ王の欠片……か。"])
+      ShowText(["元に戻ったら、あたしは消えてしまうのかねぇ？"])
+      ShowTextAttributes(["sonia_fc3", 4, 0, 2])
+      ShowText(["【ソニア】"])
+      ShowText(["この場合、並行世界における通常の合一とは異なる。"])
+      ShowText(["両者の存在は共存し、自在に移行が可能となる。"])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["つまり、心も体も切り替え可能になるのか……？"])
+      ShowTextAttributes(["sonia_fc3", 4, 0, 2])
+      ShowText(["【ソニア】"])
+      ShowText(["然り。存在は一であり複数。"])
+      ShowText(["己が意思で、自身の存在を規定できる。"])
+      ShowTextAttributes(["sabasa_fc4", 1, 0, 2])
+      ShowText(["【サラサ】"])
+      ShowText(["なるほど、だいたい分かったよ。"])
+      ShowText(["どんな姿になっても、あたしはあたしさ！"])
+      SetMoveRoute([3, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+      ConditionalBranch([0, 1526, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["こうして、サバサ王の魂の断片――"])
+        ShowText(["分け放たれたうちの片方は見つけ出す事が出来た。"])
+        ConditionalBranch([0, 7088, 0])
+          ShowTextAttributes(["sabasa_fc4", 1, 0, 2])
+          ShowText(["【サラサ】"])
+          ShowText(["それにしても……"])
+          ShowText(["もう一人のあたしが、ヒーローだなんてねぇ。"])
+          ShowTextAttributes(["sabasa_fc4", 4, 0, 2])
+          ShowText(["【サラサ】"])
+          ShowText(["あんたみたいな奴は好きだよ、あははははっ！！"])
+          ShowTextAttributes(["sabasa_fc3", 0, 0, 2])
+          ShowText(["【サバサマン】"])
+          ShowText(["私も、君のようなレディは好きだぞ。"])
+          ShowText(["ＡＨＡＨＡＨＡＨＡＨＡ！！"])
+          ShowTextAttributes(["sara_fc1", 4, 0, 2])
+          ShowText(["【サラ】"])
+          ShowText(["……………………"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["そしてもう片方も、すでに仲間になっている。"])
+          ShowText(["二人が揃った今、あらためてタルタロスにいるサバサソウルに会うのだ――"])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["異世界にいる、もう片方の断片も探しだそう。"])
+          ShowText(["二人を揃え、タルタロスにいるサバサソウルに会うのだ――"])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1150, 0, 18, 0])
+      ShowTextAttributes(["sabasa_fc4", 1, 0, 2])
+      ShowText(["【サラサ】"])
+      ShowText(["そういうわけで、今後ともよろしくね。"])
+      ShowText(["どんな姿になっても、あたしはあたしさ！"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["今回の一件、余としても反省せねばならんな……"])
+    ShowText(["偏見による早合点で、相手を侵略者と見誤ってしまうとは。"])
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      SetMoveRoute([2, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+      ShowTextAttributes(["sabasa_fc4", 3, 0, 2])
+      ShowText(["【サラサ】"])
+      ShowText(["もともとは、あたし達が持ってきた案件さ。"])
+      ShowText(["あんた達にも、つくづく迷惑を掛けたね……"])
+      ShowTextAttributes(["alice_fc1", 3, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["そう言うな、我々も勉強になった。"])
+      ShowText(["今後も、為政者として戒めなければならんな……"])
+      SetMoveRoute([2, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["……んっ、どうした？"])
+    ShowText(["宴を終えて、もう休むか？"])
+    ShowChoices([["まだ宴を続ける", "宴を終える"], 1])
+    When([0, "まだ宴を続ける"])
+      ShowTextAttributes(["alice_fc1", 1, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["せっかくの機会だ、貴様も存分に楽しむがいい。"])
+      ShowText(["戦いばかりでは、心も荒むだろう……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "宴を終える"])
+      ConditionalBranch([1, 1150, 0, 17, 0])
+        ShowTextAttributes(["alice_fc1", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["まあ待て、これでお開きにするには早すぎるぞ。"])
+        ShowText(["サラサとも話したい事があるしな……"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1150, 0, 18, 0])
+        ShowTextAttributes(["alice_fc1", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["そうか、今日は存分に楽しんだしな。"])
+        ShowText(["そろそろ幕引きと行こう……"])
+        FadeoutBGM([1])
+        FadeoutScreen([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["こうして、レプリカント達を交えた宴は盛り上がりつつ終了した。"])
+        ShowText(["そして、翌朝――"])
+        Wait([60])
+        ChangePlayerFollowers([0])
+        ControlSwitches([100, 100, 1])
+        TintScreen(["Tone(@red=0.0, @green=0.0, @blue=0.0, @gray=0.0)", 1, false])
+        TransferPlayer([0, 534, 48, 37, 2, 2])
+        PlayBGM(["RPG::BGM(@name=\"scene_epilogue1\", @volume=100, @pitch=100)"])
+        RecoverAll([0, 0])
+        FadeinScreen([])
+        ShowPicture([5, "80_replicant_st01", 0, 0, -120, 0, 100, 100, 0, 0])
+        ShowPicture([6, "80_replicant_st01", 0, 0, 180, 0, 100, 100, 0, 0])
+        MovePicture([5, nil, 0, 0, -120, 0, 100, 100, 255, 0, 30, false])
+        MovePicture([6, nil, 0, 0, 180, 0, 100, 100, 255, 0, 30, true])
+        ShowTextAttributes(["alice_fc1", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["今回は、本当に迷惑を掛けたな……"])
+        ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+        ShowText(["【レプリカント】"])
+        ShowText(["気にするな……結果的には良い交流が出来た。"])
+        ShowText(["それに、この村に残る空賊団も我々を守ってくれる……"])
+        ShowTextAttributes(["tatunoko_k_fc2", 1, 0, 2])
+        ShowText(["【たつのこ空兵】"])
+        ShowText(["あたし達に任せるのです！"])
+        ShowTextAttributes(["sabasa_fc4", 1, 0, 2])
+        ShowText(["【サラサ】"])
+        ShowText(["手に負えなくなったら、あたしに連絡しな。"])
+        ShowText(["それじゃあ、行ってくるよ！"])
+        ShowTextAttributes(["tatunoko_k_fc2", 1, 0, 2])
+        ShowText(["【たつのこ空兵】"])
+        ShowText(["お頭、お気を付けてー！"])
+        ShowTextAttributes(["umiusi_k_fc2", 0, 0, 2])
+        ShowText(["【そらうし空兵】"])
+        ShowText(["私達は、ここで待っていますからね！"])
+        ShowText(["ご武運のあらん事を！"])
+        ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+        ShowText(["【レプリカント】"])
+        ShowText(["宴の後、村の前に橋を掛けておいた。"])
+        ShowText(["帰りは、そこを渡るといい……"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["【ルカ】"])
+        ShowText(["ありがとう、レプリカント達！"])
+        ShowText(["……あと、本当ごめんなさい……"])
+        ConditionalBranch([4, 21, 0])
+          ShowTextAttributes(["tamamo_fc1", 3, 0, 2])
+          ShowText(["【たまも】"])
+          ShowText(["誠に面目ない……"])
+          ShowText(["この多大なる借り、必ず報いようぞ。"])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+        ShowText(["【レプリカント】"])
+        ShowText(["気にするな、友よ……"])
+        ErasePicture([5])
+        ErasePicture([6])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["こうして僕達は、やや恐縮しつつラダイト村を後にするのだった。"])
+        ShowText(["さあ、次の目的地に行こう――"])
+        FadeoutScreen([])
+        ControlVariables([1002, 1002, 0, 0, 61])
+        ControlVariables([1150, 1150, 0, 0, 19])
+        PlayBGM(["RPG::BGM(@name=\"mura2\", @volume=100, @pitch=100)"])
+        FadeinScreen([])
+        Script(["gain_medal(93)"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["本当、今回は私も大反省……"])
+    ShowText(["レプリカント達を、棍棒でガンガン殴っちゃったわ。"])
+    ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["犠牲者は出なかったから、良かったけど……"])
+    ShowText(["本当、どれだけ謝っても謝り足りないわね。"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["気にするな、友よ……"])
+    ShowText(["女神も嫌う、我々の異様な外見が誤解の引き金なのだから。"])
+    ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["そう言われると……"])
+    ShowText(["ますます罪悪感がきつい……！"])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["【ヌルコ】"])
+    ShowText(["きゅー！　きゅー！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ヌルコはむしゃむしゃと料理を食べている……"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["ふしぎないきものだな……"])
+    ShowText(["この子も、造られたものなのか？"])
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["【ヌルコ】"])
+    ShowText(["……きゅっ？"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["これくらい可愛ければ……"])
+    ShowText(["我々も、女神に疎んじられなかったかもしれないな。"])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["この村に、客人など初めてだ。"])
+    ShowText(["我々は、女神に見捨てられた存在だからな……"])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["morrigan_fc1", 6, 0, 2])
+    ShowText(["【モリガン】"])
+    ShowText(["うーん、見た目で判断しちゃいけなかったよな……"])
+    ShowText(["そもそも、ラダイト村ってイメージ悪いし……"])
+    ShowTextAttributes(["morrigan_fc1", 0, 0, 2])
+    ShowText(["【モリガン】"])
+    ShowText(["まあ、昔のことは水に流そうぜ！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["それは向こうが言う事であって、"])
+    ShowText(["僕達が言っちゃいけないと思うよ……"])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 59, 2])
+      ShowTextAttributes(["astaroth_fc1", 4, 0, 2])
+      ShowText(["【アスタロト】"])
+      ShowText(["この失態、リリス姉さんにバレたら大目玉だわ……"])
+      ShowText(["……黙っておいてね。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 60, 1])
+      ShowTextAttributes(["astaroth_fc1", 4, 0, 2])
+      ShowText(["【アスタロト】"])
+      ShowText(["うっかり確認を怠って、こんな事に……"])
+      ShowText(["私がついていながら、面目ないわ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc2", 1, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["戦いの後の宴は楽しいのです！"])
+    ShowText(["むしゃむしゃ、ごくごく……"])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc2", 0, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["月の民って、ルカさんにそっくりなのです。"])
+    ShowText(["兄弟姉妹がたくさんなのですか？"])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["むにゃむにゃ……もう飲めません……"])
+    ShowText(["りんごジュース……"])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["umiusi_k_fc2", 1, 0, 2])
+    ShowText(["【そらうし空兵】"])
+    ShowText(["墜落するサラサ号から、酒と食糧を運び出したのは私です。"])
+    ShowText(["今回の宴の功労者ですよね……♪"])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["umiusi_k_fc2", 2, 0, 2])
+    ShowText(["【そらうし空兵】"])
+    ShowText(["サラサ号は、完全に潰れちゃいました。"])
+    ShowText(["空賊団は、路頭に迷う事になりますね……ぐすん。"])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["これが宴か……"])
+    ShowText(["気分が高揚する……"])
+    ShowTextAttributes(["replicant_fc1", 1, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["酒を飲んだら……赤いランプが着いた……！？"])
+    ShowText(["なんだ……！　これは何だ……！？"])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["女神は、いつ気紛れで我々を滅ぼすか分からない……"])
+    ShowText(["我々は常に絶滅と隣り合わせなのだ……"])
+    ShowTextAttributes(["sabasa_fc4", 1, 0, 2])
+    ShowText(["【サラサ】"])
+    ShowText(["なら、うちの団員をこの村に置いとくよ。"])
+    ShowText(["どうせ飛行船を失って、しばらくやる事がないしね。"])
+    ShowTextAttributes(["sabasa_fc4", 1, 0, 2])
+    ShowText(["【サラサ】"])
+    ShowText(["大丈夫、迷惑を掛けはしないさ。"])
+    ShowText(["食糧くらい、自分達で調達できる連中だしね。"])
+    ShowTextAttributes(["tatunoko_k_fc2", 0, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["天使の斥候くらいなら、あたし達でやっつけるのです。"])
+    ShowText(["大部隊で攻めてきたら、お頭に連絡するのです！"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["それは、ありがたい……"])
+    ShowText(["心より感謝する……"])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["こんな料理を食べたのは初めてだ……"])
+    ShowText(["美味い……"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["レプリカントとして生まれ、楽しみは無いと思っていた。"])
+    ShowText(["このような宴、夢のようだ……"])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["tamamo_fc1", 3, 0, 2])
+    ShowText(["【たまも】"])
+    ShowText(["ウチがついていながら、不甲斐ない……"])
+    ShowText(["偏見がどうのなどと、偉そうに説教できんわい。"])
+    ShowTextAttributes(["tamamo_fc1", 3, 0, 2])
+    ShowText(["【たまも】"])
+    ShowText(["幸い、ここの者は外との交流に飢えておるおかげで、"])
+    ShowText(["先のトラブルは水に流して歓迎してくれているが……"])
+    ShowTextAttributes(["tamamo_fc1", 3, 0, 2])
+    ShowText(["【たまも】"])
+    ShowText(["普通なら、再修復は不可能なほどの大失態じゃぞ。"])
+    ShowText(["まったく、我ながら情けないわい……"])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["sara_fc1", 1, 0, 2])
+    ShowText(["【サラ】"])
+    ShowText(["……結局、父さんは父さんだったわね。"])
+    ShowText(["いつでもどこでも、弱者を守る姿勢に変わりはないわ。"])
+    ShowTextAttributes(["sara_fc1", 1, 0, 2])
+    ShowText(["【サラ】"])
+    ShowText(["今回は、色々と失敗したけど……"])
+    ShowText(["それでも、あの子供達を月の民から守ろうとしたし。"])
+    ShowTextAttributes(["sara_fc1", 1, 0, 2])
+    ShowText(["【サラ】"])
+    ShowText(["もう、否定はしないわ……"])
+    ShowText(["サラサは、私の父さんの半身なのよ。"])
+    ShowTextAttributes(["sara_fc1", 4, 0, 2])
+    ShowText(["【サラ】"])
+    ShowText(["それでも、やっぱり……"])
+    ShowText(["サラサを父さんと呼ぶのは、慣れないけど……"])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["brunhild_fc1", 0, 0, 2])
+    ShowText(["【ヒルデ】"])
+    ShowText(["レプリカントのこども、可愛かったよね。"])
+    ShowText(["ヒルデも、こども欲しいな……"])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["【プロメスティン】"])
+    ShowText(["この空気の中では……"])
+    ShowText(["ちょっと体のサンプル下さい、とは言い出しにくいですね。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["当たり前だ……宴の席を凍り付かせる気か。"])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["【プロメスティン】"])
+    ShowText(["仕方ありませんね……"])
+    ShowText(["レプリカントの使ったグラスを回収するにとどめましょう。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["いつか大問題になるよ。"])
+    ShowText(["本当、いい加減にした方がいいよ……"])
+    Empty([])

@@ -1,0 +1,788 @@
+Display Name = "ポケット魔王城 2F西"
+Parallax Name = "DarkSpace1"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ShakeScreen([5, 5, 60, false])
+    PlaySE(["RPG::SE(@name=\"mon_earth2\", @pitch=100, @volume=100)"])
+    ShowPicture([1, "iv_chaos1", 0, 0, 0, 0, 100, 100, 0, 0])
+    ShowPicture([2, "iv_chaos2", 0, 0, 0, 0, 100, 100, 0, 0])
+    ShowPicture([3, "iv_chaos4", 0, 0, 0, 0, 100, 100, 0, 0])
+    ShowPicture([4, "iv_chaos5", 0, 0, 0, 0, 100, 100, 0, 0])
+    ShowPicture([5, "iv_chaos6", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([1, nil, 0, 0, 0, 0, 100, 100, 255, 0, 10, true])
+    MovePicture([2, nil, 0, 0, 0, 0, 100, 100, 255, 0, 10, true])
+    MovePicture([3, nil, 0, 0, 0, 0, 100, 100, 255, 0, 10, true])
+    MovePicture([4, nil, 0, 0, 0, 0, 100, 100, 255, 0, 10, true])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 10, true])
+    MovePicture([1, nil, 0, 0, 0, 0, 100, 100, 0, 0, 10, true])
+    MovePicture([2, nil, 0, 0, 0, 0, 100, 100, 0, 0, 10, true])
+    MovePicture([3, nil, 0, 0, 0, 0, 100, 100, 0, 0, 10, true])
+    MovePicture([4, nil, 0, 0, 0, 0, 100, 100, 0, 0, 10, true])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 10, true])
+    ErasePicture([1])
+    ErasePicture([2])
+    ErasePicture([3])
+    ErasePicture([4])
+    ErasePicture([5])
+    ChangeMapDisplay([1])
+    TransferPlayer([0, 457, 29, 31, 0, 2])
+    Wait([30])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["なっ……！　そんな……！"])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc2", 1, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["まずい、城そのものが崩壊し始めている！"])
+      ShowText(["止まるな！　走れ！！"])
+      Empty([])
+
+    BranchEnd([])
+    ControlVariables([1002, 1002, 0, 0, 142])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 468, 8, 14, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["alice_fc2", 1, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["くっ……なんだ、この有様は！？"])
+    ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["混沌が、城内に侵蝕を……！！"])
+    ShowText(["これでは、もはや――"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["とにかく、外に脱出しよう！"])
+    ShowText(["このままじゃ混沌に呑み込まれるぞ！！"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["succubus_fc1", 3, 0, 2])
+    ShowText(["【サキュバス】"])
+    ShowText(["とんでもない事になったわね……"])
+    ShowText(["これ、時空間自体が侵蝕されてるの？"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["この場所は、もう終わりって事さ！"])
+    ShowTextAttributes(["succubus_fc1", 3, 0, 2])
+    ShowText(["【サキュバス】"])
+    ShowText(["溢れるウサギ達は、私達で何とかするから……"])
+    ShowText(["とにかく、あなた達はここから逃げて。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["zenki_fc1", 2, 0, 2])
+    ShowText(["【前鬼】"])
+    ShowText(["なんなんだよ、こいつら！？"])
+    ConditionalBranch([0, 1433, 0])
+      ConditionalBranch([4, 433, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["kouki_fc1", 2, 0, 2])
+        ShowText(["【後鬼】"])
+        ShowText(["倒しても倒しても、わらわら出てくるよ！"])
+        ShowText(["いったいどうなってるんだい！？"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["さぁて、どうなってるんだろうね～？"])
+    ShowTextAttributes(["zenki_fc1", 2, 0, 2])
+    ShowText(["【前鬼】"])
+    ShowText(["とにかく、ここは俺達に任せやがれ！"])
+    ShowText(["お前達は、とっとと逃げるんだよ！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["zenki_fc1", 2, 0, 2])
+    ShowText(["【前鬼】"])
+    ShowText(["なんなんだよ、こいつら！？"])
+    ConditionalBranch([0, 1433, 0])
+      ConditionalBranch([4, 433, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["kouki_fc1", 2, 0, 2])
+        ShowText(["【後鬼】"])
+        ShowText(["倒しても倒しても、わらわら出てくるよ！"])
+        ShowText(["いったいどうなってるんだい！？"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["さぁて、どうなってるんだろうね～？"])
+    ShowTextAttributes(["zenki_fc1", 2, 0, 2])
+    ShowText(["【前鬼】"])
+    ShowText(["とにかく、ここは俺達に任せやがれ！"])
+    ShowText(["お前達は、とっとと逃げるんだよ！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["zenki_fc1", 2, 0, 2])
+    ShowText(["【前鬼】"])
+    ShowText(["なんなんだよ、こいつら！？"])
+    ConditionalBranch([0, 1433, 0])
+      ConditionalBranch([4, 433, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["kouki_fc1", 2, 0, 2])
+        ShowText(["【後鬼】"])
+        ShowText(["倒しても倒しても、わらわら出てくるよ！"])
+        ShowText(["いったいどうなってるんだい！？"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["さぁて、どうなってるんだろうね～？"])
+    ShowTextAttributes(["zenki_fc1", 2, 0, 2])
+    ShowText(["【前鬼】"])
+    ShowText(["とにかく、ここは俺達に任せやがれ！"])
+    ShowText(["お前達は、とっとと逃げるんだよ！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Earth4\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 455, 12, 24, 0, 0])
+    PlayBGM(["RPG::BGM(@name=\"kiki6\", @volume=100, @pitch=100)"])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 468, 7, 14, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["jeid_fc1", 0, 0, 2])
+    ShowText(["【ジェイド】"])
+    ShowText(["侵入者は多数、迎撃を開始……"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["アポトーシスまで、よく平気で仲間にしたねぇ。"])
+    ShowText(["そういう節操ないところ、好きだよ。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["artm_fc1", 0, 0, 2])
+    ShowText(["【コッペリア】"])
+    ShowText(["ルカの生存を優先……"])
+    ShowText(["退出の間、時間を稼ぎます。"])
+    ConditionalBranch([0, 1251, 0])
+      ConditionalBranch([4, 251, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["paizuridoll_fc1", 1, 0, 2])
+        ShowText(["【パイン】"])
+        ShowText(["……………………"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["人形の癖に、泣かせるねぇ……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ConditionalBranch([1, 1005, 0, 15, 0])
+      ConditionalBranch([4, 66, 0])
+        ConditionalBranch([0, 2065, 0])
+          ConditionalBranch([0, 2263, 1])
+            ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+            ShowText(["【ヴァニラ】"])
+            ShowText(["図書館には縁がないヴァニラだぞ。"])
+            ShowText(["魔導書のページ納入に関して、相談があるのだが……"])
+            ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+            ShowText(["【コーネリア】"])
+            ShowText(["商売なら、相応の対価を要求せねばなりませんね。"])
+            ShowText(["ページの納入と引き替えに、その月の新刊を……"])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["商談が進んでいく……"])
+            ShowTextAttributes(["page65537_fc1", 1, 0, 2])
+            ShowText(["【コーネリア】"])
+            ShowText(["その条件で結構です。"])
+            ShowText(["互いにとって、良い取引になりましたね。"])
+            ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+            ShowText(["【ヴァニラ】"])
+            ShowText(["ありがとうなのだ！"])
+            ControlSwitches([2263, 2263, 0])
+            ConditionalBranch([0, 2262, 0])
+              PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+              ShowTextAttributes(["", 0, 0, 2])
+              ShowText(["ヴァニラの店で金の針と魔導書のページを扱うようになった！"])
+              ControlVariables([1005, 1005, 0, 0, 16])
+              ControlSwitches([2065, 2065, 1])
+              Wait([60])
+              ExitEventProcessing([])
+              Empty([])
+            Else([])
+              ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+              ShowText(["【ヴァニラ】"])
+              ShowText(["次は、金の針なのだ！"])
+              ShowText(["ピラミッドの入り口に、サソリ娘の商人がいたはずなのだぞ。"])
+              ExitEventProcessing([])
+              Empty([])
+            BranchEnd([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([5, "80_page65537_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ConditionalBranch([1, 3121, 0, 10, 1])
+      ConditionalBranch([1, 4121, 0, 0, 0])
+        ControlVariables([4121, 4121, 0, 0, 1])
+        ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+        ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+        ShowText(["ページの間に挟まっていました……"])
+        ShowText(["私には不要なので、あなたにあげましょう。"])
+        PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+        ChangeItems([25, 0, 0, 1])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 3121, 0, 100, 1])
+      ConditionalBranch([1, 4121, 0, 1, 0])
+        ControlVariables([4121, 4121, 0, 0, 2])
+        ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+        ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+        ShowText(["ページの間に挟まっていました……"])
+        ShowText(["私には不要なので、あなたにあげましょう。"])
+        PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+        ChangeArmor([1041, 0, 0, 1, false])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 3121, 0, 500, 1])
+      ConditionalBranch([1, 4121, 0, 2, 0])
+        ControlVariables([4121, 4121, 0, 0, 3])
+        ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+        ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+        ShowText(["ページの間に挟まっていました……"])
+        ShowText(["私には不要なので、あなたにあげましょう。"])
+        PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+        ChangeArmor([1354, 0, 0, 1, false])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 3121, 0, 2000, 1])
+      ConditionalBranch([1, 4121, 0, 3, 0])
+        ControlVariables([4121, 4121, 0, 0, 4])
+        ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+        ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+        ShowText(["ページの間に挟まっていました……"])
+        ShowText(["私には不要なので、あなたにあげましょう。"])
+        PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+        ChangeArmor([1688, 0, 0, 1, false])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Script(["actor_label_jump"])
+    ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["読書ばかりでは体がなまります。"])
+    ShowText(["少しは運動もしなければ……"])
+    JumpToLabel(["メニュー"])
+    Label(["41"])
+    ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["おや、科学者さん。"])
+    ShowText(["あなたは意外にも、図書館にはほとんど来ませんね。"])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["【プロメスティン】（好感度：\\V[3041]）"])
+    ShowText(["情報収集のツールとして、書物は非効率的です。"])
+    ShowText(["読書など時間の無駄であり、浪費ですよ。"])
+    ShowTextAttributes(["page65537_fc1", 1, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["浪費だから、良いのではないですか。"])
+    ShowText(["誰もが、情報収集の目的で読書しているわけではありません。"])
+    ShowTextAttributes(["page65537_fc1", 1, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["ただの娯楽、楽しく読んで時間を浪費する……"])
+    ShowText(["そういう散漫な読書も、あってよいと思いますよ。"])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["【プロメスティン】（好感度：\\V[3041]）"])
+    ShowText(["カロリーを気にせず、思う存分食べるようなものですか？"])
+    ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["まあ、そんなところですが……"])
+    ShowText(["ダイエットなど、気にしていたのですか？"])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["【プロメスティン】（好感度：\\V[3041]）"])
+    ShowText(["何にでも管理主義なだけです。"])
+    JumpToLabel(["メニュー"])
+    Label(["72"])
+    ShowTextAttributes(["phoenix_fc1", 4, 0, 2])
+    ShowText(["【ミニ】（好感度：\\V[3072]）"])
+    ShowText(["あっ、本のお姉さんだ！"])
+    ShowTextAttributes(["page65537_fc1", 4, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["ひっ！　ち、近寄らないで下さい……！"])
+    ShowText(["私は火がダメなのです！！"])
+    ShowTextAttributes(["phoenix_fc1", 1, 0, 2])
+    ShowText(["【ミニ】（好感度：\\V[3072]）"])
+    ShowText(["お姉さん、絵本を読んでほしいのだ！"])
+    ShowTextAttributes(["page65537_fc1", 4, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["いやーッ！　こ、来ないでー！"])
+    JumpToLabel(["メニュー"])
+    Label(["119"])
+    ShowTextAttributes(["page65537_fc1", 1, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["おや、17ページ。"])
+    ShowText(["本の整理を手伝ってもらえませんか？"])
+    ShowTextAttributes(["page17_fc1", 0, 0, 2])
+    ShowText(["【アニー】（好感度：\\V[3119]）"])
+    ShowText(["了解しました……"])
+    ShowText(["むっ、この本には干涸らびた97ページが……"])
+    ShowTextAttributes(["page65537_fc1", 4, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["こちらの本では、211ページがしなびています。"])
+    ShowText(["いよいよ活字離れが深刻ですね……"])
+    JumpToLabel(["メニュー"])
+    Label(["120"])
+    ShowTextAttributes(["page257_fc1", 0, 0, 2])
+    ShowText(["【ヨーコ】（好感度：\\V[3120]）"])
+    ShowText(["おや、65537ページ様。"])
+    ShowText(["何かお勧めの本はありませんか？"])
+    ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["実は『シャーリー夫人の恋人』が手に入ったのですよ。"])
+    ShowTextAttributes(["page257_fc1", 0, 0, 2])
+    ShowText(["【ヨーコ】（好感度：\\V[3120]）"])
+    ShowText(["なんと羨ましい……"])
+    ShowText(["それで、いかがでしたか？"])
+    ShowTextAttributes(["page65537_fc1", 1, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["もちろん……ふふふっ。"])
+    ShowTextAttributes(["page257_fc1", 1, 0, 2])
+    ShowText(["【ヨーコ】（好感度：\\V[3120]）"])
+    ShowText(["次は、ぜひ私に……うふふっ。"])
+    JumpToLabel(["メニュー"])
+    Label(["163"])
+    ShowTextAttributes(["lily_fc1", 5, 0, 2])
+    ShowText(["【リリィ】（好感度：\\V[3163]）"])
+    ShowText(["辺境の村に長く住んでいたから……"])
+    ShowText(["私、流行のファッションには疎いのよ。"])
+    ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["私も、似たようなものです。"])
+    ShowText(["ずっと図書館にこもっておりますので……"])
+    ShowTextAttributes(["lily_fc1", 4, 0, 2])
+    ShowText(["【リリィ】（好感度：\\V[3163]）"])
+    ShowText(["似たもの同士ね、ふふふっ。"])
+    ShowText(["今度、一緒に都会へ服でも買いに行く……？"])
+    ShowTextAttributes(["page65537_fc1", 1, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["ぜひ、ご一緒させてもらいましょう。"])
+    ShowText(["たまにはお洒落を楽しまなくては、ふふっ……"])
+    ShowTextAttributes(["lily_fc1", 6, 0, 2])
+    ShowText(["【リリィ】（好感度：\\V[3163]）"])
+    ShowText(["（もっさりメガネなんかに負けるものですか……）"])
+    ShowTextAttributes(["page65537_fc1", 4, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["（この田舎女にだけは負けたくありませんね……）"])
+    JumpToLabel(["メニュー"])
+    Label(["233"])
+    ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["メフィスト……"])
+    ShowText(["あなた、魔王城図書館で借りた本を返していませんよ？"])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["【メフィスト】（好感度：\\V[3233]）"])
+    ShowText(["そう言えば、すっかり忘れていましたね。"])
+    ShowText(["複製しますので、もう少し待って頂けません？"])
+    ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["まったく……それが教職にある者の言葉ですか。"])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["【メフィスト】（好感度：\\V[3233]）"])
+    ShowText(["奪えるものは総取りにしろ、というのが私の教えですので……"])
+    ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["なるほど、あなたは図書館出入禁止です。"])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["【メフィスト】（好感度：\\V[3233]）"])
+    ShowText(["……このような事もあります。"])
+    ShowText(["生徒の皆さん、欲のかきすぎにはご注意を。"])
+    JumpToLabel(["メニュー"])
+    Label(["391"])
+    ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["メフィスト……"])
+    ShowText(["あなた、魔王城図書館で借りた本を返していませんよ？"])
+    ShowTextAttributes(["mefist_fc2", 0, 0, 2])
+    ShowText(["【メフィスト】（好感度：\\V[3233]）"])
+    ShowText(["そう言えば、すっかり忘れていましたね。"])
+    ShowText(["複製しますので、もう少し待って頂けません？"])
+    ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["まったく……それが教職にある者の言葉ですか。"])
+    ShowTextAttributes(["mefist_fc2", 0, 0, 2])
+    ShowText(["【メフィスト】（好感度：\\V[3233]）"])
+    ShowText(["奪えるものは総取りにしろ、というのが私の教えですので……"])
+    ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+    ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+    ShowText(["なるほど、あなたは図書館出入禁止です。"])
+    ShowTextAttributes(["mefist_fc2", 0, 0, 2])
+    ShowText(["【メフィスト】（好感度：\\V[3233]）"])
+    ShowText(["……このような事もあります。"])
+    ShowText(["生徒の皆さん、欲のかきすぎにはご注意を。"])
+    JumpToLabel(["メニュー"])
+    Label(["メニュー"])
+    Loop([])
+      Script(["unlimited_choices(11, [\"Give presents\","])
+      ScriptMore(["\"Add to party\","])
+      ScriptMore(["\"View present list\",\"Make a request\","])
+      ScriptMore(["\"Never mind\"])"])
+      ConditionalBranch([1, 11, 0, 0, 0])
+        Script(["present_start(121)"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 11, 0, 1, 0])
+        ErasePicture([5])
+        Script(["move_actor_ex(121)"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 11, 0, 2, 0])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["好感度  10:不思議な木の実"])
+        ShowText(["好感度 100:細心の首飾り"])
+        ShowText(["好感度 500:魔導書の書"])
+        ShowText(["好感度2000:幸せの靴"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 11, 0, 3, 0])
+        ErasePicture([5])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["何をおねだりしますか？（好感度：\\V[3121]）"])
+        Script(["unlimited_choices(12,"])
+        ScriptMore([" [\"肉器吸精1（好感度:10）\","])
+        ScriptMore(["\"肉器吸精2（好感度:50）\","])
+        ScriptMore(["\"肉器吸精3（好感度:100）\","])
+        ScriptMore(["\"パイズリ（好感度:100）\","])
+        ScriptMore(["\"Never mind\"])"])
+        ConditionalBranch([1, 12, 0, 0, 0])
+          ConditionalBranch([1, 3121, 0, 10, 1])
+            Script(["call_novel_scene(4396)"])
+            ExitEventProcessing([])
+            Empty([])
+          Else([])
+            ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+            ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+            ShowText(["失礼、今は手が離せないので……"])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([1, 12, 0, 1, 0])
+          ConditionalBranch([1, 3121, 0, 50, 1])
+            Script(["call_novel_scene(4397)"])
+            ExitEventProcessing([])
+            Empty([])
+          Else([])
+            ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+            ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+            ShowText(["失礼、今は手が離せないので……"])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([1, 12, 0, 2, 0])
+          ConditionalBranch([1, 3121, 0, 100, 1])
+            Script(["call_novel_scene(4398)"])
+            ExitEventProcessing([])
+            Empty([])
+          Else([])
+            ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+            ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+            ShowText(["失礼、今は手が離せないので……"])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([1, 12, 0, 3, 0])
+          ConditionalBranch([1, 3121, 0, 100, 1])
+            Script(["call_novel_scene(4399)"])
+            ExitEventProcessing([])
+            Empty([])
+          Else([])
+            ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+            ShowText(["【コーネリア】（好感度：\\V[3121]）"])
+            ShowText(["失礼、今は手が離せないので……"])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 11, 0, 4, 1])
+        ErasePicture([5])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    RepeatAbove([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["jeid_fc1", 0, 0, 2])
+    ShowText(["【ジェイド】"])
+    ShowText(["侵入者は多数、迎撃を開始……"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["アポトーシスまで、よく平気で仲間にしたねぇ。"])
+    ShowText(["そういう節操ないところ、好きだよ。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ShowTextAttributes(["artm_fc1", 0, 0, 2])
+    ShowText(["【コッペリア】"])
+    ShowText(["ルカの生存を優先……"])
+    ShowText(["退出の間、時間を稼ぎます。"])
+    ConditionalBranch([0, 1251, 0])
+      ConditionalBranch([4, 251, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["paizuridoll_fc1", 1, 0, 2])
+        ShowText(["【パイン】"])
+        ShowText(["……………………"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["人形の癖に、泣かせるねぇ……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    ShowTextAttributes(["artm_fc1", 0, 0, 2])
+    ShowText(["【コッペリア】"])
+    ShowText(["ルカの生存を優先……"])
+    ShowText(["退出の間、時間を稼ぎます。"])
+    ConditionalBranch([0, 1251, 0])
+      ConditionalBranch([4, 251, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["paizuridoll_fc1", 1, 0, 2])
+        ShowText(["【パイン】"])
+        ShowText(["……………………"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["人形の癖に、泣かせるねぇ……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ShowTextAttributes(["succubus_fc1", 3, 0, 2])
+    ShowText(["【サキュバス】"])
+    ShowText(["とんでもない事になったわね……"])
+    ShowText(["これ、時空間自体が侵蝕されてるの？"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["この場所は、もう終わりって事さ！"])
+    ShowTextAttributes(["succubus_fc1", 3, 0, 2])
+    ShowText(["【サキュバス】"])
+    ShowText(["溢れるウサギ達は、私達で何とかするから……"])
+    ShowText(["とにかく、あなた達はここから逃げて。"])
+    Empty([])
+
+  Page 1
+    Empty([])

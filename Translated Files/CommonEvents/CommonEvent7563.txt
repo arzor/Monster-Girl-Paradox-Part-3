@@ -1,0 +1,32 @@
+CommonEvent 7563
+Name = "魅凪：敗北"
+
+  999([7698])
+  CallCommonEvent([7000])
+  ShowPicture([5, "80_minagi_st01b", 0, 0, 0, 0, 100, 100, 255, 0])
+  ErasePicture([6])
+  ShowTextAttributes(["minagi_fc1", 0, 0, 2])
+  ShowText(["\\n<Minagi>"])
+  ShowText(["It seems you've lost..."])
+  ShowText(["Looks like you still have much to learn."])
+  ShowTextAttributes(["minagi_fc1", 0, 0, 2])
+  ShowText(["\\n<Minagi>"])
+  ShowText(["If you're frustrated, come and challenge me again."])
+  ShowText(["I'll gladly wring every last drop of humiliation juices from you, time and time again..."])
+  ErasePicture([5])
+  ConditionalBranch([0, 443, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([0, 2331, 1])
+    ChangeMapDisplay([1])
+    ControlVariables([57, 57, 0, 0, 1287])
+    TransferPlayer([0, 287, 134, 124, 2, 0])
+    PlayBGM(["RPG::BGM(@name=\"scene_sinpi\", @volume=100, @pitch=100)"])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+  BranchEnd([])
+  ExitEventProcessing([])
+  Empty([])

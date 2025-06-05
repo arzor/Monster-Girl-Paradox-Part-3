@@ -1,0 +1,306 @@
+Display Name = ""
+Parallax Name = "DarkSea1"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["敵アジトが見えてきましたね。"])
+    ShowText(["小さな島に、たくさんの海賊船が停泊しているようです。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["見つからずに近付けるか不安だったが――"])
+    ShowText(["こちらの船は小さく、周囲も暗いため大丈夫そうだ。"])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["【アシェル】"])
+    ShowText(["略奪を終えて、戦利品の山分けってとこさ。"])
+    ShowText(["今頃、宴の最中だろうね。"])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["【アシェル】"])
+    ShowText(["それじゃあルカ、東向きの風を頼むよ。"])
+    PlayBGM(["RPG::BGM(@name=\"ruka\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["分かった……アンブロシア！"])
+    ShowTextAttributes(["ambrosia_fc1", 0, 0, 2])
+    ShowText(["【アンブロシア】"])
+    ShowText(["……………………"])
+    PlaySE(["RPG::SE(@name=\"mon_wind1\", @pitch=100, @volume=100)"])
+    ShowPicture([6, "80_ambrosia_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([6, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    Wait([60])
+    MovePicture([6, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+    ErasePicture([6])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ルカはアンブロシアを召喚した！"])
+    ShowText(["東向きの強風が吹き荒れる！"])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["【アシェル】"])
+    ShowText(["良い風だね……"])
+    ShowText(["それじゃあ火付け班、やりな！"])
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["【火計部隊】"])
+    ShowText(["姉御からの指示だ……行くよっ！"])
+    ShowAnimation([-1, 311, false])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["アシェルの一喝と同時に、乗り込んでいた手下達が一斉に火矢を放ち始めた。"])
+    ShowText(["火矢の雨は、停泊していた海賊船へと降り注いでいく――"])
+    ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["きたない海賊船に降り注ぐ、美しい火の雨……"])
+    ShowText(["なかなかに絶景ですね。"])
+    ShowAnimation([-1, 311, false])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["しかも火計班は、がむしゃらに火矢を放っているわけではなかった。"])
+    ShowText(["火薬庫や燃料庫、大砲付近など、火気厳禁の場所を狙い撃っているのだ。"])
+    PlaySE(["RPG::SE(@name=\"mon_fire1\", @pitch=100, @volume=100)"])
+    SetEventLocation([13, 0, 15, 5, 0])
+    SetEventLocation([12, 0, 15, 7, 0])
+    Wait([30])
+    SetEventLocation([14, 0, 15, 3, 0])
+    SetEventLocation([11, 0, 15, 9, 0])
+    Wait([30])
+    SetEventLocation([15, 0, 16, 1, 0])
+    SetEventLocation([10, 0, 16, 11, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["こうして放たれた火が、船内に満載されていた火薬に引火する。"])
+    ShowText(["海賊船は次々に炎上し、強風に煽られみるみる延焼していった。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["す、すごい……"])
+    ShowText(["あんなにいっぱいあった船が、みるみる燃えていく……"])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["【アシェル】"])
+    ShowText(["火計で重要なのは、九割がた風だからね……"])
+    ShowText(["風を起こせる能力なんて、海戦じゃチートだよ。"])
+    ConditionalBranch([0, 1202, 0])
+      ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+      ShowText(["【ボニー】"])
+      ShowText(["それに、略奪直後の奇襲だ。"])
+      ShowText(["敵は油断してる上に、船上は燃えるモノがいっぱいだぞ！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1202, 1])
+      ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+      ShowText(["【アシェル】"])
+      ShowText(["それに、略奪直後の奇襲だからね。"])
+      ShowText(["敵は油断してる上、船上は燃えるモノがいっぱいなんだよ。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["敵船上に満載されていた、町から奪った食料や燃料。"])
+    ShowText(["それにより炎は勢いを増し、もはや手も付けられないだろう。"])
+    PlaySE(["RPG::SE(@name=\"Water1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([5, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    SetMoveRoute([13, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    Wait([30])
+    PlaySE(["RPG::SE(@name=\"Water1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([6, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    SetMoveRoute([12, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    Wait([30])
+    PlaySE(["RPG::SE(@name=\"Water1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([4, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    SetMoveRoute([14, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["海賊達は船を捨て、次々と海の中に飛び込んでいく。"])
+    ShowText(["すっかり炎上し、海に消える船も出始めた。"])
+    ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["さて、用意してきたボトルを開けましょう。"])
+    ShowText(["燃え盛る敵船を眺めながら、美酒を乾杯……♪"])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["【アシェル】"])
+    ShowText(["乾杯には、まだ早いさ。"])
+    ShowText(["ロザの船、ローザリア号はきっと沈んじゃいない。"])
+    ScrollMap([2, 6, 4])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["確かに、目を凝らして良く見ると――"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["まだ動いている船がいる……あれがローザリア号か！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["一隻だけ、小島を離れた大型船がいる。"])
+    ShowText(["あれこそ、海賊女王ロザの乗る旗艦だ――"])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["【アシェル】"])
+    ShowText(["あれでも、結構な数の火矢を受けたはずだろうに……"])
+    ShowText(["さすがはロザの船、ダメコンがハンパないね。"])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["【アシェル】"])
+    ShowText(["さあ、ローザリア号に接舷するよ！"])
+    ShowText(["このまま敵旗船に乗り込んで、カシラを取るんだ！"])
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["【海賊マーメイド】"])
+    ShowText(["接舷白兵、海賊の華！　いっくよー！！"])
+    SetMoveRoute([1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    FadeoutScreen([])
+    Wait([30])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["アシェルの火計は大成功、大半の敵船は無力化した。"])
+    ShowText(["僕達の乗った船は、ローザリア号へと突進していく。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["このまま敵の旗船に乗り込んで、海賊女王ロザを倒す――"])
+    ShowText(["ここから先は、剣を使った戦いだ！"])
+    Wait([60])
+    ChangeTransparency([1])
+    TransferPlayer([0, 498, 13, 12, 4, 2])
+    ControlVariables([1002, 1002, 0, 0, 93])
+    FadeinScreen([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["敵船からの砲撃を、アシェルの巧みな操艦で回避し――"])
+    ShowText(["なんとかローザリア号に接舷、船内へと乗り込んだ。"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["火計が成功したからといって、浮かれないように……"])
+    ShowText(["ここは敵旗船、腕の立つ者は多いでしょう。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["（用意してたボトルまで開けて、浮かれていたくせに……）"])
+    ConditionalBranch([0, 1202, 0])
+      ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+      ShowText(["【ボニー】"])
+      ShowText(["なあアシェル、ふと思ったのだが……"])
+      ShowText(["なんだかこの船、おさかな号に似てないか？"])
+      ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+      ShowText(["【アシェル】"])
+      ShowText(["似てるっていうか、同じ船ですよ。"])
+      ShowText(["おさかな号の前身が、ローザリア号なんですから。"])
+      ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+      ShowText(["【ボニー】"])
+      ShowText(["……えっ！？"])
+      ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+      ShowText(["【アシェル】"])
+      ShowText(["そもそもお嬢、ロザの末裔でしょうが……"])
+      ShowText(["自分の出自、信じてなかったんですか？"])
+      ShowTextAttributes(["bonny_fc1", 2, 0, 2])
+      ShowText(["【ボニー】"])
+      ShowText(["し、知らなかった……"])
+      ShowText(["まさか、おさかな号がローザリア号だったなんて……"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["その話は、まあ後にして……"])
+      ShowText(["さあ、船内に乗り込もう！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1202, 1])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["とにかく、船内に乗り込もう！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 34, 0])
+      ShowTextAttributes(["micaelac_fc1", 0, 0, 2])
+      ShowText(["【ミカエラちゃん】"])
+      ShowText(["残るは白兵制圧のみ……いざ、参るわ。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["海賊女王を名乗る者が、逃げも隠れもしないはず。"])
+    ShowText(["きっとロザは、堂々と船長室で待っているはずだ――"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 3
+Name = "1"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "2"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "3"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "4"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "5"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "6"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "炎6"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "炎5"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "炎4"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "炎3"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "炎2"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "炎1"
+
+  Page 0
+    Empty([])

@@ -1,0 +1,925 @@
+Display Name = "Elf Village"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 301, 7, 20, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 301, 8, 53, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 301, 47, 55, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 301, 50, 19, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 302, 23, 38, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 302, 23, 38, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 302, 23, 38, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 302, 6, 38, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 302, 6, 38, 0, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    SetMoveRoute([27, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    ShowTextAttributes(["kuno_arachne_fc1", 0, 0, 2])
+    ShowText(["\\n<Kunoichi Arachne>Did you think you could ignore me and pass me by...? That's not going to happen."])
+    ShowText([""])
+    ShowText([""])
+    SetMoveRoute([27, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    SetMoveRoute([27, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ShowTextAttributes(["kuno_arachne_fc1", 0, 0, 2])
+    ShowText(["\\n<Kunoichi Arachne>Did you think you could ignore me and pass me by...? That's not going to happen."])
+    ShowText([""])
+    ShowText([""])
+    SetMoveRoute([27, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Elf>The village is in a bit of a situation right now...\nIt's best you don't stay too long."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Elf>This is the Elf Village.\nNow, where would you like to go?"])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Script(["unlimited_choices(11, [\"Inn\","])
+    ScriptMore(["\"Item Shop\",\"Elf Princess' Mansion\"])"])
+    ConditionalBranch([1, 11, 0, 0, 0])
+      TransferPlayer([0, 300, 49, 46, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 1, 0])
+      TransferPlayer([0, 300, 7, 46, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 2, 0])
+      TransferPlayer([0, 300, 46, 6, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 3, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Elf>It's getting pretty hectic in the village...\nDid something happen?"])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Elf>It seems Black Alice has been meddling in the village's affairs. I knew we couldn't trust her..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Elf>An emissary of the Elf Princess has sent word to the village to prepare for battle. It's been a big mess since then."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Elf>We've kept our distance from the outside world's conflicts until now... What in the world could have changed the Elf Princess' mind?"])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Elf>Who would have thought it was a call to arms to fight Black Alice... She was actually trying to take preemptive measures against a threat to the village."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 302, 6, 38, 0, 0])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Elf>So, this is just a rumor, but...\nIt is said that the Elf Princess is engaged to a gentleman."])
+    ShowText([""])
+    ShowText([""])
+    ConditionalBranch([1, 1142, 0, 62, 2])
+      ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+      ShowText(["\\n<Sonya>Oh yeah? That's great to hear.\nThat means she'll stop making passes at Luka from now on..."])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Elf>The gentleman in question is said to be the\nrumored young hero. You know, the one traveling with a tiny Monster Lord..."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Elf>The gentleman in question is said to be the rumored young hero. You know, the one traveling with a tiny Goddess..."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["sonia_fc2", 6, 0, 2])
+      ShowText(["\\n<Sonya>Why the hell is this damn shut-in treating this as an engagement?! I'll drag her outside, expose her to the sunlight, and turn her to ashes!"])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 302, 23, 38, 0, 0])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["kuno_scylla_fc1", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Scylla>I heard that there was a suspicious woman who visited the Elf Princess several times. That's kind of fishy..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["kuno_scylla_fc1", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Scylla>I fought Granberia when she stormed into the mansion. I lost, of course, but she wasn't as strong as rumored..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Kunoichi Elf>When the Elf Princess was still a little girl...\nShe was sent to a settlement of Elf Amazonesses to be trained."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Kunoichi Elf>Thanks to her training, she's become an expert in the martial arts, even amongst the Elf race... And then her mentality shifted to hate anything related to athleticism."])
+    ShowText([""])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 135, 43, 9, 2, 1])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 135, 43, 9, 2, 1])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ConditionalBranch([2, "A", 1])
+      ShowPicture([5, "80_neris_st03b", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["neris_fc1", 2, 0, 2])
+      ShowText(["\\n<Neris>Wander, wander..."])
+      ShowText([""])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>A big idiot is wandering around, saying\n\"wander, wander\" out loud..."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["neris_fc1", 2, 0, 2])
+        ShowText(["\\n<Neris>Come on, you're always nagging at me! I hate it~!"])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>What kind of idiot wanders around saying\n\"wander, wander\"?"])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ShowPicture([5, "80_neris_st02b", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["neris_fc1", 1, 0, 2])
+      ShowText(["\\n<Neris>Ah, Lukaaa♪ Let's make out♪"])
+      ShowText([""])
+      ShowTextAttributes(["sonia_fc2", 5, 0, 2])
+      ShowText(["\\n<Sonya>Let's not!"])
+      ShowText([""])
+      ShowPicture([5, "80_neris_st03b", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["neris_fc1", 2, 0, 2])
+      ShowText(["\\n<Neris>What the...\nWhy is some stranger getting mad...?"])
+      ShowText([""])
+      ShowTextAttributes(["sonia_fc2", 6, 0, 2])
+      ShowText(["\\n<Sonya>We don't know you either!"])
+      ShowText([""])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>More importantly, what are you doing here?\nCould it be that you're here to defeat the Elf Princess...?"])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["neris_fc1", 2, 0, 2])
+      ShowText(["\\n<Neris>Well, the Elf Princess' revolt never took place in the correct history. It seems she remained holed up in her village and had no influence on history."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["neris_fc1", 2, 0, 2])
+      ShowText(["\\n<Neris>And yet there is a rebellion going on for some reason. I was wondering whether I should crush them or leave them to you guys."])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>What, so this rebellion didn't happen in the correct history...?"])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>This rebellion commotion never occurred in the correct history...? What exactly is the meaning of this?"])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["neris_fc1", 2, 0, 2])
+      ShowText(["\\n<Neris>It seems Black Alice also approached the Elf Princess in the correct history. But she ignored her and stayed holed up in her mansion."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["neris_fc1", 2, 0, 2])
+      ShowText(["\\n<Neris>But it seems that in your world's history, she's going to take Black Alice up on her offer...\nHow did things turn out this way?"])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>By the way, are you from the correct history after all? You seem to be a blood relative of mine, by the looks of it..."])
+        ShowText([""])
+        ShowText([""])
+        ShowPicture([5, "80_neris_st01b", 0, 0, 0, 0, 100, 100, 255, 0])
+        ShowTextAttributes(["neris_fc1", 0, 0, 2])
+        ShowText(["\\n<Neris>Well, something like that.\nBut I'm stronger than you~! ♪"])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>Good grief, what a cheeky girl.\nWhat kind of upbringing did you have...?"])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Dealing with this rude little girl is exhausting. Luka, how about we go to the teahouse over there and fill our bellies for a bit?"])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["neris_fc1", 0, 0, 2])
+        ShowText(["\\n<Neris>Ah, I'm coming with you~! ♪"])
+        ShowText([""])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Now is not the time for this.\nLook, I bought two dumplings, so...\nAlice, Neris, there you go."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["alice_fc5", 7, 0, 2])
+        ShowText(["\\n<Alice>It's so sweet...♪"])
+        ShowText([""])
+        ShowPicture([5, "80_neris_st02b", 0, 0, 0, 0, 100, 100, 255, 0])
+        ShowTextAttributes(["neris_fc1", 1, 0, 2])
+        ShowText(["\\n<Neris>Delicious...♪"])
+        ShowText([""])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>(They seem to dislike each other, but they are very similar...)"])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>You really do seem to come from the correct history, after all. And aren't you also of the Monster Lord's bloodline?"])
+        ShowText([""])
+        ShowText([""])
+        ShowPicture([5, "80_neris_st01b", 0, 0, 0, 0, 100, 100, 255, 0])
+        ShowTextAttributes(["neris_fc1", 0, 0, 2])
+        ShowText(["\\n<Neris>Do you have to ask to know something like that?\nHuh, so the great Ilias isn't as omniscient as she claims to be~"])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["iriasu_fc5", 0, 0, 2])
+        ShowText(["\\n<Ilias>I'll get angry!"])
+        ShowText([""])
+        ShowPicture([5, "80_neris_st03b", 0, 0, 0, 0, 100, 100, 255, 0])
+        ShowTextAttributes(["neris_fc1", 2, 0, 2])
+        ShowText(["\\n<Neris>You're already angry!"])
+        ShowText([""])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>(It's a kids' fight...)"])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ControlSelfSwitch(["A", 0])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([2, "A", 0])
+      ConditionalBranch([0, 4, 0])
+        ShowPicture([5, "80_neris_st01b", 0, 0, 0, 0, 100, 100, 0, 0])
+        MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+        ShowTextAttributes(["neris_fc1", 0, 0, 2])
+        ShowText(["\\n<Neris>Oh, right. By the way, Mom..."])
+        ShowText([""])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>...Mom?"])
+        ShowText([""])
+        ShowPicture([5, "80_neris_st03b", 0, 0, 0, 0, 100, 100, 255, 0])
+        ShowTextAttributes(["neris_fc1", 2, 0, 2])
+        ShowText(["\\n<Neris>Ah..."])
+        ShowText([""])
+        ShowPicture([5, "80_neris_st01b", 0, 0, 0, 0, 100, 100, 255, 0])
+        ShowTextAttributes(["neris_fc1", 0, 0, 2])
+        ShowText(["\\n<Neris>I'm the kind of weird girl who accidentally calls everyone \"mom.\""])
+        ShowText([""])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Wow, that's really embarrassing..."])
+        ShowText([""])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>............"])
+        ShowText([""])
+        ErasePicture([5])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["neris_fc1", 2, 0, 2])
+        ShowText(["\\n<Neris>What should I do from now on?\nMaybe I'll have a cup of tea and go back~?"])
+        ShowText([""])
+        ShowText([""])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["kuno_hapy_fc1", 2, 0, 2])
+      ShowText(["\\n<Kunoichi Harpy>The Elf Princess has yet to tell us why we're rising to action. Commoners like us don't know why she has raised an army..."])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        ConditionalBranch([0, 4, 0])
+          ShowTextAttributes(["alice_fc5", 0, 0, 2])
+          ShowText(["\\n<Alice>I wonder what's going on here.\nWhy would a shut-in perform something so drastic...?"])
+          ShowText([""])
+          ShowText([""])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 5, 0])
+          ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+          ShowText(["\\n<Ilias>What in the world is going on?\nWhy would a shut-in perform something so drastic...?"])
+          ShowText([""])
+          ShowText([""])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 1143, 0])
+          ShowTextAttributes(["eva_fc1", 0, 0, 2])
+          ShowText(["\\n<Eva>There's only one reason for a shut-in to go on a rampage. It's when they can't stay confined indoors any longer."])
+          ShowText([""])
+          ShowText([""])
+          ConditionalBranch([0, 4, 0])
+            ShowTextAttributes(["alice_fc5", 6, 0, 2])
+            ShowText(["\\n<Alice>Indeed, that's all I can think of!\nWho would have thought you would be able to correctly assess the situation...?"])
+            ShowText([""])
+            ShowText([""])
+            Empty([])
+          BranchEnd([])
+          ConditionalBranch([0, 5, 0])
+            ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+            ShowText(["\\n<Ilias>Indeed, you're right...\nI can't believe the truth is coming from her mouth of all people..."])
+            ShowText([""])
+            ShowText([""])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+          ShowText(["\\n<Mephisto>I've dealt with a similar case before.\nCould it be that she can no longer stay holed up for some reason?"])
+          ShowText([""])
+          ShowText([""])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>She can't stay confined indoors for some reason...? That's very likely to be the case."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>But we don't know why she stopped being a shut-in. I guess we'll have to hear that from the person in question..."])
+      ShowText([""])
+      ShowText([""])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["kuno_hapy_fc1", 2, 0, 2])
+      ShowText(["\\n<Kunoichi Harpy>Things have been a bit crazy lately, don't you think? But to think that a conspiracy would claw its way into this village..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["kuno_succubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Succubus>The security at the main gate of the princess's mansion is very tight. But from what I've heard, it's easy to get in from the back."])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([0, 2441, 1])
+        ControlSwitches([2441, 2441, 0])
+        ConditionalBranch([0, 4, 0])
+          ShowTextAttributes(["alice_fc5", 1, 0, 2])
+          ShowText(["\\n<Alice>I see, the mansion has a back door...\nThat's some useful information we've just heard."])
+          ShowText([""])
+          ShowText([""])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 5, 0])
+          ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+          ShowText(["\\n<Ilias>I see, the mansion has a back door...\nIt would be better to go that way if we want to sneak in."])
+          ShowText([""])
+          ShowText([""])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([4, 413, 0])
+          ShowTextAttributes(["kurodanuki_fc1", 0, 0, 2])
+          ShowText(["\\n<Black Tanuki>Huh, but that'd be boring...\nLet's be flamboyant here and get in through the front door!"])
+          ShowText([""])
+          ShowText([""])
+          ConditionalBranch([0, 4, 0])
+            ShowTextAttributes(["morrigan_fc1", 0, 0, 2])
+            ShowText(["\\n<Morrigan>I agree!\nIt's more fun to be flashy!"])
+            ShowText([""])
+            ShowText([""])
+            Empty([])
+          BranchEnd([])
+          ConditionalBranch([0, 5, 0])
+            ShowTextAttributes(["rucyfinac_fc1", 1, 0, 2])
+            ShowText(["\\n<Lucifina-chan>Same here, I want to be flashy and go wild too~!"])
+            ShowText([""])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["kuno_succubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Succubus>Rumor has it that Black Alice is extending her reach to the Tanuki Village as well. The world is going to become much more stormy from now on..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowPicture([5, "80_kuno_arachne_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["kuno_arachne_fc1", 0, 0, 2])
+    ShowText(["\\n<Kunoichi Arachne>This area is off limits.\nNow turn back..."])
+    ShowText([""])
+    ShowText([""])
+    ConditionalBranch([0, 2441, 1])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>We don't know where this road leads.\nIt'd be too dangerous to force our way through..."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>We don't know where this road leads.\nLet's not force our way through..."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ErasePicture([5])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>This is the back door to the mansion we've heard about. There aren't many guards around, do you want to get in from here?"])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>According to the information provided earlier, this is the back door to the mansion. Security is thin around. Would you like to get in from here?"])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+      ShowText(["\\n<Mephisto>It's more advantageous to enter from here than from the main entrance. Come on, let's go."])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([4, 201, 0])
+        ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+        ShowText(["\\n<Ashel>I'd certainly prefer to avoid making a fuss as much as possible. It'll be easy to take care of these folks if it's just them..."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ShowChoices([["Enter", "Do nothing"], 2])
+      When([0, "Enter"])
+        PlayBGM(["RPG::BGM(@name=\"kiki4\", @volume=100, @pitch=100)"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Okay, let's go!"])
+        ShowText([""])
+        ShowPicture([5, "80_kuno_arachne_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+        ShowTextAttributes(["kuno_arachne_fc1", 2, 0, 2])
+        ShowText(["\\n<Kunoichi Arachne>No way, an enemy attack?! Kh, to think they'd exploit the thinly-guarded back door...!"])
+        ShowText([""])
+        ShowText([""])
+        ConditionalBranch([4, 34, 0])
+          ShowTextAttributes(["micaelac_fc1", 0, 0, 2])
+          ShowText(["\\n<Micaela-chan>Strike fast and true...!"])
+          ShowText([""])
+          Empty([])
+        BranchEnd([])
+        ErasePicture([5])
+        ControlSwitches([81, 81, 0])
+        BattleProcessing([0, 1485, false, false])
+        ControlSwitches([81, 81, 1])
+        ControlVariables([1138, 1138, 0, 0, 4])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Reinforcements...don't seem to be coming.\nAll right, let's rush into the mansion!"])
+        ShowText([""])
+        ShowText([""])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+        PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+        TransferPlayer([0, 302, 6, 38, 0, 0])
+        Empty([])
+      When([1, "Do nothing"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>No, let's stop..."])
+        ShowText([""])
+        ErasePicture([5])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    CallCommonEvent([374])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    CallCommonEvent([374])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    CallCommonEvent([374])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    CallCommonEvent([374])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["kuno_succubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Succubus>As you can see, the Elf Princess mansion is on high alert. I don't think they're going to let a single cat through with the way things are going."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["kuno_succubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Succubus>Now that the state of high alert has been lifted, I guess I'll have some free time for a while.\nHey, would you like to play with me...?"])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Elf>The Elf Princess's mansion is right up ahead.\nBut now they are on high alert and don't allow visitors."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Elf>The Elf Princess's mansion is up ahead.\nThe state of alert has been lifted, but it's not a place where travelers can casually enter."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Elf>I know it's a call to battle, but what exactly are we going to be fighting...? The Elf Princess won't even tell us that."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Elf>Now that the call to arms has been canceled, I must return to my usual duties. I'll sneak into Sabasa tomorrow..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Elf>The Elf Princess has been holing herself up for decades now. She delegates all political affairs to her subordinates and never comes out of her room."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Elf>And the first order she gives after decades of prolonged silence is a call to arms...? What on earth happened?"])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Elf>The Elf Princess has been holing herself up for decades now. She delegates all political affairs to her subordinates and never comes out of her room."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Elf>But when there's a real danger to the village, she boldly makes her move. This incident has greatly boosted the Elf Princess' reputation."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["kuno_hapy_fc1", 2, 0, 2])
+      ShowText(["\\n<Kunoichi Harpy>There are many of us who are inwardly opposed to this call to arms. We have no idea who we're fighting or what her intentions are..."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["kuno_hapy_fc1", 2, 0, 2])
+      ShowText(["\\n<Kunoichi Harpy>But in the village, the orders of the Elf Princess are absolute. No matter how we feel inside, we must obey."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["kuno_hapy_fc1", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Harpy>The reputation of the Elf Princess in the village is on the rise. The princess, famous for being a shut-in, was ready to fight for her village."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ShowTextAttributes(["kuno_succubus_fc1", 0, 0, 2])
+    ShowText(["\\n<Kunoichi Succubus>This village is the headquarters of the ninja.\nThere are not only elves but also many other kunoichi like us."])
+    ShowText([""])
+    ShowText([""])
+    Empty([])

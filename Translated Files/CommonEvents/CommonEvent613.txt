@@ -1,0 +1,29 @@
+CommonEvent 613
+Name = "イベント：経験値"
+
+  999([613])
+  ControlSwitches([73, 73, 0])
+  ConditionalBranch([1, 129, 0, 0, 0])
+    ShowTextAttributes(["sara_fc1", 1, 0, 2])
+    ShowText(["\\n<Sara>Let's all train together! Here we go!"])
+    ShowText([""])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Training with Sara, the party gained experience!"])
+    Script(["gain_party_exp(20000)"])
+    ControlVariables([129, 129, 0, 0, 1])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 129, 0, 1, 0])
+    ShowTextAttributes(["sara_fc1", 1, 0, 2])
+    ShowText(["\\n<Sara>Let's train again some time."])
+    ShowText([""])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  Empty([])

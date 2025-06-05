@@ -1,0 +1,198 @@
+Display Name = "Tower of Magic 5F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 108, 4, 19, 2, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 108, 26, 39, 2, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 108, 39, 19, 2, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 2"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1502, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([196, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"boss0\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_lusia_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["lusia_fc1", 2, 0, 2])
+    ShowText(["\\n<Lucia>You came all this way to defeat me, but Lily's philosophy is more dangerous than you can imagine."])
+    ShowTextAttributes(["lusia_fc1", 2, 0, 2])
+    ShowText(["\\n<Lucia>When the weak are granted power and become strong, they won't act like the weak do anymore."])
+    ShowTextAttributes(["lusia_fc1", 2, 0, 2])
+    ShowText(["\\n<Lucia>They will make others the new weak ones, and the same thing will repeat... No, the tragedy will be even greater, the greater the power is."])
+    ShowTextAttributes(["lusia_fc1", 2, 0, 2])
+    ShowText(["\\n<Lucia>And, in the end, the world will only be ruled by those with power... The very situation Lily hates so much will end up spreading."])
+    ShowTextAttributes(["lusia_fc1", 2, 0, 2])
+    ShowText(["\\n<Lucia>The secret technique of tentacle magic should not be spread to the whole world. It should not be monopolized, but it should be managed."])
+    ShowTextAttributes(["lusia_fc1", 2, 0, 2])
+    ShowText(["\\n<Lucia>In the end, power does not save the weak. It only changes who has power over whom, which solves nothing."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>But management means that only those chosen by the managers will receive power... No matter the intent, in the end it is a monopoly."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Indeed, wild diffusion of power leads to a disordered society. Power should be managed by one who is capable of managing it."])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([5, "80_lusia_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lusia_fc1", 0, 0, 2])
+    ShowText(["\\n<Lucia>Could you rethink our deal one more time? If you defeat Lily, I'll become your comrade."])
+    ShowTextAttributes(["lusia_fc1", 0, 0, 2])
+    ShowText(["\\n<Lucia>Do you want to fight me despite that? And release the dangers of tentacle magic on the world?"])
+    ShowChoices([["Fight Lucia", "Accept the deal, fight Lily"], 2])
+    When([0, "Fight Lucia"])
+      ShowPicture([5, "80_lusia_st03", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["lusia_fc1", 2, 0, 2])
+      ShowText(["\\n<Lucia>Then I'll burn you to ash! I won't show mercy to Lily's supporters!"])
+      ConditionalBranch([4, 167, 0])
+        ShowTextAttributes(["lusia_fc1", 0, 0, 2])
+        ShowText(["\\n<Lucia'>You're probably still doubting yourself..."])
+        ShowTextAttributes(["lusia_fc1", 2, 0, 2])
+        ShowText(["\\n<Lucia>This must be an alchemical by-product. There can't be more than one of me..."])
+        ShowTextAttributes(["lusia_fc1", 0, 0, 2])
+        ShowText(["\\n<Lucia'>Many mysteries remain in the world. Don't you think exploring them is my mission?"])
+        ShowTextAttributes(["lusia_fc1", 0, 0, 2])
+        ShowText(["\\n<Lucia>Those words are either an invitation to the truth... or the devil's whispers. Let's ascertain which in battle!"])
+        Empty([])
+      BranchEnd([])
+      ErasePicture([5])
+      ChangeBattleBGM(["RPG::BGM(@name=\"boss1\", @volume=100, @pitch=100)"])
+      ControlSwitches([22, 22, 0])
+      BattleProcessing([0, 280, false, false])
+      ControlSwitches([22, 22, 1])
+      ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+      PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+      ShowPicture([5, "80_lusia_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["lusia_fc1", 2, 0, 2])
+      ShowText(["\\n<Lucia>Why can't you understand... that Lily's ideals will end up giving birth to more violence..."])
+      ErasePicture([5])
+      ControlSwitches([2097, 2097, 0])
+      ControlSwitches([7016, 7016, 0])
+      PlaySE(["RPG::SE(@name=\"mon_down\", @pitch=100, @volume=100)"])
+      ControlVariables([1029, 1029, 0, 0, 5])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Lucia has lost consciousness..."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>She probably won't be able to use tentacle magic for a while now that we've exhausted her to this extent. This case is closed for now..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>She won't be able to use tentacle magic for the time being after being exhausted to this point. Although, I don't think she was wrong..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>It was difficult in many ways, but this is for the best, right...?"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>The fact is that tentacle magic saved those women. Keeping power that would save the weak concealed is..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Now, let's go report to Lily!"])
+      PlayBGM(["RPG::BGM(@name=\"dungeon_madou\", @volume=100, @pitch=100)"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Accept the deal, fight Lily"])
+      ControlSwitches([2095, 2095, 0])
+      ShowPicture([5, "80_lusia_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["lusia_fc1", 0, 0, 2])
+      ShowText(["\\n<Lucia>So you understand just how dangerous Lily is... The spread of arcane powers without regulation would give birth to chaos."])
+      ShowTextAttributes(["lusia_fc1", 0, 0, 2])
+      ShowText(["\\n<Lucia>Well then, I shall await news of Lily's defeat. Should you succeed, I'll wait for you in my Magistea Village hideout instead of here."])
+      ErasePicture([5])
+      PlayBGM(["RPG::BGM(@name=\"dungeon_madou\", @volume=100, @pitch=100)"])
+      ConditionalBranch([0, 2094, 0])
+        Script(["gain_medal(2008)"])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The party uses the circle of healing..."])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+    RecoverAll([0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The party's HP and MP have been fully recovered!"])
+    Empty([])

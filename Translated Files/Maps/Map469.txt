@@ -1,0 +1,134 @@
+Display Name = "ポケット魔王城 正門"
+Parallax Name = "DarkSpace1"
+Note = ""
+
+CommonEvent 1
+Name = ""
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Earth4\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 468, 24, 36, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Script(["delete_actor_ex(403)"])
+    ConditionalBranch([0, 447, 0])
+      Script(["clear_actor_equip(403)"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["galda_fc1", 1, 0, 2])
+    ShowText(["【ガルダ】"])
+    ShowText(["くぇぇぇっ！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ガルダは、すでに正門に控えていた！"])
+    ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["ガルダ、待ってくれていたのですね！"])
+    ShowText(["いい子です！"])
+    Script(["delete_actor_ex(26)"])
+    ScriptMore(["delete_actor_ex(27)"])
+    ScriptMore(["delete_actor_ex(28)"])
+    ConditionalBranch([0, 447, 0])
+      Script(["clear_actor_equip(26)"])
+      ScriptMore(["clear_actor_equip(27)"])
+      ScriptMore(["clear_actor_equip(28)"])
+      Empty([])
+
+    BranchEnd([])
+    SetEventLocation([4, 0, 15, 12, 2])
+    ControlSwitches([33, 33, 0])
+    SetMoveRoute([4, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    Wait([60])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["それでは、あらためて仲間を集めましょう！"])
+    ShowText(["助けられるだけ助けて――"])
+    ShakeScreen([5, 5, 60, false])
+    PlaySE(["RPG::SE(@name=\"mon_earth2\", @pitch=100, @volume=100)"])
+    ShowPicture([1, "iv_chaos1", 0, 0, 0, 0, 100, 100, 0, 0])
+    ShowPicture([2, "iv_chaos2", 0, 0, 0, 0, 100, 100, 0, 0])
+    ShowPicture([3, "iv_chaos4", 0, 0, 0, 0, 100, 100, 0, 0])
+    ShowPicture([4, "iv_chaos5", 0, 0, 0, 0, 100, 100, 0, 0])
+    ShowPicture([5, "iv_chaos6", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([1, nil, 0, 0, 0, 0, 100, 100, 255, 0, 10, true])
+    MovePicture([2, nil, 0, 0, 0, 0, 100, 100, 255, 0, 10, true])
+    MovePicture([3, nil, 0, 0, 0, 0, 100, 100, 255, 0, 10, true])
+    MovePicture([4, nil, 0, 0, 0, 0, 100, 100, 255, 0, 10, true])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 10, true])
+    MovePicture([1, nil, 0, 0, 0, 0, 100, 100, 0, 0, 10, true])
+    MovePicture([2, nil, 0, 0, 0, 0, 100, 100, 0, 0, 10, true])
+    MovePicture([3, nil, 0, 0, 0, 0, 100, 100, 0, 0, 10, true])
+    MovePicture([4, nil, 0, 0, 0, 0, 100, 100, 0, 0, 10, true])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 10, true])
+    ErasePicture([1])
+    ErasePicture([2])
+    ErasePicture([3])
+    ErasePicture([4])
+    ErasePicture([5])
+    ChangeMapDisplay([1])
+    TransferPlayer([0, 471, 15, 12, 0, 2])
+    ControlSwitches([33, 33, 1])
+    ControlVariables([1143, 1143, 0, 0, 8])
+    Wait([30])
+    ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["わぁっ！！"])
+    ShowTextAttributes(["galda_fc1", 0, 0, 2])
+    ShowText(["【ガルダ】"])
+    ShowText(["くぇぇぇ――っ！？"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["イリアス様！　ガルダ！！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["二人は、混沌空間に落下していった――"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["そ、そんな……"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["目の前には、混沌の空間が広がっている。"])
+    ShowText(["ここで立ち尽くしていては危険だ、とにかく逃げなければ――"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 3
+Name = "ガルダ"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "イリアス"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])

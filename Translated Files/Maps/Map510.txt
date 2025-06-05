@@ -1,0 +1,190 @@
+Display Name = "Tanuki Shrine"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 511, 1, 10, 6, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 511, 1, 10, 6, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 507, 23, 1, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 507, 23, 1, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 507, 23, 1, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 512, 27, 48, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 512, 27, 48, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 512, 27, 48, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 511, 1, 10, 6, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 511, 1, 10, 6, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["↑：Tanuki Shrine"])
+    ShowText(["←：Shrine Hill"])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ConditionalBranch([1, 1059, 0, 1, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shrine Maiden>Welcome to the Tanuki Shrine.\nOur goddess has run off somewhere, though..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1059, 0, 2, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shrine Maiden>Welcome to the Tanuki Shrine.\nTanuki-sama and Kitsune-sama are getting along well today."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Return to the Shrine Hill entrance?"])
+    ShowChoices([["Stay", "Return"], 1])
+    When([0, "Stay"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Return"])
+      TransferPlayer([0, 485, 14, 5, 2, 0])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>I'm taking a breather...\nShrine Hill is too steep for an old man like me."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["99"])
+    ShowTextAttributes(["namazu_fc1", 2, 0, 2])
+    ShowText(["\\n<Gigi>It's pretty hard on a catfish too..."])
+    ExitEventProcessing([])
+    Label(["185"])
+    ShowTextAttributes(["radio_fc1", 0, 0, 2])
+    ShowText(["\\n<Radio>Shall I level out the gradient of the stairs?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>I have no idea what that means, so you probably shouldn't."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["nezumi_fc1", 0, 0, 2])
+    ShowText(["\\n<Rat Girl>We've been oppressed by the inequality between us and the cats in the village for too long! Now is the time for revolution!"])
+    ShowTextAttributes(["nezumi_fc1", 0, 0, 2])
+    ShowText(["\\n<Rat Girl>Let them hear our battle cry!\nSqueak! Squeak!"])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["nezumi_fc1", 0, 0, 2])
+    ShowText(["\\n<Rat Girl>Squeak! Squeak!"])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["nezumi_fc1", 0, 0, 2])
+    ShowText(["\\n<Rat Girl>Maybe we should take over the Tanuki Shrine and turn it into Ratland?"])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["nezumi_fc1", 0, 0, 2])
+    ShowText(["\\n<Rat Girl>What do we want? Chicken! Cheese! Rice!\nWhen do we want them? Now!"])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["nezumi_fc1", 1, 0, 2])
+    ShowText(["\\n<Rat Girl>We're having a rat rally!"])
+    Empty([])

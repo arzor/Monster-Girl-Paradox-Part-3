@@ -1,0 +1,768 @@
+Display Name = "Grand Noah Palace 1F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 516, 22, 31, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 516, 22, 31, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    CallCommonEvent([397])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    CallCommonEvent([397])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    CallCommonEvent([397])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 516, 22, 31, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    CallCommonEvent([397])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    CallCommonEvent([398])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowPicture([5, "80_trooperloid_st03", 0, 0, -150, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_trooperloid_st03", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["trooperloid_fc1", 2, 0, 2])
+    ShowText(["\\n<Trooperoid A>"])
+    ShowText(["Hurry up, we gotta build a barricade here too...!"])
+    ShowTextAttributes(["trooperloid_fc1", 2, 0, 2])
+    ShowText(["\\n<Trooperoid B>"])
+    ShowText(["Hey, this is bad!"])
+    ShowText(["The Monster Lord's party is already here!!"])
+    SetMoveRoute([15, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([16, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["The exit's right up ahead, and I'm not letting anyone seal it off! Let's go!"])
+    ConditionalBranch([4, 218, 0])
+      ShowTextAttributes(["nyumaou_fc1", 0, 0, 2])
+      ShowText(["\\n<Cow Demon Queen>"])
+      ShowText(["My body's huge! I'll make them clear a path for us!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["trooperloid_fc1", 2, 0, 2])
+    ShowText(["\\n<Trooperoid>"])
+    ShowText(["Ugh, this is bad! Lady Uriela's gonna kill us if they get past here!!"])
+    ShowText([""])
+    ErasePicture([5])
+    ErasePicture([6])
+    BattleProcessing([0, 1550, false, false])
+    SetMoveRoute([15, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    SetMoveRoute([16, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Alright, the castle gate's just ahead!!"])
+    Wait([30])
+    FadeoutScreen([])
+    ControlVariables([1171, 1171, 0, 0, 3])
+    ChangeTransparency([0])
+    ChangeMapDisplay([1])
+    TransferPlayer([0, 872, 39, 42, 0, 2])
+    FadeinScreen([])
+    Wait([30])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["Everybody's here, right?! Then let's get out of here, now!"])
+    ShowText([""])
+    SetMoveRoute([23, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([24, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([25, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([26, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([27, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    PlayBGM(["RPG::BGM(@name=\"boss0-3\", @volume=100, @pitch=100)"])
+    PlaySE(["RPG::SE(@name=\"mon_fire2\", @pitch=100, @volume=100)"])
+    ControlVariables([1171, 1171, 0, 0, 4])
+    SetMoveRoute([23, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=14, @parameters=[0, -1])\", \"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, -1])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    SetMoveRoute([24, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    SetMoveRoute([25, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    SetMoveRoute([26, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    SetMoveRoute([27, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShotBalloonIcon([24, 1, false])
+    ShotBalloonIcon([25, 1, false])
+    ShotBalloonIcon([26, 1, false])
+    ShotBalloonIcon([27, 1, false])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Whoa!!"])
+    ShowTextAttributes(["alice_fc2", 1, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["...Luka?!"])
+    SetMoveRoute([23, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=38, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=38, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"mon_fire2\", @pitch=100, @volume=100)"])
+    ControlVariables([1171, 1171, 0, 0, 5])
+    SetMoveRoute([23, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=14, @parameters=[0, 1])\", \"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, 1])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    ShotBalloonIcon([23, 8, true])
+    Wait([60])
+    SetMoveRoute([23, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    Wait([30])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["I can blast through these flames in one go...!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<？？？>"])
+    ShowText(["Stop... If the Flames of Hades touch you, they'll scorch your soul to ashes..."])
+    SetMoveRoute([23, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Wh-Who are you...?!"])
+    ShowAnimation([36, 542, false])
+    Wait([60])
+    ControlVariables([1171, 1171, 0, 0, 6])
+    Wait([60])
+    ShowPicture([5, "80_sariera_st01b", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    PlayBGM(["RPG::BGM(@name=\"boss0-nanadaitenshi\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["sariera_fc1", 0, 0, 2])
+    ShowText(["\\n<Sariela>"])
+    ShowText(["I am Sariela... One of the Seven Archangels, and warden of the Angelic Dominion."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The one who descends here is an angel who could be mistaken for a monster. That icy aura of hers freezes everything around her."])
+    ShowText([""])
+    ShowTextAttributes(["sariera_fc1", 0, 0, 2])
+    ShowText(["\\n<Sariela>"])
+    ShowText(["Uriela may be the best of the Seven Archangels when it comes to pure power, but she lacks quick wits. I don't enjoy fighting, but if Raphaela requests it, I have no choice..."])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Gh...!"])
+    ShowTextAttributes(["alice_fc2", 1, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["I can't believe another one of the Seven Archangels would show up besides Uriela...\nLuka, can you find a way to escape?!"])
+    ShowText([""])
+    ShowTextAttributes(["sariera_fc1", 0, 0, 2])
+    ShowText(["\\n<Sariela>"])
+    ShowText(["It's pointless, these are flames summoned from Hades... Any living being who touches them gets burned to the soul..."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Just like Sariela says, I can't even touch these flames. They've got me surrounded, and there's no escape route left...!"])
+    ShowText([""])
+    ShowTextAttributes(["morrigan_fc1", 2, 0, 2])
+    ShowText(["\\n<Morrigan>"])
+    ShowText(["This is bad... we have to save Luka!"])
+    ShowTextAttributes(["astaroth_fc1", 2, 0, 2])
+    ShowText(["\\n<Astaroth>"])
+    ShowText(["...We shouldn't go back. If we try, we're definitely getting wiped out...!"])
+    ShowText([""])
+    ShowTextAttributes(["alice_fc2", 1, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["But...!"])
+    ShowTextAttributes(["sariera_fc1", 0, 0, 2])
+    ShowText(["\\n<Sariela>"])
+    ShowText(["I see the Monster Lord's group knows how to make smart choices... Child of Judgement, do you have anything to say to them?"])
+    ShowText([""])
+    ErasePicture([5])
+    Wait([30])
+    SetMoveRoute([23, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Ugh... g-guys.."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["My friends are right at the exit, but they're frozen in place because I'm trapped..."])
+    ShowChoices([["Run for it!", "Help me!"], 0])
+    When([0, "逃げろ！"])
+      ControlSwitches([31, 31, 1])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["Leave me here, get out of this place!"])
+      Empty([])
+
+    When([1, "助けて！"])
+      ControlSwitches([31, 31, 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["Please help me! Don't leave me behind!"])
+      Empty([])
+
+    ChoicesEnd([])
+    ShowTextAttributes(["astaroth_fc1", 2, 0, 2])
+    ShowText(["\\n<Astaroth>"])
+    ShowText(["They're still thinking about persuading Luka.\nThey won't kill him off that easily...!"])
+    ShowText([""])
+    ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["B-But... leaving him behind like this is just..."])
+    ConditionalBranch([0, 31, 1])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["I'll be fine, just go!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["Help! They're gonna kill me!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["alice_fc2", 1, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["...If we go back now, we really will be annihilated! And then we won't save Luka in the end anyway!"])
+    ShowText([""])
+    ShowTextAttributes(["alice_fc2", 1, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["Luka, I promise we'll come back for you! Hold onto hope until then!"])
+    ShowText([""])
+    ShowTextAttributes(["sonia_fc2", 4, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["We'll get ready and come rescue you no matter what! I swear it!!"])
+    ShowText([""])
+    ConditionalBranch([4, 382, 0])
+      ShowTextAttributes(["morrigan_fc1", 5, 0, 2])
+      ShowText(["\\n<Morrigan>"])
+      ShowText(["Make sure you eat, okay?! We'll bust you out of here soon!"])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"mon_asioto4\", @pitch=100, @volume=100)"])
+    Wait([5])
+    PlaySE(["RPG::SE(@name=\"mon_asioto4\", @pitch=100, @volume=100)"])
+    Wait([5])
+    PlaySE(["RPG::SE(@name=\"mon_asioto4\", @pitch=100, @volume=100)"])
+    SetMoveRoute([24, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=29, @parameters=[5])\", \"RPG::MoveCommand(@code=30, @parameters=[4])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=29, @parameters=[5])"])
+    Unnamed(["RPG::MoveCommand(@code=30, @parameters=[4])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    SetMoveRoute([25, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=29, @parameters=[5])\", \"RPG::MoveCommand(@code=30, @parameters=[4])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=29, @parameters=[5])"])
+    Unnamed(["RPG::MoveCommand(@code=30, @parameters=[4])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    SetMoveRoute([26, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=29, @parameters=[5])\", \"RPG::MoveCommand(@code=30, @parameters=[4])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=29, @parameters=[5])"])
+    Unnamed(["RPG::MoveCommand(@code=30, @parameters=[4])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    SetMoveRoute([27, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=29, @parameters=[5])\", \"RPG::MoveCommand(@code=30, @parameters=[4])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=29, @parameters=[5])"])
+    Unnamed(["RPG::MoveCommand(@code=30, @parameters=[4])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"mon_dassyutu\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Alice and the others retreat from this place..."])
+    ConditionalBranch([0, 31, 1])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["I get it! I won't give up hope!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["So you're abandoning a teammate again?! Are you just gonna keep running forever?!"])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Wait([30])
+    ShowPicture([5, "80_sariera_st01b", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["sariera_fc1", 0, 0, 2])
+    ShowText(["\\n<Sariela>"])
+    ShowText(["...They left, didn't they. So, how does it feel to be abandoned by your friends?"])
+    ShowText([""])
+    SetMoveRoute([23, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ConditionalBranch([0, 31, 1])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["They only pulled back for now. They'll be here to save me soon. We never abandon each other."])
+      ShowText([""])
+      ShowTextAttributes(["sariera_fc1", 0, 0, 2])
+      ShowText(["\\n<Sariela>"])
+      ShowText(["Hmph... A rescue is impossible. You're headed to the prison city of Grangold, and nobody escapes from there..."])
+      ShowText([""])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["My faith in them is gone..."])
+      ShowTextAttributes(["sariera_fc1", 0, 0, 2])
+      ShowText(["\\n<Sariela>"])
+      ShowText(["I pity you... You chose your allies poorly. You'll have plenty of time to rethink who you should follow..."])
+      ShowText([""])
+      ShowTextAttributes(["sariera_fc1", 0, 0, 2])
+      ShowText(["\\n<Sariela>"])
+      ShowText(["In my prison city, Grangold..."])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    Wait([60])
+    FadeoutBGM([1])
+    FadeoutScreen([])
+    Wait([60])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["And so, Sariela has taken me prisoner. She puts me to sleep with magic and transfers me somewhere else."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["And the place she's sending me to is..."])
+    Wait([120])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([5050, 5050, 0])
+    ControlSwitches([5340, 5340, 0])
+    ControlSwitches([5328, 5328, 0])
+    ControlSwitches([81, 81, 0])
+    Script(["set_temp_actors(1)"])
+    TransferPlayer([0, 656, 8, 7, 2, 2])
+    ControlVariables([1141, 1141, 0, 0, 25])
+    RecoverAll([0, 0])
+    ChangeTransparency([1])
+    FadeinScreen([])
+    Script(["gain_medal(84)"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Ugh... wh-where am I...?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[30])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[30])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[30])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[30])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[30])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[30])"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Looks like I'm inside a cell..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["If Sariela spoke the truth, this is the prison city of Grangold. Probably one of the most heavily guarded facilities in the Dominion..."])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["I can't just wait around for my friends to save me. I need to break out of here..."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["First, I'll examine every inch of this cell. There might be a clue to escape."])
+    ShowText([""])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    CallCommonEvent([397])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    CallCommonEvent([398])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    CallCommonEvent([398])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    CallCommonEvent([398])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "ルカ"
+
+  Page 0
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSwitches([2639, 2639, 0])
+    ChangeWeapons([915, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 3"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSwitches([2642, 2642, 0])
+    ChangeWeapons([583, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSwitches([2640, 2640, 0])
+    ChangeItems([2111, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    ShowTextAttributes(["trooperloid_fc1", 2, 0, 2])
+    ShowText(["\\n<Trooperoid>"])
+    ShowText(["Ugh, this weapon's bad news! Lady Uriela's gonna chew us out if I hand it over!!"])
+    ShowText([""])
+    BattleProcessing([0, 1550, false, false])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 3"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSwitches([2641, 2641, 0])
+    ChangeItems([720, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

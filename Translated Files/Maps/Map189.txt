@@ -1,0 +1,327 @@
+Display Name = "テスト島"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    GatherFollowers([])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["どうする？"])
+    ShowChoices([["転職", "パーティ編集"], 5])
+    When([0, "転職"])
+      Script(["SceneManager.call(Scene_JobChange)"])
+      Empty([])
+
+    When([1, "パーティ編集"])
+      Script(["SceneManager.call(Scene_PartyEdit)"])
+      Empty([])
+
+    WhenCancel([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ControlSwitches([1001, 1001, 0])
+    ControlVariables([2001, 2999, 0, 0, 25])
+    ControlSwitches([2, 2, 0])
+    ControlSwitches([3, 3, 0])
+    ControlSwitches([90, 90, 0])
+    ControlSwitches([91, 91, 0])
+    ControlSwitches([92, 92, 0])
+    ChangeTransparency([1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["tamamo_fc1", 1, 0, 2])
+    ShowText(["テスト用じゃ！"])
+    ShowChoices([["全アイテム取得", "全職業取得", "全仲間取得", "各種解放"], 5])
+    When([0, "全アイテム取得"])
+      Script(["# 武器を全種類、50個入手する"])
+      ScriptMore(["$data_weapons.compact.each{|w|"])
+      ScriptMore(["  next if w.name == \"\""])
+      ScriptMore(["  $game_party.gain_item(w, 50)"])
+      ScriptMore(["}"])
+      Script(["# 防具を全種類、50個入手する"])
+      ScriptMore(["$data_armors.compact.each{|a|"])
+      ScriptMore(["  next if a.name == \"\""])
+      ScriptMore(["  $game_party.gain_item(a, 50)"])
+      ScriptMore(["}"])
+      Script(["# アイテムを全種類、50個入手する"])
+      ScriptMore(["$data_items.compact.each{|i|"])
+      ScriptMore(["  next if i.name"])
+      ScriptMore(["== \"\""])
+      ScriptMore(["  $game_party.gain_item(i, 50)"])
+      ScriptMore(["}"])
+      ChangeGold([0, 0, 10000])
+      Empty([])
+
+    When([1, "全職業取得"])
+      Script(["# ルカの全職業をレベルＭＡＸまで経験する"])
+      ScriptMore(["actor = $game_actors[1]"])
+      ScriptMore(["temp_id = actor.class_id"])
+      ScriptMore(["NWConst::Class::JOB_RANGE.each{|id|"])
+      ScriptMore(["  actor.change_class(id, :class)"])
+      ScriptMore(["  actor.change_level(10, false, :class)"])
+      ScriptMore(["}"])
+      ScriptMore(["actor.change_class(temp_id, :class)"])
+      Script(["actor = $game_actors[1]"])
+      ScriptMore(["temp_id = actor.tribe_id"])
+      ScriptMore(["NWConst::Class::TRIBE_RANGE.each{|id|"])
+      ScriptMore(["  actor.change_class(id, :tribe)"])
+      ScriptMore(["  actor.change_level(10, false, :tribe)"])
+      ScriptMore(["}"])
+      ScriptMore(["actor.change_class(temp_id, :tribe)"])
+      Empty([])
+
+    When([2, "全仲間取得"])
+      Script(["# 全アクターを仲間にする"])
+      ScriptMore(["$data_actors.compact.each{|actor|"])
+      ScriptMore(["  next if actor.name == \"\""])
+      ScriptMore(["  $game_party.add_actor(actor.id)"])
+      ScriptMore(["}"])
+      Empty([])
+
+    When([3, "各種解放"])
+      ShowTextAttributes(["tamamo_fc1", 1, 0, 2])
+      ShowText(["仲間化オン！"])
+      ControlSwitches([3, 3, 1])
+      ShowTextAttributes(["tamamo_fc1", 1, 0, 2])
+      ShowText(["ワープフラグオン！"])
+      ShowTextAttributes(["tamamo_fc1", 1, 0, 2])
+      ShowText(["図鑑解放！"])
+      Script(["library_all_open"])
+      ShowTextAttributes(["tamamo_fc1", 1, 0, 2])
+      ShowText(["メダル解放！"])
+      Script([" data = NWConst::Library::MEDAL_DATA"])
+      ScriptMore(["data.keys.each{|i| gain_medal(i)}"])
+      Empty([])
+
+    WhenCancel([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["granberia_fc2", 0, 0, 2])
+    ShowText(["誰と戦う？"])
+    ShowChoices([["弱い敵", "強い敵", "すごく強い敵"], 2])
+    When([0, "弱い敵"])
+      BattleProcessing([0, 1, false, false])
+      Empty([])
+
+    When([1, "強い敵"])
+      ControlVariables([19, 19, 0, 0, 10000])
+      ShowChoices([["ミカエラ", "美凪"], 3])
+      When([0, "ミカエラ"])
+        ChangeBattleBGM(["RPG::BGM(@name=\"boss_nanadaitensi\", @volume=100, @pitch=100)"])
+        ChangeBattleBack(["bg001", ""])
+        BattleProcessing([0, 381, true, false])
+        IfWin([])
+          Empty([])
+        IfEscape([])
+          Empty([])
+        BattleProcessingEnd([])
+        Empty([])
+      When([1, "美凪"])
+        ChangeBattleBGM(["RPG::BGM(@name=\"boss_rikuso\", @volume=100, @pitch=100)"])
+        ChangeBattleBack(["DemonicWorld1", "DemonicWorld"])
+        BattleProcessing([0, 380, true, false])
+        IfWin([])
+          Empty([])
+        IfEscape([])
+          Empty([])
+        BattleProcessingEnd([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    When([2, "すごく強い敵"])
+      ControlVariables([19, 19, 0, 0, 100000])
+      ShowChoices([["女神イリアス", "邪神アリスフィーズ", "カオス"], 0])
+      When([0, "女神イリアス"])
+        ChangeBattleBGM(["RPG::BGM(@name=\"boss_irias2\", @volume=100, @pitch=100)"])
+        ChangeBattleBack(["bg001", ""])
+        BattleProcessing([0, 382, true, false])
+        IfWin([])
+          Empty([])
+        IfEscape([])
+          Empty([])
+        BattleProcessingEnd([])
+        Empty([])
+      When([1, "邪神アリスフィーズ"])
+        ChangeBattleBGM(["RPG::BGM(@name=\"boss_alice2\", @volume=100, @pitch=100)"])
+        ChangeBattleBack(["DemonicWorld1", ""])
+        BattleProcessing([0, 383, true, false])
+        IfWin([])
+          Empty([])
+        IfEscape([])
+          Empty([])
+        BattleProcessingEnd([])
+        Empty([])
+      When([2, "カオス"])
+        ChangeBattleBGM(["RPG::BGM(@name=\"boss_chaos\", @volume=100, @pitch=100)"])
+        ChangeBattleBack(["DarkSpace", "DarkSpace"])
+        BattleProcessing([0, 384, true, false])
+        IfWin([])
+          Empty([])
+        IfEscape([])
+          Empty([])
+        BattleProcessingEnd([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    RecoverAll([0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["どうしたい？"])
+    ShowChoices([["レベル1アップ", "職業レベル最大", "種族レベル最大", "種族変更"], 5])
+    When([0, "レベル1アップ"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["レベルを上げるわ"])
+      ChangeLevel([0, 0, 0, 0, 1, true])
+      Empty([])
+
+    When([1, "職業レベル最大"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["職業レベルを最大まで上げるわ"])
+      Script(["change_joblv(1, 10, true)"])
+      Empty([])
+
+    When([2, "種族レベル最大"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["種族レベルを最大まで上げるわ"])
+      Script(["change_sub_joblv(1, 10, true)"])
+      Empty([])
+
+    When([3, "種族変更"])
+      ShowTextAttributes(["", 1, 0, 2])
+      ShowText(["誰を妖魔にするの？"])
+      ControlVariables([13, 13, 0, 0, 158])
+      Script(["names = party_members.collect{|m|m.name}"])
+      ScriptMore(["unlimited_choices(11, names)"])
+      ControlVariables([12, 12, 0, 4, "party_members.size"])
+      ConditionalBranch([1, 11, 1, 12, 4])
+        Script(["change_sub_class_member(v(11),v(13))"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    WhenCancel([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["本編を開始します……"])
+    ChangeTransparency([0])
+    PlayBGM(["RPG::BGM(@name=\"\", @volume=100, @pitch=100)"])
+    TransferPlayer([0, 545, 1, 0, 0, 2])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ボタン3を10回"])
+    Script(["input_keys(180)"])
+    ConditionalBranch([12, "10 <= keys_stack.count(:B3)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["成功"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["失敗"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["上、下、左、右、ボタン3"])
+    Script(["input_keys(180)"])
+    ConditionalBranch([12, "keys_stack.to_s =~ /:U, :D, :L, :R, :B3/"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["成功"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["失敗"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=26, @parameters=[])\", \"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=26, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowChoices([["テキスト化", "再結合", "やめる"], 3])
+    When([0, "テキスト化"])
+      Script(["common_data_to_text"])
+      Empty([])
+
+    When([1, "再結合"])
+      Script(["common_text_to_data"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["終了"])
+      Empty([])
+
+    When([2, "やめる"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ControlVariables([1081, 1081, 0, 0, 3])
+    TransferPlayer([0, 513, 38, 36, 0, 0])
+    Empty([])

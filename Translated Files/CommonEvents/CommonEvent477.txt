@@ -1,0 +1,42 @@
+CommonEvent 477
+Name = "Monster Realm Yamatai"
+
+  999([477])
+  ConditionalBranch([1, 1142, 0, 44, 1])
+    ConditionalBranch([1, 1142, 0, 46, 2])
+      ConditionalBranch([1, 1152, 0, 1, 1])
+        ConditionalBranch([1, 1152, 0, 3, 2])
+          ChangeMapDisplay([0])
+          PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+          TransferPlayer([0, 809, 10, 13, 8, 0])
+          ExitEventProcessing([])
+          Empty([])
+
+        BranchEnd([])
+        Empty([])
+
+      BranchEnd([])
+      ConditionalBranch([1, 1152, 0, 4, 1])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>We've repelled the puppet invasion here.\nThe city is likely in disarray, so let's leave them to rebuild."])
+        ShowText([""])
+        ShowText([""])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+        ExitEventProcessing([])
+        Empty([])
+
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  BranchEnd([])
+  ControlSwitches([5067, 5067, 0])
+  ControlSwitches([5414, 5414, 0])
+  ControlSwitches([5363, 5363, 0])
+  ChangeMapDisplay([0])
+  PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+  TransferPlayer([0, 585, 10, 13, 8, 0])
+  Empty([])

@@ -1,0 +1,1850 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>Welcome to this Shabby Chapel. What can I do for you?"])
+    ShowChoices([["Pray", "Never mind"], 2])
+    When([0, "Pray"])
+      ControlVariables([1002, 1002, 0, 0, 16])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>Well then, let us pray to Ilias.\n...There, you should feel a bond drawing you to this place."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>If something happens to you on your journey, the bond should lead you back here. May Ilias watch over you..."])
+      Empty([])
+
+    When([1, "Never mind"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>May Ilias watch over you..."])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 28, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Hooligan>I - make - money! Goddess of the Gamble, I believe in you!"])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["122"])
+      ShowTextAttributes(["sisterlamia_fc1", 2, 0, 2])
+      ShowText(["\\n<Sofia>There's no such goddess..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Hooligan>Goddess, please...\nDon't destroy this world..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 28, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>Damn you, Goddess! Is bullying me that fun?!"])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["26"])
+      ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+      ShowText(["\\n<Ilias>It is."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>Oh forgiving Goddess, I beg of you...\nSave me and my family..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 28, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Merchant>I beg you, the next slot... I even invested my store's money, so..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["121"])
+      ShowTextAttributes(["page65537_fc1", 2, 0, 2])
+      ShowText(["\\n<Cornelia>Fortune is something you grasp by yourself. There's no meaning in praying to gods for it. Now, spin those slots!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Merchant>Please, destroy the Monster Lord..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 28, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Nun>In a town like this, there are no people offering pure prayers. Everyone's prayers are tainted with greed."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["26"])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>How deplorable... I'll have to write this town down in my Smite Note."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Nun>Those who once prayed for greed, every day complaining about the world...\nLook at them now..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([4, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 12, 12, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>According to ancient documents, the spirits have imparted their power to humans. It's my dream to acquire their power."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["12"])
+    ShowTextAttributes(["sylph_fc1", 0, 0, 2])
+    ShowText(["\\n<Sylph>It's quite difficult to be acknowledged by spirits, you know? I got beat up, though..."])
+    ExitEventProcessing([])
+    Label(["13"])
+    ShowTextAttributes(["gnome_fc1", 0, 0, 2])
+    ShowText(["\\n<Gnome>......"])
+    ExitEventProcessing([])
+    Label(["136"])
+    ShowTextAttributes(["elf_fc1", 0, 0, 2])
+    ShowText(["\\n<Claudia>It's not so easy to acquire the power of spirits. They can be empty-headed, but they're hard to beat..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 29, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thief>North of here are the Safar Desert Ruins. There's a rumor that a girl wearing a hat and holding an earthen doll is wandering around them."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thief>I think that girl is the earth spirit, Gnome. I'd like to get acquainted with her and receive some of the power of earth..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["13"])
+      ShowTextAttributes(["gnome_fc1", 0, 0, 2])
+      ShowText(["\\n<Gnome>......"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thief>Uughh! I've been beaten to the punch!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 30, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thief>Worship of the Spirits is forbidden around these parts."])
+      ShowText(["For certain humans, all monsters are considered a threat..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([7, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Female Adventurer>I'll spend tonight in the casinooo! I've been waiting for this moment!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["121"])
+    ShowTextAttributes(["page65537_fc1", 2, 0, 2])
+    ShowText(["\\n<Cornelia>She sure is energetic... Now, let's spin those slots!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Warrior>It's kinda narrow here, or rather... This inn is really labyrinthine..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["98"])
+    ShowTextAttributes(["minikani_fc1", 2, 0, 2])
+    ShowText(["\\n<Amy>It's really hard to crabwalk in here... I bumped my leggg!"])
+    ExitEventProcessing([])
+    Label(["117"])
+    ShowTextAttributes(["ankou_fc1", 0, 0, 2])
+    ShowText(["\\n<Anko>Narrow..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Swordsman>Desert monsters are strong... and poisonous. My supply of Antidote Grass depletes real quick."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["146"])
+    ShowTextAttributes(["sasori_fc1", 0, 0, 2])
+    ShowText(["\\n<Scarlet>It's great that Antidote Grass sells well. We need to contribute to the local economy."])
+    ExitEventProcessing([])
+    Label(["151"])
+    ShowTextAttributes(["kobura_fc1", 1, 0, 2])
+    ShowText(["\\n<Lila>We live in a harsh environment. It's natural that we're strong."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>One healer might not be enough... When you fight strong foes, your healing might not be able to keep up."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["58"])
+    ShowTextAttributes(["inp_fc2", 0, 0, 2])
+    ShowText(["\\n<Remi>I-I'll do my best..."])
+    ExitEventProcessing([])
+    Label(["118"])
+    ShowTextAttributes(["meia_fc1", 0, 0, 2])
+    ShowText(["\\n<Meia>Healing? Leave it to me, by all means."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Woman>Oh, a customer! It's 10G. You staying or not?\\$"])
+    ShowChoices([["Yes", "No"], 2])
+    When([0, "Yes"])
+      ConditionalBranch([7, 10, 0])
+        ChangeGold([1, 0, 10])
+        FadeoutScreen([])
+        PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+        Wait([150])
+        RecoverAll([0, 0])
+        FadeinScreen([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Woman>Oops, you don't have enough money."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    When([1, "No"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 66, 44, 0, 0])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 67, 44, 0, 0])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Black Mage>Are you properly utilizing skills that cause ailments? Depending on the enemy's race, they can be very susceptible to them."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Black Mage>Even if you can manage with brute force, if you use skills causing ailments, you can beat enemies a rank higher than you."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["59"])
+    ShowTextAttributes(["mdg_fc1", 0, 0, 2])
+    ShowText(["\\n<Ragora>My screams are very useful..."])
+    ExitEventProcessing([])
+    Label(["100"])
+    ShowTextAttributes(["rahure_fc1", 1, 0, 2])
+    ShowText(["\\n<Fleesia>Leave it to my fragrance. Ailments are my forte♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thief>The usual route used to get to Grand Noah is through the cave north of San Ilia, and then to Port Marle."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thief>From there you travel north by ship to reach the Noah Region. However, the cave leading to Port Marle is currently blocked."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thief>I wonder when ships will start traveling to Noah again. Because of the war, transportation has become pretty awkward..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 20, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thief>The usual route used to get to Grand Noah is through the cave north of San Ilia, and then to Port Marle."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thief>From there you travel north by ship to reach the Noah Region."])
+      ShowText(["However, ships sailing to the Noah region are currently suspended."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 29, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Traveling Priest>It seems that the festivals of that Sylph or Gnome spirit have grabbed the hearts of people."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Traveling Priest>What if instead of categorically denying them... we instead incorporated them into the church's rituals?"])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["531"])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>In this godless world, the church has to be flexible, or there's no future for it... Huh."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 30, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Traveling Priest>Recently, there have been whispers about the end of the world around these parts."])
+      ShowText(["The fear of the Monster Lord and these frequent natural disasters bring extreme uneasiness to the people."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([11, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Merchant>Merchants are outstanding in a healer role. After all, you can purchase healing items and such at any time inside a dungeon."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Merchant>Of course, it costs money, but... since the amount of gold you receive increases with a merchant in your party, that should cover expenses."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["66"])
+    ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+    ShowText(["\\n<Vanilla>Ehhen! Behold, now you know my worth!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([779, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 29, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Traveling Warrior>There's plenty to enjoy in this town... I guess I'll stay here until I run out of money."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 30, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Traveling Warrior>There's plenty to enjoy in this town... I guess I'll stay here until the end of the world."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 29, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Pirate>Perhaps because of the war, the Navy has intensified its lockdown. It's harsh on us making a living as pirates..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Pirate>The Navy doesn't belong to any kingdom. It's an organization that acts as sea security. Its role is to keep the high seas safe, so it fights pirates and sea monsters."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Pirate>The one in charge of it is the Admiral. She holds power equal to that of a King or a Queen."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Pirate>...The Admiral was also originally a pirate. Geez, acting like some public authority..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["116"])
+      ShowTextAttributes(["iso_fc1", 0, 0, 2])
+      ShowText(["\\n<Isabelle>The Navy... They sometimes crack down on predatory monsters. We've been assaulted by some weird sea horses in the past."])
+      ExitEventProcessing([])
+      Label(["144"])
+      ShowTextAttributes(["saboresu_fc1", 0, 0, 2])
+      ShowText(["\\n<Sunny>I'll become a pirate as well and venture the oceans! I'm not afraid of the Navy!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 30, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Pirate>Recently the ocean has become too agitated and the wind hard to read as well."])
+      ShowText(["What on earth is going on..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 17, 108, 0, 0])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>Be careful around Don Father's mansion. After all, he's a man standing at the top of the mafia world."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>That said, the security around here is great. The entire mafia acts as meek as lambs around that house."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["142"])
+      ShowTextAttributes(["bander_fc1", 0, 0, 2])
+      ShowText(["\\n<Banachi>The mafia's emperor who'd shut up any villain, huh... Interesting..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>The Hero Luka, what kind of person is he?"])
+      ShowText(["To defeat Grangold and put an end to the war..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>This is Grandeur's garrison. We have been dispatched here from Sabasa."])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>The Grand Theater is being occupied, but... unfortunately, we can't do anything about it."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>Saki-chan *twinkle*☆."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["155"])
+      ShowTextAttributes(["saki_fc1", 3, 0, 2])
+      ShowText(["\\n<Saki>Thanks for your support☆."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>We were entrusted with the protection of this town."])
+      ShowText(["We're prepared to defend it from the attack of the Monster Army."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>However, it might happen that our preparations weren't enough."])
+      ShowText(["If that's the case, what if reinforcement doesn't come..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>In a few more months we'll be having the Gnome Festival. We have to make a big Gnome Bread."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>...Actually, it'll be my first time participating in a Gnome Festival. Aww, I'm really looking forward to it."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>It's outrageous that the Monster Lord declared war against humans."])
+      ShowText(["Something like this has not happened since the time of the Hero Heinrich..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ConditionalBranch([1, 1030, 0, 1, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Soldier>I have tomorrow off. I need to go to a concert in the Grand Theater. Saki-chan☆, haa, haa..."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1030, 0, 2, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Soldier>Saki-chan seems to have left for a tour throughout the world. I need to quit being a soldier and travel around the world as well..."])
+        Script(["actor_label_jump"])
+        ExitEventProcessing([])
+        Label(["155"])
+        ShowTextAttributes(["saki_fc1", 2, 0, 2])
+        ShowText(["\\n<Saki>You see, people who easily give up on their work... aren't really my type."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Soldier>I WILL CONTINUE BEING A SOLDIER!"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>I know that this Hero named Luka doesn't exist. He was a hypothetical Hero created to bring hope to the people."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>However, I know that we're going through moments of despair, and I understand the need of a hero..."])
+      ShowText(["A great war is believed to be soon upon us, and the time to talk is quickly arriving to its end..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Lieutenant>There's nothing abnormal happening in this town. Well, there are some trivial incidents like the Grand Theater being taken over, but..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Lieutenant>What we need to be vigilant of is the mafia's boss, Don Father. ...Saki-chan *twinkle*☆."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["155"])
+      ShowTextAttributes(["saki_fc1", 3, 0, 2])
+      ShowText(["\\n<Saki>Thanks for your support☆."])
+      ExitEventProcessing([])
+      Label(["525"])
+      ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+      ShowText(["\\n<Sonya>Isn't the mental contamination really serious here...?"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Lieutenant>When the Monster Army arrives, with our forces, how can we..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([197, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>We're envied by other soldiers for being stationed in this town. It's filled with entertainment."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["75"])
+      ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+      ShowText(["\\n<Mary>This is a really good town... As a sheep who's made her city debut, I don't feel like going back to the pastures."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>When the Monster Army arrives, I wonder whether we're capable of fighting against them on equal terms..."])
+      ShowText(["In case of emergency, evacuation of the residents must be our top priority."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>GHHhhh..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The soldier fell from his bed and is sleeping in a weird posture..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["166"])
+    ShowTextAttributes(["narcubus_fc1", 0, 0, 2])
+    ShowText(["\\n<Manako>Looks like he isn't hurt. Really... please be more careful♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>I'm on a break, so I'm snatching some food..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["70"])
+      ShowTextAttributes(["nezumi_fc1", 2, 0, 2])
+      ShowText(["\\n<Ratty>I'll steal some food too... Whoa, this tastes so bad!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>It's 'cause they're long-lasting rations. In exchange for being long-lasting, they taste terrible."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>I don't wanna die! Please, don't let the Monster Army arrive...!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 43, 104, 0, 0])
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Swordsman>I came to investigate the legendary blacksmith, but... the Blacksmith Guild has no documents on him."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Swordsman>I'm starting to doubt his existence... However, I will seek out that legendary blacksmith!"])
+    ConditionalBranch([1, 1147, 0, 2, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["It appears the master deliberately neglected to inform the Blacksmith Guild of his whereabouts. It would be best not to tell them where he is now..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 68, 0])
+      ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+      ShowText(["\\n<Papi>I will also seek him!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Merchant>We get many orders from the military, so we're postponing small-scale trade. These are troubling times, aren't they..."])
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Craftsman>Plenty of orders came from Sabasa all at once... Are they preparing another troop for an expedition?"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Craftsman>The orders from the military forces of each kingdom have increased drastically... We can't deal with this much at the same time!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1042, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Craftsman>By looking at the armor orders, you can roughly determine a kingdom's intentions. Orders are the Blacksmith Guild's important secret."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Craftsman>So no talkin' to some travelers! You damn oafs!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["94"])
+    ShowTextAttributes(["luksl_fc1", 0, 0, 2])
+    ShowText(["\\n<Luxuru>This is the worst environment for keeping secrets..."])
+    ExitEventProcessing([])
+    Label(["103"])
+    ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+    ShowText(["\\n<Kamuro>Secrets will leak out in a place like this, won't they..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Craftsman>There's a shortage of both iron and mithril... The material market's gonna change significantly."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["68"])
+    ShowTextAttributes(["dragonp_fc1", 2, 0, 2])
+    ShowText(["\\n<Papi>I wonder if master is able to work properly..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Craftsman>We keep getting orders from Grand Noah. It must be because they're in the middle of a fierce war..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Craftsman>By the way, there's no orders at all from their opponent, Grangold. A few years ago, the flow of orders itself was interrupted."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Craftsman>All the members of the Blacksmith guild are working hard! We need to make a lot of weapons to prepare for the fight against the Monster Army."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Craftsman>These are the Blacksmith Guild's headquarters! Of course, we're doing smithing work here!"])
+    Script(["call_synthesize(12)"])
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Craftsman>You want to register as a guild member? ...Oh, if you need a blacksmith, then go to the guy next to me."])
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Hmm, it's about time I got a new helmet made... A helmet that'd make me popular with girls would be nice."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["136"])
+    ShowTextAttributes(["elf_fc1", 0, 0, 2])
+    ShowText(["\\n<Claudia>There's no way such a convenient helmet exists. Is there...?"])
+    ExitEventProcessing([])
+    Label(["149"])
+    ShowTextAttributes(["lamp_fc1", 1, 0, 2])
+    ShowText(["\\n<Jeannie>Would you like for your wish to come true...?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Eh?! You'll make me popular with girls?!"])
+    ShowTextAttributes(["lamp_fc1", 0, 0, 2])
+    ShowText(["\\n<Jeannie>No, I'll give you a cool helmet..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>That's what you meant?!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([68, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Craftsman>I'm the guild leader's pupil and all, but... His skills are godlike compared to mine."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Craftsman>And even he can't hold a candle to the legendary blacksmith... That guy's gotta just be an urban legend, right?"])
+    ConditionalBranch([1, 1147, 0, 0, 0])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["95"])
+      ShowTextAttributes(["delh_a_fc1", 0, 0, 2])
+      ShowText(["\\n<Lona>I've heard the rumors as well, and it does sound like a legend. I wonder if he really exists, though..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1147, 0, 2, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["It appears the master deliberately neglected to inform the Blacksmith Guild of his whereabouts. It would be best not to tell them where he is now..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Craftsman>The Blacksmith Guild has many non-human members. They are mostly dragonkin, kitsune, and fairies."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Craftsman>Of course, there's no problem as long as you have a certain level of skill. The Blacksmith Guild doesn't discriminate between races."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["68"])
+    ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+    ShowText(["\\n<Papi>That makes me happy!"])
+    ExitEventProcessing([])
+    Label(["137"])
+    ShowTextAttributes(["braunys_fc1", 6, 0, 2])
+    ShowText(["\\n<Love & Lamb>Actually, we're also members of the Blacksmith Guild♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Craftsman>Some call us merchants of death... but it's not like weapons kill people by themselves."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Craftsman>However, there are those who get drunk on a weapon's power and cause unnecessary harm to others. Us blacksmiths wish for our weapons to be used for a just purpose."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["68"])
+    ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+    ShowText(["\\n<Papi>Indeed!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Female Blacksmith>There's only a few women among blacksmiths... I guess female blacksmiths just aren't a thing, huh?"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["68"])
+    ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+    ShowText(["\\n<Papi>I'm a female blacksmith too!"])
+    ExitEventProcessing([])
+    Label(["137"])
+    ShowTextAttributes(["braunys_fc1", 6, 0, 2])
+    ShowText(["\\n<Love & Lamb>Then let's make it a thing♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 92, 41, 0, 0])
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 100, 45, 0, 0])
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 338, 162, 36, 2, 0])
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 338, 128, 35, 2, 0])
+    Empty([])
+
+CommonEvent 57
+Name = "EV057"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 79, 33, 0, 0])
+    Empty([])
+
+CommonEvent 58
+Name = "EV058"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 338, 152, 10, 2, 0])
+    Empty([])
+
+CommonEvent 59
+Name = "EV059"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 338, 122, 9, 2, 0])
+    Empty([])
+
+CommonEvent 60
+Name = "EV060"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Craftsman>Of course the Guild Leader is a top-tier blacksmith. He's retired from active service, though, and no longer uses his hammer."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Craftsman>He's a friendly guy. You should talk with him. He's in the next room."])
+    Empty([])
+
+CommonEvent 61
+Name = "EV061"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Blacksmith Guild Leader>Hey, I'm the head of the Blacksmith Guild. And I'm also the number one blacksmith in the world."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Blacksmith Guild Leader>...Is what I would like to say, but I'm actually number two in the world. The best blacksmith is a younger disciple of my master."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Blacksmith Guild Leader>He was a genius ever since he was apprenticed to our master... I can't even hope to reach his level."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Blacksmith Guild Leader>He immediately mastered the techniques of our mentor, and then went out on a journey. He's the guy known as the \"legendary blacksmith Randolph.\""])
+    ConditionalBranch([1, 1147, 0, 0, 0])
+      ConditionalBranch([0, 4, 0])
+        ConditionalBranch([0, 1005, 0])
+          ShowTextAttributes(["alice_fc5", 0, 0, 2])
+          ShowText(["\\n<Alice>I've heard of him from Tamamo. She said that the world's best blacksmith isn't one of the dragonkind, but a human."])
+          ShowTextAttributes(["alice_fc5", 3, 0, 2])
+          ShowText(["\\n<Alice>I thought she was joking. To think it was the truth..."])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 1006, 0])
+          ShowTextAttributes(["alice_fc1", 0, 0, 2])
+          ShowText(["\\n<Alice>I've heard of him from Tamamo. She said that the world's best blacksmith isn't one of the dragonkind, but a human."])
+          ShowTextAttributes(["alice_fc1", 4, 0, 2])
+          ShowText(["\\n<Alice>I thought she was joking. To think it was the truth..."])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 1007, 0])
+          ShowTextAttributes(["alice_fc7", 0, 0, 2])
+          ShowText(["\\n<Alice>I've heard of him from Tamamo. She said that the world's best blacksmith isn't one of the dragonkind, but a human."])
+          ShowTextAttributes(["alice_fc7", 4, 0, 2])
+          ShowText(["\\n<Alice>I thought she was joking. To think it was the truth..."])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 68, 0])
+        ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+        ShowText(["\\n<Papi>I'd like to meet the legendary blacksmith! Where is he now?"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Blacksmith Guild Leader>Ever since he left our mentor, he's been traveling all over... I wonder what he's doing now."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Blacksmith Guild Leader>Maybe he reached the very pinnacle of blacksmithing skills somewhere in the world, and died happy... That's the kind of genius he was."])
+      ConditionalBranch([0, 4, 0])
+        ConditionalBranch([0, 1005, 0])
+          ShowTextAttributes(["alice_fc5", 0, 0, 2])
+          ShowText(["\\n<Alice>We would certainly like to acquire weapons made by that blacksmith... But I guess there's nothing we can do if he's missing."])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 1006, 0])
+          ShowTextAttributes(["alice_fc1", 0, 0, 2])
+          ShowText(["\\n<Alice>We would certainly like to acquire weapons made by that blacksmith... But I guess there's nothing we can do if he's missing."])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 1007, 0])
+          ShowTextAttributes(["alice_fc7", 0, 0, 2])
+          ShowText(["\\n<Alice>We would certainly like to acquire weapons made by that blacksmith... But I guess there's nothing we can do if he's missing."])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>It overlaps with the timing of the Great Disaster... Because of that, I can't trace his whereabouts within my memory."])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>The adventure would have become easier if we had acquired weapons made by him... What a great shame..."])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1147, 0, 1, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Blacksmith Guild Leader>Ever since he left our mentor, he's been traveling all over... I wonder what he's doing now."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Blacksmith Guild Leader>Maybe he reached the very pinnacle of blacksmithing skills somewhere in the world, and died happy... That's the kind of genius he was."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["There is information, however, that the legendary blacksmith is in Iliasville. We should go look for him right away."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1147, 0, 2, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Blacksmith Guild Leader>Ever since he left our mentor, he's been traveling all over... I wonder what he's doing now."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Blacksmith Guild Leader>Maybe he reached the very pinnacle of blacksmithing skills somewhere in the world, and died happy... That's the kind of genius he was."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["It appears the master deliberately neglected to inform the Blacksmith Guild of his whereabouts. It would be best not to tell them where he is now..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 62
+Name = "EV062"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dancer>When you win at battle fucking fifteen times, you receive a job change item. You can then take up the \\C[14]Battle Fucker\\C[0] job."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dancer>But those fifteen victories must be acquired against different opponents. Even if you defeat the same opponent fifteen times, it will only count as one victory."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dancer>To test it, I made a man cum fifteen times... but he only fainted and I didn't receive the item, so my info is solid."])
+    Empty([])
+
+CommonEvent 63
+Name = "EV063"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 67, 99, 0, 0])
+    Empty([])
+
+CommonEvent 64
+Name = "EV064"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([314, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 65
+Name = "EV065"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dancer>I admire Saki-chan's way of liiife. She hijacks a stage and does concerts day after day..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dancer>Rather than slowly rising up the ranks, isn't it better to go big all at once? As I thought, in this world it's \"go big or go home\"!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["155"])
+    ShowTextAttributes(["saki_fc1", 2, 0, 2])
+    ShowText(["\\n<Saki>That way of thinking is no good, you knooow?"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 66
+Name = "EV066"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dancer>I think Saki-chan is practicing a lot behind the scenes. Both her dancing and singing are great..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["155"])
+    ShowTextAttributes(["saki_fc1", 3, 0, 2])
+    ShowText(["\\n<Saki>Thanks for watching me so closely☆."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 67
+Name = "EV067"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 83, 92, 0, 0])
+    Empty([])
+
+CommonEvent 68
+Name = "EV068"
+
+  Page 0
+    ConditionalBranch([1, 818, 0, 2, 1])
+      ConditionalBranch([0, 1560, 1])
+        ShowTextAttributes(["mob_odoriko1_fc1", 0, 0, 2])
+        ShowText(["\\n<Melody>Hey, hey, take me with you on your journey♪"])
+        ShowChoices([["Let her join", "Decline for now"], 0])
+        When([0, "Let her join"])
+          ShowTextAttributes(["mob_odoriko1_fc1", 1, 0, 2])
+          ShowText(["\\n<Melody>Yaay, take care of me♪"])
+          ErasePicture([5])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(560)"])
+          PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Melody has joined the party!"])
+          Wait([60])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "Decline for now"])
+          ShowTextAttributes(["mob_odoriko1_fc1", 0, 0, 2])
+          ShowText(["\\n<Melody>I won't be discouraged!"])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([7171])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 69
+Name = "EV069"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([167, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 70
+Name = "EV070"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 78, 109, 0, 0])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+CommonEvent 71
+Name = "EV071"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([359, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 72
+Name = "EV072"
+
+  Page 0
+    ConditionalBranch([1, 1030, 0, 1, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Gruff Man>Saki-chan *twinkle*☆"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Gruff Man>Now, let's finish my part-time job for today. Wait for me, Saki-chan, I'll come see you tonight...♪"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1030, 0, 2, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Gruff Man>Saki-chan *twinkle*☆"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Gruff Man>I'll chase after Saki-chan as she tours across the kingdom and travels around the world. I'll follow you anywhere, Saki-chaan!"])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["142"])
+      ShowTextAttributes(["bander_fc1", 0, 0, 2])
+      ShowText(["\\n<Banachi>I fail to comprehend this..."])
+      ExitEventProcessing([])
+      Label(["155"])
+      ShowTextAttributes(["saki_fc1", 3, 0, 2])
+      ShowText(["\\n<Saki>Thanks for your support☆."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 73
+Name = "EV073"
+
+  Page 0
+    ConditionalBranch([1, 1030, 0, 1, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>Saki-chan *twinkle*☆"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>I'm from the countryside, but had my heart stolen by Saki-chan, and now I live here. The four of us cooperate to cover living expenses and ticket fees."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1030, 0, 2, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>I'm still unsure about what to do from now on. For now, maybe I should try living in this town normally..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["155"])
+      ShowTextAttributes(["saki_fc1", 3, 0, 2])
+      ShowText(["\\n<Saki>That's all right, it's the path you have chosen after all☆."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>That's true!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 74
+Name = "EV074"
+
+  Page 0
+    ConditionalBranch([1, 1030, 0, 1, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>Saki-chan *twinkle*☆"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>We're comrades who got acquainted attending Saki-chan's concerts. Since we go to her concerts together every evening, we share a room in here."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1030, 0, 2, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>Now that Saki-chan has set out to tour the world... we've lost our reason to stay in this town."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>The room-sharing is over too. From today onward, all four of us will set off on our own paths."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["109"])
+      ShowTextAttributes(["kani_fc1", 2, 0, 2])
+      ShowText(["\\n<Soapy>He's kinda gross..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 75
+Name = "EV075"
+
+  Page 0
+    ConditionalBranch([1, 1030, 0, 1, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>Saki-chan *twinkle*☆"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>We can't live alone... but, with the four of us, we can somehow manage. I'm in charge of cooking and housework, but I'm useless when it comes to lifting heavy things."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1030, 0, 2, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>I'm going back home. It's about time I succeed the family business..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["155"])
+      ShowTextAttributes(["saki_fc1", 3, 0, 2])
+      ShowText(["\\n<Saki>Do your best in your way of life☆."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>Saki-chan... I, I will do my best!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 76
+Name = "EV076"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([191, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 77
+Name = "EV077"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 80, 58, 0, 0])
+    Empty([])
+
+CommonEvent 78
+Name = "EV078"
+
+  Page 0
+    ShowTextAttributes(["saboten_fc1", 0, 0, 2])
+    ShowText(["\\n<Cactus Girl>I do not mind a home as small as this one. A house that's too large is difficult to clean..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["147"])
+    ShowTextAttributes(["saboten_fc1", 0, 0, 2])
+    ShowText(["\\n<Casta>My, a fellow cactus. I see you married a human, how wonderful."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 79
+Name = "EV079"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>I somehow managed to get a house in Grandeur. It's a very small house, though..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>I'll work hard, and buy a more splendid house... and then, I'll have cute children..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["108"])
+    ShowTextAttributes(["kai_fc1", 0, 0, 2])
+    ShowText(["\\n<Shelly>Oh my, how wonderful. I also need to find a splendid husband..."])
+    ExitEventProcessing([])
+    Label(["160"])
+    ShowTextAttributes(["wormv_fc1", 0, 0, 2])
+    ShowText(["\\n<Julia>He's so happy it makes me envious..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 80
+Name = "EV080"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([383, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 81
+Name = "EV081"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Boy>When I grow up, I'll also become a weapons merchant! And I'll make an exclusive contract with the legendary blacksmith!"])
+    Empty([])
+
+CommonEvent 82
+Name = "EV082"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Merchant>I'm a weapons merchant, but I'm not selling anything for the time being. Everything is being sold to the kingdoms for the war effort, and the supply can't keep up..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Merchant>Honestly, I don't like making money on a war between humans. I'd like my weapons to be used for self-defense..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["141"])
+      ShowTextAttributes(["mino_fc1", 0, 0, 2])
+      ShowText(["\\n<Mina>A weapon is the user's heart and soul!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Merchant>As usual, my weapons are being purchased mainly by the military forces of each kingdom. There's not a single one left in my store..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Merchant>It's good to make money, but I hope the war will end soon. If the human side loses, I won't have a business anymore."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 83
+Name = "EV083"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Woman>I'm happy that our business is prospering, but seeing the war grow worse... It pains my heart."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["66"])
+    ShowTextAttributes(["vgirl_fc1", 2, 0, 2])
+    ShowText(["\\n<Vanilla>It's a complex matter, isn't it..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 84
+Name = "EV084"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 19, 55, 0, 0])
+    Empty([])
+
+CommonEvent 85
+Name = "EV085"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 58, 87, 0, 0])
+    Empty([])
+
+CommonEvent 86
+Name = "EV086"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([442, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 112
+Name = "EV112"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mermaid>Getting money just for living in here is a great deal♪\nRich people are wonderful♪"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["143"])
+    ShowTextAttributes(["eva_fc1", 0, 0, 2])
+    ShowText(["\\n<Eva>I'll do this job as well! After all, from time to time you need to puff up your chest and work."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mermaid>I don't think it's a job, though..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 113
+Name = "EV113"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Rich Youth>I've finally built it, my mermaid harem! It was my long-cherished dream!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Rich Youth>...But I feel like I'm at the bottom of this house's totem pole."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["85"])
+    ShowTextAttributes(["highslag_fc1", 0, 0, 2])
+    ShowText(["\\n<Elisabeth>Did you think a mere human can do as he pleases with monsters?"])
+    ExitEventProcessing([])
+    Label(["116"])
+    ShowTextAttributes(["iso_fc1", 0, 0, 2])
+    ShowText(["\\n<Isabelle>At least you haven't been eaten."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 114
+Name = "EV114"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mermaid>Husbaaand! Pour me some liquor!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["75"])
+    ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+    ShowText(["\\n<Mary>For meee too!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Rich Youth>Yes, yes... Hey, who're you?!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 115
+Name = "EV115"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mermaid>Husband, I'm out of lipstick. Could you go buy some?"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["113"])
+    ShowTextAttributes(["lamia_fc1", 0, 0, 2])
+    ShowText(["\\n<Anastasia>It is the human that is the slave..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 116
+Name = "EV116"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mermaid>Husband, peel an apple for me!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["79"])
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["\\n<Nuruko>Kyuu! Kyuu!"])
+    ExitEventProcessing([])
+    Label(["111"])
+    ShowTextAttributes(["suika_fc1", 0, 0, 2])
+    ShowText(["\\n<Melon>Oh, there's a watermelon too♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 117
+Name = "EV117"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mermaid>Husband, you smell like a fish..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["92"])
+    ShowTextAttributes(["eater_fc1", 3, 0, 2])
+    ShowText(["\\n<Eater>Fish smell... Tasty..."])
+    ExitEventProcessing([])
+    Label(["118"])
+    ShowTextAttributes(["meia_fc1", 2, 0, 2])
+    ShowText(["\\n<Meia>He's played too much with mermaids, fufufu..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 122
+Name = "EV122"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Dapper Gentleman>We have been evacuated from Grand Noah. Grangold military's reach still hasn't extended to our capital, but..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Dapper Gentleman>The frontline is slowly moving, and we can only defend. At this rate there'll be no hope left for us..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["104"])
+      ShowTextAttributes(["kumo_fc1", 0, 0, 2])
+      ShowText(["\\n<Rachnee>I wonder if I could slip myself into the middle of a battle and prey on some soldiers..."])
+      ExitEventProcessing([])
+      Label(["128"])
+      ShowTextAttributes(["kaniloid_fc1", 0, 0, 2])
+      ShowText(["\\n<Jillian>The time to fulfill my duty as a weapon might be near..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Dapper Gentleman>We have been evacuated from Grand Noah. However, I feel that it is too early to return."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Dapper Gentleman>The fierce battle will continue with the arrival of the monster army. We can't go back yet because the fall of the capital is a possibility."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 123
+Name = "EV123"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Well-Dressed Woman>Grangold's army isn't made of humans. It's composed of Ant Girls and Magic Dolls."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Dapper Gentleman>Even for the three countries' elites, fighting that force is... It might only be a matter of time until Grangold dominates the world."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["149"])
+      ShowTextAttributes(["lamp_fc1", 0, 0, 2])
+      ShowText(["\\n<Jeannie>To think they would field an inhuman army... It doesn't seem like a human kingdom. Did they make a contract with some high level yoma?"])
+      ExitEventProcessing([])
+      Label(["529"])
+      ShowTextAttributes(["sara_fc1", 4, 0, 2])
+      ShowText(["\\n<Sara>We don't know what happened in Grangold... I feel this war won't end until we learn the truth."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Well-Dressed Woman>The Grangold army was under the Monster Lord's orders. What's to expect from an army full of Ant Girls...?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Well-Dressed Woman>And now, the battle against the Monster Army will begin... won't it? And if we are defeated? What will be our fate..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 124
+Name = "EV124"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Well-Dressed Girl>Both my father and mother have no guts! They abandoned our homeland...!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Well-Dressed Girl>I'll go back to Grand Noah if it's ever invaded. I'll join the resistance to liberate our homeland!"])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["93"])
+      ShowTextAttributes(["liot_fc1", 4, 0, 2])
+      ShowText(["\\n<Riot>How valiant... You have a noble soul."])
+      ExitEventProcessing([])
+      Label(["533"])
+      ShowTextAttributes(["grandnoa_fc1", 0, 0, 2])
+      ShowText(["\\n<Queen of Grand Noah>We won't let that happen. We will surely defeat Grangold and end this war."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Well-Dressed Girl>Both my father and mother have no guts! They abandoned our homeland...!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Well-Dressed Girl>If Grand Noah is being invaded, I will return. I'll become a soldier and fight the Monster Lord alongside the brave Hero Luka!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 264
+Name = "EV264"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dog>Woof! Woof!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["60"])
+    ShowTextAttributes(["dog_fc1", 4, 0, 2])
+    ShowText(["\\n<Pochi>Awroof!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 282
+Name = "EV282"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([171, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 283
+Name = "EV283"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([262, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 284
+Name = "EV284"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([52, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 286
+Name = "EV286"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([382, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

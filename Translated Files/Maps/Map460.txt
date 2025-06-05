@@ -1,0 +1,547 @@
+Display Name = "Sealed Chamber"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 459, 20, 6, 2, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 459, 20, 6, 2, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 459, 20, 6, 2, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([46, 0, 0, 1])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>This isn't a divine weapon, is it...?"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeGold([0, 0, 37])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["37\\G obtained!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([1, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1309, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 2"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([152, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 3"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1643, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Piercing Moon Spear, dedicated for the quick]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Flickering Dust Dagger, dedicated for the skillful]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Tremor Sword, dedicated for the valiant]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Flowing Sky Strongsword, dedicated for the fierce]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Disaster Sentence Great Sword, dedicated for the intense]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Crimson Roar Rapier, dedicated for the honorable]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Four Ruins Katana, dedicated for the serene]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Soul Revival Blade, dedicated for the concealed]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Thunder Retribution Fist, dedicated for the passionate]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Foolish Beast's Fang, dedicated for the wild]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Power Wave Axe, dedicated for the proud]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Godly Club, dedicated for the mighty]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Star Rhyme Staff, dedicated for the pure]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Ring World's Magic Staff, dedicated for the enlightened]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Dark Thunder Scythe, dedicated for the sharp]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[High Lotus Bow, dedicated for the righteous]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Gun of Soul Howl, dedicated for the firm]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Whip of the Immortal, dedicated for the noble]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Soaring Bird's Throwing, dedicated for the inquisitive]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["[Chirping Fang, dedicated for the beautiful]"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's nothing on the pedestal..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        CallCommonEvent([309])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])

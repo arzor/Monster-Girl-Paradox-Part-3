@@ -1,0 +1,32 @@
+CommonEvent 7553
+Name = "レミナ：敗北"
+
+  999([7698])
+  CallCommonEvent([7000])
+  ShowPicture([5, "80_mob_hime_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+  ErasePicture([6])
+  ShowTextAttributes(["mob_hime_fc1", 0, 0, 2])
+  ShowText(["【レミナ】"])
+  ShowText(["お疲れ様でした……私の勝ちですね。"])
+  ShowText(["あなたも、私の胸で果ててしまいましたか……"])
+  ShowTextAttributes(["mob_hime_fc1", 0, 0, 2])
+  ShowText(["【レミナ】"])
+  ShowText(["闘志を失っていないなら、また挑んで下さいね。"])
+  ShowText(["何度でも、私の胸で葬って差し上げましょう……"])
+  ErasePicture([5])
+  ConditionalBranch([0, 443, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([0, 2331, 1])
+    ChangeMapDisplay([1])
+    ControlVariables([57, 57, 0, 0, 1775])
+    TransferPlayer([0, 775, 18, 16, 2, 0])
+    PlayBGM(["RPG::BGM(@name=\"castle7\", @volume=100, @pitch=100)"])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+  BranchEnd([])
+  ExitEventProcessing([])
+  Empty([])

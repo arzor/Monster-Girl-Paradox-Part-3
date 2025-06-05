@@ -1,0 +1,426 @@
+Display Name = ""
+Parallax Name = "StarlitSky"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    ControlSwitches([34, 34, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 901, 1, 15, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    ControlSwitches([34, 34, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 901, 1, 15, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 904, 25, 1, 0, 0])
+    ControlSwitches([31, 31, 1])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([1, 1209, 0, 3, 0])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>"])
+      ShowText(["The underground's too dangerous!"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 909, 36, 5, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    ShowPicture([5, "80_executioner_st01", 0, 0, 70, -50, 70, 70, 0, 0])
+    ShowPicture([6, "80_ogretooth_st01", 0, 0, -150, 80, 100, 100, 0, 0])
+    ShowPicture([7, "80_mistilteinn_st01", 0, 0, 280, 130, 80, 80, 0, 0])
+    MovePicture([5, nil, 0, 0, 70, -50, 70, 70, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, -150, 80, 100, 100, 255, 0, 30, false])
+    MovePicture([7, nil, 0, 0, 280, 130, 80, 80, 255, 0, 30, true])
+    ShowTextAttributes(["mistilteinn_fc1", 0, 0, 2])
+    ShowText(["\\n<Mysteltainn>"])
+    ShowText(["Now you can't run..."])
+    PlaySE(["RPG::SE(@name=\"Down1\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["You were caught by the Cursed Sword Sisters..."])
+    PlayBGM(["RPG::BGM(@name=\"ero1\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["mistilteinn_fc1", 0, 0, 2])
+    ShowText(["\\n<Mysteltainn>"])
+    ShowText(["Well then, we'll drain your energy.\nWe're busy too, so we'll make this quick."])
+    ShowTextAttributes(["executioner_fc1", 1, 0, 2])
+    ShowText(["\\n<Executioner>"])
+    ShowText(["Fufu, I'll make your execution feel wonderful♪"])
+    ShowTextAttributes(["ogretooth_fc1", 0, 0, 2])
+    ShowText(["\\n<Ogretooth>"])
+    ShowText(["Come on, I'll rape you 'till you die!"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>"])
+    ShowText(["St-stop...!"])
+    FadeoutScreen([])
+    ErasePicture([5])
+    ErasePicture([6])
+    ErasePicture([7])
+    CallCommonEvent([104])
+    CallCommonEvent([105])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>"])
+    ShowText(["U...uu..."])
+    ShowTextAttributes(["mistilteinn_fc1", 0, 0, 2])
+    ShowText(["\\n<Mysteltainn>"])
+    ShowText(["Thank you for the meal...\nWith this, we've cleaned up this area."])
+    FadeoutBGM([1])
+    Wait([120])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["........"])
+    CallCommonEvent([2999])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    ShowPicture([5, "80_executioner_st01", 0, 0, 70, -50, 70, 70, 0, 0])
+    ShowPicture([6, "80_ogretooth_st01", 0, 0, -150, 80, 100, 100, 0, 0])
+    ShowPicture([7, "80_mistilteinn_st01", 0, 0, 280, 130, 80, 80, 0, 0])
+    MovePicture([5, nil, 0, 0, 70, -50, 70, 70, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, -150, 80, 100, 100, 255, 0, 30, false])
+    MovePicture([7, nil, 0, 0, 280, 130, 80, 80, 255, 0, 30, true])
+    ShowTextAttributes(["executioner_fc1", 1, 0, 2])
+    ShowText(["\\n<Executioner>"])
+    ShowText(["There we go, caught you~♪"])
+    PlaySE(["RPG::SE(@name=\"Down1\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["You were caught by the Cursed Sword Sisters..."])
+    PlayBGM(["RPG::BGM(@name=\"ero1\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["mistilteinn_fc1", 0, 0, 2])
+    ShowText(["\\n<Mysteltainn>"])
+    ShowText(["Well then, we'll drain your energy.\nWe're busy too, so we'll make this quick."])
+    ShowTextAttributes(["executioner_fc1", 1, 0, 2])
+    ShowText(["\\n<Executioner>"])
+    ShowText(["Fufu, I'll make your execution feel wonderful♪"])
+    ShowTextAttributes(["ogretooth_fc1", 0, 0, 2])
+    ShowText(["\\n<Ogretooth>"])
+    ShowText(["Come on, I'll rape you 'till you die!"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>"])
+    ShowText(["St-stop...!"])
+    FadeoutScreen([])
+    ErasePicture([5])
+    ErasePicture([6])
+    ErasePicture([7])
+    CallCommonEvent([104])
+    CallCommonEvent([105])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>"])
+    ShowText(["U...uu..."])
+    ShowTextAttributes(["mistilteinn_fc1", 0, 0, 2])
+    ShowText(["\\n<Mysteltainn>"])
+    ShowText(["Thank you for the meal...\nWith this, we've cleaned up this area."])
+    FadeoutBGM([1])
+    Wait([120])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["........"])
+    CallCommonEvent([2999])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    ShowPicture([5, "80_executioner_st01", 0, 0, 70, -50, 70, 70, 0, 0])
+    ShowPicture([6, "80_ogretooth_st01", 0, 0, -150, 80, 100, 100, 0, 0])
+    ShowPicture([7, "80_mistilteinn_st01", 0, 0, 280, 130, 80, 80, 0, 0])
+    MovePicture([5, nil, 0, 0, 70, -50, 70, 70, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, -150, 80, 100, 100, 255, 0, 30, false])
+    MovePicture([7, nil, 0, 0, 280, 130, 80, 80, 255, 0, 30, true])
+    ShowTextAttributes(["ogretooth_fc1", 0, 0, 2])
+    ShowText(["\\n<Ogretooth>"])
+    ShowText(["Haha, gotcha!"])
+    PlaySE(["RPG::SE(@name=\"Down1\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["You were caught by the Cursed Sword Sisters..."])
+    PlayBGM(["RPG::BGM(@name=\"ero1\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["mistilteinn_fc1", 0, 0, 2])
+    ShowText(["\\n<Mysteltainn>"])
+    ShowText(["Well then, we'll drain your energy.\nWe're busy too, so we'll make this quick."])
+    ShowTextAttributes(["executioner_fc1", 1, 0, 2])
+    ShowText(["\\n<Executioner>"])
+    ShowText(["Fufu, I'll make your execution feel wonderful♪"])
+    ShowTextAttributes(["ogretooth_fc1", 0, 0, 2])
+    ShowText(["\\n<Ogretooth>"])
+    ShowText(["Come on, I'll rape you 'till you die!"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>"])
+    ShowText(["St-stop...!"])
+    FadeoutScreen([])
+    ErasePicture([5])
+    ErasePicture([6])
+    ErasePicture([7])
+    CallCommonEvent([104])
+    CallCommonEvent([105])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>"])
+    ShowText(["U...uu..."])
+    ShowTextAttributes(["mistilteinn_fc1", 0, 0, 2])
+    ShowText(["\\n<Mysteltainn>"])
+    ShowText(["Thank you for the meal...\nWith this, we've cleaned up this area."])
+    FadeoutBGM([1])
+    Wait([120])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["........"])
+    CallCommonEvent([2999])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    GatherFollowers([])
+    FadeoutBGM([1])
+    Wait([30])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShotBalloonIcon([-1, 1, false])
+    ShowAnimation([5, 542, false])
+    Wait([60])
+    PlayBGM(["RPG::BGM(@name=\"boss0-4\", @volume=100, @pitch=100)"])
+    ControlSwitches([31, 31, 0])
+    ChangePlayerFollowers([1])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=14, @parameters=[0, 3])\", \"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, 3])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Wait([60])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>"])
+    ShowText(["You three are...!"])
+    ShowTextAttributes(["lars_fc01", 0, 0, 2])
+    ShowText(["\\n<Lars>"])
+    ShowText(["............!!"])
+    ShowPicture([5, "80_executioner_st02", 0, 0, 70, -50, 70, 70, 0, 0])
+    ShowPicture([6, "80_ogretooth_st01", 0, 0, -150, 80, 100, 100, 0, 0])
+    ShowPicture([7, "80_mistilteinn_st01", 0, 0, 280, 130, 80, 80, 0, 0])
+    MovePicture([5, nil, 0, 0, 70, -50, 70, 70, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, -150, 80, 100, 100, 255, 0, 30, false])
+    MovePicture([7, nil, 0, 0, 280, 130, 80, 80, 255, 0, 30, true])
+    ShowTextAttributes(["ogretooth_fc1", 0, 0, 2])
+    ShowText(["\\n<Ogretooth>"])
+    ShowText(["Haha! I come here to stamp out some rats, but it seems I've found some familiar faces!"])
+    ShowTextAttributes(["executioner_fc1", 1, 0, 2])
+    ShowText(["\\n<Executioner>"])
+    ShowText(["There are lots of new faces, too. They all look delicious...♪"])
+    ShowTextAttributes(["mistilteinn_fc1", 0, 0, 2])
+    ShowText(["\\n<Mysteltainn>"])
+    ShowText(["You two, we didn't come here to play. Here, we absolutely must take the intruders' lives..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>"])
+    ShowText(["These guys... Are they alliance members!?"])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>"])
+    ShowText(["Yes, and they're quite strong. It might be better to run here."])
+    ErasePicture([5])
+    ErasePicture([6])
+    ErasePicture([7])
+    Wait([30])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Truly, fighting even one of them looks to be a hard battle. Fighting all three at once would be certain death."])
+    ShowTextAttributes(["ogretooth_fc1", 0, 0, 2])
+    ShowText(["\\n<Ogretooth>"])
+    ShowText(["Oioi, you're really gonna run? Hey, play with me instead!"])
+    ShowTextAttributes(["daimeikai_fc1", 1, 0, 2])
+    ShowText(["\\n<Daimyokai>"])
+    ShowText(["Don't turn back! We have to retreat from here!"])
+    ShowTextAttributes(["executioner_fc1", 1, 0, 2])
+    ShowText(["\\n<Executioner>"])
+    ShowText(["Ahaha, wait, wait~♪"])
+    PlaySE(["RPG::SE(@name=\"Powerup\", @pitch=100, @volume=80)"])
+    PlayBGM(["RPG::BGM(@name=\"kiki1\", @volume=100, @pitch=100)"])
+    ChangePlayerFollowers([1])
+    ShowTextAttributes(["", 0, 1, 1])
+    ShowText(["Run from the three Cursed Sword Sisters!\nIf you're caught, it's game over!"])
+    Wait([30])
+    ControlVariables([1209, 1209, 0, 0, 3])
+    ControlSwitches([89, 89, 0])
+    ChangeSaveAccess([0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([6, -1, 2])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"hand-drum01\\\\\\\", @pitch=100, @volume=100)\\\"])\", \"RPG::MoveCommand(@code=41, @parameters=[\\\"sanmai\\\", 1])\", \"RPG::MoveCommand(@code=14, @parameters=[0, 0])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"hand-drum01\\\", @pitch=100, @volume=100)\"])"])
+      Unnamed(["RPG::MoveCommand(@code=41, @parameters=[\"sanmai\", 1])"])
+      Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, 0])"])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"Sand\\\\\\\", @pitch=150, @volume=80)\\\"])\", \"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=41, @parameters=[\\\"!Flame\\\", 7])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=29, @parameters=[5])\", \"RPG::MoveCommand(@code=33, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[30])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"Sand\\\", @pitch=150, @volume=80)\"])"])
+      Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=41, @parameters=[\"!Flame\", 7])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=29, @parameters=[5])"])
+      Unnamed(["RPG::MoveCommand(@code=33, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=15, @parameters=[30])"])
+      ShowTextAttributes(["youkosan_fc1", 3, 0, 2])
+      ShowText(["\\n<Spirit Fox>"])
+      ShowText(["\\n<Spirit Fox>Mugyaaa!!\\^\\.\\."])
+      ControlSelfSwitch(["A", 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["youkosan_fc2", 0, 0, 2])
+      ShowText(["\\n<Fox Statue>Fufufu... I am a Fox Statue.\nI won't step aside unless you talk to my \"arse.\""])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])

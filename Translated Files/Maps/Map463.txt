@@ -1,0 +1,270 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Large red letters are scrawled on one page..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\C[18]EXPERIMENT FAILED\\C[0]"])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 462, 19, 54, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 462, 20, 54, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([166, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The party hears a rummaging sound from the back of the house."])
+    ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+    ShowText(["\\n<Sonya>It sounds like something's back there..."])
+    ConditionalBranch([4, 62, 0])
+      ShowTextAttributes(["gob_fc1", 3, 0, 2])
+      ShowText(["\\n<Gob>C-come on out! I'm not scared! I'll beat you up!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ConditionalBranch([1, 1013, 0, 0, 0])
+      ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+      ShowText(["\\n<？？？>*Chomp* *chomp* *munch*"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The strange creature is eating an apple."])
+      ShotBalloonIcon([0, 1, true])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+      ShowPicture([5, "80_nuruko_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+      ShowText(["\\n<？？？>Kyuu!"])
+      ShowTextAttributes(["sonia_fc2", 3, 0, 2])
+      ShowText(["\\n<Sonya>Hold on, we're not here to hurt you!"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>Look out! She's coming right for us!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>She's attacking! Get ready!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 68, 0])
+        ShowTextAttributes(["dragonp_fc1", 2, 0, 2])
+        ShowText(["\\n<Papi>What is she?! What's going on?!"])
+        Empty([])
+      BranchEnd([])
+      ErasePicture([5])
+      ChangeBattleBGM(["RPG::BGM(@name=\"boss1\", @volume=100, @pitch=100)"])
+      ControlSwitches([22, 22, 0])
+      BattleProcessing([0, 57, false, false])
+      ControlSwitches([22, 22, 1])
+      ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+      ShowPicture([5, "80_nuruko_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Whew..."])
+      ShowTextAttributes(["nuruko_fc1", 2, 0, 2])
+      ShowText(["\\n<？？？>......"])
+      ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+      ShowText(["\\n<Sonya>It looks like she's calmed down. I don't think she's evil or anything. She just attacked because we startled her."])
+      ConditionalBranch([4, 53, 0])
+        ShowTextAttributes(["slime_fc1", 2, 0, 2])
+        ShowText(["\\n<Lime>She startled me..."])
+        Empty([])
+      BranchEnd([])
+      ShowPicture([5, "80_nuruko_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+      ShowText(["\\n<？？？>Kyuu!"])
+      ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+      ShowText(["\\n<Sonya>We're sorry, we'll leave you alone now."])
+      ShowPicture([5, "80_nuruko_st03", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["nuruko_fc1", 2, 0, 2])
+      ShowText(["\\n<？？？>Kyu..."])
+      ControlVariables([1013, 1013, 0, 0, 1])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1013, 0, 1, 0])
+      ShowPicture([5, "80_nuruko_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["nuruko_fc1", 2, 0, 2])
+      ShowText(["\\n<？？？>......"])
+      ErasePicture([5])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    ShowPicture([5, "80_nuruko_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["\\n<？？？>Kyuu! Kyuu!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>It looks like she wants to come along. Did she get emotionally attached?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>That creature seems to be following us. Planning to stab us in the back, no doubt..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["\\n<？？？>Kyuu! Kyuu!"])
+    ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+    ShowText(["\\n<Sonya>Do you really want to come along?"])
+    ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+    ShowText(["\\n<Sonya>Hey, Luka... Can we take her home with us?"])
+    ShowChoices([["Add her to the party", "Uhhh, no"], 2])
+    When([0, "Add her to the party"])
+      ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+      ShowText(["\\n<？？？>Kyuu! Kyuu!"])
+      ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+      ShowText(["\\n<Sonya>Hmm, you're kind of slimy and child-like...\nThat'd make you \"Nuruko\" in the language of Yamatai... Sound good?"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Your sense of naming is tragic."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>If you had created the world, the planet would be covered in things with stupid names..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+      ShowText(["\\n<Nuruko>Kyu kyu kyu!"])
+      ErasePicture([5])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+      Script(["add_actor_ex(79)"])
+      PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Nuruko joined the party!"])
+      ControlSwitches([2125, 2125, 0])
+      Wait([60])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>We still don't even know what she is, though."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>It's too late to worry about that now..."])
+      ConditionalBranch([4, 68, 0])
+        ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+        ShowText(["\\n<Papi>Whatever you are, welcome to the party!"])
+        ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+        ShowText(["\\n<Nuruko>Kyuuu!"])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Uhhh, no"])
+      ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+      ShowText(["\\n<？？？>Kyuu! Kyuu!"])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>I'm sorry, he said no..."])
+      ShowPicture([5, "80_nuruko_st03", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["nuruko_fc1", 2, 0, 2])
+      ShowText(["\\n<？？？>......"])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ConditionalBranch([1, 1013, 0, 1, 0])
+      ControlVariables([1013, 1013, 0, 0, 2])
+      SetEventLocation([0, 0, 3, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ConditionalBranch([1, 1013, 0, 1, 0])
+      ControlVariables([1013, 1013, 0, 0, 2])
+      SetEventLocation([0, 0, 3, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([1, 1013, 0, 1, 0])
+      ControlVariables([1013, 1013, 0, 0, 2])
+      SetEventLocation([0, 0, 3, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])

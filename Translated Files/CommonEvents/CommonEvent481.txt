@@ -1,0 +1,27 @@
+CommonEvent 481
+Name = "魔界サン・イリア"
+
+  999([481])
+  ConditionalBranch([1, 1142, 0, 44, 1])
+    ConditionalBranch([1, 1142, 0, 46, 2])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["サン・イリア城下は大混乱です。"])
+      ShowText(["我々は、為すべき事を為しましょう！"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  BranchEnd([])
+  ControlSwitches([5070, 5070, 0])
+  ControlSwitches([5418, 5418, 0])
+  ControlSwitches([5364, 5364, 0])
+  ChangeMapDisplay([0])
+  PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+  TransferPlayer([0, 845, 54, 68, 8, 0])
+  ExitEventProcessing([])
+  Empty([])

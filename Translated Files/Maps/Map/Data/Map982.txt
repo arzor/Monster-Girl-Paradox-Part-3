@@ -1,0 +1,1206 @@
+Display Name = "ドン・ファーザー邸"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 982, 73, 43, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【護衛】"])
+    ShowText(["お通り下さい！"])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 437, 63, 21, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 982, 73, 11, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "マーリン"
+
+  Page 0
+    ShowPicture([5, "80_merlin_st11", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ConditionalBranch([0, 3183, 1])
+      ShowTextAttributes(["merlin_fc2", 0, 0, 2])
+      ShowText(["【？？？】"])
+      ShowText(["ずいぶんお久しぶりですね、ルカさん。"])
+      ShowText(["どうか、ラザロさんにお話を。"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["……誰？　知ってる人かな？"])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3183, 0])
+      ShowTextAttributes(["merlin_fc2", 0, 0, 2])
+      ShowText(["【マーリン】"])
+      ShowText(["少し、お時間を下さいませ。"])
+      ShowText(["為すべき事を為した後、お力になりましょう。"])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "ラザロ"
+
+  Page 0
+    GatherFollowers([])
+    ShowPicture([5, "80_lazarus_st21", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["……おお、ルカじゃないか。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["ラザロおじさんも、無事だったみたいだね。"])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["俺は別に、いつも通りさ。"])
+    ShowText(["まったく、お前がしぶとく生きてると思わなかったぜ。"])
+    ShowTextAttributes(["merlin_fc2", 1, 0, 2])
+    ShowText(["【？？？】"])
+    ShowText(["そう言いつつ、ちゃんとあなた達の生存を把握してます。"])
+    ShowText(["ずいぶん心配して、イリアスヴィルなどに見張りを立てて……"])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["……黙ってろよ、爺さん。"])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["まあ……爺さんの言った通りだよ。"])
+    ShowText(["お前や仲間達のこと、そして動向まできっちり掴んでるのさ。"])
+    ShowTextAttributes(["marcellus_fc1", 0, 0, 2])
+    ShowText(["【マルケルス】"])
+    ShowText(["……………………"])
+    ShowPicture([5, "80_lazarus_st23", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["…………？？？"])
+    ShowTextAttributes(["marcellus_fc1", 0, 0, 2])
+    ShowText(["【マルケルス】"])
+    ShowText(["ラザロ……ずいぶん痩せたな。"])
+    ShowPicture([5, "80_lazarus_st25", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lazarus3_fc1", 4, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["マ、マルケルス～～～～～～～～！？！？！？"])
+    ShowTextAttributes(["lazarus3_fc1", 4, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["お前、いつの間に！"])
+    ShowText(["お前は……お前、コノヤロウ！！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["僕の仲間達のこと、きっちり把握してたんじゃなかったの？"])
+    ShowTextAttributes(["lazarus3_fc1", 4, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["なんかメカ男がいるとか聞いてたけど！"])
+    ShowText(["マルケルスが戻ったとか、聞いてねーよ！！"])
+    ShowPicture([5, "80_lazarus_st25", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_merlin_st12", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["merlin_fc2", 1, 0, 2])
+    ShowText(["【？？？】"])
+    ShowText(["マルケルス……お帰りなさい。"])
+    ShowText(["今は、ルカ君と旅をしているのですね。"])
+    ShowTextAttributes(["marcellus_fc1", 0, 0, 2])
+    ShowText(["【マルケルス】"])
+    ShowText(["……誰だ？"])
+    ShowTextAttributes(["merlin_fc2", 1, 0, 2])
+    ShowText(["【マーリン】"])
+    ShowText(["お忘れですか、マーリンです。"])
+    ShowText(["お互い、ずいぶん変わってしまいましたね。"])
+    ShowTextAttributes(["marcellus_fc1", 0, 0, 2])
+    ShowText(["【マルケルス】"])
+    ShowText(["マーリン……！？"])
+    ShowText(["お前、見るたびに若返っていないか……？"])
+    ShowPicture([5, "80_merlin_st41", 0, 0, 0, 0, 100, 100, 255, 0])
+    ErasePicture([6])
+    ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["まったく、訳の分からない爺さんだ……"])
+    ShowText(["俺達が一緒に旅したときは、こんなんだったがな。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["この三人、それにソニアの母親は、かつての冒険の仲間――"])
+    ShowText(["僕達には想像も出来ない絆があったのだろう。"])
+    ShowPicture([5, "80_lazarus_st21", 0, 0, 0, 0, 100, 100, 255, 0])
+    ErasePicture([6])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["まあ……マルケルスとの話は後だ。"])
+    ShowText(["言いたいことは、個人的に山ほどあるからな。"])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["それにしてもルカ、まだ勇者ごっこを続けてるみたいだな。"])
+    ShowText(["まったく、連れ回してる仲間も――"])
+    ShowTextAttributes(["rucyfina_fc2", 0, 0, 2])
+    ShowText(["【ルシフィナ】"])
+    ShowText(["……………………"])
+    ShowPicture([5, "80_lazarus_st23", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["……誰？"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["母さんだよ。"])
+    ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["マルケルスの奥さん……？"])
+    ShowText(["もっと普通の主婦っぽい感じじゃなかったっけ？"])
+    ShowTextAttributes(["micaela_fc3", 0, 0, 2])
+    ShowText(["【ミカエラ】"])
+    ShowText(["……………………"])
+    ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["……こちらは、誰？"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["母さんの姉……"])
+    ShowText(["僕から見たら、伯母さんだね。"])
+    ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["ああ、うん……"])
+    ShowText(["みんな殺気すごくない？"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["別に普通だよ……"])
+    ShowText(["むしろ父さんの旧友の前だから、行儀良くしてる感じ。"])
+    ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["そうか……うん。"])
+    ShowText(["お前の一家、どうなってんの？"])
+    ShowPicture([5, "80_lazarus_st23", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_merlin_st11", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["merlin_fc2", 0, 0, 2])
+    ShowText(["【マーリン】"])
+    ShowText(["「頼りない仲間ばかりだから、俺が助けてやる――」"])
+    ShowText(["そういう流れで同行しようと思っていたんですよ。"])
+    ShowPicture([5, "80_lazarus_st21", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["だから黙ってろって、爺さん……"])
+    ShowText(["なんだか本気でルカが心配になってきたぞ。"])
+    ShowPicture([5, "80_lazarus_st23", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["（だって爺さん……母親があの格好で練り歩いてるんだぞ。"])
+    ShowText(["　俺のオフクロが同じことやったら、泣くぞ）"])
+    ShowTextAttributes(["merlin_fc2", 0, 0, 2])
+    ShowText(["【マーリン】"])
+    ShowText(["（あなたの母親は、息子がグレきって泣いてますよ）"])
+    ShowPicture([5, "80_lazarus_st25", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lazarus3_fc1", 4, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["（オフクロの話はするんじゃねーよ！）"])
+    ShowTextAttributes(["merlin_fc2", 2, 0, 2])
+    ShowText(["【マーリン】"])
+    ShowText(["（話に出したのは、そっちでしょう……）"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["あの、何をひそひそ話してるの？"])
+    ShowText(["僕達も忙しいし、そろそろ――"])
+    ShowPicture([5, "80_lazarus_st21", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["……まあ、待て。"])
+    ShowText(["俺も、お前の旅についていってやるよ。"])
+    ShowTextAttributes(["merlin_fc2", 0, 0, 2])
+    ShowText(["【マーリン】"])
+    ShowText(["おや、ずいぶん単刀直入に切り出しましたね。"])
+    ShowTextAttributes(["lazarus3_fc1", 3, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["割と本気でルカが心配なんだよ！"])
+    ShowText(["普通の人間が、一人でも側にいないと感覚おかしくなるぞ。"])
+    ShowTextAttributes(["marcellus_fc1", 0, 0, 2])
+    ShowText(["【マルケルス】"])
+    ShowText(["お前が、普通の人間のうちに入るのか？"])
+    ShowPicture([5, "80_lazarus_st25", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lazarus3_fc1", 4, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["堕天使やら、原初の天使やら、"])
+    ShowText(["数百年魔王を斬り歩いた修羅に比べたら――"])
+    ShowTextAttributes(["lazarus3_fc1", 4, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["マフィアの親玉程度、全然普通の常識人なんだよ！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["やれやれ……"])
+    ShowText(["一緒に来るのは良いけど、あんまり無理しないでね。"])
+    ShowTextAttributes(["lazarus3_fc1", 4, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["お前が無理しないよう、俺が見張るんだよ！"])
+    ShowTextAttributes(["merlin_fc2", 0, 0, 2])
+    ShowText(["【マーリン】"])
+    ShowText(["そういうわけで、旅の用意は鞄に詰めておきました。"])
+    ShowText(["どうぞ、ラザロさん。"])
+    ShowPicture([5, "80_lazarus_st21", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["どうぞ、じゃねぇよ……"])
+    ShowText(["爺さん、お前も来るんだよ。"])
+    ShowTextAttributes(["merlin_fc2", 0, 0, 2])
+    ShowText(["【マーリン】"])
+    ShowText(["ええっ？　必要ないでしょう……"])
+    ShowText(["戦力的には、我々など石コロも同然ですよ。"])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["今ルカに必要なのは、戦力じゃなくまともな人間なんだよ。"])
+    ShowText(["こいつ、今に自分が人間であることも忘れちまうぞ。"])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["そういうわけでルカ、俺も同行するからな……"])
+    ShowText(["イヤとは言わせねぇぞ。"])
+    ShowTextAttributes(["merlin_fc2", 0, 0, 2])
+    ShowText(["【マーリン】"])
+    ShowText(["分かりました……が、少しお時間を頂けないでしょうか。"])
+    ShowText(["少々、やり残した仕事があるもので。"])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["おう、それじゃさっさと済ませてこい。"])
+    ShowText(["俺達は先に行ってるぞ。"])
+    ErasePicture([5])
+    ErasePicture([6])
+    Script(["add_actor_ex(520)"])
+    Script(["level_adjust(520,56)"])
+    ScriptMore(["set_class_level(520, 57, 10, false, false)"])
+    ScriptMore(["set_class_level(520, 58, 10, false, false)"])
+    ScriptMore(["set_class_level(520, 64, 10, false, false)"])
+    ScriptMore(["set_class_level(520, 81, 10, false, false)"])
+    ScriptMore(["set_class_level(520, 88, 10, false, false)"])
+    ScriptMore(["set_class_level(520, 91, 10, false, false)"])
+    ScriptMore(["set_class_level(520, 7026, 8, false, false)"])
+    ScriptMore(["set_class_level(520, 7033, 7, false, false)"])
+    RecoverAll([0, 520])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ラザロが仲間に加わった！"])
+    Wait([60])
+    ShowTextAttributes(["marcellus_fc1", 0, 0, 2])
+    ShowText(["【マルケルス】"])
+    ShowText(["すまんな、ラザロ……"])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["まったく、俺はいつもお前の尻拭いだよ……"])
+    ConditionalBranch([0, 1525, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["【ソニア】"])
+      ShowText(["あんまり無茶しないでよね、ラザロおじさん。"])
+      ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["おお、ソニアか。"])
+      ShowText(["お前はいつも普通で、ほっとするぜ。"])
+      ShowTextAttributes(["sonia_fc1", 3, 0, 2])
+      ShowText(["【ソニア】"])
+      ShowText(["本当にそう思う……？"])
+      ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["なんか猛烈に嫌な予感がしてきた……"])
+      ShowText(["俺にショック与えるのは、また今度にしてくれ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1841, 0])
+      ShowTextAttributes(["ex_sonia_fc1", 0, 0, 2])
+      ShowText(["【ソニア】"])
+      ShowText(["あんまり無茶しないでよね、ラザロおじさん。"])
+      ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["おお、ソニア……"])
+      ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["おお……？"])
+      ShowTextAttributes(["lazarus3_fc1", 4, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["おおおっ……！？"])
+      ShowTextAttributes(["lazarus3_fc1", 4, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["お前ら……ちょっと目を離したら、"])
+      ShowText(["人外化していく呪いにでも掛かってんのか！？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1842, 0])
+      ShowTextAttributes(["ex_sonia_fc2", 0, 0, 2])
+      ShowText(["【ソニア】"])
+      ShowText(["あんまり無茶しないでよね、ラザロおじさん。"])
+      ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["おお、ソニア……"])
+      ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["おお……？"])
+      ShowTextAttributes(["lazarus3_fc1", 4, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["おおおっ……！？"])
+      ShowTextAttributes(["lazarus3_fc1", 4, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["お前ら……ちょっと目を離したら、"])
+      ShowText(["人外化していく呪いにでも掛かってんのか！？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1843, 0])
+      ShowTextAttributes(["soniamazda_fc1", 0, 0, 2])
+      ShowText(["【ソニアマズダ】"])
+      ShowText(["……………………"])
+      ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["ソニア……じゃないよな？"])
+      ShowText(["いや違う、俺は何も見なかった。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1844, 0])
+      ShowTextAttributes(["soniamanyu_fc1", 0, 0, 2])
+      ShowText(["【ソニアマンユ】"])
+      ShowText(["……………………"])
+      ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["ソニア……じゃないよな？"])
+      ShowText(["いや違う、俺は何も見なかった。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1845, 0])
+      ShowTextAttributes(["soniachaos_fc1", 0, 0, 2])
+      ShowText(["【ソニアカオス】"])
+      ShowText(["……………………"])
+      ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["ソニア……じゃないよな？"])
+      ShowText(["いや違う、俺は何も見なかった。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1846, 0])
+      ShowTextAttributes(["ex_sonia_fc3", 0, 0, 2])
+      ShowText(["【エクス・ソニア】"])
+      ShowText(["……………………"])
+      ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["ソニア……じゃないよな？"])
+      ShowText(["いや違う、俺は何も見なかった。"])
+      ShowTextAttributes(["ex_sonia_fc3", 0, 0, 2])
+      ShowText(["【エクス・ソニア】"])
+      ShowText(["私は私で、私はソニア。"])
+      ShowText(["ソニアは私で、ソニアはソニア。"])
+      ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["なるほど、俺は何も見なかった。"])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([31, 31, 0])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    SetMoveRoute([7, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ShowPicture([5, "80_lazarus_st31", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["lazarus4_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["……いたか、ラザロよ。"])
+    ShowText(["今日こそは、教会に――"])
+    ShowPicture([5, "80_lazarus_st32", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lazarus4_fc1", 1, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["おおっ、皆様は！"])
+    ShowText(["そうですか、ついに旅立ちの時が！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["あなたは、きれいなラザロ――"])
+    ShowText(["じゃなかった、魔界のラザロさん！"])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["こいつ、やたら付きまとって鬱陶しいんだよ。"])
+    ShowText(["どうやら、俺を更生させる気らしい。"])
+    ShowPicture([5, "80_lazarus_st31", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lazarus4_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["当然の話だ。"])
+    ShowText(["私と同じ存在が、このような汚れた暮らしなど容認できん。"])
+    ShowTextAttributes(["lazarus4_fc1", 1, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["だが、ルカさんと冒険に出るとなれば……"])
+    ShowText(["世界を救う旅の中で、ゆがんだ性根も直るでしょう。"])
+    ConditionalBranch([0, 1026, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["もう手遅れだと思いますが……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1027, 0])
+      ShowTextAttributes(["iriasu_fc1", 3, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["もう手遅れだと思いますが……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1028, 0])
+      ShowTextAttributes(["iriasu_fc3", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["もう手遅れだと思いますが……"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["lazarus4_fc1", 1, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["もちろん、私もご一緒しましょう。"])
+    ShowText(["再びイリアス様に尽くせるとは、光栄の至りです！"])
+    ErasePicture([5])
+    Script(["add_actor_ex(521)"])
+    Script(["level_adjust(521,64)"])
+    ScriptMore(["set_class_level(521, 4, 10, false, false)"])
+    ScriptMore(["set_class_level(521, 46, 10, false, false)"])
+    ScriptMore(["set_class_level(521, 7011, 8, false, false)"])
+    ScriptMore(["set_class_level(521, 7013, 10, false, false)"])
+    RecoverAll([0, 521])
+    PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ラザロが仲間に加わった！"])
+    Wait([60])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([3183, 3183, 0])
+    ShowPicture([5, "80_lazarus_st21", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_lazarus_st31", 0, 0, 150, 0, 100, 100, 255, 0])
+    ConditionalBranch([0, 1026, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["ところで、ラザロとラザロ。"])
+      ShowText(["あなた達は、合一しないのですか？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1027, 0])
+      ShowTextAttributes(["iriasu_fc1", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["ところで、ラザロとラザロ。"])
+      ShowText(["あなた達は、合一しないのですか？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1028, 0])
+      ShowTextAttributes(["iriasu_fc3", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["ところで、ラザロとラザロ。"])
+      ShowText(["あなた達は、合一しないのですか？"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["lazarus4_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["ええ……"])
+    ShowText(["このような者と、一体になるつもりはありませんので。"])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["俺だって、お断りだ。"])
+    ShowText(["他の連中が言う、引き寄せられる感覚もないしな。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["三世界が合一した世界では――"])
+    ShowText(["大半の人間が、もう一人もしくは二人の自分と自然に合一している。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["しかしこれだけ側にいながら、ラザロ同士が合一しないとは――"])
+    ShowText(["いったい、どういう事だろうか？"])
+    ConditionalBranch([0, 1026, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["……えいっ！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1027, 0])
+      ShowTextAttributes(["iriasu_fc1", 1, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["……えいっ！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1028, 0])
+      ShowTextAttributes(["iriasu_fc3", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["……えいっ！"])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Blow1\", @pitch=100, @volume=80)"])
+    ShowPicture([6, "80_lazarus_st25", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([5, "80_lazarus_st34", 0, 0, 150, 0, 100, 100, 255, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["イリアスは不意に、魔界ラザロの背を押した！"])
+    ShowText(["よろけた魔界ラザロは、もう一人のラザロにぶつかる！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ラザロ同士の体が重なり、そして――"])
+    PlaySE(["RPG::SE(@name=\"mon_flash\", @pitch=100, @volume=100)"])
+    ShowPicture([10, "sys_white", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([10, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ErasePicture([6])
+    ShowPicture([5, "80_lazarus_st41", 0, 0, 0, 0, 100, 100, 255, 0])
+    MovePicture([10, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+    ErasePicture([10])
+    PlayBGM(["RPG::BGM(@name=\"scene_comi2\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["lazarus5_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["うわぁぁぁぁぁぁぁ！！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["わぁぁぁぁぁっ！！"])
+    ShowTextAttributes(["marcellus_fc1", 0, 0, 2])
+    ShowText(["【マルケルス】"])
+    ShowText(["おおおっ！？"])
+    ConditionalBranch([0, 1026, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["わぁっ！　合体事故です！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1027, 0])
+      ShowTextAttributes(["iriasu_fc1", 5, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["わぁっ！　合体事故です！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1028, 0])
+      ShowTextAttributes(["iriasu_fc3", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["わぁっ！　合体事故です！"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["lazarus5_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["ちょ、なんとかしてくれ！！"])
+    ShowText(["これ、すっごく気持ち悪いんだよ！！"])
+    ShowTextAttributes(["marcellus_fc1", 0, 0, 2])
+    ShowText(["【マルケルス】"])
+    ShowText(["動くな、ラザロ！"])
+    ShowText(["真ん中でまっすぐに分断する！"])
+    ShowTextAttributes(["lazarus5_fc1", 0, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["おいやめろ馬鹿！"])
+    ShowText(["それは、やっちゃダメなやつだ！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["左右から引っ張ってみるのはどうだろう！？"])
+    ShowTextAttributes(["marcellus_fc1", 0, 0, 2])
+    ShowText(["【マルケルス】"])
+    ShowText(["よし、私は左手だ！"])
+    ShowText(["ルカ、右手を引っ張れ！"])
+    PlaySE(["RPG::SE(@name=\"Evasion1\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ルカとマルケルスは、左右からラザロの体を引っ張った！"])
+    ShowText(["ラザロの体は、ずるりと二つに分断し――"])
+    ShowPicture([6, "80_lazarus_st23", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowPicture([5, "80_lazarus_st33", 0, 0, 0, 0, 100, 100, 255, 0])
+    MovePicture([6, nil, 0, 0, -150, 0, 100, 100, 255, 0, 60, false])
+    MovePicture([5, nil, 0, 0, 150, 0, 100, 100, 255, 0, 60, true])
+    PlayBGM(["RPG::BGM(@name=\"mura3\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["ふぅ……も、戻った……"])
+    ShowTextAttributes(["lazarus4_fc1", 2, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["寿命が縮んだ気がする……"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["なんで、ラザロおじさんはちゃんと合一できないんだろう……"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["確か、三人のエデンも合一に失敗した事があったが――"])
+    ConditionalBranch([0, 1026, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["ラザロはルカの成長にも関わってますし、"])
+      ShowText(["マルケルスとの関わりも深いですからね……"])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["もしかしたら、予想外に混沌の影響が強く……"])
+      ShowText(["混沌存在になりつつあるのかもしれません。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1027, 0])
+      ShowTextAttributes(["iriasu_fc1", 4, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["ラザロはルカの成長にも関わってますし、"])
+      ShowText(["マルケルスとの関わりも深いですからね……"])
+      ShowTextAttributes(["iriasu_fc1", 4, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["もしかしたら、予想外に混沌の影響が強く……"])
+      ShowText(["混沌存在になりつつあるのかもしれません。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1028, 0])
+      ShowTextAttributes(["iriasu_fc3", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["ラザロはルカの成長にも関わってますし、"])
+      ShowText(["マルケルスとの関わりも深いですからね……"])
+      ShowTextAttributes(["iriasu_fc3", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["もしかしたら、予想外に混沌の影響が強く……"])
+      ShowText(["混沌存在になりつつあるのかもしれません。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["なんか不安になること、言わないでくれよ……"])
+    ShowTextAttributes(["lazarus4_fc1", 2, 0, 2])
+    ShowText(["【ラザロ】"])
+    ShowText(["私は、人間でありたいのですが……"])
+    ConditionalBranch([4, 531, 0])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["【サン・イリア王】"])
+      ShowText(["諦めるのだな、悪行の報いだ……"])
+      ShowText(["いずれお前も、ネジになる日がやって来る。"])
+      ShowTextAttributes(["lazarus3_fc1", 4, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["ネジはやめてくれ！"])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["【サン・イリア王】"])
+      ShowText(["そうは言うが、どうせ今もネジのようなものだろう。"])
+      ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["せめて歯車って言えよ……"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ErasePicture([6])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ともかく、こうして僕達は新たな仲間を得たのだった。"])
+    ShowText(["さあ、冒険の旅を続けよう――"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "ラザロ2"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【護衛】"])
+    ShowText(["お通り下さい！"])
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 982, 73, 43, 0, 0])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 982, 73, 11, 0, 0])
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 437, 63, 21, 0, 0])
+    Empty([])
+
+CommonEvent 241
+Name = "EV241"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【護衛】"])
+    ShowText(["お疲れ様です！"])
+    Empty([])
+
+CommonEvent 242
+Name = "EV242"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【護衛】"])
+    ShowText(["お疲れ様です！"])
+    Empty([])
+
+CommonEvent 243
+Name = "EV243"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【派手な女】"])
+      ShowText(["きれいな方のドンは、とってもウブなのよ。"])
+      ShowText(["うふふっ、またからかっちゃおうかな～♪"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【派手な女】"])
+      ShowText(["え？　あたしが誰だって？"])
+      ShowText(["ふふっ、誰だと思う……？"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 244
+Name = "EV244"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【護衛】"])
+    ShowText(["お疲れ様です！"])
+    Empty([])
+
+CommonEvent 245
+Name = "EV245"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【護衛】"])
+    ShowText(["お疲れ様です！"])
+    Empty([])
+
+CommonEvent 246
+Name = "EV246"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["ここもずいぶん寂しくなった。"])
+      ShowText(["世界の終わりを前にして、田舎に帰る奴が増えてな……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["でも、あんた達が世界を救ってくれるんだろ？"])
+      ShowText(["期待してるぜ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["大勇者様の像や絵画を、所狭しと飾りたいところだが……"])
+      ShowText(["悪党の住処にそんなのがあっちゃ、そちらに迷惑が掛かっちまうぜ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 247
+Name = "EV247"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["ドンを……頼む。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["ドン……お帰りなさいませ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 248
+Name = "EV248"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["おおっ、あんた達は……"])
+      ShowText(["自分の家のようにくつろいでくれ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["おおっ、あんた達は……"])
+      ShowText(["すげぇな、世界の大英雄じゃないか。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 251
+Name = "EV251"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【組員】"])
+      ShowText(["今はむしろ、世間も好景気なんだよ。"])
+      ShowText(["人生これまでってなもんで、盛大に金をバラ撒くからな。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【組員】"])
+      ShowText(["こっから先、経済がガタガタになるぜ。"])
+      ShowText(["今のうちに、備えておかなくちゃな……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【組員】"])
+      ShowText(["平和ムードで、景気は爆上がりなんだが……"])
+      ShowText(["大荒れするのは、これからだな。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 252
+Name = "EV252"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【組員】"])
+      ShowText(["この業界も、活気が無くなっちまったな……"])
+      ShowText(["世界全体が、お開きムードだぜ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【組員】"])
+      ShowText(["破滅ムードで散財した若造どもが、多く路頭に迷ってる昨今。"])
+      ShowText(["受け皿になってやるのが、俺達の業界ってもんだぜ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 253
+Name = "EV253"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["最近、喧嘩も増えてるな……"])
+      ShowText(["ヤケクソになった素人は、極道よりも怖いぜ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["破滅ムードでヤケ起こして、全財産を使い果たした連中……"])
+      ShowText(["今さら首が回らなくなって、ケチな犯罪を起こしてるらしい。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["平和の到来で治安が悪くなるなんて、皮肉なもんだな……"])
+      ShowText(["まあ、これも一過性だろうけど。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 255
+Name = "EV255"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["人が減る一方のこの業界で、娼婦だけは増えてやがる。"])
+      ShowText(["せめて最後はのんびりしたいのに、休める暇がないぜ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["外歩いてたら、引ったくりに遭っちまった。"])
+      ShowText(["平和になって軽犯罪が多発って、本当なんだな……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["いや普通、俺みたいな黒ずくめの怪しい男から盗むか？"])
+      ShowText(["昨今の素人さんは、何考えてるのか分からねぇぜ……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 256
+Name = "EV256"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["世界の終わりが近付いたら、もっと狂騒ムードになると思ったがな。"])
+      ShowText(["わりかし、みんな理性的じゃないか。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["これから、仕事も忙しくなりそうだ……"])
+      ShowText(["楽がしたくて、この業界に入ったはずなんだがなぁ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 257
+Name = "EV257"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【メイド】"])
+      ShowText(["ドンのご子息が、あの大勇者ルカらしいですよ。"])
+      ShowText(["これって、スキャンダルじゃありません……？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【メイド】"])
+      ShowText(["ドンのご子息が、あの大勇者ルカだと思ってたら……"])
+      ShowText(["ご友人の息子さんって話だったわ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 258
+Name = "EV258"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【メイド】"])
+      ShowText(["私も、そろそろ田舎に帰ろうかなぁ……"])
+      ShowText(["お母さんとか、三年くらい会ってないし。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【メイド】"])
+      ShowText(["こういう場所での仕事って、過酷だと思う？"])
+      ShowText(["意外とみんなジェントルで、理不尽なこととか全くないのよ。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【メイド】"])
+      ShowText(["まあ、たまに変なオーダーが入るけど……"])
+      ShowText(["投げるための食器とか、客に浴びせるために温くしたお茶とか。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 259
+Name = "EV259"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["カジノの収益が、過去最高を記録しました。"])
+      ShowText(["いよいよ世界の終わりですなぁ……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["世界は終わらず、カジノの収益は最高潮……"])
+      ShowText(["大勇者様には感謝ですなぁ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 260
+Name = "EV260"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["市場に大量のクスリが流れてやがる。"])
+      ShowText(["こういうご時世だと、まあこうなるわな。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["こりゃ、誰かに指を詰めさせなきゃならんか……"])
+      ShowText(["今時指詰めとか、ドンがいい顔しないんだがなぁ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【幹部】"])
+      ShowText(["荒れに荒れたシノギを、そろそろ整理しなきゃな……"])
+      ShowText(["ほら、事業健全化ってやつさ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 262
+Name = "EV262"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【猫】"])
+    ShowText(["にゃ！　にゃ！"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["70"])
+    ShowTextAttributes(["nezumi_fc1", 2, 0, 2])
+    ShowText(["【ラティ】"])
+    ShowText(["ひゃぁっ！"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 263
+Name = "EV263"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【組員】"])
+      ShowText(["よしよし、カンヅメだぞー♪"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【組員】"])
+      ShowText(["こいつ最近、高級カンヅメしか食わねぇ。"])
+      ShowText(["カリカリとかスルーするようになっちまった……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【組員】"])
+      ShowText(["よしよし、カンヅメだぞー♪"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【組員】"])
+      ShowText(["こいつ最近、高級カンヅメしか食わねぇ。"])
+      ShowText(["俺より食費が掛かってるな……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 265
+Name = "EV265"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([900, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 266
+Name = "EV266"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([4825, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 267
+Name = "EV267"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([4509, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 268
+Name = "EV268"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([388, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

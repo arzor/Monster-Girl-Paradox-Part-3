@@ -1,0 +1,330 @@
+Display Name = ""
+Parallax Name = "StarlitSky"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 895, 38, 27, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 897, 28, 8, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 897, 28, 8, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 897, 28, 8, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 897, 28, 8, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 897, 28, 8, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 895, 38, 26, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 895, 51, 26, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 895, 51, 26, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ControlSwitches([506, 506, 1])
+    ControlSwitches([35, 35, 0])
+    Script(["release_temp_actors"])
+    Script(["take_all_item"])
+    FadeinScreen([])
+    Wait([60])
+    ShowPicture([5, "80_kazuya_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>We've become a big party all of a sudden..."])
+    ShowPicture([5, "80_rest_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>I think it will be difficult to proceed with this many people. We should reorganize the party."])
+    ShowPicture([5, "80_rejeo_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Hey, come here for a second.\nIf we use the portal--"])
+    PlaySE(["RPG::SE(@name=\"mon_asioto3\", @pitch=100, @volume=100)"])
+    FadeoutScreen([])
+    ControlSwitches([35, 35, 1])
+    ErasePicture([5])
+    Wait([60])
+    ChangePlayerFollowers([0])
+    TransferPlayer([0, 897, 21, 23, 8, 2])
+    FadeinScreen([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 1, 0, 2])
+      ShowText(["\\n<Alice>I see... If we use this, we can reorganize the party."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>I see... If we use this, we can reorganize the party."])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    Wait([30])
+    Script(["add_stand_actor(801)"])
+    Script(["add_stand_actor(802)"])
+    Script(["add_stand_actor(807)"])
+    Script(["add_stand_actor(808)"])
+    Script(["add_stand_actor(811)"])
+    Script(["add_stand_actor(812)"])
+    Script(["add_stand_actor(813)"])
+    Script(["add_stand_actor(814)"])
+    Script(["add_stand_actor(815)"])
+    Script(["add_stand_actor(816)"])
+    Script(["add_stand_actor(817)"])
+    Script(["add_stand_actor(819)"])
+    Script(["add_stand_actor(823)"])
+    Script(["add_stand_actor(825)"])
+    Script(["call_party_edit"])
+    RecoverAll([0, 0])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>This should do...\nCome on, let's get out of here at once."])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>That would be for the best...\nIf we don't reformulate a plan, we won't be able to do anything."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There are a lot of Nightmares inside of this intricate castle. In addition, the members of the Alliance are more troublesome than expected..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Even though all the heroes are here, it would be too reckless to explore the castle like this."])
+    ShowPicture([5, "80_rejeo_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Um... I think I have an idea.\nCould you listen to me before we leave this castle?"])
+    ShowTextAttributes(["magatu_fc1", 0, 0, 2])
+    ShowText(["\\n<Magatsu>Oh... You seem to have a good idea.\nCome to think of it, this castle belongs to your world, doesn't it?"])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>There is someone I need to bring out before we leave this place. I'm sure she'll come in handy in the fight against the Queen of Dreams."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Demon Lord Gilgorn... She is the Demon Lord of our world."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 1, 0, 2])
+      ShowText(["\\n<Alice>What, a Demon Lord from another world?\nThen there is no doubt her strength is the real deal."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>A Demon Lord...\nSo there is a Demon Lord in your world as well."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>Be that as it may, will that Demon Lord help us?\nIsn't she more likely to be on the Queen of Dreams' side...?"])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That's impossible.\nDemon Lord Gilgorn should be hostile to Nightmares."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>She will probably lend us her power as long as we fight Nightmares.\n...Probably."])
+    ShowTextAttributes(["byakunen_fc1", 1, 0, 2])
+    ShowText(["\\n<Hakunen>I see...\nWhere is this Demon Lord?"])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Actually, this Demonic Castle was originally her home... In other words, it's a place inside the Demon Lord's dream."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Well, for a number of reasons, the castle has completely been taken over by Nightmares..."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Therefore, if this magical castle has been transported here, then its master, Gilgorn, must be somewhere as well."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>As for where she is...\nFrom what I've heard, she's probably in the deepest part of the Demonic Castle."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>A Demon Lord holed herself up in the deepest part of her own castle? What happened...?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>A shut-in Demon Lord...\nI wonder what happened."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Well, a lot happened...\nAnyway, why don't we win her over?"])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>Y-yeah, I agree with you.\nI'm sure a Demon Lord would be a valuable asset."])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>(...Even though I say that, the closest thing to a Demon Lord I know is Hecate, the Demon Queen. And my impression of her is the worst...)"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>The more companions we have, the better.\nAnd if she's strong, then she's more than welcome."])
+    ShowTextAttributes(["lawrat_fc1", 0, 0, 2])
+    ShowText(["\\n<Lauratt>............"])
+    ErasePicture([5])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There is no objection, it seems.\nAnd now, we are on our way to find the Demon Lord Gilgorn."])
+    ShowPicture([5, "80_rovissa_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>This Demon Lord is in the deepest part of the castle. Um, shouldn't we go down to the room where the elevator is?"])
+    ShowTextAttributes(["daimeikai_fc1", 1, 0, 2])
+    ShowText(["\\n<Daimyokai>Oh, that place...\nWe'll have to go back."])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>Head south from here and take the stairs down to the basement.\nCome on, let's go!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Let's meet the Demon Lord Gilgorn!"])
+    ErasePicture([5])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["A Demon Lord from another world who is hostile to Nightmares... If she joins us, she will be of great help."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Let's stay alert and go to this Demonic Castle's basement.\nThis Demon Lord is supposed to be in the deepest part of this castle..."])
+    ControlSwitches([504, 504, 1])
+    ControlSwitches([3, 3, 1])
+    ControlVariables([1210, 1210, 0, 0, 1])
+    ControlSwitches([2912, 2912, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=41, @parameters=[\\\"$!mazyou_door\\\", 0])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=41, @parameters=[\"$!mazyou_door\", 0])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=38, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=38, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 894, 10, 12, 0, 0])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    Empty([])

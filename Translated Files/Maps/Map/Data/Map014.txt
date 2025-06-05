@@ -1,0 +1,277 @@
+Display Name = "聖山アモス"
+Parallax Name = "BlueSky"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 237, 238, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 237, 238, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 237, 238, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 237, 238, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 237, 238, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 237, 238, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 237, 238, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 210, 158, 182, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([277, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 210, 61, 79, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 2"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([598, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["sabiriel_fc1", 0, 0, 2])
+    ShowText(["【サビリエル】"])
+    ShowText(["山頂に向かうなら、このルートだ。"])
+    ShowText(["しかし、巡礼者がよくこの聖山に登る気になったな……"])
+    ShowTextAttributes(["sabiriel_fc1", 0, 0, 2])
+    ShowText(["【サビリエル】"])
+    ShowText(["私達のような戦闘が専門の天使が、修行目的で訪れる山だ。"])
+    ShowText(["くれぐれも、気をつけるのだぞ。"])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ChangeItems([943, 0, 0, 1])
+    ConditionalBranch([1, 1147, 0, 5, 2])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["これが、伝説の聖鉱石であるというヒヒイロカネ……"])
+      ShowText(["だが、扱える職人がいなければ役には立たんな。"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["この世界にもきっと、伝説の職人がいるはずだよ。"])
+      ShowText(["もしかして、その人物なら――"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1147, 0, 6, 1])
+      ShowTextAttributes(["alice_fc1", 1, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["これが、伝説の聖鉱石であるというヒヒイロカネ……"])
+      ShowText(["さっそく、ランドルフのところに持って行くぞ！"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([42, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([4189, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["ここは……聖山アモスか。"])
+    ShowText(["天界にも、この山はあったのだな。"])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["まさか……用事もないのに、山登りなんてしないよね？"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["今の我々には、やるべき事があるはずだ。"])
+    ShowText(["この山を登ったとて、得るものはあるまい……"])
+    ControlSelfSwitch(["A", 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["さて、聖山アモスに辿り着いたな。"])
+    ShowText(["これより山頂を目指すぞ。"])
+    ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["なんか、この山……"])
+    ShowText(["私達の世界のアモス山より高くない？"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["確かに、ソニアの言う通り。"])
+    ShowText(["天界のアモス山は、僕達の世界の山よりも高く険しいようだ。"])
+    ConditionalBranch([4, 382, 0])
+      ShowTextAttributes(["morrigan_fc1", 3, 0, 2])
+      ShowText(["【モリガン】"])
+      ShowText(["これ、山中洞窟も相当に入り組んでるぞ。"])
+      ShowText(["本当に登らなきゃいけないのか……"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["高いからこそ、頂上からの高高度突入が可能なのだ。"])
+    ShowText(["愚痴を言わず、登るぞ。"])
+    ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["はぁい……"])
+    ShowTextAttributes(["galda_fc1", 2, 0, 2])
+    ShowText(["【ガルダ】"])
+    ShowText(["くぇぇ！　くぇぇっ！！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["活躍できるのが嬉しいのか……ガルダは元気だね。"])
+    ShowTextAttributes(["galda_fc1", 2, 0, 2])
+    ShowText(["【ガルダ】"])
+    ShowText(["くぇぇっ……♪"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["確かに大変な道のりだが、文句を言っても始まらない。"])
+    ShowText(["僕達は、聖山アモスの頂上に向かって歩き始めたのだった――"])
+    ControlSelfSwitch(["B", 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 3
+    Empty([])

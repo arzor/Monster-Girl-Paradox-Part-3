@@ -1,0 +1,120 @@
+Display Name = "Hellgondo Cave 1F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 161, 31, 38, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 161, 32, 38, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 194, 112, 77, 2, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([53, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([29, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>If we go through this cave, we can get into the Hellgondo Continent. Naturally, the road is rugged, and the monsters will be powerful."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I expected as much from the cave leading into the Monster Continent. Now, let's get into the fighting spirit!"])
+      ConditionalBranch([4, 45, 0])
+        ShowTextAttributes(["alicetromeria_fc1", 4, 0, 2])
+        ShowText(["\\n<Alicetroemeria>Ufufu, this adventure is a lot of fun.\nIt's as if we're making a round trip between wonderland and reality..."])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>...What are you scheming?"])
+        ShowTextAttributes(["alicetromeria_fc1", 4, 0, 2])
+        ShowText(["\\n<Alicetroemeria>Ara... You don't understand, even though you're the Monster Lord?"])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>............"])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>If we can pass through this cave, we'll be able to break into the Hellgondo Continent. As would be expected, the path will not be easy, and the monsters will be powerful."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I expected as much from the cave leading into the Monster Continent. Now, let's get into the fighting spirit!"])
+      ShowTextAttributes(["heinrich_fc1", 7, 0, 2])
+      ShowText(["\\n<Heinrich>So this is the dream trial given to me by Ilias... I suppose this will be like a rehearsal before I head for the Monster Lord's Castle in reality."])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>I still feel kind of bad for deceiving him..."])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["\\n<Ilias>Actually, this will be good training for Heinrich. After all, he must soon challenge Black Alice by himself."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["heinrich_fc1", 7, 0, 2])
+      ShowText(["\\n<Heinrich>That said, I wonder where Alicetroemeria's gone off to? Oh right, this is just a dream, so there's no reason for her to be here..."])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>Heinrich... You should forget about that woman.\nYou mustn't listen to that voice of evil."])
+      ShowTextAttributes(["heinrich_fc1", 7, 0, 2])
+      ShowText(["\\n<Heinrich>You're always telling me that, Ilias...\nBut I know she's not an evil being."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>(I...am going to repeat the same thing over again...)"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])

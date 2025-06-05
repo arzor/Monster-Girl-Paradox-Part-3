@@ -1,0 +1,211 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 991, 22, 10, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 991, 28, 16, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 991, 15, 32, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ここなら少し休めそうだ……"])
+    FadeoutScreen([])
+    PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+    Wait([150])
+    RecoverAll([0, 0])
+    FadeinScreen([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["l_medusa_fc1", 0, 0, 2])
+    ShowText(["【ロードメデューサ】"])
+    ShowText(["我は親衛隊長を務めている。"])
+    ShowText(["そろそろ、兵員ももう少し増やす時期だな。"])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["lamia_fc1", 0, 0, 2])
+    ShowText(["【ラミア】"])
+    ShowText(["クィーン達は、あなた達と一緒に冒険してるんでしょ。"])
+    ShowText(["その間、この村の事は私達に任せておいてね。"])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ここなら少し休めそうだ……"])
+    FadeoutScreen([])
+    PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+    Wait([150])
+    RecoverAll([0, 0])
+    FadeinScreen([])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["lamia_fc1", 0, 0, 2])
+    ShowText(["【ラミア】"])
+    ShowText(["一日働いて、ぐっすり寝ての繰り返し……"])
+    ShowText(["原始的だけど、とても充実してるわ。"])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["scyllad_fc1", 0, 0, 2])
+    ShowText(["【デーモンスキュラ】"])
+    ShowText(["今は、そのまんま民家だけど……"])
+    ShowText(["いずれ二階建てにして、宿泊ルームを作るの。"])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["scylla_fc1", 0, 0, 2])
+    ShowText(["【スキュラ】"])
+    ShowText(["いちおう宿屋っぽいけど、まだ営業前ね。"])
+    ShowText(["空いたベッドで休んでいっていいわよ。"])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ここなら少し休めそうだ……"])
+    FadeoutScreen([])
+    PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+    Wait([150])
+    RecoverAll([0, 0])
+    FadeinScreen([])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowPicture([5, "80_asmodeus_st13", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["asmodeus_fc1", 2, 0, 2])
+    ShowText(["【アスモデウス】"])
+    ShowText(["我々が、ここで悪事を為すとでも……？"])
+    ShowText(["心配無用、爆弾付きの首輪を装着させられております。"])
+    ShowTextAttributes(["asmodeus_fc1", 2, 0, 2])
+    ShowText(["【アスモデウス】"])
+    ShowText(["少しでも、クィーン達に逆らったら……"])
+    ShowText(["起爆して、首が吹き飛んでしまうのですよ。"])
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["そんな物騒な首輪、どこから仕入れたんだ……"])
+      ConditionalBranch([0, 1026, 0])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["ああそれ、私が提供したのですよ。"])
+        ShowText(["二人から相談を受けた際に、これを付けさせなさい……と。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1027, 0])
+        ShowTextAttributes(["iriasu_fc1", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["ああそれ、私が提供したのですよ。"])
+        ShowText(["二人から相談を受けた際に、これを付けさせなさい……と。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1028, 0])
+        ShowTextAttributes(["iriasu_fc3", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["ああそれ、私が提供したのですよ。"])
+        ShowText(["二人から相談を受けた際に、これを付けさせなさい……と。"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["この手の話には、だいたいイリアス様が噛んでますよね。"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowPicture([5, "80_jormungand_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["jormungand_fc1", 2, 0, 2])
+    ShowText(["【ヨルムンガンド】"])
+    ShowText(["なぜ、我がこんな所にいるのかだと……？"])
+    ShowText(["貴族位を剥奪され、行き場を失ったからに決まっておろう。"])
+    ShowTextAttributes(["jormungand_fc1", 2, 0, 2])
+    ShowText(["【ヨルムンガンド】"])
+    ShowText(["ちなみにこの合一世界では、女王暗殺など企てておらん。"])
+    ShowText(["あれは魔界での出来事であり、この世界では無罪よ……"])
+    ErasePicture([5])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([903, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["scylla_fc1", 0, 0, 2])
+    ShowText(["【スキュラ】"])
+    ShowText(["ここはクィーン達の王宮よ。"])
+    ShowText(["まあ、実際のところは村の集会場みたいなもんだけど。"])
+    ShowTextAttributes(["scylla_fc1", 0, 0, 2])
+    ShowText(["【スキュラ】"])
+    ShowText(["いずれ、豪華なお城を建てるんだから……"])
+    ShowText(["応援してよね♪"])
+    Empty([])

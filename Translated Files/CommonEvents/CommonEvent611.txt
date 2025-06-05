@@ -1,0 +1,25 @@
+CommonEvent 611
+Name = "イベント：ウンディーネ"
+
+  999([611])
+  ControlSwitches([73, 73, 0])
+  ConditionalBranch([0, 63, 0])
+    ShowTextAttributes(["undine_fc1", 0, 0, 2])
+    ShowText(["\\n<Undine>My power should already be in effect..."])
+    ShowText([""])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ShowTextAttributes(["undine_fc1", 0, 0, 2])
+  ShowText(["\\n<Undine>I'll lend you my power..."])
+  ShowText([""])
+  ControlSwitches([63, 63, 0])
+  PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["Looks like Undine will lend you her power!\nUntil the next boss floor, the party will receive the blessing of water!"])
+  ShowText([""])
+  ControlSwitches([73, 73, 1])
+  ExitEventProcessing([])
+  Empty([])

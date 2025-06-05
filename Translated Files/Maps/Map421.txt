@@ -1,0 +1,79 @@
+Display Name = "Tartarus (Eastern Ilias Continent)"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ControlSwitches([100, 100, 0])
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 420, 14, 13, 0, 1])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 195, 25, 32, 8, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 195, 25, 32, 8, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 195, 25, 32, 8, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>So this place looks different after all... There's a lot more of nature still alive around here, don't you think?"])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Unlike last time, I don't sense any danger present. We should still be on alert as we explore though."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>So this place looks different after all... From what we can see, nature appears to be flourishing."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Unlike last time, I do not sense any danger present. We should still be on alert as we explore though."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 68, 0])
+      ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+      ShowText(["\\n<Papi>*Sniff* *sniff* I smell peace in the air!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 41, 0])
+      ShowTextAttributes(["stein_fc2", 1, 0, 2])
+      ShowText(["\\n<Promestein>Now I'm really excited! Is it all right if I collect some samples of the local plants and insects!?"])
+      ConditionalBranch([4, 53, 0])
+        ShowTextAttributes(["slime_fc1", 0, 0, 2])
+        ShowText(["\\n<Lime>I want to catch some fish too! ♪"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])

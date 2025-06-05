@@ -1,0 +1,41 @@
+CommonEvent 445
+Name = "魔界サン・イリア地下1"
+
+  999([445])
+  ConditionalBranch([1, 1169, 0, 19, 2])
+    ShowTextAttributes(["ruka_fc4", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["ここから降りたら怪しまれるかもしれないな。"])
+    ShowText(["シヴァのいる3番VIPルームに行かないと……"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 1169, 0, 20, 1])
+    ConditionalBranch([0, 2527, 1])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["地下には何があるか分かりません。"])
+      ShowText(["うかつに踏み込む前に、この階で情報を集めましょう……"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2527, 0])
+      ControlSwitches([2528, 2528, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["地下に七大天使の誰かが囚われているという話ですね。"])
+      ShowText(["そこの階段から、地下へと降りましょう……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  BranchEnd([])
+  Empty([])

@@ -1,0 +1,140 @@
+Display Name = "Grand Pirate's Cave 1F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([1, 1050, 0, 9, 1])
+      ControlSwitches([100, 100, 1])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 19, 210, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([1, 1050, 0, 9, 1])
+      ControlSwitches([100, 100, 1])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 19, 210, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 233, 72, 62, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 232, 20, 39, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 232, 21, 39, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([72, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([32, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+    ShowText(["\\n<Supply Sea Horse Marine>I got supplies here!"])
+    ShowText(["I even brought a book of job-change!"])
+    ShowChoices([["Full Recovery", "Buy supplies", "Book of job-change", "Never mind"], 4])
+    When([0, "Full Recovery"])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Supply Marine>I've got an assortment of herbal and spiritual medicine!"])
+      PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+      FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+      RecoverAll([0, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The party's HP and MP have been fully restored!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Buy supplies"])
+      ShopProcessing([0, 2, 0, 0, false])
+      ShopItem([0, 7, 0, 0])
+      ShopItem([0, 11, 0, 0])
+      ShopItem([0, 13, 0, 0])
+      ShopItem([0, 14, 0, 0])
+      ShopItem([0, 15, 0, 0])
+      ShopItem([0, 16, 0, 0])
+      ShopItem([0, 17, 0, 0])
+      ShopItem([0, 18, 0, 0])
+      ShopItem([0, 19, 0, 0])
+      ShopItem([0, 23, 0, 0])
+      ShopItem([0, 102, 0, 0])
+      ShopItem([0, 35, 0, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([2, "Book of job-change"])
+      CallCommonEvent([113])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([3, "Never mind"])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])

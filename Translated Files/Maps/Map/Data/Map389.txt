@@ -1,0 +1,393 @@
+Display Name = "光の塔 7F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 388, 22, 6, 2, 1])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Switch2\", @pitch=150, @volume=80)"])
+    ControlSwitches([3008, 3008, 0])
+    ConditionalBranch([0, 3009, 1])
+      ConditionalBranch([0, 1005, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["……何も起きんな。"])
+        ShowText(["他にも仕掛けがあるに違いない。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1006, 0])
+        ShowTextAttributes(["alice_fc1", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["……何も起きんな。"])
+        ShowText(["他にも仕掛けがあるに違いない。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1007, 0])
+        ShowTextAttributes(["alice_fc7", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["……何も起きんな。"])
+        ShowText(["他にも仕掛けがあるに違いない。"])
+        Empty([])
+      BranchEnd([])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      ConditionalBranch([0, 1005, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["対岸にある、あのレバーが怪しいが……"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1006, 0])
+        ShowTextAttributes(["alice_fc1", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["対岸にある、あのレバーが怪しいが……"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1007, 0])
+        ShowTextAttributes(["alice_fc7", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["対岸にある、あのレバーが怪しいが……"])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3009, 0])
+      PlaySE(["RPG::SE(@name=\"mon_earth1\", @pitch=100, @volume=100)"])
+      ConditionalBranch([0, 1005, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["むっ……何事だ？"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1006, 0])
+        ShowTextAttributes(["alice_fc1", 3, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["むっ……何事だ？"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1007, 0])
+        ShowTextAttributes(["alice_fc7", 3, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["むっ……何事だ？"])
+        Empty([])
+      BranchEnd([])
+      PlaySE(["RPG::SE(@name=\"mon_water\", @pitch=125, @volume=100)"])
+      FadeoutScreen([])
+      Wait([180])
+      ControlSwitches([3010, 3010, 0])
+      ConditionalBranch([12, "exist_party_in_map?(2, 1389)"])
+        Script(["move_party(2,1390,27,6,2)"])
+        Empty([])
+      BranchEnd([])
+      TransferPlayer([0, 390, 17, 6, 2, 2])
+      FadeinScreen([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["フロアの水が排出された！"])
+      ConditionalBranch([0, 1005, 0])
+        ShowTextAttributes(["alice_fc5", 1, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["これで、先に進めるようになったな……"])
+        ShowText(["さあ、行くぞ！"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1006, 0])
+        ShowTextAttributes(["alice_fc1", 1, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["これで、先に進めるようになったな……"])
+        ShowText(["さあ、行くぞ！"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1007, 0])
+        ShowTextAttributes(["alice_fc7", 1, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["これで、先に進めるようになったな……"])
+        ShowText(["さあ、行くぞ！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Switch2\", @pitch=150, @volume=80)"])
+    ControlSwitches([3009, 3009, 0])
+    ConditionalBranch([0, 3008, 1])
+      ConditionalBranch([0, 1026, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["何も起きませんね……"])
+        ShowText(["まあ、後は光の塔の側に任せましょう。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1027, 0])
+        ShowTextAttributes(["iriasu_fc1", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["何も起きませんね……"])
+        ShowText(["まあ、後は光の塔の側に任せましょう。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1028, 0])
+        ShowTextAttributes(["iriasu_fc3", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["何も起きませんね……"])
+        ShowText(["まあ、後は光の塔の側に任せましょう。"])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3008, 0])
+      PlaySE(["RPG::SE(@name=\"mon_earth1\", @pitch=100, @volume=100)"])
+      ConditionalBranch([0, 1026, 0])
+        ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["わぁっ！　何事です！？"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1027, 0])
+        ShowTextAttributes(["iriasu_fc1", 5, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["わぁっ！　何事です！？"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1028, 0])
+        ShowTextAttributes(["iriasu_fc3", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["わぁっ！　何事です！？"])
+        Empty([])
+      BranchEnd([])
+      PlaySE(["RPG::SE(@name=\"mon_water\", @pitch=125, @volume=100)"])
+      FadeoutScreen([])
+      Wait([180])
+      ControlSwitches([3010, 3010, 0])
+      ConditionalBranch([12, "exist_party_in_map?(1, 1389)"])
+        Script(["move_party(1,1390,17,6,2)"])
+        Empty([])
+      BranchEnd([])
+      TransferPlayer([0, 390, 27, 6, 2, 2])
+      FadeinScreen([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["フロアの水が排出された！"])
+      ConditionalBranch([0, 1026, 0])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["なるほど、こういう仕掛けでしたか。"])
+        ShowText(["アリス、私の貢献に感謝するのですよ。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1027, 0])
+        ShowTextAttributes(["iriasu_fc1", 1, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["なるほど、こういう仕掛けでしたか。"])
+        ShowText(["アリス、私の貢献に感謝するのですよ。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1028, 0])
+        ShowTextAttributes(["iriasu_fc3", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["なるほど、こういう仕掛けでしたか。"])
+        ShowText(["アリス、私の貢献に感謝するのですよ。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 391, 22, 8, 2, 1])
+    Empty([])
+
+  Page 1
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 392, 22, 8, 2, 1])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Switch2\", @pitch=150, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ControlVariables([1321, 1321, 1, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 403, 1, 4, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSwitches([3330, 3330, 0])
+    ChangeItems([39, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["このフロアの水抜きをしなければ、先には進めません。"])
+    ShowText(["そのためには、二つのレバーを下げる必要があります。"])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["うち一つは、こちらにありますよ……"])
+    ShowText(["なおもう片方は、闇ルートからしか行けません。"])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["こちら、何もありませんね。"])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["このレバーと、向かいにあるレバーを下ろせば……"])
+    ShowText(["フロアの水が抜け、先に進めるようになります。"])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["しかし向かいのレバーは、イリアスチームしか行けません。"])
+    ShowText(["今は待機し、あちら側の到着を待ちましょう。"])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["こちらですよ……"])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["このレバーを下げれば、ここでやる事は終わりです。"])
+    ShowText(["さあ、闇の塔へと戻りましょう。"])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["この先、宝箱がありますね。"])
+    Empty([])

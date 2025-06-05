@@ -1,0 +1,30 @@
+CommonEvent 152
+Name = "死神：スキルを忘れる/思い出す"
+
+  999([152])
+  ShowTextAttributes(["sinigami_fc1", 0, 0, 2])
+  ShowText(["\\n<Reaper>You may temporarily forget any skill or ability you've learned, however... Only those learned via jobs, races, or leveling up can be remembered."])
+  ShowText([""])
+  ShowText([""])
+  ShowTextAttributes(["sinigami_fc1", 0, 0, 2])
+  ShowText(["\\n<Reaper>Be aware that you won't be able to remember any skills you've learned from events. Should you forget one, you won't be able to learn them again unless you replay the event."])
+  ShowText([""])
+  ShowText([""])
+  ErasePicture([5])
+  ShowChoices([["Forget skills", "Remember skills", "Do nothing"], 3])
+  When([0, "技能を忘れる"])
+    Script(["SceneManager.call(Scene_Forget)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  When([1, "技能を思い出す"])
+    Script(["SceneManager.call(Scene_InitSkill)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  When([2, "やめる"])
+    ExitEventProcessing([])
+    Empty([])
+
+  ChoicesEnd([])
+  Empty([])

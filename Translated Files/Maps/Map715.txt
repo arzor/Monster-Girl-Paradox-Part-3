@@ -1,0 +1,532 @@
+Display Name = "Underground Canals"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Lazarus' Associate>Let me know if there's anything you need. I've got a book of job changing with me."])
+    ShowChoices([["Full heal", "Purchase supplies", "Change jobs and party", "Nothing"], 4])
+    When([0, "Full heal"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Lazarus' Associate>Here's an assortment of herbs and miracle drugs."])
+      PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+      FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+      RecoverAll([0, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The party's HP and MP have been fully restored!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Purchase supplies"])
+      ShopProcessing([0, 2, 0, 0, false])
+      ShopItem([0, 7, 0, 0])
+      ShopItem([0, 11, 0, 0])
+      ShopItem([0, 13, 0, 0])
+      ShopItem([0, 14, 0, 0])
+      ShopItem([0, 15, 0, 0])
+      ShopItem([0, 16, 0, 0])
+      ShopItem([0, 17, 0, 0])
+      ShopItem([0, 18, 0, 0])
+      ShopItem([0, 19, 0, 0])
+      ShopItem([0, 20, 0, 0])
+      ShopItem([0, 23, 0, 0])
+      ShopItem([0, 35, 0, 0])
+      ShopItem([0, 52, 0, 0])
+      ShopItem([0, 56, 0, 0])
+      ShopItem([0, 60, 0, 0])
+      ShopItem([0, 102, 0, 0])
+      ShopItem([0, 109, 0, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([2, "Change jobs and party"])
+      CallCommonEvent([113])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([3, "Nothing"])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 716, 7, 42, 0, 0])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 716, 47, 42, 0, 0])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 716, 21, 29, 0, 0])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 716, 9, 5, 0, 0])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 716, 37, 9, 0, 0])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 176, 35, 32, 0, 0])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ConditionalBranch([1, 1063, 0, 12, 0])
+      ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+      ShowText(["\\n<Lazarus>Hey now, it's too dangerous to go back up into the city. The whole point was to get our enemies to focus their attention there."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 37, 21, 2, 2, 0])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ConditionalBranch([12, "exist_party_persona_id?(391)"])
+      ShowTextAttributes(["mefist_fc2", 0, 0, 2])
+      ShowText(["\\n<Mephisto>The plan is to go through these canals into Grangold Palace and attack the Queen... As has been explained a thousand times already."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+      ShowText(["\\n<Mephisto>The plan is to go through these canals into Grangold Palace and attack the Queen... As has been explained a thousand times already."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>I can sense monsters all over the place down here. Stay alert, some of them will be hostile to us."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>The filthy scent of monsters is all around us. Stay alert, not only will the palace be full of enemies, but these canals are too."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc1", 5, 0, 2])
+      ShowText(["\\n<Sonya>As we feared, the ant girls haven't left holes in their security. Let's give them everything we've got!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>As we feared, the ant girls haven't left holes in their security. Let's give them everything we've got!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 171, 0])
+      ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+      ShowText(["\\n<Miranda>Hah, bring 'em on!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 218, 0])
+      ShowTextAttributes(["nyumaou_fc1", 0, 0, 2])
+      ShowText(["\\n<Cow Demon Queen>I'll crush them all under my feet!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+    ShowText(["\\n<Lazarus>Don't get ahead of yourselves...\nIf you're too focused on the enemies ahead, you're bound to get your feet knocked out from under you."])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    GatherFollowers([])
+    ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+    ShowText(["\\n<Lazarus>This ladder should take us up into the palace. I'm not familiar with the route beyond this, though."])
+    ConditionalBranch([12, "exist_party_persona_id?(391)"])
+      ShowTextAttributes(["mefist_fc2", 0, 0, 2])
+      ShowText(["\\n<Mephisto>The palace underwent a full renovation a few years ago, and since we weren't able to get any spies inside, the inner layout is unknown."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+      ShowText(["\\n<Mephisto>The palace underwent a full renovation a few years ago, and since we weren't able to get any spies inside, the inner layout is unknown."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>So we'll just have to map it ourselves--"])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>Be careful! There's a strange presence approaching us!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Not ideal, but we have to press forward anyway--"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Be careful! A strange presence approaches!"])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"mon_warp\", @pitch=100, @volume=80)"])
+    PlayBGM(["RPG::BGM(@name=\"boss0\", @volume=100, @pitch=100)"])
+    ControlSwitches([31, 31, 0])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShotBalloonIcon([-1, 1, true])
+    ShowPicture([5, "80_grangold_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["grangold_fc1", 0, 0, 2])
+    ShowText(["\\n<King of Grangold>Who are you? Answer."])
+    ConditionalBranch([12, "exist_party_persona_id?(391)"])
+      ShowTextAttributes(["mefist_fc2", 2, 0, 2])
+      ShowText(["\\n<Mephisto>The King of Grangold!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+      ShowText(["\\n<Mephisto>The King of Grangold!"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    Wait([60])
+    ShowAnimation([30, 515, true])
+    Wait([60])
+    ShowPicture([5, "80_grangold_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["grangold_fc1", 0, 0, 2])
+    ShowText(["\\n<King of Grangold>I asked who\\*\\fb you\\*\\fb are..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>His power is crazy...\nHe's gone way beyond human limits!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Such intense magical power...\nHe's been reduced to something inhuman!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 163, 0])
+      ShowTextAttributes(["lily_fc1", 5, 0, 2])
+      ShowText(["\\n<Lily>Our experiments only produced cute little girls... I didn't think it was possible to create a fiend of this magnitude."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["\\n<Lazarus>......"])
+    ErasePicture([5])
+    ConditionalBranch([1, 909, 0, 0, 0])
+      ControlSwitches([1520, 1520, 1])
+      ChangePartyMember([520, 1, 0])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([32, 32, 0])
+    SetEventLocation([31, 0, 32, 5, 0])
+    SetMoveRoute([31, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["\\n<Lazarus>Luka, you and your friends go ahead. Leave this guy to me."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 5, 0, 2])
+      ShowText(["\\n<Sonya>No, Uncle Lazarus! You can't mean to die here!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Uncle Lazarus, don't tell me you mean to die here..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["lazarus3_fc1", 3, 0, 2])
+    ShowText(["\\n<Lazarus>I ain't planning to die, dumb shits!\nI'm just gonna stall him long enough for you to get away!"])
+    ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+    ShowText(["\\n<Lazarus>Besides, can you actually swing your sword at this guy without hesitating, Luka? He's still kinda human."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>......"])
+    ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+    ShowText(["\\n<Lazarus>I don't have any qualms about killing him, so let me handle it."])
+    ConditionalBranch([1, 909, 0, 0, 0])
+      ControlSwitches([1522, 1522, 1])
+      ChangePartyMember([522, 1, 0])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([33, 33, 0])
+    SetEventLocation([32, 0, 32, 5, 0])
+    SetMoveRoute([32, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=14, @parameters=[-1, 1])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[-1, 1])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>I suppose I'll join you. The pleasure of beating down royalty can be quite addictive indeed."])
+    ShowTextAttributes(["grangold_fc1", 0, 0, 2])
+    ShowText(["\\n<King of Grangold>You're in the presence of--"])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["\\n<Lazarus>Hold it right there, bud!"])
+    ShowAnimation([29, 406, true])
+    ShowTextAttributes(["grangold_fc1", 0, 0, 2])
+    ShowText(["\\n<King of Grangold>You dare fire a gun--"])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>Infernal breath, become a scorching nightmare... Blaze!"])
+    ShowAnimation([29, 507, true])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>Pardon me. I always wanted to try burning a king."])
+    ShowPicture([5, "80_grangold_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["grangold_fc1", 0, 0, 2])
+    ShowText(["\\n<King of Grangold>...Very well.\nWitness the power of a king..."])
+    PlaySE(["RPG::SE(@name=\"mon_power\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The King explodes with magical power!\nThe torrent of power is changing his physical appearance!"])
+    ShowTextAttributes(["lazarus3_fc1", 4, 0, 2])
+    ShowText(["\\n<Lazarus>Hey, old man! I wanted you to hold him in place! All you did was piss him off!"])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>My apologies, I got carried away..."])
+    PlaySE(["RPG::SE(@name=\"Wind10\", @pitch=100, @volume=80)"])
+    ShowPicture([7, "ct_grangold1", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([7, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["grangold_fc1", 0, 0, 2])
+    ShowText(["\\n<King of Grangold>Behold my power...\nThe true strength pulsing through my royal blood..."])
+    MovePicture([7, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ErasePicture([7])
+    Wait([60])
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    ShowPicture([10, "sys_white", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([10, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowPicture([5, "80_grangold_st11", 0, 0, 0, 0, 100, 100, 255, 0])
+    ControlSwitches([34, 34, 0])
+    MovePicture([10, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+    ErasePicture([10])
+    PlayBGM(["RPG::BGM(@name=\"boss0-4\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The King's transformation is complete!"])
+    ShowTextAttributes(["grangold_fc2", 0, 0, 2])
+    ShowText(["\\n<King of Grangold>Offer your lives... to your king..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Uncle Lazarus! That guy's not normal!"])
+    ShowTextAttributes(["lazarus3_fc1", 3, 0, 2])
+    ShowText(["\\n<Lazarus>Oi, Luka...\nYou think I'm dumb enough to look at that and think \"Yep, perfectly normal.\""])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>The power he's giving off is intense...\nIf we fight that head-on, we're goners for sure."])
+    ShowTextAttributes(["lazarus3_fc1", 3, 0, 2])
+    ShowText(["\\n<Lazarus>Luka, get your slow asses out of here!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>B-but...\nIf we all fight together, then...!"])
+    ShowTextAttributes(["lazarus3_fc1", 3, 0, 2])
+    ShowText(["\\n<Lazarus>I've gotten a lot more practice than you at fighting my betters! So hurry up and scram!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Luka, let's go!\nLazarus and Merlin can't go all out with us in the way!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Let's go, Luka!\nLazarus and Merlin cannot go all out with us present!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 5, 0, 2])
+      ShowText(["\\n<Sonya>Uncle Lazarus, Merlin, you better not die! We'll hold up our end and finish the mission!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>We'll leave him to you, then.\nLet's go, everyone!"])
+    ErasePicture([5])
+    Wait([60])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ChangeTransparency([0])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["\\n<Lazarus>All right, now we just need to buy them enough time, or at least take this guy down a few notches--"])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>Are you going to break your promise with those youngsters so readily? If you die here, you'll teach them that self-sacrifice is an easy way out."])
+    ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+    ShowText(["\\n<Lazarus>Well shit, that wouldn't be good...\nFine, let's make it out alive then."])
+    ShowTextAttributes(["grangold_fc2", 0, 0, 2])
+    ShowText(["\\n<King of Grangold>Offer... Your lives..."])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["\\n<Lazarus>We've got some places to hide and a ceiling to work with. Let's use 'em to stall!"])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>Then let us begin--"])
+    Wait([60])
+    FadeoutScreen([])
+    PlayBGM(["RPG::BGM(@name=\"\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Lazarus and Merlin leave the party..."])
+    Wait([60])
+    ChangeTransparency([1])
+    TransferPlayer([0, 176, 35, 32, 0, 2])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([29, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    ControlSelfSwitch(["A", 0])
+    SetEventLocation([31, 0, 32, 4, 2])
+    SetEventLocation([32, 0, 30, 4, 8])
+    ControlSwitches([32, 32, 0])
+    ControlSwitches([33, 33, 0])
+    ControlSwitches([34, 34, 0])
+    FadeinScreen([])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["\\n<Lazarus>Still alive, old man?"])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>...No, I'm quite dead."])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["\\n<Lazarus>Well, I think we've bought enough time...\nIt's time for us to blow this joint."])
+    ShowPicture([5, "80_grangold_st11", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["grangold_fc2", 0, 0, 2])
+    ShowText(["\\n<King of Grangold>......"])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["\\n<Lazarus>Not gonna let us go that easy, are ya?"])
+    PlaySE(["RPG::SE(@name=\"mon_asioto3\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>We have to live to see Luka again...\nWho's there?"])
+    ErasePicture([5])
+    Wait([60])
+    FadeoutBGM([1])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<？？？>Mmn, I'm just passing through...\nBut allow me to assist."])
+    ShowAnimation([29, 609, false])
+    ShowTextAttributes(["grangold_fc2", 0, 0, 2])
+    ShowText(["\\n<King of Grangold>......!?"])
+    Wait([60])
+    FadeoutScreen([])
+    TransferPlayer([0, 177, 30, 26, 8, 2])
+    ChangeTransparency([1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    ControlSwitches([34, 34, 1])
+    Wait([60])
+    FadeinScreen([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>This looks like the throne room...\nCome on, it's time to end this!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>This looks like the throne room...\nNow's the time to end this!"])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    Empty([])

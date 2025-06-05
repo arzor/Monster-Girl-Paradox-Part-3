@@ -1,0 +1,1195 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 680, 13, 6, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 680, 14, 6, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 680, 12, 33, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 680, 13, 33, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 667, 35, 25, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 667, 35, 25, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 667, 35, 25, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>This is one of our storerooms. If you assure my safety, you can take whatever you want."])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Smith>Hey, leave me out of this!\nI'll smith for you, but you better pay up."])
+    Script(["call_synthesize(13)"])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Shopkeeper>Uhyaaa! It's a pirate raid!\nI-I'll give you whatever you want, so just leave your money on the counter!"])
+    ShopProcessing([0, 2, 0, 0, false])
+    ShopItem([0, 7, 0, 0])
+    ShopItem([0, 11, 0, 0])
+    ShopItem([0, 13, 0, 0])
+    ShopItem([0, 14, 0, 0])
+    ShopItem([0, 15, 0, 0])
+    ShopItem([0, 16, 0, 0])
+    ShopItem([0, 17, 0, 0])
+    ShopItem([0, 18, 0, 0])
+    ShopItem([0, 19, 0, 0])
+    ShopItem([0, 23, 0, 0])
+    ShopItem([0, 35, 0, 0])
+    ShopItem([0, 102, 0, 0])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ConditionalBranch([0, 2151, 1])
+      PlayBGM(["RPG::BGM(@name=\"boss0\", @volume=100, @pitch=100)"])
+      ShowPicture([5, "80_levia_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["levia_fc1", 0, 0, 2])
+      ShowText(["\\n<Leviathan>I never expected this level of violence...\nIt seems I was mistaken to consider you a puny band of pirates."])
+      ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+      ShowText(["\\n<Bonnie>Whoa, Luka!\nYou can't mean to challenge the Navy Admiral!?"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>Leviathan's power is equal to a queen. Do we really have any chance of success?"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>Leviathan is equal to a Yoma queen. Do we really have any chance of success?"])
+        Empty([])
+      BranchEnd([])
+      ShowChoices([["Challenge her", "Run away"], 0])
+      When([0, "Challenge her"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>The pirates are coming for you!"])
+        ShowTextAttributes(["levia_fc1", 0, 0, 2])
+        ShowText(["\\n<Leviathan>Mere pirates would dare challenge me?\nThen let me enlighten you as to why I'm the admiral of the navy!"])
+        ConditionalBranch([4, 205, 0])
+          ShowTextAttributes(["levia_fc1", 1, 0, 2])
+          ShowText(["\\n<Levia>Seriously? A test of skill against myself?\nActually, this might be interesting!"])
+          ShowTextAttributes(["levia_fc1", 2, 0, 2])
+          ShowText(["\\n<Leviathan>How queer, there's another one of me... I know not what trickery this is, but I will not lose to it!"])
+          Empty([])
+        BranchEnd([])
+        ErasePicture([5])
+        ChangeBattleBGM(["RPG::BGM(@name=\"boss1\", @volume=100, @pitch=100)"])
+        ControlSwitches([22, 22, 0])
+        BattleProcessing([0, 592, false, false])
+        ControlSwitches([22, 22, 1])
+        ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+        ControlSwitches([2151, 2151, 0])
+        Script(["gain_medal(3006)"])
+        PlayBGM(["RPG::BGM(@name=\"kiki4\", @volume=100, @pitch=100)"])
+        ShowPicture([5, "80_levia_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+        MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+        ShowTextAttributes(["levia_fc1", 2, 0, 2])
+        ShowText(["\\n<Leviathan>Unbelievable! How could I lose to pirates..."])
+        ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+        ShowText(["\\n<Bonnie>We did it! We beat the Admiral of the navy!"])
+        ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+        ShowText(["\\n<Ashel>The Fishy Pirates will be famous all over the world!"])
+        ConditionalBranch([4, 53, 0])
+          ShowTextAttributes(["slime_fc1", 0, 0, 2])
+          ShowText(["\\n<Lime>Aye aye! Aye aye!"])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["levia_fc1", 0, 0, 2])
+        ShowText(["\\n<Leviathan>As much as it pains me, history is written by the victors. Spread the news of my defeat to your heart's desire."])
+        ShowTextAttributes(["levia_fc1", 0, 0, 2])
+        ShowText(["\\n<Leviathan>Will my loss here today usher in a new age of piracy? Or is that no more than a flight of fancy..."])
+        ConditionalBranch([4, 134, 0])
+          ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+          ShowText(["\\n<Chrome>Keep your chin up. If your influence wanes, you can always build it back up."])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Leviathan appears downcast..."])
+        ErasePicture([5])
+        ExitEventProcessing([])
+        Empty([])
+      When([1, "Run away"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>I just remembered I have important business to attend to! I'll let you off easy today!"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka and party run away..."])
+        PlayBGM(["RPG::BGM(@name=\"kiki4\", @volume=100, @pitch=100)"])
+        ErasePicture([5])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2151, 0])
+      ShowPicture([5, "80_levia_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["levia_fc1", 0, 0, 2])
+      ShowText(["\\n<Leviathan>Despite my defeat, this is not the end of the navy. I must still lead the marines as their admiral."])
+      ShowTextAttributes(["levia_fc1", 0, 0, 2])
+      ShowText(["\\n<Leviathan>Herald of the age of piracy, what business do you have with me?"])
+      ShowChoices([["Join my party", "Nothing"], 2])
+      When([0, "Join my party"])
+        CallCommonEvent([332])
+        Empty([])
+      When([1, "Nothing"])
+        ShowTextAttributes(["levia_fc1", 0, 0, 2])
+        ShowText(["\\n<Leviathan>In that case, leave..."])
+        ErasePicture([5])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>There's our flag!"])
+    ConditionalBranch([4, 53, 0])
+      ShowTextAttributes(["slime_fc1", 0, 0, 2])
+      ShowText(["\\n<Lime>Yay, we did it!"])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ChangeItems([529, 0, 0, 1])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["\\n<Ashel>Here's the [Oceanic Business Permit] too!\nYou can change to a few seafaring jobs with this!"])
+    ConditionalBranch([4, 171, 0])
+      ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+      ShowText(["\\n<Miranda>Haha, we'll be taking that!"])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ChangeItems([608, 0, 0, 1])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["\\n<Ashel>Breaking into the Navy Headquarters and recovering our flag is going to increase the reputation of the Fishy Pirates even more!"])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>It won't be long before the seas are all ours! The Fishy Pirates will soon reign supreme!"])
+    ConditionalBranch([4, 53, 0])
+      ShowTextAttributes(["slime_fc1", 0, 0, 2])
+      ShowText(["\\n<Lime>Aye aye, cap'n!"])
+      ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+      ShowText(["\\n<Bonnie>You too, Lime. Great job!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 1, 0, 2])
+      ShowText(["\\n<Alice>Kicking up a fuss every once in a while isn't so bad, but now it's time to get out of here."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>This was a rather thrilling raid. Now that we have accomplished our objective, it would be prudent to make our escape."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2151, 1])
+      ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+      ShowText(["\\n<Ashel>Yeah... It wouldn't be funny if the Admiral showed up. It's pointless to stick around any longer, so let's skedaddle!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+      ShowText(["\\n<Ashel>Seeing as how we beat the Admiral, there's nothing left to do here. It's pointless to stick around any longer, so let's skedaddle!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 62, 0])
+      ShowTextAttributes(["gob_fc1", 0, 0, 2])
+      ShowText(["\\n<Gob>Run away at the speed of light!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 79, 0])
+      ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+      ShowText(["\\n<Nuruko>Kyuu!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Thus, we've taken care of everything at the Navy Headquarters. Let's get out of here--"])
+    ControlVariables([1051, 1051, 0, 0, 6])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["umiusi_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Slug Marine>We-we're under attack by pirates!!"])
+    ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>I'll try my best!"])
+    ConditionalBranch([4, 68, 0])
+      ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+      ShowText(["\\n<Papi>Rawr! Out of our way!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 591, false, false])
+    ControlSwitches([2171, 2171, 0])
+    ShowTextAttributes(["umiusi_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Slug Marine>Why me..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Marine>We will not let you past this point!"])
+    ConditionalBranch([4, 62, 0])
+      ShowTextAttributes(["gob_fc1", 0, 0, 2])
+      ShowText(["\\n<Gob>Then we'll just have to make you!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 590, false, false])
+    ControlSwitches([2172, 2172, 0])
+    ShowTextAttributes(["umiusi_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Slug Marine>I'm going home early today..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Marine>We will not let you past this point!"])
+    ConditionalBranch([4, 62, 0])
+      ShowTextAttributes(["gob_fc1", 0, 0, 2])
+      ShowText(["\\n<Gob>Then we'll just have to make you!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 590, false, false])
+    ControlSwitches([2172, 2172, 0])
+    ShowTextAttributes(["umiusi_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Slug Marine>I'm going home early today..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Marine>We keep valuable goods and documents here. You absolutely cannot enter!"])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Please go easy on us poor sea horses pressed into service..."])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["\\n<Ashel>Let's get our flag back! Come on!"])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>Charge, everybody!"])
+    ConditionalBranch([4, 53, 0])
+      ShowTextAttributes(["slime_fc1", 0, 0, 2])
+      ShowText(["\\n<Lime>Aye aye, cap'n!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 591, false, false])
+    ControlSwitches([2173, 2173, 0])
+    ShowTextAttributes(["umiusi_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Slug Marine>I'm getting a pay cut for this..."])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>Okay, get to searching!"])
+    ConditionalBranch([4, 53, 0])
+      ShowTextAttributes(["slime_fc1", 0, 0, 2])
+      ShowText(["\\n<Lime>Is it here? Or over here...?"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([20, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Shopkeeper>How about some accessories? I have some that would be useful for pirates such as yourselves, too."])
+    ShopProcessing([2, 1162, 0, 0, false])
+    ShopItem([2, 1167, 0, 0])
+    ShopItem([2, 1560, 0, 0])
+    ShopItem([2, 1562, 0, 0])
+    ShopItem([2, 1564, 0, 0])
+    ShopItem([2, 1566, 0, 0])
+    ShopItem([2, 1568, 0, 0])
+    ShopItem([2, 1570, 0, 0])
+    ShopItem([2, 1715, 0, 0])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>The [Oceanic Business Permit] is in the second floor document storage room! So please let me go!"])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Zzz..."])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>You're clearly awake..."])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>...*gulp*"])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Zzz..."])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>Are you really asleep?\nDoesn't look like you're faking it..."])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>...*shiver*"])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Marine>My pride as a marine is on the line! Your raid ends here!"])
+    ConditionalBranch([4, 80, 0])
+      ShowTextAttributes(["orc_fc1", 1, 0, 2])
+      ShowText(["\\n<Hip>A surprise attack on Navy Headquarters! I'm gonna be famous among the other orcs!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 590, false, false])
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["umiusi_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Slug Marine>My pride..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ShowTextAttributes(["umiusi_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Slug Marine>The prisoners escaped in the commotion!"])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>I ate too much bad food, I feel so weak..."])
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Now's our chance! Get 'em!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Please let me go, I'm just the chef."])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>Very well. Spare the chefs!"])
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>It's payback time~!"])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Two on one!? Cowards!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>It's payback time~!"])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Two on one!? Cowards!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>It's payback time~!"])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Two on one!? Cowards!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ShowTextAttributes(["umiusi_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Slug Marine>The prisoners escaped in the commotion!"])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>I ate too much bad food, I feel so weak..."])
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Now's our chance! Get 'em!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ShowTextAttributes(["umiusi_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Slug Marine>The prisoners escaped in the commotion!"])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>I ate too much bad food, I feel so weak..."])
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Now's our chance! Get 'em!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<White Mage>Some of the sea horses got frightened and are hiding in the sickbay. Please, would you leave them alone..?"])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>All right, fiiine."])
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    ConditionalBranch([1, 822, 0, 2, 1])
+      ConditionalBranch([0, 1571, 1])
+        ShowTextAttributes(["mob_kaihei_fc1", 0, 0, 2])
+        ShowText(["\\n<Milio>Hey, please take me along on your journey. I want to go see the world!"])
+        ShowChoices([["Bring her along", "Decline for now"], 0])
+        When([0, "Bring her along"])
+          ShowTextAttributes(["mob_kaihei_fc1", 0, 0, 2])
+          ShowText(["\\n<Milio>I did it! I'm gonna travel the world! Hooray!"])
+          ErasePicture([5])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(571)"])
+          PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Milio joined the party!"])
+          Wait([60])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "Decline for now"])
+          ShowTextAttributes(["mob_kaihei_fc1", 0, 0, 2])
+          ShowText(["\\n<Milio>I'll be waiting..."])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([7211])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>I stole a new spear while everybody was panicking! Prepare yourselves!"])
+    ConditionalBranch([4, 132, 0])
+      ShowTextAttributes(["zonbe_fc2", 0, 0, 2])
+      ShowText(["\\n<Ellie>Have at you!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 589, false, false])
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>My new spear broke..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Do you want to hear about the history of the Navy? It might come to an end today..."])
+    ShowChoices([["Listen", "No need"], 2])
+    When([0, "Listen"])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>To no surprise, the origin of the Navy comes from a certain pirate group."])
+      ShowText(["About 300 years ago, there was the so-called golden age of pirates."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>The Justice Pirates controlled the seven seas in that era."])
+      ShowText(["In fact, their captain inherited the blood of the Grand Noah's royal family..."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>In any case, the Justice Pirates were a great force all over the ocean."])
+      ShowText(["They had a respect for order and protected maritime traffic."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>The Justice Pirates were also greatly involved with Grand Noah..."])
+      ShowText(["And one day, they became a powerhouse that protected peace at sea."])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>Later, it would become known as the Navy."])
+      ShowText(["A proud organization that keeps the sea safe from the pirates."])
+      ConditionalBranch([1, 1142, 0, 62, 2])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+          ShowText(["\\n<Sonya>In other words...the Navy was originally a pirate group."])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>In other words...the Navy was originally a pirate group."])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>That is why the combat basics of Marines and Pirates are the same."])
+      ShowText(["Both make use of [Piracy]."])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>And that is the history of the Navy."])
+      Empty([])
+
+    When([1, "No need"])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>......."])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Don't bully the tutorial sea horses..."])
+    ShowText(["Well, do you want to know more about [Marine]s?"])
+    ShowChoices([["Aye", "Nay"], 2])
+    When([0, "Aye"])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>The [Marine] job is a profession for battle."])
+      ShowText(["With high attack and defense, we are tough and strong!\n\nOur standard-issue weapons are daggers, swords, and guns, but we can also specialize in bows and spears."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>We also have access to a special ability that grants us more starting SP in a battle."])
+      ShowText(["By being combat-ready, we can use powerful skills at the start of any fight!"])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>A fighter with high attack, agility, or dexterity can dominate the battlefield with [Piracy] skills.\n\n"])
+      ShowText(["And a good Marine always has backup! When you directly attack with a [Piracy] skill, you have a chance to counter physical attacks with a bombardment of cannonballs."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>We don't take damage from water attacks and our other elemental resistances are high."])
+      ShowText(["Furthermore, we are stronger when fighting at sea, since we are naval experts."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>We are strong on the land, and even stronger at sea..."])
+      ShowText(["For a tough fight, you'd do well to bring the Marines."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>In order to change to this job, you need a [Oceanic Business Permit]..."])
+      ShowText(["In addition, you'll have to master the [Guard] job."])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Nay"])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>I'm a sea horse of the fine arts, I'm no good at fighting... Anyway, do you want to hear about the world's three most famous pirates?"])
+    ShowChoices([["Listen", "No need"], 2])
+    When([0, "Listen"])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>The three biggest pirate groups in the world..."])
+      ShowText(["They were the Justice Pirates, the Roza Pirates and the Selene Pirates."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>Because the era in which they were active differs from each others, it can't be said which is superior or inferior."])
+      ShowText(["But there's no doubt that each one of these pirates were the ones who controlled the seas during their times."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>The Justice Pirates... they eventually became the Navy and so they're our predecessors."])
+      ShowText(["They were famous for keeping peace and order at sea."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>Since we have someone who focuses on the history of the Navy, you can ask them for more details."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>Next are the Roza Pirates, led by Pirate Queen Roza."])
+      ShowText(["These pirates made up of mermaids managed to overwhelm the Navy for a time."])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>But then Pirate Queen Roza mysteriously disappeared. After the Roza Pirates lost their leader, they were soon defeated by the Navy and fell apart."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>And finally, the Selene Pirates and their leader, Captain Selene.\nAn all human women crew."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>The Selene Pirates took many other pirates into their fold. Eventually, they formed the Great Pirate Union, which consisted of 70% of all pirates."])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>However, its glory didn't last long..."])
+      ShowText(["With the sudden disappearance of Captain Selene, the coalition was dissolved."])
+      ConditionalBranch([1, 1142, 0, 62, 2])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+          ShowText(["\\n<Sonya>Pirate Queen Roza, Captain Selene...\nBoth of them mysteriously disappeared."])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>Pirate Queen Roza, Captain Selene...\nBoth of them mysteriously disappeared."])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>The ocean was scary back then..."])
+      ShowText(["It was dangerous to go on a voyage across the sea..."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>And that was the history of the three most famous pirates."])
+      ShowText(["How I long for a good pirate..."])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>...It's a stupid thought."])
+      ShowText(["Keep it a secret from the admiral."])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "No need"])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>........"])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ShowTextAttributes(["umiusi_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Slug Marine>The prisoners escaped in the commotion!"])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>I ate too much bad food, I feel so weak..."])
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Now's our chance! Get 'em!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Prison life is better than I expected.\nDo you want to hear about the history of the Navy?"])
+    ShowChoices([["Listen", "No need"], 2])
+    When([0, "Listen"])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>To no surprise, the origin of the Navy comes from a certain pirate group."])
+      ShowText(["About 300 years ago, there was the so-called golden age of pirates."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>The Justice Pirates controlled the seven seas in that era."])
+      ShowText(["In fact, their captain inherited the blood of the Grand Noah's royal family..."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>In any case, the Justice Pirates were a great force all over the ocean."])
+      ShowText(["They had a respect for order and protected maritime traffic."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>The Justice Pirates were also greatly involved with Grand Noah..."])
+      ShowText(["And one day, they became a powerhouse that protected peace at sea."])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>Later, it would become known as the Navy."])
+      ShowText(["A proud organization that keeps the sea safe from the pirates."])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+        ShowText(["\\n<Sonya>In other words...the Navy was originally a pirate group."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>In other words...the Navy was originally a pirate group."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>That is why the combat basics of Marines and Pirates are the same."])
+      ShowText(["Both make use of [Piracy]."])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>And that is the history of the Navy."])
+      Empty([])
+
+    When([1, "No need"])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>......."])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>I never have anything to do..."])
+    ShowText(["Well, do you want to know more about [Marine]s?"])
+    ShowChoices([["Aye", "Nay"], 2])
+    When([0, "Aye"])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>The [Marine] job is a profession for battle."])
+      ShowText(["With high attack and defense, we are tough and strong!\n\nOur standard-issue weapons are daggers, swords, and guns, but we can also specialize in bows and spears."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>We also have access to a special ability that grants us more starting SP in a battle."])
+      ShowText(["By being combat-ready, we can use powerful skills at the start of any fight!"])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>A fighter with high attack, agility, or dexterity can dominate the battlefield with [Piracy] skills.\n\n"])
+      ShowText(["And a good Marine always has backup! When you directly attack with a [Piracy] skill, you have a chance to counter physical attacks with a bombardment of cannonballs."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>We don't take damage from water attacks and our other elemental resistances are high."])
+      ShowText(["Furthermore, we are stronger when fighting at sea, since we are naval experts."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>We are strong on the land, and even stronger at sea..."])
+      ShowText(["For a tough fight, you'd do well to bring the Marines."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>In order to change to this job, you need a [Oceanic Business Permit]..."])
+      ShowText(["In addition, you'll have to master the [Guard] job."])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Nay"])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Being in jail doesn't feel any more restrictive than being in the Navy did. Do you want to hear about the world's three most famous pirates?"])
+    ShowChoices([["Listen", "No need"], 2])
+    When([0, "Listen"])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>The three biggest pirate groups in the world..."])
+      ShowText(["They were the Justice Pirates, the Roza Pirates and the Selene Pirates."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>Because the era in which they were active differs from each others, it can't be said which is superior or inferior."])
+      ShowText(["But there's no doubt that each one of these pirates were the ones who controlled the seas during their times."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>The Justice Pirates... they eventually became the Navy and so they're our predecessors."])
+      ShowText(["They were famous for keeping peace and order at sea."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>Since we have someone who focuses on the history of the Navy, you can ask them for more details."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>Next are the Roza Pirates, led by Pirate Queen Roza."])
+      ShowText(["These pirates made up of mermaids managed to overwhelm the Navy for a time."])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>But then Pirate Queen Roza mysteriously disappeared. After the Roza Pirates lost their leader, they were soon defeated by the Navy and fell apart."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>And finally, the Selene Pirates and their leader, Captain Selene.\nAn all human women crew."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>The Selene Pirates took many other pirates into their fold. Eventually, they formed the Great Pirate Union, which consisted of 70% of all pirates."])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>However, its glory didn't last long..."])
+      ShowText(["With the sudden disappearance of Captain Selene, the coalition was dissolved."])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>Pirate Queen Roza, Captain Selene..."])
+        ShowText(["Both of them mysteriously disappeared."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Pirate Queen Roza, Captain Selene..."])
+        ShowText(["Both of them mysteriously disappeared."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>The ocean was scary back then..."])
+      ShowText(["It was dangerous to go on a voyage across the sea..."])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>And that was the history of the three most famous pirates."])
+      ShowText(["How I long for a good pirate..."])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>...It's a stupid thought."])
+      ShowText(["Keep it a secret from the admiral."])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "No need"])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>........"])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Feels good to be free again~♪"])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["\\n<Ashel>You can thank the Fishy Pirates for that."])
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Yo, thanks for getting me out of there!"])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>Of course! Thanks for helping us overthrow the Navy!"])
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>I'm a free mermaid now!"])
+    ShowText(["By the way, do you want to know about [Pirate]s?"])
+    ShowChoices([["Aye", "Nay"], 2])
+    When([0, "Aye"])
+      ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+      ShowText(["\\n<Mermaid Pirate>The [Pirate] job is made for battle."])
+      ShowText(["We have high attack and defense and are well-suited for brawling!\n\nPreferably with daggers, swords, and guns, but also axes, clubs, and flails."])
+      ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+      ShowText(["\\n<Mermaid Pirate>We also have access to a special ability that reduces the SP consumption of our skills."])
+      ShowText(["With it, we can use a lot of powerful warfare skills in succession♪"])
+      ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+      ShowText(["\\n<Mermaid Pirate>We use [Piracy] skills, and they're very versatile; a strong, agile, or nimble fighter can do good damage with them.\n"])
+      ShowText(["Also, a pirate can always rely on their crew! When an offensive [Piracy] skill is used, you have a chance to counter physical attacks with a cannonball barrage."])
+      ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+      ShowText(["\\n<Mermaid Pirate>We are not damaged by water attacks and also have high resistances to other elements."])
+      ShowText(["When fighting on the ocean, our stats increase, making us perfect for maritime warfare."])
+      ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+      ShowText(["\\n<Mermaid Pirate>Because we have the same roots, our performance is quite similar to Marines."])
+      ShowText(["But pirates also learn some techniques for stealing♪"])
+      ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+      ShowText(["\\n<Mermaid Pirate>In order to change to this job, you need an [Oceanic Business Permit]..."])
+      ShowText(["And you'll also have to master being a [Thief]."])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Nay"])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 57
+Name = "EV057"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Thanks to you, I'm free!"])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>Indeed! Thank me more!"])
+    Empty([])
+
+CommonEvent 58
+Name = "EV058"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([2, 0, 0, 3])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 59
+Name = "EV059"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([188, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 60
+Name = "EV060"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([64, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 61
+Name = "EV061"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeGold([0, 0, 10000])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["10000\\G acquired!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 62
+Name = "EV062"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([451, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 63
+Name = "EV063"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([405, 0, 0, 3])
+    Empty([])
+
+  Page 1
+    Empty([])

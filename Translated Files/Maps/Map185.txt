@@ -1,0 +1,1553 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 235, 16, 8, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 235, 9, 11, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 235, 14, 12, 0, 0])
+    ChangePlayerFollowers([0])
+    ConditionalBranch([1, 1004, 0, 3, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+          ShowText(["\\n<Sonya>Our undercover spy mission has gone terribly wrong..."])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>She saw right through us... What a disaster!"])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([4, 66, 0])
+          ShowTextAttributes(["vgirl_fc1", 2, 0, 2])
+          ShowText(["\\n<Vanilla>She was super scary... I can't compete with her at all."])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 4, 0])
+          ShowTextAttributes(["alice_fc5", 2, 0, 2])
+          ShowText(["\\n<Alice>She's definitely getting the tails herself, but we need to collect more information."])
+          ShowTextAttributes(["alice_fc5", 0, 0, 2])
+          ShowText(["\\n<Alice>Let's carefully check any suspicious areas, especially any buildings that are out of place."])
+          ExitEventProcessing([])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 5, 0])
+          ControlVariables([1004, 1004, 0, 0, 5])
+          ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+          ShowText(["\\n<Ilias>Not so. I took the opportunity to filch this from her."])
+          PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+          ChangeItems([506, 0, 0, 1])
+          ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+          ShowText(["\\n<Ilias>Let's search around for a door that this key fits. I bet we'll find the evidence we need there."])
+          ConditionalBranch([4, 62, 0])
+            ShowTextAttributes(["gob_fc1", 4, 0, 2])
+            ShowText(["\\n<Gob>(She's more of a kleptomaniac than I am, and I used to be a bandit...)"])
+            Empty([])
+          BranchEnd([])
+          ExitEventProcessing([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 235, 31, 11, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 235, 15, 26, 0, 0])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 235, 5, 27, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 235, 8, 36, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 235, 35, 8, 0, 0])
+    ControlSwitches([31, 31, 1])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 235, 45, 34, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ChangeMapDisplay([1])
+    ConditionalBranch([1, 1004, 0, 1, 1])
+      ConditionalBranch([1, 1004, 0, 5, 2])
+        ConditionalBranch([2, "A", 1])
+          ControlSelfSwitch(["A", 0])
+          ConditionalBranch([0, 4, 0])
+            ShowTextAttributes(["alice_fc5", 3, 0, 2])
+            ShowText(["\\n<Alice>So we couldn't find anything in her house. Not surprising considering that it was completely unguarded."])
+            Empty([])
+          BranchEnd([])
+          ConditionalBranch([0, 5, 0])
+            ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+            ShowText(["\\n<Ilias>Nothing interesting at all in there. Well, I suppose it'd be guarded better if there were."])
+            Empty([])
+          BranchEnd([])
+          ConditionalBranch([0, 6, 0])
+            ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+            ShowText(["\\n<Sonya>Our best course of action is to ask around then. Leave it up to Sonya the super spy!"])
+            Empty([])
+          Else([])
+            ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+            ShowText(["\\n<Luka>Looks like we'll have to ask around after all."])
+            Empty([])
+          BranchEnd([])
+          ConditionalBranch([4, 53, 0])
+            ShowTextAttributes(["slime_fc1", 0, 0, 2])
+            ShowText(["\\n<Lime>I'll help too! ♪"])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 235, 36, 38, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Shopkeeper>I carry an assortment of weapons, armor, and items. Take a look and buy whatever strikes your fancy."])
+    ShopProcessing([1, 1, 0, 0, false])
+    ShopItem([1, 46, 0, 0])
+    ShopItem([1, 190, 0, 0])
+    ShopItem([1, 290, 0, 0])
+    ShopItem([2, 3, 0, 0])
+    ShopItem([2, 53, 0, 0])
+    ShopItem([2, 177, 0, 0])
+    ShopItem([2, 272, 0, 0])
+    ShopItem([0, 1, 0, 0])
+    ShopItem([0, 13, 0, 0])
+    ShopItem([0, 17, 0, 0])
+    ShopItem([0, 23, 0, 0])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["66"])
+    ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+    ShowText(["\\n<Vanilla>Shops that sell lots of random items are possible, too? That's cool!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Timer>What'll ya have? Ask around all ya like, but have a drink while doin' it."])
+    ShopProcessing([0, 428, 0, 0, true])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Timer>Not that it matters, but why are all my customers seated in a perfect line with the same space between them? Are they trying not to stick out?"])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowPicture([5, "80_dondaria_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ConditionalBranch([1, 1004, 0, 0, 0])
+      ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+      ShowText(["\\n<Outlaw Woman>...eh? Whaddya doin' in my tent?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Uhh, I don't know..."])
+      ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+      ShowText(["\\n<Outlaw Woman>Then scram. You're messin' with my business."])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1004, 0, 2, 2])
+      ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+      ShowText(["\\n<Outlaw Woman>...eh? Whaddya doin' in my tent?"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>Whoa, she's scary..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+      ShowText(["\\n<Outlaw Woman>Hey, out with it. I don't have all day."])
+      ConditionalBranch([1, 1004, 0, 1, 2])
+        ShowChoices([["I'd like to buy some Phoenix Tails", "I want to know more about Don Dahlia", "Never mind"], 3])
+        When([0, "I'd like to buy some Phoenix Tails"])
+          JumpToLabel(["1"])
+          Empty([])
+        When([1, "I want to know more about Don Dahlia"])
+          JumpToLabel(["2"])
+          Empty([])
+        When([2, "Never mind"])
+          JumpToLabel(["3"])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      Else([])
+        ShowChoices([["I'd like to buy some Phoenix Tails", "I want to know more about Don Dahlia", "Let me grope your tits", "Never mind"], 2])
+        When([0, "I'd like to buy some Phoenix Tails"])
+          JumpToLabel(["1"])
+          Empty([])
+        When([1, "I want to know more about Don Dahlia"])
+          JumpToLabel(["2"])
+          Empty([])
+        When([2, "Let me grope your tits"])
+          JumpToLabel(["4"])
+          Empty([])
+        When([3, "Never mind"])
+          JumpToLabel(["3"])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Label(["1"])
+      ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+      ShowText(["\\n<Outlaw Woman>What the hell are you talking about? Get out of here, kid."])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Label(["2"])
+      ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+      ShowText(["\\n<Outlaw Woman>What are you asking me for? Get out of here, kid."])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Label(["3"])
+      ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+      ShowText(["\\n<Outlaw Woman>Then get out of here."])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Label(["4"])
+      ControlVariables([1004, 1004, 0, 0, 3])
+      ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+      ShowText(["\\n<Outlaw Woman>Oh, a customer?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The Outlaw Woman exposes her breasts!"])
+      ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+      ShowText(["\\n<Outlaw Woman>Here you go. Touch 'em all you want.\nWhat's wrong? You wanted to cop a feel, didn't you?"])
+      ShowChoices([["Grope her", "Decline"], 2])
+      When([0, "Grope her"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka fondles the woman's tits!"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Oooh, they're so tender..."])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc2", 7, 0, 2])
+          ShowText(["\\n<Sonya>Luka! What the hell!?"])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+        ShowText(["\\n<Outlaw Woman>Haha, you're quite the horndog. After you've had enough, let's talk business."])
+        JumpToLabel(["5"])
+        Empty([])
+      When([1, "Decline"])
+        ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+        ShowText(["\\n<Outlaw Woman>Hahaha, I was just screwin' with you."])
+        Label(["5"])
+        ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+        ShowText(["\\n<Don Dahlia>All right. I'm Don Dahlia. You're here for Phoenix Tails, right?"])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+          ShowText(["\\n<Sonya>Wow, you're selling them alone in this dirty tent?"])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>No way, you're actually Don Dahlia? You sell the tails personally?"])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+        ShowText(["\\n<Don Dahlia>Yeah, I felt like getting by on my own for a while. Got tired of dealing with flunkies."])
+        ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+        ShowText(["\\n<Don Dahlia>That's enough about me, though. Phoenix Tails are 60G for a set of three."])
+        ShowChoices([["Pay 60G", "Ask about illicit sales"], 0])
+        When([0, "Pay 60G"])
+          ConditionalBranch([7, 60, 0])
+            PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+            ChangeGold([1, 0, 60])
+            ChangeItems([11, 0, 0, 3])
+            ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+            ShowText(["\\n<Don Dahlia>Haha, thanks for shopping. Come back for more anytime."])
+            ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+            ShowText(["\\n<Don Dahlia>...actually, no. I'm not selling you any more. You're way too fishy."])
+            ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+            ShowText(["\\n<Don Dahlia>Spies from the merchant's guild? City officials? Whatever you are, get lost."])
+            MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+            ErasePicture([5])
+            ExitEventProcessing([])
+            Empty([])
+          Else([])
+            ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+            ShowText(["\\n<Don Dahlia>Hey now, this isn't 60G. Come back when you have enough money."])
+            ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+            ShowText(["\\n<Don Dahlia>...actually, no. I'm not selling to you. You're way too fishy."])
+            ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+            ShowText(["\\n<Don Dahlia>Spies from the merchant's guild? City officials? Whatever you are, get lost."])
+            MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+            ErasePicture([5])
+            ExitEventProcessing([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        When([1, "Ask about illicit sales"])
+          ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+          ShowText(["\\n<Don Dahlia>Huh? What are you talking about? You know what? You're way too fishy."])
+          ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+          ShowText(["\\n<Don Dahlia>Spies from the merchant's guild? City officials? Whatever you are, get lost."])
+          MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+          ErasePicture([5])
+          ExitEventProcessing([])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1004, 0, 5, 2])
+      ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+      ShowText(["\\n<Don Dahlia>I thought I told you to get lost. I'm not selling you anything or talking to you."])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1004, 0, 6, 1])
+      ConditionalBranch([4, 72, 0])
+        ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+        ShowText(["\\n<Mini>Don..."])
+        ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+        ShowText(["\\n<Don Dahlia>Hey, Mini. Looks like you've got a new owner. You better be real thankful for him."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([8, 507])
+        ConditionalBranch([1, 804, 0, 2, 1])
+          ConditionalBranch([0, 1547, 1])
+            ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+            ShowText(["\\n<Don Dahlia>Hey, I bet you guys have some great connections. How 'bout letting me in on the party?"])
+            ShowChoices([["Let her join", "Decline for now"], 0])
+            When([0, "Let her join"])
+              ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+              ShowText(["\\n<Don Dahlia>I'm lookin' forward to making lots of profit with you, heheh..."])
+              ErasePicture([5])
+              SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+              Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+              Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+              Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+              Script(["add_actor_ex(547)"])
+              PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+              ShowTextAttributes(["", 0, 0, 2])
+              ShowText(["Don Dahlia has joined the party!"])
+              Wait([60])
+              ExitEventProcessing([])
+              Empty([])
+            When([1, "Decline for now"])
+              ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+              ShowText(["\\n<Don Dahlia>That so? I can't force ya to."])
+              Empty([])
+            ChoicesEnd([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        CallCommonEvent([7031])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+      ShowText(["\\n<Don Dahlia>What, you guys again? Sorry to disappoint, but I don't sell anything illegal anymore."])
+      Label(["店"])
+      ShopProcessing([0, 1, 0, 0, true])
+      ShopItem([0, 11, 0, 0])
+      ShopItem([0, 507, 1, 1500])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([1, 1004, 0, 0, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shady Fellow>It doesn't look like you have a referral. Ah, never mind, just talking to myself. Come back when the time is right."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1004, 0, 1, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shady Fellow>You're travelers, right? It's good to have lots of Phoenix Tails on you, isn't it?"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Shady Fellow>Well then, let me tell you an interesting story. In that tent over there by the weapon store, you can get Phoenix Tails dirt cheap."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Shady Fellow>But not just anyone can buy them. If you want to get in on the deal, you have to know the password."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Shady Fellow>It just so happens that I know the password, and I'll share it for a mere 20G. Sound good?"])
+        ShowChoices([["Pay 20G", "Refuse"], 2])
+        When([0, "Pay 20G"])
+          ConditionalBranch([7, 20, 0])
+            ChangeGold([1, 0, 20])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["\\n<Shady Fellow>Thank you very much. As promised, the password is \"Let me grope your tits.\""])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["\\n<Shady Fellow>Don't look at me like that! I'm serious! The Don takes her jokes too far sometimes."])
+            ControlVariables([1004, 1004, 0, 0, 2])
+            ExitEventProcessing([])
+            Empty([])
+          Else([])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["\\n<Shady Fellow>Hey now, you don't have that much on you. Save up and come back later."])
+            ExitEventProcessing([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        When([1, "Refuse"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Shady Fellow>Oh, that's a shame. If you change your mind, you know where I am."])
+          ExitEventProcessing([])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      When([1, "No"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Shady Fellow>Yeah? I suppose if you're confident enough in your own abilities you can get by without them. If things change, come talk to me again."])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1004, 0, 5, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shady Fellow>The password is \"Let me grope your tits.\""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shady Fellow>Don't look at me like that! I'm serious! The Don takes her jokes too far sometimes."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1004, 0, 6, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shady Fellow>I'm sure the Don will start another promising enterprise. It's her chance to show that she can be successful more than once."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1004, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shady Fellow>Looks like the Don has left this town.\nWonder if she's starting another new enterprise somewhere...?"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ConditionalBranch([1, 1004, 0, 5, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thief>I've had enough of this town. Maybe it's time to leave it behind..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Thief>I'm a thief for hire. Need anything stolen? I'm pretty good at it."])
+    ConditionalBranch([1, 1004, 0, 3, 2])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Um, no. There isn't anything I want stolen..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1004, 0, 4, 0])
+      ShowChoices([["I'd like you to steal Don Dahlia's key", "No, nothing"], 2])
+      When([0, "I'd like you to steal Don Dahlia's key"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Thief>Whoa now, are you trying to make a move on the Don?\nHmm, getting caught and being tortured by her breasts would be a reward in itself..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Thief>Sounds like a win-win situation to me! All right, I'm in. Wait right here and I'll be right back."])
+        FadeoutScreen([])
+        Wait([30])
+        FadeinScreen([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Thief>Ta-da! Just what you wanted."])
+        ControlVariables([1004, 1004, 0, 0, 5])
+        PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+        ChangeItems([506, 0, 0, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Thief>I was kinda looking forward to getting caught and tortured though... Who am I kidding? I was really looking forward to it."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Thief>Seems my \"I don't care if I get caught\" attitude had instead revealed the brilliance of my skills. I was even able to swipe something from the Don."])
+        ExitEventProcessing([])
+        Empty([])
+      When([1, "No, nothing"])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=41, @parameters=[\\\"\\\", 0])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=41, @parameters=[\"\", 0])"])
+    ShotBalloonIcon([0, 8, true])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Weird, this pot is nice and warm."])
+    ScrollMap([2, 4, 5])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ControlSwitches([2026, 2026, 0])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Uh oh!"])
+    ConditionalBranch([4, 62, 0])
+      ShowTextAttributes(["gob_fc1", 3, 0, 2])
+      ShowText(["\\n<Gob>Run for it!"])
+      Empty([])
+
+    BranchEnd([])
+    ScrollMap([8, 4, 5])
+    GatherFollowers([])
+    ChangePlayerFollowers([1])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    SetMoveRoute([17, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ScrollMap([4, 2, 4])
+    Wait([60])
+    ShowPicture([5, "80_dondaria_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+    ShowText(["\\n<Don Dahlia>Mini, you can come out now."])
+    ErasePicture([5])
+    ShotBalloonIcon([0, 8, true])
+    SetEventLocation([18, 0, 53, 24, 0])
+    ControlSwitches([2025, 2025, 0])
+    SetMoveRoute([18, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"mon_tamamo2\\\\\\\", @pitch=100, @volume=100)\\\"])\", \"RPG::MoveCommand(@code=14, @parameters=[0, 1])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[10])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[10])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[10])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[10])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"mon_tamamo2\\\", @pitch=100, @volume=100)\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, 1])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[10])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[10])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[10])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[10])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    ShowPicture([5, "80_dondaria_st01", 0, 0, -150, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_phoenix_st04", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+    ShowText(["\\n<Mini>This pot is really stuffy, Don."])
+    ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+    ShowText(["\\n<Don Dahlia>Gotta deal with it. I've told ya before, but the bad guys are after you."])
+    ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+    ShowText(["\\n<Mini>The bad guys sound really scary...\nBut you're a good human for protecting me!"])
+    ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+    ShowText(["\\n<Don Dahlia>That's right. I'm a good human. All right Mini, let's do it like usual."])
+    ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+    ShowText(["\\n<Don Dahlia>Hahaha, look at all these tail feathers. Stay still, let me get 'em all."])
+    ShowPicture([6, "80_phoenix_st01", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["phoenix_fc1", 0, 0, 2])
+    ShowText(["\\n<Mini>I won't become an adult phoenix unless you pull them out, right? It hurts, but I can take it."])
+    ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+    ShowText(["\\n<Don Dahlia>Good girl, heheheh..."])
+    ErasePicture([5])
+    ErasePicture([6])
+    ScrollMap([6, 2, 4])
+    Wait([60])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>I see, that explains things. That lowlife has complete control over her."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>A stupid phoenix being tricked by a human into giving up her feathers. As amusing as I find this, we'll have to put an end to it."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc1", 5, 0, 2])
+      ShowText(["\\n<Sonya>Tricking her and pulling out her feathers is so mean! Let's get her, Luka!"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Haa!"])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    SetMoveRoute([18, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>We've got you now, Don Dahlia! Let the kid go!"])
+    ShowPicture([5, "80_dondaria_st01", 0, 0, -150, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_phoenix_st04", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+    ShowText(["\\n<Don Dahlia>Hey now, what are ya doing hiding back there...\nYo, Mini, these are the bad guys I was telling ya about."])
+    ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+    ShowText(["\\n<Mini>They're the ones trying to kidnap and sell me!?"])
+    ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+    ShowText(["\\n<Don Dahlia>Yep, that's right. Get 'em, Mini!"])
+    ShowPicture([6, "80_phoenix_st05", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["phoenix_fc1", 4, 0, 2])
+    ShowText(["\\n<Mini>Okay! I'll take care of them!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>No, she's lying to you!\nCrap, she's not listening..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>It looks like we'll have to teach this birdbrain a lesson. Luka, take her out but don't hurt her!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+      ShowText(["\\n<Ilias>We shall have to knock some sense into this little phoenix then. Let us battle, Luka."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 66, 0])
+      ShowTextAttributes(["vgirl_fc1", 2, 0, 2])
+      ShowText(["\\n<Vanilla>Whoa hold on, that's a fire monster! Can I go hide over there until you're done?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 72, 0])
+      ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+      ShowText(["\\n<Mini>Huh? You look just like me. Are you my long-lost sister or something?"])
+      ShowTextAttributes(["phoenix_fc1", 0, 0, 2])
+      ShowText(["\\n<Mini'>I am you, and you are me."])
+      ShowTextAttributes(["phoenix_fc1", 4, 0, 2])
+      ShowText(["\\n<Mini>Oh... Well I am a phoenix so I guess I can multiply too."])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ErasePicture([6])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss1\", @volume=100, @pitch=100)"])
+    ChangeBattleBack(["Dirt2", "Stone2"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 37, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    SetMoveRoute([18, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShowTextAttributes(["phoenix_fc1", 2, 0, 2])
+    ShowText(["\\n<Mini>I surrender!"])
+    ConditionalBranch([4, 62, 0])
+      ShowTextAttributes(["gob_fc1", 0, 0, 2])
+      ShowText(["\\n<Gob>We won!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+    ShowText(["\\n<Don Dahlia>Tch, what now...\n...you can have her!"])
+    MovePicture([5, nil, 0, 0, -150, 0, 100, 100, 0, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 0, 0, 30, true])
+    ErasePicture([5])
+    Wait([15])
+    SetMoveRoute([17, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=29, @parameters=[5])\", \"RPG::MoveCommand(@code=30, @parameters=[4])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=29, @parameters=[5])"])
+    Unnamed(["RPG::MoveCommand(@code=30, @parameters=[4])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ControlSwitches([2026, 2026, 1])
+    ShowPicture([6, "80_phoenix_st04", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([6, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+    ShowText(["\\n<Mini>Don, wait! You're abandoning me!?"])
+    ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+    ShowText(["\\n<Mini>Don..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Mini, she was deceiving you all along. Don Dahlia just wanted your tails."])
+    SetMoveRoute([18, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+    ShowText(["\\n<Mini>That can't be...\nYou're lying..."])
+    ShowPicture([6, "80_phoenix_st06", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["phoenix_fc1", 5, 0, 2])
+    ShowText(["\\n<Mini>......"])
+    ConditionalBranch([0, 3, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Invite Mini to the party?"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+          ShowText(["\\n<Sonya>Hey Mini, why don't you come along with us? We'll help you make lots of friends."])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>How about joining up with us?"])
+          Empty([])
+        BranchEnd([])
+        ShowPicture([6, "80_phoenix_st04", 0, 0, 0, 0, 100, 100, 255, 0])
+        ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+        ShowText(["\\n<Mini>You won't make me live in a pot?\nYou won't trick me and pluck my tails?"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Don't worry, we won't do anything like that."])
+        ShowPicture([6, "80_phoenix_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+        ShowTextAttributes(["phoenix_fc1", 0, 0, 2])
+        ShowText(["\\n<Mini>Okay, I like the sound of that. Umm, I don't know a whole lot, but I'll try to be useful."])
+        MovePicture([6, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+        ErasePicture([6])
+        SetMoveRoute([18, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+        ControlSwitches([2025, 2025, 1])
+        ChangePlayerFollowers([0])
+        Script(["add_actor_ex(72)"])
+        PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Mini joined the party!"])
+        Wait([60])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc3", 6, 0, 2])
+          ShowText(["\\n<Sonya>Sexy undercover spy mission complete! Now let's hurry back and report to Amira!"])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>It looks like that's settled then. Should we go tell Amira now?"])
+          Empty([])
+        BranchEnd([])
+        Script(["gain_medal(9)"])
+        ControlVariables([1004, 1004, 0, 0, 6])
+        ExitEventProcessing([])
+        Empty([])
+      When([1, "No"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["It's a shame there isn't anything we can do..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([6, "80_phoenix_st06", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["phoenix_fc1", 5, 0, 2])
+    ShowText(["\\n<Mini>......"])
+    MovePicture([6, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+    ErasePicture([6])
+    SetMoveRoute([18, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ControlSwitches([2025, 2025, 1])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Mini slinks back into the pot..."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>I know that's all we came here for, but surely we can do more before returning to Amira?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I guess we completed what we came here for. We need to report back to Amira..."])
+      Empty([])
+
+    BranchEnd([])
+    ChangePlayerFollowers([0])
+    Script(["gain_medal(9)"])
+    ControlVariables([1004, 1004, 0, 0, 6])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["phoenix_fc1", 5, 0, 2])
+    ShowText(["\\n<Mini>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It looks like Mini is crammed inside the pot..."])
+    ConditionalBranch([0, 3, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Invite Mini to the party?"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+          ShowText(["\\n<Sonya>Hey Mini, why don't you come along with us? We'll help you make lots of friends."])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>How about joining up with us?"])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+        ShowText(["\\n<Mini>You won't make me live in a pot?\nYou won't trick me and pluck my tails?"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Don't worry, we won't do anything like that."])
+        ShowTextAttributes(["phoenix_fc1", 0, 0, 2])
+        ShowText(["\\n<Mini>Okay, I like the sound of that. Umm, I don't know a whole lot, but I'll try to be useful."])
+        MovePicture([6, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+        ErasePicture([6])
+        Script(["add_actor_ex(72)"])
+        PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Mini joined the party!"])
+        Wait([60])
+        ExitEventProcessing([])
+        Empty([])
+      When([1, "No"])
+        ShowTextAttributes(["phoenix_fc1", 5, 0, 2])
+        ShowText(["\\n<Mini>......"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Mini sulks inside the pot..."])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["It's a shame there isn't anything we can do..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Adventurer>I tried checking out the abandoned castle to the south, but it's just a ruin. There wasn't anything of value there at all."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Adventurer>I have no idea why such a large castle would be in a remote place like this though. All the pedestals lined up inside are a mystery too."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Adventurer>They have things inscribed on them, but I have no idea what any of it means. There's no good treasure, but go take a look if you're into ruins or history or whatever."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["55"])
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Melk>If it's damp inside, I'd like to go there..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Ruffian>I operate an inn of sorts here. You wanna stay for 10G?\\$"])
+    ShowChoices([["Yes", "No"], 2])
+    When([0, "Yes"])
+      ConditionalBranch([7, 10, 0])
+        ChangeGold([1, 0, 10])
+        FadeoutScreen([])
+        PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+        Wait([150])
+        RecoverAll([0, 0])
+        FadeinScreen([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Ruffian>You don't even have 10G."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    When([1, "No"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dog>*Whimper* *whimper*"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["60"])
+    ShowTextAttributes(["dog_fc1", 4, 0, 2])
+    ShowText(["\\n<Pochi>Woof! Woof!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dog>*Whimper*..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Elderly Man>Not from around here, are you? When you came, perhaps you noticed the strange abandoned castle to the south?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Elderly Man>It sprang up out of nowhere on the same day as the Great Disaster. It's always been a ruin, as if a great battle took place there."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Elderly Man>It looks like something used to be placed on the pedestals inside, but they were all empty when the castle appeared."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Elderly Man>Nobody has a clue what that place is all about. It just sits there looking eerie..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["5"])
+    ShowTextAttributes(["alice_fc5", 0, 0, 2])
+    ShowText(["\\n<Alice>An abandoned castle with pedestals inside? I seem to remember Tamamo mentioning something like that..."])
+    ExitEventProcessing([])
+    Label(["26"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>Could that really be Mithra Castle? It was sealed, though. How could it reappear..."])
+    ExitEventProcessing([])
+    Label(["70"])
+    ShowTextAttributes(["nezumi_fc1", 0, 0, 2])
+    ShowText(["\\n<Ratty>Sounds scary. Let's stay far away from there."])
+    ExitEventProcessing([])
+    Label(["71"])
+    ShowTextAttributes(["okami_fc1", 0, 0, 2])
+    ShowText(["\\n<Amara>Cool! Let's go search it for treasure!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Elderly Woman>What are youngsters like you doing in a dump like this? Go home, I'm sure your parents are worried sick about you."])
+    ConditionalBranch([1, 1142, 0, 62, 2])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>Is it really safe for you to be living in such a dangerous place yourselves? This doesn't seem like a good town for old people..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Elderly Woman>We've been living in this town for so long, no one will mess with us. Isn't that right, old man? Hehe."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Elderly Man>That's right, old lady... Haha!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mature Woman>Sigh... My husband is out getting drunk in the middle of the day! What a worthless, good-for-nothing lout!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["74"])
+    ShowTextAttributes(["usagi_fc1", 2, 0, 2])
+    ShowText(["\\n<Barbun>He sounds just like all the sheep girls I've ever known..."])
+    ExitEventProcessing([])
+    Label(["83"])
+    ShowTextAttributes(["hapy_a_fc1", 0, 0, 2])
+    ShowText(["\\n<Reina>A husband's job is supposed to be mating. If he has time to go drinking, you aren't mating with him enough♪"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mature Woman>Wh-what kind of advice is that?!"])
+    ExitEventProcessing([])
+    Label(["525"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mature Woman>Keep that in mind, young lady. Don't let your husband play around. Useless drunkards will ruin you."])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["\\n<Sonya>S-sure... I'll keep it in mind."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>Damn that woman! She does nothing but nag and nag and nag!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>Pay attention, son! Be careful who you get involved with. Stay far away from any woman who will nag you to death!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Uhh, okay... I'll keep that in mind."])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>Don! Oh, Don!\nHaaa, haaa..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["96"])
+    ShowTextAttributes(["delh_b_fc1", 0, 0, 2])
+    ShowText(["\\n<Marion>Would you like some help relieving yourself?"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Merchant>Travelers? I've just got what you're looking for. Take a look."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Merchant>A bag full of Phoenix Tails, see?\nHow does 30G sound?"])
+    ShowChoices([["Pay 30G", "Refuse"], 2])
+    When([0, "Pay 30G"])
+      ConditionalBranch([7, 30, 0])
+        ChangeGold([1, 0, 30])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Merchant>Thank you for your patronage."])
+        SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=29, @parameters=[5])\", \"RPG::MoveCommand(@code=30, @parameters=[4])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=29, @parameters=[5])"])
+        Unnamed(["RPG::MoveCommand(@code=30, @parameters=[4])"])
+        Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+        SetEventLocation([0, 0, 52, 10, 0])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["You open the bag and pull out a handful of weeds."])
+        ChangeItems([445, 0, 0, 1])
+        ConditionalBranch([1, 1142, 0, 62, 2])
+          ConditionalBranch([0, 6, 0])
+            ShowTextAttributes(["sonia_fc2", 5, 0, 2])
+            ShowText(["\\n<Sonya>He ripped me off!"])
+            Empty([])
+          Else([])
+            ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+            ShowText(["\\n<Luka>He ripped me off..."])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        EraseEvent([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Merchant>You don't have enough money."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    When([1, "Refuse"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Merchant>Oh well."])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>Don Dahlia apparently prefers to operate alone. If she needs help, she just hires a few workers part-time."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>I wonder if she's trying to save money by being a lone wolf? Or maybe she simply doesn't trust anyone else..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["62"])
+    ShowTextAttributes(["gob_fc1", 3, 0, 2])
+    ShowText(["\\n<Gob>She must be really lonely if she can't trust anyone."])
+    ExitEventProcessing([])
+    Label(["72"])
+    ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+    ShowText(["\\n<Mini>Don..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([32, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([26, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([163, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([590, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([305, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([342, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([363, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Man>Don Dahlia has her fingers in the black market underworld, and she's in constant competition with the boss of the south Sentora Elka Company."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Man>Don Father is the real power behind the underworld, though. No one knows his real name or what he looks like, but his influence is huge."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Man>Even Kings and Queens don't dare treat him lightly. What with his control over the world's mafia, he's practically a shadow Emperor."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["5"])
+    ShowTextAttributes(["alice_fc5", 0, 0, 2])
+    ShowText(["\\n<Alice>Interesting. Even human society has those who rule in the light and in the shadows."])
+    ExitEventProcessing([])
+    Label(["26"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>How dare scum like that act as if they own the world while I'm gone! I see I have even more to do once I've recovered."])
+    ExitEventProcessing([])
+    Label(["531"])
+    ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+    ShowText(["\\n<King of San Ilia>......"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([341, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([428, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["These are some gaudy clothes."])
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["These are some strange clothes."])
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Pretty stylish hat."])
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["A map of the Ilias Continent. It has a few scattered marks and notes on it."])
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The book has been left open..."])
+    ConditionalBranch([1, 1142, 0, 62, 2])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+        ShowText(["\\n<Sonya>Oh, it's \"Romeo and Juliet.\"\nI've always wanted to read this one."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>A romantic play? That's surprisingly feminine of her..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There's nothing of worth in the bag."])
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The kitchen is spotless."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>It doesn't look like the kitchen gets used much. I wonder if she can't cook."])
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Average household items. Nothing suspicious."])
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Average household items. Nothing suspicious."])
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There's nothing on the bed."])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There's nothing on the bed."])
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([4, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ControlVariables([1037, 1037, 1, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+    ShowText(["\\n<Mary>Bartender! More boooooze!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["This is our sheep girl..."])
+    ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+    ShowText(["\\n<Mary>Wheehehehe!"])
+    ShowTextAttributes(["hituzi_fc1", 7, 0, 2])
+    ShowText(["\\n<Mary>*Glug* *glug* *glug*"])
+    ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+    ShowText(["\\n<Mary>Wheehehehe!"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ControlSwitches([31, 31, 0])
+    ConditionalBranch([6, -1, 8])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+      Empty([])
+
+    BranchEnd([])
+    GatherFollowers([])
+    SetMoveRoute([53, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    CallCommonEvent([312])
+    SetMoveRoute([53, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"Move\\\\\\\", @pitch=100, @volume=80)\\\"])\", \"RPG::MoveCommand(@code=28, @parameters=[31])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"Move\\\", @pitch=100, @volume=80)\"])"])
+    Unnamed(["RPG::MoveCommand(@code=28, @parameters=[31])"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    CallCommonEvent([313])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ConditionalBranch([1, 803, 0, 2, 1])
+      ConditionalBranch([0, 1546, 1])
+        ShowTextAttributes(["mob_hurou_fc1", 0, 0, 2])
+        ShowText(["\\n<Stella>Hey, take me with you..."])
+        ShowChoices([["Let her join", "Decline for now"], 0])
+        When([0, "Let her join"])
+          ShowTextAttributes(["mob_hurou_fc1", 0, 0, 2])
+          ShowText(["\\n<Stella>No more being poor for me... I hope."])
+          ErasePicture([5])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(546)"])
+          PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Stella joined the party!"])
+          Wait([60])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "Decline for now"])
+          ShowTextAttributes(["mob_hurou_fc1", 0, 0, 2])
+          ShowText(["\\n<Stella>......"])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([7021])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    Empty([])

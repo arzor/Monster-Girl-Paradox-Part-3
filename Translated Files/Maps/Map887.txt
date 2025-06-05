@@ -1,0 +1,62 @@
+Display Name = ""
+Parallax Name = "Sunset"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 885, 16, 10, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["succubusm_fc1", 0, 0, 2])
+    ShowText(["\\n<Nightmare>I need to do something upstairs, so I'll just release the barrier for a moment--"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShotBalloonIcon([0, 1, false])
+    Wait([60])
+    ShowPicture([5, "80_succubusm_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["succubusm_fc1", 2, 0, 2])
+    ShowText(["\\n<Nightmare>Y...you saw that?!\nI can't just leave it like this!"])
+    ErasePicture([5])
+    BattleProcessing([0, 1369, false, false])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ChangeWeapons([319, 0, 0, 1, false])
+    ControlVariables([1208, 1208, 0, 0, 7])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>Hm...?\nDid the switch turn off when we opened the treasure chest?"])
+    ShowTextAttributes(["magatu_fc1", 0, 0, 2])
+    ShowText(["\\n<Magatsu>It looks like the treasure chest itself is the canceling device. The mechanism seems to be released once the lid is opened."])
+    ShowTextAttributes(["byakunen_fc1", 1, 0, 2])
+    ShowText(["\\n<Hakunen>Now we can go above the second floor!"])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Fulbeua should be haughtily awaiting us at the throne. We'll have to be prepared for battle..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])

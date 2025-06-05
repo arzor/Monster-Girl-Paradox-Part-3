@@ -1,0 +1,75 @@
+CommonEvent 4000
+Name = "おねだり終了"
+
+  999([4000])
+  ErasePicture([1])
+  ErasePicture([5])
+  ErasePicture([6])
+  FadeoutBGS([2])
+  FadeoutBGM([2])
+  Script(["memory_interruption"])
+  ConditionalBranch([1, 61, 0, 0, 0])
+    Wait([120])
+    ControlVariables([11, 11, 0, 3, 7, 0, 0])
+    ConditionalBranch([1, 11, 0, 724, 1])
+      ConditionalBranch([1, 11, 0, 744, 2])
+        ConditionalBranch([1, 60, 0, 0, 0])
+          PlayBGM(["RPG::BGM(@name=\"umi\", @volume=100, @pitch=100)"])
+          Empty([])
+
+        BranchEnd([])
+        ConditionalBranch([1, 60, 0, 1, 1])
+          Script(["play_base_bgm"])
+          Empty([])
+
+        BranchEnd([])
+        ExitEventProcessing([])
+        Empty([])
+
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 103, 0])
+      ConditionalBranch([1, 60, 0, 0, 0])
+        PlayBGM(["RPG::BGM(@name=\"dungeon_tarutaro2\", @volume=100, @pitch=100)"])
+        Empty([])
+
+      BranchEnd([])
+      ConditionalBranch([1, 60, 0, 1, 1])
+        Script(["play_base_bgm"])
+        Empty([])
+
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 60, 0, 0, 0])
+      PlayBGM(["RPG::BGM(@name=\"castle6\", @volume=100, @pitch=100)"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 60, 0, 1, 1])
+      Script(["play_base_bgm"])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 61, 0, 1, 0])
+    ControlVariables([61, 61, 0, 0, 0])
+    ControlVariables([1002, 1002, 0, 0, 0])
+    ChangePlayerFollowers([1])
+    Script(["forced_transfer(154,18,52)"])
+    Script(["release_temp_actors"])
+    Script(["$game_map.screen.clear"])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ControlVariables([61, 61, 0, 0, 1])
+  CallCommonEvent([4000])
+  Empty([])

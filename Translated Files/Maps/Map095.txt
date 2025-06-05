@@ -1,0 +1,50 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 96, 9, 10, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 91, 4, 47, 2, 0])
+    ConditionalBranch([1, 1111, 0, 2, 0])
+      ConditionalBranch([1, 1098, 0, 11, 0])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>I'll need to escape from this house...\nBut how can I do that?"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["I could head to the front door to secure an escape route...\nBut will it really be that easy to leave through the front door?"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["I have no information on this house at all.\nI'll ultimately have to explore this place without any proper knowledge."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["And if I hang around for too long, the pizza guy will arrive. In any case, I'll have to proceed quickly and prepare my escape."])
+        ExitEventProcessing([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>In order to escape from this house...\nI'll need something called a black jewel if I'm remembering correctly."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["The jewel is said to be in Vinum's room.\nIt will be very dangerous, but I have to get it."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["And if I hang around for too long, the pizza guy will arrive. In any case, I'll have to proceed quickly and prepare my escape."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])

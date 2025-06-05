@@ -1,0 +1,185 @@
+Display Name = "Forgotten Tower 1F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ShowTextAttributes(["cockroacha_fc1", 2, 0, 2])
+    ShowText(["\\n<Cockroach Girl>Most of this tower was destroyed in Erubetie's attack. The stairs leading to the second floor have collapsed, so you can't go any higher..."])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["cockroacha_fc1", 5, 0, 2])
+    ShowText(["\\n<Cockroach Girl>We have to rebuild the cockroach clan...\nHey, you wanna make lots of babies with me?"])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ConditionalBranch([0, 2596, 1])
+      ControlSwitches([2596, 2596, 0])
+      ShowTextAttributes(["cockroacha_fc1", 2, 0, 2])
+      ShowText(["\\n<Cockroach Girl>When the tower collapsed, this treasure chest came out from inside the walls. I haven't opened it yet, because I sense something really ominous inside..."])
+      ShowTextAttributes(["cockroacha_fc1", 2, 0, 2])
+      ShowText(["\\n<Cockroach Girl>This tower was uninhabited to begin with, but we made it into our base. Maybe it was built to seal this treasure chest..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2596, 0])
+      ShowTextAttributes(["cockroacha_fc1", 2, 0, 2])
+      ShowText(["\\n<Cockroach Girl>This tower was uninhabited to begin with, but we made it into our base. Maybe it was built to seal this treasure chest..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([0, 2596, 1])
+      ControlSwitches([2596, 2596, 0])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+      ShowTextAttributes(["cockroacha_fc1", 2, 0, 2])
+      ShowText(["\\n<Cockroach Girl>When the tower collapsed, this treasure chest came out from inside the walls. I haven't opened it yet, because I sense something really ominous inside..."])
+      ShowTextAttributes(["cockroacha_fc1", 2, 0, 2])
+      ShowText(["\\n<Cockroach Girl>This tower was uninhabited to begin with, but we made it into our base. Maybe it was built to seal this treasure chest..."])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>What on earth could be inside this treasure box...?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([12, "unlock_level < 3"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([675, 0, 0, 1])
+    ConditionalBranch([0, 1577, 0])
+      ShowTextAttributes(["mob_mahousyouzyo_fc1", 0, 0, 2])
+      ShowText(["\\n<Magical Mari-chan>Uwah, this is a powerful one...\nCan we pretend we didn't just see that...?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ConditionalBranch([0, 1005, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>This is...\nAn item for changing into the advanced Magical Girl job?"])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>It's like a cluster of grudges...\nI never imagined this was the destination a magical girl would arrive at."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1006, 0])
+        ShowTextAttributes(["alice_fc1", 0, 0, 2])
+        ShowText(["\\n<Alice>This is...\nAn item for changing into the advanced magical girl job?"])
+        ShowTextAttributes(["alice_fc1", 0, 0, 2])
+        ShowText(["\\n<Alice>It's like a cluster of grudges...\nI never imagined this was the destination a magical girl would arrive at."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1007, 0])
+        ShowTextAttributes(["alice_fc7", 0, 0, 2])
+        ShowText(["\\n<Alice>This is...\nAn item for changing into the advanced Magical Girl job?"])
+        ShowTextAttributes(["alice_fc7", 0, 0, 2])
+        ShowText(["\\n<Alice>It's like a cluster of grudges...\nI never imagined this was the destination a magical girl would arrive at."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>This is...\nAn item for changing into the advanced magical girl job, isn't it?"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>This is undoubtedly where magical girls end up.\nA witch smeared in grudges is their final destination."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 166, 353, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 166, 353, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 166, 353, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["cockroacha_fc1", 2, 0, 2])
+    ShowText(["\\n<Cockroach Girl>Most of my friends were consumed by that Erubetie. The survivors who managed to escape danger are all gathered here..."])
+    ShowTextAttributes(["cockroacha_fc1", 2, 0, 2])
+    ShowText(["\\n<Cockroach Girl>They're all really worked up. Be careful if you don't want to get attacked..."])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["cockroacha_fc1", 2, 0, 2])
+    ShowText(["\\n<Cockroach Girl>Uugh, why is this happening...?\nWhat will become of the cockroach clan from now on...?"])
+    ShowText([""])
+    Empty([])

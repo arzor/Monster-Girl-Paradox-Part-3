@@ -1,0 +1,71 @@
+Display Name = "? ? ?"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 277, 30, 2, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 277, 30, 2, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 277, 30, 2, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There is an engraved stone monument..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"Year 1445 of St. Johannes' memorial, Month 6, Day 26.\"\n\"130 children were abducted by a circus troupe.\"\n\"They disappeared on Degris Hill.\""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The following sentences are crudely carved in following the inscription..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"A large amount of human bones were found on Degris Hill.\"\n\"There weren't enough to be 130 children.\"\n\"Some arms and heads were taken by the circus troupe.\""])
+    ConditionalBranch([1, 1142, 0, 62, 2])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>What is this...? This is really creepy..."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>This is an eerie inscription..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>This is an eerie inscription..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>Why is this monument on a solitary island in the open sea...? And what is it about...?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>What is this monument doing on a solitary island in the open sea...? And what could it mean...?"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])

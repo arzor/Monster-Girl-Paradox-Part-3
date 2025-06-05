@@ -1,0 +1,885 @@
+Display Name = "Grangold Castle 1F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The prisoner lies still, rolled over on his side. It's unclear if he's even still breathing..."])
+    ShowText([""])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([2, "A", 1])
+      ShowTextAttributes(["tezcatlipoca_fc1", 6, 0, 2])
+      ShowText(["\\n<Tezcatlipoca>"])
+      ShowText(["*Sniff, sniff*..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Tezcatlipoca twitches her nose..."])
+      ShowTextAttributes(["tezcatlipoca_fc1", 6, 0, 2])
+      ShowText(["\\n<Tezcatlipoca>"])
+      ShowText(["There's a strong nyodor of death from here. Sariela looks to be right past these stairs..."])
+      ShowText([""])
+      ConditionalBranch([1, 1141, 0, 27, 2])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>"])
+        ShowText(["We'll take on Sariela once we get Vanguard on our side. Let's keep searching for her!"])
+        ShowText([""])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+        ExitEventProcessing([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["vgirl_fc2", 0, 0, 2])
+        ShowText(["\\n<Vanguard>"])
+        ShowText(["Our time's come, then... I'm not really confident even with the four of us, but..."])
+        ShowText([""])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>"])
+        ShowText(["Our only option's forward, let's go!"])
+        ControlSelfSwitch(["A", 0])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    ControlSwitches([34, 34, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 918, 30, 27, 2, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 918, 57, 22, 2, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 918, 3, 22, 2, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The prisoner glanced at us with gloomy, clouded eyes. It seems he's lost all hope and shut himself off from the world..."])
+    ShowText([""])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 25, 2])
+      ShowTextAttributes(["tezcatlipoca_fc1", 2, 0, 2])
+      ShowText(["\\n<Tezcatlipoca>"])
+      ShowText(["Where are you going? Meow's the time to escape through the gate!"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    CallCommonEvent([401])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 25, 2])
+      ShowTextAttributes(["tezcatlipoca_fc1", 2, 0, 2])
+      ShowText(["\\n<Tezcatlipoca>"])
+      ShowText(["Where are you going? Meow's the time to escape through the gate!"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([401])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 25, 2])
+      ShowTextAttributes(["tezcatlipoca_fc1", 2, 0, 2])
+      ShowText(["\\n<Tezcatlipoca>"])
+      ShowText(["Where are you going? Meow's the time to escape through the gate!"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    CallCommonEvent([401])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Prisoner>"])
+    ShowText(["One of the Heavenly Knights from the old Monster Lord's army, the angel hunter Vanguard... She's one monster of a fighter, and she should be held somewhere here."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Prisoner>"])
+    ShowText(["I don't really know where she's being held here, but she's definitely somewhere inside Grangold's prison."])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    TintScreen(["Tone(@red=-68.0, @green=-68.0, @blue=-68.0, @gray=0.0)", 1, false])
+    EraseEvent([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    CallCommonEvent([400])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    CallCommonEvent([400])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    CallCommonEvent([400])
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 7, 16, 36, 2, 0])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([3474, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ControlSwitches([31, 31, 1])
+    ShowAnimation([-1, 542, false])
+    Wait([60])
+    ChangeTransparency([1])
+    Wait([60])
+    ShowPicture([6, "80_tezcatlipoca_st06", 0, 0, -180, 0, 100, 100, 0, 0])
+    ShowPicture([5, "80_coatlus_st04", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([6, nil, 0, 0, -180, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([5, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["coatlus_fc1", 3, 0, 2])
+    ShowText(["\\n<Quetzalcoatl>"])
+    ShowText(["Yay, you did it!"])
+    ShowTextAttributes(["tezcatlipoca_fc1", 5, 0, 2])
+    ShowText(["\\n<Tezcatlipoca>"])
+    ShowText(["Yay, we're finyally out of the cell!"])
+    PlaySE(["RPG::SE(@name=\"Magic5\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Gn... urgh..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Even just traveling to a spot I can see is intense. It feels like a black pain is racking my body..."])
+    ShowText([""])
+    ShowPicture([6, "80_tezcatlipoca_st07", 0, 0, -180, 0, 100, 100, 255, 0])
+    ShowPicture([5, "80_coatlus_st07", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tezcatlipoca_fc1", 6, 0, 2])
+    ShowText(["\\n<Tezcatlipoca>"])
+    ShowText(["Nyaa?! Are you okay?!"])
+    ShowTextAttributes(["coatlus_fc1", 6, 0, 2])
+    ShowText(["\\n<Quetzalcoatl>"])
+    ShowText(["Hold on, stay with us!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["I'm, I'm fine... I don't think I'll be able to do spacetime travel again for a little while, though..."])
+    ShowText([""])
+    ShowPicture([6, "80_tezcatlipoca_st01", 0, 0, -180, 0, 100, 100, 255, 0])
+    ShowPicture([5, "80_coatlus_st01", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["coatlus_fc1", 0, 0, 2])
+    ShowText(["\\n<Quetzalcoatl>"])
+    ShowText(["We can't let you take on any more of that strain. We'll have to break out from here without spacetime travel!"])
+    ShowText([""])
+    ShowPicture([6, "80_tezcatlipoca_st05", 0, 0, -180, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tezcatlipoca_fc1", 4, 0, 2])
+    ShowText(["\\n<Tezcatlipoca>"])
+    ShowText(["Hey, meow the dumb bird's stealing the cool lines!"])
+    ShowPicture([5, "80_coatlus_st05", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["coatlus_fc1", 4, 0, 2])
+    ShowText(["\\n<Quetzalcoatl>"])
+    ShowText(["What's your deal, stupid cat?"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Come on, stop fighting here... Let's work together and escape this prison!"])
+    ShowText([""])
+    ShowPicture([6, "80_tezcatlipoca_st07", 0, 0, -180, 0, 100, 100, 255, 0])
+    ShowPicture([5, "80_coatlus_st07", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tezcatlipoca_fc1", 6, 0, 2])
+    ShowText(["\\n<Tezcatlipoca>"])
+    ShowText(["I knyow..."])
+    ShowTextAttributes(["coatlus_fc1", 6, 0, 2])
+    ShowText(["\\n<Quetzalcoatl>"])
+    ShowText(["Oh well..."])
+    ErasePicture([5])
+    ErasePicture([6])
+    Script(["add_temp_actors(755)"])
+    Script(["add_temp_actors(754)"])
+    PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Tezcatlipoca and Quetzalcoatl joined the party!"])
+    Wait([60])
+    ShowTextAttributes(["tezcatlipoca_fc1", 0, 0, 2])
+    ShowText(["\\n<Tezcatlipoca>"])
+    ShowText(["The exit should be nearby. I can smell the outside."])
+    ShowText([""])
+    ShowTextAttributes(["coatlus_fc1", 0, 0, 2])
+    ShowText(["\\n<Quetzalcoatl>"])
+    ShowText(["I'd rather not face the boss of this place, Sariela... Let's flee before she finds us!"])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Yeah, let's go!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["And thus, even torn away from my allies, I found new allies here. By combining our strength, we'll break out from the prison city of Grangold together..."])
+    ShowText([""])
+    ChangeMapDisplay([0])
+    ControlVariables([1002, 1002, 0, 0, 54])
+    ControlSwitches([2739, 2739, 0])
+    ControlSwitches([506, 506, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["You call, but there's no response..."])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Prisoner>"])
+    ShowText(["Aaaaaaaaaaaaaaah!! Waaaaaaaaaaaaaah!!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["This prisoner is screaming nonstop at the top of his lungs. He seems to have lost his sanity..."])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["You call, but there's no response..."])
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The prisoner gives a bright smile! And sits there, doing nothing else..."])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Prisoner>"])
+    ShowText(["Oh, that's great, you managed to break free! I'd love to help you, but I don't think I could."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Prisoner>"])
+    ShowText(["I don't know how many years I've been trapped here for.\nI've lost so much muscle, I doubt I could even run..."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["This prisoner won't be able to help us... Letting him out now would just be putting him in danger."])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Prisoner>"])
+    ShowText(["You all are trying to escape from this place? In that case, I'll tell you everything I know."])
+    ShowText([""])
+    ConditionalBranch([1, 1141, 0, 28, 1])
+      ControlSelfSwitch(["A", 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Prisoner>"])
+      ShowText(["This prison extends underground three whole floors."])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Prisoner>"])
+      ShowText(["In general, the deeper you go, the more dangerous, the more violent the prisoners. It seems you all were an exception for some reason, though..."])
+      ShowText([""])
+      ShowTextAttributes(["tezcatlipoca_fc1", 0, 0, 2])
+      ShowText(["\\n<Tezcatlipoca>"])
+      ShowText(["They should knyow I'm both violent and dangerous. Us being nyon the first floor definitely has some reason to it..."])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Prisoner>"])
+      ShowText(["Meanwhile, the second floor above here is home to the ruler of this place, Sariela. I shouldn't have to explain how dangerous she is."])
+      ShowText([""])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["So Sariela's right past these stairs, then...\nWe shouldn't go up them until we find Vanguard, in that case."])
+      ShowText([""])
+      ShowTextAttributes(["coatlus_fc1", 0, 0, 2])
+      ShowText(["\\n<Quetzalcoatl>"])
+      ShowText(["In that case, our goal is all the way down on B3F. That's sure to be where Vanguard is held!"])
+      ShowText([""])
+      ShowTextAttributes(["tezcatlipoca_fc1", 5, 0, 2])
+      ShowText(["\\n<Tezcatlipoca>"])
+      ShowText(["Nyeah!"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["Vanguard's our main goal, but we might want to try asking the other prisoners around as well."])
+      ShowText([""])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Prisoner>"])
+    ShowText(["...Oh, it doesn't seem I have anything else to tell you.\nI pray that you can safely escape..."])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["You call, but there's no response..."])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["He doesn't budge an inch. It's doubtful he's even alive..."])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 52
+Name = "52"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    SetMoveRoute([53, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([54, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([56, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShotBalloonIcon([53, 1, false])
+    ShotBalloonIcon([54, 1, false])
+    ShotBalloonIcon([56, 1, false])
+    ShowTextAttributes(["giriel_fc1", 2, 0, 2])
+    ShowText(["\\n<Giriel>"])
+    ShowText(["Hey, why are you guys walking around outside?!"])
+    ShowTextAttributes(["trooperloid_fc1", 4, 0, 2])
+    ShowText(["\\n<Trooperoid>"])
+    ShowText(["There's escapees!"])
+    ShowTextAttributes(["tezcatlipoca_fc1", 4, 0, 2])
+    ShowText(["\\n<Tezcatlipoca>"])
+    ShowText(["Unyaa! You're going down!"])
+    BattleProcessing([0, 1553, false, false])
+    ControlSwitches([2572, 2572, 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 57
+Name = "EV057"
+
+  Page 0
+    SetMoveRoute([51, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([52, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([58, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShotBalloonIcon([51, 1, false])
+    ShotBalloonIcon([52, 1, false])
+    ShotBalloonIcon([58, 1, false])
+    ShowTextAttributes(["giriel_fc1", 2, 0, 2])
+    ShowText(["\\n<Giriel A>"])
+    ShowText(["Hey, those guys are trying to break out!!"])
+    ShowTextAttributes(["giriel_fc1", 2, 0, 2])
+    ShowText(["\\n<Giriel B>"])
+    ShowText(["You sly bastards, breaking out during our break!"])
+    ShowTextAttributes(["coatlus_fc1", 4, 0, 2])
+    ShowText(["\\n<Quetzalcoatl>"])
+    ShowText(["That's your break, not ours!"])
+    BattleProcessing([0, 1546, false, false])
+    ControlSwitches([2573, 2573, 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 58
+Name = "EV058"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 59
+Name = "EV059"
+
+  Page 0
+    SetMoveRoute([53, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([54, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([56, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShotBalloonIcon([53, 1, false])
+    ShotBalloonIcon([54, 1, false])
+    ShotBalloonIcon([56, 1, false])
+    ShowTextAttributes(["giriel_fc1", 2, 0, 2])
+    ShowText(["\\n<Giriel>"])
+    ShowText(["Hey, why are you guys walking around outside?!"])
+    ShowTextAttributes(["trooperloid_fc1", 4, 0, 2])
+    ShowText(["\\n<Trooperoid>"])
+    ShowText(["There's escapees!"])
+    ShowTextAttributes(["tezcatlipoca_fc1", 4, 0, 2])
+    ShowText(["\\n<Tezcatlipoca>"])
+    ShowText(["Unyaa! You're going down!"])
+    BattleProcessing([0, 1553, false, false])
+    ControlSwitches([2572, 2572, 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 60
+Name = "EV060"
+
+  Page 0
+    SetMoveRoute([53, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([54, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([56, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShotBalloonIcon([53, 1, false])
+    ShotBalloonIcon([54, 1, false])
+    ShotBalloonIcon([56, 1, false])
+    ShowTextAttributes(["giriel_fc1", 2, 0, 2])
+    ShowText(["\\n<Giriel>"])
+    ShowText(["Hey, why are you guys walking around outside?!"])
+    ShowTextAttributes(["trooperloid_fc1", 4, 0, 2])
+    ShowText(["\\n<Trooperoid>"])
+    ShowText(["There's escapees!"])
+    ShowTextAttributes(["tezcatlipoca_fc1", 4, 0, 2])
+    ShowText(["\\n<Tezcatlipoca>"])
+    ShowText(["Unyaa! You're going down!"])
+    BattleProcessing([0, 1553, false, false])
+    ControlSwitches([2572, 2572, 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 61
+Name = "EV061"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([12, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 62
+Name = "EV062"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([9, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 63
+Name = "EV063"
+
+  Page 0
+    SetMoveRoute([51, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([52, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([58, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShotBalloonIcon([51, 1, false])
+    ShotBalloonIcon([52, 1, false])
+    ShotBalloonIcon([58, 1, false])
+    ShowTextAttributes(["giriel_fc1", 2, 0, 2])
+    ShowText(["\\n<Giriel A>"])
+    ShowText(["Hey, those guys are trying to break out!!"])
+    ShowTextAttributes(["giriel_fc1", 2, 0, 2])
+    ShowText(["\\n<Giriel B>"])
+    ShowText(["You sly bastards, breaking out during our break!"])
+    ShowTextAttributes(["coatlus_fc1", 4, 0, 2])
+    ShowText(["\\n<Quetzalcoatl>"])
+    ShowText(["That's your break, not ours!"])
+    BattleProcessing([0, 1546, false, false])
+    ControlSwitches([2573, 2573, 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 64
+Name = "EV064"
+
+  Page 0
+    SetMoveRoute([51, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([52, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([58, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShotBalloonIcon([51, 1, false])
+    ShotBalloonIcon([52, 1, false])
+    ShotBalloonIcon([58, 1, false])
+    ShowTextAttributes(["giriel_fc1", 2, 0, 2])
+    ShowText(["\\n<Giriel A>"])
+    ShowText(["Hey, those guys are trying to break out!!"])
+    ShowTextAttributes(["giriel_fc1", 2, 0, 2])
+    ShowText(["\\n<Giriel B>"])
+    ShowText(["You sly bastards, breaking out during our break!"])
+    ShowTextAttributes(["coatlus_fc1", 4, 0, 2])
+    ShowText(["\\n<Quetzalcoatl>"])
+    ShowText(["That's your break, not ours!"])
+    BattleProcessing([0, 1546, false, false])
+    ControlSwitches([2573, 2573, 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 65
+Name = "EV065"
+
+  Page 0
+    ShowTextAttributes(["tezcatlipoca_fc1", 6, 0, 2])
+    ShowText(["\\n<Tezcatlipoca>"])
+    ShowText(["I can see stairs leading down nyover there, but this gate's in the way..."])
+    ShowText([""])
+    ShowTextAttributes(["coatlus_fc1", 0, 0, 2])
+    ShowText(["\\n<Quetzalcoatl>"])
+    ShowText(["There doesn't seem to be any keyhole here, either. Is the operating device somewhere else, I wonder?"])
+    ShowText([""])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 66
+Name = "EV066"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([2345, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

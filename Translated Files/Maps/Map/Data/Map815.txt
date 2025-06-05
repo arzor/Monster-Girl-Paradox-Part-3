@@ -1,0 +1,757 @@
+Display Name = "黒の屋敷 B1F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 3"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([774, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    PlayBGM(["RPG::BGM(@name=\"kagetumugi\", @volume=100, @pitch=100)"])
+    ShowPicture([6, "80_kagetumugi2_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([6, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["やはり……"])
+    ShowText(["あなた達は、ここまで来る事が出来たのですね。"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["影紬……それが現在のボディですか。"])
+    ShowText(["最新型にしては、ずいぶんと不格好ですね。"])
+    ConditionalBranch([4, 527, 0])
+      ShowTextAttributes(["sabasa_fc3", 0, 0, 2])
+      ShowText(["【サバサマン】"])
+      ShowText(["まるで、悪の怪人のようだな。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["それは、決して否定できませんね……"])
+    ShowText(["あり合わせの材料で、なおかつ戦闘能力を重視しましたから。"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["以前のボディを、100点とするなら……"])
+    ShowText(["今のは戦闘能力130点、芸術性は20点というところです。"])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["前より不格好でも、強さは上って事ね……"])
+    ConditionalBranch([4, 401, 0])
+      ShowTextAttributes(["gnosis_fc1", 0, 0, 2])
+      ShowText(["【グノーシス】"])
+      ShowText(["今の影紬のパワーは、以前よりも上……"])
+      ShowText(["嘘ではないようだ。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["とにかく、黒のアリス様の元に行かせはしません。"])
+    ShowText(["今度こそ、我が魔芸にてあなた達を葬りましょう……"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["……マガツカルラ！"])
+    PlaySE(["RPG::SE(@name=\"mon_dassyutu\", @pitch=100, @volume=100)"])
+    ControlSwitches([31, 31, 0])
+    ShowPicture([5, "80_kagetumugi2_st11", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["kagetumugi_fc9", 0, 0, 2])
+    ShowText(["【マガツカルラ】"])
+    ShowText(["……………………"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["姿を現したのは、禍々しい人形。"])
+    ShowText(["以前に影紬が操っていた人形の部品も使われているようだ――"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["使うのは人形だけ……"])
+    ShowText(["暗黒輪舞は、出し惜しみですか？"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["決して、あなた達を退屈はさせませんよ。"])
+    ShowText(["この新ボディも、マガツカルラも戦闘能力は超一級。"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["こたびの舞台に、暗黒輪舞は必要ないと見立てましたが……"])
+    ShowText(["さて、いかがでしょうか。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["切り札を使おうと使うまいと、関係ない！"])
+    ShowText(["僕達はお前を倒し、黒のアリスも撃破する！"])
+    ConditionalBranch([4, 34, 0])
+      ShowTextAttributes(["micaelac_fc1", 0, 0, 2])
+      ShowText(["【ミカエラちゃん】"])
+      ShowText(["心の底から、人形は飽き飽きしているの……"])
+      ShowText(["これで終幕にしてもらえないかしら。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["chrom_fc2", 6, 0, 2])
+    ShowText(["【クロム】"])
+    ShowText(["お姉ちゃん……"])
+    ShowText(["儂に、外法の人形遣いを打ち破る力を……！"])
+    ConditionalBranch([4, 767, 0])
+      ShowTextAttributes(["kagetumugi_fc1", 2, 0, 2])
+      ShowText(["【影紬’】"])
+      ShowText(["やはり、設計が無骨すぎますね……"])
+      ShowText(["もっと時間の余裕があれば……"])
+      ShowTextAttributes(["kagetumugi_fc8", 2, 0, 2])
+      ShowText(["【影紬】"])
+      ShowText(["同感です……"])
+      ShowText(["あなた達が来るのが早すぎたのですよ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 768, 0])
+      ShowTextAttributes(["kagetumugi_fc8", 2, 0, 2])
+      ShowText(["【影紬’】"])
+      ShowText(["やはり、設計が無骨すぎますね……"])
+      ShowText(["もっと時間の余裕があれば……"])
+      ShowTextAttributes(["kagetumugi_fc8", 2, 0, 2])
+      ShowText(["【影紬】"])
+      ShowText(["同感です……"])
+      ShowText(["あなた達が来るのが早すぎたのですよ。"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([6])
+    ErasePicture([5])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss_kagetumugi\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 1902, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    PlayBGM(["RPG::BGM(@name=\"kagetumugi\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_kagetumugi2_st05", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ConditionalBranch([1, 111, 0, 1, 0])
+      ShowTextAttributes(["kagetumugi_fc8", 4, 0, 2])
+      ShowText(["【影紬】"])
+      ShowText(["あなた達の戦闘能力、六祖をも軽く凌駕していますね。"])
+      ShowText(["このままでは、このボディも破壊されますか……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 111, 0, 2, 1])
+      ShowTextAttributes(["kagetumugi_fc8", 4, 0, 2])
+      ShowText(["【影紬】"])
+      ShowText(["あなた達の戦闘能力、すでに六祖に迫るほどですね。"])
+      ShowText(["このままでは、このボディも破壊されますか……"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["注意しなさい、暗黒輪舞が来ますよ……！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["くっ、いよいよか……！"])
+    ShowTextAttributes(["chrom_fc2", 6, 0, 2])
+    ShowText(["【クロム】"])
+    ShowText(["……………………"])
+    ShowPicture([5, "80_kagetumugi2_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["このボディでは、コアを並列化しています。"])
+    ShowText(["ゆえに、暗黒輪舞を複数回起動する事が可能……"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["コア――すなわち、自分の存在そのものを複製するとは……"])
+    ShowText(["やる事が、どんどん化物じみていきますね。"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["私の存在など、そもそも造られたもの。"])
+    ShowText(["設計され、組み上げられ、複製された仮初めの魂。"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["あなた達は、私が自身を人形化させたと思い込んでいますね。"])
+    ShowText(["しかし、それは過ちです。"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["私は、先代――三代目影紬が造り上げた人形なのです。"])
+    ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["じゃあ、元から人形だったの……？"])
+    ShowText(["人形なのに、人形遣いに？"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["ええ……私は、三代目が造り出した人形を操る人形。"])
+    ShowText(["本来は影紬の後継者でも何でもない、戯れの産物。"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["過去の私は、拙い自律人形でした。"])
+    ShowText(["貧弱な意志しか持たされていない、操り人形でした。"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["しかし私は、操られる事を拒み――"])
+    ShowText(["先代影紬を殺害し、取って代わったのです。"])
+    ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+    ShowText(["【クロム】"])
+    ShowText(["それで、四代目影紬を名乗ったのか……"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["こうして私は、自らの完成度を高めていきました。"])
+    ShowText(["コアにも積極的に手を入れ、自律意志の精度を高めたのです。"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["ですが……何をどうしようが、私は人形。"])
+    ShowText(["人形を操るだけの、滑稽な人形です。"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["そんな私の前に現れたのが、黒のアリス様。"])
+    ShowText(["あの方は、私を四代目影紬と認めて下さったのです！"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["人形に過ぎない、操られるに過ぎない私を――"])
+    ShowText(["あの方は、私を人形遣いだと認めて下さったのです！"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["私は、もはや人形ではない！"])
+    ShowText(["何者も、私を人形と言うことは許さない！"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["……分かっているでしょう、影紬。"])
+    ShowText(["それもまた、黒のアリスがあなたを操っているのだと……"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["それでも、私は人形遣いでいたいのです。"])
+    ShowText(["操られる人形ではなく、人形遣いとして――"])
+    ConditionalBranch([4, 401, 0])
+      ShowTextAttributes(["gnosis_fc1", 0, 0, 2])
+      ShowText(["【グノーシス】"])
+      ShowText(["造り物であるがゆえの葛藤、分からないではない……"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["……話はここまでです。"])
+    ShowText(["私の全力をもって、あなた達を葬りましょう。"])
+    Wait([30])
+    PlayBGM(["RPG::BGM(@name=\"ankokurinbu1\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["生は暗く、死もまた暗い……"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ついに、暗黒輪舞の詠唱が始まった。"])
+    ShowText(["六祖に匹敵する力を、術者へと与える禁術――"])
+    ErasePicture([5])
+    Wait([30])
+    ControlSwitches([32, 32, 0])
+    ConditionalBranch([1, 912, 0, 0, 0])
+      Script(["delete_actor_ex(134)"])
+      ScriptMore(["delete_actor_ex(135)"])
+      ConditionalBranch([0, 447, 0])
+        Script(["clear_actor_equip(134)"])
+        ScriptMore(["clear_actor_equip(135)"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([6, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Wait([30])
+    ShowPicture([5, "80_chrom_st06", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+    ShowText(["【クロム】"])
+    ShowText(["……みんな、この場は儂に任せてくれんか？"])
+    ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["あなた一人で、影紬を止めるというのですか！？"])
+    ShowText(["無茶です！"])
+    ShowPicture([5, "80_chrom_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+    ShowText(["【クロム】"])
+    ShowText(["道を踏み外した魔芸師を葬るは、同じ魔芸師の務め。"])
+    ShowText(["お姉ちゃんが、そうしたように――"])
+    ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+    ShowText(["【クロム】"])
+    ShowText(["ゆえに、影紬の相手は儂が務める！"])
+    ShowText(["この場は任せ、皆は先に行くのじゃ！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["駄目だよ、そんな――"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["七大天使も、アルマエルマも――"])
+    ShowText(["僕達を生かすため、敵を足止めして命を落としたのだ。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ここでまた、クロムを失うなんて――"])
+    ShowText(["そんなの、耐えられない。"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["……………………"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["誓いなさい、クロム。"])
+    ShowText(["ここで命を捨てる気は無いと。必ず戻ってくると……"])
+    ShowPicture([5, "80_chrom_st02", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["chrom_fc2", 1, 0, 2])
+    ShowText(["【クロム】"])
+    ShowText(["もちろん、ここで死ぬ気はないわ！"])
+    ShowText(["演者が死ぬ舞台など邪道も邪道、後味悪いことこの上ない！"])
+    ShowTextAttributes(["chrom_fc2", 1, 0, 2])
+    ShowText(["【クロム】"])
+    ShowText(["魔芸というのを取り違えたこの馬鹿に、教え込んでやろう！"])
+    ShowText(["舞台は死ぬ場ではなく、活きる場なのだと！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["……分かった、僕達は先に行くよ。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["これは、クロムの戦いだ。"])
+    ShowText(["僕達が横から口を挟むべきじゃない――"])
+    Wait([30])
+    ShowPicture([5, "80_chrom_st06", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_kagetumugi2_st05", 0, 0, 120, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["なるほど、足止めを残して先に進むとは非道な戦術……"])
+    ShowText(["しかし、それも無駄な事ですよ。"])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["十秒でこの未熟者を葬り、後を追います。"])
+    ShowText(["足止めが秒単位では、命の捨て損でしょうに……"])
+    ShowPicture([5, "80_chrom_st02", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["chrom_fc2", 1, 0, 2])
+    ShowText(["【クロム】"])
+    ShowText(["さあ、行け！　今回は無観客舞台じゃ！"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["それでは、先に行きます。"])
+    ShowText(["必ず追いついてくるのですよ……！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["アルマエルマの時みたいなのは、もう嫌だからね。"])
+    ShowText(["絶対に死ぬな！"])
+    Wait([30])
+    PlaySE(["RPG::SE(@name=\"mon_asioto4\", @pitch=100, @volume=100)"])
+    FadeoutBGM([1])
+    FadeoutScreen([])
+    ErasePicture([5])
+    ErasePicture([6])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["こうして僕達は、その場をクロムに任せ――"])
+    ShowText(["そして、先へと進んだのだった。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["クロムは絶対に、無事に戻ってくる――"])
+    ShowText(["そう、固く信じて。"])
+    Wait([60])
+    ChangeTransparency([0])
+    FadeinScreen([])
+    PlayBGM(["RPG::BGM(@name=\"kagetumugi\", @volume=100, @pitch=100)"])
+    Wait([30])
+    ShowPicture([5, "80_chrom_st01", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_kagetumugi2_st01", 0, 0, 120, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["kagetumugi_fc8", 0, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["やれやれ……仲間に見捨てられましたね。"])
+    ShowText(["あなたが私に勝てるなど、万に一つもありえないのに……"])
+    ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+    ShowText(["【クロム】"])
+    ShowText(["儂は、仲間に信じられておるからのう……"])
+    ShowText(["結局は操り人形の身に甘んじている貴様とは違って。"])
+    ShowTextAttributes(["kagetumugi_fc8", 4, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["私は、自分の意志で動いています。"])
+    ShowText(["あの方のために、我が力を――"])
+    ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+    ShowText(["【クロム】"])
+    ShowText(["人形のサーカス……"])
+    ShowText(["黒のアリスの操る人形が、そのまた操る人形集団。"])
+    ShowPicture([5, "80_chrom_st03", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["chrom_fc2", 2, 0, 2])
+    ShowText(["【クロム】"])
+    ShowText(["結局、貴様は何も変わっておらん！"])
+    ShowText(["人形を操る人形のままじゃ！"])
+    ShowPicture([6, "80_kagetumugi2_st05", 0, 0, 120, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["kagetumugi_fc8", 4, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["……問答は無用です。"])
+    ShowText(["あまり時間をかけては、イリアス達が逃げてしまう――"])
+    PlayBGM(["RPG::BGM(@name=\"ankokurinbu1\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["kagetumugi_fc8", 4, 0, 2])
+    ShowText(["【影紬】"])
+    ShowText(["悲來乎、悲來乎……♪"])
+    ShowText(["主人有酒且莫斟……♪"])
+    ShowPicture([5, "80_chrom_st06", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["chrom_fc2", 6, 0, 2])
+    ShowText(["【クロム】"])
+    ShowText(["お姉ちゃん……儂に力を……"])
+    FadeoutBGM([1])
+    FadeoutScreen([])
+    Wait([60])
+    ErasePicture([5])
+    ErasePicture([6])
+    ControlVariables([1142, 1142, 0, 0, 61])
+    ChangeTransparency([1])
+    TransferPlayer([0, 815, 52, 16, 8, 2])
+    PlayBGM(["RPG::BGM(@name=\"dungeon_kuronoyashiki\", @volume=100, @pitch=100)"])
+    ControlSwitches([100, 100, 0])
+    FadeinScreen([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([46, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 814, 4, 56, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 814, 5, 56, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "クロム"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 61, 0])
+      CallCommonEvent([461])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 818, 32, 11, 0, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["クロムを信じて、影紬の相手は任せましょう。"])
+    ShowText(["私達は、黒のアリスを倒すのです……！"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 61, 0])
+      CallCommonEvent([461])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 818, 31, 11, 0, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ConditionalBranch([8, 588])
+      ConditionalBranch([8, 589])
+        ControlSelfSwitch(["A", 0])
+        PlaySE(["RPG::SE(@name=\"Key\", @pitch=100, @volume=80)"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["「影の鍵」と「紬ぐ鍵」を使って、扉を開けた！"])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["いよいよですね……"])
+        ShowText(["このすぐ先から、異様な気配がしますよ。"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["間近に、異質な存在がいるのを肌で感じる。"])
+        ShowText(["ここから、警戒して進まなければ――"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["扉は固く閉じられている……"])
+    ShowText(["二つの鍵穴が開いているようだ。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["alice10th_fc1", 0, 0, 2])
+    ShowText(["【量産型魔王人形X型】"])
+    ShowText(["ふむ、儂は複製人形か！"])
+    ShowText(["自分でどうにか改造できんものか……"])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss2\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 1898, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    ControlSelfSwitch(["A", 0])
+    ControlVariables([1148, 1148, 1, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["alice6th_fc1", 0, 0, 2])
+    ShowText(["【量産型魔王人形VI型】"])
+    ShowText(["複製の身で、面白くもなし……"])
+    ShowText(["せめて、存分に暴れようぞ。"])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss2\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 1895, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    ControlSelfSwitch(["A", 0])
+    ControlVariables([1148, 1148, 1, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([564, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 3"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([4132, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1647, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 2"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([140, 0, 0, 1, false])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["これは、ゴッドスレイヤー……"])
+    ShowText(["神に対して絶大なダメージを与える伝説の武器です。"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["こんな物が、こんな所に置かれているとは……"])
+    ShowText(["黒のアリスの意図を感じますね。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([3939, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["壺には癒やしの魔力が満ちていた……"])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+    RecoverAll([0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ルカ達のHPとMPが全快した！"])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ShowTextAttributes(["blavatsky_fc1", 0, 0, 2])
+    ShowText(["【ブラヴァツキー】"])
+    ShowText(["この地下階層に、奇妙な鎧の戦士が現れるの。"])
+    ShowText(["黒のアリスと、何か関係があるみたい。"])
+    ShowTextAttributes(["blavatsky_fc1", 0, 0, 2])
+    ShowText(["【ブラヴァツキー】"])
+    ShowText(["影紬様は、その鎧戦士が落とす細胞を研究されていたわ。"])
+    ShowText(["もしかしたら、貴重な素材なのかも……"])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([273, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

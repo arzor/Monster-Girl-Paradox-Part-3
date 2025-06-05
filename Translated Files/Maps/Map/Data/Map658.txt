@@ -1,0 +1,792 @@
+Display Name = "記憶の場所 第1層"
+Parallax Name = "DarkSpace1"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【老女】"])
+    ShowText(["ソニアも、ひどい事をするよ。"])
+    ShowText(["こんな情報空間に、私達を閉じ込めるなんてねぇ。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【老女】"])
+    ShowText(["ほら、野菜でも買っていきな。"])
+    ShowText(["それが私の存在意義なんだから。"])
+    ShopProcessing([0, 306, 0, 0, true])
+    ShopItem([0, 309, 0, 0])
+    ShopItem([0, 310, 0, 0])
+    ShopItem([0, 316, 0, 0])
+    ShopItem([0, 321, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([283, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ControlVariables([1002, 1002, 0, 0, 106])
+    Wait([30])
+    ShotBalloonIcon([-1, 1, false])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["ここは……イリアスヴィル！？"])
+    ShowText(["しかも、混沌化してるなんて――"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["落ち着いて、ここは君が知ってるイリアスヴィルじゃないよ。"])
+    ShowText(["記憶の場所に記録されたデータさ。"])
+    ShowTextAttributes(["sinigami_fc1", 0, 0, 2])
+    ShowText(["【死神】"])
+    ShowText(["ソニアの存在データにアクセスしているのだから……"])
+    ShowText(["その記憶領域に眠る風景が表層化してもおかしくはない。"])
+    ShowTextAttributes(["sinigami_fc1", 0, 0, 2])
+    ShowText(["【死神】"])
+    ShowText(["しかしこの様子、かなり再生は不完全だな……"])
+    ShowText(["データには欠落が多いし、混沌の侵蝕も激しい。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["それで……ソニアを取り戻すには、どうしたらいいんだ？"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["ここを通り抜けて、もっと先まで進むのさ。"])
+    ShowText(["存在の根本であるコアにアクセスして、復旧を試みるの。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["分かった、先に進もう……！"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["でも、注意してよね。"])
+    ShowText(["ここじゃ、キミもボク達も異物だから――"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    SetMoveRoute([17, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【？？？】"])
+    ShowText(["よ■■そ、イリ■■ヴ■ルへ。"])
+    ShowText(["■■■■■■■■■■■■■■■■■■■■■――"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【？？？】"])
+    ShowText(["接触禁止領域。"])
+    ShowText(["排除プログラム作動――"])
+    PlaySE(["RPG::SE(@name=\"Darkness1\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["兵士の体が歪み、別の存在に切り替わっていく――"])
+    ControlSwitches([31, 31, 0])
+    ShowPicture([5, "80_sirousagi_st21", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["sirousagi_fc2", 0, 0, 2])
+    ShowText(["【？？？】"])
+    ShowText(["テンプレート0003、緊急複製。"])
+    ShowText(["排除行動を開始する――"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["まさか、白兎……！？"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["ボクの基本データを複製して、アポトーシス化させたのさ。"])
+    ShowText(["断片だから、色々と欠落してる感じだけどね。"])
+    ShowTextAttributes(["sinigami_fc1", 0, 0, 2])
+    ShowText(["【死神】"])
+    ShowText(["だからといって、油断出来る相手ではない。"])
+    ShowText(["劣化コピーだからといって、気を抜くなよ。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["分かってる……行くぞ！"])
+    ErasePicture([5])
+    BattleProcessing([0, 1904, false, false])
+    ControlVariables([1142, 1142, 0, 0, 65])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["これから先、こんなのがゴロゴロ出てくるからね。"])
+    ShowText(["気をつけて進まないと……"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["楽な道のりとは思ってないさ……行こう！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["この記憶の場所の奥に、ソニアを取り戻す鍵があるかもしれない――"])
+    ShowText(["いかに不確かでも、僕達は先へと進むしかなかった。"])
+    ControlSelfSwitch(["A", 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["来た道が消えている……"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["基本、この世界は一方通行だからね。"])
+    ShowText(["先に進んでいくしかないんだよ。"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["来た道が消えている……"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["基本、この世界は一方通行だからね。"])
+    ShowText(["先に進んでいくしかないんだよ。"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"boss0-3\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_sinigami_st13", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【？？？】"])
+    ShowText(["接触禁止領域、防衛機構発動。"])
+    ShowText(["排除行動、開始――"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["死神の素体を、昔のコスモエネルギーで動かしてるよ……"])
+    ShowText(["聖と闇が不可分だった頃は、これが動力源だったんだよね～。"])
+    ShowTextAttributes(["sinigami_fc1", 0, 0, 2])
+    ShowText(["【死神】"])
+    ShowText(["懐かしがっている場合か……"])
+    ShowText(["確かに旧型だが、エネルギー量は我々より上だぞ。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["旧タイプなのに、そっちの方が強いの……？"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["燃費やら、損耗率の高さやらね……"])
+    ShowText(["発生エネルギーが多くて、素体の方がすぐ潰れたんだよ。"])
+    ShowTextAttributes(["sinigami_fc1", 0, 0, 2])
+    ShowText(["【死神】"])
+    ShowText(["何にせよ、敵に回せば面倒なタイプだ……"])
+    ShowText(["気を抜かず、全力で行くぞ。"])
+    ErasePicture([5])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss1\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 1916, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    ControlSelfSwitch(["A", 0])
+    PlayBGM(["RPG::BGM(@name=\"kioku1\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["結局、防衛機構って何なんだ？"])
+    ShowText(["誰かが、僕達の侵入を拒んでいるのか……？"])
+    ShowPicture([5, "80_sirousagi_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["何者かが意志を持ってやってる事じゃないよ。"])
+    ShowText(["この現象自体が、いわば自然法則なのさ。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["この座標に存在情報が書き込まれ、集積場となる……"])
+    ShowText(["異物の侵入は拒まれ、排除機構が発生する……"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["こうしたシステムに、意志や敵意は存在しない。"])
+    ShowText(["水が上から下に流れ、煙が下から上に昇るのと同じだよ。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["自然法則で、こんなアポトーシスみたいなのが"])
+    ShowText(["出て来るものなのか……？"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["そういう風になってるんだよ、世の中って。"])
+    ShowText(["アポトーシスも、根は同じなんだけどね。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["あれは、歴史の調整および異物の排除プログラムさ。"])
+    ShowText(["歴史を乱すものに対して、カウンター的に発生するんだ。"])
+    ShowTextAttributes(["sinigami_fc1", 0, 0, 2])
+    ShowText(["【死神】"])
+    ShowText(["歴史を乱す行為や、並行世界への干渉――"])
+    ShowText(["そういうものを排除し、平衡化するための管理システムだ。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["その管理システムも、誰かが意図的に作ったわけじゃない……"])
+    ShowText(["……って事なんだよね。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["そう、分かってるじゃないか。"])
+    ShowText(["全ては法則が先にあり、目的や意志は後天的に付属したのさ。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["その辺が、理解しにくいな……"])
+    ShowText(["法則やシステムに、意志が芽生えるなんて……"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["そう言われてもねぇ……"])
+    ShowText(["何度も言ったように、水が上から下に流れる例えを考えよう。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["水が上から下に流れるのは、誰の意志でもない。"])
+    ShowText(["それは物理法則であり、何の意志も意図も介在しなかった。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["ところが……そうした法則がずっと運行されていると、"])
+    ShowText(["なんらかの意志が生じてくるものなんだよ。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["水の流れを制御する意志……"])
+    ShowText(["精霊、っていう存在がね。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["精霊が……！？"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["火も風も、土だってそうさ。"])
+    ShowText(["本来は自然現象であり、その運行は物理法則に過ぎなかった。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["でも……長い運行の間に、法則や現象そのものが意志を持つ。"])
+    ShowText(["こうやって、精霊ってのが生まれたんだ。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["神と呼ばれる存在だって、同じようなものなのさ。"])
+    ShowText(["成り立ちのところは、精霊と大して変わらない。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["聖素の流動や拡散現象が、意志を備えたのが女神イリアス。"])
+    ShowText(["そして、魔素の運行が意志を備えたのが邪神アリス。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["どっちも強大だから、神と称されてるだけさ。"])
+    ShowText(["精霊との違いは、力の大小でしかないんだよ。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["法則や現象が、意志を備える……"])
+    ShowText(["神も精霊も、そういう存在だったのか……"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["いや、他人事みたいに言ってるけど……"])
+    ShowText(["キミ達、有機生命体だってそうじゃないか。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["原初のキミ達は、RNAの自己複製っていう現象に過ぎない。"])
+    ShowText(["そこに何の意志も介在していない、物理法則でしかなかった。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["でも、その自己複製現象を繰り返すうち――"])
+    ShowText(["その法則自体に、意志が芽生えたのさ。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["僕達、人間……いや、生命そのものも……"])
+    ShowText(["意志を備えた法則だったっていうのか……？"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["結局、意志って何かって問題だよね。"])
+    ShowText(["それは、自己認識を果たした法則そのものなんだよ。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["でも、不思議な事に……"])
+    ShowText(["意志を備えると、本来の法則にも抗ったりする。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["例えば、生命の本質は自己増殖だけど……"])
+    ShowText(["今の君達は、自己増殖のみに縛られてるわけじゃないよね。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["時には、自己増殖に不都合な行動さえ取ったりする。"])
+    ShowText(["今のキミは、セックスだけを考えてるわけじゃないだろ？"])
+    ShowChoices([["その通りだ", "セックスばかり考えてる"], 0])
+    When([0, "その通りだ"])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["【白兎】"])
+      ShowText(["そういうわけで……"])
+      ShowText(["キミ達は、本来の存在法則に反する行動も取りうる。"])
+      Empty([])
+
+    When([1, "セックスばかり考えてる"])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["【白兎】"])
+      ShowText(["そう来たかー。"])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["【白兎】"])
+      ShowText(["まあ、セックスモンスターと化したキミは例外として……"])
+      ShowText(["生物は、本来の存在法則に反する行動も取りうる。"])
+      Empty([])
+
+    ChoicesEnd([])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["混沌存在も、アポトーシスだってそうさ。"])
+    ShowText(["ボクも、本来は特異点に自身を上書きするプログラムなんだ。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["死神だって、廃棄された生命データを振り分けるシステム。"])
+    ShowText(["それが独自の意志を持ち、今じゃ君を助けてる。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["これだって……ボクの本来の職務を考えると、矛盾行為だ。"])
+    ShowText(["今ボク達がやってる事は、明らかに職務とは異なる行動だよ。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["意志ってのは、不思議だね……"])
+    ShowText(["いくつもの矛盾を生み出し、存在意義さえぐらつかせる。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["ソニアも、きっとそうだったはずだよ。"])
+    ShowText(["本来は、異物排除プログラムだったにもかかわらず――"])
+    ShowPicture([6, "80_sirousagi_st01", 0, 0, -170, 0, 100, 100, 255, 0])
+    ShowPicture([5, "80_sinigami_st01", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["sinigami_fc1", 0, 0, 2])
+    ShowText(["【死神】"])
+    ShowText(["白兎……話が長すぎる。"])
+    ShowText(["先に進めば、おのずと分かる事だ。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["うん、そうだよね～。"])
+    ShowText(["やっぱりボク、導くのが存在目的だから、説明超好き。"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["やっぱり、本来の存在目的に色々と引っ張られるよね。"])
+    ShowText(["面白いよね～。"])
+    ShowTextAttributes(["sinigami_fc1", 0, 0, 2])
+    ShowText(["【死神】"])
+    ShowText(["すると私は、生まれついての整理業務担当か……"])
+    ShowText(["やれやれ……"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["興味ある話だけど……"])
+    ShowText(["とにかく今は、先に進もう！"])
+    ErasePicture([5])
+    ErasePicture([6])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["記憶の場所の中枢にあるコアに接触し、ソニアを取り戻す――"])
+    ShowText(["そのために、僕達は奥へ奥へと踏み込むのだった。"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    FadeoutScreen([])
+    Wait([90])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    TransferPlayer([0, 659, 18, 58, 8, 0])
+    FadeinScreen([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["来た道が消えている……"])
+    ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+    ShowText(["【白兎】"])
+    ShowText(["基本、この世界は一方通行だからね。"])
+    ShowText(["先に進んでいくしかないんだよ。"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【兵士】"])
+    ShowText(["並行世界の増大は、世界の確率的細分化により起きる。"])
+    ShowText(["可能性が世界を押し潰すんだ……"])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([877, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["slime_fc1", 0, 0, 2])
+    ShowText(["【スライム娘】"])
+    ShowText(["裏山でみんなが集めた品物だよ。"])
+    ShowText(["どしどし買っていってね♪"])
+    ShopProcessing([0, 172, 0, 0, true])
+    ShopItem([0, 198, 0, 0])
+    ShopItem([0, 444, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 530, 117, 46, 2, 0])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 530, 19, 24, 0, 0])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 530, 41, 24, 0, 0])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 530, 76, 64, 0, 0])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([3603, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 530, 7, 54, 0, 0])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 530, 104, 44, 2, 0])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 530, 132, 58, 0, 0])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([283, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([112, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([82, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【青年】"])
+    ShowText(["イリア■■ィルの村へよう■そ……って、ルカじ■■いか！"])
+    ShowText(["元気■■だな、安■したぜ。"])
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【老人】"])
+    ShowText(["そろそろ死にたいのう。"])
+    ShowText(["こんな空間■■■■■■■■■■■■■■■■■■■■"])
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【青年】"])
+    ShowText(["■■■■■■■■■■■■■■■■■■■■■■■■"])
+    ShowText(["■■■■■■■■■■■■■■■■■■■■■■■■"])
+    ShowText(["■■■■■■■■■■■■■■■■■■■■■■■■"])
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【青年】"])
+    ShowText(["第三の選択に、道を繋げてはならない。"])
+    ShowText(["カオスはそれを狙っているんだから。"])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【農夫】"])
+    ShowText(["結局、私達の実体は情報だからな。"])
+    ShowText(["場に書き込まれた0と1の総集に過ぎない。"])
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【少女】"])
+    ShowText(["カオスはまだ眠ってる。"])
+    ShowText(["母胎の中でたゆたいながら、現世の夢を見てる。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【少女】"])
+    ShowText(["この世界自体が、カオスの夢。"])
+    ShowText(["カオスは始まりであり、終わりだから。"])
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【老人】"])
+    ShowText(["この場所がこうなったのは、ソニアの狂乱も大きいが……"])
+    ShowText(["それ以上に、ユニバース全体の情報量が限界に近付いている。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【老人】"])
+    ShowText(["すでに対消滅により、並行世界の多くは消滅しているが……"])
+    ShowText(["この情報過多を平坦化するには、第九宇宙期の全てを費やすだろう。"])
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["看板には、めちゃくちゃな文字が書かれている"])
+    Empty([])
+
+CommonEvent 74
+Name = "EV074"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【農婦】"])
+    ShowText(["採れもしない野菜を、いつまでも育て続ける……"])
+    ShowText(["まったく、困ったもんだよ。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【農婦】"])
+    ShowText(["まあ、ここにいない村人よりはマシかもね。"])
+    ShowText(["残りはみんな■■■■■■■■したから。"])
+    Empty([])
+
+CommonEvent 75
+Name = "EV075"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【老婆】"])
+    ShowText(["法則やシステムから自我が生まれる。"])
+    ShowText(["私もお前も、いわゆる神でさえもそうなのだ。"])
+    Empty([])
+
+CommonEvent 80
+Name = "EV080"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【神父】"])
+    ShowText(["神など存在しなかったのだな。"])
+    Empty([])
+
+CommonEvent 81
+Name = "EV081"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【戦士】"])
+    ShowText(["ここの宿屋は、時空特異点のルカが経営する宿だ。"])
+    ShowText(["ルカが関わる以上、時空偏差の影響を受けにくい事象だな。"])
+    Empty([])
+
+CommonEvent 85
+Name = "EV085"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【村娘】"])
+    ShowText(["人の心も、0と1で規定できるなら……"])
+    ShowText(["それ自体が神秘だと思いませんか？"])
+    Empty([])
+
+CommonEvent 86
+Name = "EV086"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["看板には、巨大な眼が描かれている……"])
+    Empty([])

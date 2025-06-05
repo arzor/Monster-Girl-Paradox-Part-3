@@ -1,0 +1,373 @@
+Display Name = "Monster Lord's Castle 3F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 120, 31, 41, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 120, 31, 41, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 120, 31, 41, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 2"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([256, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 2"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1590, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1212, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([237, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>This is bad, the Monster Lord is just beyond here... We have to turn back quickly and avoid fighting Black Alice!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>What are you doing, the Monster Lord is just beyond this point! We must escape back downstairs quickly!"])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["vouivre_fc1", 0, 0, 2])
+    ShowText(["\\n<Vouivre Girl>The Three Nobles of Black left just a little while ago... I wonder where they could've gone?"])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["enenra_fc1", 0, 0, 2])
+    ShowText(["\\n<Enenra>A human hero has come to challenge Black Alice?! Don't throw your life away like that..."])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"kuroalice\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_alice8th_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["alice8th_fc1", 0, 0, 2])
+    ShowText(["\\n<Black Alice>Oh, you've come to my castle...\nUfufu, you appear to have traveled from quite a distant place."])
+    ShowTextAttributes(["alice8th_fc1", 0, 0, 2])
+    ShowText(["\\n<Black Alice>What business do you have with me?\nMaybe you came here to defeat me and bring peace to the world...?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>Damn, it's Black Alice...!\nLuka, you aren't seriously thinking about fighting her, are you?!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>Curses, it's Black Alice...!\nLuka, you don't truly intend to challenge her, do you?!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowChoices([["Fight", "Escape"], 2])
+    When([0, "Fight"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Black Alice... I will defeat you here!"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>So you're that determined... It can't be helped, we'll fight alongside you! After all, I'm also a Monster Lord who stands equal to Black Alice!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>I see... It is the hero's job to defeat the Monster Lord after all! And it would be unbecoming of someone like me to retreat from a place like this!"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["alice8th_fc1", 0, 0, 2])
+      ShowText(["\\n<Black Alice>Ufufu, then I shall play with you.\nIf you can entertain me, I'll present you with a gift..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Legendary Monster Lord, Black Alice...!\nNow, we fight!"])
+      ErasePicture([5])
+      ChangeBattleBGM(["RPG::BGM(@name=\"boss_maou1\", @volume=100, @pitch=100)"])
+      ControlSwitches([22, 22, 0])
+      ChangeBattleBack(["DecorativeTile", "DemonCastle3"])
+      BattleProcessing([0, 837, false, false])
+      ControlSwitches([22, 22, 1])
+      ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+      PlayBGM(["RPG::BGM(@name=\"kuroalice\", @volume=100, @pitch=100)"])
+      ShowPicture([5, "80_alice8th_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>We did it...!"])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        ShowTextAttributes(["alice8th_fc1", 0, 0, 2])
+        ShowText(["\\n<Black Alice>Interesting...\nYou might be even more powerful than Heinrich. Allow me to present you with this as praise for your valiant efforts."])
+        PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+        ChangeItems([548, 0, 0, 1])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["alice8th_fc1", 0, 0, 2])
+      ShowText(["\\n<Black Alice>Now, shall I fight you a little more seriously this time...? Ufufu, please do your best to keep me entertained..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Hold on... I thought we just defeated you?!"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>You thought that was the extent of the legendary Monster Lord's power?! Don't lose focus, she's about to fight us seriously!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>Did you really believe that was the extent of Black Alice's power? Her true power was nothing like that...!"])
+        Empty([])
+      BranchEnd([])
+      ControlSwitches([31, 31, 0])
+      ShowPicture([5, "80_alice8th2_st02", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Black Alice rolls up her skirt!\nNumerous bizarre-looking organs emerge from underneath it!"])
+      ShowTextAttributes(["alice8th_fc1", 0, 0, 2])
+      ShowText(["\\n<Black Alice>Now let's have some fun, Hero Luka...\nTry not to disappoint me too soon..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I won't lose... Let's go!"])
+      ErasePicture([5])
+      ChangeBattleBGM(["RPG::BGM(@name=\"boss_maou1\", @volume=100, @pitch=100)"])
+      ControlSwitches([22, 22, 0])
+      ChangeBattleBack(["DecorativeTile", "DemonCastle3"])
+      BattleProcessing([0, 838, false, false])
+      ControlSwitches([22, 22, 1])
+      ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+      PlayBGM(["RPG::BGM(@name=\"kuroalice\", @volume=100, @pitch=100)"])
+      ShowPicture([5, "80_alice8th2_st02", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>*huff* *huff*...We've won...!"])
+      ConditionalBranch([2, "B", 1])
+        ControlSelfSwitch(["B", 0])
+        ShowTextAttributes(["alice8th_fc1", 2, 0, 2])
+        ShowText(["\\n<Black Alice>Your power is wonderful indeed...\nI shall grant you a suitable reward."])
+        PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+        ChangeArmor([159, 0, 0, 1, false])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["alice8th_fc1", 3, 0, 2])
+      ShowText(["\\n<Black Alice>Very well then, allow me to show you my true form. Never in my wildest dreams have I imagined I would have to fight in this form."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>No way... Her true form?!"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc6", 0, 0, 2])
+        ShowText(["\\n<Alice>Her true form is that of a bizarre serpentine monster...! I never imagined we'd actually see it..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>This is the true nature of Black Alice.\nLuka... If you are a true hero, you should be able to defeat her!"])
+        Empty([])
+      BranchEnd([])
+      ControlSwitches([32, 32, 0])
+      ShowPicture([5, "80_alice8th3_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Black Alice unleashes her true power!"])
+      ShowTextAttributes(["alice8th_fc2", 0, 0, 2])
+      ShowText(["\\n<Black Alice>If you can defeat me in this form, it will be your victory... Come now, let us enjoy our final battle..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Let's go! This time, I'm giving it everything I've got!"])
+      ErasePicture([5])
+      ChangeBattleBGM(["RPG::BGM(@name=\"boss_maou2\", @volume=100, @pitch=100)"])
+      ControlSwitches([22, 22, 0])
+      ChangeBattleBack(["DecorativeTile", "DemonCastle3"])
+      BattleProcessing([0, 839, false, false])
+      ControlSwitches([22, 22, 1])
+      ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+      Script(["gain_medal(3009)"])
+      PlayBGM(["RPG::BGM(@name=\"kuroalice\", @volume=100, @pitch=100)"])
+      ShowPicture([5, "80_alice8th3_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Guh... We're victorious!"])
+      ShowTextAttributes(["alice8th_fc2", 0, 0, 2])
+      ShowText(["\\n<Black Alice>What magnificent power...\nEven when I was serious, I could not overcome you..."])
+      ShowTextAttributes(["alice8th_fc2", 0, 0, 2])
+      ShowText(["\\n<Black Alice>But that's fine... You may have this.\nA weapon worthy of the most powerful man..."])
+      PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+      ChangeWeapons([322, 0, 0, 1, false])
+      ControlSwitches([31, 31, 1])
+      ControlSwitches([32, 32, 1])
+      ShowPicture([5, "80_alice8th_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["alice8th_fc1", 1, 0, 2])
+      ShowText(["\\n<Black Alice>...However, you don't truly intend to slay me, do you? Because that would be the role for the hero of this era, not one from a parallel world."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>...I know.\nHeinrich is supposed to be the hero who defeats Black Alice."])
+      ShowPicture([5, "80_alice8th_st02", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["alice8th_fc1", 1, 0, 2])
+      ShowText(["\\n<Black Alice>...And so I bid you farewell.\nGoodbye, heroes from a different world and time..."])
+      ErasePicture([5])
+      Wait([60])
+      PlaySE(["RPG::SE(@name=\"mon_warp\", @pitch=100, @volume=80)"])
+      ControlSwitches([2261, 2261, 0])
+      PlayBGM(["RPG::BGM(@name=\"dungeon_maouzyou\", @volume=100, @pitch=100)"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Escape"])
+      ErasePicture([5])
+      Wait([60])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ShowTextAttributes(["alice8th_fc1", 2, 0, 2])
+      ShowText(["\\n<Black Alice>Oh, are you going to leave without even saying hello? It would be nice if we could have a cup of tea..."])
+      PlayBGM(["RPG::BGM(@name=\"dungeon_maouzyou\", @volume=100, @pitch=100)"])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Black Alice is...not here?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>Black Alice is...not here?!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["heinrich_fc1", 7, 0, 2])
+    ShowText(["\\n<Heinrich>Oh, there's a stuffed bear here instead.\nI wonder if it's the Monster Lord's by any chance...?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Beary>............"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Anyway, it'd be best if we left now while we still can. Let's get moving, Luka."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>(I see, it's because Heinrich is in the party...)"])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Anyway, it appears Black Alice is not here.\nLet's leave this place while we still can."])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 4
+    Empty([])

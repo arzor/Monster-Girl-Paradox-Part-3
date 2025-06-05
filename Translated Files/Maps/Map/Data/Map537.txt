@@ -1,0 +1,1042 @@
+Display Name = "Finoa"
+Parallax Name = "Mountains1"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["Finoa in the Angelic Dominion seems rather run down, huh... That's a big difference compared to the other cities and villages we've seen."])
+    ShowText([""])
+    ConditionalBranch([4, 811, 0])
+      ShowTextAttributes(["byakunen_fc1", 0, 0, 2])
+      ShowText(["\\n<Hakunen>"])
+      ShowText(["Esta and Rubiana had everyone living in comfort and abundance, but there's not a trace of that here."])
+      ShowText([""])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>"])
+      ShowText(["Esta and Rubiana were both gorgeous cities, too... Then this area's shabbier than the Finoa in our world."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 19, 0])
+      ShowTextAttributes(["arumaeruma_fc2", 3, 0, 2])
+      ShowText(["\\n<Alma Elma>"])
+      ShowText(["The villagers here all seem listless. Everyone in Esta and Rubiana had energy to spare, but here..."])
+      ShowText([""])
+      ConditionalBranch([4, 804, 0])
+        ShowTextAttributes(["myuska_fc1", 7, 0, 2])
+        ShowText(["\\n<Myusca>"])
+        ShowText(["It's no fun when they've already given up on everything... They have the same boring taste no matter how you eat them."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 394, 0])
+      ShowTextAttributes(["astaroth_fc1", 3, 0, 2])
+      ShowText(["\\n<Astaroth>"])
+      ShowText(["There sure is a big gap in how people are treated in the Angelic Dominion. No wonder people would flock to Reverse Kreuz..."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 412, 0])
+      ShowTextAttributes(["inugami_fc1", 0, 0, 2])
+      ShowText(["\\n<Inugami-Gyobu>"])
+      ShowText(["There's probably no pub here, either... Can I go back to the pocket castle for a drink?"])
+      ShowText([""])
+      ConditionalBranch([4, 413, 0])
+        ShowTextAttributes(["kurodanuki_fc1", 2, 0, 2])
+        ShowText(["\\n<Black Tanuki>"])
+        ShowText(["As if, Inugami!\nWork your fair share first!"])
+        ShowText([""])
+        ShowTextAttributes(["inugami_fc1", 2, 0, 2])
+        ShowText(["\\n<Inugami-Gyobu>"])
+        ShowText(["O-Okay!!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["At any rate, let's start by gathering information. We'll talk to the villagers and ask them about the region."])
+    ShowText([""])
+    ControlSelfSwitch(["A", 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["Oh, how rare for pilgrims to join us. Welcome to Finoa, a village of second-class citizens."])
+    ShowText([""])
+    ConditionalBranch([1, 1141, 0, 19, 2])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["Second-class citizens...? What makes you different from other citizens elsewhere?"])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Second-Class Citizen>"])
+      ShowText(["We were recognized as deeply sinful people, whether we were lazy, rebellious, or incompetent..."])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Second-Class Citizen>"])
+      ShowText(["This is where such people end up. We're allowed to live within the Dominion, but not to go near the cities."])
+      ShowText([""])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["That's horrible... They're just sweeping away whoever they don't like into ghettos."])
+      ShowText([""])
+      ShowTextAttributes(["alice_fc1", 4, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["So this is the stratified society that Ilias built. Hearing this called a paradise disgusts me."])
+      ShowText([""])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 20, 1])
+      Script(["unlimited_choices(11, [\"Inn\","])
+      ScriptMore(["\"Tool shop\",\"Accessory shop\","])
+      ScriptMore(["\"Church\",\"Mayor's house\",\"Nowhere\"])"])
+      ConditionalBranch([1, 11, 0, 0, 0])
+        TransferPlayer([0, 537, 17, 25, 2, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 11, 0, 1, 0])
+        TransferPlayer([0, 537, 23, 22, 2, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 11, 0, 2, 0])
+        TransferPlayer([0, 537, 23, 30, 2, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 11, 0, 3, 0])
+        TransferPlayer([0, 537, 32, 12, 2, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 11, 0, 4, 0])
+        TransferPlayer([0, 537, 18, 7, 2, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 11, 0, 5, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["None of us are allowed hope here. We spend all our time working to get repaid with a miserable death..."])
+    ShowText([""])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["That sounds like an awful fate. Is there any sort of anti-government organization around here?"])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["An anti-government organization? Haven't heard about any with me stuck in this village."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["If there is one, then I'll join-\n...Sorry, could you forget I said that?"])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["143"])
+    ShowTextAttributes(["eva_fc1", 0, 0, 2])
+    ShowText(["\\n<Eva>"])
+    ShowText(["Yeah, fight back! Rebel! If the higher ups piss you off, punch them in their face!"])
+    ShowText([""])
+    ExitEventProcessing([])
+    Label(["394"])
+    ShowTextAttributes(["astaroth_fc1", 3, 0, 2])
+    ShowText(["\\n<Astaroth>"])
+    ShowText(["It seems there's a lot of discontent towards Ilias here..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["Up northwest of here is Grand Noah Castle. It's the capitol of the Noah Region, ruled by Lady Uriela."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["Lady Uriela's strength is said to be top-class even among the Seven Archangels. No one can match her, no matter how strong they get..."])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["The Noah continent has second-class citizen settlements scattered all over. All the first-class citizens live in the capitol, Grand Noah."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["Actually, this whole continent's a segregated zone for second-class citizens. Hence why they stationed all the aggressive angels over here to monitor us."])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["15"])
+    ShowTextAttributes(["salamander_fc1", 2, 0, 2])
+    ShowText(["\\n<Salamander>"])
+    ShowText(["Segregation!? Ilias, you bastard!"])
+    ExitEventProcessing([])
+    Label(["435"])
+    ShowTextAttributes(["mariel_fc1", 3, 0, 2])
+    ShowText(["\\n<Mariel>"])
+    ShowText(["I only ever worked locally, I never knew what was happening in this region..."])
+    ShowText([""])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"kiki1\", @volume=100, @pitch=100)"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["Waagh!! Wh-what's that!?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["There's a black hole in the air...?"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["Huh, it seems there's a commotion over there."])
+    ConditionalBranch([4, 394, 0])
+      ShowTextAttributes(["astaroth_fc1", 2, 0, 2])
+      ShowText(["\\n<Astaroth>"])
+      ShowText(["A hole in the air? That would mean..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Let's check it out!"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=29, @parameters=[5])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=29, @parameters=[4])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=29, @parameters=[5])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=29, @parameters=[4])"])
+    FadeoutScreen([])
+    Wait([60])
+    ChangeMapDisplay([1])
+    TransferPlayer([0, 537, 15, 13, 6, 2])
+    PlayBGM(["RPG::BGM(@name=\"boss0-3\", @volume=100, @pitch=100)"])
+    ControlSwitches([35, 35, 0])
+    ControlSwitches([31, 31, 0])
+    ScrollMap([6, 3, 4])
+    Wait([60])
+    FadeinScreen([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["What is this thing...?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["A hole opening in the sky? Is the world coming to an end...?"])
+    ShowText([""])
+    ShowTextAttributes(["alice_fc2", 1, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["This is just like what we saw in Tartarus, it's a dimensional rip!"])
+    ShowText([""])
+    ShowTextAttributes(["sonia_fc3", 4, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["This world has a space-time divergence coefficient of 348%. E to D scale dimensional cracks are forming at a rate of 1 per 6075 minutes."])
+    ShowText([""])
+    ShowTextAttributes(["morrigan_fc1", 2, 0, 2])
+    ShowText(["\\n<Morrigan>"])
+    ShowText(["Thanks for the explanation! This is the same stuff that's been happening in the Monster Realm, right...!?"])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Yeah, seems the Angelic Dominion has been suffering from them too... We need to hurry and evacuate everyone!"])
+    ShowText([""])
+    ControlSwitches([32, 32, 0])
+    SetMoveRoute([24, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    ShowPicture([5, "80_nuruko_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["\\n<Nuruko>"])
+    ShowText(["Kyu..."])
+    ShowTextAttributes(["alice_fc1", 7, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["What are you doing, Nuruko? It's dangerous to get close!"])
+    ShowText([""])
+    ConditionalBranch([4, 382, 0])
+      ShowTextAttributes(["morrigan_fc1", 5, 0, 2])
+      ShowText(["\\n<Morrigan>"])
+      ShowText(["Come back, Nuruko! It's dangerous over there!!"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    Wait([30])
+    SetMoveRoute([24, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["\\n<Nuruko>"])
+    ShowText(["............"])
+    PlayBGM(["RPG::BGM(@name=\"scene_comi2\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["\\n<Nuruko>"])
+    ShowText(["*nom*!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Unbelievable! Nuruko bit into the dimensional tear!"])
+    ShowTextAttributes(["nuruko_fc1", 2, 0, 2])
+    ShowText(["\\n<Nuruko>"])
+    ShowText(["*munch munch*..."])
+    PlaySE(["RPG::SE(@name=\"mon_ero_makituki1\", @pitch=100, @volume=100)"])
+    ControlSwitches([33, 33, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The dimensional tear begins to visibly shrink..."])
+    ShowTextAttributes(["nuruko_fc1", 2, 0, 2])
+    ShowText(["\\n<Nuruko>"])
+    ShowText(["*chew*..."])
+    PlaySE(["RPG::SE(@name=\"mon_ero_makituki1\", @pitch=100, @volume=100)"])
+    ControlSwitches([34, 34, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The dimensional tear gets ever smaller..."])
+    ShowTextAttributes(["nuruko_fc1", 2, 0, 2])
+    ShowText(["\\n<Nuruko>"])
+    ShowText(["...*gulp*."])
+    PlaySE(["RPG::SE(@name=\"mon_ero_eat3\", @pitch=100, @volume=100)"])
+    SetMoveRoute([7, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The dimensional tear disappears completely..."])
+    ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["She ate the dimensional tear!"])
+    ShowTextAttributes(["nuruko_fc1", 1, 0, 2])
+    ShowText(["\\n<Nuruko>"])
+    ShowText(["Kyu!"])
+    ScrollMap([4, 3, 4])
+    SetMoveRoute([24, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ControlSwitches([32, 32, 1])
+    PlayBGM(["RPG::BGM(@name=\"scene_epilogue2\", @volume=100, @pitch=100)"])
+    ConditionalBranch([4, 808, 0])
+      ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+      ShowText(["\\n<Rigeo>"])
+      ShowText(["Is it safe to eat that?\nWon't you get a stomachache?"])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["astaroth_fc1", 4, 0, 2])
+    ShowText(["\\n<Astaroth>"])
+    ShowText(["Huh, this girl was the spirit of chaos, wasn't she?"])
+    ShowTextAttributes(["alice_fc2", 1, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["She's neutralized chaos erosion before, but this is the first time we've seen her close dimensional tears."])
+    ShowText([""])
+    ShowTextAttributes(["morrigan_fc1", 0, 0, 2])
+    ShowText(["\\n<Morrigan>"])
+    ShowText(["What if we fed her all the chaos eroding the world? Could that solve everything?"])
+    ShowText([""])
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["\\n<Nuruko>"])
+    ShowText(["Kyu, kyukyu... kyu."])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["She says she's full, and can't eat any more for now."])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["So there's a limit on how fast she can neutralize chaos. She can deal with local disturbances, but solving the problem of chaos itself is too much for her..."])
+    ShowText([""])
+    ConditionalBranch([4, 286, 0])
+      ShowTextAttributes(["witchs_fc1", 3, 0, 2])
+      ShowText(["\\n<Witch>"])
+      ShowText(["Doesn't seem things will be so simple, then..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Anyways, that solves the problem here. Thank you, Nuruko."])
+    ShowText([""])
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["\\n<Nuruko>"])
+    ShowText(["Kyu kyuu!"])
+    ShowTextAttributes(["morrigan_fc1", 0, 0, 2])
+    ShowText(["\\n<Morrigan>"])
+    ShowText(["Kyuu!"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["That was a surprise disaster, but thanks to Nuruko, we can get back to gathering information."])
+    ShowText([""])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["Just in case, how about we talk with the mayor?\nTo be frank, I don't expect we'll get much workable intel, but..."])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Got it, let's go to the mayor's house!"])
+    ConditionalBranch([4, 287, 0])
+      ShowTextAttributes(["succubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Succubus>"])
+      ShowText(["Hopefully I can bond with them as a fellow mayor..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["In search of any information we can about Grand Noah, we headed towards the mayor's house..."])
+    ShowText([""])
+    FadeoutBGM([1])
+    ScrollMap([4, 5, 5])
+    Wait([90])
+    ShowPicture([5, "80_rafaera_st01b", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["rafaera_fc1", 1, 0, 2])
+    ShowText(["\\n<Raphaela>"])
+    ShowText(["Oh, what an intriguing organism..."])
+    Wait([60])
+    FadeoutScreen([])
+    ErasePicture([5])
+    Wait([60])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    ControlSwitches([34, 34, 1])
+    ControlSwitches([35, 35, 1])
+    ControlVariables([1141, 1141, 0, 0, 20])
+    TransferPlayer([0, 537, 13, 13, 2, 2])
+    PlayBGM(["RPG::BGM(@name=\"mura3\", @volume=100, @pitch=100)"])
+    FadeinScreen([])
+    Script(["gain_medal(82)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["This is a settlement for second-class citizens, so enormous taxes are levied on us. We work and work, and the weekend never comes..."])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["344"])
+    ShowTextAttributes(["kirin_fc1", 0, 0, 2])
+    ShowText(["\\n<Kirin>"])
+    ShowText(["What else is there left to extort from them... This is absurd."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 543, 9, 15, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 543, 37, 13, 0, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 543, 58, 14, 0, 0])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 543, 15, 37, 0, 0])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 543, 37, 36, 0, 0])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 543, 33, 56, 0, 0])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["I'm hungry... It hurts..."])
+    ExitEventProcessing([])
+    Label(["70"])
+    ShowTextAttributes(["nezumi_fc1", 0, 0, 2])
+    ShowText(["\\n<Ratty>"])
+    ShowText(["Poor thing..."])
+    ExitEventProcessing([])
+    Label(["196"])
+    ShowTextAttributes(["s_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mink>"])
+    ShowText(["Here, take some of my bread. This doesn't fix the problem, though..."])
+    ShowText([""])
+    ExitEventProcessing([])
+    Label(["436"])
+    ShowTextAttributes(["tennyo_fc1", 2, 0, 2])
+    ShowText(["\\n<Chichi>"])
+    ShowText(["How could they steal away the rice you worked so hard for?"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 330, 208, 0, 0])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 330, 208, 0, 0])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 330, 208, 0, 0])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 331, 208, 0, 0])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 331, 208, 0, 0])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 331, 208, 0, 0])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 543, 62, 57, 0, 0])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Farmer>"])
+    ShowText(["The Grand Noah colosseum doesn't mean anything for us.\nIt's not like any of us can fight..."])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["212"])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>"])
+    ShowText(["Given these living conditions, people here wouldn't have the luxury of spectating, either..."])
+    ExitEventProcessing([])
+    Label(["213"])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>"])
+    ShowText(["I had always viewed the colosseum as a spectacle to be enjoyed by the masses, but it seems the angels have other ideas."])
+    ShowText([""])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-class craftsman>"])
+    ShowText(["This village once had a hero... He's not around anymore, though."])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["45"])
+    ShowTextAttributes(["alicetromeria_fc1", 0, 0, 2])
+    ShowText(["\\n<Alicetroemeria>"])
+    ShowText(["I'm sorry to hear that... I would have loved to meet one celebrated as a hero."])
+    ShowText([""])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Farmer>"])
+    ShowText(["It's hard to grow any crops on this land. Then, when we lose more than half those crops through taxes, well... you know?"])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Farmer>"])
+    ShowText(["The angels ignore the blood, they ignore our tears. I wish I could just never wake up again..."])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["323"])
+    ShowTextAttributes(["queenhapy_fc1", 3, 0, 2])
+    ShowText(["\\n<Lucretia>"])
+    ShowText(["What horrible living conditions... We cannot let this continue unaddressed."])
+    ShowText([""])
+    ExitEventProcessing([])
+    Label(["420"])
+    ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+    ShowText(["\\n<Yao>"])
+    ShowText(["This is how angels treat their people, hm... It seems they view humans as consumables."])
+    ShowText([""])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["It seems we're starting to have too many mouths to feed. I suppose it's time I found my resting spot in the mountains..."])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["62"])
+    ShowTextAttributes(["gob_fc1", 3, 0, 2])
+    ShowText(["\\n<Gob>"])
+    ShowText(["Don't say such sad things..."])
+    ExitEventProcessing([])
+    Label(["99"])
+    ShowTextAttributes(["namazu_fc1", 2, 0, 2])
+    ShowText(["\\n<Gigi>"])
+    ShowText(["To think, this is how the elderly have to treat themselves... Is there nothing we can do?"])
+    ShowText([""])
+    ExitEventProcessing([])
+    Label(["529"])
+    ShowTextAttributes(["sara_fc1", 4, 0, 2])
+    ShowText(["\\n<Sara>"])
+    ShowText(["There's no worse crime for a stateswoman than leaving people in your jurisdiction in these horrid conditions... I suppose I've done the same to Magistea, though."])
+    ShowText([""])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Farmer>"])
+    ShowText(["In the past, some people from some somethingrather Kreuz group showed up here. They recruited some young men and left."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Farmer>"])
+    ShowText(["We never heard a word from them since, though...\nLast we heard, they were headed towards Grand Noah."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Farmer>"])
+    ShowText(["It's not hard to understand them wanting to strike back against the angels. Certainly if you're living like this..."])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["205"])
+    ShowTextAttributes(["levia_fc1", 0, 0, 2])
+    ShowText(["\\n<Levia>"])
+    ShowText(["It doesn't seem there's any stopping anti-government sentiment in these conditions..."])
+    ExitEventProcessing([])
+    Label(["438"])
+    ShowTextAttributes(["ariel_fc1", 3, 0, 2])
+    ShowText(["\\n<Ariel>"])
+    ShowText(["This was what was happening in the rural villages, hm..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Farmer>"])
+    ShowText(["There's no angels that reside permanently in this village. They just show up to take our harvests..."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Farmer>"])
+    ShowText(["Well, this is a village for us outcasts, second-class citizens... The angels probably just don't want to be here."])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["442"])
+    ShowTextAttributes(["ratael_fc1", 0, 0, 2])
+    ShowText(["\\n<Latael>"])
+    ShowText(["This area's supervisor is likely a lower-class angel themselves... This village truly has been abandoned by the Goddess."])
+    ShowText([""])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["If you're looking for the mayor, he's in his house. Just look for the best-looking house."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Second-Class Citizen>"])
+    ShowText(["He's not living in luxury, though. He's just the hardest worker in the village."])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["287"])
+    ShowTextAttributes(["succubus_fc1", 3, 0, 2])
+    ShowText(["\\n<Succubus>"])
+    ShowText(["With the village how it is, the mayor must have constant work to do..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([24, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([32, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([4145, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([449, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 3"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The treasure chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([765, 0, 0, 1])
+    SetMoveRoute([33, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Farmer>"])
+    ShowText(["We found that thing buried in the fields. It's kind of unsettling, could you take it for us?"])
+    ShowText([""])
+    SetMoveRoute([33, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([91, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ConditionalBranch([1, 840, 0, 2, 1])
+      ConditionalBranch([0, 1589, 1])
+        ShowTextAttributes(["mob_murabito5_fc1", 0, 0, 2])
+        ShowText(["\\n<Phoephe>"])
+        ShowText(["I'm hungry... Take care of me..."])
+        ShowChoices([["Let her join", "Decline for now"], 0])
+        When([0, "仲間にする"])
+          ShowTextAttributes(["mob_murabito5_fc1", 0, 0, 2])
+          ShowText(["\\n<Phoephe>"])
+          ShowText(["Oh, I can get a room, too?\nI'm so happy..."])
+          ShowText([""])
+          ErasePicture([5])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(589)"])
+          PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Phoephe joined the party!"])
+          Wait([60])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "仲間にしない"])
+          ShowTextAttributes(["mob_murabito5_fc1", 0, 0, 2])
+          ShowText(["\\n<Phoephe>"])
+          ShowText(["I'm hungry..."])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([7391])
+    Empty([])
+
+  Page 1
+    Empty([])

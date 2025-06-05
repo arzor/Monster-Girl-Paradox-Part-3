@@ -1,0 +1,66 @@
+CommonEvent 7123
+Name = "マリア：敗北"
+
+  999([7123])
+  CallCommonEvent([7000])
+  ErasePicture([6])
+  ShowTextAttributes(["mob_sister1_fc1", 0, 0, 2])
+  ShowText(["\\n<Maria>It's my win.\nI'm sorry, but I'd like the wager we agreed on..."])
+  ShowText([""])
+  ShowText([""])
+  ConditionalBranch([0, 443, 1])
+    ChangeGold([1, 0, 230])
+    Empty([])
+
+  BranchEnd([])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["Luka hands over 230G!"])
+  ShowTextAttributes(["mob_sister1_fc1", 0, 0, 2])
+  ShowText(["\\n<Maria>How did heaven feel?\nI'll show it to you as many times as you want..."])
+  ShowText([""])
+  ShowText([""])
+  ConditionalBranch([0, 443, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([0, 2331, 1])
+    ErasePicture([5])
+    ChangeMapDisplay([1])
+    ConditionalBranch([1, 1143, 0, 9, 2])
+      TransferPlayer([0, 27, 8, 16, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 10, 1])
+      ConditionalBranch([1, 1143, 0, 24, 2])
+        ConditionalBranch([1, 1305, 0, 5, 2])
+          ControlVariables([57, 57, 0, 0, 1763])
+          TransferPlayer([0, 763, 8, 16, 2, 0])
+          Empty([])
+
+        BranchEnd([])
+        ConditionalBranch([1, 1305, 0, 6, 1])
+          ControlVariables([57, 57, 0, 0, 1979])
+          TransferPlayer([0, 979, 54, 47, 2, 0])
+          Empty([])
+
+        BranchEnd([])
+        Empty([])
+
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ControlVariables([57, 57, 0, 0, 1763])
+      TransferPlayer([0, 763, 8, 16, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+  BranchEnd([])
+  ExitEventProcessing([])
+  Empty([])

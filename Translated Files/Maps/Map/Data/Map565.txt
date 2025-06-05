@@ -1,0 +1,240 @@
+Display Name = "サン・イリア城 2F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 540, 46, 24, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 540, 46, 24, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+    ShowText(["【ワイティエル】"])
+    ShowText(["ラファエラ様がお待ちです。"])
+    ShowText(["先にお進み下さい……"])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+    ShowText(["【たまも】"])
+    ShowText(["……………………"])
+    PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["たまもは、魔術でサン・イリア城二階をサーチした……"])
+    ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+    ShowText(["【たまも】"])
+    ShowText(["二階にも、妙な点はないな……"])
+    ShowText(["必要最低限の兵しか配置されておらず、トラップもない。"])
+    ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+    ShowText(["【たまも】"])
+    ShowText(["それに……エルベティエを感知したぞ。"])
+    ShowText(["どうやら、無事でいるようだな。"])
+    ShowTextAttributes(["alice_fc1", 1, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["そうか、良かった……"])
+    ConditionalBranch([4, 53, 0])
+      ShowTextAttributes(["slime_fc1", 0, 0, 2])
+      ShowText(["【ライム】"])
+      ShowText(["わーい、エルベティエ様に会えるねー♪"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["それじゃあ、玉座の間に行こう。"])
+    ShowText(["ラファエラが、僕達の到着を待ってるはずだからね……"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"boss0-nanadaitenshi\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_rafaera_st01b", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["rafaera_fc1", 0, 0, 2])
+    ShowText(["【ラファエラ】"])
+    ShowText(["我が城に、ようこそいらっしゃいました。"])
+    ShowText(["本来なら、贅を凝らした宴をもって迎えたかったのですが……"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["それは残念……いや、どうでもいい。"])
+    ShowText(["エルベティエは無事でいるのだろうな？"])
+    ShowTextAttributes(["rafaera_fc1", 0, 0, 2])
+    ShowText(["【ラファエラ】"])
+    ShowText(["すでに生命反応を確認しているでしょう？"])
+    ShowText(["猿芝居は結構ですよ、腹の探り合いは無しといきましょう。"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["……………………"])
+    ConditionalBranch([4, 394, 0])
+      ShowTextAttributes(["astaroth_fc1", 2, 0, 2])
+      ShowText(["【アスタロト】"])
+      ShowText(["（やっぱり、向こうが上手ね……"])
+      ShowText(["　こいつ、本当に手強いわ……）"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["rafaera_fc1", 0, 0, 2])
+    ShowText(["【ラファエラ】"])
+    ShowText(["さて、場を変えましょう。"])
+    ShowText(["会議室で机を囲み、話を進めようではありませんか。"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["ああ、分かった……"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["こうして僕達は、会議室へと通された。"])
+    ShowText(["いよいよ、ラファエラとの会談が始まるのだ。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["エルベティエは無事に戻るのか、ラファエラの真意は何なのか――"])
+    ShowText(["これより、全てが明らかになろうとしていた。"])
+    Wait([60])
+    FadeoutBGM([1])
+    FadeoutScreen([])
+    ErasePicture([5])
+    Wait([60])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    ControlSwitches([34, 34, 1])
+    ControlSwitches([35, 35, 1])
+    ControlSwitches([36, 36, 1])
+    ChangeTransparency([0])
+    ChangeMapDisplay([1])
+    TransferPlayer([0, 3, 0, 0, 0, 0])
+    FadeinScreen([])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["これが、歴史的な会談になるかもしれないのか……"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["121"])
+    ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+    ShowText(["【コーネリア】"])
+    ShowText(["そうなれば、この私が史書にとどめましょう……"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["こちらは、会談の間となります。"])
+    ShowText(["先にラファエラ様に御謁見を願います。"])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["すでに、会談の準備は整っております……"])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["siriel_fc1", 0, 0, 2])
+    ShowText(["【シリエル】"])
+    ShowText(["ラファエラ様は、心より和睦を望んでおられます。"])
+    ShowText(["どうか駆け引きは抜きで、会談に臨んで下さい……"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["21"])
+    ShowTextAttributes(["tamamo_fc1", 1, 0, 2])
+    ShowText(["【たまも】"])
+    ShowText(["それでは、駆け引きは抜きであたろうぞ！"])
+    ConditionalBranch([4, 394, 0])
+      ShowTextAttributes(["astaroth_fc1", 4, 0, 2])
+      ShowText(["【アスタロト】"])
+      ShowText(["腹黒ね……"])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["siriel_fc1", 0, 0, 2])
+    ShowText(["【シリエル】"])
+    ShowText(["この先におられるのは、サン・イリアの主……"])
+    ShowText(["律法の守護者にして七大天使の一人、ラファエラ様よ。"])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["whiteyel_fc1", 2, 0, 2])
+    ShowText(["【ワイティエル】"])
+    ShowText(["この会談のこと、他の七大天使は御存知なのでしょうか……"])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+    ShowText(["【ワイティエル】"])
+    ShowText(["謁見の間は、こちらになります……"])
+    Empty([])

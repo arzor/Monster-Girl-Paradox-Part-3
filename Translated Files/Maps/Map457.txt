@@ -1,0 +1,275 @@
+Display Name = "ポケット魔王城 2F西"
+Parallax Name = "DarkSpace1"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ShakeScreen([5, 5, 60, false])
+    PlaySE(["RPG::SE(@name=\"mon_earth2\", @pitch=100, @volume=100)"])
+    ShowPicture([1, "iv_chaos1", 0, 0, 0, 0, 100, 100, 0, 0])
+    ShowPicture([2, "iv_chaos2", 0, 0, 0, 0, 100, 100, 0, 0])
+    ShowPicture([3, "iv_chaos4", 0, 0, 0, 0, 100, 100, 0, 0])
+    ShowPicture([4, "iv_chaos5", 0, 0, 0, 0, 100, 100, 0, 0])
+    ShowPicture([5, "iv_chaos6", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([1, nil, 0, 0, 0, 0, 100, 100, 255, 0, 10, true])
+    MovePicture([2, nil, 0, 0, 0, 0, 100, 100, 255, 0, 10, true])
+    MovePicture([3, nil, 0, 0, 0, 0, 100, 100, 255, 0, 10, true])
+    MovePicture([4, nil, 0, 0, 0, 0, 100, 100, 255, 0, 10, true])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 10, true])
+    MovePicture([1, nil, 0, 0, 0, 0, 100, 100, 0, 0, 10, true])
+    MovePicture([2, nil, 0, 0, 0, 0, 100, 100, 0, 0, 10, true])
+    MovePicture([3, nil, 0, 0, 0, 0, 100, 100, 0, 0, 10, true])
+    MovePicture([4, nil, 0, 0, 0, 0, 100, 100, 0, 0, 10, true])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 10, true])
+    ErasePicture([1])
+    ErasePicture([2])
+    ErasePicture([3])
+    ErasePicture([4])
+    ErasePicture([5])
+    TransferPlayer([0, 458, 31, 44, 0, 2])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Earth1\", @pitch=100, @volume=80)"])
+    Script(["delete_actor_ex(34)"])
+    ScriptMore(["delete_actor_ex(36)"])
+    ConditionalBranch([0, 447, 0])
+      Script(["clear_actor_equip(34)"])
+      ScriptMore(["clear_actor_equip(36)"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["micaelac_fc1", 4, 0, 2])
+    ShowText(["【ミカエラちゃん】"])
+    ShowText(["きゃっ！"])
+    ShowTextAttributes(["rucyfinac_fc1", 4, 0, 2])
+    ShowText(["【ルシフィナちゃん】"])
+    ShowText(["わーっ！！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["まずい！"])
+    ShowText(["ミカエラちゃんとルシフィナちゃんが落ちたぞ！！"])
+    ShowTextAttributes(["eden_fc1", 2, 0, 2])
+    ShowText(["【エデン】"])
+    ShowText(["私が行きます！"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["待ちなさい、エデン！"])
+    PlaySE(["RPG::SE(@name=\"Wind1\", @pitch=100, @volume=80)"])
+    Script(["delete_actor_ex(383)"])
+    ScriptMore(["delete_actor_ex(384)"])
+    ConditionalBranch([0, 447, 0])
+      Script(["clear_actor_equip(383)"])
+      ScriptMore(["clear_actor_equip(384)"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["エデンは混沌空間に飛び込んでいった！"])
+    Wait([30])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["エデン、混沌空間の中では……"])
+    ShowText(["天使でさえ満足に飛べないのですよ……"])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["酷なようだが、今はここからの脱出を優先する！"])
+      ShowText(["まず、生き延びる事が第一だ！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 3, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["酷なようだが、今はここからの脱出を優先する！"])
+      ShowText(["まず、生き延びる事が第一だ！"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["仲間を見捨てろって言うのか！？"])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["生き延びて体勢を整え、あらためて救出に向かうのだ！"])
+      ShowText(["ここで我等まで力尽きれば、落伍した仲間も助けられんぞ！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 3, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["生き延びて体勢を整え、あらためて救出に向かうのだ！"])
+      ShowText(["ここで我等まで力尽きれば、落伍した仲間も助けられんぞ！"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["ぐっ、逃げるしかないか……"])
+    ShowText(["ミカエラちゃん達、後で絶対に助けに行くからな！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["アリスの言う通り、今は脱出に専念しよう――"])
+    ControlVariables([1002, 1002, 0, 0, 143])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 468, 8, 14, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["jeid_fc1", 0, 0, 2])
+    ShowText(["【ジェイド】"])
+    ShowText(["侵入者は多数、迎撃を開始……"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["アポトーシスまで、よく平気で仲間にしたねぇ。"])
+    ShowText(["そういう節操ないところ、好きだよ。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["jeid_fc1", 0, 0, 2])
+    ShowText(["【ジェイド】"])
+    ShowText(["侵入者は多数、迎撃を開始……"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["アポトーシスまで、よく平気で仲間にしたねぇ。"])
+    ShowText(["そういう節操ないところ、好きだよ。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["artm_fc1", 0, 0, 2])
+    ShowText(["【コッペリア】"])
+    ShowText(["ルカの生存を優先……"])
+    ShowText(["退出の間、時間を稼ぎます。"])
+    ConditionalBranch([0, 1251, 0])
+      ConditionalBranch([4, 251, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["paizuridoll_fc1", 1, 0, 2])
+        ShowText(["【パイン】"])
+        ShowText(["……………………"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["人形の癖に、泣かせるねぇ……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["artm_fc1", 0, 0, 2])
+    ShowText(["【コッペリア】"])
+    ShowText(["ルカの生存を優先……"])
+    ShowText(["退出の間、時間を稼ぎます。"])
+    ConditionalBranch([0, 1251, 0])
+      ConditionalBranch([4, 251, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["paizuridoll_fc1", 1, 0, 2])
+        ShowText(["【パイン】"])
+        ShowText(["……………………"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["人形の癖に、泣かせるねぇ……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["artm_fc1", 0, 0, 2])
+    ShowText(["【コッペリア】"])
+    ShowText(["ルカの生存を優先……"])
+    ShowText(["退出の間、時間を稼ぎます。"])
+    ConditionalBranch([0, 1251, 0])
+      ConditionalBranch([4, 251, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["paizuridoll_fc1", 1, 0, 2])
+        ShowText(["【パイン】"])
+        ShowText(["……………………"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["人形の癖に、泣かせるねぇ……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 468, 7, 14, 0, 0])
+    Empty([])

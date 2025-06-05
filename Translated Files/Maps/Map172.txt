@@ -1,0 +1,143 @@
+Display Name = "Administrator's Tower 3F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 170, 38, 65, 2, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 174, 24, 9, 2, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    Wait([15])
+    PlaySE(["RPG::SE(@name=\"mon_bom1\", @pitch=100, @volume=100)"])
+    ShakeScreen([7, 7, 120, true])
+    Wait([120])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>It feels like the entire world is shaking..."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>It's like the entire world is shaking..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([5, "80_radio_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowTextAttributes(["radio_fc1", 0, 0, 2])
+    ShowText(["\\n<Radio>DimensionAl crAck, 45% increAse... Apoptosis rAte, 265% increAse..."])
+    ShowTextAttributes(["radio_fc1", 0, 0, 2])
+    ShowText(["\\n<Radio>Chaosization progresseSRapidly... An apoptosis of the highest classification has been deTECted in the rift..."])
+    ShowTextAttributes(["radio_fc1", 0, 0, 2])
+    ShowText(["\\n<Radio>Unit name confiRMed to be Adramelech... It is approaching while turning the surrounding sPace into chaos..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>The highest classification of apoptosis!?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>I have a really bad feeling about this... Let's hurry and meet this master person!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The situation calls for urgency. Hurry, let's go meet this master person!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["radio_fc1", 0, 0, 2])
+    ShowText(["\\n<Radio>Master is... oveR here..."])
+    ErasePicture([5])
+    SetMoveRoute([4, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ControlVariables([1032, 1032, 0, 0, 3])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowPicture([5, "80_radio_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["radio_fc1", 0, 0, 2])
+    ShowText(["\\n<Radio>This is a barrIer device for delaying chaosiZation... It lasted longer than we expected, but it will sooNCease functioning..."])
+    ShowTextAttributes(["radio_fc1", 0, 0, 2])
+    ShowText(["\\n<Radio>Please go to the sTAirs on the opPoSite side..."])
+    ConditionalBranch([4, 41, 0])
+      ShowTextAttributes(["stein_fc2", 2, 0, 2])
+      ShowText(["\\n<Promestein>I would like to study this equipment... Ahh, but there's no time!"])
+      ShowTextAttributes(["stein_fc2", 2, 0, 2])
+      ShowText(["\\n<Promestein>......"])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["\\n<Promestein>Wait, could it be that I was the one who designed this? I don't know the technology itself, but I can recognize my own handiwork all ov–"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 3, 0, 2])
+        ShowText(["\\n<Sonya>Hey, there's no time to sight-see!"])
+        ShowTextAttributes(["stein_fc2", 2, 0, 2])
+        ShowText(["\\n<Promestein>Y-you're right. My apologies!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowPicture([5, "80_radio_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["radio_fc1", 0, 0, 2])
+    ShowText(["\\n<Radio>Master is on the flooRAbove... Please go uPThe stairs..."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>So she's just above here... She's not a bad person, right...?"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    Empty([])

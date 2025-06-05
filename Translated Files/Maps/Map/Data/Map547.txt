@@ -1,0 +1,111 @@
+Display Name = "北のお化け屋敷 クロムの部屋"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ControlVariables([1316, 1316, 0, 0, 5])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["情報通り、暖炉の中に隠しスイッチが――"])
+    PlaySE(["RPG::SE(@name=\"mon_earth1\", @pitch=100, @volume=80)"])
+    Wait([30])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["スイッチを押していないのに、階下から大きな音がした！"])
+    ShowText(["何らかの仕掛けが作動したようだ――"])
+    Wait([30])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["今の、例の扉が開いた音だよね？"])
+    ShowText(["まだスイッチ押してないんだけど……"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["誰か別の者が、例の扉を開けたと思われます。"])
+    ShowText(["この暖炉スイッチ以外にも、開ける手段があったのでしょう。"])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["別の者とは、誰なのだ？"])
+      ShowText(["我々と謎の妖魔以外に、第三者がいるというのか……？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 3, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["別の者とは、誰なのだ？"])
+      ShowText(["我々と謎の妖魔以外に、第三者がいるというのか……？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["別の者とは、誰なのだ？"])
+      ShowText(["我々と謎の妖魔以外に、第三者がいるというのか……？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 19, 0])
+      ShowTextAttributes(["arumaeruma_fc2", 3, 0, 2])
+      ShowText(["【アルマエルマ】"])
+      ShowText(["話が入り組んできたわね……"])
+      ShowText(["あんまり、敵が増えないでいてくれると助かるんだけど。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["分からないけど……地下に降りてみるしかないね。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["謎の妖魔が地下室へと降り――"])
+    ShowText(["そして今、第三の何者かが扉を開けて地下へと降りた。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["何がどうなっているのかは分からないが――"])
+    ShowText(["僕達も、地下室に向かおう。"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 513, 51, 8, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1151, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ControlVariables([1352, 1352, 1, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([9019])
+    Empty([])

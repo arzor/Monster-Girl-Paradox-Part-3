@@ -1,0 +1,1112 @@
+Display Name = "Happiness Village"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 342, 70, 12, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 342, 39, 32, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 342, 39, 12, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Woman>Welcome! Happiness Village has the best fruit! How about some sweet honey?"])
+    Script(["actor_label_jump"])
+    JumpToLabel(["店"])
+    Label(["79"])
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["\\n<Nuruko>Kyuu! Kyuu!"])
+    ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+    ShowText(["\\n<Sonya>You want an apple, Nuruko? ...Luka, gold please."])
+    JumpToLabel(["店"])
+    Label(["81"])
+    ShowTextAttributes(["mitubati_fc1", 0, 0, 2])
+    ShowText(["\\n<Honey>Sometimes even I'm tempted to buy store-bought honey..."])
+    JumpToLabel(["店"])
+    Label(["83"])
+    ShowTextAttributes(["hapy_a_fc1", 0, 0, 2])
+    ShowText(["\\n<Reina>I want to taste the honey! ♪"])
+    JumpToLabel(["店"])
+    Label(["84"])
+    ShowTextAttributes(["hapy_bc_fc1", 6, 0, 2])
+    ShowText(["\\n<Pii>Yay, they sell bananas! ♪"])
+    JumpToLabel(["店"])
+    Label(["111"])
+    ShowTextAttributes(["suika_fc1", 0, 0, 2])
+    ShowText(["\\n<Melon>I wonder if honey is sweeter than watermelons."])
+    JumpToLabel(["店"])
+    Label(["125"])
+    ShowTextAttributes(["grizzly_fc1", 0, 0, 2])
+    ShowText(["\\n<Aisha>Bear! Honey!"])
+    JumpToLabel(["店"])
+    Label(["162"])
+    ShowTextAttributes(["mitutubo_fc1", 0, 0, 2])
+    ShowText(["\\n<Mitsuko>My pot is already filled with sweet honey♪"])
+    JumpToLabel(["店"])
+    Label(["店"])
+    ShopProcessing([0, 301, 0, 0, false])
+    ShopItem([0, 302, 0, 0])
+    ShopItem([0, 304, 0, 0])
+    ShopItem([0, 305, 0, 0])
+    ShopItem([0, 315, 0, 0])
+    ShopItem([0, 436, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 342, 11, 32, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Luka leaves his party members outside and enters the house alone..."])
+    ChangePlayerFollowers([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 342, 11, 12, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 342, 12, 61, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 353, 325, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 353, 325, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 354, 325, 0, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>Welcome to Happiness Village, where we live in peace with the harpies! Need help getting somewhere?"])
+    ChangeMapDisplay([1])
+    Script(["unlimited_choices(11, [\"Inn\","])
+    ScriptMore(["\"Shops\",\"Blacksmith\","])
+    ScriptMore(["\"Church\",\"Nowhere\"])"])
+    ConditionalBranch([1, 11, 0, 0, 0])
+      TransferPlayer([0, 341, 9, 50, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 1, 0])
+      TransferPlayer([0, 341, 25, 51, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 2, 0])
+      TransferPlayer([0, 341, 28, 26, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 3, 0])
+      TransferPlayer([0, 341, 16, 28, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 4, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Boy>All the cute harpies left and went somewhere! Where did you go, Pipi??"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["72"])
+    ShowTextAttributes(["phoenix_fc1", 4, 0, 2])
+    ShowText(["\\n<Mini>Leave it up to us! We'll find her for you!"])
+    ExitEventProcessing([])
+    Label(["74"])
+    ShowTextAttributes(["usagi_fc1", 2, 0, 2])
+    ShowText(["\\n<Barbun>Poor kid... Now I really want to find them."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1001, 0, 29, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Boy>All the cute harpies are back! Pipi was safe too!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Boy>I prayed to the Goddess every day for her return. It would have been awful if something had happened to my future bride!"])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["83"])
+      ShowTextAttributes(["hapy_a_fc1", 0, 0, 2])
+      ShowText(["\\n<Reina>Oh my, an early bloomer. It looks like I'll have lots of new friends to look forward to♪"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 30, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Young Boy>Today I'm going on a date with Pipi! I hope the world is safe again when we're grown ups..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([1, 1011, 0, 3, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>Where could all those harpies have disappeared to? My son is betrothed to one of them, and now we have no idea where she is."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>We've looked everywhere, but there isn't a sign of them. Where on earth are they?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1011, 0, 4, 1])
+      ConditionalBranch([1, 1001, 0, 29, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Old Man>My son and I are overjoyed that the harpies are safe and sound, including my son's wife-to-be."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Old Man>After all that, I'm thinking we should move up the ceremony. Then maybe it'll be time to tell my son about his new little brother..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Old Man>Oh, my wife's a harpy too, of course, but she can choose the gender of her offspring. She's too good to me..."])
+        Script(["actor_label_jump"])
+        ExitEventProcessing([])
+        Label(["78"])
+        ShowTextAttributes(["syesta_fc1", 0, 0, 2])
+        ShowText(["\\n<Shesta>What a splendid life... I can remember something like that..."])
+        ExitEventProcessing([])
+        Label(["83"])
+        ShowTextAttributes(["hapy_a_fc1", 0, 0, 2])
+        ShowText(["\\n<Reina>I wish you all the best♪"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1001, 0, 30, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Old Man>I hear some are starting to ostracize monsters over on Sentora. That's not a problem in our village, but I get a bad feeling about all this..."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ConditionalBranch([1, 1011, 0, 3, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>My harpy wife went back to her village and then disappeared completely. Sigh, where could she have gone..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1011, 0, 4, 1])
+      ConditionalBranch([1, 1001, 0, 29, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Youth>My wife came home! Now we're back to bangin' every night!"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Harpy>Dear, not so loud... I'm going to have to bang you tonight for that."])
+        Script(["actor_label_jump"])
+        ExitEventProcessing([])
+        Label(["70"])
+        ShowTextAttributes(["nezumi_fc1", 2, 0, 2])
+        ShowText(["\\n<Ratty>...tch."])
+        ExitEventProcessing([])
+        Label(["72"])
+        ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+        ShowText(["\\n<Mini>Bang...ing? Is something exploding?"])
+        ExitEventProcessing([])
+        Label(["74"])
+        ShowTextAttributes(["usagi_fc1", 1, 0, 2])
+        ShowText(["\\n<Barbun>Oh my, fufufu..."])
+        ExitEventProcessing([])
+        Label(["83"])
+        ShowTextAttributes(["hapy_a_fc1", 0, 0, 2])
+        ShowText(["\\n<Reina>Have fun, you two♪"])
+        ExitEventProcessing([])
+        Label(["105"])
+        ShowTextAttributes(["mimic_fc1", 2, 0, 2])
+        ShowText(["\\n<Minelli>Die in a fire."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1001, 0, 30, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Youth>W-what will we do if the Monster Lord's army attacks us, next...?"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Harpy>Don't worry, darling. Us harpies will protect everyone, no matter what."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Merchant>Crap, crap, crap! I came all the way here to buy Harpy Feathers only to find that all the harpies are gone."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Merchant>There are no signs of a struggle, and none of the villagers here noticed anything wrong. They all just suddenly vanished one night."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Merchant>They must have left on their own volition, but it's strange they wouldn't say a word to the villagers that they lived with so closely."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Merchant>This whole region is a giant forest, which is making the search for them rather hard, I've heard."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["66"])
+    ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+    ShowText(["\\n<Vanilla>Harpy Feather sales? Maybe I need to get friendly with the harpies too..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ConditionalBranch([1, 1011, 0, 3, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Traveling Warrior>I can't believe it. I came all the way here looking for a strong harpy to test myself against, but they've all disappeared."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Traveling Warrior>Huh? No! I swear I'm not looking for one to marry! I want to practice my swordplay..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1011, 0, 4, 1])
+      ConditionalBranch([1, 1001, 0, 29, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Traveling Warrior>Oooh, the harpies are back? Well then, it's time to go find a strong one to test my skills!"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Traveling Warrior>Huh? No! I swear I'm not going to look for one to marry! I want to practice my swordplay..."])
+        Script(["actor_label_jump"])
+        ExitEventProcessing([])
+        Label(["83"])
+        ShowTextAttributes(["hapy_a_fc1", 1, 0, 2])
+        ShowText(["\\n<Reina>I'd be glad to test your skills, ahaha!"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1001, 0, 30, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Traveling Warrior>I've gotten so used to living in this village, lately. Maybe I'll just settle down here. Training with harpies is a lot of fun... Heheheh..."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ConditionalBranch([1, 1011, 0, 3, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>We've gone looking for them countless times already, but the only harpies we've managed to find are ones that didn't live in their settlement."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>I think we need to expand the search beyond the local forest, but it's hard to cover a larger area with the numbers we've got."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1011, 0, 4, 1])
+      ConditionalBranch([1, 1001, 0, 29, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>So the harpies locked themselves in a tower... That explains why we couldn't find them."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>In any case, I'm relieved they're back. I hope we can live in peace and harmony like this forever..."])
+        Script(["actor_label_jump"])
+        ExitEventProcessing([])
+        Label(["80"])
+        ShowTextAttributes(["orc_fc1", 0, 0, 2])
+        ShowText(["\\n<Hip>That's right, peace is very valuable. That's why it's an orc's job to attack peaceful villages..."])
+        ExitEventProcessing([])
+        Label(["86"])
+        ShowTextAttributes(["name_s_fc1", 0, 0, 2])
+        ShowText(["\\n<Rosary>Let us pray to the Goddess Ilias for continued peace..."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1001, 0, 30, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>There's no guarantee this village will stay safe, either.\nIf the Monster Lord's army shows up, we'll all stand together against her."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ConditionalBranch([1, 1011, 0, 3, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>There's a large unused tower far to the north of here, but the entrance is blocked so that no one can enter."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>I'm guessing that something is sealed inside, or perhaps someone evil..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>In any case, I doubt that the harpies could have been sealed in there. No one could do that to the Queen Harpy without causing quite a stir, at least."])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>An old mysterious tower... very suspicious. It sounds like we can't get in, but it's worth remembering."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1011, 0, 4, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>So they were in that old tower after all. Looks like I was right to be suspicious of it."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>It must have taken a lot of strength and courage to go into that tower and distribute the medicine while fighting off all those harpies. I'm impressed."])
+      ConditionalBranch([8, 602])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>By the way, are you finding the \\C[14]Guard\\C[0] job useful?"])
+        ShowChoices([["Yes", "No", "Haven't tried it"], 2])
+        When([0, "Yes"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Guard>I knew you had good taste!"])
+          Empty([])
+        When([1, "No"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Guard>Oh yeah? Well, it is just a plain basic job..."])
+          Empty([])
+        When([2, "Haven't tried it"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Guard>R-really? No, that doesn't bother me... at all..."])
+          Empty([])
+        ChoicesEnd([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>Skills that lower your foes' stats in battle are very useful. They especially shine against tough bosses."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>Also, if you master both Guard and Warrior, you can become a \\C[14]Royal Guard\\C[0]. I'd love to have their skills that weaken and damage all foes at once."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>So please, please consider giving guarding a shot."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>One day several months ago, the Harpy Queen sent a messenger to tell us that something had come up and all the harpies were heading back to their village."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>They all went home, but I figured they'd be right back considering they practically live next door."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>I never expected that would be the last time we'd see any of them..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["58"])
+    ShowTextAttributes(["inp_fc2", 2, 0, 2])
+    ShowText(["\\n<Remi>A mass disappearance. Scary..."])
+    ExitEventProcessing([])
+    Label(["59"])
+    ShowTextAttributes(["mdg_fc1", 2, 0, 2])
+    ShowText(["\\n<Ragora>Have you checked underground? Maybe they dug holes and went to sleep in the earth..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1001, 0, 30, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>I'm relieved that the harpies have returned, but I never expected that they got sick and quarantined themselves."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>On that subject, I've heard that the university in Iliasport trains scholars and doctors."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>Hopefully their research can someday put an end to strange diseases like this one, but I doubt I'll be alive to see it..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["71"])
+      ShowTextAttributes(["okami_fc1", 0, 0, 2])
+      ShowText(["\\n<Amara>Don't be so pessimistic! Live for another 500 years!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 31, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>Never thought I'd live long enough to see a war with the Monster Lord happen."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>If only there were a way to resolve this peacefully..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ConditionalBranch([1, 1011, 0, 3, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>It's no trivial matter that Queen Harpy herself is missing. What on earth happened..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1011, 0, 4, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>I'm glad most of the harpies returned, but I heard that Queen Harpy hasn't made a full recovery."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>I would have thought that a strong monster like her would recover quickly, but apparently the disease feeds off her magical power and uses her strength against her."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["82"])
+      ShowTextAttributes(["suzume_fc1", 0, 0, 2])
+      ShowText(["\\n<Chirp>I want to find the Fruit of the World Tree for her..."])
+      ExitEventProcessing([])
+      Label(["83"])
+      ShowTextAttributes(["hapy_a_fc1", 0, 0, 2])
+      ShowText(["\\n<Reina>Don't worry, we'll find the Fruit of the World Tree and save her."])
+      ExitEventProcessing([])
+      Label(["84"])
+      ShowTextAttributes(["hapy_bc_fc1", 3, 0, 2])
+      ShowText(["\\n<Pina>I want to go look for the Fruit of the World Tree..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1011, 0, 5, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>I hear the harpy queen is back in good health! Apparently the same hero who helped us earlier went out of his way to bring her some Yggdrasil Fruit."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>It seems true heroes really do exist in our world..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Warrior>Harpies have a lot of attacks that manipulate the wind.\nIf you have any equipment that reduces wind elemental damage, it'll give you an edge."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["56"])
+    ShowTextAttributes(["inp_fc1", 0, 0, 2])
+    ShowText(["\\n<Rami>Succubus types are naturally strong against wind so imps will give you an edge too♪"])
+    ExitEventProcessing([])
+    Label(["75"])
+    ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+    ShowText(["\\n<Mary>Sheep are baaaaaad against wind! It makes our wool stand on end!"])
+    ExitEventProcessing([])
+    Label(["83"])
+    ShowTextAttributes(["hapy_a_fc1", 2, 0, 2])
+    ShowText(["\\n<Reina>(This guy is letting everyone know our weaknesses... We're going to have to deal with him quietly...)"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>If you travel directly north from here, you'll come across a mysterious tower. It's been there as long as anyone can remember, but no one knows what it's used for."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>The entrance is locked up so no one can get inside though... Perhaps there's a great treasure hidden away in there."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["68"])
+    ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+    ShowText(["\\n<Papi>Treasure!? Let's check it out!"])
+    ExitEventProcessing([])
+    Label(["70"])
+    ShowTextAttributes(["nezumi_fc1", 1, 0, 2])
+    ShowText(["\\n<Ratty>A whole room full of cheese, maybe? That'd be great..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1001, 0, 29, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>If you travel directly north from here, you'll come across a mysterious tower. I thought it might have been full of treasure..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>But it turned out the harpies were holed up inside. Actually, each and every one of them is a precious treasure to us!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>...do you think that'll work as a pickup line?"])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["55"])
+      ShowTextAttributes(["name_fc1", 0, 0, 2])
+      ShowText(["\\n<Melk>......"])
+      ExitEventProcessing([])
+      Label(["61"])
+      ShowTextAttributes(["mimizu_fc1", 0, 0, 2])
+      ShowText(["\\n<Mimi>......"])
+      ExitEventProcessing([])
+      Label(["73"])
+      ShowTextAttributes(["hiru_fc1", 0, 0, 2])
+      ShowText(["\\n<Hiru>......"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 30, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>Lately, our honey bees are dying off one after another.\nIt's not clear what the cause is. Doesn't seem to be any kind of illness, either."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>What on earth could be happening? Feels like a disaster is on the way."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>You might have already noticed, but you can walk under this tree."])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Middle-Aged Man>Our relationship with the harpies was extremely good. They love our boys to death, after all."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Middle-Aged Man>So I don't think they got mad at us and left or anything. I mean, they even need humans to have children."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Middle-Aged Man>It's depressing not seeing them flapping their wings above us. It was such a common sight just a few months ago..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["72"])
+    ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+    ShowText(["\\n<Mini>I'll do my best to flap my wings for you! I bet you'll love it..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Middle-Aged Man>Um, thanks for your concern, but I'll pass..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1001, 0, 29, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Middle-Aged Man>It's wonderful that the harpies were found. The boys in the village were starting to look really pale."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Middle-Aged Man>There aren't many back in the village yet since they're busy at their own homes, but we should see the skies full of harpies again soon enough."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["82"])
+      ShowTextAttributes(["suzume_fc1", 0, 0, 2])
+      ShowText(["\\n<Chirp>I'm sure they'll come to visit once they've cleaned up. There's so much dust to get rid of after being gone..."])
+      ExitEventProcessing([])
+      Label(["83"])
+      ShowTextAttributes(["hapy_a_fc1", 0, 0, 2])
+      ShowText(["\\n<Reina>After being away for so long, our village is a wreck. I imagine everyone will be back here as soon as things are clean again."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 30, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Middle-aged Man>The Monster Lord declared war, and strange things are happening all over the world... We must work together to get through these tough times."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ConditionalBranch([1, 1011, 0, 3, 2])
+      ShowTextAttributes(["fairy_fc1", 0, 0, 2])
+      ShowText(["\\n<Fairy>Where could all those harpies have gone... Oh, a customer?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["fairy_fc1", 0, 0, 2])
+    ShowText(["\\n<Fairy>I'm the fairy blacksmith and friend of the wind.\nI can craft wind-imbued weapons and armor for you♪"])
+    Script(["call_synthesize(5)"])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>Welcome to the Shaded Church. What can I do for you?"])
+    ShowChoices([["Pray", "Never mind"], 2])
+    When([0, "Pray"])
+      ControlVariables([1002, 1002, 0, 0, 8])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>Well then, let us pray to Ilias. ...there, you should feel a bond drawing you to this place."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>If something were to happen to you on your journey, the bond should lead you back here. May Ilias watch over you..."])
+      Empty([])
+
+    When([1, "Never mind"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>May Ilias watch over you..."])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 29, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>My wife came home! Now we're back to bangin' every night!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Harpy>Dear, not so loud... I'm going to have to bang you tonight for that."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["70"])
+      ShowTextAttributes(["nezumi_fc1", 2, 0, 2])
+      ShowText(["\\n<Ratty>...tch."])
+      ExitEventProcessing([])
+      Label(["72"])
+      ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+      ShowText(["\\n<Mini>Bang...ing? Is something exploding?"])
+      ExitEventProcessing([])
+      Label(["74"])
+      ShowTextAttributes(["usagi_fc1", 1, 0, 2])
+      ShowText(["\\n<Barbun>Oh my, fufufu..."])
+      ExitEventProcessing([])
+      Label(["83"])
+      ShowTextAttributes(["hapy_a_fc1", 0, 0, 2])
+      ShowText(["\\n<Reina>Have fun, you two♪"])
+      ExitEventProcessing([])
+      Label(["105"])
+      ShowTextAttributes(["mimic_fc1", 2, 0, 2])
+      ShowText(["\\n<Minelli>Die in a fire."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 30, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>W-what will we do if the Monster Lord's army attacks us, next...?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Harpy>Don't worry, darling. Us harpies will protect everyone, no matter what."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([168, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Girl>We were getting along so well with our harpy sisters when they disappeared. I'm really worried. I hope they're safe..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Girl>I hope Pii is doing well. I go looking for her every day with my big sister, but we can't find her..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["62"])
+    ShowTextAttributes(["gob_fc1", 3, 0, 2])
+    ShowText(["\\n<Gob>We'll find them for you somehow..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1001, 0, 30, 2])
+      ConditionalBranch([4, 84, 0])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Girl>Ah, Pii!"])
+        ShowTextAttributes(["hapy_bc_fc1", 5, 0, 2])
+        ShowText(["\\n<Pii>I'm sorry for making you worry..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Village Girl>Where did you go this time? It looks like you're out adventuring."])
+        ShowTextAttributes(["hapy_bc_fc1", 3, 0, 2])
+        ShowText(["\\n<Pina>We'll be away from the village a bit longer. Look forward to all the goodies we'll bring back!"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Girl>Pii and her sister were found! I heard they got sick and were stuck in a tower."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Village Girl>Apparently they're still recovering from the sickness in the nearby tower."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["53"])
+      ShowTextAttributes(["slime_fc1", 0, 0, 2])
+      ShowText(["\\n<Lime>That's great news♪"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 31, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Young Girl>Why did the Monster Lord start a war? Does she hate us...?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Village Woman>Not all monsters hate us. The village harpies love us humans. I'm sure we'll all be able to get along someday, so don't be sad."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Girl>We were getting along so well with our harpy sisters when they disappeared. I'm really worried. I hope they're safe..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Girl>I hope Pii is doing well. I go looking for her every day with my big sister, but we can't find her..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["62"])
+    ShowTextAttributes(["gob_fc1", 3, 0, 2])
+    ShowText(["\\n<Gob>We'll find them for you somehow..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([4, 84, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Girl>Ah, Pii!"])
+      ShowTextAttributes(["hapy_bc_fc1", 5, 0, 2])
+      ShowText(["\\n<Pii>I'm sorry for making you worry..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Village Girl>Where did you go this time? It looks like you're out adventuring."])
+      ShowTextAttributes(["hapy_bc_fc1", 3, 0, 2])
+      ShowText(["\\n<Pina>We'll be away from the village a bit longer. Look forward to all the goodies we'll bring back!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Girl>Pii and her sister were found! I heard they got sick and were stuck in a tower."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Girl>Apparently they're still recovering from the sickness in the nearby tower."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["53"])
+    ShowTextAttributes(["slime_fc1", 0, 0, 2])
+    ShowText(["\\n<Lime>That's great news♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Warrior>Are you paying proper attention to your party's elemental weaknesses? You need to be especially careful with party members weak to pleasure."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Warrior>You may be surprised by how much damage they take in battle. If you know a member is weak to elements that an enemy uses, you can swap that member to the reserves."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["68"])
+    ShowTextAttributes(["dragonp_fc1", 2, 0, 2])
+    ShowText(["\\n<Papi>I'm really weak to pleasure... But I'm great at hitting and taking hits!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ShowTextAttributes(["suzume_fc1", 1, 0, 2])
+    ShowText(["\\n<Sparrow Girl>Chirp chirp! We sparrows greet the morning sun!"])
+    ShowTextAttributes(["suzume_fc1", 3, 0, 2])
+    ShowText(["\\n<Sparrow Girl>Huh? It's already noon? I'm so out of it after everything that's happened lately..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["82"])
+    ShowTextAttributes(["suzume_fc1", 0, 0, 2])
+    ShowText(["\\n<Chirp>You better recover fast before another sparrow takes your job."])
+    ExitEventProcessing([])
+    Label(["75"])
+    ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+    ShowText(["\\n<Mary>Morning? Noon? Night? It's always time for booze!"])
+    ExitEventProcessing([])
+    Label(["77"])
+    ShowTextAttributes(["jeid_fc1", 0, 0, 2])
+    ShowText(["\\n<Jaide>I can tell time more accurately than that."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Warrior>They say the blacksmith here specializes in the wind element. I heard he can craft weapons and armor that contain the power of the wind."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Warrior>It doesn't look like he has a shop though. I'm sure he's in this village somewhere, but where?"])
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    ShowTextAttributes(["dog_fc1", 0, 0, 2])
+    ShowText(["\\n<Dog Girl>Woof woof! I love honey!"])
+    ConditionalBranch([4, 60, 0])
+      ShowTextAttributes(["dog_fc1", 2, 0, 2])
+      ShowText(["\\n<Pochi>So we've been defanged and domesticated here too..."])
+      ShowTextAttributes(["dog_fc1", 4, 0, 2])
+      ShowText(["\\n<Pochi>But I'd really like to taste some honey! ♪"])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        ControlVariables([1036, 1036, 1, 0, 1])
+        ConditionalBranch([1, 1036, 0, 9, 1])
+          CallCommonEvent([311])
+          Empty([])
+        Else([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    ShowTextAttributes(["orc_fc1", 1, 0, 2])
+    ShowText(["\\n<Hip>Oink! This is an orc raid! We orcs are attacking Happiness Village!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Oh, hello Hip. You should really visit your mother once in a while."])
+    ShowTextAttributes(["orc_fc1", 2, 0, 2])
+    ShowText(["\\n<Hip>Oh, I forgot this is my hometown..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"amira\", @volume=100, @pitch=100)"])
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      CallCommonEvent([322])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["amira_fc1", 0, 0, 2])
+      ShowText(["\\n<Amira>You've already found me here.\nKeep searching for me elsewhere..."])
+      Empty([])
+
+    BranchEnd([])
+    PlayBGM(["RPG::BGM(@name=\"mura2\", @volume=100, @pitch=100)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    Empty([])

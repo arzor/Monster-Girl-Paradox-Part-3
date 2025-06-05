@@ -1,0 +1,5247 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([0, 2001, 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>The mountains are north of the village! If I don't hurry, Hans might be..."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Empty([])
+
+    Else([])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 7, 23, 48, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([0, 2001, 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>The mountains are north of the village! If I don't hurry, Hans might be..."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Empty([])
+
+    Else([])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 7, 24, 48, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ControlSwitches([5002, 5002, 0])
+    ControlSwitches([5202, 5202, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 8, 23, 17, 4, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([0, 2001, 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>The mountains are just north of here. I'd better hurry straight there for Hans' sake!"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Empty([])
+
+    Else([])
+      ControlSwitches([5002, 5002, 0])
+      ControlSwitches([5202, 5202, 0])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 8, 23, 17, 4, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ShowTextAttributes(["alice_fc5", 1, 0, 2])
+    ShowText(["\\n<Alice>Hold on a minute. I've got something you'll like."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Something I'll like? What is it?"])
+    ShowTextAttributes(["alice_fc5", 1, 0, 2])
+    ShowText(["\\n<Alice>From what I've seen, you seem like the kind of person who's afraid to hurt his enemy. People like that often hold back their true power."])
+    ShowTextAttributes(["alice_fc5", 1, 0, 2])
+    ShowText(["\\n<Alice>I think it'd be useful to give you..."])
+    PlayBGM(["RPG::BGM(@name=\"\", @volume=100, @pitch=100)"])
+    PlaySE(["RPG::SE(@name=\"Skill2\", @pitch=100, @volume=80)"])
+    TintScreen(["Tone(@red=-100.0, @green=-100.0, @blue=-100.0, @gray=0.0)", 30, true])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Time stop!"])
+    ControlSwitches([2014, 2014, 0])
+    Wait([30])
+    ShowPicture([5, "80_nero_st01b", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["nero_fc1", 0, 0, 2])
+    ShowText(["\\n<Nero>The Fallen Sword Angel Halo is too dangerous... Forgive me, but let me hold on to it for now."])
+    ShowTextAttributes(["nero_fc1", 0, 0, 2])
+    ShowText(["\\n<Nero>Pardon the interruption..."])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 60, true])
+    ErasePicture([5])
+    ControlSwitches([2014, 2014, 1])
+    TintScreen(["Tone(@red=0.0, @green=0.0, @blue=0.0, @gray=0.0)", 30, true])
+    PlayBGM(["RPG::BGM(@name=\"field1\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["alice_fc5", 0, 0, 2])
+    ShowText(["\\n<Alice>...this sword... Huh? Where is it? That's odd. I could have sworn I brought it..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Alice rummages through her item bag."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Did you lose it?"])
+    ShowTextAttributes(["alice_fc5", 6, 0, 2])
+    ShowText(["\\n<Alice>Don't be an idiot! Of course I didn't! Weird, where did it go..."])
+    ShowTextAttributes(["alice_fc5", 3, 0, 2])
+    ShowText(["\\n<Alice>...I lost it."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Well, it happens to us all. It's no big deal."])
+    ShowTextAttributes(["alice_fc5", 2, 0, 2])
+    ShowText(["\\n<Alice>It hurts my honor to promise you something and then fail to deliver! I'll have to give you something of equal value to make up for it!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>I thought the issue was with me not fighting at full strength because I'm afraid to hurt someone. How does giving me something else help?"])
+    ShowTextAttributes(["alice_fc5", 2, 0, 2])
+    ShowText(["\\n<Alice>Don't worry about that, just beat them up! Monsters are tough and won't die that easily."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Alice yells at me while rummaging through her bag again."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>That's not very reassuring..."])
+    ShowTextAttributes(["alice_fc5", 0, 0, 2])
+    ShowText(["\\n<Alice>It'll be fine as long as you hurt them enough that they can't fight back. We monsters value our lives too and won't fight to the death or anything."])
+    ShowTextAttributes(["alice_fc5", 1, 0, 2])
+    ShowText(["\\n<Alice>...ah, here we are. This little thing is just as valuable as the Angel Halo."])
+    ShowTextAttributes(["alice_fc5", 7, 0, 2])
+    ShowText(["\\n<Alice>Ta-da! Pocket Monster Lord's Castle♪"])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ChangeItems([501, 0, 0, 1])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>It's only a model..."])
+    ShowTextAttributes(["alice_fc5", 1, 0, 2])
+    ShowText(["\\n<Alice>It's not just any model. Here, press this button."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Whoooooooa! I-it's drawing me in...!"])
+    ControlSwitches([5001, 5001, 0])
+    ControlSwitches([5241, 5241, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 126, 15, 14, 2, 1])
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Where are we!?"])
+    ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+    ShowText(["\\n<Sonya>Inside the miniature castle, I guess?"])
+    ShowTextAttributes(["alice_fc5", 1, 0, 2])
+    ShowText(["\\n<Alice>Huhu, this castle can accommodate hundreds of people, which makes it ideal to use as a base."])
+    ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+    ShowText(["\\n<Sonya>Wow... I'm starting to believe you really are the Monster Lord."])
+    ShowTextAttributes(["alice_fc5", 1, 0, 2])
+    ShowText(["\\n<Alice>I told you so. Come, let's have a look inside."])
+    ControlSwitches([2013, 2013, 0])
+    Empty([])
+
+  Page 1
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["\\n<Ilias>Luka, hold on a moment. Earlier, while I was engaged with my heroic life-or-death struggle with the Monster Lord..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>......"])
+    ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+    ShowText(["\\n<Ilias>I reached down her breast pocket and swiped an interesting object from inside. Take a look at this."])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ChangeItems([501, 0, 0, 1])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Huh? A model of a castle?"])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["\\n<Ilias>Considering the Monster Lord was carrying it around with her, it has to be a magical item. Here, give this button a press."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Whoooooooa! I-it's drawing me in...!"])
+    ControlSwitches([5001, 5001, 0])
+    ControlSwitches([5241, 5241, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 126, 15, 14, 2, 1])
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Where are we...?"])
+    ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+    ShowText(["\\n<Sonya>Inside that miniature castle, I guess?"])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["\\n<Ilias>I see, so that's what it's for. It may look like a toy, but we can probably fit thousands in here."])
+    ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+    ShowText(["\\n<Sonya>Thousands... What an amazing magical artifact! I can't believe she had this. Was that girl really the Monster Lord?"])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["\\n<Ilias>Shall we take a peek inside? Be on guard. If any monsters appear, cut them down without mercy."])
+    ControlSwitches([2013, 2013, 0])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ControlSwitches([5299, 5299, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 123, 17, 58, 8, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ConditionalBranch([0, 2049, 0])
+      ChangeMapDisplay([0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka's party waits outside as he enters the tent alone..."])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      ChangePlayerFollowers([1])
+      TransferPlayer([0, 3, 12, 12, 8, 0])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The tent is empty, there's no one inside..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ControlSwitches([5262, 5262, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 289, 21, 45, 8, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ControlSwitches([5300, 5300, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 125, 68, 30, 4, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ControlSwitches([5301, 5301, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 127, 68, 68, 8, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["～ Lost Woods ～"])
+    ShowText(["Extremely Dangerous!"])
+    ShowText(["Novice adventurers: DO NOT ENTER!"])
+    ConditionalBranch([0, 1525, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>I was always told never to step foot into this forest. If we don't have any business inside, perhaps we'd better not enter..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    CallCommonEvent([301])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["～ Lost Woods ～"])
+    ShowText(["Extremely Dangerous!"])
+    ShowText(["Novice adventurers: DO NOT ENTER!"])
+    ConditionalBranch([0, 1525, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>I was always told never to step foot into this forest. If we don't have any business inside, perhaps we'd better not enter..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ControlSwitches([5254, 5254, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 318, 17, 28, 8, 0])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 423, 14, 1, 2, 0])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ControlSwitches([5018, 5018, 0])
+    ControlSwitches([5218, 5218, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([1, 1001, 0, 29, 0])
+      ConditionalBranch([0, 2163, 1])
+        ControlSwitches([2239, 2239, 1])
+        TransferPlayer([0, 723, 44, 82, 8, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    TransferPlayer([0, 476, 44, 82, 8, 0])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ControlSwitches([5018, 5018, 0])
+    ControlSwitches([5218, 5218, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([1, 1001, 0, 29, 0])
+      ConditionalBranch([0, 2163, 1])
+        ControlSwitches([2239, 2239, 1])
+        TransferPlayer([0, 723, 44, 82, 8, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    TransferPlayer([0, 476, 44, 82, 8, 0])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ControlSwitches([31, 35, 1])
+    ControlSwitches([2117, 2117, 1])
+    ControlSwitches([2118, 2118, 1])
+    ControlSwitches([5307, 5307, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 379, 38, 48, 8, 0])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ControlSwitches([5294, 5294, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 394, 20, 75, 8, 0])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ControlSwitches([5294, 5294, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 395, 55, 76, 8, 0])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    CallCommonEvent([378])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ConditionalBranch([0, 2001, 0])
+      ChangeEncounter([1])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([5298, 5298, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 12, 10, 58, 8, 0])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>The mountains are north of the village! If I don't hurry, Hans might be..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["～ Iliasville Mountains ～"])
+    ShowText(["The Slime Girls live here peacefully."])
+    ShowText(["Please do not disturb their home."])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ControlSwitches([5261, 5261, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 62, 30, 3, 2, 0])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ControlSwitches([5004, 5004, 0])
+    ControlSwitches([5203, 5203, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 29, 8, 57, 8, 0])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ControlSwitches([5004, 5004, 0])
+    ControlSwitches([5203, 5203, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 29, 8, 57, 8, 0])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ControlSwitches([5007, 5007, 0])
+    ControlSwitches([5206, 5206, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 341, 34, 58, 8, 0])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ControlSwitches([5007, 5007, 0])
+    ControlSwitches([5206, 5206, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 341, 34, 58, 8, 0])
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ControlSwitches([5010, 5010, 0])
+    ControlSwitches([5209, 5209, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 35, 48, 22, 4, 0])
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ControlSwitches([5006, 5006, 0])
+    ControlSwitches([5205, 5205, 0])
+    ControlSwitches([5402, 5402, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 51, 6, 32, 8, 0])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ControlSwitches([5006, 5006, 0])
+    ControlSwitches([5205, 5205, 0])
+    ControlSwitches([5402, 5402, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 51, 6, 32, 8, 0])
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ControlSwitches([5011, 5011, 0])
+    ControlSwitches([5210, 5210, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 57, 1, 18, 6, 0])
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ConditionalBranch([1, 1019, 0, 2, 1])
+      ControlSwitches([5012, 5012, 0])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([5211, 5211, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 139, 22, 39, 8, 0])
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ConditionalBranch([1, 1019, 0, 2, 1])
+      ControlSwitches([5012, 5012, 0])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([5211, 5211, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 139, 22, 39, 8, 0])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 141, 25, 1, 2, 0])
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 141, 25, 1, 2, 0])
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    ControlSwitches([5014, 5014, 0])
+    ControlSwitches([5213, 5213, 0])
+    ChangeMapDisplay([0])
+    ConditionalBranch([1, 1028, 0, 5, 2])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 11, 35, 65, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1028, 0, 6, 0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      FadeoutScreen([])
+      TransferPlayer([0, 613, 1, 0, 8, 2])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1028, 0, 7, 1])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 621, 35, 65, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    ControlSwitches([5015, 5015, 0])
+    ControlSwitches([5214, 5214, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([1, 1001, 0, 29, 0])
+      ConditionalBranch([0, 2162, 1])
+        TransferPlayer([0, 722, 54, 68, 8, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    TransferPlayer([0, 27, 54, 68, 8, 0])
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    ControlSwitches([5015, 5015, 0])
+    ControlSwitches([5214, 5214, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([1, 1001, 0, 29, 0])
+      ConditionalBranch([0, 2162, 1])
+        TransferPlayer([0, 722, 54, 68, 8, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    TransferPlayer([0, 27, 54, 68, 8, 0])
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([5016, 5016, 0])
+    ControlSwitches([5216, 5216, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 13, 1, 15, 6, 0])
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    CallCommonEvent([336])
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ControlSwitches([5017, 5017, 0])
+    ControlSwitches([5217, 5217, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 47, 48, 20, 4, 0])
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([5020, 5020, 0])
+    ControlSwitches([5220, 5220, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 224, 29, 79, 8, 0])
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([5020, 5020, 0])
+    ControlSwitches([5220, 5220, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 224, 29, 79, 8, 0])
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ControlSwitches([5022, 5022, 0])
+    ControlSwitches([5223, 5223, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 39, 1, 19, 6, 0])
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ControlSwitches([5022, 5022, 0])
+    ControlSwitches([5223, 5223, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 39, 1, 19, 6, 0])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ControlSwitches([5005, 5005, 0])
+    ControlSwitches([5204, 5204, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 235, 25, 38, 8, 0])
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ConditionalBranch([1, 1054, 0, 4, 2])
+      CallCommonEvent([326])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 283, 25, 46, 8, 0])
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ControlSwitches([5024, 5024, 0])
+    ControlSwitches([5225, 5225, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 25, 16, 38, 8, 0])
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ControlSwitches([5024, 5024, 0])
+    ControlSwitches([5225, 5225, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 25, 16, 38, 8, 0])
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    ControlVariables([1001, 1001, 0, 0, 35])
+    ControlVariables([21, 21, 0, 3, 7, 0, 0])
+    ControlVariables([22, 22, 0, 3, 5, -1, 0])
+    ControlVariables([23, 23, 0, 3, 5, -1, 1])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>...Luka, why don't we summarize what we've learned so far? I think we need to sort our information and review the current situation."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Yeah, I guess you're right..."])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Shocking facts were revealed to us at the chaosized Ilias Temple. The birth of a third goddess, and the existence of worlds ruled by the Goddess of Creation and the Dark Goddess."])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["And then my father just killed Alice's mother, Alipheese the 15th. My brain just can't keep up with these sudden turns of events."])
+      ShowText([""])
+      ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+      ShowText(["\\n<Nuruko>Kyuuu! Kyuuu!"])
+      ShowText([""])
+      ShowTextAttributes(["morrigan_fc1", 2, 0, 2])
+      ShowText(["\\n<Morrigan>We also need to figure out who this girl really is. Just what exactly is she...?"])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Nuruko's power neutralized the chaos and brought that situation under control... We need to take that into consideration as well."])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["And so we decide to hold a strategy meeting..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Luka... Why don't we hold a strategy meeting now?\nI feel that we need to sort out what we have learned thus far."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Yeah, I guess you're right..."])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Shocking facts were revealed to us at the chaosized Ilias Temple. The birth of a third goddess, and the existence of worlds ruled by the Goddess of Creation and the Dark Goddess."])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["And--"])
+      FadeoutBGM([1])
+      TintScreen(["Tone(@red=0.0, @green=0.0, @blue=0.0, @gray=255.0)", 30, true])
+      Wait([30])
+      PlaySE(["RPG::SE(@name=\"mon_kodou\", @pitch=100, @volume=100)"])
+      ShowPicture([7, "iv_adramelek1", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([7, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      MovePicture([7, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+      ErasePicture([7])
+      TintScreen(["Tone(@red=0.0, @green=0.0, @blue=0.0, @gray=0.0)", 30, true])
+      PlayBGM(["RPG::BGM(@name=\"field3\", @volume=100, @pitch=100)"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>What was that? Something feels stuck in my mind."])
+      ShowText([""])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>What's wrong, Luka...?"])
+      ShowText([""])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>No, it's nothing..."])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["In any case, my brain just can't keep up with these sudden turns of events. And so we decide to hold a strategy meeting..."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    FadeoutScreen([])
+    Wait([120])
+    ConditionalBranch([12, "$game_player.in_ship?"])
+      Script(["forced_get_off_vehicle"])
+      Empty([])
+
+    BranchEnd([])
+    ChangeTransparency([0])
+    ControlSwitches([31, 31, 1])
+    TransferPlayer([0, 586, 6, 6, 0, 2])
+    FadeinScreen([])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    ConditionalBranch([1, 1136, 0, 2, 2])
+      ControlSwitches([5290, 5290, 0])
+      ControlSwitches([100, 100, 0])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 93, 20, 39, 8, 0])
+      Empty([])
+
+    Else([])
+      ControlSwitches([100, 100, 0])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 205, 20, 39, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    ControlSwitches([39, 39, 1])
+    ControlSwitches([5026, 5026, 0])
+    ControlSwitches([5227, 5227, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 53, 19, 58, 8, 0])
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    ControlSwitches([39, 39, 1])
+    ControlSwitches([5026, 5026, 0])
+    ControlSwitches([5227, 5227, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 53, 19, 58, 8, 0])
+    Empty([])
+
+CommonEvent 57
+Name = "EV057"
+
+  Page 0
+    ControlSwitches([5302, 5302, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 131, 19, 1, 2, 0])
+    Empty([])
+
+CommonEvent 58
+Name = "EV058"
+
+  Page 0
+    ControlSwitches([5315, 5315, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 237, 14, 28, 8, 0])
+    Empty([])
+
+CommonEvent 59
+Name = "EV059"
+
+  Page 0
+    ControlSwitches([5031, 5031, 0])
+    ControlSwitches([5232, 5232, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([1, 1001, 0, 29, 0])
+      ConditionalBranch([0, 2164, 1])
+        TransferPlayer([0, 721, 47, 57, 8, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    TransferPlayer([0, 37, 47, 57, 8, 0])
+    Empty([])
+
+CommonEvent 60
+Name = "EV060"
+
+  Page 0
+    ControlSwitches([5031, 5031, 0])
+    ControlSwitches([5232, 5232, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([1, 1001, 0, 29, 0])
+      ConditionalBranch([0, 2164, 1])
+        TransferPlayer([0, 721, 47, 57, 8, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    TransferPlayer([0, 37, 47, 57, 8, 0])
+    Empty([])
+
+CommonEvent 61
+Name = "EV061"
+
+  Page 0
+    ControlSwitches([5033, 5033, 0])
+    ControlSwitches([5234, 5234, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([1, 1065, 0, 2, 2])
+      TransferPlayer([0, 719, 28, 58, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1065, 0, 3, 1])
+      TransferPlayer([0, 45, 28, 58, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 62
+Name = "EV062"
+
+  Page 0
+    ControlSwitches([5033, 5033, 0])
+    ControlSwitches([5234, 5234, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([1, 1065, 0, 2, 2])
+      TransferPlayer([0, 719, 28, 58, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1065, 0, 3, 1])
+      TransferPlayer([0, 45, 28, 58, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 63
+Name = "EV063"
+
+  Page 0
+    ControlSwitches([5034, 5034, 0])
+    ControlSwitches([5235, 5235, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 23, 29, 58, 8, 0])
+    Empty([])
+
+CommonEvent 64
+Name = "EV064"
+
+  Page 0
+    ControlSwitches([5034, 5034, 0])
+    ControlSwitches([5235, 5235, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 23, 29, 58, 8, 0])
+    Empty([])
+
+CommonEvent 65
+Name = "EV065"
+
+  Page 0
+    ControlSwitches([5032, 5032, 0])
+    ControlSwitches([5233, 5233, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 143, 32, 58, 8, 0])
+    Empty([])
+
+CommonEvent 66
+Name = "EV066"
+
+  Page 0
+    ControlSwitches([5032, 5032, 0])
+    ControlSwitches([5233, 5233, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 143, 32, 58, 8, 0])
+    Empty([])
+
+CommonEvent 67
+Name = "EV067"
+
+  Page 0
+    ControlSwitches([5029, 5029, 0])
+    ControlSwitches([5230, 5230, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 55, 29, 57, 8, 0])
+    Empty([])
+
+CommonEvent 68
+Name = "EV068"
+
+  Page 0
+    ControlVariables([1002, 1002, 0, 0, 40])
+    ControlSwitches([5039, 5039, 0])
+    ControlSwitches([5240, 5240, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 41, 38, 58, 8, 0])
+    Empty([])
+
+CommonEvent 69
+Name = "EV069"
+
+  Page 0
+    ControlVariables([1002, 1002, 0, 0, 40])
+    ControlSwitches([5039, 5039, 0])
+    ControlSwitches([5240, 5240, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 41, 38, 58, 8, 0])
+    Empty([])
+
+CommonEvent 70
+Name = "EV070"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([5041, 5041, 0])
+    ControlSwitches([5253, 5253, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 312, 19, 37, 8, 0])
+    PlayBGM(["RPG::BGM(@name=\"scene_sinpi\", @volume=100, @pitch=100)"])
+    Empty([])
+
+CommonEvent 71
+Name = "EV071"
+
+  Page 0
+    ControlSwitches([5263, 5263, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 81, 59, 9, 2, 0])
+    Empty([])
+
+CommonEvent 72
+Name = "EV072"
+
+  Page 0
+    ControlSwitches([5268, 5268, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 257, 13, 20, 8, 0])
+    Empty([])
+
+CommonEvent 73
+Name = "EV073"
+
+  Page 0
+    ControlSwitches([5296, 5296, 0])
+    ControlSwitches([100, 100, 0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 320, 26, 5, 2, 0])
+    Empty([])
+
+CommonEvent 74
+Name = "EV074"
+
+  Page 0
+    ControlSwitches([5263, 5263, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 81, 11, 63, 0, 0])
+    Empty([])
+
+CommonEvent 75
+Name = "EV075"
+
+  Page 0
+    ConditionalBranch([1, 1011, 0, 1, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The entrance to the tower is closed from the inside."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1011, 0, 2, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The entrance to the tower is closed from the inside."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Open up! I've brought the medicine you need!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["After a brief silence, the door opens up!"])
+      ControlSwitches([5265, 5265, 0])
+      ControlSwitches([100, 100, 0])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 86, 14, 31, 8, 0])
+      ShowPicture([5, "80_hapy_a_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["hapy_a_fc1", 0, 0, 2])
+      ShowText(["\\n<Harpy>......"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Here's the medicine. If you take this, you should be cured."])
+      ShowPicture([5, "80_hapy_a_st02", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["hapy_a_fc1", 1, 0, 2])
+      ShowText(["\\n<Harpy>Forget the medicine, let's have sex!"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Gah! Is she already too far gone?! I guess we'll have to restrain her for now!"])
+      ConditionalBranch([4, 62, 0])
+        ShowTextAttributes(["gob_fc1", 0, 0, 2])
+        ShowText(["\\n<Gob>A club to her head will set her straight!"])
+        Empty([])
+      BranchEnd([])
+      ErasePicture([5])
+      BattleProcessing([0, 69, false, false])
+      ShowPicture([5, "80_hapy_a_st03", 0, 0, 0, 0, 100, 100, 255, 0])
+      ConditionalBranch([4, 68, 0])
+        ShowTextAttributes(["dragonp_fc1", 2, 0, 2])
+        ShowText(["\\n<Papi>We won... but did we overdo it?"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["hapy_a_fc1", 2, 0, 2])
+      ShowText(["\\n<Harpy>You meanie..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>S-sorry about that. Here, eat this."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gives the Harpy a bit of the Fruit of the World Tree."])
+      ShowTextAttributes(["hapy_a_fc1", 2, 0, 2])
+      ShowText(["\\n<Harpy>Nnngh... H-huh?"])
+      ShowPicture([5, "80_hapy_a_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["hapy_a_fc1", 0, 0, 2])
+      ShowText(["\\n<Harpy>All the naughty feelings are gone!"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Whew, looks like it worked."])
+      ConditionalBranch([4, 79, 0])
+        ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+        ShowText(["\\n<Nuruko>Kyu!"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["hapy_a_fc1", 0, 0, 2])
+      ShowText(["\\n<Harpy>Thank you for bringing us this medicine. Now we need to divide it up and give it to everyone."])
+      ShowPicture([5, "80_hapy_a_st03", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["hapy_a_fc1", 2, 0, 2])
+      ShowText(["\\n<Harpy>The Queen was affected too, though. She's holed up at the top of the tower, and no one has been able to get to her."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Leave her to us then. We'll make sure she gets the medicine too."])
+      ShowPicture([5, "80_hapy_a_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["hapy_a_fc1", 0, 0, 2])
+      ShowText(["\\n<Harpy>Be careful. Everyone's extremely horny from the disease. They may appear perfectly normal, but their minds are clouded with lust."])
+      ShowTextAttributes(["hapy_a_fc1", 0, 0, 2])
+      ShowText(["\\n<Harpy>I'll start handing it out to everyone I can find. Good luck with the Queen!"])
+      PlaySE(["RPG::SE(@name=\"Wind1\", @pitch=100, @volume=80)"])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+      ErasePicture([5])
+      ControlVariables([1011, 1011, 0, 0, 3])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The harpy leaps off the ground and flies away!"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>All right, we need to go find the Queen. To the top floor, I guess..."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>What a pain. I suppose this isn't something the Monster Lord can ignore though."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>Really now, we're not done yet? I suppose leaving them alone could end up being an even bigger bother though."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 79, 0])
+        ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+        ShowText(["\\n<Nuruko>Kyu kyu!"])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1011, 0, 3, 1])
+      ControlSwitches([100, 100, 0])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 86, 14, 31, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 76
+Name = "EV076"
+
+  Page 0
+    ControlSwitches([5267, 5267, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 286, 20, 50, 8, 0])
+    Empty([])
+
+CommonEvent 77
+Name = "EV077"
+
+  Page 0
+    ControlSwitches([5266, 5266, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 98, 17, 34, 8, 0])
+    Empty([])
+
+CommonEvent 78
+Name = "EV078"
+
+  Page 0
+    ControlSwitches([11, 20, 1])
+    ControlSwitches([5269, 5269, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 69, 5, 40, 8, 0])
+    Empty([])
+
+CommonEvent 79
+Name = "EV079"
+
+  Page 0
+    ControlSwitches([5021, 5021, 0])
+    ControlSwitches([5222, 5222, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 43, 58, 30, 4, 0])
+    Empty([])
+
+CommonEvent 80
+Name = "EV080"
+
+  Page 0
+    ControlSwitches([5009, 5009, 0])
+    ControlSwitches([5244, 5244, 0])
+    ChangeMapDisplay([0])
+    ConditionalBranch([2, "A", 0])
+      ConditionalBranch([4, 533, 0])
+        ControlVariables([12, 12, 0, 0, 1])
+        Empty([])
+      Else([])
+        ControlVariables([12, 12, 0, 2, 1, 5])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    Else([])
+      ControlVariables([12, 12, 0, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    ControlSelfSwitch(["A", 0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 60, 20, 31, 8, 0])
+    Empty([])
+
+CommonEvent 81
+Name = "EV081"
+
+  Page 0
+    ControlSwitches([5023, 5023, 0])
+    ControlSwitches([5224, 5224, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([1, 1051, 0, 5, 1])
+      TransferPlayer([0, 667, 35, 38, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    TransferPlayer([0, 279, 35, 38, 8, 0])
+    Empty([])
+
+CommonEvent 82
+Name = "EV082"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["It's barricaded by a boulder and can't be entered."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Empty([])
+
+    Else([])
+      ControlSwitches([5276, 5276, 0])
+      ControlSwitches([100, 100, 0])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 71, 5, 30, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 83
+Name = "EV083"
+
+  Page 0
+    ControlSwitches([5303, 5303, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 645, 37, 98, 8, 0])
+    Empty([])
+
+CommonEvent 84
+Name = "EV084"
+
+  Page 0
+    ControlSwitches([31, 33, 1])
+    ControlSwitches([5304, 5304, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 128, 27, 68, 8, 0])
+    Empty([])
+
+CommonEvent 85
+Name = "EV085"
+
+  Page 0
+    ControlSwitches([5272, 5272, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 64, 42, 59, 8, 0])
+    Empty([])
+
+CommonEvent 86
+Name = "EV086"
+
+  Page 0
+    ControlSwitches([5272, 5272, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 64, 39, 1, 2, 0])
+    Empty([])
+
+CommonEvent 87
+Name = "EV087"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 45, 1])
+      ControlSwitches([31, 31, 1])
+      ControlSwitches([100, 100, 0])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 101, 19, 38, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1026, 0, 0, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The entrance to the tower is closed from the inside."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1026, 0, 1, 0])
+      ControlSwitches([5293, 5293, 0])
+      ControlSwitches([100, 100, 0])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 101, 19, 38, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1026, 0, 2, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The entrance to the tower is closed from the inside."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 88
+Name = "EV088"
+
+  Page 0
+    ControlSwitches([5236, 5236, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 152, 2, 57, 6, 0])
+    Empty([])
+
+CommonEvent 89
+Name = "EV089"
+
+  Page 0
+    ControlSwitches([5273, 5273, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 159, 17, 40, 8, 0])
+    Empty([])
+
+CommonEvent 90
+Name = "EV090"
+
+  Page 0
+    ControlSwitches([5019, 5019, 0])
+    ControlSwitches([5219, 5219, 0])
+    ControlSwitches([5403, 5403, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 53, 118, 8, 0])
+    Empty([])
+
+CommonEvent 91
+Name = "EV091"
+
+  Page 0
+    ConditionalBranch([1, 1029, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The door is closed shut..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1029, 0, 5, 1])
+      ControlSwitches([5274, 5274, 0])
+      ControlSwitches([100, 100, 0])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 105, 21, 42, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2092, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The door is closed shut..."])
+      ConditionalBranch([1, 1029, 0, 3, 0])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>They said Lucia's base was in the village. Just up the hill to the east of the inn, if I remember correctly."])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ControlSwitches([5274, 5274, 0])
+      ControlSwitches([100, 100, 0])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 105, 21, 42, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 92
+Name = "EV092"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 329, 15, 28, 8, 0])
+    Empty([])
+
+CommonEvent 93
+Name = "EV093"
+
+  Page 0
+    ControlSwitches([5315, 5315, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 237, 14, 28, 8, 0])
+    Empty([])
+
+CommonEvent 94
+Name = "EV094"
+
+  Page 0
+    ControlSwitches([5280, 5280, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 150, 19, 91, 8, 0])
+    Empty([])
+
+CommonEvent 95
+Name = "EV095"
+
+  Page 0
+    ControlSwitches([5317, 5317, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 135, 1, 37, 6, 0])
+    Empty([])
+
+CommonEvent 96
+Name = "EV096"
+
+  Page 0
+    ControlSwitches([5280, 5280, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 204, 36, 13, 8, 0])
+    Empty([])
+
+CommonEvent 97
+Name = "EV097"
+
+  Page 0
+    ControlSwitches([5028, 5028, 0])
+    ControlSwitches([5229, 5229, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 132, 68, 49, 4, 0])
+    Empty([])
+
+CommonEvent 98
+Name = "EV098"
+
+  Page 0
+    ControlSwitches([5310, 5310, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 308, 1, 35, 6, 0])
+    Empty([])
+
+CommonEvent 99
+Name = "EV099"
+
+  Page 0
+    ControlSwitches([5315, 5315, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 250, 4, 1, 2, 0])
+    Empty([])
+
+CommonEvent 100
+Name = "EV100"
+
+  Page 0
+    ControlSwitches([5287, 5287, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 328, 15, 6, 2, 0])
+    Empty([])
+
+CommonEvent 101
+Name = "EV101"
+
+  Page 0
+    ControlSwitches([5292, 5292, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 16, 8, 38, 8, 0])
+    Empty([])
+
+CommonEvent 102
+Name = "EV102"
+
+  Page 0
+    ControlSwitches([5312, 5312, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 124, 27, 58, 8, 0])
+    Empty([])
+
+CommonEvent 103
+Name = "EV103"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    ControlSwitches([5252, 5252, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 19, 1, 8, 6, 0])
+    Empty([])
+
+CommonEvent 104
+Name = "EV104"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([1, 1076, 0, 5, 2])
+      TransferPlayer([0, 598, 8, 58, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1076, 0, 6, 1])
+      TransferPlayer([0, 136, 8, 58, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 105
+Name = "EV105"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([1, 1076, 0, 5, 2])
+      TransferPlayer([0, 598, 8, 58, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1076, 0, 6, 1])
+      TransferPlayer([0, 136, 8, 58, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 106
+Name = "EV106"
+
+  Page 0
+    CallCommonEvent([378])
+    Empty([])
+
+CommonEvent 107
+Name = "EV107"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 253, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 108
+Name = "EV108"
+
+  Page 0
+    ControlSwitches([5036, 5036, 0])
+    ControlSwitches([5316, 5316, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 415, 50, 79, 8, 0])
+    Empty([])
+
+CommonEvent 109
+Name = "EV109"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 15, 14, 38, 8, 0])
+    Empty([])
+
+CommonEvent 110
+Name = "EV110"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 151, 37, 68, 8, 0])
+    Empty([])
+
+CommonEvent 111
+Name = "EV111"
+
+  Page 0
+    ControlSwitches([5309, 5309, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 134, 45, 68, 8, 0])
+    Empty([])
+
+CommonEvent 112
+Name = "EV112"
+
+  Page 0
+    ControlSwitches([5314, 5314, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 130, 11, 48, 8, 0])
+    Empty([])
+
+CommonEvent 113
+Name = "EV113"
+
+  Page 0
+    ControlSwitches([5308, 5308, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 129, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 114
+Name = "EV114"
+
+  Page 0
+    ControlSwitches([5021, 5021, 0])
+    ControlSwitches([5222, 5222, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 43, 58, 30, 4, 0])
+    Empty([])
+
+CommonEvent 115
+Name = "EV115"
+
+  Page 0
+    ControlSwitches([5019, 5019, 0])
+    ControlSwitches([5219, 5219, 0])
+    ControlSwitches([5403, 5403, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 53, 118, 8, 0])
+    Empty([])
+
+CommonEvent 116
+Name = "EV116"
+
+  Page 0
+    ControlSwitches([5315, 5315, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 250, 4, 1, 2, 0])
+    Empty([])
+
+CommonEvent 117
+Name = "EV117"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["～ Cave of Trials ～"])
+    ShowText(["Soldier enlistment testing site"])
+    Empty([])
+
+CommonEvent 118
+Name = "EV118"
+
+  Page 0
+    CallCommonEvent([336])
+    Empty([])
+
+CommonEvent 119
+Name = "EV119"
+
+  Page 0
+    ControlSwitches([5207, 5207, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 223, 10, 48, 8, 0])
+    Empty([])
+
+CommonEvent 120
+Name = "EV120"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([100, 100, 0])
+    ControlSwitches([5246, 5246, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 343, 19, 38, 8, 0])
+    Empty([])
+
+CommonEvent 121
+Name = "EV121"
+
+  Page 0
+    ControlSwitches([5306, 5306, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 307, 1, 46, 6, 0])
+    Empty([])
+
+CommonEvent 122
+Name = "EV122"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([100, 100, 0])
+    ControlSwitches([5246, 5246, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 343, 19, 38, 8, 0])
+    Empty([])
+
+CommonEvent 123
+Name = "EV123"
+
+  Page 0
+    ControlSwitches([5275, 5275, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 17, 24, 3, 2, 0])
+    Empty([])
+
+CommonEvent 124
+Name = "EV124"
+
+  Page 0
+    ControlSwitches([5277, 5277, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([0, 2149, 0])
+      TransferPlayer([0, 703, 24, 53, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2148, 0])
+      TransferPlayer([0, 231, 24, 53, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 125
+Name = "EV125"
+
+  Page 0
+    ControlSwitches([5282, 5282, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 68, 9, 5, 2, 0])
+    Empty([])
+
+CommonEvent 126
+Name = "EV126"
+
+  Page 0
+    ControlSwitches([5295, 5295, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 296, 25, 46, 8, 0])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    Empty([])
+
+CommonEvent 127
+Name = "EV127"
+
+  Page 0
+    ControlSwitches([5288, 5288, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 293, 32, 46, 8, 0])
+    Empty([])
+
+CommonEvent 128
+Name = "EV128"
+
+  Page 0
+    ControlSwitches([5288, 5288, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 293, 32, 46, 8, 0])
+    Empty([])
+
+CommonEvent 129
+Name = "EV129"
+
+  Page 0
+    ControlSwitches([5030, 5030, 0])
+    ControlSwitches([5231, 5231, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 49, 29, 57, 8, 0])
+    Empty([])
+
+CommonEvent 130
+Name = "ガルダ着陸防止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 131
+Name = "EV131"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>The mountains are north of the village! If I don't hurry, Hans might be..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Empty([])
+
+CommonEvent 132
+Name = "EV132"
+
+  Page 0
+    ConditionalBranch([1, 1063, 0, 1, 2])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Right now, Gold Fort will be under heavy guard.\nIt is not such a good idea to go there right now."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>Currently, Gold Fort must be in a high state of alert. We must not get too close for now."])
+        Empty([])
+      BranchEnd([])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([5285, 5285, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 713, 10, 13, 8, 0])
+    Empty([])
+
+CommonEvent 133
+Name = "EV133"
+
+  Page 0
+    ConditionalBranch([1, 1063, 0, 1, 2])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Right now, Gold Fort will be under heavy guard.\nIt is not such a good idea to go there right now."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>Currently, Gold Fort must be in a high state of alert. We must not get too close for now."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([5285, 5285, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 713, 10, 13, 8, 0])
+    Empty([])
+
+CommonEvent 134
+Name = "EV134"
+
+  Page 0
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>We probably won't be able to go inside Esta if we head there right now. I think we should first go see the Queen of Grand Noah."])
+      ShowText([""])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>Either way, I won't stop you.\nIf you want to go further, it's your call."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Even if we head towards Esta now, we most certainly won't be able to go inside. We must first request an audience with the Queen of Grand Noah."])
+      ShowText([""])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>However, I shall not step in your way if you want to go further... You must not forget our objective, though."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 135
+Name = "EV135"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 61, 20, 37, 8, 0])
+    Empty([])
+
+CommonEvent 136
+Name = "EV136"
+
+  Page 0
+    ControlSwitches([5305, 5305, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 133, 1, 39, 6, 0])
+    Empty([])
+
+CommonEvent 137
+Name = "EV137"
+
+  Page 0
+    ConditionalBranch([1, 1054, 0, 4, 2])
+      CallCommonEvent([326])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 283, 25, 46, 8, 0])
+    Empty([])
+
+CommonEvent 138
+Name = "EV138"
+
+  Page 0
+    ControlSwitches([5291, 5291, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 304, 25, 49, 8, 0])
+    Empty([])
+
+CommonEvent 139
+Name = "EV139"
+
+  Page 0
+    ControlSwitches([5264, 5264, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 234, 15, 29, 8, 0])
+    Empty([])
+
+CommonEvent 140
+Name = "EV140"
+
+  Page 0
+    ControlSwitches([5276, 5276, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 71, 17, 8, 2, 0])
+    Empty([])
+
+CommonEvent 141
+Name = "EV141"
+
+  Page 0
+    ControlSwitches([5286, 5286, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 266, 39, 78, 8, 0])
+    Empty([])
+
+CommonEvent 142
+Name = "EV142"
+
+  Page 0
+    ControlSwitches([5281, 5281, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 364, 10, 18, 8, 0])
+    Empty([])
+
+CommonEvent 143
+Name = "EV143"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 253, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 144
+Name = "EV144"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 253, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 145
+Name = "EV145"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 253, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 146
+Name = "EV146"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 253, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 147
+Name = "EV147"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 253, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 148
+Name = "EV148"
+
+  Page 0
+    ControlSwitches([5311, 5311, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 309, 24, 48, 8, 0])
+    Empty([])
+
+CommonEvent 149
+Name = "EV149"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 253, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 150
+Name = "EV150"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 253, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 151
+Name = "EV151"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 253, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 152
+Name = "EV152"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 253, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 153
+Name = "EV153"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 423, 14, 1, 2, 0])
+    Empty([])
+
+CommonEvent 154
+Name = "EV154"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 423, 14, 1, 2, 0])
+    Empty([])
+
+CommonEvent 155
+Name = "EV155"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 423, 14, 1, 2, 0])
+    Empty([])
+
+CommonEvent 156
+Name = "EV156"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 423, 14, 1, 2, 0])
+    Empty([])
+
+CommonEvent 157
+Name = "EV157"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 423, 14, 1, 2, 0])
+    Empty([])
+
+CommonEvent 158
+Name = "EV158"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 423, 14, 1, 2, 0])
+    Empty([])
+
+CommonEvent 159
+Name = "EV159"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 423, 14, 1, 2, 0])
+    Empty([])
+
+CommonEvent 160
+Name = "EV160"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 161
+Name = "EV161"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 162
+Name = "EV162"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 163
+Name = "EV163"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 164
+Name = "EV164"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 165
+Name = "EV165"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 166
+Name = "EV166"
+
+  Page 0
+    ConditionalBranch([1, 1144, 0, 1, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Hold on a moment...\nWe probably want to have Alma Elma's capabilities before we embark for the Monster Realm."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>We should head to Succubus Village first for now.\nWe shall add Alma Elma to our group, then return here."])
+      ShowText([""])
+      ShowText([""])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 384, 28, 10, 4, 0])
+    Empty([])
+
+CommonEvent 167
+Name = "EV167"
+
+  Page 0
+    ConditionalBranch([1, 1144, 0, 1, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Hold on a moment...\nWe probably want to have Alma Elma's capabilities before we embark for the Monster Realm."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>We should head to Succubus Village first for now.\nWe shall add Alma Elma to our group, then return here."])
+      ShowText([""])
+      ShowText([""])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 384, 28, 10, 4, 0])
+    Empty([])
+
+CommonEvent 168
+Name = "EV168"
+
+  Page 0
+    ControlSwitches([5030, 5030, 0])
+    ControlSwitches([5231, 5231, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 49, 29, 57, 8, 0])
+    Empty([])
+
+CommonEvent 169
+Name = "EV169"
+
+  Page 0
+    ControlSwitches([5008, 5008, 0])
+    ControlSwitches([5208, 5208, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 31, 22, 38, 8, 0])
+    Empty([])
+
+CommonEvent 170
+Name = "EV170"
+
+  Page 0
+    ControlSwitches([5313, 5313, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 248, 10, 18, 8, 0])
+    Empty([])
+
+CommonEvent 171
+Name = "EV171"
+
+  Page 0
+    ConditionalBranch([6, -1, 6])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The gate is sealed shut..."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>It looks like this gate is managed by the navy."])
+        ShowText(["With it closed, we can't go out to the outer sea..."])
+        ConditionalBranch([1, 1001, 0, 22, 0])
+          ShowTextAttributes(["alice_fc5", 0, 0, 2])
+          ShowText(["\\n<Alice>Well, to reach Grand Noah we don't need to go to the outer sea, and that's our priority at the moment."])
+          ExitEventProcessing([])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["alice_fc5", 0, 0, 2])
+          ShowText(["\\n<Alice>Well, we don't have any reason to head there right now."])
+          ExitEventProcessing([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>It seems that this gate is managed by the navy."])
+        ShowText(["It being closed, we can't go to the outer sea area..."])
+        ConditionalBranch([1, 1001, 0, 22, 0])
+          ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+          ShowText(["\\n<Ilias>However, that's not important to our voyage to Grand Noah, being that we do not need to go through it to reach our destination."])
+          ExitEventProcessing([])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+          ShowText(["\\n<Ilias>That being said, that doesn't matter to our voyage at the moment."])
+          ShowText(["Let's focus on what we have to do."])
+          ExitEventProcessing([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 172
+Name = "EV172"
+
+  Page 0
+    ControlSwitches([5023, 5023, 0])
+    ControlSwitches([5224, 5224, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([1, 1051, 0, 5, 1])
+      TransferPlayer([0, 667, 35, 38, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    TransferPlayer([0, 279, 35, 38, 8, 0])
+    Empty([])
+
+CommonEvent 173
+Name = "EV173"
+
+  Page 0
+    ControlSwitches([5313, 5313, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 238, 14, 18, 8, 0])
+    Empty([])
+
+CommonEvent 174
+Name = "EV174"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>The mountains are north of the village! If I don't hurry, Hans might be..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Empty([])
+
+CommonEvent 175
+Name = "EV175"
+
+  Page 0
+    ConditionalBranch([1, 1063, 0, 12, 2])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Right now, Gold Fort will be under strict guard."])
+        ShowText(["It is not such a good idea going there right now."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>Currently, Gold Fort must be in a complete state of alert."])
+        ShowText(["We must not get near that place, for now."])
+        Empty([])
+      BranchEnd([])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 714, 10, 13, 8, 0])
+    Empty([])
+
+CommonEvent 176
+Name = "EV176"
+
+  Page 0
+    ControlSwitches([5268, 5268, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 264, 15, 1, 2, 0])
+    Empty([])
+
+CommonEvent 177
+Name = "EV177"
+
+  Page 0
+    ControlSwitches([5279, 5279, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 79, 32, 38, 8, 0])
+    Empty([])
+
+CommonEvent 178
+Name = "EV178"
+
+  Page 0
+    ControlSwitches([5282, 5282, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 68, 7, 50, 2, 0])
+    Empty([])
+
+CommonEvent 179
+Name = "EV179"
+
+  Page 0
+    ControlSwitches([5300, 5300, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 125, 52, 68, 8, 0])
+    Empty([])
+
+CommonEvent 180
+Name = "EV180"
+
+  Page 0
+    ControlSwitches([5300, 5300, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 125, 25, 68, 8, 0])
+    Empty([])
+
+CommonEvent 181
+Name = "EV181"
+
+  Page 0
+    ControlSwitches([5300, 5300, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 125, 25, 68, 8, 0])
+    Empty([])
+
+CommonEvent 182
+Name = "EV182"
+
+  Page 0
+    ControlSwitches([5300, 5300, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 125, 29, 1, 2, 0])
+    Empty([])
+
+CommonEvent 183
+Name = "EV183"
+
+  Page 0
+    ControlSwitches([5300, 5300, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 125, 29, 1, 2, 0])
+    Empty([])
+
+CommonEvent 184
+Name = "EV184"
+
+  Page 0
+    ControlSwitches([5300, 5300, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 125, 1, 20, 6, 0])
+    Empty([])
+
+CommonEvent 185
+Name = "EV185"
+
+  Page 0
+    ControlSwitches([5300, 5300, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 125, 1, 20, 6, 0])
+    Empty([])
+
+CommonEvent 186
+Name = "EV186"
+
+  Page 0
+    ControlSwitches([5300, 5300, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 125, 1, 20, 6, 0])
+    Empty([])
+
+CommonEvent 187
+Name = "EV187"
+
+  Page 0
+    ControlSwitches([5300, 5300, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 125, 1, 20, 6, 0])
+    Empty([])
+
+CommonEvent 188
+Name = "EV188"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 189
+Name = "EV189"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 190
+Name = "EV190"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 191
+Name = "EV191"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 192
+Name = "EV192"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 193
+Name = "EV193"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 194
+Name = "EV194"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 195
+Name = "EV195"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 196
+Name = "EV196"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 197
+Name = "EV197"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 199, 16, 1, 2, 0])
+    Empty([])
+
+CommonEvent 198
+Name = "EV198"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 191, 13, 1, 2, 0])
+    Empty([])
+
+CommonEvent 199
+Name = "EV199"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 191, 13, 1, 2, 0])
+    Empty([])
+
+CommonEvent 200
+Name = "EV200"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 191, 13, 1, 2, 0])
+    Empty([])
+
+CommonEvent 201
+Name = "EV201"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 191, 13, 1, 2, 0])
+    Empty([])
+
+CommonEvent 202
+Name = "EV202"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 191, 13, 1, 2, 0])
+    Empty([])
+
+CommonEvent 203
+Name = "EV203"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 191, 13, 1, 2, 0])
+    Empty([])
+
+CommonEvent 204
+Name = "EV204"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 191, 13, 1, 2, 0])
+    Empty([])
+
+CommonEvent 205
+Name = "EV205"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 191, 13, 1, 2, 0])
+    Empty([])
+
+CommonEvent 206
+Name = "EV206"
+
+  Page 0
+    ConditionalBranch([1, 1052, 0, 6, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This seems to be a massive school.\nIts entrance is closed shut, though..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1052, 0, 7, 1])
+      ControlSwitches([5249, 5249, 0])
+      ControlSwitches([100, 100, 0])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 281, 25, 35, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 207
+Name = "EV207"
+
+  Page 0
+    ConditionalBranch([1, 1052, 0, 6, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This seems to be a massive school.\nIts entrance is closed shut, though..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1052, 0, 7, 1])
+      ControlSwitches([5249, 5249, 0])
+      ControlSwitches([100, 100, 0])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 281, 25, 35, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 208
+Name = "EV208"
+
+  Page 0
+    ConditionalBranch([1, 1144, 0, 1, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Hold on a moment...\nWe will want to have Alma Elma's power when we enter the Monster Realm."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>We should head to Succubus Village first for now.\nWe shall add Alma Elma to our group, then come back here."])
+      ShowText([""])
+      ShowText([""])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 384, 28, 10, 4, 0])
+    Empty([])
+
+CommonEvent 209
+Name = "EV209"
+
+  Page 0
+    ControlSwitches([5242, 5242, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 459, 20, 31, 8, 0])
+    Empty([])
+
+CommonEvent 210
+Name = "EV210"
+
+  Page 0
+    ControlSwitches([5242, 5242, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 459, 20, 31, 8, 0])
+    Empty([])
+
+CommonEvent 211
+Name = "EV211"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 3, 2])
+      ControlSwitches([5038, 5038, 0])
+      ControlSwitches([5238, 5238, 0])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 206, 19, 38, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 4, 1])
+      ConditionalBranch([1, 1137, 0, 6, 2])
+        ChangeMapDisplay([0])
+        PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+        TransferPlayer([0, 209, 19, 38, 8, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 7, 0])
+      ShowTextAttributes(["tamamo_fc4", 0, 0, 2])
+      ShowText(["\\n<Tamamo>We don't have time to go back to the Kitsune Village! We must look for Black Tanuki in the Tanuki Village!"])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Even as a fluffball, you sure are bossy..."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>What a pompous ball of fluff..."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 206, 19, 38, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 212
+Name = "EV212"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 1, 2])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>Hold on, this is the Tanuki Village.\nI don't know whether you've made a mistake or were planning to storm the place, but you need to wait a little."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>We're supposed to meet Tamamo in the Kitsune Village first. Let's head to the village that you can see over in the west."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["\\n<Ilias>Luka, this is the Tanuki Village.\nFirst, we must head to the Kitsune Village in order to meet with Tamamo."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["\\n<Ilias>Though personally, I would be fine with destroying the Tanuki Village right away... No no, don't mind me."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 2, 1])
+      ConditionalBranch([1, 1137, 0, 6, 2])
+        ControlSwitches([5239, 5239, 0])
+        ChangeMapDisplay([0])
+        PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+        TransferPlayer([0, 207, 18, 43, 8, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 7, 0])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 299, 18, 43, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 207, 18, 43, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 213
+Name = "EV213"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>The mountains are north of the village! If I don't hurry, Hans might be..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Empty([])
+
+CommonEvent 214
+Name = "EV214"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>The mountains are north of the village! If I don't hurry, Hans might be..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Empty([])
+
+CommonEvent 215
+Name = "EV215"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>The mountains are north of the village! If I don't hurry, Hans might be..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Empty([])
+
+CommonEvent 216
+Name = "EV216"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>The mountains are north of the village! If I don't hurry, Hans might be..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Empty([])
+
+CommonEvent 217
+Name = "EV217"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>The mountains are north of the village! If I don't hurry, Hans might be..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Empty([])
+
+CommonEvent 218
+Name = "EV218"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["～ Lost Woods ～"])
+    ShowText(["Extremely Dangerous"])
+    ShowText(["Novice adventurers DO NOT ENTER"])
+    ConditionalBranch([0, 1525, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>This is another entrance to the Lost Woods.\nIt sure is a huge forest..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 219
+Name = "EV219"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>The mountains are north of the village! If I don't hurry, Hans might be..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Empty([])
+
+CommonEvent 220
+Name = "EV220"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>The mountains are north of the village! If I don't hurry, Hans might be..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Empty([])
+
+CommonEvent 221
+Name = "EV221"
+
+  Page 0
+    CallCommonEvent([301])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 222
+Name = "EV222"
+
+  Page 0
+    CallCommonEvent([301])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 223
+Name = "EV223"
+
+  Page 0
+    CallCommonEvent([301])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 224
+Name = "EV224"
+
+  Page 0
+    CallCommonEvent([301])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 225
+Name = "EV225"
+
+  Page 0
+    CallCommonEvent([301])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 226
+Name = "EV226"
+
+  Page 0
+    CallCommonEvent([301])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 227
+Name = "EV227"
+
+  Page 0
+    CallCommonEvent([301])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 228
+Name = "EV228"
+
+  Page 0
+    CallCommonEvent([301])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 229
+Name = "EV229"
+
+  Page 0
+    CallCommonEvent([301])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 230
+Name = "EV230"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["East(→): Pornof Village"])
+    ShowText(["West(←): Ilias Continent South Tartarus"])
+    Empty([])
+
+CommonEvent 231
+Name = "EV231"
+
+  Page 0
+    CallCommonEvent([302])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 232
+Name = "EV232"
+
+  Page 0
+    CallCommonEvent([302])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 233
+Name = "EV233"
+
+  Page 0
+    CallCommonEvent([302])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 234
+Name = "EV234"
+
+  Page 0
+    CallCommonEvent([302])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 235
+Name = "EV235"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["North(↑): Iliasport"])
+    ShowText(["West(←): Cave of Treasures"])
+    Empty([])
+
+CommonEvent 236
+Name = "EV236"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["East(→): San Ilia Castle"])
+    ShowText(["West(←): Monte Carlo"])
+    Empty([])
+
+CommonEvent 237
+Name = "EV237"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 18, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["North(↑): Marle Grand Corridor (Currently Blocked)"])
+      ShowText(["West(←): Mt. Saint Amos"])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["North(↑): Marle Grand Corridor"])
+      ShowText(["West(←): Mt. Saint Amos"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 238
+Name = "EV238"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["North(↑): Luddite Village"])
+    ShowText(["West(←): San Ilia Castle"])
+    ShowText(["East(→): Port Natalia"])
+    Empty([])
+
+CommonEvent 239
+Name = "EV239"
+
+  Page 0
+    CallCommonEvent([304])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 240
+Name = "EV240"
+
+  Page 0
+    CallCommonEvent([304])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 241
+Name = "EV241"
+
+  Page 0
+    CallCommonEvent([304])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 242
+Name = "EV242"
+
+  Page 0
+    CallCommonEvent([304])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 243
+Name = "EV243"
+
+  Page 0
+    CallCommonEvent([304])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 244
+Name = "EV244"
+
+  Page 0
+    CallCommonEvent([304])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 245
+Name = "EV245"
+
+  Page 0
+    CallCommonEvent([304])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 246
+Name = "EV246"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["East(→): Monte Carlo"])
+    ShowText(["West(←): Rubiana"])
+    Empty([])
+
+CommonEvent 247
+Name = "EV247"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["East(→): Happiness Village"])
+    ShowText(["West(←): Iliasburg"])
+    ShowText(["North(↑): Iliasport"])
+    Empty([])
+
+CommonEvent 248
+Name = "EV248"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["North(↑): Safar Ruins"])
+    Empty([])
+
+CommonEvent 249
+Name = "EV249"
+
+  Page 0
+    ControlSwitches([5035, 5035, 0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 390, 15, 28, 8, 0])
+    Empty([])
+
+CommonEvent 250
+Name = "EV250"
+
+  Page 0
+    ControlVariables([1001, 1001, 0, 0, 20])
+    ControlVariables([21, 21, 0, 3, 7, 0, 0])
+    ControlVariables([22, 22, 0, 3, 5, -1, 0])
+    ControlVariables([23, 23, 0, 3, 5, -1, 1])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>So, would you agree that now is a good time to hold another strategy meeting? We've been through so much already since the last one."])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Before we head to the Noah region, we should probably consolidate and go over what we know. Do you agree, Luka?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>Luka, shall we hold a quick strategy meeting? We have been through so much since the last one."])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>Before we head to the Noah region, we should organize our thoughts and information. What do you think, Luka?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowChoices([["Hold strategy meeting", "There's no need"], 0])
+    When([0, "Hold strategy meeting"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Sounds good. Let's hold a meeting!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The stakes are all the more real after experiencing the crumbling of another world firsthand. And with all the strange things happening in our world..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I definitely need to discuss our situation and everything that's happened with everyone. After going over what we know, we can head to the Noah region."])
+      FadeoutScreen([])
+      ChangeTransparency([0])
+      TransferPlayer([0, 586, 6, 6, 0, 2])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "There's no need"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>There's no need."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Port Marle is through a cave north of Luddite Village. We should be able to secure passage on a boat to the Noah region from there."])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 251
+Name = "EV251"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Arrr, what do you need?!"])
+    ShowChoices([["Full Recovery", "Buy supplies", "Book of job-change", "Never mind"], 4])
+    When([0, "Full Recovery"])
+      ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+      ShowText(["\\n<Mermaid Pirate>Well then, please take a break on board!"])
+      PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+      FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+      RecoverAll([0, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The party's HP and MP have been fully restored!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Buy supplies"])
+      ShopProcessing([0, 2, 0, 0, false])
+      ShopItem([0, 7, 0, 0])
+      ShopItem([0, 11, 0, 0])
+      ShopItem([0, 13, 0, 0])
+      ShopItem([0, 14, 0, 0])
+      ShopItem([0, 15, 0, 0])
+      ShopItem([0, 16, 0, 0])
+      ShopItem([0, 17, 0, 0])
+      ShopItem([0, 18, 0, 0])
+      ShopItem([0, 19, 0, 0])
+      ShopItem([0, 23, 0, 0])
+      ShopItem([0, 102, 0, 0])
+      ShopItem([0, 35, 0, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([2, "Book of job-change"])
+      CallCommonEvent([113])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([3, "Never mind"])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["We can't return to the ship now. We have to enter the cave and arrest the pirates!"])
+    Empty([])
+
+  Page 3
+    Empty([])
+
+CommonEvent 252
+Name = "EV252"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["East(→): Grand Noah Palace"])
+    ShowText(["South(↓): Finoa Village"])
+    Empty([])
+
+CommonEvent 253
+Name = "EV253"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["North(↑): Grand Noah Palace"])
+    ShowText(["East(→): Cave to Yamatai Village"])
+    Empty([])
+
+CommonEvent 254
+Name = "EV254"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ControlSwitches([100, 100, 0])
+    TintScreen(["Tone(@red=68.0, @green=-34.0, @blue=-34.0, @gray=0.0)", 60, true])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>It's getting dark. Perhaps we should make camp here?"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc1", 4, 0, 2])
+      ShowText(["\\n<Sonya>Hey Luka, you know how you're always in charge of our meals? How about letting me cook for a change?"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 5, 0, 2])
+        ShowText(["\\n<Alice>Luka's great! It'll suck if anyone else cooks!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>I want to eat Luka's cooking, though..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["sonia_fc2", 4, 0, 2])
+      ShowText(["\\n<Sonya>Grrr..."])
+      Empty([])
+
+    Else([])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 1, 0, 2])
+        ShowText(["\\n<Alice>All right, time to eat!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+        ShowText(["\\n<Ilias>Okay, let's dig in!"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>......"])
+      Empty([])
+
+    BranchEnd([])
+    FadeoutScreen([])
+    ChangePlayerFollowers([1])
+    TransferPlayer([0, 711, 8, 7, 8, 2])
+    TintScreen(["Tone(@red=-68.0, @green=-68.0, @blue=0.0, @gray=68.0)", 1, true])
+    Wait([120])
+    FadeinScreen([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Whew, I'm stuffed!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 1, 0, 2])
+      ShowText(["\\n<Alice>I'm full as well, and completely satisfied! I've got to eat a lot to keep up my strength in order to beat the crap out of my mother and the Four Heavenly Knights!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+      ShowText(["\\n<Ilias>Food tastes so much better after a long day's walk. Perhaps traveling on the surface isn't so bad, after all."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 4, 0, 2])
+      ShowText(["\\n<Sonya>Grrr..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It's still a bit early to go to bed. Maybe I can spend some time with my companions before turning in..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 255
+Name = "EV255"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["East(→): Grand Noah Palace"])
+    ShowText(["West(←): Esta"])
+    Empty([])
+
+CommonEvent 256
+Name = "EV256"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["North(↑): Undine's Spring"])
+    ShowText(["South(↓): Esta"])
+    ShowText(["※Danger! Monster village in western forest!"])
+    Empty([])
+
+CommonEvent 257
+Name = "EV257"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["North(↑): Undine's Spring"])
+    ShowText(["South(↓): Esta"])
+    Empty([])
+
+CommonEvent 258
+Name = "EV258"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Northeast(↗): Lima"])
+    ShowText(["West(←): Gold Fort"])
+    ShowText(["※Warzone: All Noah citizens, evacuate immediately."])
+    Empty([])
+
+CommonEvent 259
+Name = "EV259"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["※Due to the war, going north beyond this point is forbidden."])
+    Empty([])
+
+CommonEvent 260
+Name = "EV260"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([6, -1, 8])
+      TransferPlayer([0, 718, 10, 13, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([6, -1, 2])
+      TransferPlayer([0, 718, 10, 1, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 261
+Name = "EV261"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["East(→): Undine's Spring"])
+    ShowText(["West(←): Lima, Gold Fort"])
+    Empty([])
+
+CommonEvent 262
+Name = "EV262"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ControlSwitches([100, 100, 0])
+    TintScreen(["Tone(@red=68.0, @green=-34.0, @blue=-34.0, @gray=0.0)", 60, true])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>We're approaching Grangold!\nWe probably won't have any chance to rest in the enemy's capital, and it's getting pretty late... Let's camp here for the night."])
+    ConditionalBranch([12, "exist_party_persona_id?(391)"])
+      ShowTextAttributes(["mefist_fc2", 0, 0, 2])
+      ShowText(["\\n<Mephisto>All right everyone, prepare the tent and decide who's on kitchen duty."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+      ShowText(["\\n<Mephisto>All right everyone, prepare the tent and decide who's on kitchen duty."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>This isn't a field trip, Mephisto.\nAnd we're not your students..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>This is not a field trip, Mephisto.\nAnd we are not your students!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1056, 0])
+      ConditionalBranch([0, 1062, 0])
+        ConditionalBranch([12, "exist_party_persona_id?(391)"])
+          ShowTextAttributes(["mefist_fc2", 0, 0, 2])
+          ShowText(["\\n<Mephisto>Rami and three more, spread the sheet and let's get the table ready."])
+          ShowText(["Gob, could you please get us some water?"])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+          ShowText(["\\n<Mephisto>Rami and three more, spread the sheet and let's get the table ready."])
+          ShowText(["Gob, could you please get us some water?"])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["inp_fc1", 0, 0, 2])
+        ShowText(["\\n<Rami>Suuuure!"])
+        ShowTextAttributes(["gob_fc1", 0, 0, 2])
+        ShowText(["\\n<Gob>Right away!"])
+        ConditionalBranch([0, 4, 0])
+          ShowTextAttributes(["alice_fc5", 0, 0, 2])
+          ShowText(["\\n<Alice>You're used to doing this sort of thing, aren't you...?"])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 5, 0])
+          ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+          ShowText(["\\n<Ilias>You seem accustomed to doing this sort of thing..."])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["And so, preparations for camping and dinner move forward..."])
+    FadeoutScreen([])
+    ChangePlayerFollowers([1])
+    TransferPlayer([0, 736, 8, 7, 8, 2])
+    TintScreen(["Tone(@red=-68.0, @green=-68.0, @blue=0.0, @gray=68.0)", 1, true])
+    Wait([120])
+    FadeinScreen([])
+    ConditionalBranch([12, "exist_party_persona_id?(391)"])
+      ShowTextAttributes(["mefist_fc2", 0, 0, 2])
+      ShowText(["\\n<Mephisto>Come on, let's all sing a song around the fire!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+      ShowText(["\\n<Mephisto>Come on, let's all sing a song around the fire!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 5, 0, 2])
+      ShowText(["\\n<Alice>Don't... This is not a field trip!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Please do not... This is not a field trip!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1072, 0])
+      ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+      ShowText(["\\n<Mini>You don't like to sing? How sad..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It's still a bit early to go to bed. Maybe I can spend some time with my companions before turning in..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 263
+Name = "EV263"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["～ Gold Volcano ～"])
+    ShowText(["The sacred lair of the burning Salamander.\nAccess is strictly forbidden!"])
+    ConditionalBranch([1, 1001, 0, 27, 2])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>The monsters that made these volcanic caves their lair are extremely powerful, even amongst the ones across the Gold region. We should return only after we've done everything in this region."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>The monsters that reside in these volcanic caves are extremely powerful, even amongst the ones across the Gold region. We should return only after we've dealt with everything in this area."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 264
+Name = "EV264"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Northeast(↗): Gold Port"])
+    ShowText(["Northwest(↖): Lava Mines"])
+    ShowText(["South(↓): Western Gold Checkpoint"])
+    Empty([])
+
+CommonEvent 265
+Name = "EV265"
+
+  Page 0
+    ConditionalBranch([1, 1053, 0, 1, 0])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Tatsuko>*mumble* *mumble*"])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["\\n<Tatsuko>I sense that the storeroom at the Navy Headquarters has new provisions available!\nMy sailor's intuition is never wrong!"])
+      ControlSelfSwitch(["A", 0])
+      Empty([])
+
+    Else([])
+      EraseEvent([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 266
+Name = "EV266"
+
+  Page 0
+    ConditionalBranch([1, 1053, 0, 2, 0])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Tatsuko>*mumble* *mumble*"])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["\\n<Tatsuko>I sense that the storeroom at the Navy Headquarters has new provisions available!\nMy sailor's intuition is never wrong!"])
+      ControlSelfSwitch(["A", 0])
+      Empty([])
+
+    Else([])
+      EraseEvent([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 267
+Name = "EV267"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>We've been told that the angel leader is residing in the \\C[17]Snow Shrine\\C[0] to the southeast. Come on, let's go!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>We've been informed that the angel leader is residing in the \\C[17]Snow Shrine\\C[0] southeast from here. Whether or not she will release the barrier willingly is another matter..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 268
+Name = "EV268"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Finally, it's time to enter Ilias Temple.\nThere, we should find not just the cause of the mana distortion, but also the core of this mystery."])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>The temple's location is southwest of Snow Heaven. First head west from the town, then proceed to the south."])
+      ShowTextAttributes(["sonia_fc1", 5, 0, 2])
+      ShowText(["\\n<Sonya>I've got a weird feeling about this...\nCall it a hunch, but...it's like something big is waiting for us in there..."])
+      ConditionalBranch([4, 45, 0])
+        ShowTextAttributes(["alicetromeria_fc1", 4, 0, 2])
+        ShowText(["\\n<Alicetroemeria>It is truly an honor to be able to be present for such an interesting event..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>It's finally time for us to get to the bottom of this... I'm prepared for whatever we'll face.\nCome on, let's go!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>Now then, let us head for the \\C[17]Hall of Creation\\C[0] to perform the ritual that will resurrect the Seraphs. It should be located to the south once we return to Snow Heaven."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I will be fighting alongside a seraph who looks just like my mother and shares her name...\nIt's a sad feeling, yet exciting and mysterious at the same time."])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 269
+Name = "EV269"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ConditionalBranch([1, 1076, 0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>At last, the time has come for us to enter Ilias Temple. There, we shall find not only the source of the mana distortion, but also the core of this mystery."])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The temple is located to the southwest of Snow Heaven. First head west, then move towards the south."])
+      ShowTextAttributes(["heinrich_fc1", 7, 0, 2])
+      ShowText(["\\n<Heinrich>I shall accompany you, Ilias!"])
+      ShowTextAttributes(["eden_fc1", 0, 0, 2])
+      ShowText(["\\n<Eden>Naturally, this Eden shall always be by Ilias' side..."])
+      ShowTextAttributes(["micaelac_fc1", 3, 0, 2])
+      ShowText(["\\n<Micaela>In the name of Ilias, I shall carve open the way..."])
+      ShowTextAttributes(["rucyfinac_fc1", 0, 0, 2])
+      ShowText(["\\n<Lucifina>Me too! Me too!"])
+      ShowTextAttributes(["sonia_fc1", 5, 0, 2])
+      ShowText(["\\n<Sonya>I've got a weird feeling about this...\nCall it a hunch, but...it's like something big is waiting for us in there..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>It's finally time for us to get to the bottom of this... I'm prepared for whatever we'll face.\nCome on, let's go!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 270
+Name = "EV270"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ControlSwitches([100, 100, 0])
+    TintScreen(["Tone(@red=68.0, @green=-34.0, @blue=-34.0, @gray=0.0)", 60, true])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>It's getting dark... Let's camp here for the night."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 1, 0, 2])
+      ShowText(["\\n<Alice>This is our last chance to rest up before entering Ilias Temple. I don't know what's waiting for us in there, but I'm gonna eat until I can't eat anymore!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>This will be our last moment of respite before heading inside Ilias Temple. Let us prepare for battle and eat until we're filled!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["sonia_fc1", 4, 0, 2])
+    ShowText(["\\n<Sonya>This might be our last meal.\nI should make sure I don't have any regrets..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>That wasn't what I meant...\nWe just need to rest a little for whatever battle may lie ahead."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>That is not what I meant...\nWe simply have to regain our strength for whatever battle may lie ahead."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Sonya... Why are you acting so pessimistic all of a sudden?"])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["\\n<Sonya>Y-you're right...\nI'm not sure why, but I have a really bad feeling about this."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>............"])
+    FadeoutScreen([])
+    ChangePlayerFollowers([1])
+    TransferPlayer([0, 741, 8, 7, 8, 2])
+    TintScreen(["Tone(@red=-68.0, @green=-68.0, @blue=0.0, @gray=68.0)", 1, true])
+    Wait([120])
+    FadeinScreen([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>So, how was the meal everyone?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 1, 0, 2])
+      ShowText(["\\n<Alice>Full of food and full of energy!\nWith this, I'm ready for anything!"])
+      ShowTextAttributes(["alicetromeria_fc1", 0, 0, 2])
+      ShowText(["\\n<Alicetroemeria>You're quite the skilled chef, Hero Luka...\nDelicious, indeed..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+      ShowText(["\\n<Ilias>I am stuffed today!\nDo you see, Eden?\\*\\fi That\\*\\fi is how you cook a meal!"])
+      ConditionalBranch([1, 1077, 0, 2, 1])
+        ShowTextAttributes(["eden_fc1", 0, 0, 2])
+        ShowText(["\\n<Eden>I had no idea that there were such delicacies on the surface. Did you like it, Micaela?\nAnd you, Lucifina?"])
+        ShowTextAttributes(["micaelac_fc1", 3, 0, 2])
+        ShowText(["\\n<Micaela-chan>Yeah, it was delicious..."])
+        ShowTextAttributes(["rucyfinac_fc1", 1, 0, 2])
+        ShowText(["\\n<Lucifina-chan>It was soooo good!"])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["eden_fc1", 0, 0, 2])
+        ShowText(["\\n<Eden>I agree, it was delicious."])
+        ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+        ShowText(["\\n<Ilias>(Is she too dense to realize I was criticizing her?)"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+    ShowText(["\\n<Sonya>............"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Sonya...?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It's still a bit early to go to bed. Maybe I can spend some time with my companions before turning in..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 271
+Name = "EV271"
+
+  Page 0
+    ConditionalBranch([1, 1053, 0, 3, 0])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Tatsuko>*mumble* *mumble*"])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["\\n<Tatsuko>I sense that the storeroom at the Navy Headquarters has new provisions available!\nMy sailor's intuition is never wrong!"])
+      ControlSelfSwitch(["A", 0])
+      Empty([])
+
+    Else([])
+      EraseEvent([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 272
+Name = "EV272"
+
+  Page 0
+    ConditionalBranch([1, 1053, 0, 4, 0])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Tatsuko>*mumble* *mumble*"])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["\\n<Tatsuko>I sense that the storeroom at the Navy Headquarters has new provisions available!\nMy sailor's intuition is never wrong!"])
+      ControlSelfSwitch(["A", 0])
+      Empty([])
+
+    Else([])
+      EraseEvent([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 273
+Name = "EV273"
+
+  Page 0
+    ConditionalBranch([1, 1053, 0, 5, 0])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Tatsuko>*mumble* *mumble*"])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["\\n<Tatsuko>I sense that the storeroom at the Navy Headquarters has new provisions available!\nMy sailor's intuition is never wrong!"])
+      ControlSelfSwitch(["A", 0])
+      Empty([])
+
+    Else([])
+      EraseEvent([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 274
+Name = "EV274"
+
+  Page 0
+    ConditionalBranch([1, 1053, 0, 6, 0])
+      ShowTextAttributes(["umiusi_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Stacy>Hmmmm..."])
+      ShowTextAttributes(["umiusi_k_fc1", 1, 0, 2])
+      ShowText(["\\n<Stacy>I sense that the storeroom at the Navy Headquarters has new provisions available!\nMy sailor's intuition is never wrong!"])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Tatsuko>You beat me to it..."])
+      ControlSelfSwitch(["A", 0])
+      Empty([])
+
+    Else([])
+      EraseEvent([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 275
+Name = "EV275"
+
+  Page 0
+    ConditionalBranch([1, 1053, 0, 7, 0])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Tatsuko>*mumble* *mumble*"])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["\\n<Tatsuko>I sense that the storeroom at the Navy Headquarters has new provisions available!\nMy sailor's intuition is never wrong!"])
+      ConditionalBranch([0, 1205, 0])
+        ShowTextAttributes(["levia_fc1", 0, 0, 2])
+        ShowText(["\\n<Levia>(How could she possibly know that without any means of communication?)"])
+        Empty([])
+      BranchEnd([])
+      ControlSelfSwitch(["A", 0])
+      Empty([])
+
+    Else([])
+      EraseEvent([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 276
+Name = "EV276"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 745, 15, 28, 8, 0])
+    Empty([])
+
+CommonEvent 277
+Name = "EV277"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    FadeoutScreen([])
+    Wait([60])
+    Script(["forced_get_off_vehicle"])
+    TransferPlayer([0, 753, 7, 27, 8, 2])
+    FadeinScreen([])
+    Empty([])
+
+CommonEvent 278
+Name = "EV278"
+
+  Page 0
+    ShowTextAttributes(["shirokuma_fc1", 0, 0, 2])
+    ShowText(["\\n<Polar Bear Girl>Help... Help..."])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["\\n<Sonya>What is a Polar Bear doing alone on this island...!?\nIs she lost?"])
+    ConditionalBranch([0, 4, 0])
+      ConditionalBranch([0, 1005, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Polar Bears have a natural instinct of riding drifting ice chunks heading south. It seems that the turbulent ocean current has carried her to this isolated island."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1006, 0])
+        ShowTextAttributes(["alice_fc1", 0, 0, 2])
+        ShowText(["\\n<Alice>Polar Bears have a natural instinct of riding drifting ice chunks heading south. It seems that the turbulent ocean current has carried her to this isolated island."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1007, 0])
+        ShowTextAttributes(["alice_fc7", 0, 0, 2])
+        ShowText(["\\n<Alice>Polar Bears have a natural instinct of riding drifting ice chunks heading south. It seems that the turbulent ocean current has carried her to this isolated island."])
+        Empty([])
+      BranchEnd([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Polar Bears have a natural instinct of riding drifting ice chunks heading south. She must have drifted to this isolated island due to the turbulent ocean current..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["shirokuma_fc1", 0, 0, 2])
+    ShowText(["\\n<Polar Bear Girl>Help... Help..."])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["\\n<Sonya>Hey there little fella, I'm sorry for what happened to you. Would you like to return to your friends?"])
+    ConditionalBranch([4, 45, 0])
+      ShowTextAttributes(["alicetromeria_fc1", 0, 0, 2])
+      ShowText(["\\n<Alicetroemeria>Luka, please do something for me.\nBeary is saying that he wants you to help her..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 36, 0])
+      ShowTextAttributes(["rucyfinac_fc1", 2, 0, 2])
+      ShowText(["\\n<Lucifina>All right, let's save her!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Hmmmm......"])
+    ShowChoices([["We will help you", "Leave her alone"], 2])
+    When([0, "We will help you"])
+      ConditionalBranch([0, 2314, 1])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>I want to, but we don't know where to take her...\nWe can't bring her with us and travel aimlessly without knowing exactly where to go."])
+        ShowTextAttributes(["sonia_fc1", 4, 0, 2])
+        ShowText(["\\n<Sonya>Well, let's find out then.\nDon't worry, we will definitely come back for you."])
+        ShowTextAttributes(["shirokuma_fc1", 0, 0, 2])
+        ShowText(["\\n<Polar Bear Girl>Help... Help..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Poor thing... For now, we can't do anything about her.\nIf we continue on our journey, we may find where we should bring this Polar Bear."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>There was a Polar Bear village right by the passage of Snow Cave.\nMaybe we could take her there."])
+      ShowTextAttributes(["sonia_fc1", 4, 0, 2])
+      ShowText(["\\n<Sonya>Did you hear that? We will bring you back to your friends!\nCome with us."])
+      ShowTextAttributes(["shirokuma_fc1", 0, 0, 2])
+      ShowText(["\\n<Polar Bear Girl>Okay..."])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+      ControlSwitches([2315, 2315, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The lost Polar Bear Girl joined the party temporarily!"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Well then, let's bring you to that village!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Leave her alone"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>We're all lost on an isolated island.\nThat's the epitome of life..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 279
+Name = "EV279"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 755, 13, 28, 8, 0])
+    Empty([])
+
+CommonEvent 280
+Name = "EV280"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 756, 9, 13, 8, 0])
+    Empty([])
+
+CommonEvent 281
+Name = "EV281"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 754, 9, 13, 8, 0])
+    Empty([])
+
+CommonEvent 282
+Name = "EV282"
+
+  Page 0
+    ControlSwitches([5025, 5025, 0])
+    ControlSwitches([5226, 5226, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([1, 1001, 0, 29, 0])
+      ConditionalBranch([0, 2161, 1])
+        TransferPlayer([0, 742, 38, 58, 8, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    TransferPlayer([0, 21, 38, 58, 8, 0])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1211, 0, 1, 0])
+      FadeoutScreen([])
+      ControlSwitches([31, 39, 1])
+      ChangeTransparency([0])
+      TransferPlayer([0, 945, 0, 0, 0, 2])
+      Wait([60])
+      FadeinScreen([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ChangeMapDisplay([0])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([100, 100, 0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 921, 12, 28, 8, 0])
+    Empty([])
+
+CommonEvent 283
+Name = "EV283"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 284
+Name = "EV284"
+
+  Page 0
+    ControlSwitches([5025, 5025, 0])
+    ControlSwitches([5226, 5226, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([1, 1001, 0, 29, 0])
+      ConditionalBranch([0, 2161, 1])
+        TransferPlayer([0, 742, 38, 58, 8, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    TransferPlayer([0, 21, 38, 58, 8, 0])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1211, 0, 1, 0])
+      FadeoutScreen([])
+      ControlSwitches([31, 39, 1])
+      ChangeTransparency([0])
+      TransferPlayer([0, 945, 0, 0, 0, 2])
+      Wait([60])
+      FadeinScreen([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ChangeMapDisplay([0])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([100, 100, 0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 921, 12, 28, 8, 0])
+    Empty([])
+
+CommonEvent 285
+Name = "EV285"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 286
+Name = "EV286"
+
+  Page 0
+    ConditionalBranch([13, 2])
+      ControlVariables([22, 22, 0, 3, 5, -1, 0])
+      ControlVariables([23, 23, 0, 3, 5, -1, 1])
+      ConditionalBranch([1, 22, 0, 148, 1])
+        ConditionalBranch([1, 22, 0, 248, 2])
+          ConditionalBranch([1, 23, 0, 48, 1])
+            ConditionalBranch([1, 23, 0, 99, 2])
+              ConditionalBranch([2, "A", 1])
+                ConditionalBranch([0, 4, 0])
+                  ShowTextAttributes(["alice_fc5", 2, 0, 2])
+                  ShowText(["\\n<Alice>Hellgondo... We've reached the Monster Continent. Are you planning to just head straight to the Monster Lord's Castle like this?"])
+                  ShowText([""])
+                  ShowText([""])
+                  Empty([])
+                BranchEnd([])
+                ConditionalBranch([0, 5, 0])
+                  ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+                  ShowText(["\\n<Ilias>Hellgondo... We have reached the Monster Continent. Do you plan on heading straight for the Monster Lord's Castle like this?"])
+                  ShowText([""])
+                  ShowText([""])
+                  Empty([])
+                BranchEnd([])
+                ShowChoices([["Head for the Monster Lord's Castle", "Not yet"], 2])
+                When([0, "魔王城に向かう"])
+                  ControlSelfSwitch(["A", 0])
+                  ConditionalBranch([0, 4, 0])
+                    ShowTextAttributes(["alice_fc5", 2, 0, 2])
+                    ShowText(["\\n<Alice>So it's finally time...\nHowever, we shouldn't carelessly approach the Monster Lord's Castle on Galda."])
+                    ShowText([""])
+                    ShowText([""])
+                    ShowTextAttributes(["alice_fc5", 2, 0, 2])
+                    ShowText(["\\n<Alice>The air defense network around the Monster Lord's Castle is extremely tight. Wyverns keep watch over the airspace as its defense forces."])
+                    ShowText([""])
+                    ShowText([""])
+                    Empty([])
+                  BranchEnd([])
+                  ConditionalBranch([0, 5, 0])
+                    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+                    ShowText(["\\n<Ilias>I see, so it is finally time...\nHowever, it would not be wise to carelessly approach the Monster Lord's Castle on Galda."])
+                    ShowText([""])
+                    ShowText([""])
+                    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+                    ShowText(["\\n<Ilias>The air defense forces of the Monster Lord's army are keeping watch of the airspace around the castle. We cannot simply charge through such tight defenses with a bird this huge."])
+                    ShowText([""])
+                    ShowText([""])
+                    Empty([])
+                  BranchEnd([])
+                  ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+                  ShowText(["\\n<Sonya>That's for sure...\nWe'd get shot down if we approached the castle like that."])
+                  ShowText([""])
+                  ShowText([""])
+                  ConditionalBranch([4, 347, 0])
+                    ShowTextAttributes(["wyvern_fc1", 0, 0, 2])
+                    ShowText(["\\n<Warvein>My family's air defense forces are still alive and well in this era? Then it'd be suicidal to try approaching them with this big bird."])
+                    ShowText([""])
+                    ShowText([""])
+                    Empty([])
+                  BranchEnd([])
+                  ConditionalBranch([0, 4, 0])
+                    ShowTextAttributes(["alice_fc5", 2, 0, 2])
+                    ShowText(["\\n<Alice>We should land somewhere far away from the Monster Lord's Castle for now. From there, we'll head to the castle by foot."])
+                    ShowText([""])
+                    ShowText([""])
+                    ShowTextAttributes(["alice_fc5", 2, 0, 2])
+                    ShowText(["\\n<Alice>All right Galda, lower your altitude!\nWe're going to land at the southern part of the Monster Continent!"])
+                    ShowText([""])
+                    ShowText([""])
+                    Empty([])
+                  BranchEnd([])
+                  ConditionalBranch([0, 5, 0])
+                    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+                    ShowText(["\\n<Ilias>We should land somewhere far away from the Monster Lord's Castle for now. From there, we will head to the castle on foot."])
+                    ShowText([""])
+                    ShowText([""])
+                    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+                    ShowText(["\\n<Ilias>With that said... Galda, lower your altitude!\nWe shall land at the southern part of the Monster Continent!"])
+                    ShowText([""])
+                    ShowText([""])
+                    Empty([])
+                  BranchEnd([])
+                  ShowTextAttributes(["galda_fc1", 1, 0, 2])
+                  ShowText(["\\n<Galda>Kweeh!"])
+                  ShowText([""])
+                  ConditionalBranch([4, 58, 0])
+                    ShowTextAttributes(["inp_fc2", 2, 0, 2])
+                    ShowText(["\\n<Remi>Th-the Monster Continent...*tremble* *shiver*..."])
+                    ShowText([""])
+                    Empty([])
+                  BranchEnd([])
+                  ShowTextAttributes(["", 0, 0, 2])
+                  ShowText(["Galda lowers her altitude and descends towards the southern area of the continent, where security is more lax..."])
+                  PlaySE(["RPG::SE(@name=\"Wind1\", @pitch=100, @volume=80)"])
+                  FadeoutScreen([])
+                  Wait([120])
+                  Script(["forced_get_off_vehicle"])
+                  SetVehicleLocation([2, 0, 2, 0, 0])
+                  TransferPlayer([0, 2, 196, 94, 2, 2])
+                  FadeinScreen([])
+                  ConditionalBranch([0, 4, 0])
+                    ShowTextAttributes(["alice_fc5", 1, 0, 2])
+                    ShowText(["\\n<Alice>Okay, it doesn't look like we've been spotted...\nLet's start walking towards the Monster Lord's castle."])
+                    ShowText([""])
+                    ShowText([""])
+                    Empty([])
+                  BranchEnd([])
+                  ConditionalBranch([0, 5, 0])
+                    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+                    ShowText(["\\n<Ilias>All right, it seems we haven't been noticed.\nWe shall head towards the Monster Lord's Castle on our own two legs."])
+                    ShowText([""])
+                    ShowText([""])
+                    Empty([])
+                  BranchEnd([])
+                  ShowTextAttributes(["galda_fc1", 1, 0, 2])
+                  ShowText(["\\n<Galda>Kweeh!"])
+                  ShowText([""])
+                  ShowTextAttributes(["", 0, 0, 2])
+                  ShowText(["Galda settles herself inside the Pocket Castle..."])
+                  ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+                  ShowText(["\\n<Sonya>Stay quiet in there for a little while.\nYou're too big, and would make us stand out."])
+                  ShowText([""])
+                  ShowText([""])
+                  ShowTextAttributes(["galda_fc1", 2, 0, 2])
+                  ShowText(["\\n<Galda>Kweh!"])
+                  ShowText([""])
+                  ConditionalBranch([0, 4, 0])
+                    ShowTextAttributes(["alice_fc5", 0, 0, 2])
+                    ShowText(["\\n<Alice>Now then... We should probably settle down for a bit before going towards the Monster Lord's Castle. There's a shrine nearby here, so let's head there first."])
+                    ShowText([""])
+                    ShowText([""])
+                    ShowTextAttributes(["alice_fc5", 0, 0, 2])
+                    ShowText(["\\n<Alice>It should be to the east.\nThere are signposts everywhere around here, so just follow their directions."])
+                    ShowText([""])
+                    ShowText([""])
+                    Empty([])
+                  BranchEnd([])
+                  ConditionalBranch([0, 5, 0])
+                    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+                    ShowText(["\\n<Ilias>Now then... We should probably settle down for a bit before going towards the Monster Lord's Castle. There is a shrine near this area, so we should head there first."])
+                    ShowText([""])
+                    ShowText([""])
+                    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+                    ShowText(["\\n<Ilias>It should be to the east.\nThere are many signposts around here, so be sure to check them."])
+                    ShowText([""])
+                    ShowText([""])
+                    Empty([])
+                  BranchEnd([])
+                  ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+                  ShowText(["\\n<Luka>The shrine to the east comes first...\nOkay then, let's go!"])
+                  ShowText([""])
+                  ShowText([""])
+                  ConditionalBranch([0, 1520, 0])
+                    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+                    ShowText(["\\n<Lazarus>So you're heading to that shrine...?"])
+                    ShowText([""])
+                    ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+                    ShowText(["\\n<Sonya>Is something wrong, Uncle Lazarus...?"])
+                    ShowText([""])
+                    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+                    ShowText(["\\n<Lazarus>Nah...it's nothing."])
+                    ShowText([""])
+                    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+                    ShowText(["\\n<Merlin>............"])
+                    ShowText([""])
+                    ConditionalBranch([4, 382, 0])
+                      ShowTextAttributes(["morrigan_fc1", 6, 0, 2])
+                      ShowText(["\\n<Morrigan>Hey, old man... You've been glancing at me a lot. You having perverted thoughts...?"])
+                      ShowText([""])
+                      ShowText([""])
+                      ShowTextAttributes(["lazarus3_fc1", 2, 0, 2])
+                      ShowText(["\\n<Lazarus>Shaddup, you idiot."])
+                      ShowText([""])
+                      Empty([])
+                    BranchEnd([])
+                    Empty([])
+                  BranchEnd([])
+                  ExitEventProcessing([])
+                  Empty([])
+                When([1, "まだ行かない"])
+                  ConditionalBranch([0, 4, 0])
+                    ShowTextAttributes(["alice_fc5", 2, 0, 2])
+                    ShowText(["\\n<Alice>I see... Then try not to carelessly approach it.\nThe air defense forces will fly after us and shoot us down."])
+                    ShowText([""])
+                    ShowText([""])
+                    Empty([])
+                  BranchEnd([])
+                  ConditionalBranch([0, 5, 0])
+                    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+                    ShowText(["\\n<Ilias>If that is so... Then try not to carelessly approach it. The air defense forces will fly after us and shoot us down."])
+                    ShowText([""])
+                    ShowText([""])
+                    Empty([])
+                  BranchEnd([])
+                  ShowTextAttributes(["galda_fc1", 0, 0, 2])
+                  ShowText(["\\n<Galda>Kweeh..."])
+                  ShowText([""])
+                  ConditionalBranch([1, 23, 0, 48, 0])
+                    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+                    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+                    ExitEventProcessing([])
+                    Empty([])
+                  BranchEnd([])
+                  ConditionalBranch([1, 23, 0, 99, 0])
+                    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+                    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+                    ExitEventProcessing([])
+                    Empty([])
+                  BranchEnd([])
+                  ConditionalBranch([1, 22, 0, 148, 0])
+                    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+                    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+                    ExitEventProcessing([])
+                    Empty([])
+                  BranchEnd([])
+                  ConditionalBranch([1, 22, 0, 248, 0])
+                    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+                    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+                    ExitEventProcessing([])
+                    Empty([])
+                  BranchEnd([])
+                  Empty([])
+                ChoicesEnd([])
+                Empty([])
+              Else([])
+                ConditionalBranch([0, 4, 0])
+                  ShowTextAttributes(["alice_fc5", 0, 0, 2])
+                  ShowText(["\\n<Alice>All right, we're landing on the Monster Continent. We need to make sure the air defense forces don't spot us..."])
+                  ShowText([""])
+                  ShowText([""])
+                  Empty([])
+                BranchEnd([])
+                ConditionalBranch([0, 5, 0])
+                  ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+                  ShowText(["\\n<Ilias>Now then, let us land on the Monster Continent so that we do not draw the attention of the Monster Lord's air defense forces."])
+                  ShowText([""])
+                  ShowText([""])
+                  Empty([])
+                BranchEnd([])
+                PlaySE(["RPG::SE(@name=\"Wind1\", @pitch=100, @volume=80)"])
+                FadeoutScreen([])
+                Wait([120])
+                Script(["forced_get_off_vehicle"])
+                SetVehicleLocation([2, 0, 2, 0, 0])
+                TransferPlayer([0, 2, 196, 94, 2, 2])
+                FadeinScreen([])
+                ExitEventProcessing([])
+                Empty([])
+              BranchEnd([])
+              Empty([])
+            BranchEnd([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 287
+Name = "EV287"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["→East: Hellgondo Cave, Hellgondo Shrine"])
+    ShowText(["←West: Tartarus"])
+    ConditionalBranch([1, 1139, 0, 0, 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Our destination was the Hellgondo Shrine to the east. And the Tartarus is to our west...?"])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>Yes...but right now, going to the Monster Lord's Castle takes priority. The Tartarus here is probably blocked off anyways."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>Yes...but for now, we should prioritize going to the Monster Lord's Castle. Besides, I would expect the Tartarus here has been sealed off by the Monster Lord."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I guess we'll set the Tartarus aside for later then. For now, we'll get some rest at the eastern shrine."])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([4, 53, 0])
+        ShowTextAttributes(["slime_fc1", 0, 0, 2])
+        ShowText(["\\n<Lime>Break time♪"])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1520, 0])
+        ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+        ShowText(["\\n<Lazarus>............"])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 288
+Name = "EV288"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Southeast: Hellgondo Cave Remains"])
+    ShowText([" "])
+    ShowText(["※Entry is forbidden!!"])
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ConditionalBranch([0, 2611, 1])
+        ConditionalBranch([1, 1001, 0, 37, 0])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>"])
+          ShowText(["Hellgondo Cave \"Remains\"...?"])
+          ConditionalBranch([0, 4, 0])
+            ShowTextAttributes(["alice_fc5", 2, 0, 2])
+            ShowText(["\\n<Alice>We went to the Monster Lord's Castle in the parallel world of the past, didn't we? You should remember going through a cave that time."])
+            ShowText([""])
+            ShowText([""])
+            ShowTextAttributes(["alice_fc5", 2, 0, 2])
+            ShowText(["\\n<Alice>That cave is now sealed off, but...\nYou can enter it from the mainland side up to its halfway point."])
+            ShowText([""])
+            ShowText([""])
+            ShowTextAttributes(["alice_fc5", 0, 0, 2])
+            ShowText(["\\n<Alice>If we've got time to spare, why don't we explore it for a bit? There might be some treasures inside..."])
+            ShowText([""])
+            ShowText([""])
+            Empty([])
+          BranchEnd([])
+          ConditionalBranch([0, 5, 0])
+            ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+            ShowText(["\\n<Ilias>In the parallel world of the past, we traveled to the Monster Lord's Castle, yes? You must remember going through a cave at that time."])
+            ShowText([""])
+            ShowText([""])
+            ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+            ShowText(["\\n<Ilias>Presently, that cave is now sealed off, however... It looks like we should be able to enter up to its halfway point from this side."])
+            ShowText([""])
+            ShowText([""])
+            ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+            ShowText(["\\n<Ilias>My nose has picked up the scent of treasure.\nIf we have time to spare, why not look inside for just a bit?"])
+            ShowText([""])
+            ShowText([""])
+            Empty([])
+          BranchEnd([])
+          ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+          ShowText(["\\n<Sonya>Treasure, huh...\nIt'd be nice if there were some weapons or armor that could help us conquer the Monster Lord's Castle."])
+          ShowText([""])
+          ShowText([""])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>Maybe we could check it out for a bit before we head to the eastern shrine...? Hmmm, what should we do."])
+          ShowText([""])
+          ShowText([""])
+          ConditionalBranch([4, 202, 0])
+            ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+            ShowText(["\\n<Bonnie>If there's treasure to be found, we have to go in!"])
+            ShowText([""])
+            Empty([])
+          BranchEnd([])
+          ConditionalBranch([4, 66, 0])
+            ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+            ShowText(["\\n<Vanilla>Treasure? We must search for it!"])
+            ShowText([""])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 289
+Name = "EV289"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Southeast: Hellgondo Shrine"])
+    ShowText(["The Monster Lord's Castle and Sealed Sinner's Prison are to the northeast from here!"])
+    ConditionalBranch([1, 1139, 0, 0, 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>The Hellgondo Shrine is just to the southeast."])
+      ShowText([""])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 1, 0, 2])
+        ShowText(["\\n<Alice>We should expect some fierce battles from here on out. This will be our last chance to rest up before entering the Monster Lord's Castle."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["\\n<Ilias>We should expect some fierce battles from this point on. We should take this last chance to rest ourselves before entering the Monster Lord's Castle."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1520, 0])
+        ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+        ShowText(["\\n<Lazarus>............"])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 290
+Name = "EV290"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Southeast: Sealed Sinner's Prison"])
+    ShowText(["The Monster Lord's Castle is north from here!"])
+    ConditionalBranch([1, 1139, 0, 4, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>The Sealed Sinner's Prison appears to be southeast from here. But who is this sinner that was sealed there...?"])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>He's the one who comes crawling out in that bizarre form. I suspect he was an unbelievable sinner..."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>............"])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 291
+Name = "EV291"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["West: Tartarus"])
+    ShowText(["The Monster Lord's Castle is northeast from here!"])
+    Empty([])
+
+CommonEvent 292
+Name = "EV292"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["West: Monster Lord's Castle"])
+    ShowText(["Southeast: Sealed Sinner's Prison"])
+    ConditionalBranch([1, 1001, 0, 38, 0])
+      ConditionalBranch([1, 1139, 0, 5, 1])
+        ConditionalBranch([0, 4, 0])
+          ShowTextAttributes(["alice_fc5", 1, 0, 2])
+          ShowText(["\\n<Alice>If we've gotten this far, the Monster Lord's Castle will be just straight ahead to the west.\nWe shouldn't be getting lost from here."])
+          ShowText([""])
+          ShowText([""])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 5, 0])
+          ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+          ShowText(["\\n<Ilias>If we've gotten this far, the Monster Lord's Castle will be just straight ahead to the west. There should be no getting lost from here."])
+          ShowText([""])
+          ShowText([""])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>That said...the Monster Continent has a surprising amount of signs. I guess it's friendlier than I was expecting?"])
+        ShowText([""])
+        ShowText([""])
+        ConditionalBranch([0, 4, 0])
+          ShowTextAttributes(["alice_fc5", 0, 0, 2])
+          ShowText(["\\n<Alice>The monsters here also tend to get lost rather frequently. There aren't many terrain features that can be used as landmarks."])
+          ShowText([""])
+          ShowText([""])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 5, 0])
+          ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+          ShowText(["\\n<Ilias>It's because monsters are dim-witted...\nIf there were no signposts here, they would probably get lost."])
+          ShowText([""])
+          ShowText([""])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 293
+Name = "EV293"
+
+  Page 0
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["\\n<Mephisto>...Please give me a moment.\nI've just received a telepathic communication from Grand Noah."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["\\n<Mephisto>"])
+    ShowText(["............"])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["\\n<Mephisto>A high-ranking succubus was just taken into Succubus Village. She was lying near the village, with serious injuries..."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["\\n<Mephisto>She is currently receiving treatment in Succubus Village. I have a feeling this succubus was apparently Alma Elma."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>Alma Elma was found gravely wounded near Succubus Village..."])
+    ShowText([""])
+    ConditionalBranch([4, 57, 0])
+      ShowTextAttributes(["inp_fc3", 4, 0, 2])
+      ShowText(["\\n<Rumi>"])
+      ShowText(["......?!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Alma Elma stayed behind at the Monster Lord's castle to help. And despite sustaining life-threatening injuries, she managed to escape."])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Then we should visit Succubus Village before heading into the Tartarus! We need to see if Alma Elma is okay!"])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["Well, I suppose it can't be helped..."])
+    ShowText(["A powerful pawn would be essential to have before entering the Monster Realm."])
+    ConditionalBranch([4, 56, 0])
+      ShowTextAttributes(["inp_fc1", 3, 0, 2])
+      ShowText(["\\n<Rami>"])
+      ShowText(["I hope you're okay, Alma Elmaaa..."])
+      Empty([])
+
+    BranchEnd([])
+    ControlVariables([1144, 1144, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 294
+Name = "ガルダ着陸防止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 295
+Name = "ガルダ着陸防止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 296
+Name = "ガルダ着陸防止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 297
+Name = "ガルダ着陸防止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 298
+Name = "ガルダ着陸防止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 299
+Name = "EV299"
+
+  Page 0
+    ConditionalBranch([13, 2])
+      ControlVariables([22, 22, 0, 3, 5, -1, 0])
+      ControlVariables([23, 23, 0, 3, 5, -1, 1])
+      ConditionalBranch([1, 22, 0, 170, 0])
+        ConditionalBranch([1, 23, 0, 204, 0])
+          ConditionalBranch([1, 1143, 0, 3, 2])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["中央タルタロスは、あまりにも未知の領域だ！"])
+            ShowText(["何の備えもなしに乗り込むのは危険すぎる！"])
+            SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+            Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+            ExitEventProcessing([])
+            Empty([])
+          BranchEnd([])
+          ConditionalBranch([1, 1143, 0, 4, 0])
+            ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+            ShowText(["\\n<Luka>"])
+            ShowText(["It's finally time..."])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["Below us spans the largest Tartarus in the world."])
+            ShowText(["No one's ever been inside, and it's extremely dangerous."])
+            ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+            ShowText(["\\n<Ilias>"])
+            ShowText(["So, we're about to head in, but..."])
+            ShowText(["Are you prepared for this, Luka?"])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["Inside, powerful Apoptosis are likely waiting."])
+            ShowText(["If we're not fully prepared, we won't make it to the depths..."])
+            ShowChoices([["Make preparations", "Enter the Central Tartarus"], 1])
+            When([0, "準備を整える"])
+              ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+              ShowText(["\\n<Luka>"])
+              ShowText(["Let's make a few more preparations."])
+              ShowText(["We can't afford any mistakes here..."])
+              SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+              Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+              ExitEventProcessing([])
+              Empty([])
+            When([1, "中央タルタロスに突入する"])
+              PlayBGM(["RPG::BGM(@name=\"singun_demiurugosu\", @volume=100, @pitch=100)"])
+              ShowTextAttributes(["alice_fc1", 3, 0, 2])
+              ShowText(["\\n<Alice>"])
+              ShowText(["Alright, let's dive in!"])
+              ShowText(["Galda, take us inside!!"])
+              ShowTextAttributes(["galda_fc1", 1, 0, 2])
+              ShowText(["\\n<Galda>"])
+              ShowText(["Kweeehh~~!"])
+              PlaySE(["RPG::SE(@name=\"Wind1\", @pitch=100, @volume=80)"])
+              ShowPicture([5, "iv_galda5", 0, 0, 0, 0, 100, 100, 0, 0])
+              MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+              ShowTextAttributes(["", 0, 0, 2])
+              ShowText(["Galda, with all of us on her back, dives into the massive rift in time and space! In an instant, we're battered by a fierce turbulence!"])
+              ShowText([""])
+              PlaySE(["RPG::SE(@name=\"Wind11\", @pitch=100, @volume=80)"])
+              ShakeScreen([5, 5, 60, true])
+              ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+              ShowText(["\\n<Ilias>"])
+              ShowText(["This is the miasma current!"])
+              ShowText(["If we get caught in it, we're finished!!"])
+              ConditionalBranch([4, 34, 0])
+                ShowTextAttributes(["micaelac_fc1", 4, 0, 2])
+                ShowText(["【ミカエラちゃん】"])
+                ShowText(["わーっ！"])
+                Empty([])
+              BranchEnd([])
+              ConditionalBranch([4, 36, 0])
+                ShowTextAttributes(["rucyfinac_fc1", 1, 0, 2])
+                ShowText(["【ルシフィナちゃん】"])
+                ShowText(["たのし～！"])
+                Empty([])
+              BranchEnd([])
+              ConditionalBranch([4, 401, 0])
+                ShowTextAttributes(["gnosis_fc1", 2, 0, 2])
+                ShowText(["【グノーシス】"])
+                ShowText(["そんな……"])
+                ShowText(["私の混沌検知レーダーが振り切れた――"])
+                ConditionalBranch([4, 397, 0])
+                  ShowTextAttributes(["shion_fc1", 2, 0, 2])
+                  ShowText(["【シオン】"])
+                  ShowText(["お前のそのポンコツレーダー、役に立ったことあんのかよ！"])
+                  Empty([])
+                BranchEnd([])
+                Empty([])
+              BranchEnd([])
+              ShowTextAttributes(["galda_fc1", 0, 0, 2])
+              ShowText(["\\n<Galda>"])
+              ShowText(["Kweh! Kweeehh~~!!"])
+              PlaySE(["RPG::SE(@name=\"Wind11\", @pitch=100, @volume=80)"])
+              ShakeScreen([5, 5, 60, true])
+              ShowTextAttributes(["", 0, 0, 2])
+              ShowText(["The violent shock and turbulence are worse than a typhoon."])
+              ShowText(["We cling tightly to Galda's back to avoid being thrown off."])
+              ShowTextAttributes(["sonia_fc3", 4, 0, 2])
+              ShowText(["\\n<Sonia>"])
+              ShowText(["Almost there..."])
+              ShowText(["Once we're past this turbulent zone, we'll reach the corridor area."])
+              ShowTextAttributes(["galda_fc1", 0, 0, 2])
+              ShowText(["\\n<Galda>"])
+              ShowText(["Kweh! Kweeehh~~!!"])
+              ConditionalBranch([4, 382, 0])
+                ShowTextAttributes(["morrigan_fc1", 5, 0, 2])
+                ShowText(["【モリガン】"])
+                ShowText(["はん！　キレた時の姉貴に比べれば、これくらいの嵐……！"])
+                ConditionalBranch([4, 397, 0])
+                  ShowTextAttributes(["shion_fc1", 4, 0, 2])
+                  ShowText(["【シオン】"])
+                  ShowText(["ああ、あれはキツかった……"])
+                  ShowTextAttributes(["morrigan_fc1", 6, 0, 2])
+                  ShowText(["【モリガン】"])
+                  ShowText(["いったい、どんな目に遭ったんだ……？"])
+                  ShowTextAttributes(["shion_fc1", 4, 0, 2])
+                  ShowText(["【シオン】"])
+                  ShowText(["手足もがれた。"])
+                  ShowTextAttributes(["morrigan_fc1", 6, 0, 2])
+                  ShowText(["【モリガン】"])
+                  ShowText(["ヒエ～！"])
+                  ConditionalBranch([4, 401, 0])
+                    ShowTextAttributes(["gnosis_fc1", 3, 0, 2])
+                    ShowText(["【グノーシス】"])
+                    ShowText(["お前等、非常事態だぞ……"])
+                    ShowText(["少し黙れ……"])
+                    Empty([])
+                  BranchEnd([])
+                  Empty([])
+                BranchEnd([])
+                Empty([])
+              BranchEnd([])
+              PlaySE(["RPG::SE(@name=\"Wind11\", @pitch=100, @volume=80)"])
+              ShakeScreen([5, 5, 60, true])
+              ShowTextAttributes(["", 0, 0, 2])
+              ShowText(["Galda pushes forward with all her might, cutting through the turbulence..."])
+              PlaySE(["RPG::SE(@name=\"Wind8\", @pitch=100, @volume=80)"])
+              FadeoutBGM([1])
+              FadeoutScreen([])
+              ShowTextAttributes(["", 0, 0, 2])
+              ShowMessage("And then...")
+              Wait([120])
+              ErasePicture([5])
+              ControlSwitches([5430, 5430, 0])
+              Script(["forced_get_off_vehicle"])
+              ChangeMapDisplay([0])
+              TransferPlayer([0, 445, 18, 54, 8, 2])
+              ExitEventProcessing([])
+              Empty([])
+            ChoicesEnd([])
+            Empty([])
+          BranchEnd([])
+          ConditionalBranch([1, 1143, 0, 5, 1])
+            ShowTextAttributes(["alice_fc1", 3, 0, 2])
+            ShowText(["【アリス】"])
+            ShowText(["よし、このまま突っ込むぞ！"])
+            ShowText(["ガルダ、中に飛び込め！！"])
+            ShowTextAttributes(["galda_fc1", 1, 0, 2])
+            ShowText(["【ガルダ】"])
+            ShowText(["くぇぇぇぇ～～！"])
+            PlaySE(["RPG::SE(@name=\"Wind8\", @pitch=100, @volume=80)"])
+            FadeoutScreen([])
+            Wait([60])
+            Script(["forced_get_off_vehicle"])
+            ChangeMapDisplay([0])
+            TransferPlayer([0, 445, 18, 54, 8, 2])
+            ExitEventProcessing([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])

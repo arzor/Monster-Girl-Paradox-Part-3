@@ -1,0 +1,90 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    EraseEvent([])
+    PlayBGM(["RPG::BGM(@name=\"scene_comi2\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["coatlus_fc1", 4, 0, 2])
+    ShowText(["\\n<Quetzalcoatl>"])
+    ShowText(["You stupid cat!"])
+    ShowTextAttributes(["tezcatlipoca_fc1", 4, 0, 2])
+    ShowText(["\\n<Tezcatlipoca>"])
+    ShowText(["You dumb bird!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Yup, that's them..."])
+    PlaySE(["RPG::SE(@name=\"mon_dassyutu\", @pitch=100, @volume=100)"])
+    TransferPlayer([0, 657, 9, 6, 6, 2])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The prison door is sturdy and appears to be protected by a layer of magic as well. Breaking through here is probably impossible..."])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Guess I can't just break my way out..."])
+    ConditionalBranch([2, "A", 1])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["...Hm?"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      CallCommonEvent([399])
+      ControlSelfSwitch(["A", 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["An awful smell drifts up from the vase..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Ugh, yuck! Is this thing supposed to be the toilet?!"])
+    ConditionalBranch([2, "A", 1])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["...Hm?"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      CallCommonEvent([399])
+      ControlSelfSwitch(["A", 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The barrel is full of clouded, muddy water..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["This stuff isn't for drinking, right...?"])
+    ExitEventProcessing([])
+    Empty([])

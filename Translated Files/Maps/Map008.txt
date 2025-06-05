@@ -1,0 +1,305 @@
+Display Name = "Ilias Temple"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 5, 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I don't have time to go back to the village. If I'm any later, Sonya will kill me."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 7, 19, 1, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 5, 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I don't have time to leave and come back. I don't want to find out what Sonya will do to me if I'm any later..."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 7, 19, 1, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 5, 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I don't have time to leave and come back. I don't want to find out what Sonya will do to me if I'm any later..."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 7, 20, 1, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 5, 24, 30, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 5, 24, 30, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 5, 24, 30, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>This is Ilias Temple. Besides being able to change your job here, you can get advice on your adventure."])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 5, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Here to pray as usual, Luka? You're an inspiration to us all."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>...oh yeah, your adventure starts today, doesn't it?\nI suppose you're still going to have to come back here every time you want to change your job though."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 12, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Here to change your job, Luka? It looks like you're coming along well."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>It looks like you've gotten a lot stronger. You're putting the rest of us around here to shame, that's for sure."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 30, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Soldier>Hard to believe the country boy of only a few days ago is now the hero saving the world. You're on a whole other level from us grunts..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Girl>I want to be a maid when I grow up♪"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["64"])
+    ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+    ShowText(["\\n<Teeny>I'm going to be a super maid too! ♪"])
+    ExitEventProcessing([])
+    Label(["282"])
+    ShowTextAttributes(["maycubbus_fc1", 1, 0, 2])
+    ShowText(["\\n<Mei>And what exactly are you planning on using your maid skills for? Pervert..."])
+    ExitEventProcessing([])
+    Label(["289"])
+    ShowTextAttributes(["maidscyulla_fc1", 1, 0, 2])
+    ShowText(["\\n<Ran>Ufufu, please do your best."])
+    ExitEventProcessing([])
+    Label(["351"])
+    ShowTextAttributes(["scylla_s_fc1", 0, 0, 2])
+    ShowText(["\\n<Cecile>The path to becoming a maid is quite a demanding one, but if you hold onto your desire to please, there's no doubt you'll become a fantastic servant."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Slime Girl>Waaah! I want to be a mage♪ Purupuru♪ Purupuru♪"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["233"])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["\\n<Mephisto>How about enrolling in our magic academy? I can give you a 10% discount if you apply now..."])
+    ExitEventProcessing([])
+    Label(["391"])
+    ShowTextAttributes(["mefist_fc2", 0, 0, 2])
+    ShowText(["\\n<Mephisto>How about enrolling in our magic academy? I can give you a 10% discount if you apply now..."])
+    ExitEventProcessing([])
+    Label(["286"])
+    ShowTextAttributes(["witchs_fc1", 1, 0, 2])
+    ShowText(["\\n<Witch>Ufu... do your best♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>You can change your job here at Ilias Temple. That's why people from all over the world flock here..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>Although lately, far fewer than normal have been arriving.\nI wonder if most have finally found a job they like?"])
+    ConditionalBranch([1, 1001, 0, 5, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>Luka, go get baptized. I'm sure you'll make a fine adventurer."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Sister>As of today, I'm retiring from the priesthood. I wonder if I should give being a gadabout a try..."])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Former Sister>Aah, this is the life of a gadabout! I'm going to make up for all the lost time I didn't spend enjoying myself!"])
+    Empty([])
+
+  Page 2
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Former Gadabout>Playing around all the time got kinda tiring. From now on I'm going to be a maid and serve others."])
+    Empty([])
+
+  Page 3
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Former Maid>I've been collecting small medals while working as a maid... now I can finally become a noble!"])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 5, 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I don't have time to leave and come back. I don't want to find out what Sonya will do to me if I'm any later..."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 296, 355, 2, 0])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 5, 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I don't have time to leave and come back. I don't want to find out what Sonya will do to me if I'm any later..."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 296, 355, 2, 0])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 5, 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I don't have time to leave and come back. I don't want to find out what Sonya will do to me if I'm any later..."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 296, 355, 2, 0])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 5, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>You can leave the temple directly to the outside from here."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Oh, hey Luka. If you don't hurry, Sonya is going to be pissed at you."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>You can leave the temple directly to the outside from here."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>Try holding down button 4 during conversations and events. You'll speed right through the text."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>If you're using a keyboard, press [A]. Very handy for making long stories old people like to tell fly by."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["99"])
+    ShowTextAttributes(["namazu_fc1", 2, 0, 2])
+    ShowText(["\\n<Gigi>Jeez, show some respect for your elders."])
+    ExitEventProcessing([])
+    Label(["344"])
+    ShowTextAttributes(["kirin_fc1", 0, 0, 2])
+    ShowText(["\\n<Kirin>One should always pay attention when one's elders speak..."])
+    ExitEventProcessing([])
+    Empty([])

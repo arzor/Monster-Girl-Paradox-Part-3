@@ -1,0 +1,231 @@
+Display Name = "滅びの地 廃墟3F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 928, 18, 25, 2, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 929, 54, 19, 0, 0])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=38, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=38, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 929, 18, 24, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 929, 18, 24, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ConditionalBranch([1, 1312, 0, 2, 2])
+      ShowPicture([5, "80_alice3th_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["alice3th_fc1", 0, 0, 2])
+      ShowText(["【アリスフィーズ3世】"])
+      ShowText(["元の体に戻る道、求めに来たけれど……"])
+      ShowText(["ここには、何もない……"])
+      ConditionalBranch([0, 3202, 1])
+        CallCommonEvent([9071])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["魔芸師の足跡を追って、この場所に現れたようだ。"])
+      ShowText(["ポケット魔王城に回収するよりも、このままにした方が良いだろう――"])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1312, 0, 3, 1])
+      ShowPicture([5, "80_alice3th_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["alice3th_fc1", 0, 0, 2])
+      ShowText(["【アリスフィーズ3世】"])
+      ShowText(["元の体に戻る道、求めに来たけれど……"])
+      ShowText(["ここには、何もない……"])
+      CallCommonEvent([9072])
+      PlaySE(["RPG::SE(@name=\"Darkness3\", @pitch=100, @volume=80)"])
+      FlashScreen(["Color(@red=0.0, @green=0.0, @blue=0.0, @alpha=255.0)", 60, false])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=41, @parameters=[\\\"bird01_cip\\\", 5])\", \"RPG::MoveCommand(@code=25, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=41, @parameters=[\"bird01_cip\", 5])"])
+      Unnamed(["RPG::MoveCommand(@code=25, @parameters=[])"])
+      ShowPicture([5, "80_alice3th_st11", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["アリスフィーズ3世は、生前の姿に戻った！"])
+      Wait([60])
+      SaveBGM([])
+      PlayBGM(["RPG::BGM(@name=\"scene_alice\", @volume=100, @pitch=100)"])
+      ShowTextAttributes(["alice3th_fc2", 0, 0, 2])
+      ShowText(["【アリスフィーズ3世】"])
+      ShowText(["元の姿に戻れたか、念願が叶ったな……"])
+      ShowText(["さて、お主達は何者なのだ？"])
+      ConditionalBranch([0, 1005, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["それは、余から説明させて頂こう――"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1006, 0])
+        ShowTextAttributes(["alice_fc1", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["それは、余から説明させて頂こう――"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1007, 0])
+        ShowTextAttributes(["alice_fc7", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["それは、余から説明させて頂こう――"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["アリスは事情を説明した――"])
+      ShowTextAttributes(["alice3th_fc2", 0, 0, 2])
+      ShowText(["【アリスフィーズ3世】"])
+      ShowText(["ほう、我が子孫アリスフィーズ16世とな……"])
+      ShowText(["邪神様の力を手にしたいとは、ずいぶん大きく出たものだ。"])
+      ShowTextAttributes(["alice3th_fc2", 0, 0, 2])
+      ShowText(["【アリスフィーズ3世】"])
+      ShowText(["だが、それでこそ我が子孫。"])
+      ShowText(["あくなき力の希求、実に好ましい。"])
+      ShowTextAttributes(["alice3th_fc2", 0, 0, 2])
+      ShowText(["【アリスフィーズ3世】"])
+      ShowText(["だが、大いなる力を手にする資格があるのかどうか……"])
+      ShowText(["力をもって、問わせてもらうぞ。"])
+      ConditionalBranch([0, 1005, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["了解した……"])
+        ShowText(["ならば、我が覚悟と信念を示すのみ！"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1006, 0])
+        ShowTextAttributes(["alice_fc1", 3, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["了解した……"])
+        ShowText(["ならば、我が覚悟と信念を示すのみ！"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1007, 0])
+        ShowTextAttributes(["alice_fc7", 3, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["了解した……"])
+        ShowText(["ならば、我が覚悟と信念を示すのみ！"])
+        Empty([])
+      BranchEnd([])
+      ErasePicture([5])
+      ChangeBattleBGM(["RPG::BGM(@name=\"boss_maou1\", @volume=100, @pitch=100)"])
+      ControlSwitches([22, 22, 0])
+      BattleProcessing([0, 2064, false, false])
+      ControlSwitches([22, 22, 1])
+      ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+      PlayBGM(["RPG::BGM(@name=\"scene_epilogue2\", @volume=100, @pitch=100)"])
+      ShowPicture([5, "80_alice3th_st11", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["alice3th_fc2", 0, 0, 2])
+      ShowText(["【アリスフィーズ3世】"])
+      ShowText(["なるほど……"])
+      ShowText(["その覚悟と信念、しかと見極めたぞ。"])
+      ShowTextAttributes(["alice3th_fc2", 0, 0, 2])
+      ShowText(["【アリスフィーズ3世】"])
+      ShowText(["お前達に、力を貸してやるとしよう。"])
+      ShowText(["どこへなりとも、連れて行くが良い……"])
+      ErasePicture([5])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+      Script(["add_actor_ex(731)"])
+      Script(["set_actor_had(730)"])
+      PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["アリスフィーズ3世が仲間に加わった！"])
+      Wait([60])
+      ControlSwitches([3204, 3204, 0])
+      ControlVariables([1353, 1353, 1, 0, 1])
+      CallCommonEvent([9056])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["これで、アリスフィーズ3世の協力を得る事ができた。"])
+      ShowText(["さあ、冒険の旅を続けよう――"])
+      ReplayBGM([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 2"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([4439, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([1820, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

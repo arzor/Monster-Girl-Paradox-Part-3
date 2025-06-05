@@ -1,0 +1,46 @@
+CommonEvent 7373
+Name = "ルリ：敗北"
+
+  999([7363])
+  CallCommonEvent([7000])
+  ShowPicture([5, "80_mob_elf2_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+  ErasePicture([6])
+  ShowTextAttributes(["mob_elf2_fc1", 0, 0, 2])
+  ShowText(["\\n<Ruri>"])
+  ShowText(["Now then, it's time to pay up."])
+  ConditionalBranch([0, 443, 1])
+    ChangeGold([1, 0, 2000])
+    Empty([])
+
+  BranchEnd([])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["Luka hands over 2000G!"])
+  ShowTextAttributes(["mob_elf2_fc1", 0, 0, 2])
+  ShowText(["\\n<Ruri>"])
+  ShowText(["Come back if you want rematch."])
+  ShowText(["I'll make you fall prey to my leg as many times as you want."])
+  ErasePicture([5])
+  ConditionalBranch([0, 443, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([0, 2331, 1])
+    ChangeMapDisplay([1])
+    ConditionalBranch([1, 1143, 0, 9, 2])
+      TransferPlayer([0, 300, 39, 33, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 10, 1])
+      ControlVariables([57, 57, 0, 0, 1504])
+      TransferPlayer([0, 504, 39, 33, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+  BranchEnd([])
+  ExitEventProcessing([])
+  Empty([])

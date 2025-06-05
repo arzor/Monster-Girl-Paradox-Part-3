@@ -1,0 +1,171 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 504, 10, 2, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 504, 10, 2, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 504, 10, 2, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Cat>Meeeow."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["222"])
+    ShowTextAttributes(["nekomata_fc1", 2, 0, 2])
+    ShowText(["\\n<Tama>Unya♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["nekomata_fc1", 2, 0, 2])
+    ShowText(["\\n<Nekomata>Nyaa♪"])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowPicture([5, "80_santos_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["santos_fc1", 0, 0, 2])
+    ShowText(["\\n<Sa○○○>............"])
+    ConditionalBranch([4, 222, 0])
+      ShowTextAttributes(["nekomata_fc1", 4, 0, 2])
+      ShowText(["\\n<Tama>Nyaa?!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 6, 0, 2])
+      ShowText(["\\n<Alice>Eek! What's with this one!?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>Wh-what monster is this...!?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["santos_fc1", 0, 0, 2])
+    ShowText(["\\n<Sa○○○>............"])
+    ConditionalBranch([4, 540, 0])
+      ShowTextAttributes(["amira_fc1", 0, 0, 2])
+      ShowText(["\\n<Amira>Long time no see, Sa○○○.\nAre you still looking for an owner?"])
+      ShowTextAttributes(["santos_fc1", 0, 0, 2])
+      ShowText(["\\n<Sa○○○>............"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>Why is her name partially censored?"])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Why is her name partially censored?"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["amira_fc1", 0, 0, 2])
+      ShowText(["\\n<Amira>Because we don't want to get sued.\nAnyway, how about coming along with us?"])
+      ShowTextAttributes(["santos_fc1", 0, 0, 2])
+      ShowText(["\\n<San○○>............"])
+      ShowTextAttributes(["amira_fc1", 1, 0, 2])
+      ShowText(["\\n<Amira>Oh no, she's becoming uncensored! Bad cat, bad!"])
+      ShowTextAttributes(["santos_fc1", 0, 0, 2])
+      ShowText(["\\n<Santo○>............"])
+      ShowTextAttributes(["amira_fc1", 0, 0, 2])
+      ShowText(["\\n<Amira>*Gulp*...?"])
+      ShowTextAttributes(["santos_fc1", 0, 0, 2])
+      ShowText(["\\n<Santos>............"])
+      ShowTextAttributes(["amira_fc1", 0, 0, 2])
+      ShowText(["\\n<Amira>Oh, that's safe then. Nothing to worry about now."])
+      ShowTextAttributes(["santos_fc1", 0, 0, 2])
+      ShowText(["\\n<Santos>............"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Invite Santos to the party?"])
+      ShowChoices([["Invite to party", "Decline"], 2])
+      When([0, "Invite to party"])
+        ShowTextAttributes(["santos_fc1", 0, 0, 2])
+        ShowText(["\\n<Santos>............"])
+        ErasePicture([5])
+        SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+        Script(["add_actor_ex(543)"])
+        PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Santos has joined the party!"])
+        ControlSelfSwitch(["A", 0])
+        Wait([60])
+        ShowTextAttributes(["santos_fc1", 0, 0, 2])
+        ShowText(["\\n<Santos>............"])
+        ShowTextAttributes(["amira_fc1", 0, 0, 2])
+        ShowText(["\\n<Amira>Oh? What's that you've got there?"])
+        PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+        ChangeItems([639, 0, 0, 1])
+        ShowTextAttributes(["amira_fc1", 0, 0, 2])
+        ShowText(["\\n<Amira>This will let us change race to [Nekomata]. It does require mastering [Beast] first, however."])
+        ShowTextAttributes(["santos_fc1", 0, 0, 2])
+        ShowText(["\\n<Santos>............"])
+        ShowTextAttributes(["amira_fc1", 0, 0, 2])
+        ShowText(["\\n<Amira>She says that she hopes this is useful to us... I think. Okay, let's go!"])
+        ControlSwitches([2276, 2276, 0])
+        ExitEventProcessing([])
+        Empty([])
+      When([1, "Decline"])
+        ShowTextAttributes(["santos_fc1", 0, 0, 2])
+        ShowText(["\\n<Santos>............"])
+        ErasePicture([5])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    Else([])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>If only we could talk to her...\nDo we have anyone who can converse with the Unfortunate Friends?"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>If only we could talk to her...\nDo we have anyone who can converse with the Unfortunate Friends?"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    Empty([])
+
+  Page 1
+    Empty([])

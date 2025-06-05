@@ -1,0 +1,205 @@
+Display Name = "ミトラ封印城"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Earth4\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 457, 45, 61, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 235, 353, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 235, 353, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 236, 353, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_arcen_st01b", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["arcen_fc1", 0, 0, 2])
+    ShowText(["【アルカンシエル】"])
+    ShowText(["ここは、神具の保管庫……"])
+    ShowText(["これより先、いかなる侵入者も立ち入らせぬぞ。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["お前は、アルカンシエル！？"])
+    ShowText(["まさか、死んだはずじゃ――"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["アルカンシエルは、管理者の塔で戦った。"])
+    ShowText(["その命を燃やし尽くし、息絶えたはずだが――"])
+    ShowTextAttributes(["arcen_fc1", 0, 0, 2])
+    ShowText(["【アルカンシエル】"])
+    ShowText(["私は、オリジナルの機体ではない。"])
+    ShowText(["天界の技術で造られた量産型だ……"])
+    ErasePicture([5])
+    Wait([30])
+    ControlSwitches([31, 31, 0])
+    PlaySE(["RPG::SE(@name=\"Wind1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([6, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=14, @parameters=[0, 5])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, 5])"])
+    Wait([30])
+    ShowPicture([6, "80_arcen_st01b", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([5, "80_hainu_st01b", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["hainu_fc1", 1, 0, 2])
+    ShowText(["【ハイヌウェレ】"])
+    ShowText(["そうよ、私達はたくさんいるの。"])
+    ShowText(["次世代の神兵となるモデルなのよ、ふふっ……"])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["人造生命体の量産か……"])
+    ShowText(["イリアスは、つくづく生命を軽んじる事が好きらしい。"])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["ともかく、相手が誰だろうと通してもらう！"])
+    ShowText(["ここに保管されている武器を手に入れねばならんのだ！"])
+    ConditionalBranch([4, 753, 0])
+      ShowTextAttributes(["seitentaisei_fc1", 0, 0, 2])
+      ShowText(["【孫悟空】"])
+      ShowText(["ネクストドールか、面白ぇや！"])
+      ShowText(["この斉天大聖孫悟空様が、いっちょ相手してやるぜ！"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["量産されたネクストドール――つくづく、厄介な相手だ。"])
+    ShowText(["だが、ここで引き下がる訳にはいかない！"])
+    ErasePicture([5])
+    ErasePicture([6])
+    BattleProcessing([0, 1698, false, false])
+    PlayBGM(["RPG::BGM(@name=\"dungeon_mitora\", @volume=100, @pitch=100)"])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([2504, 2504, 0])
+    ConditionalBranch([4, 756, 0])
+      ShowTextAttributes(["azidahaka_fc1", 2, 0, 2])
+      ShowText(["【アジ・ダハーカ】"])
+      ShowText(["なかなか手こずらせてくれるわ。"])
+      ShowText(["こんなものが量産されているとは、侮れんぞ……"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["今回は倒す事が出来たが……"])
+    ShowText(["この先、量産型が立ちはだかってくる事は想像に難くない。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["イリアス神殿の中にも、たくさん配置されてそうだね……"])
+    ConditionalBranch([4, 528, 0])
+      ShowTextAttributes(["sabasa_fc4", 0, 0, 2])
+      ShowText(["【サラサ】"])
+      ShowText(["最後まで、楽にはさせてくれそうにないねぇ……"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["そして、ここから先も警備は厳重だろう。"])
+    ShowText(["群れ寄る警備を突破し、二十の神具とやらを手に入れなければ――"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ConditionalBranch([1, 1147, 0, 4, 2])
+      ShowTextAttributes(["alice_fc2", 1, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ここは、ミトラ封印城ではないか……！？"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["僕達の世界にもあった城だよね。"])
+      ShowText(["確か、20の神武器が眠っているっていう……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["ただし僕達の世界では、神武器は一つも残っていなかった。"])
+      ShowText(["この世界では、どうだろうか……？"])
+      ShowTextAttributes(["alice_fc1", 1, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["この城の様子から見て、管理が行き届いているようだ。"])
+      ShowText(["もしかしたら、20の神武器が安置してあるかもしれんな。"])
+      ShowTextAttributes(["sonia_fc1", 3, 0, 2])
+      ShowText(["【ソニア】"])
+      ShowText(["強力な武器、大量ゲットのチャンスじゃない！"])
+      ShowText(["さっそく頂きに行こうよ♪"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1147, 0, 5, 1])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ミトラ封印城に到着したな。"])
+      ShowText(["ここに、20の神武器が安置しているという話だが……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["僕達の世界では、神武器は一つも残っていなかった。"])
+      ShowText(["しかしこの世界は、ちゃんと揃っているようだ。"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["強盗みたいな真似は好かないけど、世界のためだ。"])
+      ShowText(["全部頂いてしまおう！"])
+      ConditionalBranch([4, 528, 0])
+        ShowTextAttributes(["sabasa_fc4", 1, 0, 2])
+        ShowText(["【サラサ】"])
+        ShowText(["天使の施設を襲うのは、もう慣れっこさ。"])
+        ShowText(["あたし達は、空賊団だからねぇ。"])
+        Empty([])
+      BranchEnd([])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["202"])
+      ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+      ShowText(["【ボニー】"])
+      ShowText(["くくく、たまらんな！"])
+      ShowText(["海賊魂が燃え上がるぞ！"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])

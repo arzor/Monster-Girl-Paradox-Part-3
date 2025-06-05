@@ -1,0 +1,241 @@
+Display Name = "レミナ研究所 第2収容室"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 782, 51, 4, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 782, 51, 4, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 782, 51, 4, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【マシン】"])
+    ShowText(["エナジー補給装置、起動……"])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+    RecoverAll([0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ルカ達のHPとMPが全快した！"])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["これが、シンギュラリティの世界と繋がったゲートだな。"])
+    ShowTextAttributes(["rucyfina_fc2", 0, 0, 2])
+    ShowText(["【ルシフィナ】"])
+    ShowText(["いっそここから、敵地に乗り込んだ方がいいんじゃない？"])
+    ShowTextAttributes(["micaela_fc3", 0, 0, 2])
+    ShowText(["【ミカエラ】"])
+    ShowText(["却下よ、ルシフィナ。聖魔大戦の時に、"])
+    ShowText(["それで六祖三人に待ち伏せされたのを忘れた？"])
+    ShowTextAttributes(["rucyfina_fc2", 0, 0, 2])
+    ShowText(["【ルシフィナ】"])
+    ShowText(["姉さんが助けてくれたじゃない。"])
+    ShowTextAttributes(["micaela_fc3", 0, 0, 2])
+    ShowText(["【ミカエラ】"])
+    ShowText(["いつだって助けられるとは限らないわ……"])
+    ShowText(["無茶はやめなさい。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["やはり、このゲートで敵地に乗り込むのは危険すぎる。"])
+    ShowText(["当初の予定通り、すみやかにゲートを閉鎖した方が良いだろう。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["それじゃあ、ゲートを閉じるよ。"])
+    ShowText(["ゲート発生装置を破壊しよう――"])
+    ConditionalBranch([4, 16, 0])
+      ShowTextAttributes(["granberia_fc4", 0, 0, 2])
+      ShowText(["【グランベリア】"])
+      ShowText(["では、やってしまうか……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 21, 0])
+      ShowTextAttributes(["tamamo_fc1", 1, 0, 2])
+      ShowText(["【たまも】"])
+      ShowText(["派手にいこうぞ～！！"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["周囲の機器を壊そうとした、その時――"])
+    FadeoutBGM([1])
+    Wait([30])
+    ShowAnimation([10, 542, false])
+    Wait([60])
+    ControlSwitches([31, 31, 0])
+    Wait([90])
+    PlayBGM(["RPG::BGM(@name=\"boss0-3\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_laplace_st21", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+    ShowText(["【ラプラス】"])
+    ShowText(["ここの機器は破壊させません……"])
+    ShowText(["任務により、あなた達を排除します。"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["ラプラス……！"])
+    ShowText(["やはり、敵の手駒となっていましたか！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["目の前に立ちはだかったのは、仲間だったはずのラプラス――"])
+    ShowText(["シンギュラリティのハッキングにより、操られているようだ。"])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["手をこまねいていては、市街にも被害が及ぶ。"])
+      ShowText(["手早くラプラスを倒し、ゲートを閉鎖するぞ！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 3, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["手をこまねいていては、市街にも被害が及ぶ。"])
+      ShowText(["手早くラプラスを倒し、ゲートを閉鎖するぞ！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 3, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["手をこまねいていては、市街にも被害が及ぶ。"])
+      ShowText(["手早くラプラスを倒し、ゲートを閉鎖するぞ！"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["やるしかないか……行くぞ！"])
+    ConditionalBranch([4, 776, 0])
+      ShowTextAttributes(["dragonp_fc2", 0, 0, 2])
+      ShowText(["【グランパピー】"])
+      ShowText(["やれやれ、またこいつの相手か……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 766, 0])
+      ShowTextAttributes(["shirom_fc3", 0, 0, 2])
+      ShowText(["【ラ・クロワ】"])
+      ShowText(["許せラプラス、後で正気に戻してやる……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 185, 0])
+      ShowTextAttributes(["radio_fc1", 0, 0, 2])
+      ShowText(["【ラディオ】"])
+      ShowText(["ラプラス、やめるのでス……"])
+      ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+      ShowText(["【ラプラス】"])
+      ShowText(["敵対象、最初期タイプの試作ロイドと確認。"])
+      ShowText(["破壊は容易……"])
+      ShowTextAttributes(["radio_fc1", 0, 0, 2])
+      ShowText(["【ラディオ】"])
+      ShowText(["……………………"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+    ShowText(["【ラプラス】"])
+    ShowText(["任務は、この施設の防衛。"])
+    ShowText(["戦闘を開始します――"])
+    ErasePicture([5])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss2\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 2004, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    PlayBGM(["RPG::BGM(@name=\"dungeon_labo5\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+    ShowText(["【ラプラス】"])
+    ShowText(["戦闘……続行、不能……"])
+    PlaySE(["RPG::SE(@name=\"mon_escape\", @pitch=100, @volume=100)"])
+    ControlSwitches([31, 31, 1])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ラプラスを戦闘不能に追い込んだ！"])
+    ShowText(["すかさず捕縛し、ポケット魔王城に収納する――"])
+    Wait([30])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["これで邪魔者はいなくなったな。"])
+    ShowText(["あらためて、ゲート発生装置を破壊しよう！"])
+    ConditionalBranch([4, 36, 0])
+      ShowTextAttributes(["micaelac_fc1", 0, 0, 2])
+      ShowText(["【ミカエラちゃん】"])
+      ShowText(["もういいって……"])
+      ShowText(["ルシフィナちゃん、ゴ－！！"])
+      ShowTextAttributes(["rucyfinac_fc1", 1, 0, 2])
+      ShowText(["【ルシフィナちゃん】"])
+      ShowText(["わーい！！"])
+      Empty([])
+
+    BranchEnd([])
+    FadeoutScreen([])
+    PlaySE(["RPG::SE(@name=\"mon_break5\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["周囲の機器を破壊した！"])
+    ShowText(["ゲートが維持できなくなり、消失してしまう！"])
+    ControlVariables([1308, 1308, 0, 0, 8])
+    FadeinScreen([])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["これで良いですね、目標を達成しました。"])
+    ShowText(["それでは、プロメスティンの元に戻りましょう。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ゲートを破壊し、これ以上敵が侵入してくる事はなくなった。"])
+    ShowText(["だが大元のシンギュラリティは、まだ健在なのだ。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["何か新たな手を打ってくるのを、待っている訳にはいかない。"])
+    ShowText(["プロメスティンと話し合い、今後の動きを決めよう――"])
+    FadeoutBGM([1])
+    FadeoutScreen([])
+    Wait([90])
+    TransferPlayer([0, 47, 12, 58, 8, 2])
+    PlayBGM(["RPG::BGM(@name=\"scene_epilogue2\", @volume=100, @pitch=100)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "ラプラス"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])

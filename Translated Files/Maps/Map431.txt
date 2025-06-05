@@ -1,0 +1,448 @@
+Display Name = "Monster Lord's Castle 4F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ControlVariables([1001, 1001, 0, 0, 40])
+    ControlVariables([1142, 1142, 0, 0, 1])
+    ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+    ShowText(["\\n<Ilias>Excellent choice, Luka...\nYou truly are the one I can trust the most."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["sazya_fc1", 0, 0, 2])
+    ShowText(["\\n<Saja>Destroyer of Worlds, will you follow the Goddess to the bitter end...? If so, I have no choice but to destroy you, even if I'm reluctant to do so."])
+    ShowText([""])
+    ShowText([""])
+    ErasePicture([5])
+    ErasePicture([6])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Thus, I've made my decision.\nThe little Ilias and I will side with the Goddess of Creation..."])
+    ShowText([""])
+    PlayBGM(["RPG::BGM(@name=\"boss0-4\", @volume=100, @pitch=100)"])
+    ConditionalBranch([0, 5, 0])
+      ShowPicture([5, "80_alice15th_st53", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["alice15th_fc3", 2, 0, 2])
+      ShowText(["\\n<Alipheese the 15th>Hero Luka, I will not let you leave this Monster Lord's Castle alive. You shall perish here..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([8, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShowPicture([5, "80_lilith2_st06b", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lilith2_fc1", 5, 0, 2])
+    ShowText(["\\n<Lilith>It's unfortunate, but it's time for plan B...\nWe will eliminate the great threat here and now."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Lilith and the others unleash a ferocious killing intent!\nThey want to finish us off right here..."])
+    ShowText([""])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["\\n<Ilias>Damn you, you're making your move now...!!"])
+    ShowText([""])
+    ConditionalBranch([4, 383, 0])
+      ShowTextAttributes(["eden_fc1", 2, 0, 2])
+      ShowText(["\\n<Eden>How cowardly, minions of the Dark Goddess...!"])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    SetMoveRoute([34, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ShowTextAttributes(["rafaera_fc1", 1, 0, 2])
+    ShowText(["\\n<Raphaela>Rest assured, Ilias.\nWe, too, are prepared..."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Right when Raphaela steps forward, full of confidence..."])
+    ConditionalBranch([0, 5, 0])
+      ShowPicture([5, "80_alice15th_st51", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["alice15th_fc3", 0, 0, 2])
+      ShowText(["\\n<Alipheese the 15th>Your preparation has been in vain.\nThe magic circle that blocks boundaries is hereby activated..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["lilith2_fc1", 3, 0, 2])
+      ShowText(["\\n<Lilith>The anti-boundary magic circle left behind by Alipheese the 15th... Will now take effect!"])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    Wait([30])
+    ShowAnimation([5, 578, false])
+    Wait([90])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Suddenly, the entire Monster Lord's Castle is enveloped in a strange barrier. Alipheese the 15th probably used some kind of technique..."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Suddenly, the entire Monster Lord's Castle is enveloped in a strange barrier. Lilith probably used some kind of technique..."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["rafaera_fc1", 2, 0, 2])
+    ShowText(["\\n<Raphaela>What is this technique...?!\nIt can't be, interdimensional access has been cut off..."])
+    ShowText([""])
+    ShowText([""])
+    PlaySE(["RPG::SE(@name=\"Fog1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([34, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The vision of Raphaela disappears..."])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["sazya_fc1", 0, 0, 2])
+      ShowText(["\\n<Saja>...The rest is up to you, Alipheese the 15th.\nKill Ilias and her companions now..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["sazya_fc1", 0, 0, 2])
+      ShowText(["\\n<Saja>...The rest is up to you, Lilith Sisters.\nKill Ilias and her companions now..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Fog1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([35, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["After saying that, the vision of Saja disappears..."])
+    ShowPicture([5, "80_morrigan_st05b", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["morrigan_fc1", 4, 0, 2])
+    ShowText(["\\n<Morrigan>Is this the secret technique that the Monster Lord developed behind the scenes? It's amazing, Raphaela is gone..."])
+    ShowText([""])
+    ShowText([""])
+    ShowPicture([5, "80_morrigan_st07b", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["morrigan_fc1", 6, 0, 2])
+    ShowText(["\\n<Morrigan>...Wait, even Saja is gone?!"])
+    ShowText([""])
+    ShowPicture([5, "80_morrigan_st07b", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_astaroth_st04b", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["astaroth_fc1", 3, 0, 2])
+    ShowText(["\\n<Astaroth>This secret technique blocks access to other dimensions for everyone, friends and foes alike. It can't conveniently just block out our enemies."])
+    ShowText([""])
+    ShowText([""])
+    ErasePicture([6])
+    ShowPicture([5, "80_lilith2_st01b", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lilith2_fc1", 0, 0, 2])
+    ShowText(["\\n<Lilith>But the situation is much more advantageous now... The Goddess' side must have prepared a whole battalion to seize control of the Monster Lord's Castle."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["lilith2_fc1", 0, 0, 2])
+    ShowText(["\\n<Lilith>And said battalion can no longer come here.\nYou've been driven into a corner, Luka... Ilias..."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Kh...!"])
+    ShowText([""])
+    ConditionalBranch([4, 34, 0])
+      ShowTextAttributes(["micaelac_fc1", 2, 0, 2])
+      ShowText(["\\n<Micaela-chan>This situation is bad..."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    Wait([30])
+    SetMoveRoute([8, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([9, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([10, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The Lilith Sisters are closing in on us..."])
+    Wait([30])
+    PlaySE(["RPG::SE(@name=\"Wind1\", @pitch=100, @volume=80)"])
+    ControlVariables([1140, 1140, 0, 0, 1])
+    SetMoveRoute([20, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=14, @parameters=[0, -9])\", \"RPG::MoveCommand(@code=38, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, -9])"])
+    Unnamed(["RPG::MoveCommand(@code=38, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+    SetMoveRoute([21, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=14, @parameters=[0, -9])\", \"RPG::MoveCommand(@code=38, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, -9])"])
+    Unnamed(["RPG::MoveCommand(@code=38, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+    SetMoveRoute([26, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=14, @parameters=[0, -9])\", \"RPG::MoveCommand(@code=38, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, -9])"])
+    Unnamed(["RPG::MoveCommand(@code=38, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Meanwhile, three shadows leap out to intercept them!"])
+    ShowPicture([5, "80_eden_st35", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["eden_fc2", 4, 0, 2])
+    ShowText(["\\n<Eden>Ilias, Luka! We will hold the three sisters back!\nGet out of the Monster Lord's Castle right away!"])
+    ShowText([""])
+    ShowText([""])
+    ShowPicture([5, "80_shion_st02", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_gnosis_st04", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["shion_fc1", 1, 0, 2])
+    ShowText(["\\n<Zion>Now, it's time for violence!\nI'll go wild and make up for all the time I've spent being quiet so far!"])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["gnosis_fc1", 3, 0, 2])
+    ShowText(["\\n<Gnosis>Our forces are evenly matched...\nWe will execute delaying tactics to allow Ilias to withdraw..."])
+    ShowText([""])
+    ShowText([""])
+    ConditionalBranch([4, 383, 0])
+      ShowTextAttributes(["eden_fc1", 0, 0, 2])
+      ShowText(["\\n<Eden>The Seraphim of the Angelic Dominion...\nWhat a loyal and devoted group..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["\\n<Ilias>Seraphim... I'm counting on you to stall them!\nLuka, we're leaving!"])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>...Okay! Everyone, we're getting out of here!"])
+    ShowText([""])
+    ErasePicture([5])
+    ErasePicture([6])
+    ScrollMap([2, 5, 4])
+    Wait([90])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["We have no choice but to leave this place to them.\nLet's get out of the Monster Lord's Castle as quickly as we can..."])
+    ShowText([""])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ControlSwitches([100, 100, 0])
+    ChangeSaveAccess([0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 6
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "リリス"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "アスタロト"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "モリガン"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 16
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 20
+Name = "エデン"
+
+  Page 0
+    Empty([])
+
+CommonEvent 21
+Name = "グノーシス"
+
+  Page 0
+    Empty([])
+
+CommonEvent 26
+Name = "シオン"
+
+  Page 0
+    Empty([])
+
+CommonEvent 34
+Name = "ラファエラ"
+
+  Page 0
+    Empty([])
+
+CommonEvent 35
+Name = "沙蛇"
+
+  Page 0
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    CallCommonEvent([381])
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    CallCommonEvent([381])
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    CallCommonEvent([381])
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    Empty([])

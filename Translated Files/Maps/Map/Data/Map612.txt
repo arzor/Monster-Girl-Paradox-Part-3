@@ -1,0 +1,271 @@
+Display Name = "Grangold Castle 2F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 609, 30, 30, 2, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 609, 57, 22, 2, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 609, 3, 22, 2, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["giriel_fc1", 0, 0, 2])
+    ShowText(["\\n<Giriel>"])
+    ShowText(["Lady Sariela may look scary, but she's a rare case of an understanding boss. She's ruthless to anyone who directly opposes her, but so long as you do your job she doesn't mind."])
+    ShowText([""])
+    ShowTextAttributes(["giriel_fc1", 0, 0, 2])
+    ShowText(["\\n<Giriel>"])
+    ShowText(["With how rough it is being a prison guard, there are excellent employee benefits. This is the only place where if you're not on the clock, you're allowed to drink."])
+    ShowText([""])
+    ShowTextAttributes(["giriel_fc1", 0, 0, 2])
+    ShowText(["\\n<Giriel>"])
+    ShowText(["Meanwhile, Lady Gabriela was a horrible boss, apparently. This was supposed to be a demotion for the Lataels that got sent here, but they were over the moon."])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["442"])
+    ShowTextAttributes(["ratael_fc1", 0, 0, 2])
+    ShowText(["\\n<Latael>"])
+    ShowText(["Me too, this adventure has finally given me time to have fun..."])
+    ExitEventProcessing([])
+    Label(["443"])
+    ShowTextAttributes(["rifaiel_fc1", 2, 0, 2])
+    ShowText(["\\n<Leafael>"])
+    ShowText(["My flowers are drooping just hearing her name..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["giriel_fc1", 0, 0, 2])
+    ShowText(["\\n<Giriel>"])
+    ShowText(["This throne's still empty. Seems the occupying forces don't have any interest in coming inside here just to sit here."])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["440"])
+    ShowTextAttributes(["nagael_fc1", 0, 0, 2])
+    ShowText(["\\n<Nagael>"])
+    ShowText(["I doubt Lady Sariela really wanted to spend her time sitting here, either..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSwitches([2635, 2635, 0])
+    ChangeItems([4022, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSwitches([2634, 2634, 0])
+    ChangeArmor([490, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 3"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([772, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 3"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([771, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSwitches([2635, 2635, 0])
+    ChangeItems([3126, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSwitches([2635, 2635, 0])
+    ChangeItems([2460, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["tennyo_fc1", 0, 0, 2])
+    ShowText(["\\n<Paipai>"])
+    ShowText(["Hmhm, I've came up with another new gem! Now let's try making this thing's stats even more..."])
+    ShowText([""])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["Hey, cell's open. You're a free woman now, wanna..."])
+    ShowText([""])
+    ShowTextAttributes(["tennyo_fc1", 0, 0, 2])
+    ShowText(["\\n<Paipai>"])
+    ShowText(["Let's smooth out the mana circuit a bit, if I touch up the engravings here, this should..."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["A lone angel is hard at work, silently creating gems. She's so focused on her work that she doesn't even notice us..."])
+    ShowText([""])
+    ConditionalBranch([1, 1233, 0, 1, 2])
+      ControlVariables([1233, 1233, 0, 0, 1])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1233, 0, 2, 0])
+      ConditionalBranch([8, 365])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>"])
+        ShowText(["Showing her fried rice is supposed to bring her back, right? Here you go, it's time for food..."])
+        ShowText([""])
+        SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+        ShowTextAttributes(["tennyo_fc1", 1, 0, 2])
+        ShowText(["\\n<Paipai>"])
+        ShowText(["...I smell fried rice!\nCome to think of it, I haven't eaten in a month!"])
+        ShowText([""])
+        ChangeItems([365, 1, 0, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Paipai scarfs down the offered fried rice!"])
+        ShowTextAttributes(["tennyo_fc1", 0, 0, 2])
+        ShowText(["\\n<Paipai>"])
+        ShowText(["Ah, that hit the spot...\nWait, huh? Why are you guys in this cell?"])
+        ShowText([""])
+        ShowTextAttributes(["alice_fc1", 5, 0, 2])
+        ShowText(["\\n<Alice>"])
+        ShowText(["Good grief... You didn't notice the cell door hanging wide open?"])
+        ShowText([""])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Alice brought Paipai up to speed..."])
+        ShowTextAttributes(["tennyo_fc1", 0, 0, 2])
+        ShowText(["\\n<Paipai>"])
+        ShowText(["Oh, my apprentice is worried about me... Then I'll go back to Iliasburg at once."])
+        ShowText([""])
+        ShowTextAttributes(["tennyo_fc1", 0, 0, 2])
+        ShowText(["\\n<Paipai>"])
+        ShowText(["Thanks for the help, guys! I'll be starting up business again at Iliasburg, make sure you stop on by♪"])
+        ShowText([""])
+        ShowTextAttributes(["tennyo_fc1", 0, 0, 2])
+        ShowText(["\\n<Paipai>"])
+        ShowText(["See ya!♪"])
+        FadeoutScreen([])
+        ControlVariables([1233, 1233, 0, 0, 3])
+        PlaySE(["RPG::SE(@name=\"Wind1\", @pitch=100, @volume=80)"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Paipai goes back to Iliasburg using a Harpy Feather!"])
+        FadeinScreen([])
+        ShowTextAttributes(["alice_fc1", 1, 0, 2])
+        ShowText(["\\n<Alice>"])
+        ShowText(["So she'll be setting up shop in Iliasburg, then? That should let us get powerful new gems, we should go check it out."])
+        ShowText([""])
+        ExitEventProcessing([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>"])
+        ShowText(["Showing her fried rice is supposed to bring her back, right? Doesn't seem we have any, though..."])
+        ShowText([""])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Paipai is too focused on creating gems to notice us... Let's get some fried rice for her and try again."])
+        ShowText([""])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])

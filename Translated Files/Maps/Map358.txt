@@ -1,0 +1,822 @@
+Display Name = "Don Father's Mansion"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([1, 1033, 0, 1, 0])
+      CallCommonEvent([308])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 358, 73, 43, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Don Father is upstairs. Be polite, or else..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      Script(["actor_label_jump"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Don Father is on vacation. He's left you permission to go upstairs if you want."])
+      ExitEventProcessing([])
+      Label(["520"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Boss!"])
+      ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+      ShowText(["\\n<Lazarus>Yo. Working hard, I see."])
+      ExitEventProcessing([])
+      Label(["522"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Boss!"])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>Diligent as always, I see."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ConditionalBranch([1, 1033, 0, 1, 0])
+      CallCommonEvent([308])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 358, 73, 43, 0, 0])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 358, 73, 11, 0, 0])
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 358, 74, 11, 0, 0])
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 62, 21, 0, 0])
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 63, 21, 0, 0])
+    Empty([])
+
+CommonEvent 240
+Name = "EV240"
+
+  Page 0
+    ShowPicture([5, "80_merlin_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ConditionalBranch([1, 1033, 0, 0, 0])
+      ControlVariables([1033, 1033, 0, 0, 1])
+      ControlSwitches([100, 100, 0])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>Nice meeting you for the first time. I am Don Father, Merlin."])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+        ShowText(["\\n<Sonya>So gentlemanly!"])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Completely different from what I expected..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>Coercion and intimidation are left to my subordinates. Seeing as how I do not engage in such activities..."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Still, to think that the boss of the underworld is in the Sabasa region... Well done managing to escape the former King of Sabasa's sight."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>However, for the mafia's emperor to be in the land of Sabasa... Impressive that you were able to escape the former King of Sabasa's sight."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>Just like a coin has a front and a back, so too does human society."])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>The former King of Sabasa understood that very well too. Where there is light, there is always shadow..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Are you saying that the former king left the mafia alone?"])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>No, I swear on the former king's honor that he didn't go that far... But villains aren't so easy to get rid of."])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>After all, evil is a fundamental human emotion. You, I, and everyone else harbor evil to some extent."])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>If you try to wholly force evil out of society, it will impose a huge strain. The former King of Sabasa was aware of that."])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>Furthermore, uncontrolled evil is more dangerous than controlled evil. The king understood society very well."])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>Well, he probably also considered that a failed attempt to crush our organization would force us deeper underground and make us harder to monitor."])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>His Majesty... It is a shame we lost such a great man. Now especially, with the flames of war on our doorstep, this country could have used him."])
+      ConditionalBranch([4, 529, 0])
+        ShowTextAttributes(["sara_fc1", 4, 0, 2])
+        ShowText(["\\n<Sara>I don't think father would be delighted to have a mafia boss mourn him..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>Whoops... I shouldn't involve you travelers in idle talk. Please, stop by again. I shall treat you to some delicious Darjeeling tea."])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1033, 0, 1, 1])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>Welcome, travelers. Should you really be meeting a person like me multiple times?"])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>I personally do not mind, but even now we are being monitored by the authorities. I cannot confidently state that you will escape inconvenience as a result..."])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 241
+Name = "EV241"
+
+  Page 0
+    Script(["actor_label_jump"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>You may pass."])
+    ExitEventProcessing([])
+    Label(["520"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Boss!"])
+    ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+    ShowText(["\\n<Lazarus>Yo. Working hard, I see."])
+    ExitEventProcessing([])
+    Label(["522"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Boss!"])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>Diligent as always, I see."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 242
+Name = "EV242"
+
+  Page 0
+    Script(["actor_label_jump"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>You may pass."])
+    ExitEventProcessing([])
+    Label(["520"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Boss!"])
+    ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+    ShowText(["\\n<Lazarus>Yo. Working hard, I see."])
+    ExitEventProcessing([])
+    Label(["522"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Boss!"])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>Diligent as always, I see."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 243
+Name = "EV243"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Showy Woman>Fufu... Try laying your hands on me, and it will end badly for you. I think that... I might fall for a man with such guts♪"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Showy Woman>I hope Don comes home soon... Ufufu, which Don do you think I'm talking about?"])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["520"])
+      ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+      ShowText(["\\n<Lazarus>It's gotta be me, yeah?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Showy Woman>Hmm, I wonder~"])
+      ExitEventProcessing([])
+      Label(["522"])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>Of course you are referring to me, Merlin... Correct?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Showy Woman>Hmm, I wonder~"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 244
+Name = "EV244"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["He's quietly standing in a corner, like a watchdog..."])
+    Empty([])
+
+CommonEvent 245
+Name = "EV245"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["He's quietly standing in a corner, like a watchdog..."])
+    Empty([])
+
+CommonEvent 246
+Name = "EV246"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>So you have a connection to Elka... Don't worry, Elka is also affiliated with Father."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>After all, Father is the underworld's emperor. There are none who can stand against him."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["72"])
+      ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+      ShowText(["\\n<Mini>Wow, he's more amazing than Don... I'm shocked!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>Had to make use of a lot of connections to gather up all those anti-seduction accessories. I owe a lot of people favors, now..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["520"])
+      ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+      ShowText(["\\n<Lazarus>Come to think of it, I'd better pay Elka back for his hard work. I'll make sure he won't go hungry."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>After he worked his ass off that hard, you're only gonna buy him something to eat...?"])
+      ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+      ShowText(["\\n<Lazarus>No, idiot. I'm giving him a restaurant. I bet it'd be profitable to start a new chain over in Grangold right about now."])
+      ExitEventProcessing([])
+      Label(["522"])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>Surely an end to the war is adequate compensation in itself. It was risky business, but it all paid off in the end."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Executive>Had to make use of a lot of connections to gather up all those anti-seduction accessories. I owe a lot of people favors, now..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["520"])
+    ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+    ShowText(["\\n<Lazarus>Come to think of it, I'd better pay Elka back for his hard work. I'll make sure he won't go hungry."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Executive>After he worked his ass off that hard, you're only gonna buy him something to eat...?"])
+    ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+    ShowText(["\\n<Lazarus>No, idiot. I'm giving him a restaurant. I bet it'd be profitable to start a new chain over in Grangold right about now."])
+    ExitEventProcessing([])
+    Label(["522"])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>It was quite the ordeal, wasn't it? I look forward to working with you again in the future."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 247
+Name = "EV247"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>Rosso's request... the usual, a horse-drawn carriage with a bomb."])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=25, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=25, @parameters=[])"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>...Whoops, you didn't hear that, did you? It's better if you didn't."])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["64"])
+      ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+      ShowText(["\\n<Teeny>Not hearing what should not be heard is a maid's duty."])
+      ExitEventProcessing([])
+      Label(["529"])
+      ShowTextAttributes(["sara_fc1", 2, 0, 2])
+      ShowText(["\\n<Sara>What on earth are they plotting, I wonder...?"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Executive>You really helped us out during the attack on Grangold. Huh? You don't remember me?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Executive>Oh right, I was in disguise when we met. Remember the bartender? That was me."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["520"])
+    ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+    ShowText(["\\n<Lazarus>Looking forward to working together again, sometime."])
+    ExitEventProcessing([])
+    Label(["522"])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>If we require assistance again in the future, we will be sure to contact you."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 248
+Name = "EV248"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>Your way of doing things is unrefined..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["531"])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>Indeed, very unrefined..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>We made a lot of profit on that last job. Sounds like we'll be contracted to help rebuild Grangold, too."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>And it's all thanks to you guys. No, really, thanks for everything!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 249
+Name = "EV249"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Don Father is upstairs. Be polite, or else..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      Script(["actor_label_jump"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Don Father is on vacation. He's left you permission to go upstairs if you want."])
+      ExitEventProcessing([])
+      Label(["520"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Boss!"])
+      ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+      ShowText(["\\n<Lazarus>Yo. Working hard, I see."])
+      ExitEventProcessing([])
+      Label(["522"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Boss!"])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>Diligent as always, I see."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 251
+Name = "EV251"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Gangster>You may be surprised, but I'm a university graduate. You can't get this far without a comprehension of economics."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Gangster>I keep all the accounting in my head. If I put it on paper, it could become evidence..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["66"])
+    ShowTextAttributes(["vgirl_fc1", 2, 0, 2])
+    ShowText(["\\n<Vanilla>I see... Oops, I shouldn't learn stuff like that."])
+    ExitEventProcessing([])
+    Label(["141"])
+    ShowTextAttributes(["mino_fc1", 2, 0, 2])
+    ShowText(["\\n<Mina>That's definitely impossible for me..."])
+    ExitEventProcessing([])
+    Label(["520"])
+    ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+    ShowText(["\\n<Lazarus>Can't leave this kind of sensitive work to just anybody. I'm counting on you."])
+    ExitEventProcessing([])
+    Label(["522"])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>Your skill is quite reassuring. Please, continue to do your best for the organization."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 252
+Name = "EV252"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Gangster>Whenever war happens, this occupation has a shortage of manpower. It's 'cause hot-blooded folks join the army..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["171"])
+    ShowTextAttributes(["lizardboss_fc1", 3, 0, 2])
+    ShowText(["\\n<Miranda>It's the same for bandits. They shouldn't give away their young lives like that."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Gangster>Lazarus is usually quite the good-natured guy, but... When I think back to the mafia war and how he punished the members of White Rose..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Gangster>Urgh... I can't keep my food down... Ever since, I can't keep eye contact with the guy."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 253
+Name = "EV253"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>Yeah, all right, I get it. You properly disposed of the evidence, right?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>Yes, of course... I recovered it all..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["531"])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>Now, what evidence are you talking about?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>Y-your Holiness! That's isn't... I'm..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>Us mobsters don't pay taxes. As far as the law is concerned, we're unemployed."])
+      ConditionalBranch([4, 143, 0])
+        ShowTextAttributes(["eva_fc1", 0, 0, 2])
+        ShowText(["\\n<Eva>Same here."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Executive>No, you're legitimately unemployed, aren't you...?"])
+        ShowTextAttributes(["eva_fc1", 2, 0, 2])
+        ShowText(["\\n<Eva>How can you tell!?"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Executive>If I couldn't tell these things at a glance, I wouldn't be sitting here."])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 254
+Name = "EV254"
+
+  Page 0
+    ConditionalBranch([4, 531, 0])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>......"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>I-it's not like that, Your Holiness... This is..."])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>There is no need to explain. We have already investigated you..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>N-no way..."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>H-hey! I'm in the middle of an important conversation right now!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>Ah, it's all right. They're from Elka's place."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>Ohh, Elka Company's... Please, keep it a secret that I was here. I have my own standing..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 255
+Name = "EV255"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Executive>I am in charge of the prostitution industry. Even my colleagues say that I exploit women..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Executive>But do you know how much the percentage of venereal diseases has decreased ever since we took charge of it?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Executive>If you leave prostitutes to themselves, venereal diseases spread... and they themselves shorten their lifespans a great deal."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Executive>They are splendid goods, and we manage them. That's why saying that we abuse prostitutes is an unjustified criticism."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["529"])
+    ShowTextAttributes(["sara_fc1", 2, 0, 2])
+    ShowText(["\\n<Sara>Are you trying to say it's a necessary evil? That's a very selfish thesis..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Executive>Don's in hiding right now. We went a bit over the top with that last job."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["520"])
+    ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+    ShowText(["\\n<Lazarus>I'm traveling with the hero's party, now. Brings me back."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Executive>Don't die out there, Don. I'd rather not get dragged into a war over succession."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 256
+Name = "EV256"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>Villains are all over the place. No wonder this occupation won't disappear..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>Only us executives know that Lazarus is the real Don Father. Merlin isn't just pulling strings behind the scenes, though. He works as the Don, too."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>...That said, it might be more accurate to say that the two of them combined make up \"Don Father.\""])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["520"])
+      ShowTextAttributes(["lazarus3_fc1", 1, 0, 2])
+      ShowText(["\\n<Lazarus>Yeah, that sounds about right. We started this business together, after all."])
+      ExitEventProcessing([])
+      Label(["522"])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["\\n<Merlin>Personally, I feel Lazarus makes a better leader. But in public, I take on the role."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 257
+Name = "EV257"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Maid>Not hearing anything in here is one of my duties. If it's for this exceptional pay, I shall close my eyes and ears."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["64"])
+    ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+    ShowText(["\\n<Teeny>That's a maid's spirit... right?"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 258
+Name = "EV258"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Maid>I thought that serving in the mafia emperor's own house would fill my life with bullets flying all over."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Maid>But that never happens, not at all. It's somewhat anticlimactic. Don Father, too, is a calm and gentlemanly person."])
+    Empty([])
+
+CommonEvent 259
+Name = "EV259"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>This town's casino is under my jurisdiction. I hope you enjoyed it."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["121"])
+      ShowTextAttributes(["page65537_fc1", 2, 0, 2])
+      ShowText(["\\n<Cornelia>Yes, very much!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Executive>With the world the way it is lately, more and more people are coming to throw their money away at our casino. Business is booming, but it's hard to be happy about it."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 260
+Name = "EV260"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Executive>We don't use drugs. The only things we deal with are regular herbs."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Executive>That is Don Father's policy. And Don Father's decisions are the rules of this world."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["520"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Why is it that you don't deal in drugs? Is it because you're still a good person deep down?"])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["\\n<Lazarus>Shut up and listen, alright? As soon as you start dealing in drugs, you've basically started a war."])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["\\n<Lazarus>As long as you line their pockets, the authorities will let almost anything slide. Extortion, blackmail, illegal gambling dens, prostitution, you name it."])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["\\n<Lazarus>Yeah, you'll still have to pay for construction and all that like anybody else, but as long as you give them a little extra on the side, they'll overlook what you're doing."])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["\\n<Lazarus>But drugs are a different story altogether. They'll never let that slide."])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["\\n<Lazarus>As soon as they catch wind, you're at war with the authorities. Our organization is far too big for me to risk something like that."])
+    ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+    ShowText(["\\n<Lazarus>That's why we don't deal in drugs. I don't want another mafia war."])
+    ExitEventProcessing([])
+    Label(["522"])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>Drugs destroy whoever uses them. Not only that, they destroy the market and those who deal in them, as well."])
+    ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+    ShowText(["\\n<Merlin>I believe Lazarus understands this well. He's focusing on a more sustainable business model."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 261
+Name = "EV261"
+
+  Page 0
+    Empty([])
+
+CommonEvent 262
+Name = "EV262"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Cat>Meow! Meow!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["70"])
+    ShowTextAttributes(["nezumi_fc1", 2, 0, 2])
+    ShowText(["\\n<Ratty>Hyaa!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 263
+Name = "EV263"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Gangster>Here you go, canned food for yooou♪"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["60"])
+    ShowTextAttributes(["dog_fc1", 1, 0, 2])
+    ShowText(["\\n<Pochi>Give me canned food!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Gangster>I got nothin' for ya."])
+    ShowTextAttributes(["dog_fc1", 0, 0, 2])
+    ShowText(["\\n<Pochi>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Gangster>...It can't be helped, you can have one."])
+    ExitEventProcessing([])
+    Label(["222"])
+    ShowTextAttributes(["nekomata_fc1", 0, 0, 2])
+    ShowText(["\\n<Tama>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Gangster>......"])
+    ShowTextAttributes(["nekomata_fc1", 0, 0, 2])
+    ShowText(["\\n<Tama>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Gangster>All right, fine..."])
+    ShowTextAttributes(["nekomata_fc1", 2, 0, 2])
+    ShowText(["\\n<Tama>Nya~♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 265
+Name = "EV265"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([32, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 266
+Name = "EV266"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([896, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 267
+Name = "EV267"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([521, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 268
+Name = "EV268"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([331, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

@@ -1,0 +1,66 @@
+Display Name = "ポケット魔王城"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Wait([60])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["はっ……！　夢か……"])
+    SetMoveRoute([2, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ShowTextAttributes(["arumaeruma_fc2", 2, 0, 2])
+    ShowText(["【アルマエルマ】"])
+    ShowText(["ずいぶんうなされてたみたいね……"])
+    ShowText(["怖い夢だったの？"])
+    SetMoveRoute([3, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["怖いというか、なんというか――"])
+    PlaySE(["RPG::SE(@name=\"Wind1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([2, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=14, @parameters=[-13, 1])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[-13, 1])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["……って、なんで隣に寝てるんだ！"])
+    ShowText(["出て行け～！！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["まったく……"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["だいたい、なんでダブルベッドなんだ。"])
+    ShowText(["真っ二つに斬って、シングルベッドにしてやる……"])
+    Wait([60])
+    FadeoutScreen([])
+    Wait([120])
+    TintScreen(["Tone(@red=0.0, @green=0.0, @blue=0.0, @gray=0.0)", 1, true])
+    ChangeTransparency([1])
+    ChangePlayerFollowers([0])
+    ControlSwitches([100, 100, 1])
+    ControlVariables([21, 21, 0, 0, 1287])
+    ControlVariables([22, 22, 0, 0, 296])
+    ControlVariables([23, 23, 0, 0, 356])
+    ControlVariables([57, 57, 0, 0, 228])
+    TransferPlayer([0, 228, 24, 34, 2, 2])
+    FadeinScreen([])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 2
+Name = "アルマエルマ"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "ルカ"
+
+  Page 0
+    Empty([])

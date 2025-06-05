@@ -1,0 +1,208 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Wait([60])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["ようやく、ここまで来たか……"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["ああ……"])
+    ShowPicture([1, "iv_castle5", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([1, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["眼前にそびえるのは、壮麗たるイリアス神殿。"])
+    ShowText(["ついに僕達は、ここまで辿り着いたのだ――"])
+    ErasePicture([1])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["これより、邪神軍に合図を出す。"])
+    ShowText(["ただちにデミウルゴスが到来し、最終決戦になだれ込もう。"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["準備は万端か、ルカ？"])
+    ShowText(["やり残した事は、もうないな？"])
+    ShowChoices([["まだ準備する", "最終決戦を始める"], 1])
+    When([0, "まだ準備する"])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["そうか……準備は万端にしなければな。"])
+      ShowText(["それでは、いったん引き返すぞ。"])
+      FadeoutScreen([])
+      ChangeTransparency([1])
+      TransferPlayer([0, 193, 298, 351, 8, 2])
+      FadeinScreen([])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "最終決戦を始める"])
+      ControlVariables([1141, 1141, 0, 0, 71])
+      ShowTextAttributes(["alice_fc1", 3, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["それでは、始めよう……"])
+      ShowText(["邪神軍に合図を送るぞ。"])
+      PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["アリスは意識を集中した！"])
+      ShowText(["ルカを通じ、思念が魔界へと届く！"])
+      ShowTextAttributes(["tamamo_fc3", 0, 0, 2])
+      ShowText(["【玉藻】"])
+      ShowText(["ついに、来たか……"])
+      ShowText(["座標情報、確かに受け取ったぞ。"])
+      ShowTextAttributes(["tamamo_fc3", 0, 0, 2])
+      ShowText(["【玉藻】"])
+      ShowText(["これでいつでも、妖星デミウルゴスはその位置に転送できる。"])
+      ShowText(["お主達も、いったん妖星に戻れ。"])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["分かった、そちらに向かう……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["アリスはハーピーの羽を使った！"])
+      PlaySE(["RPG::SE(@name=\"Wind1\", @pitch=100, @volume=80)"])
+      FadeoutScreen([])
+      TransferPlayer([0, 664, 10, 11, 8, 2])
+      ChangeTransparency([1])
+      FadeinScreen([])
+      ShowTextAttributes(["hiruko_fc1", 0, 0, 2])
+      ShowText(["【蛭蟲】"])
+      ShowText(["おお、戻ったか。"])
+      ShowText(["こちらの準備も完了しているぞ。"])
+      ShowTextAttributes(["tamamo_fc3", 0, 0, 2])
+      ShowText(["【玉藻】"])
+      ShowText(["このデミウルゴスに控えるは、邪神軍総勢10万人……"])
+      ShowText(["これよりイリアス神殿に突入する。"])
+      ShowTextAttributes(["kanon_fc1", 0, 0, 2])
+      ShowText(["【華音】"])
+      ShowText(["太陽もたっぷり浴びて、エネルギー充填完了！"])
+      ShowText(["いつでも行けるわよ～！"])
+      ShowTextAttributes(["kanade_fc1", 0, 0, 2])
+      ShowText(["【禍撫】"])
+      ShowText(["こっちも、行けるわ……"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["いよいよか……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["残る六祖全員が、この場にいる。"])
+      ShowText(["そして妖星内に控える、10万人の軍勢――"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["いよいよ、最後の総力戦が始まるのだ。"])
+      ShowText(["僕は緊張と昂ぶりを隠せなかった――"])
+      PlayBGM(["RPG::BGM(@name=\"singun_kessen_t\", @volume=100, @pitch=100)"])
+      ShowTextAttributes(["tamamo_fc3", 0, 0, 2])
+      ShowText(["【玉藻】"])
+      ShowText(["それでは……いざ、征かん！"])
+      ShowTextAttributes(["hiruko_fc1", 0, 0, 2])
+      ShowText(["【蛭蟲】"])
+      ShowText(["座標設定完了……転送を開始する！"])
+      PlaySE(["RPG::SE(@name=\"Machine\", @pitch=100, @volume=80)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["ついに決戦の場へと赴く妖星デミウルゴス。"])
+      ShowText(["いよいよ、最後の戦いが行われようとしていた――"])
+      FadeoutScreen([])
+      Wait([120])
+      ShowPicture([5, "iv_seimataisen2", 0, 0, 0, 0, 100, 100, 255, 0])
+      FadeinScreen([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["女神イリアスの君臨する、壮麗たるイリアス神殿。"])
+      ShowText(["神聖なる地に、淀んだ妖気が吹き荒れる。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["異界から姿を現したのは、妖星兵器デミウルゴス。"])
+      ShowText(["そこから、十万もの軍勢が地を埋めるべく溢れ出る。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["それを迎え撃つは、神殿を守る屈強な天使達。"])
+      ShowText(["今、天使と悪魔の大軍勢がついに決戦を開始した――"])
+      FadeoutScreen([])
+      ErasePicture([5])
+      Wait([60])
+      ControlSwitches([31, 31, 1])
+      ControlSwitches([100, 100, 0])
+      TransferPlayer([0, 15, 10, 10, 2, 2])
+      FadeinScreen([])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])

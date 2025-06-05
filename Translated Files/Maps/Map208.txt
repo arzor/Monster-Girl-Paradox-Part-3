@@ -1,0 +1,1040 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 208, 37, 19, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 208, 90, 19, 2, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 8, 0])
+      ControlVariables([1137, 1137, 0, 0, 9])
+      ControlSwitches([100, 100, 1])
+      Empty([])
+
+    BranchEnd([])
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 206, 20, 21, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 206, 6, 15, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 206, 25, 7, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 206, 25, 7, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 206, 25, 7, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 206, 31, 13, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 206, 38, 30, 0, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+    ShowText(["\\n<Suruga>"])
+    ShowText(["This is the only item shop in the village.\nWe also carry items that can help in the upcoming battle."])
+    ShopProcessing([0, 2, 0, 0, false])
+    ShopItem([0, 13, 0, 0])
+    ShopItem([0, 17, 0, 0])
+    ShopItem([0, 21, 0, 0])
+    ShopItem([0, 76, 0, 0])
+    ShopItem([2, 1062, 0, 0])
+    ShopItem([2, 1112, 0, 0])
+    ShopItem([2, 1087, 0, 0])
+    ShopItem([2, 1144, 0, 0])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([9, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 1, 0])
+      ShowPicture([5, "80_hatibi_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+      ShowText(["\\n<Yao>"])
+      ShowText(["For Lady Tamamo to be kidnapped like this, what a horrific situation this is..."])
+      ConditionalBranch([4, 102, 0])
+        ShowTextAttributes(["youko_fc1", 2, 0, 2])
+        ShowText(["\\n<Kitsu>"])
+        ShowText(["So she really is gone! Oh no!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 103, 0])
+        ShowTextAttributes(["kamuro_fc1", 2, 0, 2])
+        ShowText(["\\n<Kamuro>"])
+        ShowText(["I can't believe it... how could this have happened..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>"])
+        ShowText(["What do you mean, Yao?\nExplain the situation to us."])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["We just received a letter from the Tanuki Clan.\nAs to what it says:"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\"We have taken Tamamo, head of the Kitsune Clan, into custody.\n            Head of the Tanuki Clan, Black Tanuki\""])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["We sent out a search party for her immediately, but ever since her morning walk, we haven't found a trace of her."])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>"])
+        ShowText(["However, Tamamo's strength is far above the norm.\nI don't see even Black Tanuki besting her."])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Lady Tamamo has been exhausted recently.\nReturning to her true form in the battle for Grangold put immense strain on her and her magic."])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["After that, she had to track down the Monster Realm's Tamamo. Day in and day out, she never got any rest..."])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>"])
+        ShowText(["On top of that, with mother dead, she's taken on the work of the Monster Lord... So they ambushed her after she exhausted herself."])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>"])
+        ShowText(["Isn't this ransom note strange, though?\nIt just says they kidnapped her, without making any demands."])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Black Tanuki is strong, but a childish fool... Perhaps she just wished to show off her power?"])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>"])
+        ShowText(["At any rate, Yao, don't act for the time being.\nIf the Kitsune hound the Tanuki now, the situation will only get more complicated."])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>"])
+        ShowText(["Instead, we will head to Tanuki Village, search for Tamamo, and decipher Black Tanuki's intent. Are we clear?"])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Understood... I will let you handle it, o Monster Lord. I will focus on mediating any panic in the village."])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Please... Save Lady Tamamo."])
+        ErasePicture([5])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>"])
+        ShowText(["Damn that fox, making more work for us to do...\nIt's time for us to go to the Tanuki Village to the east."])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>"])
+        ShowText(["Will we have to fight the Tanuki Clan?"])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>"])
+        ShowText(["We're only a third party... if we clarify that we're here in peace, they shouldn't attack us."])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>"])
+        ShowText(["Though with Black Alice involved, that isn't so certain... let's at least prepare for the worst case scenario."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>"])
+        ShowText(["It'd be best if we could talk this out without any fuss... All right, let's head to Tanuki Village!"])
+        ControlVariables([1137, 1137, 0, 0, 2])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>"])
+        ShowText(["I see it's Tamamo's aide, Yao...\nExplain to us what happened."])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Hmph, so it's the hero's group... I heard you'd be coming. Seems you're a bit late, though."])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["We just received a letter from the Tanuki Clan.\nAs to what it says:"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\"We have taken Tamamo, head of the Kitsune Clan, into custody.\n            Head of the Tanuki Clan, Black Tanuki\""])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["We sent out a search party for her immediately, but ever since her morning walk, we haven't found a trace of her."])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>"])
+        ShowText(["Even still, that fox is one of the Six Ancestors. Black Tanuki may be strong, but I don't see her capturing Tamamo like this."])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Lady Tamamo has been exhausted recently.\nReturning to her true form in the battle for Grangold put immense strain on her and her magic."])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["After that, she had to track down the Monster Realm's Tamamo. Day in and day out, she never got any rest..."])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>"])
+        ShowText(["I see... So she worked herself to the bone, and only then did Black Tanuki strike."])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>"])
+        ShowText(["Isn't this ransom note strange, though?\nIt just says they kidnapped her, without making any demands."])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Black Tanuki is strong, but a childish fool... Perhaps she just wished to show off her power?"])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>"])
+        ShowText(["There's no helping it, then...\nWe'll head to Tanuki Village and look into solving this."])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>"])
+        ShowText(["The Kitsune Clan should stay put for now, lest another great war between Kitsune and Tanuki break out."])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>"])
+        ShowText(["As a third party, we should have an easier time investigating their side... They won't necessarily welcome us with open arms, but they shouldn't actively fight us."])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Indeed, it would be a bad idea to pressure the Tanuki Clan directly here. I will instead focus on mediating panic in the village."])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Please save Lady Tamamo."])
+        ErasePicture([5])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>"])
+        ShowText(["It seems that fox gave us another pile of work to work through. Let us head to the Tanuki Village to the east..."])
+        ShowTextAttributes(["sonia_fc1", 4, 0, 2])
+        ShowText(["\\n<Sonya>"])
+        ShowText(["Lady Ilias, you seem awfully cooperative this time. Usually you don't care about infighting between monsters..."])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>"])
+        ShowText(["It's likely that Black Alice is involved in this incident, and I refuse to let her get her way."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>"])
+        ShowText(["It'd be best if we could talk this out without any fuss... All right, let's head to Tanuki Village!"])
+        ControlVariables([1137, 1137, 0, 0, 2])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 106, 0])
+        ShowTextAttributes(["nanabi_fc1", 2, 0, 2])
+        ShowText(["\\n<Nanabi>"])
+        ShowText(["That aside, Yao, what were you doing? This happened even with you by her side..."])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["I have my own duties entrusted to me by Lady Tamamo. These do not allow me to always stay close by her side..."])
+        ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["To begin with, though, what of you?\nYou're constantly out on your training trip!"])
+        ShowTextAttributes(["nanabi_fc1", 3, 0, 2])
+        ShowText(["\\n<Nanabi>"])
+        ShowText(["This is all so I can be more useful to Lady Tamamo! And don't change the subject!"])
+        ConditionalBranch([0, 4, 0])
+          ShowTextAttributes(["alice_fc5", 3, 0, 2])
+          ShowText(["\\n<Alice>"])
+          ShowText(["Please stop, this hurts to watch..."])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 5, 0])
+          ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+          ShowText(["\\n<Ilias>"])
+          ShowText(["For Tamamo's top aides to be in such disrepair as this... I sympathize with the exhaustion this must cause her."])
+          ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+          ShowText(["\\n<Mephisto>"])
+          ShowText(["Absolutely."])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 2, 1])
+      ConditionalBranch([1, 1137, 0, 7, 2])
+        ShowPicture([5, "80_hatibi_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+        MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+        ConditionalBranch([0, 4, 0])
+          ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+          ShowText(["\\n<Yao>"])
+          ShowText(["I will focus on mediating any panic here.\nPlease... Save Lady Tamamo."])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 5, 0])
+          ShowTextAttributes(["hatibi_fc1", 3, 0, 2])
+          ShowText(["\\n<Yao>"])
+          ShowText(["I will focus on mediating any panic here.\nPlease save Lady Tamamo."])
+          Empty([])
+        BranchEnd([])
+        ErasePicture([5])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowPicture([5, "80_hatibi_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["O Monster Lord, my sincerest thanks for your efforts. I seek to repay you for this later..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["As expected of the hero Lady Tamamo had her eye on. You have my gratitude for your work here..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 106, 0])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Oh, Nanabi was here too. It appears you found a new owner."])
+        ShowTextAttributes(["nanabi_fc1", 0, 0, 2])
+        ShowText(["\\n<Nanabi>"])
+        ShowText(["Do you intend to live as a stray instead, Yao?\nIt's best to find a master that's kind to you."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Lady Tamamo is my lifelong master, there is no other!"])
+        ShowTextAttributes(["nanabi_fc1", 0, 0, 2])
+        ShowText(["\\n<Nanabi>"])
+        ShowText(["What a coincidence, me too!\nI'm traveling with friends now, though, so this is bye for now."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+      ShowText(["\\n<Yao>"])
+      ShowText(["Well then, Hero Luka...\nAs I am sure you are aware, a great war is approaching us."])
+      ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+      ShowText(["\\n<Yao>"])
+      ShowText(["To that end, I investigated a powerful weapon that existed since antiquity. A legendary weapon of yore would no doubt be a strong advantage in the battle to come."])
+      ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+      ShowText(["\\n<Yao>"])
+      ShowText(["Ultimately, however, I failed to obtain the weapon... It's a long story, but would you like to hear the results of the investigation?"])
+      ShowChoices([["Listen", "Don't Listen"], 2])
+      When([0, "Listen"])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["The divine weapons held in Mithra Sealed Castle are quite famous, yes? After all 20 were lost in the Great Monster Wars, the castle now stands as ruins."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Were even one remaining, it would be a great boon, but what's lost for good cannot be recovered."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Separate from that, however, is the divine weapon Ilias crafted. The holy spear, Longinus... said to destroy anything it pierces."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>"])
+        ShowText(["Aren't Longinus spears available for sale nowadays...?"])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Those are just imitations with the same name.\nThe true Longinus created by Ilias has been lost already."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["The spear was seen a couple times in the previous great war... but with the weapon so powerful it could fell even the Six Ancestors in one hit, it was considered too dangerous."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Even Ilias hesitated in using it.\nAs a result of its overwhelming power, she couldn't afford to give it to her subordinates lightly."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["As a result, the divine spear saw little use in the Great Monster Wars. Ilias destroyed the weapon herself afterwards."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["The Great Dark Goddess also developed an incredibly dangerous weapon. Well, less of a weapon, more of a song..."])
+        ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+        ShowText(["\\n<Sonya>"])
+        ShowText(["A song used as a weapon...?"])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["The cursed song of destruction, Pitch Black Rondo... A great forbidden technique created by the Great Dark Goddess and subsequently buried in secrecy."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Those that perform the dance obtain great power. They temporarily surpass even the Six Ancestors."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["However, this power inevitably comes at a cost.\nAll who sing the song will die after battle."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Thus, the Great Dark Goddess destroyed all information describing the Pitch Black Rondo.\nWe know of its existence, but no one remembers what the song was like."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["According to the records, the song changes form depending on the performer. The musical scale depends on their wavelength."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Many seek to uncover the lost secrets of this song, but none have been successful."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["As it always leads to the death of the user, the Great Dark Goddess deemed it inhumane, and destroyed it."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Then the living weapon project...\nThese are living weapons that the Great Dark Goddess constructed in the past."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["The completed creations were extremely powerful, but lacked control, and attacked friend and foe alike."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Thus, the Great Dark Goddess sealed them within another dimension. They were too strong to help fight in the war."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Ilias also attempted her own living weapon project. She figured that she could succeed where the Great Dark Goddess had failed..."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["Ultimately, however, the results were the same. The completed weapons still went berserk, and were also entrapped in a separate dimension."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["In the end, none of these weapons survived until today. Many of them stretch the definition of \"weapon\"."])
+        ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+        ShowText(["\\n<Yao>"])
+        ShowText(["I was hoping for legend-class weaponry for the battle ahead, but in the end I only got the stories."])
+        Empty([])
+      When([1, "Don't Listen"])
+        Empty([])
+      ChoicesEnd([])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["nero_fc1", 0, 0, 2])
+    ShowText(["\\n<Nero>"])
+    ShowText(["......"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["Oi, what are you doing here?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["...What are you doing here?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["nero_fc1", 0, 0, 2])
+    ShowText(["\\n<Nero>"])
+    ShowText(["I-It's nothing... just some village investigation.\nThere's major trouble happening here now, after all."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["Just being clear, you aren't involved in this, right?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["This wouldn't be your doing by any chance, would it?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["nero_fc1", 2, 0, 2])
+    ShowText(["\\n<Nero>"])
+    ShowText(["What?! That's a ridiculous claim to make! I could never kidnap Master- I mean, Lady Tamamo!"])
+    ShowTextAttributes(["nero_fc1", 0, 0, 2])
+    ShowText(["\\n<Nero>"])
+    ShowText(["At any rate, I'm struggling with searching for her. Search magic has never been my strong suit..."])
+    ShowTextAttributes(["nero_fc1", 1, 0, 2])
+    ShowText(["\\n<Nero>"])
+    ShowText(["My own immense magic power ruins any search magic I cast, simply with the holy and dark energies I was born with..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 1, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["Don't look so smug when you say that!"])
+      ShowTextAttributes(["nero_fc1", 2, 0, 2])
+      ShowText(["\\n<Nero>"])
+      ShowText(["So-sorry...!"])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>"])
+      ShowText(["Good grief, getting full of yourself like that...\nWe'll explore another area instead."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["Good grief, how unreliable you are...\nWe'll explore another area instead."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowPicture([5, "80_tamamo_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+    ShowText(["\\n<Tamamo>"])
+    ShowText(["I'll have to head back to the Monster Lord's Castle soon. I'm always so busy..."])
+    ConditionalBranch([4, 19, 0])
+      ShowTextAttributes(["arumaeruma_fc2", 0, 0, 2])
+      ShowText(["\\n<Alma Elma>"])
+      ShowText(["What if you take it easy like me once in a while?"])
+      ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+      ShowText(["\\n<Tamamo>"])
+      ShowText(["Unlike the free wind, the earth serves as grounding for others. It is my duty to support the Monster Lord and the others."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+    ShowText(["\\n<Tamamo>"])
+    ShowText(["Don't forget Black Tanuki's message - she wants to thank you in Tanuki Village for your hard work."])
+    ConditionalBranch([4, 102, 0])
+      ShowTextAttributes(["youko_fc1", 2, 0, 2])
+      ShowText(["\\n<Kitsu>"])
+      ShowText(["Lady Tamamo, I'm so glad you're all right~!!"])
+      ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+      ShowText(["\\n<Tamamo>"])
+      ShowText(["Now, now, don't cry...\nYou did a good job."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 103, 0])
+      ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+      ShowText(["\\n<Kamuro>"])
+      ShowText(["I'm glad that you're safe, I was beside myself with worry..."])
+      ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+      ShowText(["\\n<Tamamo>"])
+      ShowText(["I see you've gotten stronger, too. So much so that I barely recognized you."])
+      ShowTextAttributes(["kamuro_fc1", 1, 0, 2])
+      ShowText(["\\n<Kamuro>"])
+      ShowText(["♪♪♪"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 265, 0])
+      ShowTextAttributes(["kitunezyu_fc1", 0, 0, 2])
+      ShowText(["\\n<Haruka>"])
+      ShowText(["Lady Tamamo, don't push yourself too hard!"])
+      ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+      ShowText(["\\n<Tamamo>"])
+      ShowText(["Ah, seems I've made you worry... Haruka, don't hurt yourself from pushing yourself too hard either."])
+      ShowTextAttributes(["kitunezyu_fc1", 0, 0, 2])
+      ShowText(["\\n<Haruka>"])
+      ShowText(["Ehehe, understood♪"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 266, 0])
+      ShowTextAttributes(["kunoitisanbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Minamo>"])
+      ShowText(["Well then, Lady Tamamo, I shall follow the hero's group."])
+      ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+      ShowText(["\\n<Tamamo>"])
+      ShowText(["With you by their side, I have no worries. Support them from the shadows."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 267, 0])
+      ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Izuna>"])
+      ShowText(["If another problem arises, I will return to your side immediately..."])
+      ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+      ShowText(["\\n<Tamamo>"])
+      ShowText(["Yes, I look forward to it. In the meantime, focus on helping out Luka."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 106, 0])
+      ShowTextAttributes(["nanabi_fc1", 0, 0, 2])
+      ShowText(["\\n<Nanabi>"])
+      ShowText(["Lady Tamamo, I will be leaving too. Through my growth in the Hero Luka's journey, I will be better able to support my fellow Kitsune."])
+      ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+      ShowText(["\\n<Tamamo>"])
+      ShowText(["Best of luck, Nanabi. Don't strain yourself over competing with Yao."])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Nero is relaxing while sipping tea from his teacup..."])
+    ShowTextAttributes(["nero_fc1", 1, 0, 2])
+    ShowText(["\\n<Nero>"])
+    ShowText(["You played a big role in averting disaster here, too. Thanks to you, the relationship between Kitsune and Tanuki has safely held."])
+    SetMoveRoute([16, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    ShowTextAttributes(["tamamo_fc1", 3, 0, 2])
+    ShowText(["\\n<Tamamo>"])
+    ShowText(["Yes, that's all well and good...\nBut why are you lying around like this is your house?"])
+    ShowTextAttributes(["nero_fc1", 2, 0, 2])
+    ShowText(["\\n<Nero>"])
+    ShowText(["Oh, my apologies...\nThis house looks just like how I remembered it, and I wasn't thinking..."])
+    SetMoveRoute([16, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 3, 2])
+      ShowTextAttributes(["kunoitisanbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Misaki the Spy>"])
+      ShowText(["The vice-head of the Tanuki Clan is Inugami-Gyobu. She's a rare case of a Tanuki with more brains than brawn, and is Black Tanuki's counselor."])
+      ShowTextAttributes(["kunoitisanbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Misaki the Spy>"])
+      ShowText(["I have my suspicions that she's the one who orchestrated this atrocity..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["kunoitisanbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Misaki the Spy>"])
+      ShowText(["I had Inugami-Gyobu pegged as the mastermind of this incident... Man, I was way off."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 3, 2])
+      ShowTextAttributes(["mononohuyonbi_fc1", 2, 0, 2])
+      ShowText(["\\n<Kirishima>"])
+      ShowText(["We have to hurry and prep for battle...\nHey, Misaki, where'd you put our ointment?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Kirishima>"])
+      ShowText(["I marched forth prepared to kill or be killed, but I was able to return home without a scratch. It's all thanks to you, thank you so much!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["youko_fc1", 0, 0, 2])
+    ShowText(["\\n<Warm Soba Noodles>"])
+    ShowText(["Welcome to the Kitsune's dango store!"])
+    ShopProcessing([0, 333, 0, 0, false])
+    ShopItem([0, 408, 0, 0])
+    ShopItem([0, 410, 0, 0])
+    ShopItem([0, 411, 0, 0])
+    ShopItem([0, 412, 0, 0])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([37, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([32, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 3, 2])
+      ShowTextAttributes(["kunoitielf2_fc1", 2, 0, 2])
+      ShowText(["\\n<Kunoichi Elf>"])
+      ShowText(["It seems the Kitsune Village is in a panic.\nAnd here I was hoping it was just our village with problems..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["kunoitielf2_fc1", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Elf>"])
+      ShowText(["It seems the problems this village was facing have calmed down. I wonder how my own village is doing..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 3, 2])
+      ShowTextAttributes(["hutakuti_fc1", 2, 0, 2])
+      ShowText(["\\n<Futakuchi Girl>"])
+      ShowText(["I came to play with my kitsune friend... but since Tamamo got kidnapped, I haven't been in a playing mood."])
+      ShowTextAttributes(["hutakuti_fc1", 2, 0, 2])
+      ShowText(["\\n<Futakuchi Girl>"])
+      ShowText(["The worry's made me lose my appetite. Normally I would have eaten their whole stock by now..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["hutakuti_fc1", 1, 0, 2])
+      ShowText(["\\n<Futakuchi Girl>"])
+      ShowText(["It seems the Village crisis passed without a hitch. Now I can eat my fill without any worries."])
+      ShowTextAttributes(["hutakuti_fc1", 1, 0, 2])
+      ShowText(["\\n<Futakuchi Girl>"])
+      ShowText(["Sorry, store owner, you'll have to close shop and restock soon. I'll eat everything you have...♪"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 3, 2])
+      ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Four-Tailed Samurai>"])
+      ShowText(["I can't fight on an empty stomach...\nI should take this opportunity to fill up before we depart."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Four-Tailed Samurai>"])
+      ShowText(["You've seen various kitsune with weird names on your journey, right? Want to know why?"])
+      ShowChoices([["Yes", "Not really"], 2])
+      When([0, "Yes"])
+        ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+        ShowText(["\\n<Four-Tailed Samurai>"])
+        ShowText(["There are no kitsune with just a single tail; if it has just one tail, it's just a fox."])
+        ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+        ShowText(["\\n<Four-Tailed Samurai>"])
+        ShowText(["Many kitsune are born as kitsune from a kitsune mother, but a fox that absorbs spiritual energy can also become a kitsune."])
+        ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+        ShowText(["\\n<Four-Tailed Samurai>"])
+        ShowText(["Obviously, kitsune mothers name their children themselves, often pulling from classic literature or poems for an elegant name."])
+        ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+        ShowText(["\\n<Four-Tailed Samurai>"])
+        ShowText(["But when a normal fox grows a second tail and becomes a kitsune, they choose their name when they're welcomed into the village."])
+        ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+        ShowText(["\\n<Four-Tailed Samurai>"])
+        ShowText(["As you can imagine, all the two-tailed kitsune you see with weird names chose those names based on what they liked."])
+        ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+        ShowText(["\\n<Four-Tailed Samurai>"])
+        ShowText(["Kitsune that have evolved from foxes are said to have high latent potential, but they're generally not used to controlling their power. Most of them are quite clumsy."])
+        ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+        ShowText(["\\n<Four-Tailed Samurai>"])
+        ShowText(["They're still our brethren either way, though. This village is a home for any and all kitsune after all."])
+        Empty([])
+      When([1, "Not really"])
+        ShowTextAttributes(["mononohuyonbi_fc1", 2, 0, 2])
+        ShowText(["\\n<Four-Tailed Samurai>"])
+        ShowText(["I-I see..."])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 3, 2])
+      ShowTextAttributes(["youko_fc1", 2, 0, 2])
+      ShowText(["\\n<Moonlight>"])
+      ShowText(["We have to save Lady Tamamo... Black Tanuki isn't doing anything horrible to her, right? ...Right?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["youko_fc1", 1, 0, 2])
+      ShowText(["\\n<Moonlight>"])
+      ShowText(["And then the Junior Tanuki shoots out a fireball ninjutsu with a fwoosh! And I instantly neutralize it with my water ninjutsu!"])
+      ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+      ShowText(["\\n<Sunflowers>"])
+      ShowText(["\(...What does neutralize mean again?\)"])
+      ShowTextAttributes(["youko_fc1", 1, 0, 2])
+      ShowText(["\\n<Moonlight>"])
+      ShowText(["Standing there beneath the moonlight, we duked it out with our ninjutsu for three days and nights..."])
+      ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+      ShowText(["\\n<Sunflowers>"])
+      ShowText(["The whole war only lasted a day, though..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 3, 2])
+      ShowTextAttributes(["kamuro_fc1", 2, 0, 2])
+      ShowText(["\\n<Sunflowers>"])
+      ShowText(["I don't want to fight with the Tanuki Clan...\nIs there any way for us to be friends again?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["youko_fc1", 1, 0, 2])
+      ShowText(["\\n<Moonlight>"])
+      ShowText(["And then the Junior Tanuki shoots out a fireball ninjutsu with a fwoosh! And I instantly neutralize it with my water ninjutsu!"])
+      ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+      ShowText(["\\n<Sunflowers>"])
+      ShowText(["\(...What does neutralize mean again?\)"])
+      ShowTextAttributes(["youko_fc1", 1, 0, 2])
+      ShowText(["\\n<Moonlight>"])
+      ShowText(["Standing there beneath the moonlight, we duked it out with our ninjutsu for three days and nights..."])
+      ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+      ShowText(["\\n<Sunflowers>"])
+      ShowText(["The whole war only lasted a day, though..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 3, 2])
+      ShowTextAttributes(["kunoitisanbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Three-Tailed Kunoichi>"])
+      ShowText(["Now that I've filled my belly, it's time to get to work. I'll infiltrate the Tanuki Village and search for Lady Tamamo..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["kunoitisanbi_fc1", 2, 0, 2])
+      ShowText(["\\n<Three-Tailed Kunoichi>"])
+      ShowText(["Izanami and Amaterasu are ancient gods from Yamatai's creation myth. How did Black Alice get gods like them as pawns?"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 3, 2])
+      ShowTextAttributes(["onmyougobi_fc1", 0, 0, 2])
+      ShowText(["\\n<Five-Tailed Taoist>"])
+      ShowText(["I'm here on break from working at the Monster Lord's Castle. Nothing beats the taste of home...\nHm...? What, did something happen here while I was gone?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 1])
+      ShowTextAttributes(["onmyougobi_fc1", 0, 0, 2])
+      ShowText(["\\n<Five-Tailed Taoist>"])
+      ShowText(["It's been rather noisy out there, did something happen?"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 3, 2])
+      ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+      ShowText(["\\n<Two-Tailed Kitsune Geisha>"])
+      ShowText(["Lady Nanabi hasn't come back here since she left on her training journey..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 0])
+      ShowTextAttributes(["kamuro_fc1", 1, 0, 2])
+      ShowText(["\\n<Two-Tailed Kitsune Geisha>"])
+      ShowText(["Lady Tamamo came back to us, yay!\nI want to brush her tails!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 9, 1])
+      ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+      ShowText(["\\n<Two-Tailed Kitsune Geisha>"])
+      ShowText(["Lady Tamamo went back to the castle...\nNow it's just us and Lady Yao again..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 3, 2])
+      ShowTextAttributes(["kamuro_fc1", 2, 0, 2])
+      ShowText(["\\n<Two-Tailed Kitsune Geisha>"])
+      ShowText(["Not Lady Tamamo...\nWhat should I do, what should I do..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 0])
+      ShowTextAttributes(["kamuro_fc1", 2, 0, 2])
+      ShowText(["\\n<Two-Tailed Kitsune Geisha>"])
+      ShowText(["Who is this suspicious-looking person...?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 9, 1])
+      ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+      ShowText(["\\n<Two-Tailed Kitsune Geisha>"])
+      ShowText(["That weird suspicious guy from before...\nHe looks eccentric, but he didn't seem like a bad person."])
+      ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+      ShowText(["\\n<Two-Tailed Kitsune Geisha>"])
+      ShowText(["He also kind of smelled like a kitsune...?\nNot like he was a kitsune, but like he had grown up with them..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ConditionalBranch([1, 1137, 0, 3, 2])
+      ShowTextAttributes(["youko_fc1", 2, 0, 2])
+      ShowText(["\\n<Coloring Books>"])
+      ShowText(["Waaaah! Lady Tamamooooo!!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 8, 0])
+      ShowTextAttributes(["youko_fc1", 2, 0, 2])
+      ShowText(["\\n<Coloring Books>"])
+      ShowText(["Waaaah! Lady Tamamo's back~!\nYay~!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1137, 0, 9, 1])
+      ShowTextAttributes(["youko_fc1", 2, 0, 2])
+      ShowText(["\\n<Coloring Books>"])
+      ShowText(["Waaaah! Lady Tamamo went back to the Monster Lord's Castle! Now I'm lonely!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([242, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

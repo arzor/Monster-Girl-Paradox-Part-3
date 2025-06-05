@@ -1,0 +1,251 @@
+Display Name = "Finoa"
+Parallax Name = "Mountains1"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 26, 9, 15, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ControlSwitches([31, 39, 1])
+    FadeinScreen([])
+    Wait([60])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Meanwhile, at Finoa..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>Damn it, did we show up late again?\nI can't believe this incident has already been resolved..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Unbelievable, we've arrived late again?\nIt would appear this incident has already been resolved..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>In this case, the situation changed very quickly... We just keep arriving on the scene after the fact."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Three succubi had appeared in Finoa and sealed off the village, and yet... The incident had already been resolved by the time we arrived."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It seems some unknown group had driven away the three succubi, though it would appear they had already claimed many victims by then..."])
+    ControlSwitches([31, 31, 0])
+    SetMoveRoute([5, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ShowPicture([5, "80_sonia_m1_st25", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+    ShowText(["\\n<Sonya>...I've inquired several people who witnessed the killings. They said that there were over a hundred casualties in total."])
+    ConditionalBranch([0, 4, 0])
+      ShowPicture([5, "80_alice_st81", 0, 0, -150, 0, 100, 100, 0, 0])
+      ShowPicture([6, "80_sonia_m1_st25", 0, 0, 150, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+      MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>That's heinous...\nTo think that over a hundred precious lives have been cut short here..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowPicture([5, "80_iriasu_st38", 0, 0, -150, 0, 100, 100, 0, 0])
+      ShowPicture([6, "80_sonia_m1_st25", 0, 0, 150, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+      MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>For more than a hundred people to fall prey to succubi... My anger has reached its peak."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>But that group who drove away those dangerous succubi... Could a few of the Seven Heroes have possibly been among them?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["According to what the eyewitnesses have told us, they were a young man with a gun and a boy dressed like a Yamatai monk."])
+    ShowPicture([6, "80_sonia_m1_st11", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["\\n<Sonya>There was also a flower girl and a kitsune...\nThose four were the ones who were fighting them from the start."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>A flower girl and...a kitsune?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["They must've befriended monsters just like we have."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Did four nameless saviors just happen to be present at the time? Or maybe..."])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["\\n<Sonya>Later on, three more people showed up to help them out. A voluptuous oni woman, a boy magician, and what looked like his cute older sister."])
+    ConditionalBranch([0, 4, 0])
+      ShowPicture([5, "80_alice_st71", 0, 0, -150, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Each one makes them sound like an incredibly diverse bunch. There must've been some heroes from other worlds among them..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowPicture([5, "80_iriasu_st33", 0, 0, -150, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>That sounds like a highly varied lineup.\nSurely, there were heroes from other worlds among them...?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["\\n<Mephisto>Oh, I've just received a message from Grand Noah's seventh office branch. But why are they contacting with me without the main office's permission first...?"])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["\\n<Mephisto>............"])
+    PlayBGM(["RPG::BGM(@name=\"boss0\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["\\n<Mephisto>Everyone, a terrible misfortune has befallen Grand Noah. The Grand Noah Palace...seems to have disappeared."])
+    ConditionalBranch([0, 4, 0])
+      ShowPicture([5, "80_alice_st81", 0, 0, -150, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>Disappeared...?!\nWhat do you mean it disappeared...?!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowPicture([5, "80_iriasu_st36", 0, 0, -150, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>Disappeared...?!\nAre you telling us that the Grand Noah Palace vanished into a puff of smoke...?!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["\\n<Mephisto>Instead, it would seem a castle no one has seen before has been erected in its place. Black and ominous, it is both a sturdy and bizarre fortress."])
+    ShowPicture([6, "80_sonia_m1_st24", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+    ShowText(["\\n<Sonya>What the heck are you saying...?\nWhere did the Grand Noah Palace go, then?"])
+    ConditionalBranch([0, 4, 0])
+      ShowPicture([5, "80_alice_st73", 0, 0, -150, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>I can't imagine what happened to it...but we need to go there. We're leaving right now, Luka!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowPicture([5, "80_iriasu_st38", 0, 0, -150, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>We know nothing of the situation, but we need to head there just to be sure that's the case.\nLet us make haste to Grand Noah, Luka!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Right, we need to go there at once!!"])
+    ErasePicture([5])
+    ErasePicture([6])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The world is going crazy as this incident becomes hectic.\nThe Grand Noah Palace has supposedly been transformed into a mysterious Demonic Castle."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There's no doubt that the Queen of Dreams had a hand in this. And so we are finally approaching the heart of this incident..."])
+    Wait([60])
+    FadeoutBGM([2])
+    FadeoutScreen([])
+    ChangeTransparency([1])
+    ControlSwitches([31, 31, 1])
+    Wait([120])
+    ShowPicture([5, "iv_chapter08", 0, 0, 0, 0, 100, 100, 255, 0])
+    FadeinScreen([])
+    Wait([180])
+    FadeoutScreen([])
+    ErasePicture([5])
+    Wait([120])
+    TransferPlayer([0, 873, 12, 30, 8, 2])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])

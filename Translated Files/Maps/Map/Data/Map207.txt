@@ -1,0 +1,184 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["いよいよ、邪神城も目前ですね……"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["はい……"])
+    ShowPicture([5, "iv_castle6", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["眼前にそびえるのは、異様なる邪神城。"])
+    ShowText(["ついに僕達は、ここまで辿り着いたのだ――"])
+    ErasePicture([5])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["それでは、天界軍への合図を出します。"])
+    ShowText(["ただちに全軍が結集し、最終決戦が始まるでしょう。"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["ルカ、準備は万全ですか？"])
+    ShowText(["やり残した事は、もうありませんね……？"])
+    ShowChoices([["まだ準備する", "最終決戦を始める"], 1])
+    When([0, "まだ準備する"])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["なんと、それはいけません！"])
+      ShowText(["ただちに引き返し、為すべき事を為しましょう！"])
+      FadeoutScreen([])
+      Wait([60])
+      ChangeTransparency([1])
+      TransferPlayer([0, 1, 172, 55, 6, 0])
+      FadeinScreen([])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "最終決戦を始める"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["それではエデン、合図をお願いします……"])
+      ShowTextAttributes(["eden_fc1", 0, 0, 2])
+      ShowText(["【エデン】"])
+      ShowText(["お任せを、イリアス様。"])
+      ShowText(["我が光、天界へと届け……！"])
+      PlaySE(["RPG::SE(@name=\"mon_flash\", @pitch=100, @volume=100)"])
+      FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 60, false])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["エデンは眩い光を放った！"])
+      ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["信号を確かに受け取りました……"])
+      ShowText(["転送班、作業を開始しなさい。"])
+      ShowTextAttributes(["furiel_fc1", 0, 0, 2])
+      ShowText(["【フーリエル】"])
+      ShowText(["座標を取得しました……"])
+      ShowText(["順次、天使軍の転送を開始します！"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["こうして、決戦の地に天使軍が集う。"])
+      ShowText(["いよいよ最終決戦の火蓋が落ちるのだった――"])
+      Wait([60])
+      FadeoutBGM([1])
+      FadeoutScreen([])
+      Wait([120])
+      ShowPicture([5, "iv_seimataisen2", 0, 0, 0, 0, 100, 100, 255, 0])
+      PlayBGM(["RPG::BGM(@name=\"boss0\", @volume=100, @pitch=100)"])
+      FadeinScreen([])
+      ShowTextAttributes(["kanon_fc1", 0, 0, 2])
+      ShowText(["【華音】"])
+      ShowText(["向こうも、全軍を繰り出してきたわね。"])
+      ShowText(["見渡す限り、天使だらけ……♪"])
+      ShowTextAttributes(["sazya_fc1", 0, 0, 2])
+      ShowText(["【沙蛇】"])
+      ShowText(["雑魚の群れには、雑魚の群れをぶつける。"])
+      ShowText(["我等が対するは、七大天使のみよ……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["眼下に結集しているのは、十万を上回る天使の大軍。"])
+      ShowText(["それに対し、邪神城の防衛軍もいよいよ打って出た。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["こうして、ついに最後の総力戦は始まった。"])
+      ShowText(["天使と悪魔の大軍勢が、眼下でぶつかり合っているのだ――"])
+      Wait([30])
+      ShowTextAttributes(["sazya_fc1", 1, 0, 2])
+      ShowText(["【沙蛇】"])
+      ShowText(["ふふ、我々にも出迎えが来たな。"])
+      ShowText(["四つの巨大な力が、こちらに近付いてくるぞ――"])
+      ShowTextAttributes(["kanon_fc1", 3, 0, 2])
+      ShowText(["【華音】"])
+      ShowText(["敵の七大天使は四人。"])
+      ShowText(["それに対して、こちらは六祖二人――"])
+      ShowTextAttributes(["kanon_fc1", 0, 0, 2])
+      ShowText(["【華音】"])
+      ShowText(["――なんて、向こうは思い込んでいるのよね。"])
+      Wait([60])
+      FadeoutBGM([1])
+      FadeoutScreen([])
+      ErasePicture([5])
+      Wait([120])
+      ControlSwitches([100, 100, 0])
+      ControlSwitches([31, 31, 1])
+      TransferPlayer([0, 131, 0, 0, 0, 2])
+      FadeinScreen([])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])

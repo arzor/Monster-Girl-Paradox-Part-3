@@ -1,0 +1,298 @@
+Display Name = "ヤマタイ村 B1F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    TintScreen(["Tone(@red=0.0, @green=0.0, @blue=0.0, @gray=0.0)", 1, false])
+    EraseEvent([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    CallCommonEvent([440])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 118, 46, 9, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 118, 46, 9, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 118, 46, 9, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    EraseEvent([])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["【プロメスティン】"])
+    ShowText(["この制御パネルから、下の階のレーザーゲートを"])
+    ShowText(["解除できますね……ぽちっと。"])
+    PlaySE(["RPG::SE(@name=\"Decision2\", @pitch=100, @volume=80)"])
+    ControlSwitches([2520, 2520, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["B2Fのレーザーゲートを解除した！"])
+    ShowTextAttributes(["iriasu_fc5", 0, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["今度こそ、これで終わりですよね……"])
+    ShowText(["次にゲートだのロックだのと抜かしたら、私は怒りますよ。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["もう何度も怒ってるじゃないですか……"])
+    ConditionalBranch([4, 383, 0])
+      ShowTextAttributes(["eden_fc1", 0, 0, 2])
+      ShowText(["【エデン】"])
+      ShowText(["私達のこの怒りは、すべて玉藻にぶつけましょう。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["ようやく、地下フロアに到着しましたね……"])
+    ShowText(["どうやら、非戦闘員の避難は完了しているようです。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["その方が、心置きなく暴れられるね……"])
+    ShowText(["七大天使を封じている場所を発見し、解放しよう！"])
+    ConditionalBranch([4, 378, 0])
+      ShowTextAttributes(["cirquec_fc6", 2, 0, 2])
+      ShowText(["【ゼノビア】"])
+      ShowText(["これで私も、魔界の重罪人……"])
+      ShowText(["偉大なる一族の祖先達、愚かな私をお許し下さい……"])
+      ShowTextAttributes(["shion_fc1", 4, 0, 2])
+      ShowText(["【シオン】"])
+      ShowText(["まあ、ちょっとだけ同情する……グランドノアの定住権が"])
+      ShowText(["もらえるよう、ウリエラ様に頼んでやるよ。"])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+    ShowText(["【陰陽蠍】"])
+    ShowText(["ここは妾の仕事場……"])
+    ShowText(["土足で踏み荒らすなど、無礼千万よ。"])
+    BattleProcessing([0, 1804, false, false])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["galfox_fc1", 0, 0, 2])
+    ShowText(["【ガルフォックス】"])
+    ShowText(["この研究区画に踏み込んでくるとは……"])
+    ShowText(["七大天使の解放が狙いか！"])
+    BattleProcessing([0, 1813, false, false])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSwitches([2680, 2680, 0])
+    ChangeWeapons([915, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSwitches([2681, 2681, 0])
+    ChangeItems([264, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSwitches([2682, 2682, 0])
+    ChangeItems([265, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([242, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([558, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ScrollMap([8, 4, 4])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["宝箱が、宝箱が見えているのに……"])
+    ShowText(["このレーザーロックが邪魔です……"])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["【プロメスティン】"])
+    ShowText(["これ、かなり厳重なロックですね。"])
+    ShowText(["すぐには開けられません、今は諦めましょう。"])
+    ScrollMap([2, 4, 4])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ScrollMap([8, 4, 4])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["宝箱が、宝箱が見えているのに……"])
+    ShowText(["このレーザーロックが邪魔です……"])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["【プロメスティン】"])
+    ShowText(["これ、かなり厳重なロックですね。"])
+    ShowText(["すぐには開けられません、今は諦めましょう。"])
+    ScrollMap([2, 4, 4])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["stein_fc2", 1, 0, 2])
+    ShowText(["【プロメスティン】"])
+    ShowText(["わっ、シーラカンスだ！"])
+    ShowText(["見て下さい、シーラカンスですよ！"])
+    ShowTextAttributes(["stein_fc2", 1, 0, 2])
+    ShowText(["【プロメスティン】"])
+    ShowText(["ねぇ、飼っていいですか？"])
+    ShowText(["この子、持って帰りましょうよ！"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["今は、そんな余裕ないでしょう……"])
+    ShowText(["ほらほら、行きますよ。"])
+    ShowTextAttributes(["stein_fc2", 2, 0, 2])
+    ShowText(["【プロメスティン】"])
+    ShowText(["え～～～～～～～～"])
+    Empty([])
+
+  Page 1
+    Empty([])

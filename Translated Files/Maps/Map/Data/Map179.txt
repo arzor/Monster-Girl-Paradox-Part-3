@@ -1,0 +1,740 @@
+Display Name = "サン・イリア城 2F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 178, 46, 24, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 178, 47, 24, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    CallCommonEvent([9006])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["yuriel_fc1", 0, 0, 2])
+    ShowText(["【ユリエル】"])
+    ShowText(["大勇者ルカの業績に関しては、信憑性の薄い噂話も多い。"])
+    ShowText(["正確な記録をつける上では、そうしたデマも排除せねば。"])
+    ShowTextAttributes(["yuriel_fc1", 0, 0, 2])
+    ShowText(["【ユリエル】"])
+    ShowText(["女装して敵地に潜入したり、月の上を歩いたり、"])
+    ShowText(["レミナ女王を抱えて、街を練り歩いたりといった風聞まで――"])
+    ShowTextAttributes(["yuriel_fc1", 0, 0, 2])
+    ShowText(["【ユリエル】"])
+    ShowText(["……えっ、全部本当？"])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    SetMoveRoute([7, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    CallCommonEvent([9006])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    SetMoveRoute([7, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    CallCommonEvent([9006])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+      ShowText(["【ワイティエル】"])
+      ShowText(["ラファエラ様がお待ちです。"])
+      ShowText(["先にお進み下さい……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+      ShowText(["【ワイティエル】"])
+      ShowText(["協定により、ここは天使の領有するエリアとなります。"])
+      ShowText(["とはいえ、天下万民立ち入りは自由ですよ……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["angels_fc1", 0, 0, 2])
+      ShowText(["【天使兵】"])
+      ShowText(["この城の二階は、我々の縄張りだ。"])
+      ShowText(["淫魔どもに、大きな顔はさせんぞ……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["angels_fc1", 0, 0, 2])
+      ShowText(["【天使兵】"])
+      ShowText(["結局、城の分割統治案が通るとはな……"])
+      ShowText(["しかし現状、それがもっともマシな落とし所か。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+      ShowText(["【ワイティエル】"])
+      ShowText(["おや、会議場はこちらではありませんよ。"])
+      ShowText(["そんなに読書が好きなのですか……？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+      ShowText(["【ワイティエル】"])
+      ShowText(["あなたに関する公式記録も、いよいよ編纂が始まりました。"])
+      ShowText(["ちょうど今、会議室で編纂委員が議論していますよ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["大勇者ルカ様の冒険記ともなれば、千年を超えて残る史書。"])
+    ShowText(["すなわち、国家の威信を賭けた一大プロジェクトなのだ。"])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ConditionalBranch([0, 3098, 1])
+      ControlSwitches([3098, 3098, 0])
+      ControlVariables([1352, 1352, 1, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([9019])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["siriel_fc1", 0, 0, 2])
+    ShowText(["【エリザベス総督】"])
+    ShowText(["ようこそ、おいで下さいました。"])
+    ShowText(["ご覧の通り、淫魔と共存する城内にもはや火種はありません。"])
+    ShowTextAttributes(["siriel_fc1", 0, 0, 2])
+    ShowText(["【エリザベス総督】"])
+    ShowText(["魔界の者とも、ともに辛い局面を乗り越えた仲。"])
+    ShowText(["何より、我々自身も淫魔と遠からぬ関係ですので……"])
+    ShowTextAttributes(["siriel_fc1", 0, 0, 2])
+    ShowText(["【エリザベス総督】"])
+    ShowText(["大勇者様の抱く共存の理念が、今後の世界規範とならん事を。"])
+    ShowText(["このサン・イリアから、実践していきましょう……"])
+    Empty([])
+
+  Page 1
+    ShowPicture([5, "80_rafaera_st01b", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["rafaera_fc1", 1, 0, 2])
+    ShowText(["【ラファエラ】"])
+    ShowText(["おや、ルカ達ではないですか。"])
+    ShowText(["サン・イリア城へようこそおいで下さいました。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["サン・イリアは、魅凪と二人で共同統治してるんだよね。"])
+    ShowText(["トラブルとかは、起きてない？"])
+    ShowTextAttributes(["rafaera_fc1", 1, 0, 2])
+    ShowText(["【ラファエラ】"])
+    ShowText(["統治は極めて円滑に行われています。"])
+    ShowText(["魅凪も、部下をよく統率していますよ。"])
+    ShowTextAttributes(["rafaera_fc1", 1, 0, 2])
+    ShowText(["【ラファエラ】"])
+    ShowText(["魔物側のテリトリーである地下大娼館も、極めて盛況です。"])
+    ShowText(["天使達も、お忍びでこっそり利用しているみたいですね。"])
+    ConditionalBranch([0, 1026, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["……まあ、共存が上手くいっているのは良いことです。"])
+      ShowText(["ところで今日は、あなたに相談がある天使達がいまして。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1027, 0])
+      ShowTextAttributes(["iriasu_fc1", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["……まあ、共存が上手くいっているのは良いことです。"])
+      ShowText(["ところで今日は、あなたに相談がある天使達がいまして。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1028, 0])
+      ShowTextAttributes(["iriasu_fc3", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["……まあ、共存が上手くいっているのは良いことです。"])
+      ShowText(["ところで今日は、あなたに相談がある天使達がいまして。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+    ShowText(["【ケーキ】"])
+    ShowText(["お初お目にかかります、ラファエラ様。"])
+    ShowText(["ワイティエル会議を代表し、うかがいました。"])
+    ShowTextAttributes(["whiteyel_fc1", 1, 0, 2])
+    ShowText(["【パフェ】"])
+    ShowText(["実は折り入って、ラファエラ様にご相談があるのですが……"])
+    ShowTextAttributes(["rafaera_fc1", 4, 0, 2])
+    ShowText(["【ラファエラ】"])
+    ShowText(["あら、あらあらあら……"])
+    ShowText(["なんと可愛らしい……"])
+    ShowTextAttributes(["whiteyel_fc1", 2, 0, 2])
+    ShowText(["【ちょこ】"])
+    ShowText(["……………………"])
+    ShowTextAttributes(["whiteyel_fc1", 2, 0, 2])
+    ShowText(["【ケーキ】"])
+    ShowText(["やはり私達は、そういうイメージなのですか……"])
+    ShowTextAttributes(["whiteyel_fc1", 1, 0, 2])
+    ShowText(["【パフェ】"])
+    ShowText(["ラファエラ様、私達はマスコット扱いを脱却したいです。"])
+    ShowText(["どうすれば良いでしょうか？"])
+    ShowTextAttributes(["rafaera_fc1", 2, 0, 2])
+    ShowText(["【ラファエラ】"])
+    ShowText(["なぜ、脱却する必要があるのです。"])
+    ShowText(["そんなに可愛らしいのに……"])
+    ShowTextAttributes(["whiteyel_fc1", 1, 0, 2])
+    ShowText(["【ケーキ】"])
+    ShowText(["しかし、私達は軽んじられている感じがします。"])
+    ShowText(["もっと威厳が欲しいのです……"])
+    ShowTextAttributes(["rafaera_fc1", 1, 0, 2])
+    ShowText(["【ラファエラ】"])
+    ShowText(["可愛がられるのと、軽んじられるというのは違いますよ。"])
+    ShowText(["皆に親しまれるのは、良いことではないですか。"])
+    ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+    ShowText(["【パフェ】"])
+    ShowText(["しかし……"])
+    ShowTextAttributes(["rafaera_fc1", 1, 0, 2])
+    ShowText(["【ラファエラ】"])
+    ShowText(["あなた達は、住民達に親しまれる平和の使者。"])
+    ShowText(["それは、非常に意義があることです。"])
+    ShowTextAttributes(["rafaera_fc1", 1, 0, 2])
+    ShowText(["【ラファエラ】"])
+    ShowText(["時に、人々から畏怖されがちな天使という存在ですが……"])
+    ShowText(["あなた達は、友好の架け橋となってくれているのですよ。"])
+    ShowTextAttributes(["whiteyel_fc1", 2, 0, 2])
+    ShowText(["【ちょこ】"])
+    ShowText(["そ、そうなんですか……"])
+    ShowTextAttributes(["rafaera_fc1", 0, 0, 2])
+    ShowText(["【ラファエラ】"])
+    ShowText(["自分達を無理に変えようとする前に……"])
+    ShowText(["あなた達の現在の在り方を、良い意味で見返してみなさい。"])
+    ShowTextAttributes(["rafaera_fc1", 0, 0, 2])
+    ShowText(["【ラファエラ】"])
+    ShowText(["それは決して、恥ずべきものではないはずです。"])
+    ShowText(["あなた達は、今の時代に大切な役割を為しているのですよ。"])
+    ShowTextAttributes(["whiteyel_fc1", 2, 0, 2])
+    ShowText(["【ケーキ】"])
+    ShowText(["私達が、大切な役目を……"])
+    ShowTextAttributes(["whiteyel_fc1", 2, 0, 2])
+    ShowText(["【パフェ】"])
+    ShowText(["……………………"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ワイティエル達は、深く考え込んでいる――"])
+    ShowTextAttributes(["rafaera_fc1", 1, 0, 2])
+    ShowText(["【ラファエラ】"])
+    ShowText(["では行きなさい、可愛らしい親善の使徒達。"])
+    ShowText(["またいつでも、相談に来て下さいね。"])
+    Wait([30])
+    FadeoutScreen([])
+    ErasePicture([5])
+    Wait([30])
+    ControlSwitches([3500, 3500, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ラファエラから、有効なアドバイスはもらえなかった――"])
+    Wait([60])
+    TransferPlayer([0, 763, 40, 12, 2, 2])
+    FadeinScreen([])
+    Wait([30])
+    ShowTextAttributes(["whiteyel_fc1", 2, 0, 2])
+    ShowText(["【ケーキ】"])
+    ShowText(["私達が、市民との友好の架け橋になっていたとは……"])
+    ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+    ShowText(["【パフェ】"])
+    ShowText(["まるで、その自覚はありませんでした。"])
+    ShowText(["しかし我々が威厳あふれる存在になったら、その役目も……"])
+    ConditionalBranch([0, 1026, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["それはそれとして……"])
+      ShowText(["一人、足りなくないですか？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1027, 0])
+      ShowTextAttributes(["iriasu_fc1", 4, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["それはそれとして……"])
+      ShowText(["一人、足りなくないですか？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1028, 0])
+      ShowTextAttributes(["iriasu_fc3", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["それはそれとして……"])
+      ShowText(["一人、足りなくないですか？"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["whiteyel_fc1", 1, 0, 2])
+    ShowText(["【ケーキ】"])
+    ShowText(["……あれ！？　ちょこがいない！？"])
+    ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+    ShowText(["【パフェ】"])
+    ShowText(["いったい、どこに……！？"])
+    Wait([30])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Wait([30])
+    ShowTextAttributes(["rafaera_fc1", 6, 0, 2])
+    ShowText(["【ラファエラ】"])
+    ShowText(["ちょこちゃんは、チョコ味なのでしょうか……？"])
+    ShowText(["さあ、ほっぺをペロペロしてみましょう……"])
+    ShowTextAttributes(["whiteyel_fc1", 2, 0, 2])
+    ShowText(["【ちょこ】"])
+    ShowText(["わーっ！　助けてくださ～い！！"])
+    Wait([30])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 6, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["おい！　変態天使に拉致されているぞ！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 7, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["おい！　変態天使に拉致されているぞ！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 7, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["おい！　変態天使に拉致されているぞ！"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["whiteyel_fc1", 1, 0, 2])
+    ShowText(["【ケーキ】"])
+    ShowText(["ちょ、ちょこ～！！"])
+    FadeoutScreen([])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"mon_asioto4\", @pitch=100, @volume=100)"])
+    Wait([45])
+    PlaySE(["RPG::SE(@name=\"Open4\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["すぐさま引き返し、ちょこを救出した！"])
+    Wait([30])
+    FadeinScreen([])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 5, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["まったく……あいつ、いつか逮捕されるぞ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 5, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["まったく……あいつ、いつか逮捕されるぞ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 5, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["まったく……あいつ、いつか逮捕されるぞ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1026, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["昨今はコンプラも厳しいですからね……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1027, 0])
+      ShowTextAttributes(["iriasu_fc1", 3, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["昨今はコンプラも厳しいですからね……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1028, 0])
+      ShowTextAttributes(["iriasu_fc3", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["昨今はコンプラも厳しいですからね……"])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([9143])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    ShowTextAttributes(["siriel_fc1", 0, 0, 2])
+    ShowText(["【エリザベス総督】"])
+    ShowText(["ようこそ、おいで下さいました。"])
+    ShowText(["ご覧の通り、淫魔と共存する城内にもはや火種はありません。"])
+    ShowTextAttributes(["siriel_fc1", 0, 0, 2])
+    ShowText(["【エリザベス総督】"])
+    ShowText(["魔界の者とも、ともに辛い局面を乗り越えた仲。"])
+    ShowText(["何より、我々自身も淫魔と遠からぬ関係ですので……"])
+    ShowTextAttributes(["siriel_fc1", 0, 0, 2])
+    ShowText(["【エリザベス総督】"])
+    ShowText(["大勇者様の抱く共存の理念が、今後の世界規範とならん事を。"])
+    ShowText(["このサン・イリアから、実践していきましょう……"])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["yuriel_fc1", 0, 0, 2])
+    ShowText(["【ユリエル】"])
+    ShowText(["業績が膨大すぎて、旅路を洗い出すのも時間がかかる。"])
+    ShowText(["証言録も加えるなら、どれほどの分量になることか……"])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["yuriel_fc1", 0, 0, 2])
+    ShowText(["【ユリエル】"])
+    ShowText(["もちろん、あなたにも話をうかがう事になります。"])
+    ShowText(["ですが、論点が整理されてからになりますね……"])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["yuriel_fc1", 0, 0, 2])
+    ShowText(["【ユリエル】"])
+    ShowText(["魔界側の記録も、ぜひ欲しい。"])
+    ShowText(["こういう時、淫魔と共存していると便利だな……"])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["yuriel_fc1", 0, 0, 2])
+    ShowText(["【ユリエル】"])
+    ShowText(["我々ユリエルは、事務方の最上位天使。"])
+    ShowText(["大勇者の冒険記を編纂するため、選りすぐりを集めたわ。"])
+    Empty([])
+
+CommonEvent 22
+Name = "黒アリス"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "イデアルカス"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ConditionalBranch([1, 1405, 0, 1, 2])
+      ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+      ShowText(["【ワイティエル】"])
+      ShowText(["ラファエラ様は、おられませんが……"])
+      ShowText(["エリザベス総督が、代わって政務を執られております。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1405, 0, 2, 1])
+      ConditionalBranch([0, 3500, 1])
+        ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+        ShowText(["【ワイティエル】"])
+        ShowText(["ラファエラ様は、玉座の間におられます。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 3500, 0])
+        ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+        ShowText(["【ワイティエル】"])
+        ShowText(["ラファエラ様は、おられませんが……"])
+        ShowText(["エリザベス総督が、代わって政務を執られております。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ConditionalBranch([1, 1405, 0, 1, 2])
+      ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+      ShowText(["【ワイティエル】"])
+      ShowText(["ようこそ、おいで下さいました。"])
+      ShowText(["エリザベス総督がお待ちです。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1405, 0, 2, 1])
+      ConditionalBranch([0, 3500, 1])
+        ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+        ShowText(["【ワイティエル】"])
+        ShowText(["ようこそ、おいで下さいました。"])
+        ShowText(["ラファエラ様がお待ちです。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 3500, 0])
+        ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+        ShowText(["【ワイティエル】"])
+        ShowText(["ようこそ、おいで下さいました。"])
+        ShowText(["エリザベス総督がお待ちです。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["siriel_fc1", 0, 0, 2])
+    ShowText(["【シリエル】"])
+    ShowText(["あら、いらっしゃい。"])
+    ShowText(["おっぱいに顔を埋めてもいいわよ……"])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["siriel_fc1", 0, 0, 2])
+    ShowText(["【シリエル】"])
+    ShowText(["エリザベス総督は、ラファエラ様の指示された統治方針を"])
+    ShowText(["忠実に実行しておられるわ……"])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["キューピッドも、サン・イリアに多くいるはずなのだが……"])
+    ShowText(["城内では、ほとんど見たことがないぞ。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["城下町で遊び回ってるみたいだけど……"])
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["やれやれ、まったく……"])
+    ShowText(["だが、あれで他種族との橋渡しには役立っているのだ。"])
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["淫魔達と真っ先に仲良くなったのも、キューピッド達だしな。"])
+    ShowText(["親しみやすい天使のイメージ作りに貢献していると考えるか。"])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+    ShowText(["【ワイティエル】"])
+    ShowText(["サバサの天使達は、道に迷っているようですが……"])
+    ShowText(["不思議なことに、他国に移籍を希望する者はいないそうです。"])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+    ShowText(["【ワイティエル】"])
+    ShowText(["グランドノアの天使達は、なんというか独特ですね……"])
+    ShowText(["ウリエラ様の下で、一致団結しているようです。"])
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+    ShowText(["【ワイティエル】"])
+    ShowText(["グランドゴルドでの天使達は、処務に追われているようです。"])
+    ShowText(["華音が乱した国政の立て直しは、大変そうですね……"])
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+    ShowText(["【ワイティエル】"])
+    ShowText(["ヤマタイに常駐する天界勢力はいませんが……"])
+    ShowText(["天使達の保養所として、人気が高いようです。"])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ShowTextAttributes(["yuriel_fc1", 0, 0, 2])
+    ShowText(["【ユリエル】"])
+    ShowText(["聞き込みだけでも、かなりの労力が必要だ。"])
+    ShowText(["世界中を回らなければなるまい……"])
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ShowTextAttributes(["yuriel_fc1", 0, 0, 2])
+    ShowText(["【ユリエル】"])
+    ShowText(["千年以上は、確実に読み継がれる記録……"])
+    ShowText(["責任重大だな。"])
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    Empty([])

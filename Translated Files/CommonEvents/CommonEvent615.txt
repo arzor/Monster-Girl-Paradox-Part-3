@@ -1,0 +1,31 @@
+CommonEvent 615
+Name = "イベント：種族経験値"
+
+  999([615])
+  ControlSwitches([73, 73, 0])
+  ConditionalBranch([1, 129, 0, 0, 0])
+    ShowTextAttributes(["stein_fc2", 1, 0, 2])
+    ShowText(["\\n<Promestein>My new DNA Advancing... I mean, my new and improved Carrot Extract is finally complete!\nEverybody drink up!"])
+    ShowText([""])
+    ShowText([""])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Drinking the Carrot Extract, the party gained race experience!"])
+    Script(["gain_party_tribe_exp(200)"])
+    ControlVariables([129, 129, 0, 0, 1])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 129, 0, 1, 0])
+    ShowTextAttributes(["stein_fc2", 2, 0, 2])
+    ShowText(["\\n<Promestein>Sorry, I'm all out of Carrot Extract now...\nI'll go crush some more \"carrots\" so I can make more."])
+    ShowText([""])
+    ShowText([""])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  Empty([])

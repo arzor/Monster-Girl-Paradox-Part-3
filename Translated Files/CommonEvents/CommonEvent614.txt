@@ -1,0 +1,30 @@
+CommonEvent 614
+Name = "イベント：職業経験値"
+
+  999([614])
+  ControlSwitches([73, 73, 0])
+  ConditionalBranch([1, 129, 0, 0, 0])
+    ShowTextAttributes(["saniria_fc1", 1, 0, 2])
+    ShowText(["\\n<King of San Ilia>Let us all pray to God, that we may gain wisdom..."])
+    ShowText([""])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Praying with the King, the party gained job experience!"])
+    Script(["gain_party_class_exp(200)"])
+    ControlVariables([129, 129, 0, 0, 1])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 129, 0, 1, 0])
+    ShowTextAttributes(["saniria_fc1", 1, 0, 2])
+    ShowText(["\\n<King of San Ilia>Let us allow God some peace and quiet.\nWe shall offer prayer again later."])
+    ShowText([""])
+    ShowText([""])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  Empty([])

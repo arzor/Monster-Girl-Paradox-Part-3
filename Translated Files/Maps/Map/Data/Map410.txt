@@ -1,0 +1,752 @@
+Display Name = "サン・イリア城 2F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 857, 46, 24, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 857, 45, 24, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["招待客が入る場所ではない。"])
+    ShowText(["ウロウロしていると、怪しまれるだろう……"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    CallCommonEvent([444])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["扉の先は、厨房のようだ。"])
+    ShowText(["下手に入れば、不審がられるかもしれない……"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+    ShowText(["【クロム】"])
+    ShowText(["儂らの方は、心配無用よ。"])
+    ShowText(["こういう席は、慣れておるわ。"])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ConditionalBranch([1, 1169, 0, 8, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["カウンターの上に置いてある飲み物をお願いします。"])
+      ShowText(["どれでも良いですよ、色々と飲みたいですから。"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1169, 0, 9, 0])
+      ControlVariables([1169, 1169, 0, 0, 10])
+      ShowTextAttributes(["ruka_fc4", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["はい、どうぞ……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["イリアスに飲み物を持って行った……"])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["さっきの陰陽蠍にも、飲み物を持っていくのです。"])
+      ShowText(["この誤解、もしかしたら使えるかもしれません……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1169, 0, 10, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["さっきの陰陽蠍にも、飲み物を持っていくのです。"])
+      ShowText(["この誤解、もしかしたら使えるかもしれません……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1169, 0, 11, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["（この誤解は、チャンスですよ。"])
+      ShowText(["　スタッフルームに入り込み、情報を探るのです……）"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ShowTextAttributes(["maycubbus_fc1", 0, 0, 2])
+    ShowText(["【メイキュバス】"])
+    ShowText(["……"])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["maycubbus_fc1", 0, 0, 2])
+    ShowText(["【メイキュバス】"])
+    ShowText(["……"])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["ドキドキして、料理が喉を通らない……"])
+    ShowText(["この作戦、本当に上手く行くのかな？"])
+    ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["……って、この飲み物！　ひょっとして精液！？"])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["eden_fc1", 0, 0, 2])
+    ShowText(["【エデン】"])
+    ShowText(["おいしく頂いております。"])
+    ShowText(["戦闘開始の際は、合図を頂ければ大暴れしますよ。"])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["micaelac_fc1", 1, 0, 2])
+    ShowText(["【ミカエラちゃん】"])
+    ShowText(["暴れる前に、いっぱい食べておかないと……"])
+    ShowText(["……おいしい♪"])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ShowTextAttributes(["rucyfinac_fc1", 1, 0, 2])
+    ShowText(["【ルシフィナちゃん】"])
+    ShowText(["むしゃむしゃむしゃ……"])
+    ShowText(["おいしいね～♪"])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    CallCommonEvent([444])
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    CallCommonEvent([444])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["会場の外をウロウロしていては怪しまれそうだ……"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["会場の外をウロウロしていては怪しまれそうだ……"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["会場の外をウロウロしていては怪しまれそうだ……"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["会場の外をウロウロしていては怪しまれそうだ……"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ConditionalBranch([1, 1169, 0, 8, 0])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["あそこにおられるのは、降霊術師クロム殿ではないか……"])
+      ShowText(["どれ、後で挨拶でもしておくかのう。"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1169, 0, 9, 1])
+      ConditionalBranch([1, 1169, 0, 10, 2])
+        ControlVariables([1169, 1169, 0, 0, 11])
+        ShowTextAttributes(["ruka_fc4", 0, 0, 2])
+        ShowText(["【ルカ】"])
+        ShowText(["どうぞ……"])
+        ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+        ShowText(["【陰陽蠍】"])
+        ShowText(["うむ、ご苦労。"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["陰陽蠍に飲み物を持っていった……"])
+        SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+        ShowTextAttributes(["maycubbus_fc1", 0, 0, 2])
+        ShowText(["【メイキュバス】"])
+        ShowText(["あなた、手が空いていますよね。"])
+        ShowText(["隣の部屋から、シャンパン10本を補充してくれませんか？"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["やっぱり、ここのスタッフに間違えられているようだ。"])
+        ShowText(["数が多いからか、みんな顔までは把握していないのだろう……"])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["（ルカ、私の声が聞こえますか……"])
+        ShowText(["　私は今、あなたの心に直接話し掛けています）"])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["（この誤解は、チャンスですよ。"])
+        ShowText(["　スタッフルームに入り込み、情報を探るのです……）"])
+        ShowTextAttributes(["ruka_fc4", 0, 0, 2])
+        ShowText(["【ルカ】"])
+        ShowText(["はい、分かりました……！"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["どうやら、僕はスタッフに間違われているようだ。"])
+        ShowText(["このまま、何食わぬ顔で隣の部屋に入り込んでみよう――"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1169, 0, 11, 0])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["あそこにおられるのは、降霊術師クロム殿ではないか……"])
+      ShowText(["どれ、後で挨拶でもしておくかのう。"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ShowTextAttributes(["maycubbus_fc1", 0, 0, 2])
+    ShowText(["【メイキュバス】"])
+    ShowText(["戦争の影響で、やはり人手不足ですね。"])
+    ShowText(["しかし、不備があっては魅凪様の御名に傷が付きます……"])
+    ShowTextAttributes(["maycubbus_fc1", 0, 0, 2])
+    ShowText(["【メイキュバス】"])
+    ShowText(["そういうわけで、あなたも頑張って下さいね。"])
+    ConditionalBranch([1, 1169, 0, 10, 2])
+      ShowTextAttributes(["ruka_fc4", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["えっ、なんで僕が……？"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1169, 0, 11, 1])
+      ShowTextAttributes(["ruka_fc4", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["は、はい……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    ShowTextAttributes(["maycubbus_fc1", 0, 0, 2])
+    ShowText(["【メイキュバス】"])
+    ShowText(["何かありましたか……？"])
+    ShowTextAttributes(["ruka_fc4", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["いえ……特に何も。"])
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    ControlVariables([1169, 1169, 0, 0, 9])
+    ShowTextAttributes(["ruka_fc4", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["これでいいかな……"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["イリアスの飲み物を手に取った！"])
+    SetMoveRoute([37, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+    ShowText(["【陰陽蠍】"])
+    ShowText(["これ、そこの給仕。"])
+    ShowText(["こちらにもシャンパンを頼むぞよ……"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    ShowTextAttributes(["ruka_fc4", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["あっ、はい……！"])
+    SetMoveRoute([37, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["と――思わず、返事をしてしまったのだが。"])
+    ShowText(["もしかして僕、主催者側のメイドに間違われてる？"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["まあ、頼まれたのだから仕方ない。"])
+    ShowText(["さっきの陰陽蠍にも飲み物を持っていってあげよう――"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    ConditionalBranch([1, 1169, 0, 11, 2])
+      ShowTextAttributes(["ranccubus_fc1", 2, 0, 2])
+      ShowText(["【ランキュバス】"])
+      ShowText(["ちょっと、どこへ行くの？"])
+      ShowText(["まだ休み時間じゃないでしょう……"])
+      ShowTextAttributes(["ruka_fc4", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["は、はい……"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1169, 0, 12, 1])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 857, 50, 30, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    ControlVariables([1169, 1169, 0, 0, 12])
+    ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+    ShowText(["【ランキュバス】"])
+    ShowText(["あなた、手が空いてるみたいね。"])
+    ShowText(["下の階から、椅子を二つ持ってきてくれない？"])
+    ShowTextAttributes(["ruka_fc4", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["あ、はい……"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["椅子運びを命じられた。"])
+    ShowText(["下の階に降りても、怪しく思われないだろう――"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    ConditionalBranch([1, 1169, 0, 11, 2])
+      ShowTextAttributes(["ranccubus_fc1", 2, 0, 2])
+      ShowText(["【ランキュバス】"])
+      ShowText(["ちょっと、どこへ行くの？"])
+      ShowText(["まだ休み時間じゃないでしょう……"])
+      ShowTextAttributes(["ruka_fc4", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["は、はい……"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1169, 0, 12, 1])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 857, 51, 30, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ShowTextAttributes(["athena_fc1", 2, 0, 2])
+    ShowText(["【アテナ】"])
+    ShowText(["武人ゆえ、テーブルマナーには自信がないわ……"])
+    ShowText(["せめて、恥は晒さないようにしないと。"])
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ShowTextAttributes(["testarossa_fc1", 0, 0, 2])
+    ShowText(["【デザイナー・ロッサ】"])
+    ShowText(["ファッションの極意は、己らしくあること。"])
+    ShowText(["無理をせずとも、己らしくあればそれで良いのだ。"])
+    ShowTextAttributes(["testarossa_fc1", 0, 0, 2])
+    ShowText(["【デザイナー・ロッサ】"])
+    ShowText(["己の枠を越えた衣装を纏えば、すなわち道化。"])
+    ShowText(["己を見ざるは、いかなるファッションも似合わず。"])
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 1, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["あれは、ファッション・チェックで大恥をかいた方……"])
+    ShowText(["くすくす、悲惨ですわね。"])
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【妖魔貴族】"])
+    ShowText(["もはや私は、社交界の晒し者……"])
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ShowTextAttributes(["loccubus_fc1", 0, 0, 2])
+    ShowText(["【ローキュバス】"])
+    ShowText(["まったく、絨毯ほどの価値もない愚者よ。"])
+    ShowText(["絨毯を踏むなら、奴を踏めい。"])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ShowTextAttributes(["zyakotuonna_fc1", 2, 0, 2])
+    ShowText(["【蛇骨殿】"])
+    ShowText(["社交界……こわっ……"])
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ShowTextAttributes(["gran_centa_fc1", 2, 0, 2])
+    ShowText(["【グランセントール】"])
+    ShowText(["お、恐ろしい……"])
+    ShowText(["戦場の方が、まだマシだ。"])
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ShowTextAttributes(["vampire_fc1", 1, 0, 2])
+    ShowText(["【ヴァンパイア】"])
+    ShowText(["これは、かの有名なリリス牧場のしあわせミルク……"])
+    ShowText(["流石に、料理も全て超一級品と見える。"])
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ShowTextAttributes(["vendetta_fc1", 0, 0, 2])
+    ShowText(["【ヴェンデッタ】"])
+    ShowText(["激しい戦禍で、不安が広がる今だからこそ……"])
+    ShowText(["心に余裕を持って、社交を楽しみましょう。"])
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    ShowTextAttributes(["pandora_fc1", 2, 0, 2])
+    ShowText(["【パンドラ】"])
+    ShowText(["万一、天使がこの城をも制圧してしまえば……"])
+    ShowText(["優雅なるこの貴族文化をも、蹂躙されてしまうのね。"])
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    ShowTextAttributes(["high_baphomet_fc1", 0, 0, 2])
+    ShowText(["【ハイバフォメット】"])
+    ShowText(["この宴を楽しんだ後は、邪神城に戻らねばならぬ。"])
+    ShowText(["例の計画、いよいよ仕上げに入っておるからな……"])
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    ShowTextAttributes(["granabass_fc1", 0, 0, 2])
+    ShowText(["【グラナバス】"])
+    ShowText(["魅凪様がご欠席なんて、残念の極みね……"])
+    ShowText(["出来れば、あの方の咲き誇る戦場でご一緒したかったわ。"])
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    ShowTextAttributes(["nekogami_fc1", 0, 0, 2])
+    ShowText(["【猫神】"])
+    ShowText(["ニャ～♪　ニャ～♪"])
+    ShowText(["とってもおいしいおさかななのニャ～♪"])
+    Empty([])
+
+CommonEvent 57
+Name = "EV057"
+
+  Page 0
+    ShowTextAttributes(["asura_fc1", 0, 0, 2])
+    ShowText(["【アスラ】"])
+    ShowText(["（このネコ、本当に招待客なのか……？"])
+    ShowText(["　尋ねたいが、招待状を持っていたら私が大恥だ……）"])
+    Empty([])
+
+CommonEvent 58
+Name = "EV058"
+
+  Page 0
+    ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+    ShowText(["【ランキュバス】"])
+    ShowText(["下っ端から始めた私が、ついにここまで成り上がったわ。"])
+    ShowText(["いよいよ、私の時代が始まるのよ……！"])
+    Empty([])
+
+CommonEvent 59
+Name = "EV059"
+
+  Page 0
+    ShowTextAttributes(["lesscubuss_fc1", 0, 0, 2])
+    ShowText(["【レスキュバス】"])
+    ShowText(["サキュバスの村で、革命があったみたいね。"])
+    ShowText(["あんな連中は、淫魔の面汚しよ……"])
+    Empty([])
+
+CommonEvent 60
+Name = "EV060"
+
+  Page 0
+    ShowTextAttributes(["maycubbus_fc1", 0, 0, 2])
+    ShowText(["【メイキュバス】"])
+    ShowText(["忙しい……忙しすぎます。"])
+    Empty([])
+
+CommonEvent 61
+Name = "EV061"
+
+  Page 0
+    ShowTextAttributes(["maycubbus_fc1", 0, 0, 2])
+    ShowText(["【メイキュバス】"])
+    ShowText(["やはり、もう少し人手が必要なのでは……"])
+    Empty([])
+
+CommonEvent 62
+Name = "EV062"
+
+  Page 0
+    ShowTextAttributes(["maycubbus_fc1", 0, 0, 2])
+    ShowText(["【メイキュバス】"])
+    ShowText(["兵站管理に多くの人員が回されて、人手不足が深刻です。"])
+    ShowText(["全て、戦争が悪いのです……"])
+    Empty([])
+
+CommonEvent 63
+Name = "EV063"
+
+  Page 0
+    ShowTextAttributes(["maycubbus_fc1", 0, 0, 2])
+    ShowText(["【メイキュバス】"])
+    ShowText(["この厨房は、私達の戦場……"])
+    Empty([])
+
+CommonEvent 64
+Name = "EV064"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([92, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

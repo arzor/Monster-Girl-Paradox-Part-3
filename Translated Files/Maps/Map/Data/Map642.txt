@@ -1,0 +1,242 @@
+Display Name = "ピラミッド 4F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 641, 8, 35, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 641, 8, 35, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 641, 8, 35, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlayME(["RPG::ME(@name=\"lvup\", @pitch=100, @volume=100)"])
+    ShowPicture([5, "sys_oyakataf3b", 0, 0, 140, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_oyakata_st9-5", 0, 0, 140, 0, 100, 100, 0, 0])
+    ShowPicture([7, "sys_oyakataf3", 0, 0, 140, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 140, 0, 100, 100, 255, 0, 60, false])
+    MovePicture([6, nil, 0, 0, 140, 0, 100, 100, 255, 0, 60, false])
+    MovePicture([7, nil, 0, 0, 140, 0, 100, 100, 255, 0, 60, false])
+    Wait([30])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["親方の叫びを発見した！\\|\\|"])
+    Wait([30])
+    ShowTextAttributes(["randolph_fc9", 4, 0, 2])
+    ShowText(["【親方の叫び】"])
+    ShowText(["ヒャァァァァァァァ！！"])
+    ConditionalBranch([1, 1319, 0, 4, 2])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["これじゃツッコミが追いつかない……"])
+      ShowText(["パピがいてくれたらなぁ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1319, 0, 5, 1])
+      ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+      ShowText(["【パピ】"])
+      ShowText(["相変わらず親方は怖がりだなぁ……"])
+      ShowText(["ほら、鍛冶場に行くぞ。"])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSwitches([3150, 3150, 0])
+    ControlVariables([1354, 1354, 1, 0, 1])
+    ConditionalBranch([1, 1354, 0, 80, 0])
+      Script(["gain_medal(1524)"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ErasePicture([6])
+    ErasePicture([7])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["異世界の親方に事情を説明し、混沌の鍛冶場に送った――"])
+    ShowText(["（発見した親方の数：\\V[1354]人）"])
+    Wait([30])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([82, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Earth4\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 309, 17, 33, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowPicture([5, "80_sphinx_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["sphinx_fc1", 2, 0, 2])
+    ShowText(["【スフィンクス】"])
+    ShowText(["絶望がはびこるこの世界……"])
+    ShowText(["目に光を宿した者達が現れたと思えば、お前達か。"])
+    ShowTextAttributes(["sphinx_fc1", 2, 0, 2])
+    ShowText(["【スフィンクス】"])
+    ShowText(["いつもお前達は、無理難題を持ってくるが……"])
+    ShowText(["さて、今回は何の用だ？"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["それは――"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["スフィンクスに事情を説明した――"])
+    Wait([30])
+    ShowTextAttributes(["sphinx_fc1", 2, 0, 2])
+    ShowText(["【スフィンクス】"])
+    ShowText(["ノーライフキングに、反生命プロトコルか……"])
+    ShowText(["まったく、とんでもないモノに関わっているな。"])
+    ShowTextAttributes(["sphinx_fc1", 2, 0, 2])
+    ShowText(["【スフィンクス】"])
+    ShowText(["普通なら門前払いだが、他ならぬお前達の頼みだ。"])
+    ShowText(["黄泉比良坂への道を開けようぞ……"])
+    ErasePicture([5])
+    Wait([30])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Wait([15])
+    PlaySE(["RPG::SE(@name=\"Earth4\", @pitch=100, @volume=80)"])
+    ControlVariables([1316, 1316, 0, 0, 8])
+    Wait([30])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    Wait([30])
+    ShowPicture([5, "80_sphinx_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["sphinx_fc1", 2, 0, 2])
+    ShowText(["【スフィンクス】"])
+    ShowText(["この扉から、黄泉比良坂へ行くことが出来る。"])
+    ShowText(["危険なのは、言うまでもなかろう……"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["スフィンクスは、一緒に来てくれないの？"])
+    ShowTextAttributes(["sphinx_fc1", 2, 0, 2])
+    ShowText(["【スフィンクス】"])
+    ShowText(["……世の中が、滅ぶかどうかの有様だ。"])
+    ShowText(["ここで隠棲を決め込む訳にもいかんか……"])
+    ShowPicture([5, "80_sphinx_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["sphinx_fc1", 0, 0, 2])
+    ShowText(["【スフィンクス】"])
+    ShowText(["……良かろう。"])
+    ShowText(["我が力も、世界を救うために使うが良い。"])
+    ErasePicture([5])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    Script(["add_actor_ex(153)"])
+    Script(["level_adjust(153,135)"])
+    ScriptMore(["set_class_level(153, 35, 10, false, false)"])
+    ScriptMore(["set_class_level(153, 36, 10, false, false)"])
+    ScriptMore(["set_class_level(153, 37, 10, false, false)"])
+    ScriptMore(["set_class_level(153, 39, 10, false, false)"])
+    ScriptMore(["set_class_level(153, 46, 10, false, false)"])
+    Script(["set_class_level(153, 166, 20, false, false)"])
+    ScriptMore(["set_class_level(153, 234, 10, false, false)"])
+    ScriptMore(["set_class_level(153, 235, 10, false, false)"])
+    ScriptMore(["set_class_level(153, 236, 10, false, false)"])
+    ScriptMore(["set_class_level(153, 244, 10, false, false)"])
+    ScriptMore(["set_class_level(153, 7018, 15, false, false)"])
+    ScriptMore(["set_class_level(153, 7019, 15, false, false)"])
+    RecoverAll([0, 153])
+    PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["スフィンクスが仲間に加わった！"])
+    ControlSwitches([3201, 3201, 0])
+    Wait([60])
+    ConditionalBranch([4, 755, 0])
+      ShowTextAttributes(["tezcatlipoca_fc1", 5, 0, 2])
+      ShowText(["【テスカトリポカ】"])
+      ShowText(["ニャ～！"])
+      ShowText(["ネコトモ（ネコの友達）は、いつも一緒なのニャ！"])
+      ShowTextAttributes(["sphinx_fc1", 2, 0, 2])
+      ShowText(["【スフィンクス】"])
+      ShowText(["我もお主も、猫ではあるまい……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 529, 0])
+      ShowTextAttributes(["sara_fc1", 1, 0, 2])
+      ShowText(["【サラ】"])
+      ShowText(["ご一緒します、ご先祖様！"])
+      ShowTextAttributes(["sphinx_fc1", 0, 0, 2])
+      ShowText(["【スフィンクス】"])
+      ShowText(["うむ、お主も健勝のようで幸いよ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 530, 0])
+      ShowTextAttributes(["sara_fc4", 0, 0, 2])
+      ShowText(["【サラ】"])
+      ShowText(["ご一緒します、ご先祖様……"])
+      ShowTextAttributes(["sphinx_fc1", 0, 0, 2])
+      ShowText(["【スフィンクス】"])
+      ShowText(["うむ、お主も健勝のようで幸いよ。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["それじゃあ、黄泉比良坂に行こう！"])
+    ShowText(["記録を書き換えて、反生命プロトコルを無効化するんだ！"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])

@@ -1,0 +1,28 @@
+CommonEvent 533
+Name = "コラボC10：会議室自由時間"
+
+  999([533])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["Do you want to go back to your room and rest until tomorrow?"])
+  ShowChoices([["Stay here a little longer", "Go back to my room"], 1])
+  When([0, "もう少しここにいる"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Empty([])
+
+  When([1, "部屋に戻る"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Let's get some rest and get ready for tomorrow's battle!"])
+    ShowText([""])
+    FadeoutBGM([1])
+    FadeoutScreen([])
+    ChangePlayerFollowers([0])
+    ChangeTransparency([0])
+    ControlSwitches([2916, 2916, 1])
+    Wait([180])
+    TransferPlayer([0, 946, 1, 0, 0, 2])
+    FadeinScreen([])
+    Empty([])
+
+  ChoicesEnd([])
+  Empty([])

@@ -1,0 +1,306 @@
+Display Name = "光の塔 6F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 387, 22, 21, 2, 1])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Switch2\", @pitch=150, @volume=80)"])
+    ControlSwitches([3007, 3007, 0])
+    PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["クリスタルの起動音が聞こえた！"])
+    ConditionalBranch([0, 3020, 0])
+      ControlSwitches([3496, 3496, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 389, 22, 26, 2, 1])
+    Empty([])
+
+  Page 2
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 390, 22, 26, 2, 1])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 403, 1, 20, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1454, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["宝箱はハコイリだった！"])
+    BattleProcessing([0, 2596, false, false])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3007, 1])
+      ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+      ShowText(["【ダンジョンの精】"])
+      ShowText(["この先のワープクリスタルで、上へ進むのですが……"])
+      ShowText(["今は起動していないので、先に右へ行きましょう。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3007, 0])
+      ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+      ShowText(["【ダンジョンの精】"])
+      ShowText(["この先のワープクリスタルで、上へ進むのですが……"])
+      ShowText(["その前にやるべき事があります、右へ戻りましょう。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["このフロアのワープクリスタルが起動しました。"])
+    ShowText(["さあ、左に進みましょう……"])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3007, 1])
+      ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+      ShowText(["【ダンジョンの精】"])
+      ShowText(["まずは、この先にあるボタンを押しましょう。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3007, 0])
+      ConditionalBranch([0, 3020, 1])
+        ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+        ShowText(["【ダンジョンの精】"])
+        ShowText(["このフロアのワープクリスタルが作動しました。"])
+        ShowText(["しかし、まだ先に進む前にやるべきことがありますね。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 3020, 0])
+        ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+        ShowText(["【ダンジョンの精】"])
+        ShowText(["このフロアのワープクリスタルが作動しました。"])
+        ShowText(["左に進みましょう。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["こちらのボタンを押すのです……"])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["闇の塔の仕掛けを解くため、こちらに行く必要があります。"])
+    ShowText(["さあ、どうぞ……"])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["こちら、宝箱ですよ。"])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3007, 1])
+      ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+      ShowText(["【ダンジョンの精】"])
+      ShowText(["この先のワープクリスタルで、上へ進むのですが……"])
+      ShowText(["今は起動していないので、戻るしかないですね。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3007, 0])
+      ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+      ShowText(["【ダンジョンの精】"])
+      ShowText(["この先のワープクリスタルで、上へ進むのですが……"])
+      ShowText(["まだこのフロアでやる事があります、戻りましょう。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["さあ、このワープクリスタルで先に進みましょう。"])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3007, 1])
+      ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+      ShowText(["【ダンジョンの精】"])
+      ShowText(["この先のワープクリスタルで、上へ進むのですが……"])
+      ShowText(["今は起動していないので、先に右へ行きましょう。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3007, 0])
+      ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+      ShowText(["【ダンジョンの精】"])
+      ShowText(["この先のワープクリスタルで、上へ進むのですが……"])
+      ShowText(["その前にやるべき事があります、右へ戻りましょう。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["このフロアのワープクリスタルが起動しました。"])
+    ShowText(["さあ、先に進みましょう……"])
+    Empty([])

@@ -1,0 +1,454 @@
+Display Name = "Navy Headquarters"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 335, 240, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Earth4\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 680, 19, 56, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 335, 240, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 335, 240, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 335, 240, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 335, 240, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>For the Navy!"])
+    ConditionalBranch([4, 141, 0])
+      ShowTextAttributes(["mino_fc1", 0, 0, 2])
+      ShowText(["\\n<Mina>You wanna fight!? Let's do this!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 589, false, false])
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Mugyuu..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Marine>Why'd this have to happen when all our mermaids are away... But we can't afford to back down!"])
+    ConditionalBranch([4, 125, 0])
+      ShowTextAttributes(["grizzly_fc1", 0, 0, 2])
+      ShowText(["\\n<Aisha>Here I go! Grawrrrrr!!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 590, false, false])
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["umiusi_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Slug Marine>I did my best..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Nothing out of the ordina- waah! Pirates!"])
+    ConditionalBranch([4, 102, 0])
+      ShowTextAttributes(["youko_fc1", 0, 0, 2])
+      ShowText(["\\n<Kitsu>Pirate kitsune, here I go~♪"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 589, false, false])
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Time for a paid vacation..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>I'm just a grunt. I saw nothing.\nGoing to Port Marle?"])
+    ShowChoices([["Board ferry", "Stay here"], 2])
+    When([0, "Board ferry"])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["\\n<Sea Horse Marine>Let's shove off!"])
+      FadeoutScreen([])
+      PlaySE(["RPG::SE(@name=\"Water1\", @pitch=100, @volume=80)"])
+      Wait([60])
+      TransferPlayer([0, 39, 53, 46, 2, 2])
+      FadeinScreen([])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Stay here"])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>You shall not pass!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Marine>Ummm, I have preparations to take care of, so... could you let me go?"])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>Fiiiine..."])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Out at sea~♪ What a place to be~♪"])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["She's pretending not to notice us..."])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>All right, we'll leave you alone..."])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>I wanna go home..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Marine>We won't let you inside!"])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>My stomach hurts. Can I go home early?"])
+    BattleProcessing([0, 591, false, false])
+    ControlSwitches([2267, 2267, 0])
+    ShowTextAttributes(["umiusi_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Slug Marine>The Admiral is going to be mad..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShotBalloonIcon([23, 1, false])
+    ShotBalloonIcon([24, 1, true])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine A>The Fishy Pirates we've been looking for and Luka together!?"])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine B>What are you doing at the Navy Headquarters!?"])
+    ShowChoices([["We're here for the pirate flag!", "I am a pirate.", "The world is mine!"], 0])
+    When([0, "We're here for the pirate flag!"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>We're here for the pirate flag!"])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Sea Horse Marine A>A pirate flag!?\nNo one's ever attacked the Navy Headquarters before!"])
+      Empty([])
+
+    When([1, "I am a pirate."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I do what I want 'cause a pirate is free. I am a pirate!"])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Sea Horse Marine A>That's not all right to be..."])
+      Empty([])
+
+    When([2, "The world is mine!"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>The world is mine!"])
+      ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+      ShowText(["\\n<Bonnie>And the seas are mine!"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+        ShowText(["\\n<Sonya>Luka's idiocy is contagious?!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    ChoicesEnd([])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>Look alive, men!"])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["\\n<Ashel>Let's get 'em!"])
+    ConditionalBranch([4, 53, 0])
+      ShowTextAttributes(["slime_fc1", 0, 0, 2])
+      ShowText(["\\n<Lime>Aye aye, cap'n!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 589, false, false])
+    ControlSwitches([2170, 2170, 0])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Kyuu..."])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>On to the headquarters!"])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>Our flag should be stored in the storeroom on the second floor. We can swipe the [Oceanic Business Permit] around there too."])
+    ShowTextAttributes(["ashel_fc1", 2, 0, 2])
+    ShowText(["\\n<Ashel>But whatever you do, don't attack Admiral Leviathan. Her power is up there with queen-class Yoma."])
+    ShowTextAttributes(["bonny_fc1", 2, 0, 2])
+    ShowText(["\\n<Bonnie>Unfortunately, there's no way we'd beat her..."])
+    ConditionalBranch([4, 93, 0])
+      ShowTextAttributes(["liot_fc1", 0, 0, 2])
+      ShowText(["\\n<Riot>I'd like to try fighting her... Oh well."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Got it. All right, let's go in!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["We should avoid fighting Leviathan--\nKeeping that in mind, on to their headquarters!"])
+    ControlSelfSwitch(["A", 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Marine>Pirates! We'll put a stop to you!"])
+    ConditionalBranch([4, 83, 0])
+      ShowTextAttributes(["hapy_a_fc1", 0, 0, 2])
+      ShowText(["\\n<Reina>We won't lose to the likes of the Navy!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 591, false, false])
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["umiusi_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Slug Marine>I didn't stand a chance..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>If I beat you up, I'll get a raise!"])
+    ConditionalBranch([4, 171, 0])
+      ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+      ShowText(["\\n<Miranda>Sorry, but you're stuck with minimum wage!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 589, false, false])
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>I shouldn't have bothered..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Marine Basics, Part 1...\nYou can open the map with the buttons 7 and 8\n(Q- and W-keys) on the ocean as well..."])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Your position is displayed with a yellow circle... Always keep track of where you are and try not to get lost..."])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Marine Basics, Part 2...\nIf you lose sight of your ship, use a harpy feather or warp magic..."])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>If you warp to a town, the ship will be in the nearby ocean... Port towns near the sea or the navy headquarters are recommended for this..."])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>I gave you valuable information, so let me go in exchange...?"])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>We're not rotten enough to pick a fight with somebody who isn't asking for one."])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>It's a fight!"])
+    ConditionalBranch([4, 116, 0])
+      ShowTextAttributes(["iso_fc1", 0, 0, 2])
+      ShowText(["\\n<Isabelle>Charging at the Navy head on... sounds like fun!"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 589, false, false])
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>Kyuu..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["She's playing dead..."])
+    ShowTextAttributes(["bonny_fc1", 2, 0, 2])
+    ShowText(["\\n<Bonnie>Oh my god, she's dead... what have we done...?"])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>She's only pretending, captain."])
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["She's chewing on anchovies..."])
+    Empty([])

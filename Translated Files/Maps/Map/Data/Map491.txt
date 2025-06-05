@@ -1,0 +1,137 @@
+Display Name = "レミナ研究所 操作室"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 488, 51, 58, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["……この部屋で間違いないな？"])
+    ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+    ShowText(["【ラプラス】"])
+    ShowText(["はい、そこから第1ロックを解除できます。"])
+    ShowText(["室内のコンソールを操作して下さい。"])
+    ControlSelfSwitch(["A", 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ControlVariables([1141, 1141, 0, 0, 41])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["コンソールっていうのは……これだね。"])
+    ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+    ShowText(["【ラプラス】"])
+    ShowText(["それでは、こちらの指示通りに操作して下さい。"])
+    ShowText(["まずは管理者コードで2BSサーバーにアクセスを――"])
+    ShowTextAttributes(["alice_fc1", 7, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["ちょ、ちょっと待て！"])
+    ShowText(["コードでサバに……えっと、なんだ？"])
+    ConditionalBranch([0, 1041, 0])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["【プロメスティン】"])
+      ShowText(["私がやりましょう……ぽちぽちぽちっと。"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["alice_fc2", 1, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ええい、勘でやってやる！"])
+      ShowText(["これでどうだ！？"])
+      Empty([])
+
+    BranchEnd([])
+    Wait([30])
+    PlaySE(["RPG::SE(@name=\"Decision2\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+    ShowText(["【ラプラス】"])
+    ShowText(["……第1ロック、解除に成功しました。"])
+    ShowText(["それでは次の部屋に行って下さい。"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["まだ時空転送装置のある部屋には行けないのか……"])
+    ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+    ShowText(["【ラプラス】"])
+    ShowText(["次の部屋で最終ロックが解除されます。"])
+    ShowText(["どうか、それまでお付き合いを。"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["分かった……次の部屋に行くぞ。"])
+    ConditionalBranch([4, 382, 0])
+      ShowTextAttributes(["morrigan_fc1", 6, 0, 2])
+      ShowText(["【モリガン】"])
+      ShowText(["やれやれ、面倒臭いなぁ……"])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["furiel_fc1", 0, 0, 2])
+    ShowText(["【フーリエル】"])
+    ShowText(["ロックを解除させる訳にはいきません。"])
+    ShowText(["全力で阻止します……！"])
+    ConditionalBranch([4, 775, 0])
+      ShowTextAttributes(["vgirl_fc2", 0, 0, 2])
+      ShowText(["【ヴァンガード】"])
+      ShowText(["そんなに狩られたいか。"])
+      ShowText(["大人しく逃げればいいものを……"])
+      Empty([])
+
+    BranchEnd([])
+    BattleProcessing([0, 1598, false, false])
+    ConditionalBranch([4, 41, 0])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["【プロメスティン】"])
+      ShowText(["私がいた時代は、科学者の天使などいませんでした。"])
+      ShowText(["ずいぶん世の中が変わったものですね……"])
+      Empty([])
+
+    BranchEnd([])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([3879, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

@@ -1,0 +1,1290 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 614, 5, 28, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 614, 29, 33, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 614, 45, 34, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 614, 24, 34, 0, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 614, 19, 49, 0, 0])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 614, 37, 51, 0, 0])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 615, 41, 28, 0, 0])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 615, 42, 28, 0, 0])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 615, 41, 6, 0, 0])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 615, 42, 6, 0, 0])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 10, 1])
+      ConditionalBranch([1, 1142, 0, 19, 2])
+        ShowPicture([5, "80_lazarus_st31", 0, 0, 0, 0, 100, 100, 0, 0])
+        MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+        ShowTextAttributes(["lazarus4_fc1", 0, 0, 2])
+        ShowText(["\\n<Lazarus>Suiki is one of our organization's best undercover agents. I can't imagine she would get caught so easily..."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["lazarus4_fc1", 0, 0, 2])
+        ShowText(["\\n<Lazarus>In any case, I beg of you to search for her. Grangold is to the east of Gold Volcano to the southwest of here."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["lazarus4_fc1", 0, 0, 2])
+        ShowText(["\\n<Lazarus>Please be very careful.\nKanon of the Six Ancestors is notorious in this world for her cruelty."])
+        ShowText([""])
+        ShowText([""])
+        ErasePicture([5])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 21, 0])
+      ShowPicture([5, "80_lazarus_st32", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["lazarus4_fc1", 1, 0, 2])
+      ShowText(["\\n<Lazarus>Are you fully prepared for battle?\nWe shall begin our operation to conquer Grangold at once!"])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["※Once the operation is underway, you will not be able to leave Grangold until it is over! Make sure you're fully prepared first!"])
+      ShowText(["　"])
+      ShowChoices([["I still need to prepare", "Begin the operation"], 1])
+      When([0, "まだ準備する"])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>I have no doubts that this will be a fierce battle. Let's make sure we're fully prepared..."])
+        ShowText([""])
+        ShowText([""])
+        ErasePicture([5])
+        ExitEventProcessing([])
+        Empty([])
+      When([1, "作戦を開始する"])
+        PlayBGM(["RPG::BGM(@name=\"singun\", @volume=100, @pitch=100)"])
+        ShowTextAttributes(["lazarus4_fc1", 1, 0, 2])
+        ShowText(["\\n<Lazarus>Very well then.\nLet's begin the operation to conquer Grangold..."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["The operation has finally begun!\nWe will defeat Kanon and capture Grangold Castle."])
+        ShowText([""])
+        ShowPicture([5, "80_lazarus_st34", 0, 0, 0, 0, 100, 100, 255, 0])
+        ShowTextAttributes(["lazarus4_fc1", 3, 0, 2])
+        ShowText(["\\n<Lazarus>Let's march, Ilias Kreuz!\nWe shall liberate the humans being oppressed by the monsters!"])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>I shall go give the angels some rousing words of encouragement as well. This will be our first military operation immediately following the loss of the Seven Archangels..."])
+        ShowText([""])
+        ShowText([""])
+        FadeoutScreen([])
+        ErasePicture([5])
+        Wait([60])
+        ControlVariables([1142, 1142, 0, 0, 22])
+        ControlSwitches([100, 100, 0])
+        ChangeTransparency([0])
+        ConditionalBranch([1, 912, 0, 0, 0])
+          Script(["delete_actor_ex(397)"])
+          Script(["delete_actor_ex(401)"])
+          ConditionalBranch([0, 447, 0])
+            Script(["clear_actor_equip(397)"])
+            ScriptMore(["clear_actor_equip(401)"])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        ChangeMapDisplay([1])
+        TransferPlayer([0, 64, 0, 0, 0, 2])
+        FadeinScreen([])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Merchant>I heard about you from Lazarus.\nThis equipment is normally for our members, but we'll sell it to you at a reasonable price. "])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 32, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Merchant>We've distributed the equipment the angels provided amongst all our members. Sorry, but we don't have any more left to sell."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 33, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Merchant>Welcome.\nThis equipment is normally for our members, but we'll sell it to you at a reasonable price."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ShopProcessing([1, 81, 0, 0, false])
+    ShopItem([1, 263, 0, 0])
+    ShopItem([1, 466, 0, 0])
+    ShopItem([1, 500, 0, 0])
+    ShopItem([2, 439, 0, 0])
+    ShopItem([2, 686, 0, 0])
+    ShopItem([2, 840, 0, 0])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Merchant>I heard about you from Lazarus.\nWhat do you need...?"])
+    ShowText([""])
+    ShowText([""])
+    ShopProcessing([0, 3, 0, 0, false])
+    ShopItem([0, 4, 0, 0])
+    ShopItem([0, 7, 0, 0])
+    ShopItem([0, 11, 0, 0])
+    ShopItem([0, 22, 0, 0])
+    ShopItem([0, 23, 0, 0])
+    ShopItem([0, 35, 0, 0])
+    ShopItem([0, 102, 0, 0])
+    ShopItem([0, 109, 0, 0])
+    ShopItem([0, 110, 0, 0])
+    ShopItem([0, 2131, 0, 0])
+    ShopItem([0, 2136, 0, 0])
+    ShopItem([0, 2147, 0, 0])
+    ShopItem([0, 3112, 0, 0])
+    ShopItem([0, 3125, 0, 0])
+    ShopItem([0, 3219, 0, 0])
+    ShopItem([0, 3228, 0, 0])
+    ShopItem([0, 3098, 0, 0])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Merchant>I heard about you from Lazarus.\nYou may stay the night here for free!"])
+      ShowText([""])
+      ShowText([""])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "はい"])
+        FadeoutScreen([])
+        PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+        Wait([150])
+        RecoverAll([0, 0])
+        FadeinScreen([])
+        Empty([])
+      When([1, "いいえ"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Merchant>An-angels are coming to our inn...\nAh, you guys may feel free to stay as well!"])
+      ShowText([""])
+      ShowText([""])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "はい"])
+        FadeoutScreen([])
+        PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+        Wait([150])
+        RecoverAll([0, 0])
+        FadeinScreen([])
+        Empty([])
+      When([1, "いいえ"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["mob_sanzoku_fc1", 0, 0, 2])
+      ShowText(["\\n<Magda>I'm Magda, leader of Ilias Kreuz's shock troops. Nice to meet ya!"])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["mob_sanzoku_fc1", 0, 0, 2])
+      ShowText(["\\n<Magda>Watch out for Grangold's scouts.\nThat place is a monstrous city of plants..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 24, 2])
+        ShowTextAttributes(["mob_sanzoku_fc1", 0, 0, 2])
+        ShowText(["\\n<Magda>It's just about time to strike... My arms are itching for battle! I'm gonna run as wild I can for Suiki's sake!"])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    ShowTextAttributes(["mob_sanzoku_fc1", 0, 0, 2])
+    ShowText(["\\n<Magda>Leave this town's defense to me.\nI'll call for reinforcements from Grangold if I need 'em."])
+    ShowText([""])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Elka>Never thought Ilias would descend upon our world...\nThough she looks a little different from how I pictured her."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Elka>The name's Elka, I'm our boss Lazarus's right-hand man. Let's try to get along as best we can, alright?"])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["lazarus4_fc1", 0, 0, 2])
+      ShowText(["\\n<Lazarus>Elka... Stop talking like some street thug.\nWe are knights."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Elka>I've already told you I'm no knight, Boss.\nI don't wanna get involved in the fighting either."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 24, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Elka>So... Suiki was dead after all.\nCan't say I was hoping for that, but it's sure stirred up morale."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["lazarus4_fc1", 0, 0, 2])
+        ShowText(["\\n<Lazarus>Elka, stop going out of your way to be insincere. You and Suiki were such good friends... There's no need to hide your grief."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Elka>Sorry, but I'm gonna reminesce about my dead friend some other time. Right now we've got a mountain of preparations to take care of."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Elka>Suiki, the boss, and myself are all professionals.\nSo let's try to do this like pros."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["lazarus4_fc1", 4, 0, 2])
+        ShowText(["\\n<Lazarus>That's not a nice way to phrase it, but the point you're making isn't wrong. We must perfect our operation for Suiki's sake."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Elka>That's why you should just leave the preparations to me.\nI'll make sure we've got all the men and goods we need for the big day."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Elka>...We've gotta teach those bastards at Grangold a lesson."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Bartender>Naturally, I am also a member of this organization. Now, what can I get for you?"])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 24, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Bartender>Miss Suiki has passed away...?\nHow about we have a glass, in memory of the brave soul who dedicated her life for this organization?"])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Bartender>This pub has become lonely now...\nSince you've come here, please have something to drink."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ShopProcessing([0, 428, 0, 0, false])
+    ShopItem([0, 429, 0, 0])
+    ShopItem([0, 430, 0, 0])
+    ShopItem([0, 431, 0, 0])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowPicture([5, "80_mob_ninzya3_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["mob_ninzya3_fc1", 0, 0, 2])
+      ShowText(["\\n<Fuuki>Suiki, the agent who has gone missing, is my older sister... She is an assassin, and one of the most skilled among our organization."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["mob_ninzya3_fc1", 0, 0, 2])
+      ShowText(["\\n<Fuuki>I thought my sister would never get careless...\nbut maybe I should've gone with her after all."])
+      ShowText([""])
+      ShowText([""])
+      SetMoveRoute([18, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      ShowTextAttributes(["lazarus4_fc1", 0, 0, 2])
+      ShowText(["\\n<Lazarus>Don't blame yourself, Fuuki.\nIt was my decision to let her go alone."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["mob_ninzya3_fc1", 0, 0, 2])
+      ShowText(["\\n<Fuuki>But..."])
+      ShowText([""])
+      ShowTextAttributes(["lazarus4_fc1", 0, 0, 2])
+      ShowText(["\\n<Lazarus>As Commander of this organization, I bear full responsibility for what happened. I understand how you feel, Fuuki."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["mob_ninzya3_fc1", 0, 0, 2])
+      ShowText(["\\n<Fuuki>...Yes, Commander."])
+      ShowText([""])
+      SetMoveRoute([18, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 24, 2])
+        ShowPicture([5, "80_mob_ninzya3_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+        MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+        ShowTextAttributes(["mob_ninzya3_fc1", 0, 0, 2])
+        ShowText(["\\n<Fuuki>I was prepared for this possibility... but it's still painful for me."])
+        ShowText([""])
+        ShowTextAttributes(["mob_ninzya3_fc1", 0, 0, 2])
+        ShowText(["\\n<Fuuki>I'm a professional though, and I can't let personal feelings get in the way of my duties. I will see the next operation carried through without issues."])
+        ShowText([""])
+        ShowText([""])
+        ErasePicture([5])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>This town is considered a human-governed territory... but it's effectively become the base of operations for Ilias Kreuz."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>So far, Kanon and the other Ancestors haven't found out about us... That bunch aren't particularly enthusiastic about government affairs."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 24, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Priest>Just how many humans have fallen prey to Kanon I wonder...? The victims aren't even allowed to rest in peace with their remains being put up for exhibits."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Priest>Please, avenge the fallen...\nSo that the souls of her prey may find eternal rest."])
+        ShowText([""])
+        ShowText([""])
+        ConditionalBranch([4, 616, 0])
+          ShowTextAttributes(["barakizoku_fc1", 2, 0, 2])
+          ShowText(["\\n<Rosa>There are those among us who do commit horrible deeds. I was very much against those atrocities..."])
+          ShowText([""])
+          ShowText([""])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Ilias Kreuz Staff>I can't believe you guys came from another world...\I want to believe it, but it's so hard to accept."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Ilias Kreuz Staff>In any case, we'll keep your details secret from the general members. We're just going to tell them you're reliable helpers who have come from a foreign land."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 24, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Ilias Kreuz Staff>As you're undoubtedly aware, there are many plant monsters in Grangold. The status ailment skills they use will make them a real threat."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Ilias Kreuz Staff>Learning skills that can prevent status ailments will give you an advantage when fighting them. It should be possible to learn such skills through the \\C[14]Item Master\\C[0] and \\C[14]Godly Doctor\\C[0] jobs."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Ilias Kreuz Staff>Since you're going to be fighting Kanon, the aforementioned countermeasures should be considered essential. Please make sure you don't forget them."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Ilias Kreuz Staff>I returned here immediately after the battle was over.\nWe can't afford to leave this town empty..."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Ilias Kreuz Staff>Commander Lazarus and Mr. Elka have entered Grangold Castle. Miss Fuuki and her comrades are still fighting against the slime reinforcements."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Ilias Kreuz Staff>Still... I wonder if Miss Fuuki was able to avenge her sister Suiki."])
+    ShowText([""])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Warrior>Even though this is an inn, it's not like any guests are coming here... This is effectively Ilias Kreuz's quarters."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 32, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Warrior>The owner of the inn is at his wits' end...\nHis heart's pounding even as I speak!"])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 33, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Warrior>Everyone's gone to Grangold...\nEven this inn's become desolate."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Ilias Kreuz Member>Grangold is a strange city.\nOrdinary humans appear to live relatively peaceful lives there, but..."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Ilias Kreuz Member>The agents we send in there go missing one after another.\nIs there some secret to that place?"])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([4, 102, 0])
+        ShowTextAttributes(["youko_fc1", 0, 0, 2])
+        ShowText(["\\n<Kitsu>What secret are they hiding...? It's making me all excited♪"])
+        ShowText([""])
+        ConditionalBranch([4, 103, 0])
+          ShowTextAttributes(["kamuro_fc1", 2, 0, 2])
+          ShowText(["\\n<Kamuro>Let's not be."])
+          ShowText([""])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 24, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Ilias Kreuz Member>Grangold was hiding a secret like \\*\\fithat?\\*\\fi\nSo all of our agents got caught because they got too close to that secret."])
+        ShowText([""])
+        ShowText([""])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Ilias Kreuz Member>I suspect many of them were also made into exhibits at that botanical garden... Just thinking about it makes me sick."])
+        ShowText([""])
+        ShowText([""])
+        ConditionalBranch([4, 615, 0])
+          ShowTextAttributes(["nependeath_fc1", 2, 0, 2])
+          ShowText(["\\n<Sumire>I never knew anything about that.\nI had nothing to do with it either."])
+          ShowText([""])
+          ShowText([""])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Magician>I can hardly believe we've lost contact with Suiki...\nShe was our organization's most talented member."])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([4, 559, 0])
+        ShowTextAttributes(["mob_assasin1_fc1", 1, 0, 2])
+        ShowText(["\\n<Salaan>Suiki, you couldn't be..."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 24, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Magician>No way, Suiki is...\nI must avenge her in this battle..."])
+        ShowText([""])
+        ShowText([""])
+        ConditionalBranch([4, 559, 0])
+          ShowTextAttributes(["mob_assasin1_fc1", 1, 0, 2])
+          ShowText(["\\n<Salaan>............"])
+          ShowText([""])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>Commander Lazarus is a pure knight with an indomitable spirit. I'm certain he will someday create a nation for humans..."])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([4, 520, 0])
+        ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+        ShowText(["\\n<Lazarus>This country's gonna become really boring..."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 24, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Priest>To think such inhumane acts were taking place in Grangold... The angels descending now as well must certainly be a divine revelation."])
+        ShowText([""])
+        ShowText([""])
+        ConditionalBranch([4, 614, 0])
+          ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+          ShowText(["\\n<Velvera>I-I was against it!"])
+          ShowText([""])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Warrior>We among the general members were also ordered to stand by for battle. There must be some big operation in the works..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 32, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Warrior>Instead of infiltrating, we're going to attack Grangold...?! That sounds preposterous..."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 33, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Warrior>To think we'd successfully take over Grangold...\nWill this change not just our history, but the very history of mankind going forward?"])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>All the shops in this town are distributors of the Elka Company. So despite our remote location, they're able to offer a quality selection of goods."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>But it's not like our war chest is loaded by any means...\nAll I've got on hand are two herbs and some antidote grass."])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([4, 408, 0])
+        ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+        ShowText(["\\n<Ponpoko>You should remember to keep your items well-stocked."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 32, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>The angels shared some of the items they had with us.\nNow even lowly soldiers like me are well-supplied!"])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 33, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>We're celebrating the fall of Grangold Castle!\nI'm going to buy a boost drink for this occasion!"])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Grangold is a country ruled by plant monsters.\nDon't forget that plant-based monsters are weak to fire."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 32, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>The angels shared their weapons and armor with us.\Even I'm equipped with the latest gear!"])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 33, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>I didn't go to Grangold because I had to guard this town, but... I was so worried about whether my comrades were safe fighting out there."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>The Elka Company is among the five top human-only underground companies in the Monster Realm. If you've got the financial power, even humans can achieve positions like that."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>And the head of that company, Elka, is also a member of Ilias Kreuz. You can think of the two organizations as one and the same."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 32, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Man>Something incredible is going on...\nIs it really true we're going to be attacking Grangold?"])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 33, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>All right, let's start packing up to move now!\nWe're going to Grangold!"])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 19, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Woman>It would appear the boss of the Elka Trading Company is like a brother to Commander Lazarus. He may sound like a tough guy, but I hear he's quite the brainiac."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 20, 1])
+      ConditionalBranch([1, 1142, 0, 32, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Woman>Everyone's getting all worked up, but I don't want a war...\nWhat if they counterattack and this town gets destroyed?"])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 33, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Woman>Everyone's all excited about the news, but are things going to keep going this smoothly? You don't suppose the monsters will come back to retake the castle soon, do you...?"])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ShowTextAttributes(["valkyrie_fc1", 0, 0, 2])
+    ShowText(["\\n<Valkyrie>Yoma rule the big cities, and humans have no choice but to hide their breath in these remote places... The humans of the Monster Realm seem to be in a dire situation."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["valkyrie_fc1", 0, 0, 2])
+    ShowText(["\\n<Valkyrie>Still, are there no angels left in these lands? Did they all die out except for the few remaining that became slaves...?"])
+    ShowText([""])
+    ShowText([""])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ShowTextAttributes(["cupid_fc1", 0, 0, 2])
+    ShowText(["\\n<Cupid>I feel bad for the people of this town, they don't have much joy to look forward to... Should I just shoot one of my matchmaking arrows at random and see who comes together?"])
+    ShowText([""])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["356"])
+    ShowTextAttributes(["trinity_fc1", 3, 0, 2])
+    ShowText(["\\n<Trinity>Please don't cause mischief..."])
+    ShowText([""])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 20, 2])
+      ShowTextAttributes(["eden_fc2", 3, 0, 2])
+      ShowText(["\\n<Eden>I can tell just from looking at your face, Ilias. You don't have good news to report..."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["eden_fc2", 3, 0, 2])
+      ShowText(["\\n<Eden>...Please inform Commander Lazarus first."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 21, 0])
+      ShowTextAttributes(["eden_fc2", 0, 0, 2])
+      ShowText(["\\n<Eden>We're about to begin our attack on Grangold.\nThe angel army are also eagerly awaiting this battle."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["eden_fc2", 0, 0, 2])
+      ShowText(["\\n<Eden>Morale among Ilias Kreuz appears to be very high. Commander Lazarus is also a very devout and righteous man."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["lazarus4_fc1", 1, 0, 2])
+      ShowText(["\\n<Lazarus>I am honored by your praise.\nWe shall prove our devotion on the battlefield."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+      ShowText(["\\n<Lazarus>Sheesh, take some weight off those shoulders...\nHumans can't beat monsters anyways, you're just going to be focusing on support."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["eden_fc2", 3, 0, 2])
+      ShowText(["\\n<Eden>These two... It's hard to believe they're the same person."])
+      ShowText([""])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>You think so?\nI don't think they'll prove very different at their core..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([3812, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([254, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([427, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([3, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+    ShowText(["\\n<Whiteyel>We're supplying this town with angel feathers for blacksmithing materials. We have to charge a fee for them since the amount we can give is limited."])
+    ShowText([""])
+    ShowText([""])
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
+      ShowText(["\\n<Whiteyel>I'll also provide some to the little Ilias as well if she needs them. I'll give them free of charge, of course."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Thanks for the kind gesture, but we'll pay for them."])
+      ShowText([""])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>(Now we can't ask her to give them to us for free after you said that...)"])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ShopProcessing([0, 241, 0, 0, true])
+    ShopItem([0, 256, 1, 2000])
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([91, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 32, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>In this Realm ruled by monsters, insignificant humans like us have no choice but to live in constant fear of them."])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([4, 538, 0])
+        ShowTextAttributes(["heinrich_fc1", 2, 0, 2])
+        ShowText(["\\n<Heinrich>Are the people of this world really so despondent...?"])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 539, 0])
+        ShowTextAttributes(["heinrich_fc4", 0, 0, 2])
+        ShowText(["\\n<Heinrich>Are the people of this world really so despondent...?"])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 33, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>In this Realm ruled by monsters, I thought insignificant humans like us had no choice but to live in constant fear of them."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>But maybe it will finally arrive.\nOur age of humanity..."])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([4, 143, 0])
+        ShowTextAttributes(["eva_fc1", 0, 0, 2])
+        ShowText(["\\n<Eva>It'll never arrive."])
+        ShowText([""])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Old Man>No! I'm sure it will!!"])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 32, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Woman>Despite what my husband says, this town is still peaceful thanks to Lazarus."])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([4, 520, 0])
+        ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+        ShowText(["\\n<Lazarus>Hmph, that straight-laced man..."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 33, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Woman>Despite what my husband says, I'm worried about monster retaliation after that flashy rampage."])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([4, 538, 0])
+        ShowTextAttributes(["heinrich_fc1", 7, 0, 2])
+        ShowText(["\\n<Heinrich>You can count on us if that happens.\nWe'll be sure to rush over here!"])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 539, 0])
+        ShowTextAttributes(["heinrich_fc4", 0, 0, 2])
+        ShowText(["\\n<Heinrich>You can count on us if that happens.\nWe'll be sure to rush over here!"])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Blacksmith>Sorry, I've got my hands full repairing the organization members' weapons. I can't even get around to doing new work."])
+    ShowText([""])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Assassin Merchant>These are our family's secret talismans...\nI'll sell them if you have need for them."])
+    ShowText([""])
+    ShowText([""])
+    ShopProcessing([2, 4343, 0, 0, false])
+    ShopItem([2, 4346, 0, 0])
+    ShopItem([2, 4349, 0, 0])
+    ShopItem([2, 4352, 0, 0])
+    ShopItem([2, 4355, 0, 0])
+    ShopItem([2, 4358, 0, 0])
+    ShopItem([2, 4361, 0, 0])
+    ShopItem([2, 4364, 0, 0])
+    ShopItem([2, 4367, 0, 0])
+    ShopItem([2, 4370, 0, 0])
+    ShopItem([2, 4373, 0, 0])
+    ShopItem([2, 4376, 0, 0])
+    ShopItem([2, 4379, 0, 0])
+    ShopItem([2, 4382, 0, 0])
+    ShopItem([2, 4385, 0, 0])
+    ShopItem([2, 4388, 0, 0])
+    ShopItem([2, 4391, 0, 0])
+    ShopItem([2, 4394, 0, 0])
+    ShopItem([2, 4397, 0, 0])
+    ShopItem([2, 4400, 0, 0])
+    ShopItem([2, 4403, 0, 0])
+    ShopItem([2, 4406, 0, 0])
+    ShopItem([2, 4409, 0, 0])
+    ShopItem([2, 4412, 0, 0])
+    ShopItem([2, 4415, 0, 0])
+    ShopItem([2, 4418, 0, 0])
+    ShopItem([2, 4422, 0, 0])
+    ShopItem([2, 4426, 0, 0])
+    Empty([])

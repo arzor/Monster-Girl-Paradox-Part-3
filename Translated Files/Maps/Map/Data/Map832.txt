@@ -1,0 +1,155 @@
+Display Name = "呪われた島"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Wait([30])
+    ShotBalloonIcon([-1, 8, true])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["上陸したのはいいけど……"])
+    ShowText(["この島、何もないじゃないか。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ここが、ワールドドロウンの本拠地という話だった。"])
+    ShowText(["しかし、敵の気配さえも感じない――"])
+    ConditionalBranch([4, 233, 0])
+      ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+      ShowText(["【メフィスト】"])
+      ShowText(["周辺海域も含めてサーチしましたが……"])
+      ShowText(["何の反応もありませんね。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 391, 0])
+      ShowTextAttributes(["mefist_fc2", 2, 0, 2])
+      ShowText(["【メフィスト】"])
+      ShowText(["周辺海域も含めてサーチしましたが……"])
+      ShowText(["何の反応もありませんね。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 392, 0])
+      ShowTextAttributes(["mefist_fc3", 2, 0, 2])
+      ShowText(["【メフィスト】"])
+      ShowText(["周辺海域も含めてサーチしましたが……"])
+      ShowText(["何の反応もありませんね。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 393, 0])
+      ShowTextAttributes(["mefist_fc4", 2, 0, 2])
+      ShowText(["【メフィスト】"])
+      ShowText(["周辺海域も含めてサーチしましたが……"])
+      ShowText(["何の反応もありませんね。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["デマに惑わされた訳でもありませんよね。"])
+    ShowText(["だとすれば、バンシィ達が守っていた理由がなくなります。"])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["この砂浜……まばゆい光が差し込んでいるな。"])
+      ShowText(["もしかして、導きの玉で道が開けるのではないか？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["この砂浜……まばゆい光が差し込んでいるな。"])
+      ShowText(["もしかして、導きの玉で道が開けるのではないか？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["この砂浜……まばゆい光が差し込んでいるな。"])
+      ShowText(["もしかして、導きの玉で道が開けるのではないか？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 21, 0])
+      ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+      ShowText(["【たまも】"])
+      ShowText(["うむ、間違いあるまい。"])
+      ShowText(["敵がいるのは……海底神殿か。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 22, 0])
+      ShowTextAttributes(["tamamo_fc2", 0, 0, 2])
+      ShowText(["【玉藻】"])
+      ShowText(["うむ、間違いあるまい。"])
+      ShowText(["敵がいるのは……海底神殿か。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["導きの玉は、海底神殿に行く時に使用したアイテムだ。"])
+    ShowText(["今も、道具袋の中に保管してあるはず――"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["それじゃあ、導きの玉を使ってみよう。"])
+    ShowText(["……えいっ！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ルカは導きの玉を掲げた！"])
+    ShowText(["導きの玉はまばゆい輝きを放つ！"])
+    ControlSwitches([5520, 5520, 0])
+    ControlSwitches([100, 100, 0])
+    ControlSwitches([31, 31, 1])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 232, 34, 64, 8, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Water1\", @pitch=100, @volume=80)"])
+    FadeoutScreen([])
+    Wait([30])
+    TransferPlayer([0, 287, 436, 170, 2, 0])
+    Script(["forced_get_on_ship"])
+    FadeinScreen([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["導きの玉を使いますか？"])
+    ShowChoices([["はい", "いいえ"], 2])
+    When([0, "はい"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["ルカは導きの玉を掲げた！"])
+      ShowText(["導きの玉はまばゆい輝きを放つ！"])
+      ControlSwitches([5270, 5270, 0])
+      ControlSwitches([100, 100, 0])
+      ChangeMapDisplay([0])
+      ControlSwitches([31, 31, 1])
+      PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 232, 34, 64, 8, 1])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "いいえ"])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])

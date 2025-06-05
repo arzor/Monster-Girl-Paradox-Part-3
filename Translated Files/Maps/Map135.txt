@@ -1,0 +1,470 @@
+Display Name = "Mt. Horai"
+Parallax Name = "CloudySky1"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 371, 159, 2, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 371, 159, 2, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 371, 159, 2, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 371, 159, 2, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 2, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>Huh? Isn't the Elf Village supposed to be at the top of the mountain? The only thing here is a stone monument..."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>There's no way there can be a village at the summit of a snow-covered mountain. This stone monument is the transfer device to the village."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>Of course not, how could there be a village at the summit of a snow-capped mountain...? This stone monument is the transfer device to the village, you see."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>So this magic device will warp us to the village? We'd better prepare ourselves since it's in the heart of enemy territory."])
+      ConditionalBranch([4, 58, 0])
+        ShowTextAttributes(["inp_fc2", 2, 0, 2])
+        ShowText(["\\n<Remi>What if they gang up on us and beat us up...? *shiver*..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["morrigan_fc1", 0, 0, 2])
+        ShowText(["\\n<Morrigan>Hah, they can come at us with as many fighters as they want! We're going to beat those elves to a pulp!"])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>Okay, let's activate it.\nNow, take us to the Elf Village...!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+        ShowText(["\\n<Mephisto>Let's prepare for battle.\nWe must be ready to deal with surprise attacks..."])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>Let's activate it.\nNow, take us to the Elf Village...!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([5037, 5037, 0])
+    ControlSwitches([5237, 5237, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 300, 23, 50, 8, 1])
+    ConditionalBranch([1, 1138, 0, 2, 0])
+      ControlVariables([1138, 1138, 0, 0, 3])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>So this is the Elf Village..."])
+      ShowTextAttributes(["kunoitielf2_fc1", 2, 0, 2])
+      ShowText(["\\n<Kunoichi Elf A>We're getting visitors at such a complicated moment...?"])
+      ShowTextAttributes(["sonia_fc2", 3, 0, 2])
+      ShowText(["\\n<Sonya>Oh no, the residents have discovered us...!"])
+      ShowTextAttributes(["kunoitielf2_fc2", 2, 0, 2])
+      ShowText(["\\n<Kunoichi Elf B>Don't cause too much fuss, okay?\nEveryone is on edge because of the upcoming battle..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>......They're not attacking us."])
+      ConditionalBranch([4, 53, 0])
+        ShowTextAttributes(["slime_fc1", 2, 0, 2])
+        ShowText(["\\n<Lime>Phew, that surprised me..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>It seems that security is not as tight in the village as it is in Mt. Horai. We can gather information first, or we can go straight to the Elf Princess' mansion..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>It seems that security is not as tight in the village as it is in Mt. Horai. Should we gather information first, or just raid the Elf Princess's mansion..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Even if security is lax in the village... I don't think that will be the case in the mansion of the Elf Princess."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>I think we should gather some information first, after all. It remains unclear why the Elf Princess has started a rebellion in the first place."])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>She's a total shut-in with no desire for dominance or territorial ambition. Why would someone who can't even get out of their own mansion start a rebellion?"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>It would be more appropriate to start by gathering information first. It remains unclear why the Elf Princess has started a rebellion in the first place."])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>She's a total shut-in with no desire for dominance or territorial ambition. Why would someone who is afraid of everything but their own room cause such a disturbance?"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>If we knew why, maybe we could convince her to stop somehow. Okay, let's start asking around in the village!"])
+      ConditionalBranch([4, 316, 0])
+        ShowTextAttributes(["queenelf_fc1", 0, 0, 2])
+        ShowText(["\\n<Freya>Good grief, this princess is so...\nI thought she'd locked herself away and wouldn't come out again, but now she's causing such a mess."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 293, 0])
+        ShowTextAttributes(["candy_fc1", 1, 0, 2])
+        ShowText(["\\n<Candy>Elves look delicious...\nCan I eat some of them?"])
+        ConditionalBranch([0, 4, 0])
+          ShowTextAttributes(["alice_fc5", 2, 0, 2])
+          ShowText(["\\n<Alice>Hey, lock her up in the Pocket Castle."])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 5, 0])
+          ShowTextAttributes(["eden_fc1", 0, 0, 2])
+          ShowText(["\\n<Eden>I will give you marshmallows, so please try to behave."])
+          ShowTextAttributes(["candy_fc1", 1, 0, 2])
+          ShowText(["\\n<Candy>Whoa, marshmallows... They're so sweet..."])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 327, 0])
+        ShowTextAttributes(["ningyohime_fc1", 6, 0, 2])
+        ShowText(["\\n<El>I'm going to take a dip in the water while you\nguys are questioning them...\n...I can't?"])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1044, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([32, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>This is where Mt. Horai is connected to the Elf Village. Tamamo told us that she broke the barrier..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>This is where Mt. Horai is connected to the Elf Village. Tamamo told us that she broke the barrier..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["kunoitielf2_fc1", 2, 0, 2])
+    ShowText(["\\n<Kunoichi Elf A>Who goes there?! Intruders are to be eliminated!"])
+    ShowTextAttributes(["kunoitielf2_fc2", 2, 0, 2])
+    ShowText(["\\n<Kunoichi Elf B>The village is currently in a state of emergency... Curse your bad luck for coming here at a time like this!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Hmph, they're welcoming us right off the bat... Sorry, but we will pass even if we have to use force!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>Thank you for welcoming us.\nNow enjoy the taste of the soil."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Seems like persuasion won't work...\nNo choice, let's go!"])
+    ConditionalBranch([4, 413, 0])
+      ShowTextAttributes(["kurodanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Black Tanuki>You dare challenge me, the great Black Tanuki who is well versed in every technique of Yamatai, with ninjutsu...? Very well, I will give you a good beating!"])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([81, 81, 0])
+    BattleProcessing([0, 1478, false, false])
+    ControlSwitches([81, 81, 1])
+    ControlVariables([1138, 1138, 0, 0, 2])
+    ConditionalBranch([4, 413, 0])
+      ShowTextAttributes(["kurodanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Black Tanuki>Haha, have you realized how powerful I am?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["kunoitielf2_fc1", 2, 0, 2])
+    ShowText(["\\n<Kunoichi Elf A>Forgive me, Princess..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>If the barrier were still in place, there would be no need for guards like these. It seems that Tamamo truly did break the barrier, after all."])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Now let's move on!\nEven if the village's fiercest warriors stand against us, we'll just defeat them!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>How does it feel to lie on the ground and taste dirt? You can sleep there for the time being."])
+      ShowTextAttributes(["rucyfinac_fc1", 0, 0, 2])
+      ShowText(["\\n<Lucifina-chan>Hey, can you tell me how earth tastes?\nWhat about mud? Maybe mud tastes better..."])
+      ShowTextAttributes(["micaelac_fc1", 0, 0, 2])
+      ShowText(["\\n<Micaela-chan>Lucifina-chan, you shouldn't trample the losers like that..."])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>Well, it seems certain that the barrier has been broken now. Otherwise, there would be no need for guards like them."])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>Now then, time to move on.\nLet's cut down anyone who gets in our way and\nmarch into the Elf Village."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 219, 0])
+      ShowTextAttributes(["kunoitielf_fc1", 0, 0, 2])
+      ShowText(["\\n<Kasumi>Good grief, this is going to be a rowdy homecoming."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 220, 0])
+      ShowTextAttributes(["samuraielf_fc1", 0, 0, 2])
+      ShowText(["\\n<Gekka>To think I'd have to give a beating to my own people... Well, I guess it can't be helped."])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 371, 160, 2, 1])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Huh...? We were sent back outside the mountain...?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Looks like there's a barrier here to prevent us from intruding... We can't get inside, nor do we have any business here to begin with."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>There appears to be a barrier set up here to prevent us from intruding... We cannot enter, but what business do we even have here in the first place?"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([57, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 371, 160, 2, 1])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Huh...? We were sent back outside the mountain...?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Looks like there's a barrier here to prevent us from intruding... We can't get inside, nor do we have any business here to begin with."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>There appears to be a barrier set up here to prevent us from intruding... We cannot enter, but what business do we even have here in the first place?"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 371, 160, 2, 1])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Huh...? We were sent back outside the mountain...?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Looks like there's a barrier here to prevent us from intruding... We can't get inside, nor do we have any business here to begin with."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>There appears to be a barrier set up here to prevent us from intruding... We cannot enter, but what business do we even have here in the first place?"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 371, 160, 2, 1])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Huh...? We were sent back outside the mountain...?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Looks like there's a barrier here to prevent us from intruding... We can't get inside, nor do we have any business here to begin with."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>There appears to be a barrier set up here to prevent us from intruding... We cannot enter, but what business do we even have here in the first place?"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1592, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeGold([0, 0, 12000])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["12000\\G obtained!"])
+    Empty([])
+
+  Page 1
+    Empty([])

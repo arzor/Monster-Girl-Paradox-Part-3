@@ -1,0 +1,287 @@
+Display Name = "Shidara Settlement"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 868, 13, 36, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 868, 34, 33, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 868, 17, 14, 0, 0])
+    ConditionalBranch([1, 1204, 0, 1, 0])
+      CallCommonEvent([535])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    CallCommonEvent([508])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    CallCommonEvent([508])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    CallCommonEvent([508])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ControlVariables([1204, 1204, 0, 0, 1])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>This is the Shidara Settlement.\nNow where is our client...?"])
+    ShowTextAttributes(["lars_fc01", 0, 0, 2])
+    ShowText(["\\n<Lars>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It has been a whole day since they arrived in this world.\nThey didn't know east from west, and even the currency was unfamiliar to them."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["They also needed to investigate the mystery of this incident, but food and lodging expenses were a more urgent matter."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["That is why they came to this settlement to take on a request to subdue monsters. They heard of a series of incidents in which several villages had been attacked by some mysterious yoma..."])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>The huge reward for this request is appealing, but... You can't just leave these villagers in distress, can you Lars?"])
+    ShowTextAttributes(["lars_fc01", 0, 0, 2])
+    ShowText(["\\n<Lars>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Lars nodded with a sorrowful expression."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Based on what he read from the request on the notice board, this case has caused extensive damage. These yoma had raped all of the residents in each village, and most of their victims have been left in a coma."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["No matter how different this world might be, he could not simply overlook this. Moreover, he had a strong feeling this case might be connected to him."])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>Our client was the elder of this settlement, right? In any case, he should be in the most remarkable house here."])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>Should we also hear what the other residents have to say? There's still a lot we don't know about this world."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowPicture([5, "80_nobissa_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["nobissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Novissa>............"])
+    ShowTextAttributes(["lars_fc01", 0, 0, 2])
+    ShowText(["\\n<Lars>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["This man doesn't seem like an ordinary person.\nThere's no mistaking that he's quite strong."])
+    ShowTextAttributes(["nobissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Novissa>............"])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>Um, are you looking for someone...?\nTarsa...? Nope, I haven't heard that name before."])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>By the way, we're here to eliminate some yoma, and... You look pretty capable. Why don't we fight them together?"])
+    ShowTextAttributes(["nobissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Novissa>............"])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>Yeah, I'm worried about your girl Tarsa too...\nBut I can't help you in that case."])
+    ErasePicture([5])
+    Wait([30])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"mon_asioto2\", @pitch=100, @volume=100)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=27, @parameters=[2906])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=27, @parameters=[2906])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Novissa walks away from the spot..."])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>He seemed to be searching desperately for her...\nThis Tarsa is probably his girlfriend."])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>If I were separated from you Lars...\nWould you be searching for me like that?"])
+    ShowChoices([["Yes", "No"], 0])
+    When([0, "Yes"])
+      ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+      ShowText(["\\n<Rovissa>Fufu, that's right...♪"])
+      Empty([])
+
+    When([1, "No"])
+      ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+      ShowText(["\\n<Rovissa>...Hmph, fine!\nI'd just track you wherever you go!"])
+      Empty([])
+
+    ChoicesEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Girl>The first place that got attacked was a small town in the Gold region. From there, villages were attacked one after another..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Girl>And now they've finally reached the Yamatai region.\nThis village is also going to be attacked by the yoma..."])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>There are only a few soldiers in this small settlement.\nThere's no way we'd be able to fend off a foreign invasion..."])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Villager>It's nice of you to come to a small settlement like ours.\nYou should listen to what our elder has to say."])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Cow>Moooo."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["This cow looks like it's put on a lot of weight..."])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Monk>Everyone that was attacked by the yoma has fallen into a coma. Although their lives don't appear to be in danger, it doesn't look like they will return to consciousness."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Monk>Why are they doing this?\nAre they just having a meal, or..."])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>That strange exorcist must've headed to Izumo Village. We have to move on ahead of her so that we won't get robbed of fulfilling the request!"])
+    ShowTextAttributes(["lars_fc01", 0, 0, 2])
+    ShowText(["\\n<Lars>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Following the earth's pulse was the exorcist's idea in the first place. It felt more like the two were just taking credit for it."])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>That said...why have I materialized like this?\nIs it something to do with how this world works?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Ever since coming into this world after being caught in that black vortex, Rovissa had materialized into her physical form without being summoned prior."])
+    ShowTextAttributes(["lars_fc01", 0, 0, 2])
+    ShowText(["\\n<Lars>............"])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>Maybe this is only a temporary thing.\nI'll probably revert once we return to our world."])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>But fighting against someone who isn't a Nightmare... Hasn't it been a long time since you've used your sword, Lars?"])
+    ShowTextAttributes(["lars_fc01", 0, 0, 2])
+    ShowText(["\\n<Lars>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["He once used his sword techniques to defeat the Demon Lord... It has been a very long time since he fought with that power."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The yoma going around wrecking villages should be quite strong. This is to say nothing of the fact they're in a different world, so they'll need to be prepared before challenging them..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Villager>The crops have been growing fast these days.\nIt's been a very long time since this much fruit has grown."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Villager>A lot of chickens have also been born with four or six legs. Still, I'm happy we have so much to eat."])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>Is that really something to be happy about...?"])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([3, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([5, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["slime_fc1", 0, 0, 2])
+    ShowText(["\\n<Slime Girl>Boomerang♪ Boomerang♪"])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>These jiggly girls are dancing!\nThey're adorable...♪"])
+    ShowTextAttributes(["lars_fc01", 0, 0, 2])
+    ShowText(["\\n<Lars>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The monsters in this world are completely different from the Nightmares they were familiar with. Rovissa rejects the Nightmares, but she doesn't appear to dislike these monsters."])
+    Empty([])

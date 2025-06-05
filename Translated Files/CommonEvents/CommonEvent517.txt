@@ -1,0 +1,27 @@
+CommonEvent 517
+Name = "コラボC8：ヴィヌム出現"
+
+  999([517])
+  ConditionalBranch([0, 34, 1])
+    ShowAnimation([14, 542, false])
+    Wait([60])
+    ControlSwitches([34, 34, 0])
+    Wait([60])
+    Empty([])
+
+  BranchEnd([])
+  ShowPicture([5, "80_vinum_st05", 0, 0, 0, 0, 100, 100, 0, 0])
+  MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+  ShowTextAttributes(["vinum_fc1", 4, 0, 2])
+  ShowText(["\\n<Vinum>Oops... Looks like this way's closed.\nI can't let you leave this castle."])
+  ShowText([""])
+  ShowText([""])
+  ShowTextAttributes(["kazuya_fc2", 3, 0, 2])
+  ShowText(["\\n<Kazuya>Kh... Let's find another escape route!"])
+  ShowText([""])
+  ErasePicture([5])
+  Wait([30])
+  SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+  Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+  ExitEventProcessing([])
+  Empty([])

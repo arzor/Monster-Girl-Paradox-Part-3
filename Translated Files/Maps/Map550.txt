@@ -1,0 +1,243 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([36, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([178, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>The area ahead is off limits."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1022, 0, 4, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Please, go in. I pray that you complete your mission safely."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1022, 0, 5, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Are you going to reorganize your party? Please, go in when you're ready."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1022, 0, 6, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>We have been told to let you pass. Please, go in."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 220, 12, 9, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 220, 13, 9, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ConditionalBranch([1, 1022, 0, 4, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["We can't leave the King of San Ilia behind."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([5271, 5271, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 110, 29, 56, 8, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>Before you enter the Ancient Temple's Ruins, allow me to explain some things about them."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>It all began before Luddite Village was constructed, before the anti-makina faction split from the church."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>Some locals discovered the ancient ruins by chance while in the caves. Hearing of this, we rushed here and were astonished by what we saw inside."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>Since then, we have issued a gag order on this matter. Officially, these are the [Ancient Temple's Ruins], and are considered a holy place of Ilias."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>So... unofficially, they aren't a temple?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Then... the truth is that this isn't actually a temple?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>Let's proceed."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>...Allow me to continue. As I said, the general public was told that the newly discovered ruins were those of an ancient temple to Ilias."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>After that, a schism formed, and the anti-makina faction built a village nearby. As they believe these were the grounds of an ancient temple, they wanted the construction to symbolize their regression to ancient fundamentals."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>They likely did not know what these ruins actually are. Otherwise, they would never have built their village on this land."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>Then what on earth are these ruins, actually?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Then, what are the ruins?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>...You should see the rest for yourself. The real ruins will tell you more than my words ever could."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ConditionalBranch([4, 72, 0])
+      ShowTextAttributes(["phoenix_fc1", 1, 0, 2])
+      ShowText(["\\n<Mini>It's the Pooope!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>Your Holiness, I have brought them."])
+    ShowPicture([5, "80_saniria_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["saniria_fc1", 0, 0, 2])
+    ShowText(["\\n<King of San Ilia>Mm, well done. You can return to your church."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>Yes, sir... Your Holiness, please be careful. Everyone, please take care of His Holiness."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The priest returned to the village."])
+    ShowTextAttributes(["saniria_fc1", 0, 0, 2])
+    ShowText(["\\n<King of San Ilia>Well then, I shall accompany you from here on. I'll be in your care."])
+    ErasePicture([5])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+    ControlVariables([1022, 1022, 0, 0, 5])
+    ShowTextAttributes(["saniria_fc1", 0, 0, 2])
+    ShowText(["\\n<King of San Ilia>You might already know this, but I can't fight at all. That's why I'll leave it to you to escort me to the deepest part of the ruins."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+      ShowText(["\\n<Sonya>Yes, leave it to us, Your Holiness! I shall smash everyone who harms His Holiness with my club!"])
+      ShowTextAttributes(["saniria_fc1", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>In that case... shouldn't the first person you strike be Lazarus, your foster parent?"])
+      ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+      ShowText(["\\n<Sonya>Eh?!"])
+      ShowTextAttributes(["saniria_fc1", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>My apologies, I was just making a little joke."])
+      ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+      ShowText(["\\n<Sonya>Your Holiness shouldn't make dark jokes! That was bad for my heart!"])
+      ShowTextAttributes(["saniria_fc1", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>Well, I was blown up by Lazarus' bomb, so I do still have something of a grudge. I'm not a saint, after all."])
+      ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+      ShowText(["\\n<Sonya>Yes you are! Your Holiness, the Pope, is the holiest saint in the entire world!"])
+      ShowTextAttributes(["saniria_fc1", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>Your reactions are all so interesting."])
+      ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+      ShowText(["\\n<Sonya>To have His Holiness start a comedy routine with me... I wonder if I'm going to hell..."])
+      ShowTextAttributes(["saniria_fc1", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>No, no, I was just teasing you a little. Now, let's get going."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Leave it to us!"])
+      ShowTextAttributes(["saniria_fc1", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>I'm expecting a lot from you. Now, let's get going."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])

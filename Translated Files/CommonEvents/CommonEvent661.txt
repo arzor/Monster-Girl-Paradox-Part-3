@@ -1,0 +1,26 @@
+CommonEvent 661
+Name = "イベント：クィーンフェアリー"
+
+  999([661])
+  ControlSwitches([73, 73, 0])
+  ConditionalBranch([0, 440, 0])
+    ShowTextAttributes(["queenfairy_fc1", 0, 0, 2])
+    ShowText(["\\n<Queen Fairy>Nature is important.\nIf you handle it poorly, it will certainly bare its fang at you."])
+    ShowText([""])
+    ShowText([""])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ControlSwitches([440, 440, 0])
+  ShowTextAttributes(["queenfairy_fc1", 0, 0, 2])
+  ShowText(["\\n<Queen Fairy>Let me grant you the power of nature...Sparkle☆"])
+  ShowText([""])
+  PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["A mysterious power was given from Queen Fairy!\nThe power of nature skills is doubled until the next boss floor!"])
+  ShowText([""])
+  ControlSwitches([73, 73, 1])
+  ExitEventProcessing([])
+  Empty([])

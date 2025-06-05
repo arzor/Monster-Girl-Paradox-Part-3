@@ -1,0 +1,1166 @@
+Display Name = "Casino"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dealer>Would you like to play poker?"])
+    ShowChoices([["Yes", "No"], 2])
+    When([0, "Yes"])
+      PlayBGM(["RPG::BGM(@name=\"casino2\", @volume=100, @pitch=100)"])
+      Script(["start_poker(50, 5, 5)"])
+      PlayBGM(["RPG::BGM(@name=\"casino\", @volume=100, @pitch=100)"])
+      Empty([])
+
+    When([1, "No"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 624, 6, 16, 0, 0])
+    ConditionalBranch([1, 1030, 0, 1, 2])
+      PlayBGM(["RPG::BGM(@name=\"saki\", @volume=100, @pitch=100)"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 624, 6, 16, 0, 0])
+    ConditionalBranch([1, 1030, 0, 1, 2])
+      PlayBGM(["RPG::BGM(@name=\"saki\", @volume=100, @pitch=100)"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 624, 6, 16, 0, 0])
+    ConditionalBranch([1, 1030, 0, 1, 2])
+      PlayBGM(["RPG::BGM(@name=\"saki\", @volume=100, @pitch=100)"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ShowTextAttributes(["usagi_fc1", 0, 0, 2])
+    ShowText(["\\n<Rabbit Girl>I'm an airhead rabbit. This job is my calling♪"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["54"])
+    ShowTextAttributes(["bunnyslime_fc1", 0, 0, 2])
+    ShowText(["\\n<Bunni>I'm also a rabbiiit♪"])
+    ShowTextAttributes(["usagi_fc1", 2, 0, 2])
+    ShowText(["\\n<Rabbit Girl>You... I wonder about that?"])
+    ExitEventProcessing([])
+    Label(["74"])
+    ShowTextAttributes(["usagi_fc1", 0, 0, 2])
+    ShowText(["\\n<Barbun>Oh my, wonderful. Maybe I should work part time here as well?"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ConditionalBranch([6, -1, 8])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is a 5 Coins slot machine. Would you like to use it?"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        PlayBGM(["RPG::BGM(@name=\"casino2\", @volume=100, @pitch=100)"])
+        Script(["call_slot_scene(5)"])
+        PlayBGM(["RPG::BGM(@name=\"casino\", @volume=100, @pitch=100)"])
+        Empty([])
+      When([1, "No"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ConditionalBranch([6, -1, 8])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is a 5 Coins slot machine. Would you like to use it?"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        PlayBGM(["RPG::BGM(@name=\"casino2\", @volume=100, @pitch=100)"])
+        Script(["call_slot_scene(5)"])
+        PlayBGM(["RPG::BGM(@name=\"casino\", @volume=100, @pitch=100)"])
+        Empty([])
+      When([1, "No"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ConditionalBranch([6, -1, 8])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is a 5 Coins slot machine. Would you like to use it?"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        PlayBGM(["RPG::BGM(@name=\"casino2\", @volume=100, @pitch=100)"])
+        Script(["call_slot_scene(5)"])
+        PlayBGM(["RPG::BGM(@name=\"casino\", @volume=100, @pitch=100)"])
+        Empty([])
+      When([1, "No"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ConditionalBranch([6, -1, 8])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is a 10 Coins slot machine. Would you like to use it?"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        PlayBGM(["RPG::BGM(@name=\"casino2\", @volume=100, @pitch=100)"])
+        Script(["call_slot_scene(10)"])
+        PlayBGM(["RPG::BGM(@name=\"casino\", @volume=100, @pitch=100)"])
+        Empty([])
+      When([1, "No"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ConditionalBranch([6, -1, 8])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is a 10 Coins slot machine. Would you like to use it?"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        PlayBGM(["RPG::BGM(@name=\"casino2\", @volume=100, @pitch=100)"])
+        Script(["call_slot_scene(10)"])
+        PlayBGM(["RPG::BGM(@name=\"casino\", @volume=100, @pitch=100)"])
+        Empty([])
+      When([1, "No"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ConditionalBranch([6, -1, 8])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is a 10 Coins slot machine. Would you like to use it?"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        PlayBGM(["RPG::BGM(@name=\"casino2\", @volume=100, @pitch=100)"])
+        Script(["call_slot_scene(10)"])
+        PlayBGM(["RPG::BGM(@name=\"casino\", @volume=100, @pitch=100)"])
+        Empty([])
+      When([1, "No"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dealer>Would you like to play poker?"])
+    ShowChoices([["Yes", "No"], 2])
+    When([0, "Yes"])
+      PlayBGM(["RPG::BGM(@name=\"casino2\", @volume=100, @pitch=100)"])
+      Script(["start_poker(50, 5, 5)"])
+      PlayBGM(["RPG::BGM(@name=\"casino\", @volume=100, @pitch=100)"])
+      Empty([])
+
+    When([1, "No"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dealer>Please enjoy yourself to your fullest."])
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>AAaAaa! ...No good today either, eh."])
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Fortune Teller>I-I can't see the future!"])
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dealer>Now, will it be red or black..."])
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dealer>My apologies, there are no empty seats here."])
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    ConditionalBranch([6, -1, 8])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is a 5 Coins slot machine. Would you like to use it?"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        PlayBGM(["RPG::BGM(@name=\"casino2\", @volume=100, @pitch=100)"])
+        Script(["call_slot_scene(5)"])
+        PlayBGM(["RPG::BGM(@name=\"casino\", @volume=100, @pitch=100)"])
+        Empty([])
+      When([1, "No"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    ConditionalBranch([6, -1, 8])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is a 5 Coins slot machine. Would you like to use it?"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        PlayBGM(["RPG::BGM(@name=\"casino2\", @volume=100, @pitch=100)"])
+        Script(["call_slot_scene(5)"])
+        PlayBGM(["RPG::BGM(@name=\"casino\", @volume=100, @pitch=100)"])
+        Empty([])
+      When([1, "No"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 57
+Name = "EV057"
+
+  Page 0
+    ConditionalBranch([6, -1, 8])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is a 5 Coins slot machine. Would you like to use it?"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        PlayBGM(["RPG::BGM(@name=\"casino2\", @volume=100, @pitch=100)"])
+        Script(["call_slot_scene(5)"])
+        PlayBGM(["RPG::BGM(@name=\"casino\", @volume=100, @pitch=100)"])
+        Empty([])
+      When([1, "No"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 58
+Name = "EV058"
+
+  Page 0
+    ConditionalBranch([6, -1, 8])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is a 5 Coins slot machine. Would you like to use it?"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        PlayBGM(["RPG::BGM(@name=\"casino2\", @volume=100, @pitch=100)"])
+        Script(["call_slot_scene(5)"])
+        PlayBGM(["RPG::BGM(@name=\"casino\", @volume=100, @pitch=100)"])
+        Empty([])
+      When([1, "No"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 59
+Name = "EV059"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>Raise..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["His expression isn't budging at all... His poker face is like an iron mask."])
+    Empty([])
+
+CommonEvent 60
+Name = "EV060"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Man>*mutter*...*mutter*..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["53"])
+    ShowTextAttributes(["slime_fc1", 0, 0, 2])
+    ShowText(["\\n<Lime>Gunyaaa."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 61
+Name = "EV061"
+
+  Page 0
+    ConditionalBranch([6, -1, 8])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is a 10 Coins slot machine. Would you like to use it?"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        PlayBGM(["RPG::BGM(@name=\"casino2\", @volume=100, @pitch=100)"])
+        Script(["call_slot_scene(10)"])
+        PlayBGM(["RPG::BGM(@name=\"casino\", @volume=100, @pitch=100)"])
+        Empty([])
+      When([1, "No"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 62
+Name = "EV062"
+
+  Page 0
+    Empty([])
+
+CommonEvent 63
+Name = "EV063"
+
+  Page 0
+    Empty([])
+
+CommonEvent 64
+Name = "EV064"
+
+  Page 0
+    Empty([])
+
+CommonEvent 65
+Name = "EV065"
+
+  Page 0
+    Empty([])
+
+CommonEvent 66
+Name = "EV066"
+
+  Page 0
+    Empty([])
+
+CommonEvent 67
+Name = "EV067"
+
+  Page 0
+    Empty([])
+
+CommonEvent 68
+Name = "EV068"
+
+  Page 0
+    Empty([])
+
+CommonEvent 69
+Name = "EV069"
+
+  Page 0
+    Empty([])
+
+CommonEvent 70
+Name = "EV070"
+
+  Page 0
+    Empty([])
+
+CommonEvent 71
+Name = "EV071"
+
+  Page 0
+    Empty([])
+
+CommonEvent 72
+Name = "EV072"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>Slot machines in this row are colored different, right? Y'see, that's because they're 10 Coin machines."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>I need to earn enough to be able to play plenty on these machines... As I thought, first I need to build up funds with poker!"])
+    Empty([])
+
+CommonEvent 73
+Name = "EV073"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Man>Slot machines are no good. You can't feel any human warmth when playing against a machine."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Man>In other words, you can't plead or strike bargains with it... It's no good, so..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["41"])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["\\n<Promestein>Human warmth, you say... That's just an illusion. Human bodies run on electricity, and even minds come from a chemical reaction."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+      ShowText(["\\n<Sonya>You have no dreams..."])
+      ShowTextAttributes(["stein_fc2", 1, 0, 2])
+      ShowText(["\\n<Promestein>What are you saying, I have plenty of dreams! An accumulation of chemical reactions creating what you call a mind, isn't it wonderful?!"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I can kinda understand that. The explanation that chemical reactions are behind a human mind is strangely interesting."])
+      ShowTextAttributes(["stein_fc2", 1, 0, 2])
+      ShowText(["\\n<Promestein>So you understand! You understand don't you?! Now, let's research it together!"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>M-maybe next time..."])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Label(["185"])
+    ShowTextAttributes(["radio_fc1", 0, 0, 2])
+    ShowText(["\\n<Radio>So you're saying that machiNes have no minDs...?"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 74
+Name = "EV074"
+
+  Page 0
+    ConditionalBranch([1, 110, 0, 0, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Bunny>You currently have no coins. Would you like to buy coins?\nOr maybe you would like to see the prizes?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Bunny>You currently have \\V[110] coins. Would you like to buy coins? Or maybe would like to exchange coins for a prize?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowChoices([["Buy Coins", "Exchange for Prize", "Nothing"], 3])
+    When([0, "Buy Coins"])
+      ShowChoices([["60 Coins (1000G)", "350 Coins (5000G)", "1500 Coins (20000G)", "I'll pass"], 4])
+      When([0, "60 Coins (1000G)"])
+        ConditionalBranch([7, 1000, 0])
+          PlaySE(["RPG::SE(@name=\"Coin\", @pitch=100, @volume=80)"])
+          Script(["gain_coin(60)"])
+          ChangeGold([1, 0, 1000])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Purchased 60 Coins! (Have:\\V[110])"])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Bunny>You don't have enough money."])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      When([1, "350 Coins (5000G)"])
+        ConditionalBranch([7, 5000, 0])
+          PlaySE(["RPG::SE(@name=\"Coin\", @pitch=100, @volume=80)"])
+          Script(["gain_coin(350)"])
+          ChangeGold([1, 0, 5000])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Purchased 350 Coins! (Have:\\V[110])"])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Bunny>You don't have enough money."])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      When([2, "1500 Coins (20000G)"])
+        ConditionalBranch([7, 20000, 0])
+          PlaySE(["RPG::SE(@name=\"Coin\", @pitch=100, @volume=80)"])
+          Script(["gain_coin(1500)"])
+          ChangeGold([1, 0, 20000])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Purchased 1500 Coins! (Have:\\V[110])"])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Bunny>You don't have enough money."])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      When([3, "I'll pass"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    When([1, "Exchange for Prize"])
+      Script(["goods = []"])
+      ScriptMore(["goods.push [500, :I, 5]"])
+      ScriptMore(["goods.push [750, :I, 12]"])
+      ScriptMore(["goods.push [1000, :A, 264]"])
+      ScriptMore(["goods.push [1000, :A, 168]"])
+      ScriptMore(["goods.push [1500, :A, 1734]"])
+      ScriptMore(["goods.push [1500, :A, 1736]"])
+      ScriptMore(["goods.push [5000, :W, 128]"])
+      ScriptMore(["goods.push [7500, :A, 10]"])
+      ScriptMore(["goods.push [8000, :A, 1724]"])
+      ScriptMore(["goods.push [10000, :A, 1691]"])
+      ScriptMore(["call_casino_prize(goods)"])
+      Empty([])
+
+    When([2, "Nothing"])
+      Empty([])
+
+    ChoicesEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 129
+Name = "EV129"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Bunny>Please have fun and forget about time, okaay♪?"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["82"])
+    ShowTextAttributes(["suzume_fc1", 2, 0, 2])
+    ShowText(["\\n<Chirp>Is that really all right? Isn't time important?"])
+    ExitEventProcessing([])
+    Label(["97"])
+    ShowTextAttributes(["fairy_fc1", 0, 0, 2])
+    ShowText(["\\n<Fell>Yaay, let's play lots♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 130
+Name = "EV130"
+
+  Page 0
+    ConditionalBranch([1, 110, 0, 0, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Bunny>You currently have no coins. Would you like to buy coins?\nOr maybe you would like to see the prizes?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Bunny>You currently have \\V[110] coins. Would you like to buy coins? Or maybe you would like to exchange coins for a prize?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowChoices([["Buy Coins", "Exchange for Prize", "Nothing"], 3])
+    When([0, "Buy Coins"])
+      ShowChoices([["60 Coins (1000G)", "350 Coins (5000G)", "1500 Coins (20000G)", "I'll pass"], 4])
+      When([0, "60 Coins (1000G)"])
+        ConditionalBranch([7, 1000, 0])
+          PlaySE(["RPG::SE(@name=\"Coin\", @pitch=100, @volume=80)"])
+          Script(["gain_coin(60)"])
+          ChangeGold([1, 0, 1000])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Purchased 60 Coins! (Have:\\V[110])"])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Bunny>You don't have enough money."])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      When([1, "350 Coins (5000G)"])
+        ConditionalBranch([7, 5000, 0])
+          PlaySE(["RPG::SE(@name=\"Coin\", @pitch=100, @volume=80)"])
+          Script(["gain_coin(350)"])
+          ChangeGold([1, 0, 5000])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Purchased 350 Coins! (Have:\\V[110])"])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Bunny>You don't have enough money."])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      When([2, "1500 Coins (20000G)"])
+        ConditionalBranch([7, 20000, 0])
+          PlaySE(["RPG::SE(@name=\"Coin\", @pitch=100, @volume=80)"])
+          Script(["gain_coin(1500)"])
+          ChangeGold([1, 0, 20000])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Purchased 1500 Coins! (Have:\\V[110])"])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Bunny>You don't have enough money."])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      When([3, "I'll pass"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    When([1, "Exchange for Prize"])
+      Script(["goods = []"])
+      ScriptMore(["goods.push [500, :I, 5]"])
+      ScriptMore(["goods.push [750, :I, 12]"])
+      ScriptMore(["goods.push [1000, :A, 264]"])
+      ScriptMore(["goods.push [1000, :A, 168]"])
+      ScriptMore(["goods.push [1500, :A, 1734]"])
+      ScriptMore(["goods.push [1500, :A, 1736]"])
+      ScriptMore(["goods.push [5000, :W, 128]"])
+      ScriptMore(["goods.push [7500, :A, 10]"])
+      ScriptMore(["goods.push [8000, :A, 1724]"])
+      ScriptMore(["goods.push [10000, :A, 1691]"])
+      ScriptMore(["call_casino_prize(goods)"])
+      Empty([])
+
+    When([2, "Nothing"])
+      Empty([])
+
+    ChoicesEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 132
+Name = "EV132"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Clerk in Charge>Welcome. This casino uses the world's universal coins."])
+    Empty([])
+
+CommonEvent 134
+Name = "EV134"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dealer>When customers cheat, they are made to work off the trouble they caused, so be warned."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["57"])
+    ShowTextAttributes(["inp_fc3", 0, 0, 2])
+    ShowText(["\\n<Rumi>It's not cheating if they don't find out..."])
+    ExitEventProcessing([])
+    Label(["58"])
+    ShowTextAttributes(["inp_fc2", 2, 0, 2])
+    ShowText(["\\n<Remi>*tremble**shiver*..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 135
+Name = "EV135"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Gruff Man>Ghaa! AAAaaa?!"])
+    Empty([])
+
+CommonEvent 139
+Name = "EV139"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Gruff Man>Life is a gamble!"])
+    Empty([])
+
+CommonEvent 140
+Name = "EV140"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Nun>O' Goddess... please make next the one red..."])
+    Empty([])
+
+CommonEvent 141
+Name = "EV141"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Strong Man>Why is it always... ALWAYS..."])
+    Empty([])
+
+CommonEvent 142
+Name = "EV142"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Merchant>HOAAAaaa?!"])
+    Empty([])
+
+CommonEvent 143
+Name = "EV143"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Woman>I'm... getting fired up!"])
+    Empty([])
+
+CommonEvent 145
+Name = "EV145"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Man>This is... Luck's on my side! Now is the time to attack!!"])
+    Empty([])
+
+CommonEvent 146
+Name = "EV146"
+
+  Page 0
+    ConditionalBranch([6, -1, 8])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is a 5 Coins slot machine. Would you like to use it?"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        PlayBGM(["RPG::BGM(@name=\"casino2\", @volume=100, @pitch=100)"])
+        Script(["call_slot_scene(5)"])
+        PlayBGM(["RPG::BGM(@name=\"casino\", @volume=100, @pitch=100)"])
+        Empty([])
+      When([1, "No"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 158
+Name = "EV158"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Man>OHHH... It's heeere!"])
+    Empty([])
+
+CommonEvent 160
+Name = "EV160"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Gruff Man>What the hell, I'm not getting any! Is it broken?!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["128"])
+    ShowTextAttributes(["kaniloid_fc1", 0, 0, 2])
+    ShowText(["\\n<Jillian>It's your head that's broken..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 161
+Name = "EV161"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dealer>There are violent customers who hit the slot machines, but... those machines are more important than the customers' lives."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Dealer>The customers who damage slot machines are taken into our custody. Please keep that in mind."])
+    Empty([])
+
+CommonEvent 162
+Name = "EV162"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Nun>My life... is being sucked out..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["123"])
+    ShowTextAttributes(["sisccubus_fc1", 2, 0, 2])
+    ShowText(["\\n<Christie>I'm not dabbling in gambling. It's plain as a day I'd end up like she did..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 163
+Name = "EV163"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Maid>Once you pop... you can't stop..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["76"])
+    ShowTextAttributes(["syuree_fc1", 1, 0, 2])
+    ShowText(["\\n<Sully>...Pringles?"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 164
+Name = "EV164"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Man>Niiice... That's what I call a gambling thrill!"])
+    Empty([])
+
+CommonEvent 166
+Name = "EV166"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thief>Well, don't get too fired up. It's just some relaxation in the middle of a journey."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["111"])
+      ShowTextAttributes(["suika_fc1", 0, 0, 2])
+      ShowText(["\\n<Melon>You can relax while eating a watermelon♪"])
+      ExitEventProcessing([])
+      Label(["121"])
+      ShowTextAttributes(["page65537_fc1", 2, 0, 2])
+      ShowText(["\\n<Cornelia>No, this is a serious match."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thief>When I'm having such a good time here, I can forget all about what's happening in the outside world..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 167
+Name = "EV167"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Thief>If you have a Gambler in your party, gambling will go in your favor. Maybe I should change my job..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["540"])
+    ShowTextAttributes(["amira_fc1", 0, 0, 2])
+    ShowText(["\\n<Amira>We should hurry to Ilias Temple as well!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 168
+Name = "EV168"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Rich Man>Really, casinos are the best. Whenever I'm here, I feel so alive..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["121"])
+      ShowTextAttributes(["page65537_fc1", 1, 0, 2])
+      ShowText(["\\n<Cornelia>Yes, I can't get enough of it..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Rich Man>Casinos truly are the best. This is where I come to forget all of my worries."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 169
+Name = "EV169"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Rich Woman>Rather than gamble, I prefer to watch how those men ruin themselves. Just by being here, I can see how various lives play out..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["96"])
+    ShowTextAttributes(["delh_b_fc1", 0, 0, 2])
+    ShowText(["\\n<Marion>That's wonderful... Indeed, watching humans fall is truly joyous."])
+    ExitEventProcessing([])
+    Empty([])

@@ -1,0 +1,169 @@
+Display Name = "Château des Romances"
+Parallax Name = "StarlitSky"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([1, 1228, 0, 0, 0])
+      ControlVariables([1228, 1228, 0, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 922, 50, 116, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([1, 1228, 0, 0, 0])
+      ControlVariables([1228, 1228, 0, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 922, 50, 116, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ConditionalBranch([1, 1228, 0, 0, 0])
+      ControlVariables([1228, 1228, 0, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 922, 50, 116, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([1, 1216, 0, 1, 1])
+      ControlSwitches([100, 100, 1])
+      PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 21, 61, 3, 2, 1])
+      Empty([])
+
+    Else([])
+      ControlSwitches([100, 100, 1])
+      PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 2, 328, 187, 2, 1])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    FadeinScreen([])
+    Wait([60])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>I know it's broken inside, but...\nDon't the floors and walls look rather strange?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>This is spatial erosion...\nThe gate must be affecting it."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Spatial erosion is occurring...\nPerhaps the gate is influencing this."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["kazuya_fc2", 2, 0, 2])
+    ShowText(["\\n<Kazuya>But that would mean the Land of Night is eroding the Demonic Castle itself..."])
+    ControlSwitches([31, 31, 0])
+    SetMoveRoute([6, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ShowPicture([5, "80_syesta_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It was from the moment we set foot in the Demonic Castle that it had transformed into a different space. Right in front of us, a bizarre entity stood in our way..."])
+    ShowTextAttributes(["syesta_fc1", 0, 0, 2])
+    ShowText(["\\n<Shesta>Specified world reaction detected...\nCommencing spatial disintegration process..."])
+    ShowTextAttributes(["magatu_fc1", 3, 0, 2])
+    ShowText(["\\n<Magatsu>What the hell is this monster? It gives me the chills..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>No way...an Apoptosis?!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>Why are the Apoptosis appearing here...?\nIn any case, we have to take them out!!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>Why are the Apoptosis manifesting here...?\nAt any rate, we must exterminate them!!"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    BattleProcessing([0, 1403, false, false])
+    ControlSwitches([31, 31, 1])
+    ControlVariables([1212, 1212, 0, 0, 1])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>What's going on...\nWhy are the Apoptosis here?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>What in the world are the Apoptosis doing here?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["\\n<Promestein>If you think of the castle itself as a widescale act of space-time interference... It would make sense for the coping system to activate."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["In any case, it would seem the Demonic Castle has been infested with the Apoptosis. Hopefully they won't prove to be an obstacle to our advance..."])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>Those monsters really gave me the creeps...\nAre those things common in this world...?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>They're not common, but...\nIt would seem they've been appearing more frequently lately."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>They shouldn't be common, but...\nAlas, they seem to have appeared in many places recently."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Even so, we can't let them scare us.\nCome on, let's head inside!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Our objective is the magical supply room where the White Rabbit is sleeping. If we can wake up the White Rabbit and destroy the gate, we win."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But our enemies aren't likely to just quietly watch us.\nNightmares, alliance members, and even Apoptosis will be getting in our way."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Furthermore, there will inevitably be a decisive battle with the Queen of Dreams. This will be a massive wall to overcome, but if we don't win here, there won't be any future."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])

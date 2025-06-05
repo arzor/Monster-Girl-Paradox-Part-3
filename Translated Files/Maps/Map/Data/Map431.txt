@@ -1,0 +1,299 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([39, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 4"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([2520, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["お前達を、知っている……"])
+    ShowText(["あの時の、我等が友人ではないか。"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["我等は今、この洞窟に移り住んでいる。"])
+    ShowText(["あの人間達と争いたくはないから、身を引いたのだ。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["我々の生存可能環境は、人間より格段に幅広い。"])
+    ShowText(["この洞窟でも、生きていくだけならば問題はない。"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["……とはいえ、日光の下で暮らしたい願望はあるが。"])
+    ShowText(["そのために争うような事はしたくない。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 430, 12, 9, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 430, 13, 9, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["店の売り物は洞窟に運び込んでおいた。"])
+    ShowText(["秘石の加工も出来るぞ……"])
+    ShowChoices([["買い物をする", "秘石を加工する", "やめる"], 3])
+    When([0, "買い物をする"])
+      ShopProcessing([0, 917, 0, 0, false])
+      ShopItem([0, 918, 0, 0])
+      ShopItem([1, 817, 0, 0])
+      ShopItem([1, 915, 0, 0])
+      ShopItem([2, 389, 0, 0])
+      ShopItem([2, 390, 0, 0])
+      ShopItem([2, 1527, 0, 0])
+      ShopItem([2, 1531, 0, 0])
+      ShopItem([0, 4250, 0, 0])
+      ShopItem([0, 4260, 0, 0])
+      ShopItem([0, 2141, 0, 0])
+      ShopItem([0, 2159, 0, 0])
+      ShopItem([0, 3115, 0, 0])
+      ShopItem([0, 2160, 0, 0])
+      Empty([])
+
+    When([1, "秘石を加工する"])
+      Script(["call_synthesize(73)"])
+      Empty([])
+
+    When([2, "やめる"])
+      Empty([])
+
+    ChoicesEnd([])
+    CallCommonEvent([290])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["世界合一後も、我々の村は全く変わらなかったが……"])
+    ShowText(["それから一ヶ月ほど経って、村に人間の移民団が現れた。"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["我等はこの洞窟でも生きていけるが、人間はそうもいくまい。"])
+    ShowText(["ゆえに我等は村を引き払い、ここで暮らす事としたのだ。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["人間達が、我等の存在に怯えている……？"])
+    ShowText(["それは困った事だ、我等にまったく敵意はない。"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["だがこちらは、レプリカント一体で村を殲滅できる力がある。"])
+    ShowText(["人間達が我等を脅威に思うのは、実に合理的だ。"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["敵意のない事を伝えたいが……"])
+    ShowText(["我等が村に姿を現すだけでも、騒動になる可能性は高いな。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ControlSwitches([5527, 5527, 0])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 792, 29, 56, 8, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["元より、我々が普通に生きられるとは思っていない。"])
+    ShowText(["廃棄処分から免れただけ、幸せなのだ……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["我々とて、人間が怖い。"])
+    ShowText(["単体の力はこちらが上でも、ヒトには卓越した社会性がある。"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["人間の高度な社会性は、どの魔物をも上回る。"])
+    ShowText(["その計り知れない強さに、こちらから挑む気はない。"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["向こうから、我等の生存を脅かそうというなら……"])
+    ShowText(["話は別だが。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["素直に村を明け渡す事に、私は反対だった。"])
+    ShowText(["自衛のために、戦うべきだった……"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["だが、全体の決定に逆らう気はない。"])
+    ShowText(["今さら村を取り返すつもりはない……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([1, 1308, 0, 12, 2])
+      ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+      ShowText(["【レプリカント】"])
+      ShowText(["この奥は、奇妙な研究所に通じている。"])
+      ShowText(["だが様子がおかしい、注意する事だ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1308, 0, 13, 1])
+      ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+      ShowText(["【レプリカント】"])
+      ShowText(["この奥は、奇妙な研究所に通じている。"])
+      ShowText(["中で魔物がうろついているが、外部に出る気はないようだな。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["子供達も、元気にしている。"])
+    ShowText(["相変わらず臆病だがな……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 3"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([910, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

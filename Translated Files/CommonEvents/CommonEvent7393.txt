@@ -1,0 +1,46 @@
+CommonEvent 7393
+Name = "Phoephe: Defeat"
+
+  999([7363])
+  CallCommonEvent([7000])
+  ShowPicture([5, "80_mob_murabito5_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+  ErasePicture([6])
+  ShowTextAttributes(["mob_murabito5_fc1", 0, 0, 2])
+  ShowText(["\\n<Phoephe>It's my win... finally, I can use the bath as much as I please...!"])
+  ConditionalBranch([0, 443, 1])
+    ChangeGold([1, 0, 3000])
+    Empty([])
+
+  BranchEnd([])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["Luka hands over 3000G!"])
+  ShowTextAttributes(["mob_murabito5_fc1", 0, 0, 2])
+  ShowText(["\\n<Phoephe>Let's battle fuck again... the more I win, the easier my life gets..."])
+  ErasePicture([5])
+  ConditionalBranch([0, 443, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([0, 2331, 1])
+    ChangeMapDisplay([1])
+    ConditionalBranch([1, 1143, 0, 9, 2])
+      ControlVariables([57, 57, 0, 0, 1537])
+      TransferPlayer([0, 537, 40, 15, 2, 0])
+      PlayBGM(["RPG::BGM(@name=\"mura3\", @volume=100, @pitch=100)"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 10, 1])
+      ControlVariables([57, 57, 0, 0, 1865])
+      TransferPlayer([0, 865, 11, 38, 6, 0])
+      PlayBGM(["RPG::BGM(@name=\"yamatai_makai\", @volume=100, @pitch=100)"])
+      Empty([])
+
+    BranchEnd([])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+  BranchEnd([])
+  ExitEventProcessing([])
+  Empty([])

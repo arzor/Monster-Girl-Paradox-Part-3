@@ -1,0 +1,30 @@
+CommonEvent 26
+Name = "Skill: Provoke"
+
+  999([27])
+  ConditionalBranch([0, 41, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["You didn't receive any response!"])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 104, 0, 2112, 0])
+    ControlVariables([51, 51, 0, 1, 101])
+    Script(["change_friend(-10)"])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 104, 0, 2113, 0])
+    ControlVariables([51, 51, 0, 1, 101])
+    Script(["change_friend(-40)"])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 104, 0, 9434, 0])
+    ControlVariables([51, 51, 0, 1, 101])
+    Script(["change_friend(-100)"])
+    Empty([])
+
+  BranchEnd([])
+  Empty([])

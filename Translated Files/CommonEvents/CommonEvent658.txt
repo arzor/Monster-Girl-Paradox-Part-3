@@ -1,0 +1,25 @@
+CommonEvent 658
+Name = "イベント：プリエステス"
+
+  999([658])
+  ControlSwitches([73, 73, 0])
+  ConditionalBranch([0, 437, 0])
+    ShowTextAttributes(["a_emp_fc1", 0, 0, 2])
+    ShowText(["\\n<Priestess>I don't want to go back to the village..."])
+    ShowText([""])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ShowTextAttributes(["a_emp_fc1", 1, 0, 2])
+  ShowText(["\\n<Priestess>Plant this miraculous seed inside your body..."])
+  ShowText([""])
+  ControlSwitches([437, 437, 0])
+  PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["A mysterious power was given from Priestess!\nThe power of plant skills is doubled until the next boss floor!"])
+  ShowText([""])
+  ControlSwitches([73, 73, 1])
+  ExitEventProcessing([])
+  Empty([])

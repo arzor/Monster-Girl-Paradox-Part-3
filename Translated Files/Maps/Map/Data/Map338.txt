@@ -1,0 +1,2033 @@
+Display Name = "ゲシュタルト・ハイブマインド 第2層"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 10, 29, 2, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 22, 33, 2, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 38, 5, 2, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 50, 11, 2, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 45, 32, 2, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 337, 51, 57, 2, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 339, 18, 50, 2, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 339, 37, 58, 2, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 339, 59, 41, 2, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 339, 45, 41, 2, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 339, 18, 27, 2, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"boss0\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_queenbee_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["queenbee_fc1", 0, 0, 2])
+    ShowText(["【クィーン・ビー】"])
+    ShowText(["この世界の幼年期は終わる……"])
+    ShowText(["ゲシュタルト・ハイブマインドこそ、究極の進化だ。"])
+    ShowTextAttributes(["kanon_fc1", 0, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["わぁ、甘くて美味しそ～♪"])
+    ShowText(["でも、食べちゃダメなんだよね……"])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ダメだ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ダメだ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ダメだ。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["クィーンビー……正気に戻ってもらう！"])
+    ConditionalBranch([4, 244, 0])
+      ShowTextAttributes(["suzumebati_fc1", 0, 0, 2])
+      ShowText(["【ビー】"])
+      ShowText(["女王様、助ケル！"])
+      ShowText(["助ケルタメニ、女王様、殴ル！"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss1\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 2086, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    PlayME(["RPG::ME(@name=\"mon_fanfale3\", @pitch=100, @volume=100)"])
+    PlayBGM(["RPG::BGM(@name=\"singun\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_queenbee_st03", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["クィーン・ビーの精神をハイブマインドから切り離した！"])
+    Wait([60])
+    ShowTextAttributes(["queenbee_fc1", 2, 0, 2])
+    ShowText(["【クィーン・ビー】"])
+    ShowText(["うっ、妾は……"])
+    ShowText(["気味の悪い精神体に取り込まれていたか……"])
+    ShowPicture([5, "80_queenbee_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ConditionalBranch([4, 244, 0])
+      ShowTextAttributes(["suzumebati_fc1", 0, 0, 2])
+      ShowText(["【ビー】"])
+      ShowText(["女王様！　女王様！"])
+      ShowTextAttributes(["queenbee_fc1", 0, 0, 2])
+      ShowText(["【クィーン・ビー】"])
+      ShowText(["おお、お主は無事だったが……"])
+      ShowText(["だが、奴の手駒となった我が娘達も多い。"])
+      ShowTextAttributes(["queenbee_fc1", 0, 0, 2])
+      ShowText(["【クィーン・ビー】"])
+      ShowText(["我が娘達全員、解放してやらねばならん。"])
+      ShowText(["お前達と一緒に戦おうぞ……"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["queenbee_fc1", 0, 0, 2])
+      ShowText(["【クィーン・ビー】"])
+      ShowText(["我が娘達も、解放してやらねばならん。"])
+      ShowText(["お前達と一緒に戦おうぞ……"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    Script(["add_actor_ex(245)"])
+    Script(["level_adjust(245,118)"])
+    ScriptMore(["set_class_level(245, 24, 10, false, false)"])
+    ScriptMore(["set_class_level(245, 25, 10, false, false)"])
+    ScriptMore(["set_class_level(245, 26, 10, false, false)"])
+    ScriptMore(["set_class_level(245, 27, 10, false, false)"])
+    ScriptMore(["set_class_level(245, 135, 10, false, false)"])
+    ScriptMore(["set_class_level(245, 310, 10, false, false)"])
+    ScriptMore(["set_class_level(245, 311, 10, false, false)"])
+    ScriptMore(["set_class_level(245, 313, 10, false, false)"])
+    ScriptMore(["set_class_level(245, 314, 10, false, false)"])
+    Script(["set_class_level(245, 315, 10, false, false)"])
+    ScriptMore(["set_class_level(245, 317, 10, false, false)"])
+    ScriptMore(["set_class_level(245, 318, 20, false, false)"])
+    ScriptMore(["set_class_level(245, 7000, 10, false, false)"])
+    ScriptMore(["set_class_level(245, 7016, 15, false, false)"])
+    ScriptMore(["set_class_level(245, 7056, 15, false, false)"])
+    RecoverAll([0, 245])
+    PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["蜜璃亜が仲間に加わった！"])
+    Wait([60])
+    ControlSwitches([3063, 3063, 0])
+    ControlVariables([11, 11, 0, 0, 1])
+    CallCommonEvent([9031])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["大物には大物で対抗よ！"])
+    ShowTextAttributes(["gigadryad_fc1", 0, 0, 2])
+    ShowText(["【ギガドライアド】"])
+    ShowText(["どーん……どっかーん……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["大物には大物で対抗よ！"])
+    ShowTextAttributes(["gigadryad_fc1", 0, 0, 2])
+    ShowText(["【ギガドライアド】"])
+    ShowText(["どーん……どっかーん……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["大物には大物で対抗よ！"])
+    ShowTextAttributes(["gigadryad_fc1", 0, 0, 2])
+    ShowText(["【ギガドライアド】"])
+    ShowText(["どーん……どっかーん……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["大物には大物で対抗よ！"])
+    ShowTextAttributes(["gigadryad_fc1", 0, 0, 2])
+    ShowText(["【ギガドライアド】"])
+    ShowText(["どーん……どっかーん……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["大物には大物で対抗よ！"])
+    ShowTextAttributes(["gigadryad_fc1", 0, 0, 2])
+    ShowText(["【ギガドライアド】"])
+    ShowText(["どーん……どっかーん……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["大物には大物で対抗よ！"])
+    ShowTextAttributes(["gigadryad_fc1", 0, 0, 2])
+    ShowText(["【ギガドライアド】"])
+    ShowText(["どーん……どっかーん……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["大物には大物で対抗よ！"])
+    ShowTextAttributes(["gigadryad_fc1", 0, 0, 2])
+    ShowText(["【ギガドライアド】"])
+    ShowText(["どーん……どっかーん……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["大物には大物で対抗よ！"])
+    ShowTextAttributes(["gigadryad_fc1", 0, 0, 2])
+    ShowText(["【ギガドライアド】"])
+    ShowText(["どーん……どっかーん……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、コックローチ娘を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 2, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["しばらく胸焼けしそう……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、コックローチ娘を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 2, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["しばらく胸焼けしそう……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["ちょっと出過ぎたわね……"])
+    ShowTextAttributes(["nependeath_fc1", 2, 0, 2])
+    ShowText(["【ネペンデス】"])
+    ShowText(["回復と強化の魔術を受けているとはいえ、過信は禁物。"])
+    ShowText(["ここらで後続の部隊を待ちましょう。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["ちょっと出過ぎたわね……"])
+    ShowTextAttributes(["nependeath_fc1", 2, 0, 2])
+    ShowText(["【ネペンデス】"])
+    ShowText(["回復と強化の魔術を受けているとはいえ、過信は禁物。"])
+    ShowText(["ここらで後続の部隊を待ちましょう。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["ちょっと出過ぎたわね……"])
+    ShowTextAttributes(["nependeath_fc1", 2, 0, 2])
+    ShowText(["【ネペンデス】"])
+    ShowText(["回復と強化の魔術を受けているとはいえ、過信は禁物。"])
+    ShowText(["ここらで後続の部隊を待ちましょう。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["ちょっと出過ぎたわね……"])
+    ShowTextAttributes(["nependeath_fc1", 2, 0, 2])
+    ShowText(["【ネペンデス】"])
+    ShowText(["回復と強化の魔術を受けているとはいえ、過信は禁物。"])
+    ShowText(["ここらで後続の部隊を待ちましょう。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["ちょっと出過ぎたわね……"])
+    ShowTextAttributes(["nependeath_fc1", 2, 0, 2])
+    ShowText(["【ネペンデス】"])
+    ShowText(["回復と強化の魔術を受けているとはいえ、過信は禁物。"])
+    ShowText(["ここらで後続の部隊を待ちましょう。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["ちょっと出過ぎたわね……"])
+    ShowTextAttributes(["nependeath_fc1", 2, 0, 2])
+    ShowText(["【ネペンデス】"])
+    ShowText(["回復と強化の魔術を受けているとはいえ、過信は禁物。"])
+    ShowText(["ここらで後続の部隊を待ちましょう。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["ちょっと出過ぎたわね……"])
+    ShowTextAttributes(["nependeath_fc1", 2, 0, 2])
+    ShowText(["【ネペンデス】"])
+    ShowText(["回復と強化の魔術を受けているとはいえ、過信は禁物。"])
+    ShowText(["ここらで後続の部隊を待ちましょう。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、アリ娘を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 1, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["アリンコ、甘くておいし～い♪"])
+    ShowText(["一匹くらい、食べちゃっても良くない？"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、アリ娘を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 1, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["アリンコ、甘くておいし～い♪"])
+    ShowText(["一匹くらい、食べちゃっても良くない？"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、アリ娘を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 1, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["アリンコ、甘くておいし～い♪"])
+    ShowText(["一匹くらい、食べちゃっても良くない？"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、アリ娘を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 1, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["アリンコ、甘くておいし～い♪"])
+    ShowText(["一匹くらい、食べちゃっても良くない？"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、アリ娘を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 1, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["アリンコ、甘くておいし～い♪"])
+    ShowText(["一匹くらい、食べちゃっても良くない？"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、アリ娘を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 1, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["アリンコ、甘くておいし～い♪"])
+    ShowText(["一匹くらい、食べちゃっても良くない？"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ConditionalBranch([0, 3063, 1])
+      ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王は間近よ！"])
+      ShowText(["あなた達は、女王をお願い！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3063, 0])
+      ShowTextAttributes(["vellraune_fc1", 1, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王を倒したのね！"])
+      ShowText(["残党の始末は、私達に任せて！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ConditionalBranch([0, 3063, 1])
+      ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王は間近よ！"])
+      ShowText(["あなた達は、女王をお願い！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3063, 0])
+      ShowTextAttributes(["vellraune_fc1", 1, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王を倒したのね！"])
+      ShowText(["残党の始末は、私達に任せて！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    ConditionalBranch([0, 3063, 1])
+      ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王は間近よ！"])
+      ShowText(["あなた達は、女王をお願い！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3063, 0])
+      ShowTextAttributes(["vellraune_fc1", 1, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王を倒したのね！"])
+      ShowText(["残党の始末は、私達に任せて！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    ConditionalBranch([0, 3063, 1])
+      ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王は間近よ！"])
+      ShowText(["あなた達は、女王をお願い！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3063, 0])
+      ShowTextAttributes(["vellraune_fc1", 1, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王を倒したのね！"])
+      ShowText(["残党の始末は、私達に任せて！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    ConditionalBranch([0, 3063, 1])
+      ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王は間近よ！"])
+      ShowText(["あなた達は、女王をお願い！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3063, 0])
+      ShowTextAttributes(["vellraune_fc1", 1, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王を倒したのね！"])
+      ShowText(["残党の始末は、私達に任せて！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    ConditionalBranch([0, 3063, 1])
+      ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王は間近よ！"])
+      ShowText(["あなた達は、女王をお願い！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3063, 0])
+      ShowTextAttributes(["vellraune_fc1", 1, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王を倒したのね！"])
+      ShowText(["残党の始末は、私達に任せて！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    ConditionalBranch([0, 3063, 1])
+      ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王は間近よ！"])
+      ShowText(["あなた達は、女王をお願い！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3063, 0])
+      ShowTextAttributes(["vellraune_fc1", 1, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王を倒したのね！"])
+      ShowText(["残党の始末は、私達に任せて！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ConditionalBranch([0, 3063, 1])
+      ShowTextAttributes(["vellraune_fc1", 0, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王は間近よ！"])
+      ShowText(["あなた達は、女王をお願い！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3063, 0])
+      ShowTextAttributes(["vellraune_fc1", 1, 0, 2])
+      ShowText(["【ヴェルラウネ】"])
+      ShowText(["スズメバチの女王を倒したのね！"])
+      ShowText(["残党の始末は、私達に任せて！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、スズメバチ娘達を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 0, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["あははっ、そこでとろけてなさい！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、スズメバチ娘達を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 0, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["あははっ、そこでとろけてなさい！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、スズメバチ娘達を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 0, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["あははっ、そこでとろけてなさい！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、スズメバチ娘達を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 0, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["あははっ、そこでとろけてなさい！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["こいつら、時魔法使ってくるわよ！"])
+    ShowText(["注意して！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["こいつら、時魔法使ってくるわよ！"])
+    ShowText(["注意して！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["こいつら、時魔法使ってくるわよ！"])
+    ShowText(["注意して！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["こいつら、時魔法使ってくるわよ！"])
+    ShowText(["注意して！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 2, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["なんと醜悪な……"])
+    ShowText(["私の前から消えなさい……！"])
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["ゴキブリ、気持ち悪いなぁ……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 2, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["なんと醜悪な……"])
+    ShowText(["私の前から消えなさい……！"])
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["ゴキブリ、気持ち悪いなぁ……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 2, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["なんと醜悪な……"])
+    ShowText(["私の前から消えなさい……！"])
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["ゴキブリ、気持ち悪いなぁ……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 2, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["なんと醜悪な……"])
+    ShowText(["私の前から消えなさい……！"])
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["ゴキブリ、気持ち悪いなぁ……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 57
+Name = "EV057"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 2, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["なんと醜悪な……"])
+    ShowText(["私の前から消えなさい……！"])
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["ゴキブリ、気持ち悪いなぁ……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 58
+Name = "EV058"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 2, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["なんと醜悪な……"])
+    ShowText(["私の前から消えなさい……！"])
+    ShowTextAttributes(["vellraune_fc1", 2, 0, 2])
+    ShowText(["【ヴェルラウネ】"])
+    ShowText(["ゴキブリ、気持ち悪いなぁ……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 59
+Name = "EV059"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、コックローチ娘達を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 2, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["ゴキブリのウツボカズラ漬け……"])
+    ShowText(["味わいは、最悪ね。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 60
+Name = "EV060"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、コックローチ娘達を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 2, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["ゴキブリのウツボカズラ漬け……"])
+    ShowText(["味わいは、最悪ね。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 61
+Name = "EV061"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、コックローチ娘達を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 2, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["ゴキブリのウツボカズラ漬け……"])
+    ShowText(["味わいは、最悪ね。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 62
+Name = "EV062"
+
+  Page 0
+    ShowTextAttributes(["nependeath_fc1", 0, 0, 2])
+    ShowText(["【ネペンデス】"])
+    ShowText(["包囲陣を崩してはなりませんよ……"])
+    ShowText(["じわじわと追い込むのです。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 63
+Name = "EV063"
+
+  Page 0
+    ShowTextAttributes(["nependeath_fc1", 0, 0, 2])
+    ShowText(["【ネペンデス】"])
+    ShowText(["包囲陣を崩してはなりませんよ……"])
+    ShowText(["じわじわと追い込むのです。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 64
+Name = "EV064"
+
+  Page 0
+    ShowTextAttributes(["nependeath_fc1", 0, 0, 2])
+    ShowText(["【ネペンデス】"])
+    ShowText(["包囲陣を崩してはなりませんよ……"])
+    ShowText(["じわじわと追い込むのです。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 65
+Name = "EV065"
+
+  Page 0
+    ShowTextAttributes(["nependeath_fc1", 0, 0, 2])
+    ShowText(["【ネペンデス】"])
+    ShowText(["包囲陣を崩してはなりませんよ……"])
+    ShowText(["じわじわと追い込むのです。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 66
+Name = "EV066"
+
+  Page 0
+    ShowTextAttributes(["nependeath_fc1", 0, 0, 2])
+    ShowText(["【ネペンデス】"])
+    ShowText(["包囲陣を崩してはなりませんよ……"])
+    ShowText(["じわじわと追い込むのです。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 67
+Name = "EV067"
+
+  Page 0
+    ShowTextAttributes(["nependeath_fc1", 0, 0, 2])
+    ShowText(["【ネペンデス】"])
+    ShowText(["包囲陣を崩してはなりませんよ……"])
+    ShowText(["じわじわと追い込むのです。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 68
+Name = "EV068"
+
+  Page 0
+    ShowTextAttributes(["nependeath_fc1", 0, 0, 2])
+    ShowText(["【ネペンデス】"])
+    ShowText(["包囲陣を崩してはなりませんよ……"])
+    ShowText(["じわじわと追い込むのです。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 69
+Name = "EV069"
+
+  Page 0
+    ShowTextAttributes(["nependeath_fc1", 0, 0, 2])
+    ShowText(["【ネペンデス】"])
+    ShowText(["包囲陣を崩してはなりませんよ……"])
+    ShowText(["じわじわと追い込むのです。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 70
+Name = "EV070"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 0, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["超音波部隊、一斉放射！"])
+    ShowTextAttributes(["mdg_fc1", 2, 0, 2])
+    ShowText(["【マンドラゴラ娘】"])
+    ShowText(["い　ゃ　ぁ　ぁ　ぁ　ぁ　ぁ　ぁ　！　！　！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 71
+Name = "EV071"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 0, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["超音波部隊、一斉放射！"])
+    ShowTextAttributes(["mdg_fc1", 2, 0, 2])
+    ShowText(["【マンドラゴラ娘】"])
+    ShowText(["い　ゃ　ぁ　ぁ　ぁ　ぁ　ぁ　ぁ　！　！　！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 72
+Name = "EV072"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 0, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["超音波部隊、一斉放射！"])
+    ShowTextAttributes(["mdg_fc1", 2, 0, 2])
+    ShowText(["【マンドラゴラ娘】"])
+    ShowText(["い　ゃ　ぁ　ぁ　ぁ　ぁ　ぁ　ぁ　！　！　！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 73
+Name = "EV073"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 0, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["超音波部隊、一斉放射！"])
+    ShowTextAttributes(["mdg_fc1", 2, 0, 2])
+    ShowText(["【マンドラゴラ娘】"])
+    ShowText(["い　ゃ　ぁ　ぁ　ぁ　ぁ　ぁ　ぁ　！　！　！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 74
+Name = "EV074"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 0, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["超音波部隊、一斉放射！"])
+    ShowTextAttributes(["mdg_fc1", 2, 0, 2])
+    ShowText(["【マンドラゴラ娘】"])
+    ShowText(["い　ゃ　ぁ　ぁ　ぁ　ぁ　ぁ　ぁ　！　！　！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 75
+Name = "EV075"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 0, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["超音波部隊、一斉放射！"])
+    ShowTextAttributes(["mdg_fc1", 2, 0, 2])
+    ShowText(["【マンドラゴラ娘】"])
+    ShowText(["い　ゃ　ぁ　ぁ　ぁ　ぁ　ぁ　ぁ　！　！　！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 76
+Name = "EV076"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 0, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["超音波部隊、一斉放射！"])
+    ShowTextAttributes(["mdg_fc1", 2, 0, 2])
+    ShowText(["【マンドラゴラ娘】"])
+    ShowText(["い　ゃ　ぁ　ぁ　ぁ　ぁ　ぁ　ぁ　！　！　！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 77
+Name = "EV077"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 78
+Name = "EV078"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 79
+Name = "EV079"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 80
+Name = "EV080"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 2, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["アリの女王は、この先ですわ。"])
+    ShowText(["ここは任せて、お先にどうぞ……！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 81
+Name = "EV081"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 2, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["アリの女王は、この先ですわ。"])
+    ShowText(["ここは任せて、お先にどうぞ……！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 82
+Name = "EV082"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 2, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["アリの女王は、この先ですわ。"])
+    ShowText(["ここは任せて、お先にどうぞ……！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 83
+Name = "EV083"
+
+  Page 0
+    ShowTextAttributes(["barakizoku_fc1", 2, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["アリの女王は、この先ですわ。"])
+    ShowText(["ここは任せて、お先にどうぞ……！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 84
+Name = "EV084"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["華音の操る食虫植物が、コックローチ娘達を貪っている！"])
+    ShowTextAttributes(["kanon_fc1", 2, 0, 2])
+    ShowText(["【華音】"])
+    ShowText(["ゴキブリのウツボカズラ漬け……"])
+    ShowText(["味わいは、最悪ね。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 85
+Name = "EV085"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([900, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 86
+Name = "EV086"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([854, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 87
+Name = "EV087"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 2"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([4458, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 88
+Name = "EV088"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([9, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 89
+Name = "EV089"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([47, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 90
+Name = "EV090"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([901, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 91
+Name = "EV091"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([902, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 92
+Name = "EV092"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([94, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 93
+Name = "EV093"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 2"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([3481, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 94
+Name = "EV094"
+
+  Page 0
+    PlayME(["RPG::ME(@name=\"lvup\", @pitch=100, @volume=100)"])
+    ShowPicture([5, "sys_oyakataf1b", 0, 0, 140, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_oyakata_st12-3", 0, 0, 140, 0, 100, 100, 0, 0])
+    ShowPicture([7, "sys_oyakataf1", 0, 0, 140, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 140, 0, 100, 100, 255, 0, 60, false])
+    MovePicture([6, nil, 0, 0, 140, 0, 100, 100, 255, 0, 60, false])
+    MovePicture([7, nil, 0, 0, 140, 0, 100, 100, 255, 0, 60, false])
+    Wait([30])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ハチにやられた親方を発見した！\\|\\|"])
+    Wait([30])
+    ShowTextAttributes(["randolph_fc12", 2, 0, 2])
+    ShowText(["【ハチにやられた親方】"])
+    ShowText(["ハチを捕まえようとして……失敗した……"])
+    ConditionalBranch([1, 1319, 0, 4, 2])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["これじゃツッコミが追いつかない……"])
+      ShowText(["パピがいてくれたらなぁ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1319, 0, 5, 1])
+      ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+      ShowText(["【パピ】"])
+      ShowText(["うわ、痛そうだな……"])
+      ShowText(["鍛冶場に戻って薬を塗るのだ。"])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSwitches([3169, 3169, 0])
+    ControlVariables([1354, 1354, 1, 0, 1])
+    ConditionalBranch([1, 1354, 0, 80, 0])
+      Script(["gain_medal(1524)"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ErasePicture([6])
+    ErasePicture([7])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["異世界の親方に事情を説明し、混沌の鍛冶場に送った――"])
+    ShowText(["（発見した親方の数：\\V[1354]人）"])
+    Wait([30])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 95
+Name = "EV095"
+
+  Page 0
+    ConditionalBranch([0, 3064, 1])
+      ShowTextAttributes(["barakizoku_fc1", 0, 0, 2])
+      ShowText(["【薔薇貴族】"])
+      ShowText(["そこに見える階段を降りて進めば、アリ娘の女王がいますわ。"])
+      ShowText(["そして……"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["barakizoku_fc1", 0, 0, 2])
+      ShowText(["【薔薇貴族】"])
+      ShowText(["そこに見える階段を降りて進めば、アリ娘の女王がいました。"])
+      ShowText(["でも、もう撃破済みですわね……"])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ConditionalBranch([0, 3066, 1])
+      ShowTextAttributes(["barakizoku_fc1", 0, 0, 2])
+      ShowText(["【薔薇貴族】"])
+      ShowText(["こちらの方面から北に進めばゴキブリ娘の元に辿り着けます。"])
+      ShowText(["どうか、ご武運を。"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["barakizoku_fc1", 0, 0, 2])
+      ShowText(["【薔薇貴族】"])
+      ShowText(["こちらの方面から北に進めばゴキブリ娘がいましたが……"])
+      ShowText(["すでに退治済みとは、流石ですわ。"])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 96
+Name = "EV096"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+    ControlSwitches([3435, 3435, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ワープクリスタルが起動した！"])
+    Wait([60])
+    CallCommonEvent([9107])
+    Empty([])
+
+  Page 1
+    CallCommonEvent([9107])
+    Empty([])
+
+CommonEvent 97
+Name = "EV097"
+
+  Page 0
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShowTextAttributes(["barakizoku_fc1", 2, 0, 2])
+    ShowText(["【薔薇貴族】"])
+    ShowText(["こちらへしばらく進めば、異常な磁場の地点に辿り着きます。"])
+    ShowText(["くれぐれも、お気を付け下さいませ……"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 98
+Name = "通行不可"
+
+  Page 0
+    Empty([])
+
+CommonEvent 99
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 100
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 101
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 102
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 103
+Name = "立ち入り禁止"
+
+  Page 0
+    Empty([])
+
+CommonEvent 104
+Name = "通行不可"
+
+  Page 0
+    Empty([])
+
+CommonEvent 105
+Name = "通行不可"
+
+  Page 0
+    Empty([])
+
+CommonEvent 106
+Name = "EV106"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["この狭い隙間を通り抜けた先には……宝箱です。"])
+    Empty([])
+
+CommonEvent 107
+Name = "EV107"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["この先、突き当たりに宝箱ですね……"])
+    Empty([])
+
+CommonEvent 108
+Name = "EV108"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["親方は、こちらにいますよ……"])
+    Empty([])
+
+CommonEvent 109
+Name = "EV109"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["貴重な宝箱を開けたければ、あと少し先に進みましょう。"])
+    Empty([])
+
+CommonEvent 110
+Name = "EV110"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["こちらに宝箱ですね。"])
+    Empty([])
+
+CommonEvent 111
+Name = "EV111"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["さあ、こちらです……"])
+    Empty([])
+
+CommonEvent 112
+Name = "EV112"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["このまま下に進みましょう……"])
+    Empty([])
+
+CommonEvent 113
+Name = "EV113"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["降りた先、蜘蛛之皇女がいます。"])
+    Empty([])
+
+CommonEvent 114
+Name = "EV114"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["右の階段を上がった先に、宝箱です。"])
+    Empty([])
+
+CommonEvent 115
+Name = "EV115"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["さあ、こちらです……"])
+    Empty([])
+
+CommonEvent 116
+Name = "EV116"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["こちら、クィーンアントの居場所に繋がっていますね。"])
+    Empty([])
+
+CommonEvent 117
+Name = "EV117"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["宝箱はこちらです……"])
+    Empty([])
+
+CommonEvent 118
+Name = "EV118"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["こちらにいるのは、クィーンローチですね。"])
+    Empty([])
+
+CommonEvent 119
+Name = "EV119"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["こちらに進めば、クィーンローチがいますよ。"])
+    Empty([])
+
+CommonEvent 120
+Name = "EV120"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["この下、宝箱がありますね。"])
+    Empty([])
+
+CommonEvent 121
+Name = "EV121"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["クィーンローチならば、上にまっすぐ進みましょう。"])
+    Empty([])
+
+CommonEvent 122
+Name = "EV122"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["この階段を降りた先に、ゴキブリの女王がいますよ。"])
+    Empty([])
+
+CommonEvent 123
+Name = "EV123"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["こちら、宝箱ですね。"])
+    Empty([])
+
+CommonEvent 124
+Name = "EV124"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["バラの言う通り、共有意識のコアはこちらです。"])
+    ShowText(["ですが、先に女王四匹を倒さねばなりませんよ。"])
+    Empty([])
+
+CommonEvent 125
+Name = "EV125"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["クィーンビーは、こちらです。"])
+    ShowText(["この先、上がったり下がったりしますが、一本道ですよ。"])
+    Empty([])
+
+CommonEvent 126
+Name = "EV126"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["宝箱が……見えてますよね。"])
+    Empty([])
+
+CommonEvent 127
+Name = "EV127"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["左に進み、道を降りた先に宝箱です。"])
+    Empty([])
+
+CommonEvent 128
+Name = "EV128"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["クィーンビーがいますね……"])
+    ShowText(["まあ、楽勝のはずです。"])
+    Empty([])
+
+CommonEvent 129
+Name = "EV129"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["右回りでも左回りでも、行き着く先は同じです。"])
+    ShowText(["ただし右回りだと、途中にモブがいますね。"])
+    Empty([])
+
+CommonEvent 130
+Name = "EV130"
+
+  Page 0
+    ConditionalBranch([0, 448, 1])
+      CallCommonEvent([9140])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc6", 0, 0, 2])
+    ShowText(["【ダンジョンの精】"])
+    ShowText(["この階段を降りましょう。"])
+    Empty([])

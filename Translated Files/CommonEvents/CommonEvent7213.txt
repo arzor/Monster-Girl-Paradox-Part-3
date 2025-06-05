@@ -1,0 +1,53 @@
+CommonEvent 7213
+Name = "ミリオ：敗北"
+
+  999([7213])
+  CallCommonEvent([7000])
+  ShowPicture([5, "80_mob_kaihei_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+  ErasePicture([6])
+  ShowTextAttributes(["mob_kaihei_fc1", 0, 0, 2])
+  ShowText(["\\n<Milio>It's my win♪\nI'll take the money now♪"])
+  ShowText([""])
+  ShowText([""])
+  ConditionalBranch([0, 443, 1])
+    ChangeGold([1, 0, 450])
+    Empty([])
+
+  BranchEnd([])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["Luka hands over 450G!"])
+  ShowTextAttributes(["mob_kaihei_fc1", 0, 0, 2])
+  ShowText(["\\n<Milio>Next time you want to orgasm...\n...I mean, next time you want to compete, come back♪"])
+  ShowText([""])
+  ShowText([""])
+  ConditionalBranch([0, 443, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([0, 2331, 1])
+    ErasePicture([5])
+    ConditionalBranch([1, 1143, 0, 9, 2])
+      ConditionalBranch([0, 2149, 0])
+        PlayBGM(["RPG::BGM(@name=\"kiki4\", @volume=100, @pitch=100)"])
+        Empty([])
+
+      Else([])
+        PlayBGM(["RPG::BGM(@name=\"dungeon_colosseum\", @volume=100, @pitch=100)"])
+        Empty([])
+
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 10, 1])
+      PlayBGM(["RPG::BGM(@name=\"dungeon_colosseum\", @volume=100, @pitch=100)"])
+      Empty([])
+
+    BranchEnd([])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+  BranchEnd([])
+  ExitEventProcessing([])
+  Empty([])

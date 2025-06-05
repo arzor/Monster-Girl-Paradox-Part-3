@@ -1,0 +1,609 @@
+Display Name = "Haunted Mansion Basement"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 343, 19, 17, 2, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 343, 19, 17, 2, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 343, 19, 17, 2, 0])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 343, 19, 17, 2, 0])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The party uses the healing circle..."])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+    RecoverAll([0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The party's HP and MP have been fully restored!"])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc1", 6, 0, 2])
+      ShowText(["\\n<Sonya>There's nowhere for you to run now!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>We have you cornered for sure this time!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([5, "80_chrom_st07", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+    ShowText(["\\n<Chrome>What's wrong with you people?! Who are you and why are you trespassing in my laboratory?!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>I was just about to ask that. Who are you, why are you here, and what do you mean by laboratory?"])
+    ShowPicture([5, "80_chrom_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+    ShowText(["\\n<Chrome>I am the great necromancer, Chrome!"])
+    ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+    ShowText(["\\n<Chrome>This mansion was formerly a graveyard, and even before that, it was an execution ground."])
+    ShowPicture([5, "80_chrom_st02", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["chrom_fc2", 1, 0, 2])
+    ShowText(["\\n<Chrome>This place is perfect for my research thanks to how common corpses are around here."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>Research? What could you possibly be researching?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Research? Research into what?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["chrom_fc2", 1, 0, 2])
+    ShowText(["\\n<Chrome>I already said I was a necromancer. Even idiots like you should be able to put two and two together."])
+    ConditionalBranch([4, 531, 0])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>Necromancy... how abhorrent."])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([5, "80_chrom_st03", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["chrom_fc2", 2, 0, 2])
+    ShowText(["\\n<Chrome>My partner here is Frederica. She died in this mansion from illness, and she is an exceptional corpse. I'm going to use her to make my masterpiece, the ultimate zombie!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["An execution ground, a graveyard, a girl who died of illness, and an evil mage. Every rumor was true!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>So that means, all those zombies in the mansion... They were your doing?!"])
+    ShowTextAttributes(["chrom_fc2", 2, 0, 2])
+    ShowText(["\\n<Chrome>The ghosts appeared here of their own accord, but the zombies are all my handiwork."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Hmph, profaning the dead is nothing to be proud of. I cannot overlook these kinds of actions."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>I cannot forgive such savage actions! Regret your sins as I turn you to ash!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["chrom_fc2", 2, 0, 2])
+    ShowText(["\\n<Chrome>Hmph, there's still more I need to research. Fortunately for me, I just received a new batch of volunteers!"])
+    ShowTextAttributes(["chrom_fc2", 2, 0, 2])
+    ShowText(["\\n<Chrome>Let's go, Frederica! We'll teach them the strength of my art!"])
+    ShowTextAttributes(["frederika_fc1", 0, 0, 2])
+    ShowText(["\\n<Frederica>I am Chrome's servant. I won't show mercy to Chrome's enemies."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>The dead aren't your playthings! Disturbing their rest and making them suffer is unforgivable!"])
+    ConditionalBranch([4, 41, 0])
+      ShowTextAttributes(["stein_fc2", 2, 0, 2])
+      ShowText(["\\n<Promestein>I don't see what's wrong with it. Either way, judging by the course of the conversation, we're fighting, right?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 129, 0])
+      ShowTextAttributes(["brunhild_fc1", 0, 0, 2])
+      ShowText(["\\n<Hild>Target confirmed, initiating combat protocols."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 134, 0])
+      ShowTextAttributes(["chrom_fc1", 6, 0, 2])
+      ShowText(["\\n<Chrome>What is tha- it's a doppelganger! It'll take my soul if I look at her!"])
+      ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+      ShowText(["\\n<Chrome'>No, we are the same person, just-"])
+      ShowTextAttributes(["chrom_fc1", 6, 0, 2])
+      ShowText(["\\n<Chrome>It's talking! It'll take my soul if I listen!"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss1\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 196, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_chrom_st41", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["chrom_fc1", 6, 0, 2])
+    ShowText(["\\n<Chrome>Nghhh ...to think Frederica and I would lose!"])
+    ConditionalBranch([4, 129, 0])
+      ShowTextAttributes(["brunhild_fc1", 0, 0, 2])
+      ShowText(["\\n<Hild>Target can no longer proceed with combat. Exiting combat mode."])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([5, "80_chrom_st08", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["chrom_fc2", 7, 0, 2])
+    ShowText(["\\n<Chrome>I need to restore the Artiste name and yet my clan's revival is..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Artiste, you said? Are you from the Artiste family?"])
+      ShowPicture([5, "80_chrom_st07", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+      ShowText(["\\n<Chrome>You've heard of us? Are you a high-ranking monster? You'd have to be to know about us."])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Despite my current appearance, I am the Monster Lord, Alipheese the 16th."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Alice explained that she is the Monster Lord..."])
+      ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+      ShowText(["\\n<Chrome>I can't believe it, but since you know of the Artiste household's plight, will you hel-"])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>No, I won't help. I hate ghosts, zombies, and those who profane the dead. No matter how perfect you think your zombie is, it won't help you restore your name."])
+      ShowPicture([5, "80_chrom_st41", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["chrom_fc1", 6, 0, 2])
+      ShowText(["\\n<Chrome>Eh...?!"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+        ShowText(["\\n<Sonya>With her fear of the supernatural, there's no way Alice would restore a necromancer's house."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Since the Monster Lord is terrified of ghosts, there's no way she would work with a necromancer."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["alice_fc5", 6, 0, 2])
+      ShowText(["\\n<Alice>I-I'm not scared!"])
+      ShowTextAttributes(["chrom_fc1", 6, 0, 2])
+      ShowText(["\\n<Chrome>N-no way... then my dream of making the ultimate zombie is..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Knowing that, would you stop making zombies?"])
+      ShowPicture([5, "80_chrom_st42", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["chrom_fc1", 5, 0, 2])
+      ShowText(["\\n<Chrome>If zombies are no good, then ghosts are clearly out of the question. From the three great magicrafts, that only leaves dollcraft."])
+      ShowTextAttributes(["alice_fc5", 1, 0, 2])
+      ShowText(["\\n<Alice>That should suffice. I'm not scared of dolls."])
+      ShowTextAttributes(["alice_fc5", 6, 0, 2])
+      ShowText(["\\n<Alice>W-wait! Th-that doesn't mean I'm scared of zombies or ghosts either!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>We shall end your abominable bloodline right here! Now, turn into ash!"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>Stop! We can't just kill her without giving her a chance to explain herself!"])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>W-wait! You can't just kill her!"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Well, I knew you and your idealism would force me to refrain."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Chrome, will you stop desecrating corpses? Necromancy brings nothing but pain to not only the corpses you raise, but to their families too."])
+      ShowPicture([5, "80_chrom_st07", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+      ShowText(["\\n<Chrome>...I lost, I can only do as the winner says. Even I have that much pride."])
+      ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+      ShowText(["\\n<Chrome>If zombies are no good, then ghosts are out of the question. Then from the three great magicrafts, that only leaves dollcraft."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I don't think there's a problem with that, so sure."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Mechanical dolls. There shouldn't be any problems with that, and since Chrome is going to stop her necromancy, the rumors will also fade from memory."])
+    ShowPicture([5, "80_chrom_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+    ShowText(["\\n<Chrome>The Artiste family are the world's best at the three great magicrafts. Dolls will be no problem for me!"])
+    ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+    ShowText(["\\n<Chrome>From here on out, I will no longer be the great necromancer Chrome, but instead I'll be the great puppetmaster Chrome!"])
+    ConditionalBranch([4, 531, 0])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>I'm glad you're reforming yourself. With this, the rumors surrounding this mansion will also disappear."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+    ShowText(["\\n<Chrome>However, please don't make me destroy Frederica. She's my greatest creati-no. She's my precious partner. I put my heart and soul into making her."])
+    ShowTextAttributes(["frederika_fc1", 0, 0, 2])
+    ShowText(["\\n<Frederica>I was given life again by Chrome. I wish to stay as Chrome's servant."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+      ShowText(["\\n<Sonya>Unless you start making zombies again, there shouldn't be any problems."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>There shouldn't be any problems as long as you don't bother the dead anymore."])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([5, "80_chrom_st03", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["chrom_fc2", 2, 0, 2])
+    ShowText(["\\n<Chrome>All right, then I can upgrade Frederica with everything other than necromancy... Oh! I'll install doll parts! I can even use that makina stuff that's so popular nowadays!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["...Did she change at all?"])
+    ErasePicture([5])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Either way, the rumors should fade away, Chrome gave up her zombie research, and peace will surely return to this mansion."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I think we've done all we can do. Now, let's continue our adventure!"])
+    ControlVariables([1023, 1023, 0, 0, 2])
+    Script(["gain_medal(22)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowPicture([5, "80_chrom_st07", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+      ShowText(["\\n<Chrome>Now, where did I put my dollcraft set? I thought I stored it in the 3rd floor attic."])
+      SetMoveRoute([17, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      ShowTextAttributes(["frederika_fc1", 0, 0, 2])
+      ShowText(["\\n<Frederica>Chrome, didn't you throw it away when we had the big house cleaning three years ago?"])
+      ShowPicture([5, "80_chrom_st41", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["chrom_fc1", 6, 0, 2])
+      ShowText(["\\n<Chrome>Damn! That was my only dollcraft set. Now I'll have to start all over."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Dollcraft is the most ethical out of the three great magicrafts, but unless I'm mistaken, it's the most expensive by a large margin."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["\\n<Ilias>Out of all the magicrafts, dollcraft is the most expensive. Even I know that much about abominable monster culture."])
+        Empty([])
+      BranchEnd([])
+      ShowPicture([5, "80_chrom_st07", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+      ShowText(["\\n<Chrome>I know. I focused on zombies because I had no money. Corpses are free and plentiful."])
+      ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+      ShowText(["\\n<Chrome>Even if I find some way to pay for the materials, the Magical Thread is another issue entirely."])
+      ShowPicture([5, "80_chrom_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>Hey, how about we help each other out? If you find some Magical Thread, let me have it. If you do, I'll help you out."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Help us out? Do you mean you'll join us?"])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>Yes. I can see that you are on some kind of adventure. Wouldn't having strong allies make it easier?"])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>Frederica and I are easily worth a hundred soldiers each. This is a pretty generous offer if I do say so myself."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Yeah, you certainly seem to be very capable."])
+      ConditionalBranch([4, 118, 0])
+        ShowTextAttributes(["meia_fc1", 2, 0, 2])
+        ShowText(["\\n<Meia>More allies are always welcome."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>I have no idea where can you find some Magical Thread, but it's definitely not in the Natalia region or on the Ilias continent."])
+      ConditionalBranch([4, 66, 0])
+        ShowTextAttributes(["vgirl_fc1", 2, 0, 2])
+        ShowText(["\\n<Vanilla>I haven't heard any rumors about Magical Thread. I still have a long ways to go as a merchant."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>In any case, if you happen to find yourself in a place connected to magicraft, you should look for some Magical Thread. Good luck then."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Got it. If we find some, we'll bring it to you."])
+      ErasePicture([5])
+      SetMoveRoute([17, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["If we find some Magical Thread during our adventure, then we can give it to Chrome in exchange for her and Frederica joining us. Let's make the trade if we find some."])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ConditionalBranch([8, 518])
+        ShowPicture([5, "80_chrom_st02", 0, 0, 0, 0, 100, 100, 0, 0])
+        MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+        ShowTextAttributes(["chrom_fc2", 1, 0, 2])
+        ShowText(["\\n<Chrome>H-hey, that's Magical Thread! Give it! Give it! Frederica and I will join you if you do!"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Give the Magical Thread to Chrome?"])
+        ShowChoices([["Yes", "No"], 2])
+        When([0, "Yes"])
+          ShowTextAttributes(["chrom_fc2", 1, 0, 2])
+          ShowText(["\\n<Chrome>Thanks! Now I can get to work mastering dollcraft! I'll help you out in my spare time, maybe..."])
+          ErasePicture([5])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(134)"])
+          ShowPicture([5, "80_frederika_st02", 0, 0, 0, 0, 100, 100, 0, 0])
+          MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+          ShowTextAttributes(["frederika_fc1", 0, 0, 2])
+          ShowText(["\\n<Frederica>I must go as well... I must stay with Chrome..."])
+          ErasePicture([5])
+          SetMoveRoute([17, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(135)"])
+          PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Chrome and Frederica joined the party!"])
+          ControlSwitches([2136, 2136, 0])
+          Wait([60])
+          ConditionalBranch([4, 66, 0])
+            ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+            ShowText(["\\n<Vanilla>So another who revels in the darkness joins the fold... kukuku, I welcome you."])
+            Empty([])
+          BranchEnd([])
+          ConditionalBranch([4, 79, 0])
+            ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+            ShowText(["\\n<Nuruko>Kyukyuu!"])
+            Empty([])
+          BranchEnd([])
+          ShowTextAttributes(["chrom_fc2", 1, 0, 2])
+          ShowText(["\\n<Chrome>By the way, my favorite food is pudding! Now, let's go!"])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "No"])
+          ShowPicture([5, "80_chrom_st41", 0, 0, 0, 0, 100, 100, 255, 0])
+          ShowTextAttributes(["chrom_fc1", 6, 0, 2])
+          ShowText(["\\n<Chrome>Whyyy?!"])
+          ErasePicture([5])
+          ExitEventProcessing([])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      Else([])
+        ShowPicture([5, "80_chrom_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+        MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+        ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+        ShowText(["\\n<Chrome>Remember, if you find some Magical Thread, then give it to me. Frederica and I will join you if you do."])
+        ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+        ShowText(["\\n<Chrome>I have no idea where can you find any, but there definitely isn't any in the Natalia region or on the Ilias continent."])
+        ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+        ShowText(["\\n<Chrome>In any case, if you happen to find yourself in a place connected to magicraft, you should look for some Magical Thread. Good luck then."])
+        ErasePicture([5])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["If we find some Magical Thread during our adventure, then we can give it to Chrome in exchange for her and Frederica joining us. Let's make the trade if we find some."])
+        ErasePicture([5])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["frederika_fc1", 0, 0, 2])
+    ShowText(["\\n<Frederica>I am Chrome's servant. I won't show mercy to Chrome's enemies."])
+    ConditionalBranch([4, 129, 0])
+      ShowTextAttributes(["brunhild_fc1", 0, 0, 2])
+      ShowText(["\\n<Hild>Hild will not show mercy to Master's enemies either."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["frederika_fc1", 0, 0, 2])
+    ShowText(["\\n<Frederica>I am Chrome's servant. I exist only to follow Chrome's orders."])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Y-you there! H-help us!"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+        ShowText(["\\n<Sonya>Hey, aren't you guys the ones who were sent to clear this place out?"])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Are you guys the ones who were sent to clear this place out?!"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Th-that's right! We came to the mansion and were overpowered by the zombies and ghosts. Afterwards they locked us up in here."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>We suffered no casualties, we didn't even suffer any major injuries, but the things they did... I, I don't think anyone will ever marry me now..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>After we catch that girl, we'll contact San Ilia and have them send a rescue team. Just hold out here for the time being!"])
+      ConditionalBranch([4, 68, 0])
+        ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+        ShowText(["\\n<Papi>We're going to beat up the bad guys!"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Okay, we'll wait right here!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The prisoners don't seem to be in any immediate danger. We can leave the rest to the rescue group, but first, we need answers from that girl."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([40, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

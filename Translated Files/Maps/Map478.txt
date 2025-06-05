@@ -1,0 +1,664 @@
+Display Name = "MS Fish Middle Deck"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([0])
+    ConditionalBranch([6, -1, 8])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 376, 13, 27, 0, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([0])
+    ConditionalBranch([6, -1, 8])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 376, 13, 27, 0, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([0])
+    ConditionalBranch([6, -1, 2])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 479, 20, 16, 0, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([0])
+    ConditionalBranch([6, -1, 2])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 479, 21, 16, 0, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Cow>Moo!"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>This cow, are you keeping it as...food?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>This cow, are you keeping it as...food?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>That was the original plan, yes..."])
+    ShowText(["But because of the lady's crying, we reconsidered."])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>Now, it's getting all the leftovers."])
+    ShowText(["It better give as much milk as it can..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["141"])
+    ShowTextAttributes(["mino_fc1", 2, 0, 2])
+    ShowText(["\\n<Mina>Why don't we just eat it?...I'm sorry."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>*Munch* *Munch*"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=25, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=25, @parameters=[])"])
+    ShotBalloonIcon([0, 1, true])
+    PlayBGM(["RPG::BGM(@name=\"scene_comi2\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_bonny_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>This isn't what it looks like!"])
+    ShowPicture([5, "80_bonny_st01", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_ashel_st01", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>Sure it isn't, milady...\nI believe you've already had your afternoon snack for the day."])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>A captain has to inspect her provisions!\nAnyway, what's your business?"])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>Them.\nThey're the ones the navy chose for their operation against us."])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>Oh, I've heard about you!\nI'm Bonnie, leader of the Fishy Pirates!"])
+    ConditionalBranch([4, 79, 0])
+      ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+      ShowText(["\\n<Nuruko>Kyuu!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 129, 0])
+      ShowTextAttributes(["brunhild_fc1", 0, 0, 2])
+      ShowText(["\\n<Hild>Pleased to meet you..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>I learned about your circumstances from Wow. You're being tempted by the navy to arrest us!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Well, that is what we agreed upon. We have to get to Grand Noah."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>We aren't doing it for the navy. It is the will of Heaven to subjugate vile pirates."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Well... we do need to get to Grand Noah, too."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>You want to go to Grand Noah?\nHow about we take you there on the MS Fish?"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+      ShowText(["\\n<Sonya>Eh? That solves our problem, doesn't it? Let's just take this ship to Grand Noah!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>You're being too generous, milady.\nWe're pirates, so we should at least attach a condition in this situation."])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>Really? Okay... hmm...\nI've got it! Help us with a plan we have!"])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>On a deserted island west of here, there's a place called Grand Pirate's Cave. The treasure of the famed pirate Roza lies there."])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>Seeing how I'm a descendant of Roza, don't you agree that I should have that treasure? Yet there's a reason we can't just walk into the cave..."])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>The navy has the place under strict supervision, and security is tight. It'd be difficult for us to enter alone."])
+    ConditionalBranch([4, 171, 0])
+      ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+      ShowText(["\\n<Miranda>Pirate treasure guarded by the navy?\nThat's the kind of thing I live for."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>So you need our help...\nIf we land on their island, the navy will see it as an act of aggression, though."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>And that's where we come in?\nIf we encroach on their territory, the navy will see it as an act of aggression, though."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 53, 0])
+      ShowTextAttributes(["slime_fc1", 2, 0, 2])
+      ShowText(["\\n<Lime>They'll get mad at us..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>In other words, we have two choices: allying with the navy or the pirates. Choosing either one will make enemies of the other..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>If we don't choose a side, we're stuck, though. We have to get to Grand Noah somehow."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Be that as it may, we must make a decision. We must make our way to Grand Noah."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 12, 0])
+      ShowTextAttributes(["sylph_fc1", 2, 0, 2])
+      ShowText(["\\n<Sylph>Let's become pirates! Piiiiiraaaaaaaaates!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 13, 0])
+      ShowTextAttributes(["gnome_fc1", 0, 0, 2])
+      ShowText(["\\n<Gnome>......"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 163, 0])
+      ShowTextAttributes(["lily_fc1", 3, 0, 2])
+      ShowText(["\\n<Lily>Being a pirate sounds fun.\nI'm definitely on the pirates' side here."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 167, 0])
+      ShowTextAttributes(["lusia_fc1", 2, 0, 2])
+      ShowText(["\\n<Lucia>I am opposed to cooperating with pirates..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>Time to choose!\nWill you be pawns of the navy, or fight with us?!"])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>Please use your head, milady...\nPressing them to make a decision now could cause us problems."])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>If they commit to the navy, we'd have to fight them right here. The ship would get trashed, to say nothing of our own safety."])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>Oh, you're right... Fine.\nLike Ashel said, don't make your choice here."])
+    ConditionalBranch([4, 41, 0])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["\\n<Promestein>Oh bother..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>To that end, let's change location. We'll take you back, and you can decide there."])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>If you wish to ally with the Fishy Pirates, we'll have a boat waiting for you at the same place as before."])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>If you become pawns of the navy...\nGet on their warship, and make enemies of us."])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>I have a feeling we're going to get along. I'm looking forward to you returning as friends!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>......"])
+    ErasePicture([5])
+    ErasePicture([6])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["We've managed to land in a difficult situation--"])
+    ControlSwitches([100, 100, 1])
+    FadeoutScreen([])
+    PlaySE(["RPG::SE(@name=\"Water1\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Luka's party is taken back to the Navy Headquarters by boat..."])
+    Wait([60])
+    TransferPlayer([0, 279, 56, 6, 2, 2])
+    FadeinScreen([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["If we cooperate with the navy, we'll get on their warship and board the MS Fish, making enemies of the pirates in the process."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["If we cooperate with the Fishy Pirates, we'll take a boat back to the MS Fish, straining our relationship with the navy."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Time to decide. You're the leader, so I'll defer to your judgment."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>You have to decide on one of them... Choose the path you won't regret."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 79, 0])
+      ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+      ShowText(["\\n<Nuruko>Kyuu! Kyuu!"])
+      Empty([])
+
+    BranchEnd([])
+    ControlVariables([1050, 1050, 0, 0, 6])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>*Munch* *Munch*"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=25, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=25, @parameters=[])"])
+    ShotBalloonIcon([0, 1, true])
+    PlayBGM(["RPG::BGM(@name=\"scene_comi2\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_bonny_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>This isn't what it looks like!"])
+    ShowPicture([5, "80_bonny_st01", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_ashel_st01", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>Sure it isn't, milady...\nAll your overeating is only making your boobs bigger."])
+    ShowTextAttributes(["bonny_fc1", 2, 0, 2])
+    ShowText(["\\n<Bonnie>They're emergency floatation devices..."])
+    ConditionalBranch([4, 66, 0])
+      ShowTextAttributes(["vgirl_fc1", 2, 0, 2])
+      ShowText(["\\n<Vanilla>Share your flotation devices with me..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 79, 0])
+      ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+      ShowText(["\\n<Nuruko>Kyuu..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Can we get down to business before we regret joining you pirates?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Spare us the comedy act and let us move on..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([5, "80_bonny_st02", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>Oh, you did end up coming back! I knew we'd become friends!"])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>Now it's time for me to finally get my hands on Roza's treasure! Let's head to the Grand Pirate's Cave without delay!"])
+    ErasePicture([5])
+    ErasePicture([6])
+    Wait([60])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    Script(["add_actor_ex(202)"])
+    PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Bonnie joined the party!"])
+    Wait([60])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>All right, let's shove off! When you're ready, go talk to the nekomata in the captain's quarters."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+      ShowText(["\\n<Sonya>What position does that nekomata hold on this ship...?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>What position does that nekomata hold on this ship...?"])
+      Empty([])
+
+    BranchEnd([])
+    PlayBGM(["RPG::BGM(@name=\"umi\", @volume=100, @pitch=100)"])
+    ControlVariables([1051, 1051, 0, 0, 2])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 3
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 376, 7, 43, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 376, 7, 43, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>On this floor we have personal quarters for the crew, the dining hall, the kitchen and the food storehouse."])
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Our boss is on the floor down this staircase."])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>This is our food storage. If Ashel catches you sneaking a bite, you'll be snacking on one of her corkscrew punches instead."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>The boss might seem kind of useless, but there's been times where she's actually been quite dependable... Though I'm having trouble calling any to mind right now."])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 2, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>I heard the Navy wants to crush us... Even though we're not really doing anything that bad... Isn't that kind of cruel?"])
+    ShowTextAttributes(["k_mermaid_fc1", 2, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>We only prey on bad guys. We never kill anybody. We're chivalrous pirates..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["62"])
+    ShowTextAttributes(["gob_fc1", 0, 0, 2])
+    ShowText(["\\n<Gob>If that's true, I don't see why we should have to take them out."])
+    ExitEventProcessing([])
+    Label(["167"])
+    ShowTextAttributes(["lusia_fc1", 2, 0, 2])
+    ShowText(["\\n<Lucia>Even if that were true, you're still breaking the law..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Our boss is lacking something essential for a pirate... Hey, what do you think?"])
+    ShowChoices([["She's weak", "She's stupid", "She can't swim"], 0])
+    When([0, "She's weak"])
+      ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+      ShowText(["\\n<Mermaid Pirate>Our boss is good-looking and good in a fight.\nShe isn't a descendant of Roza for nothing."])
+      Empty([])
+
+    When([1, "She's stupid"])
+      ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+      ShowText(["\\n<Mermaid Pirate>Yeah, she isn't that smart but...\nAs long as she has Ashel, it will be fine."])
+      Empty([])
+
+    When([2, "She can't swim"])
+      ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+      ShowText(["\\n<Mermaid Pirate>...So you know the secret of the Fishy Pirates.\nSo that means you'll either join us...or die."])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Our boss is a descendant of Pirate Queen Roza.\nWe will definitely make it big!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["143"])
+    ShowTextAttributes(["eva_fc1", 0, 0, 2])
+    ShowText(["\\n<Eva>I want to make it big too..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Ashel's dishes are always delicious!"])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Sis, please help me cook!"])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>Later, I wish I weren't busy now..."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+      ShowText(["\\n<Sonya>Ashel, are you good at cooking?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Ashel, are you good at cooking?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>Well...\nAs vice captain, it is my duty to manage the meals on the ship."])
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Her cooking is the best on the high seas!\nShe won't lose even to professional chefs."])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["\\n<Ashel>Actually, I do have a professional qualification."])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"GALLEY: CAPTAIN KEEP OUT\", it reads..."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>Why is the captain not allowed in...?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Why is the captain not allowed in...?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>Her attempts at cooking always end in disaster. Last time she nearly set the whole ship ablaze..."])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"FOOD STORAGE: CAPTAIN KEEP OUT\", it reads..."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>Why is the captain not allowed in...?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Why is the captain not allowed in...?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>She has a habit of stealing the food..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["5"])
+    ShowTextAttributes(["alice_fc5", 0, 0, 2])
+    ShowText(["\\n<Alice>What a glutton of a leader..."])
+    ExitEventProcessing([])
+    Label(["70"])
+    ShowTextAttributes(["nezumi_fc1", 0, 0, 2])
+    ShowText(["\\n<Ratty>Greedy leader..."])
+    ExitEventProcessing([])
+    Label(["143"])
+    ShowTextAttributes(["eva_fc1", 0, 0, 2])
+    ShowText(["\\n<Eva>Stealing food? Was she that poorly raised?"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>I'm studying nutrition! We'll need this kind of know-how for long voyages, after all!"])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>Right now, I'm the only one on this ship who knows anything about nutrition. Gotta teach the others at least a little, yeah?"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["166"])
+    ShowTextAttributes(["narcubus_fc1", 0, 0, 2])
+    ShowText(["\\n<Nabisu>It's important to make sure you're getting adequate nutrition when you're out at sea for a long time, you know♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Cooking's so boooring!\nI'd rather be on lookout duty."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["168"])
+    ShowTextAttributes(["dodome_fc1", 0, 0, 2])
+    ShowText(["\\n<Manako>If you need a lookout, leave it to me!"])
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>If I had that many eyes, I bet even lookout duty would be fun!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Cleaning~♪ Cleaning~♪"])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>You missed a spot over here."])
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>You're too anal, big sis! I'm nowhere near as good at cleaning as you are..."])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>More like the rest of you are just sloppy as hell."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+      ShowText(["\\n<Sonya>Ashel, you're good at cleaning?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Ashel, you're good at cleaning?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>Well. As vice captain, it's my duty to look after the state of the ship."])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShowTextAttributes(["dog_fc1", 4, 0, 2])
+    ShowText(["\\n<Wow>Woof, woof, woof!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["525"])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["\\n<Sonya>Didn't I see her on deck, just a moment ago? Is there more than one?"])
+    ShowTextAttributes(["dog_fc1", 0, 0, 2])
+    ShowText(["\\n<Wow>Nope! That was me, too! I'm just running around the ship!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Sup, big sis!\nHuh? Are these the guys you mentioned earlier?"])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>Yeah. I'm giving them a tour of the ship on their way to meet the captain."])
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>I see! Nice to meet you♪"])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([328, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

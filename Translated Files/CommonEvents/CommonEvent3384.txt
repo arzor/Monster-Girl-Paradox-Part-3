@@ -1,0 +1,23 @@
+CommonEvent 3384
+Name = "Defeat: Monster Realm Tamamo 1"
+
+  999([3384])
+  ConditionalBranch([0, 87, 1])
+    ConditionalBranch([0, 97, 1])
+      ControlSwitches([2265, 2265, 0])
+      ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+      RecoverAll([0, 0])
+      ChangeTransparency([1])
+      ChangePlayerFollowers([1])
+      Script(["forced_transfer(177,30,12)"])
+      Script(["release_temp_actors"])
+      Script(["$game_map.screen.clear"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  BranchEnd([])
+  CallCommonEvent([3000])
+  Empty([])

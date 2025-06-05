@@ -1,0 +1,527 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 91, 11, 34, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 91, 11, 42, 0, 0])
+    ConditionalBranch([1, 1111, 0, 3, 0])
+      ConditionalBranch([0, 2392, 1])
+        ControlVariables([11, 11, 0, 0, 1])
+        CallCommonEvent([566])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 91, 24, 34, 0, 0])
+    ConditionalBranch([1, 1111, 0, 1, 0])
+      ConditionalBranch([0, 2380, 1])
+        SetMoveRoute([13, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"Move\\\\\\\", @pitch=100, @volume=80)\\\"])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"Move\\\", @pitch=100, @volume=80)\"])"])
+        SetMoveRoute([14, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"Move\\\\\\\", @pitch=100, @volume=80)\\\"])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"Move\\\", @pitch=100, @volume=80)\"])"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Khh... I was too late!"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["The pizza guy is already being lured into Vinum's room.\nIf he goes in there, I'll have no choice but to follow him and save him."])
+        ControlSwitches([2380, 2380, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([1, 1111, 0, 1, 0])
+      ConditionalBranch([0, 2380, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["I can sense someone up ahead...\nIf I keep going forward, I'm bound to run into them."])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 91, 24, 41, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 91, 4, 7, 0, 0])
+    ConditionalBranch([0, 2386, 0])
+      ConditionalBranch([0, 2385, 1])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Okay, I'll let Myusca pass by here..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["I held my breath inside the bathroom for a moment...\nI could hear Myusca's footsteps coming down the stairs."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Like that, the sound of her footsteps passed by the bathroom...and moved away towards the kitchen."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>...Looks like she's gone."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["I could hear the front door being closed.\nMyusca most likely went outside..."])
+        ControlSwitches([2385, 2385, 0])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 91, 26, 30, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 91, 27, 15, 0, 0])
+    ConditionalBranch([1, 1111, 0, 2, 0])
+      ScrollMap([8, 3, 5])
+      SetMoveRoute([16, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+      ShotBalloonIcon([-1, 1, false])
+      ShowTextAttributes(["nemea_fc2", 2, 0, 2])
+      ShowText(["\\n<Nemea>Ara...?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Waah...!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is bad, Nemea was bathing in there..."])
+      ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+      ShowText(["\\n<Nemea>A child I haven't seen before... And this feeling... Were you summoned here from another world by any chance?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Luka>Khh...!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I tried to leave from the spot but--"])
+      ShowTextAttributes(["nemea_fc2", 4, 0, 2])
+      ShowText(["\\n<Nemea>Ara ara... Why are you running away?\nYou don't have to be afraid...♡"])
+      Script(["display_skill_name(\"Demon Eyes of Seduction\")"])
+      Wait([15])
+      PlaySE(["RPG::SE(@name=\"mon_flash\", @pitch=100, @volume=100)"])
+      FlashScreen(["Color(@red=255.0, @green=204.0, @blue=255.0, @alpha=255.0)", 60, true])
+      Wait([15])
+      Script(["clear_skill_name"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Luka>Ah, aaah..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Her seduction magic coursed through my entire body in an instant. I could no longer resist her..."])
+      ControlSwitches([2408, 2408, 0])
+      CallCommonEvent([5785])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 91, 31, 30, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ConditionalBranch([1, 1111, 0, 2, 0])
+      ConditionalBranch([0, 2385, 1])
+        ControlSwitches([31, 31, 0])
+        PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+        TransferPlayer([0, 153, 33, 35, 0, 0])
+        CallCommonEvent([546])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 153, 33, 35, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ConditionalBranch([1, 1111, 0, 2, 0])
+      ConditionalBranch([0, 2385, 1])
+        ControlSwitches([31, 31, 0])
+        PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+        TransferPlayer([0, 153, 33, 35, 0, 0])
+        CallCommonEvent([546])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 153, 34, 35, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 94, 5, 7, 0, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ConditionalBranch([1, 1111, 0, 2, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I can't afford to turn back!"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 95, 5, 5, 2, 0])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ConditionalBranch([0, 2382, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The milk has been laced with the sleeping drug.\nNow if only one of them would drink it..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2383, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The cola has been laced with the sleeping drug.\nNow if only one of them would drink it..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2384, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The orange juice has been laced with the sleeping drug.\nNow if only one of them would drink it..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>There's a variety of drinks in here..."])
+    ConditionalBranch([1, 1111, 0, 1, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["But now's not the time to be scavenging through the refrigerator."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2373, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["But now's not the time to be scavenging through the refrigerator."])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["If I mix the sleeping drug with one of these drinks...\nIt could stall Myusca or her friends later."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["But it looks like I only have one dose of this sleeping drug. Which drink should I mix it into?"])
+      ShowChoices([["Milk", "Cola", "Orange Juice", "Never mind"], 4])
+      When([0, "Milk"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["I laced the milk with the sleeping drug.\nNow if only one of them would drink it..."])
+        ControlSwitches([2382, 2382, 0])
+        ExitEventProcessing([])
+        Empty([])
+      When([1, "Cola"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["I laced the cola with the sleeping drug.\nNow if only one of them would drink it..."])
+        ControlSwitches([2383, 2383, 0])
+        ExitEventProcessing([])
+        Empty([])
+      When([2, "Orange Juice"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["I laced the orange juice with the sleeping drug.\nNow if only one of them would drink it..."])
+        ControlSwitches([2384, 2384, 0])
+        ExitEventProcessing([])
+        Empty([])
+      When([3, "Never mind"])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    Empty([])
+
+  Page 4
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Come to think of it, if I keep going up these stairs..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I'll run into Myusca just as she's coming down the stairs.\nI've personally experienced that before."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>I'll need to hide somewhere to let her past here.\nAre there any good places...?"])
+    ControlSwitches([2386, 2386, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Come to think of it, if I keep going up these stairs..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I'll run into Myusca just as she's coming down the stairs.\nI've personally experienced that before."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>I'll need to hide somewhere to let her past here.\nAre there any good places...?"])
+    ControlSwitches([2386, 2386, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ControlSwitches([2391, 2391, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The pizza guy hasn't arrived yet, but he should be ringing the doorbell any time now. I'll need to proceed quickly and try not to get careless."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["After this, I'll be meeting with Toru in the basement.\nAnd after that, I just need to escape from this house."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Myusca>ＺＺＺ..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>So she drank the cola I laced with the sleeping drug. She appears to be sound asleep..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But there's no telling when she'll wake up.\nI shouldn't get too close to her..."])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ConditionalBranch([0, 2392, 1])
+      ControlVariables([11, 11, 0, 0, 2])
+      CallCommonEvent([566])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ConditionalBranch([0, 2392, 1])
+      ControlVariables([11, 11, 0, 0, 3])
+      CallCommonEvent([566])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    CallCommonEvent([567])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    CallCommonEvent([567])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ControlSwitches([2386, 2386, 0])
+    ControlSwitches([2385, 2385, 0])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Come to think of it, if I keep going up these stairs..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I'll run into Myusca just as she's coming down the stairs.\nI've personally experienced that before."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>I'll hide here to let her past..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I held my breath inside the bathroom for a moment...\nI could hear Myusca's footsteps coming down the stairs."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Like that, the sound of her footsteps passed by the bathroom...and moved away towards the kitchen."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>...Looks like she's gone."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I could hear the front door being closed.\nMyusca most likely went outside..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    Empty([])

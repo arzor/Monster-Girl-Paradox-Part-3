@@ -1,0 +1,18 @@
+CommonEvent 119
+Name = "シーン回想起動前処理（未）"
+
+  Comment(["前章画像が存在するか？"])
+  Script(["check_picture_exist(\"ev_slime_h1.png\", 25)"])
+  Script(["check_picture_exist(\"ev_justice_h1.png\", 29)"])
+  ConditionalBranch([0, 25, 0])
+    ConditionalBranch([0, 29, 1])
+      ControlSwitches([25, 25, 1])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  BranchEnd([])
+  Comment(["中章画像が存在するか？"])
+  Script(["check_picture_exist(\"ev_kinoko_h1.png\", 26)"])
+  Empty([])

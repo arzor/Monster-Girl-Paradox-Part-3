@@ -1,0 +1,1319 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([1, 1157, 0, 7, 0])
+      ChangeMapDisplay([1])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 26, 20, 41, 0, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 706, 20, 41, 0, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 706, 39, 23, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    ControlSwitches([2507, 2507, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 706, 15, 49, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 706, 13, 44, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 706, 28, 50, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 706, 21, 24, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Lancubus>"])
+      ShowText(["Oh my, such a large group..."])
+      ShowText(["You're living the life, huh? Heheh~♪"])
+      ShowTextAttributes(["ranccubus_fc1", 2, 0, 2])
+      ShowText(["\\n<Lancubus>"])
+      ShowText(["Huh, that's not it? Staying just for the night, like normal guests? How peculiar... One night is just 10G though.\\$"])
+      ShowText([""])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        ConditionalBranch([7, 10, 0])
+          ChangeGold([1, 0, 10])
+          FadeoutScreen([])
+          PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+          Wait([150])
+          RecoverAll([0, 0])
+          FadeinScreen([])
+          ExitEventProcessing([])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ranccubus_fc1", 2, 0, 2])
+          ShowText(["\\n<Lancubus>"])
+          ShowText(["You don't have enough money..."])
+          ShowText(["Being poor really is a sin."])
+          ExitEventProcessing([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      When([1, "No"])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["ranccubus_fc1", 2, 0, 2])
+      ShowText(["\\n<Lancubus>"])
+      ShowText(["Guess I'll have to rebuild this place as a proper inn from scratch."])
+      ShowText(["One night is still 10G, though... want to stay?\\$"])
+      ShowChoices([["Yes", "No"], 2])
+      When([0, "Yes"])
+        ConditionalBranch([7, 10, 0])
+          ChangeGold([1, 0, 10])
+          FadeoutScreen([])
+          PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+          Wait([150])
+          RecoverAll([0, 0])
+          FadeinScreen([])
+          ExitEventProcessing([])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ranccubus_fc1", 2, 0, 2])
+          ShowText(["\\n<Lancubus>"])
+          ShowText(["You don't have enough money..."])
+          ShowText(["Being poor really is a sin."])
+          ExitEventProcessing([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      When([1, "No"])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["leeccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Leecubus>"])
+      ShowText(["I think it's about time I get myself a new pet..."])
+      ShowText(["Maybe I'll get rid of one and buy a fresh one."])
+      ConditionalBranch([4, 158, 0])
+        ShowTextAttributes(["suckvore_fc1", 2, 0, 2])
+        ShowText(["\\n<Anna>"])
+        ShowText(["............"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["leeccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Leecubus>"])
+      ShowText(["They say these potatoes are delicious if you slice them thin and fry them."])
+      ShowText(["You can also mash them up into a salad. Sounds pretty good, right?"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The man inside looks completely drained..."])
+      ShowText(["He's breathing, but he doesn't move at all."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The cage is empty..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ControlVariables([1157, 1157, 1, 0, 1])
+    ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["This is an inn, right...?"])
+    ShowText(["So why are there people locked up here...?"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["I don't want to imagine it, but... it seems like a brothel of sorts."])
+    ShowText(["And it looks like the men are treated especially poorly."])
+    ShowTextAttributes(["shion_fc1", 2, 0, 2])
+    ShowText(["\\n<Zion>"])
+    ShowText(["What kind of twisted place is this?!"])
+    ShowText(["Let's blow it to smithereens!!"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["As much as I'd like to, acting rashly could put the men in even greater danger..."])
+    ShowText([""])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["\\n<Mephisto>"])
+    ShowText(["We should talk to the people in the cages."])
+    ShowText(["We need to gather information first if we're going to act."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ControlVariables([1157, 1157, 1, 0, 1])
+    ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>"])
+      ShowText(["What is this place...?"])
+      ShowText(["Why are there so many people locked up here..."])
+      ShowTextAttributes(["heinrich_fc1", 0, 0, 2])
+      ShowText(["\\n<Heinrich>"])
+      ShowText(["...They're merchandise."])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["It seems this village has normalized the buying and selling of sex slaves."])
+      ShowText(["No... judging by what I see, they even ship them beyond the village."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["So, they're trading slaves here...!"])
+      ShowText(["This is unforgivable...!!"])
+      ShowTextAttributes(["gnosis_fc1", 0, 0, 2])
+      ShowText(["\\n<Gnosis>"])
+      ShowText(["Assessing the captives' mental state is necessary."])
+      ShowText(["I recommend speaking with them through the bars..."])
+      Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ControlVariables([1157, 1157, 1, 0, 1])
+    ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["This is someone's home, yet it has cages..."])
+    ShowText(["Is this normal in this village?"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["Keeping slaves appears to be standard practice here..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Let's talk to the people in the cages too!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The room is packed with men."])
+      ShowText(["They seem mentally stable but wear somber expressions..."])
+      ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+      ShowText(["\\n<Mephisto>"])
+      ShowText(["There are quite a few handsome men here."])
+      ShowText(["And they've been dressed in fine clothing..."])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["For the high-end clientele, I bet..."])
+      ConditionalBranch([4, 805, 0])
+        ShowTextAttributes(["nemea_fc1", 0, 0, 2])
+        ShowText(["\\n<Nemea>"])
+        ShowText(["Oh my, are these boys for sale?"])
+        ShowText(["How nostalgic... I wonder if I could buy one."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["People2", 6, 0, 2])
+      ShowText(["\\n<Minstrel>"])
+      ShowText(["Beautiful ladies, won't you listen to my song?"])
+      ShowText(["Allow me to adorn your beauty with my melody..."])
+      ShowTextAttributes(["Actor1", 4, 0, 2])
+      ShowText(["\\n<Handsome Man>"])
+      ShowText(["Ladies, please, purchase me."])
+      ShowText(["I will dedicate my very soul to serving you..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The men in the cages start appealing earnestly..."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["This is revolting..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The cage is empty..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The man inside looks completely drained..."])
+      ShowText(["He's breathing, but he doesn't move at all."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The cage is empty..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Boy>"])
+      ShowText(["............"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The boy stares blankly out of the cage..."])
+      ShowText(["He doesn't seem to be in his right mind."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Another boy lies motionless in the corner."])
+      ShowText(["He's breathing, but he doesn't respond to any calls..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The cage is empty..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Boy>"])
+      ShowText(["............"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The boy stares blankly out of the cage..."])
+      ShowText(["He doesn't seem to be in his right mind."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Another boy lies motionless in the corner."])
+      ShowText(["He's breathing, but he doesn't respond to any calls..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The cage is empty..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The room is packed with men."])
+      ShowText(["They seem mentally stable but wear somber expressions..."])
+      ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+      ShowText(["\\n<Mephisto>"])
+      ShowText(["There are quite a few handsome men here."])
+      ShowText(["And they've been dressed in fine clothing..."])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["For the high-end clientele, I bet..."])
+      ConditionalBranch([4, 805, 0])
+        ShowTextAttributes(["nemea_fc1", 0, 0, 2])
+        ShowText(["\\n<Nemea>"])
+        ShowText(["Oh my, are these boys for sale?"])
+        ShowText(["How nostalgic... I wonder if I could buy one."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["People2", 6, 0, 2])
+      ShowText(["\\n<Minstrel>"])
+      ShowText(["Beautiful ladies, won't you listen to my song?"])
+      ShowText(["Allow me to adorn your beauty with my melody..."])
+      ShowTextAttributes(["Actor1", 4, 0, 2])
+      ShowText(["\\n<Handsome Man>"])
+      ShowText(["Ladies, please, purchase me."])
+      ShowText(["I will dedicate my very soul to serving you..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The men in the cages start appealing earnestly..."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["This is revolting..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The cage is empty..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The room is packed with men."])
+      ShowText(["Their conditions are horrific, and most of them seem to have lost their sanity..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>"])
+      ShowText(["Ahieek, ahhh..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>"])
+      ShowText(["Buy me... please..."])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>"])
+      ShowText(["This is awful..."])
+      ShowText(["This isn't a place fit for humans."])
+      ConditionalBranch([4, 801, 0])
+        ShowTextAttributes(["lars_fc01", 0, 0, 2])
+        ShowText(["\\n<Lars>"])
+        ShowText(["............"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Lars is seething with anger at the atrocities before him..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["shion_fc1", 2, 0, 2])
+      ShowText(["\\n<Zion>"])
+      ShowText(["Fucking monsters...!"])
+      ShowText(["Let's murder all these succubi right now!"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["We cannot act on impulse."])
+      ShowText(["If we are to destroy this village, we must first devise a strategy..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The cage is empty..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The room is packed with men."])
+      ShowText(["The conditions are horrific, and most of them seem to have lost their sanity."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>"])
+      ShowText(["Ahieek, ahhh..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>"])
+      ShowText(["Buy me... please..."])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>"])
+      ShowText(["This is awful..."])
+      ShowText(["This isn't a place fit for humans."])
+      ConditionalBranch([4, 801, 0])
+        ShowTextAttributes(["lars_fc01", 0, 0, 2])
+        ShowText(["\\n<Lars>"])
+        ShowText(["............"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Lars is seething with anger at the atrocities before him..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["shion_fc1", 2, 0, 2])
+      ShowText(["\\n<Zion>"])
+      ShowText(["Fucking monsters...!"])
+      ShowText(["Let's murder all these succubi right now!"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["We cannot act on impulse."])
+      ShowText(["If we are to destroy this village, we must first devise a strategy..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The cage is empty..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["There is a young man dressed as a priest inside..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>"])
+      ShowText(["Ah, I see the vision of an angel..."])
+      ShowText(["O Goddess, please save me..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The priest mutters prayers under his breath..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The cage is empty..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["A boy crouches against the wall on the other side of the cage. Even when called to, he shows no reaction..."])
+      ShowText([""])
+      ConditionalBranch([4, 118, 0])
+        ShowTextAttributes(["meia_fc1", 3, 0, 2])
+        ShowText(["\\n<Meia>"])
+        ShowText(["Oh, poor thing... I'll get you out of here. I promise."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The cage is empty..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["A man dressed like a hero lies sprawled on a bed inside..."])
+      ShowText(["He appears utterly exhausted and barely moves."])
+      ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Lancubus>"])
+      ShowText(["Looking to pin down a hero for the night? It's 100G for a session, or 3000G if you wanna drain him to death."])
+      ShowText([""])
+      ConditionalBranch([4, 334, 0])
+        ShowTextAttributes(["kumonomiko_fc1", 0, 0, 2])
+        ShowText(["\\n<Spider Princess>"])
+        ShowText(["Do I get to eat him if I pay 3000G?"])
+        ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+        ShowText(["\\n<Lancubus>"])
+        ShowText(["Mmhmm, of course. Less cleanup for us, so it's a win-win."])
+        ShowText([""])
+        ShowTextAttributes(["sonia_fc1", 5, 0, 2])
+        ShowText(["\\n<Sonya>"])
+        ShowText(["............"])
+        ShowTextAttributes(["kumonomiko_fc1", 2, 0, 2])
+        ShowText(["\\n<Spider Princess>"])
+        ShowText(["I won't. Just kidding."])
+        ExitEventProcessing([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+        ShowText(["\\n<Mephisto>"])
+        ShowText(["That sounds rather entertaining..."])
+        ShowText(["But we'll take a rain check."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The cage is empty..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Minstrel>"])
+      ShowText(["Please, just kill me..."])
+      ShowText(["I'd rather die than keep living like this..."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["Hold on a little longer."])
+      ShowText(["The Goddess will surely extend a hand..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The cage is empty..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ConditionalBranch([1, 1157, 0, 5, 2])
+        ConditionalBranch([2, "A", 1])
+          ControlSelfSwitch(["A", 0])
+          ShowPicture([5, "80_ranccubus_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+          MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+          ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+          ShowText(["\\n<Lancubus>"])
+          ShowText(["Welcome to the Human Shop~♪"])
+          ShowText(["Are you here to buy, or perhaps to sell...?"])
+          ShowTextAttributes(["ranccubus_fc1", 1, 0, 2])
+          ShowText(["\\n<Lancubus>"])
+          ShowText(["...Wait, an angel!?"])
+          ShowText(["And a Mariel-type no less. I could fetch a high price for you..."])
+          ShowTextAttributes(["iriasu_fc5", 0, 0, 2])
+          ShowText(["\\n<Ilias>"])
+          ShowText(["I am not for sale!"])
+          ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+          ShowText(["\\n<Lancubus>"])
+          ShowText(["Oh, a freed slave, I see..."])
+          ShowText(["My apologies for the assumption."])
+          ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+          ShowText(["\\n<Lancubus>"])
+          ShowText(["So, is it the boy with you who's up for sale?"])
+          ShowText(["What a delightful prospect... I might keep him for myself..."])
+          ShowTextAttributes(["sonia_fc2", 5, 0, 2])
+          ShowText(["\\n<Sonya>"])
+          ShowText(["Our friends are not for sale!"])
+          ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+          ShowText(["\\n<Lancubus>"])
+          ShowText(["Is that so...? Well then, are you here to browse?"])
+          ShowText(["Take your time, feel free to look around."])
+          ErasePicture([5])
+          ExitEventProcessing([])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([2, "A", 0])
+          ShowPicture([5, "80_ranccubus_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+          MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+          ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+          ShowText(["\\n<Lancubus>"])
+          ShowText(["Are you sure you don't want to sell that boy?"])
+          ShowText(["I'd pay double the usual price..."])
+          ShowTextAttributes(["sonia_fc1", 6, 0, 2])
+          ShowText(["\\n<Sonya>"])
+          ShowText(["............"])
+          ErasePicture([5])
+          ExitEventProcessing([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1157, 0, 6, 1])
+        ShowPicture([5, "80_ranccubus_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+        MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+        ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+        ShowText(["\\n<Lancubus>"])
+        ShowText(["Welcome..."])
+        ShowText(["What's wrong? Why the serious faces?"])
+        ShowChoices([["Wait to start the mission", "Begin the rescue mission"], 1])
+        When([0, "Wait to start the mission"])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>"])
+          ShowText(["Hold on, we need to prepare..."])
+          ShowTextAttributes(["ranccubus_fc1", 2, 0, 2])
+          ShowText(["\\n<Lancubus>"])
+          ShowText(["Prepare...? For what?"])
+          ErasePicture([5])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "Begin the rescue mission"])
+          ConditionalBranch([0, 2506, 1])
+            ShowTextAttributes(["gnosis_fc1", 0, 0, 2])
+            ShowText(["\\n<Gnosis>"])
+            ShowText(["Before we proceed, we have a lead on critical intel."])
+            ShowText(["A mysterious succubus has been spotted on the roof near the well overlooking the village."])
+            ShowTextAttributes(["gnosis_fc1", 0, 0, 2])
+            ShowText(["\\n<Gnosis>"])
+            ShowText(["Speaking to her might yield valuable information."])
+            ShowText(["I strongly recommend that we investigate further..."])
+            ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+            ShowText(["\\n<Luka>"])
+            ShowText(["A succubus overlooking the village from the roof near the well..."])
+            ShowText(["Seems worth checking out."])
+            ShowChoices([["Investigate the mysterious succubus", "Proceed with the mission"], 1])
+            When([0, "Investigate the mysterious succubus"])
+              ShowTextAttributes(["", 0, 0, 2])
+              ShowText(["There's a succubus overlooking the village near the well..."])
+              ShowText(["Let's talk to her first."])
+              ErasePicture([5])
+              ExitEventProcessing([])
+              Empty([])
+            When([1, "Proceed with the mission"])
+              Empty([])
+            ChoicesEnd([])
+            Empty([])
+          BranchEnd([])
+          PlayBGM(["RPG::BGM(@name=\"kiki4\", @volume=100, @pitch=100)"])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>"])
+          ShowText(["Release the slaves here, now!"])
+          ShowPicture([5, "80_ranccubus_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+          ShowTextAttributes(["ranccubus_fc1", 2, 0, 2])
+          ShowText(["\\n<Lancubus>"])
+          ShowText(["Hey, what's the meaning of this...!?"])
+          ShowText(["We're running a legitimate business here!"])
+          ShowTextAttributes(["iriasu_fc5", 0, 0, 2])
+          ShowText(["\\n<Ilias>"])
+          ShowText(["No excuses, no mercy!"])
+          ShowText(["Feel the wrath of the Goddess!"])
+          ErasePicture([5])
+          ControlSwitches([81, 81, 0])
+          BattleProcessing([0, 1736, false, false])
+          ControlSwitches([81, 81, 1])
+          ControlSwitches([2506, 2506, 0])
+          ControlVariables([1157, 1157, 0, 0, 7])
+          ControlVariables([1002, 1002, 0, 0, 74])
+          ControlSwitches([100, 100, 0])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          ShowTextAttributes(["ranccubus_fc1", 2, 0, 2])
+          ShowText(["\\n<Lancubus>"])
+          ShowText(["What gives you the right to do this..."])
+          ShowTextAttributes(["sonia_fc2", 5, 0, 2])
+          ShowText(["\\n<Sonya>"])
+          ShowText(["Humans have rights too!!"])
+          ConditionalBranch([4, 288, 0])
+            ShowTextAttributes(["d_succubus_fc1", 2, 0, 2])
+            ShowText(["\\n<Natasha>"])
+            ShowText(["Scum who trade in humans..."])
+            ShowText(["Burn in hell."])
+            Empty([])
+          BranchEnd([])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+          ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+          ShowText(["\\n<Ilias>"])
+          ShowText(["Let's secure these captives!"])
+          FadeoutScreen([])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["We send the enslaved men to the Pocket Castle!"])
+          TransferPlayer([0, 27, 13, 36, 2, 2])
+          FadeinScreen([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>"])
+          ShowText(["Alright, let's begin the operation!"])
+          ShowText(["We'll free every slave in this village!"])
+          ExitEventProcessing([])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Lancubus>"])
+      ShowText(["The Human Shop is out of business now."])
+      ShowText(["Here's what we're selling instead!"])
+      ShopProcessing([0, 319, 0, 0, false])
+      ShopItem([0, 413, 0, 0])
+      ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Lancubus>"])
+      ShowText(["These are contraband goods, so don't let the angels find out."])
+      ShowText(["I highly recommend the roasted sweet potatoes, they'll take you to the moon..."])
+      ConditionalBranch([4, 143, 0])
+        ShowTextAttributes(["eva_fc1", 2, 0, 2])
+        ShowText(["\\n<Eva>"])
+        ShowText(["This village is done for..."])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Lancubus>"])
+      ShowText(["Interested in one of my pets? Go ahead and talk to them, though... they're not exactly chatty."])
+      ShowText([""])
+      ConditionalBranch([4, 118, 0])
+        ShowTextAttributes(["meia_fc1", 3, 0, 2])
+        ShowText(["\\n<Meia>"])
+        ShowText(["How cruel..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["ranccubus_fc1", 2, 0, 2])
+      ShowText(["\\n<Lancubus>"])
+      ShowText(["I swiped one of those heavenly potatoes the angels keep raving about. But raw? Ugh, totally not worth it..."])
+      ShowText([""])
+      ConditionalBranch([4, 209, 0])
+        ShowTextAttributes(["okikumusi_fc1", 1, 0, 2])
+        ShowText(["\\n<Nanoha>"])
+        ShowText(["I love 'em raw~♪"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ShowTextAttributes(["greatorc_fc1", 0, 0, 2])
+    ShowText(["\\n<Great Orc>"])
+    ShowText(["Nothin' beats raping a guy and lightin' up a smoke after a long, hard day! Now that's what I call living!"])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["75"])
+    ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+    ShowText(["\\n<Mary>"])
+    ShowText(["Wheee~! Hee-hee-rah, le-le-lehh~♪"])
+    ShowTextAttributes(["greatorc_fc1", 0, 0, 2])
+    ShowText(["\\n<Great Orc>"])
+    ShowText(["I've got no clue what the hell she just said..."])
+    ExitEventProcessing([])
+    Label(["300"])
+    ShowTextAttributes(["youki_fc1", 0, 0, 2])
+    ShowText(["\\n<Kureha>"])
+    ShowText(["You're livin' the damn dream, huh! I oughta take notes!"])
+    ShowText([""])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["cupid_fc1", 0, 0, 2])
+    ShowText(["\\n<Cupid>"])
+    ShowText(["And then Valkyrie went all dramatic."])
+    ShowText(["\"20,000 years of rape for this sin!\" she said..."])
+    ShowTextAttributes(["leeccubus_fc1", 0, 0, 2])
+    ShowText(["\\n<Leecubus>"])
+    ShowText(["20,000 years?! Even we succubi couldn't handle that!"])
+    ShowText(["You sure that Valkyrie doesn't have a naughty streak~?"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["360"])
+    ShowTextAttributes(["valkyrie_fc1", 0, 0, 2])
+    ShowText(["\\n<Victoria>"])
+    ShowText(["............"])
+    ShowTextAttributes(["cupid_fc1", 5, 0, 2])
+    ShowText(["\\n<Cupid>"])
+    ShowText(["W-wait, that's not what I meant!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ShowTextAttributes(["esuccubus_fc1", 0, 0, 2])
+    ShowText(["\\n<Elder Succubus>"])
+    ShowText(["Looking for items?"])
+    ShowText(["I might sell you a few..."])
+    ShopProcessing([0, 2, 0, 0, false])
+    ShopItem([0, 4, 0, 0])
+    ShopItem([0, 7, 0, 0])
+    ShopItem([0, 11, 0, 0])
+    ShopItem([0, 21, 0, 0])
+    ShopItem([0, 23, 0, 0])
+    ShopItem([0, 35, 0, 0])
+    ShopItem([2, 4062, 0, 0])
+    ShopItem([2, 4100, 0, 0])
+    ShopItem([0, 4145, 0, 0])
+    ShopItem([0, 3848, 0, 0])
+    ShopItem([0, 3986, 0, 0])
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["esuccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Elder Succubus>"])
+      ShowText(["I've no interest in trading humans."])
+      ShowText(["My life's all about the forge..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["esuccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Elder Succubus>"])
+      ShowText(["Doesn't matter who rules, be it the Queen or the angels."])
+      ShowText(["My life's all about the forge..."])
+      Empty([])
+
+    BranchEnd([])
+    Script(["call_synthesize(27)"])
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Lancubus>"])
+      ShowText(["Welcome to our shop, specializing in weapons and armor."])
+      ShowText(["Our stock is tailored for succubi, but is there something you'd like?"])
+      ShopProcessing([1, 466, 0, 0, false])
+      ShopItem([1, 500, 0, 0])
+      ShopItem([1, 749, 0, 0])
+      ShopItem([1, 770, 0, 0])
+      ShopItem([1, 839, 0, 0])
+      ShopItem([2, 654, 0, 0])
+      ShopItem([2, 784, 0, 0])
+      Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ShowTextAttributes(["greatorc_fc1", 0, 0, 2])
+    ShowText(["\\n<Great Orc>"])
+    ShowText(["Hey, now that's a top-tier slave you've got there! C'mon, let us have some fun with him!"])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["412"])
+    ShowTextAttributes(["inugami_fc1", 0, 0, 2])
+    ShowText(["\\n<Inugami Gyobu>"])
+    ShowText(["Rah-rah-rippa, I’m comin' for yaaa~!!"])
+    ShowTextAttributes(["greatorc_fc1", 2, 0, 2])
+    ShowText(["\\n<Great Orc>"])
+    ShowText(["Yikes! Here comes a certified nutjob!!"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["cupid_fc1", 0, 0, 2])
+    ShowText(["\\n<Cupid>"])
+    ShowText(["And then Valkyrie went all dramatic."])
+    ShowText(["\"20,000 years of rape for this sin!\" she said..."])
+    ShowTextAttributes(["leeccubus_fc1", 0, 0, 2])
+    ShowText(["\\n<Leecubus>"])
+    ShowText(["20,000 years?! Even we succubi couldn't handle that!"])
+    ShowText(["You sure that Valkyrie doesn't have a naughty streak~?"])
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["leeccubus_fc1", 2, 0, 2])
+      ShowText(["\\n<Leecubus>"])
+      ShowText(["The Queen's hired goons are such a vulgar bunch."])
+      ShowText([""])
+      ShowTextAttributes(["leeccubus_fc1", 2, 0, 2])
+      ShowText(["\\n<Leecubus>"])
+      ShowText(["But they'll beat you to a pulp if you make the Queen angry."])
+      ShowText(["That's why no one dares to oppose her..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["leeccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Leecubus>"])
+      ShowText(["Looks like the Queen's orc bodyguards have all wandered off somewhere...."])
+      ShowText([""])
+      ShowTextAttributes(["leeccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Leecubus>"])
+      ShowText(["Ugh, I hated those barbaric meatheads anyway..."])
+      ShowText(["Honestly? Good riddance!"])
+      ConditionalBranch([4, 608, 0])
+        ShowTextAttributes(["greatorc_fc1", 0, 0, 2])
+        ShowText(["\\n<Gretta>"])
+        ShowText(["Sorry for being barbaric, huh..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Lancubus>"])
+      ShowText(["Oh, you've brought your own slave along."])
+      ShowText(["So, will you be enjoying a night here with him...?"])
+      ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Lancubus>"])
+      ShowText(["Here, have a drink."])
+      ShowText(["Alcohol is a must for the night's indulgence..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Lancubus>"])
+      ShowText(["At least the angels didn't forbid drinking."])
+      ShowText(["So, it's business as usual today."])
+      Empty([])
+
+    BranchEnd([])
+    ShopProcessing([0, 427, 0, 0, true])
+    ShopItem([0, 428, 0, 0])
+    ShopItem([0, 429, 0, 0])
+    ShopItem([0, 430, 0, 0])
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 7, 2])
+      ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Lancubus>"])
+      ShowText(["She might be stingy, bossy, and totally hated, but you can't deny the Queen's got a talent for pumping cash into the village with that slave trade."])
+      ShowText([""])
+      ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Lancubus>"])
+      ShowText(["In the end, we're all living off the scraps she tosses down. Maybe whining too much just makes us look bad..."])
+      ShowText([""])
+      ConditionalBranch([4, 201, 0])
+        ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+        ShowText(["\\n<Ashel>"])
+        ShowText(["Buying and selling people... never really sat right with me."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 8, 1])
+      ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Lancubus>"])
+      ShowText(["So, what happened to the Queen in the end?"])
+      ShowText(["I heard she was tied up and tossed into the river..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([32, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([4145, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([109, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 57
+Name = "EV057"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Succubus Monk>"])
+    ShowText(["Sometimes, you find these empty Gems lying around."])
+    ShowText(["Apparently, shops can imbue them with effects in the bigger cities."])
+    Empty([])

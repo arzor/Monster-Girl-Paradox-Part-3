@@ -1,0 +1,1106 @@
+Display Name = "ハピネス村"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 416, 70, 12, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 416, 39, 32, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 416, 39, 12, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【おばさん】"])
+    ShowText(["いらっしゃい、ハピネス村の果物は美味しいよ！"])
+    ShowText(["あまあまハチミツもどうだい？"])
+    ShopProcessing([0, 301, 0, 0, false])
+    ShopItem([0, 302, 0, 0])
+    ShopItem([0, 304, 0, 0])
+    ShopItem([0, 305, 0, 0])
+    ShopItem([0, 315, 0, 0])
+    ShopItem([0, 436, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 416, 11, 32, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ルカは仲間を外に待たせ、一人で民家に入った……"])
+    ChangePlayerFollowers([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 416, 11, 12, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 416, 12, 61, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 353, 325, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 353, 325, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 353, 325, 0, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【若者】"])
+    ShowText(["世界が合一しても、ハーピーとの共存は変わらないハピネス村だ。"])
+    ShowText(["さあ、どこに行きたい？"])
+    ChangeMapDisplay([1])
+    Script(["unlimited_choices(11, [\"宿屋に行く\","])
+    ScriptMore(["\"武器・防具・道具屋に行く\",\"鍛冶屋に行く\","])
+    ScriptMore(["\"教会に行く\",\"やめる\"])"])
+    ConditionalBranch([1, 11, 0, 0, 0])
+      TransferPlayer([0, 415, 9, 50, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 1, 0])
+      TransferPlayer([0, 415, 25, 51, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 2, 0])
+      TransferPlayer([0, 415, 28, 26, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 3, 0])
+      TransferPlayer([0, 415, 16, 28, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 4, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【若者】"])
+    ShowText(["大勇者ルカ様の像が、村を見守って下さるようだぜ……"])
+    ShowText(["おっと、どこへ行きたいんだ？"])
+    ChangeMapDisplay([1])
+    Script(["unlimited_choices(11, [\"宿屋に行く\","])
+    ScriptMore(["\"武器・防具・道具屋に行く\",\"鍛冶屋に行く\","])
+    ScriptMore(["\"教会に行く\",\"やめる\"])"])
+    ConditionalBranch([1, 11, 0, 0, 0])
+      TransferPlayer([0, 415, 9, 50, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 1, 0])
+      TransferPlayer([0, 415, 25, 51, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 2, 0])
+      TransferPlayer([0, 415, 28, 26, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 3, 0])
+      TransferPlayer([0, 415, 16, 28, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 4, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1309, 0, 6, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【少年】"])
+        ShowText(["ハーピーの集落で、戦争が起きそうなんだって。"])
+        ShowText(["彼女のピッピちゃん、大丈夫かなぁ……"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1309, 0, 7, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【少年】"])
+        ShowText(["ピッピちゃんとの間に、子供ができたよ！"])
+        ShowText(["僕の人生、割とピンチになっちゃった！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【少年】"])
+      ShowText(["僕も、勇者になるんだ！"])
+      ShowText(["大勇者ルカ様みたいに、冒険の旅に出るんだよ！"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【少年】"])
+      ShowText(["でも、勇者になったら……"])
+      ShowText(["ハーピーのピッピちゃんも、退治しないといけないの？"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1305, 0, 5, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【おじさん】"])
+        ShowText(["サン・イリアあたりじゃ、魔物排斥思想がひどいとか……"])
+        ShowText(["人魚に陥落させられかけたから、仕方ないかもしれないけどね。"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【おじさん】"])
+        ShowText(["そういうのは、あんまりイリアス大陸には持ち込まないでほしいなぁ。"])
+        ShowText(["ここじゃ、人と魔物が仲良くやってるんだから。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1305, 0, 6, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【おじさん】"])
+        ShowText(["サン・イリアあたりじゃ、魔物排斥思想がひどいとか聞いてたが……"])
+        ShowText(["まさか、街ごと消し飛ばされるとはなぁ。"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【おじさん】"])
+        ShowText(["自業自得という人もいるが、ちょっとひどすぎるよ。"])
+        ShowText(["何の罪もない市民が大半だろうに……"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【おじさん】"])
+      ShowText(["平和になってから、結婚ラッシュで村中が沸き返ってるよ。"])
+      ShowText(["もう一年もしたら、ベビーブーム真っ盛りだろうな……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【青年】"])
+      ShowText(["妻と毎晩モエモエしすぎて、六つ子が生まれました。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【ハーピー】"])
+      ShowText(["今は集落で、仲間達が子供の面倒を見てくれてるわ。"])
+      ShowText(["私達は、こっちで骨休めに来たのよ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【青年】"])
+      ShowText(["妻と毎晩モエモエしすぎて、六つ子が生まれました。"])
+      ShowText(["さらに平和が来てからもモエモエし、三つ子が宿っています。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【ハーピー】"])
+      ShowText(["これで九人、ついに野球ができる人数になりましたね。"])
+      ShowText(["そろそろ控えないと、夫が少しやつれたような気がして……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1309, 0, 6, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【旅の商人】"])
+        ShowText(["困った困った、ハーピーの羽を買い付けにきたらこの騒動だ。"])
+        ShowText(["女王派と前女王派の間で、内戦が起きそうだっていうんだよ。"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【旅の商人】"])
+        ShowText(["どこもかしこも、争いばかり。"])
+        ShowText(["平和だと思ってたハーピーの集落まで、嫌になるねぇ……"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1309, 0, 7, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【旅の商人】"])
+        ShowText(["女王派と前女王派の争い、解決したらしいな！"])
+        ShowText(["和解させたのは、あの大勇者ルカだってさ！"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【旅の商人】"])
+        ShowText(["大勇者は、単に魔物を退治するだけじゃない。"])
+        ShowText(["和解させて争いを収束する事もある、まさしく平和の使者なんだ！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【旅の商人】"])
+      ShowText(["大勇者ルカの何がすごいって……"])
+      ShowText(["魔王やら邪神やらと、最終的に和解してるんだよな。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【旅の商人】"])
+      ShowText(["腕っ節が強いだけじゃない、共存の志を持っているんだ。"])
+      ShowText(["もしくは、勇者チンコがものすごいのかも。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1326, 0, 3, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【旅の戦士】"])
+        ShowText(["ここから西方……"])
+        ShowText(["滅びたはずのロストルム村に、魔物が集まっていると聞く。"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【旅の戦士】"])
+        ShowText(["中には、非常に強力な者もいるようだ。"])
+        ShowText(["くれぐれも近寄らんようにな……"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1326, 0, 4, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【旅の戦士】"])
+        ShowText(["ここから西方……"])
+        ShowText(["ロストルム村で、ラミアとスキュラが開拓を始めたようだ。"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【旅の戦士】"])
+        ShowText(["ちょっと行ってみたが、温かく「歓迎」されたよ。"])
+        ShowText(["男手が足りないらしいし、また行ってみるか……"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【旅の戦士】"])
+      ShowText(["ラミアとスキュラの開拓村であるロストルム村だが……"])
+      ShowText(["人間男性の移住も募集しているようだ。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【旅の戦士】"])
+      ShowText(["働き手なら、十分に足りているはず。"])
+      ShowText(["やはり……ゴクリ……俺も腰を落ち着けてみるか。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【衛兵】"])
+      ShowText(["私もハーピーのお嫁さんと毎晩モエモエしたいのですが……"])
+      ShowText(["臭くて汚い衛兵ですからね……モテません。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【衛兵】"])
+      ShowText(["私もハーピーのお嫁さんと毎晩モエモエしたいのですが……"])
+      ShowText(["臭くて汚い衛兵ですからね……モテません。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【衛兵】"])
+      ShowText(["私もハーピーのお嫁さんと毎晩モエモエしたいのですが……"])
+      ShowText(["臭くて汚い衛兵ですからね……平和になっても、モテません。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【衛兵】"])
+      ShowText(["イリアス大陸には、六祖も七大天使もいないんですよね？"])
+      ShowText(["四大都市みたいな、頂上対決はないんですよね？"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【衛兵】"])
+      ShowText(["でも、十六の破滅事象もいるし……"])
+      ShowText(["名もなきスラムやポルノフも壊滅したし……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【衛兵】"])
+      ShowText(["こんな時代に衛兵をやっていると、早死にするんでしょうか。"])
+      ShowText(["でも、一般市民でもあまり変わらない気がするなぁ……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【衛兵】"])
+      ShowText(["ハーピーに嫌われるのは簡単、不潔にしていればいいんです。"])
+      ShowText(["人間に馴染んだハーピーは、臭いのを特に嫌がるそうですよ。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【衛兵】"])
+      ShowText(["そういうわけで、汚らしい衛兵には香水が必須。"])
+      ShowText(["身だしなみに気を遣い、モテる男に早変わりですよ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1309, 0, 6, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【老人】"])
+        ShowText(["平和主義のハーピー達が、内戦一歩手前の状況とはのう。"])
+        ShowText(["魔界から現れた前女王とやらが、とんでもない武闘派らしい。"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【老人】"])
+        ShowText(["遠目で見た事があるが、おっぱいも大きくてのう。"])
+        ShowText(["あの谷間に包まれたまま天国に逝きたいわい……"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1309, 0, 7, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【老人】"])
+        ShowText(["ハーピー達の揉め事も、無事に収まったらしいぞ。"])
+        ShowText(["武闘派の前女王も、話せば分かるのじゃな。"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【老人】"])
+        ShowText(["遠目で見た事があるが、おっぱいも大きくてのう。"])
+        ShowText(["あの谷間に包まれたまま天国に逝きたいわい……"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【老人】"])
+      ShowText(["生きているうちに、平和をこの目で見ることができた……"])
+      ShowText(["今では、満足できる死に方を考えておるよ。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【老人】"])
+      ShowText(["争うハーピー女王と前女王の間に割り込み、四つのおっぱいに潰される――"])
+      ShowText(["それが、儂の望む最期じゃ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1336, 0, 4, 2])
+        ConditionalBranch([1, 1309, 0, 6, 2])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["【元海賊】"])
+          ShowText(["なんか、海の方から変な風が吹いてこないか？"])
+          ShowText(["嫌な感じだ、一波乱ありそうだぜ……"])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([1, 1309, 0, 7, 1])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["【元海賊】"])
+          ShowText(["海から来た奴等が、ハーピーの集落を襲ったみたいだな。"])
+          ShowText(["いったい何だったんだ……"])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1336, 0, 5, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【元海賊】"])
+        ShowText(["海に存在する恐怖の主が、消えた気がするぜ……"])
+        ShowText(["どこかの誰かが退治したんだろうか？"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【元海賊】"])
+      ShowText(["平和になったし、これで存分に海賊稼業を再開できるぜ！"])
+      ShowText(["……冗談だよ、ハハハ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【旅の戦士】"])
+      ShowText(["イリアスベルクに、伝説の鍛冶屋がいると聞いて出向いたのだが……"])
+      ShowText(["最高の使い手にしか武具は作らない、と却下されてしまったよ。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【旅の戦士】"])
+      ShowText(["最高の使い手ってのは、いったい誰なのか……"])
+      ShowText(["大勇者ルカのような英雄なんだろうな。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【旅の戦士】"])
+      ShowText(["俺も冒険者として復帰したいという気持ちと……"])
+      ShowText(["この村でのどかに暮らしたいという気持ちが入り交じっているんだ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1318, 0, 9, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【老人】"])
+        ShowText(["ちょっと前に、ミツバチの集団死が相次いでおったが……"])
+        ShowText(["世界合一後、どこかに飛び去ってしもうた。"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【老人】"])
+        ShowText(["いったい、どこに消えたのかのう。"])
+        ShowText(["ハチだけでなく、昆虫全般が減っている感じがするぞ。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1318, 0, 10, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【老人】"])
+        ShowText(["消えたミツバチも、昆虫族も……"])
+        ShowText(["いずこからともなく、みんな戻ってきおった。"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【老人】"])
+        ShowText(["いったい、何があったのやら……ミステリーじゃのう。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【老人】"])
+      ShowText(["最近は、ミツバチ達におかしな動きは見られん。"])
+      ShowText(["やはり集団死やら消失は、混沌の影響だったのかのう……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【青年】"])
+    ShowText(["忘れているかもしれないけど……"])
+    ShowText(["この木の下、通れるよ。"])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【中年】"])
+      ShowText(["魔物の中でも、男女の産み分けが出来る種は珍しいらしいな。"])
+      ShowText(["普通は、かなり上級の妖魔でないと出来ない事らしい。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【中年】"])
+      ShowText(["でも、ハーピーや人魚は男女の産み分けが簡単に出来るようだ。"])
+      ShowText(["不思議な事に、どっちも昔から人間と仲良くしてきた種族なんだよな。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【中年】"])
+      ShowText(["これ、ただの偶然なのかね？"])
+      ShowText(["それとも、そういう風に進化した的なアレかな？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【中年】"])
+      ShowText(["このハピネス村ほど、誘惑の多い村はない。"])
+      ShowText(["毎日のように、ハーピーから交尾に誘われるんだからな……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【中年】"])
+      ShowText(["淫魔の都、サン・イリアより誘惑が多いんじゃないか……？"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ConditionalBranch([1, 1309, 0, 6, 2])
+      ShowTextAttributes(["fairy_fc1", 0, 0, 2])
+      ShowText(["【妖精】"])
+      ShowText(["ハーピーちゃん達、どうなっちゃうのかな……"])
+      ShowText(["……あっ、お客さん？"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["fairy_fc1", 0, 0, 2])
+    ShowText(["【妖精】"])
+    ShowText(["フェアリーの鍛冶屋は、風とともだち。"])
+    ShowText(["風の魔力を持った武器や防具を造ってあげるよ♪"])
+    Script(["call_synthesize(5)"])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【神父】"])
+    ShowText(["木陰の教会にようこそ。"])
+    ShowText(["何のご用ですかな？"])
+    ShowChoices([["お祈りをする", "用はない"], 2])
+    When([0, "お祈りをする"])
+      ControlVariables([1002, 1002, 0, 0, 117])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【神父】"])
+      ShowText(["それでは、イリアス様に祈りましょう。"])
+      ShowText(["……ああ、この場に導きの縁を感じます。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【神父】"])
+      ShowText(["もし旅先で何かあった場合、この場に導かれるでしょう。"])
+      ShowText(["イリアス様のご加護があらん事を……"])
+      Empty([])
+
+    When([1, "用はない"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【神父】"])
+      ShowText(["イリアス様のご加護があらん事を……"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【青年】"])
+    ShowText(["妻と毎晩モエモエしすぎて、六つ子が生まれました。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【ハーピー】"])
+    ShowText(["今は集落で、仲間達が子供の面倒を見てくれてるわ。"])
+    ShowText(["私達は、こっちで骨休めに来たのよ。"])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([829, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1309, 0, 6, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【少女】"])
+        ShowText(["どうして、ハーピー同士でケンカしてるの？"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【村娘】"])
+        ShowText(["きっと、仲直りするよ。"])
+        ShowText(["またぴぃちゃん達と遊べるようになるからね。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1309, 0, 7, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【少女】"])
+        ShowText(["大勇者ルカ様が、ハーピー達を仲直りさせてくれたんだって！"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【村娘】"])
+        ShowText(["それじゃあ、教会でお祈りしようか。"])
+        ShowText(["大勇者ルカ様に、ありがとうを言わないとね。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【少女】"])
+      ShowText(["大勇者ルカ様のおかげで、世界が平和になったんだよね。"])
+      ShowText(["他の町や村にも、遊びに行けるかな……？"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【村娘】"])
+      ShowText(["ええ。イリアスベルクでも、イリアスヴィルでも……"])
+      ShowText(["サバサやグランゴルドにだって行けるわよ。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【少女】"])
+      ShowText(["すご～い！"])
+      ShowText(["ぴいちゃん達と一種に、いろんなところに遊びに行きたいな！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1309, 0, 6, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【少女】"])
+        ShowText(["どうして、ハーピー同士でケンカしてるの？"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【村娘】"])
+        ShowText(["きっと、仲直りするよ。"])
+        ShowText(["またぴぃちゃん達と遊べるようになるからね。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1309, 0, 7, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【少女】"])
+        ShowText(["大勇者ルカ様が、ハーピー達を仲直りさせてくれたんだって！"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【村娘】"])
+        ShowText(["それじゃあ、教会でお祈りしようか。"])
+        ShowText(["大勇者ルカ様に、ありがとうを言わないとね。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【少女】"])
+      ShowText(["大勇者ルカ様のおかげで、世界が平和になったんだよね。"])
+      ShowText(["他の町や村にも、遊びに行けるかな……？"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【村娘】"])
+      ShowText(["ええ。イリアスベルクでも、イリアスヴィルでも……"])
+      ShowText(["サバサやグランゴルドにだって行けるわよ。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【少女】"])
+      ShowText(["すご～い！"])
+      ShowText(["ぴいちゃん達と一種に、いろんなところに遊びに行きたいな！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1318, 0, 9, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【ハーピー】"])
+        ShowText(["この村じゃ、ミツバチがどこかに消えたって騒いでるけど……"])
+        ShowText(["ミツバチ娘も、なんかどこかに行っちゃったのよね。"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【ハーピー】"])
+        ShowText(["変異モンスターも増えてるし、なんだか嫌な感じだなぁ。"])
+        ShowText(["私のおっぱい吸っていかない？"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1318, 0, 10, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【ハーピー】"])
+        ShowText(["消えたミツバチ娘達が、あちこちで戻ってきたんだって。"])
+        ShowText(["どこで何をしてたんだろうね……？"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【ハーピー】"])
+      ShowText(["平和だからって、みんなセックスしすぎ……"])
+      ShowText(["毎晩セックス、朝もセックス、昼もセックス……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【ハーピー】"])
+      ShowText(["このままじゃ、村が赤ちゃんで溢れちゃうよぉ！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["suzume_fc1", 1, 0, 2])
+      ShowText(["【スズメ娘】"])
+      ShowText(["ちゅんちゅん！　すずめが朝をお伝えしますよ！"])
+      ConditionalBranch([1, 1309, 0, 6, 2])
+        ShowTextAttributes(["suzume_fc1", 3, 0, 2])
+        ShowText(["【スズメ娘】"])
+        ShowText(["あれ、今は昼？　夕方……？"])
+        ShowText(["集落のゴタゴタが気になって、身が入りません……"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1309, 0, 7, 1])
+        ShowTextAttributes(["suzume_fc1", 3, 0, 2])
+        ShowText(["【スズメ娘】"])
+        ShowText(["あれ、今は昼？　夕方……？"])
+        ShowText(["元々あたし、朝は苦手なんですよね。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["suzume_fc1", 2, 0, 2])
+      ShowText(["【スズメ娘】"])
+      ShowText(["平和でたるみすぎて、早起きできなくなりました……"])
+      ShowText(["今日も寝坊で、起きたら11時でしたよ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【旅の戦士】"])
+      ShowText(["この村にいると、ハーピーとハッピー♪"])
+      ShowText(["むふふふふふっ……♪"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【旅の戦士】"])
+      ShowText(["ハーピーとハッピーになって、ベィビーができた。"])
+      ShowText(["名前はもちろん、「ルカ」にするぜ！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1318, 0, 9, 2])
+        ShowTextAttributes(["dog_fc1", 0, 0, 2])
+        ShowText(["【犬娘】"])
+        ShowText(["わんわん！"])
+        ShowText(["ハチミツ、あんまり採れなくなっちゃった……"])
+        ShowTextAttributes(["dog_fc1", 0, 0, 2])
+        ShowText(["【犬娘】"])
+        ShowText(["ミツバチが、どこかに行っちゃったんだって……"])
+        ShowText(["みんなでお散歩でもしてるのかなぁ？"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1318, 0, 10, 1])
+        ShowTextAttributes(["dog_fc1", 1, 0, 2])
+        ShowText(["【犬娘】"])
+        ShowText(["わんわん！"])
+        ShowText(["ミツバチが戻ってきたんだって、よかったね！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["dog_fc1", 1, 0, 2])
+      ShowText(["【犬娘】"])
+      ShowText(["わんわん！"])
+      ShowText(["赤ちゃんいっぱい増えたら、嬉しいな！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【ハーピー】"])
+      ShowText(["ハーピーとの出会いを求めてやって来る旅人が、やたら多いよね。"])
+      ShowText(["そういうラッキーチャンスって――"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【ハーピー】"])
+      ShowText(["……実は、結構あるのよね。"])
+      ShowText(["あたし達だって、村を出入りする旅人は入念にチェックしてるし。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【ハーピー】"])
+      ShowText(["いい男がいたら、ラッキーチャンス！"])
+      ShowText(["真っ先に飛んでいって、唾つけちゃうの。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【ハーピー】"])
+      ShowText(["キミ、すごくイケてる少年勇者だけど……"])
+      ShowText(["女の妄念が雁字搦めに絡みついてるのが見えるわ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【おばさん】"])
+      ShowText(["この村にも、破滅を待ち望むとかいう狂信者が布教しに来たよ。"])
+      ShowText(["ここはハッピーな村だから、すぐさま追い出されちまったけどね。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【おばさん】"])
+      ShowText(["元から、絶望とは無縁の村だったけど……"])
+      ShowText(["平和になって以来、ハッピーが溢れすぎだね。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    Empty([])
+
+CommonEvent 57
+Name = "EV057"
+
+  Page 0
+    Empty([])
+
+CommonEvent 58
+Name = "通行不可"
+
+  Page 0
+    Empty([])

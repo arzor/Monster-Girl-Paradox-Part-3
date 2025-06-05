@@ -1,0 +1,1073 @@
+Display Name = "Colosseum"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 662, 14, 18, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 577, 1, 28, 6, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 577, 1, 28, 6, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 577, 1, 28, 6, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 577, 1, 28, 6, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Chosen Merchant>"])
+    ShowText(["Heading into the tournament, are ya? Then you'd better grab some items and get those gems ready!"])
+    ShowText([""])
+    ShowChoices([["Shop", "Ask for gem processing", "Never mind"], 3])
+    When([0, "買い物をする"])
+      ShopProcessing([0, 3, 0, 0, false])
+      ShopItem([0, 4, 0, 0])
+      ShopItem([0, 7, 0, 0])
+      ShopItem([0, 11, 0, 0])
+      ShopItem([0, 22, 0, 0])
+      ShopItem([0, 23, 0, 0])
+      ShopItem([0, 35, 0, 0])
+      ShopItem([0, 102, 0, 0])
+      ShopItem([0, 109, 0, 0])
+      ShopItem([0, 110, 0, 0])
+      ShopItem([0, 3728, 0, 0])
+      ShopItem([0, 3758, 0, 0])
+      ShopItem([0, 3812, 0, 0])
+      ShopItem([0, 3794, 0, 0])
+      ShopItem([0, 3782, 0, 0])
+      Empty([])
+
+    When([1, "秘石の加工を頼む"])
+      Script(["call_synthesize(70)"])
+      Empty([])
+
+    When([2, "用はない"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Chosen Merchant>"])
+    ShowText(["You use our gear, and you'll bag that championship for sure!"])
+    ShopProcessing([1, 82, 0, 0, false])
+    ShopItem([1, 115, 0, 0])
+    ShopItem([1, 136, 0, 0])
+    ShopItem([1, 169, 0, 0])
+    ShopItem([1, 4237, 0, 0])
+    ShopItem([1, 327, 0, 0])
+    ShopItem([1, 356, 0, 0])
+    ShopItem([1, 394, 0, 0])
+    ShopItem([1, 434, 0, 0])
+    ShopItem([1, 467, 0, 0])
+    ShopItem([1, 502, 0, 0])
+    ShopItem([1, 543, 0, 0])
+    ShopItem([1, 584, 0, 0])
+    ShopItem([1, 615, 0, 0])
+    ShopItem([1, 652, 0, 0])
+    ShopItem([1, 693, 0, 0])
+    ShopItem([1, 720, 0, 0])
+    ShopItem([1, 771, 0, 0])
+    ShopItem([1, 793, 0, 0])
+    ShopItem([1, 864, 0, 0])
+    ShopItem([1, 4788, 0, 0])
+    ShopItem([2, 440, 0, 0])
+    ShopItem([2, 100, 0, 0])
+    ShopItem([2, 535, 0, 0])
+    ShopItem([2, 161, 0, 0])
+    ShopItem([2, 687, 0, 0])
+    ShopItem([2, 228, 0, 0])
+    ShopItem([2, 750, 0, 0])
+    ShopItem([2, 826, 0, 0])
+    ShopItem([2, 323, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 30, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Warrior>"])
+      ShowText(["The tournament's almost here, and this place is hopping..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 31, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Warrior>"])
+      ShowText(["Even after the tournament's wrapped up, the crowds keep on coming..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["giriel_fc1", 0, 0, 2])
+    ShowText(["\\n<Giriel>"])
+    ShowText(["Don't be such a stickler... C'mon, let the flames of excitement ignite!!"])
+    ShowText([""])
+    ShowTextAttributes(["giriel_fc1", 0, 0, 2])
+    ShowText(["\\n<Giriel>"])
+    ShowText(["...But I'm cracking heads if anybody tries to mug or pickpocket. And both sides get punished if a fight breaks out."])
+    ShowText([""])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["170"])
+    ShowTextAttributes(["lizardthief_fc2", 2, 0, 2])
+    ShowText(["\\n<Len>"])
+    ShowText(["Guess I'd better keep it low-key around here..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 30, 2])
+      ShowTextAttributes(["giriel_fc1", 0, 0, 2])
+      ShowText(["\\n<Giriel>"])
+      ShowText(["I'm off duty on tournament day! Time to watch the matches without a care!"])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 31, 1])
+      ShowTextAttributes(["giriel_fc1", 0, 0, 2])
+      ShowText(["\\n<Giriel>"])
+      ShowText(["Good thing I was off duty on tournament day. Didn't expect all that chaos..."])
+      ShowText([""])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["445"])
+      ShowTextAttributes(["trooperloid_fc1", 2, 0, 2])
+      ShowText(["\\n<Pom>"])
+      ShowText(["Lady Uriela must've been absolutely furious. Eek, that's terrifying..."])
+      ShowText([""])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 30, 2])
+      ShowTextAttributes(["giriel_fc1", 0, 0, 2])
+      ShowText(["\\n<Giriel>"])
+      ShowText(["Man, I wanna join the tournament too! But I'm scheduled to work that day..."])
+      ShowText([""])
+      ShowTextAttributes(["giriel_fc1", 0, 0, 2])
+      ShowText(["\\n<Giriel>"])
+      ShowText(["Lady Uriela'll lose her mind if I ditch my post. Guess I've got no choice..."])
+      ShowText([""])
+      ConditionalBranch([4, 205, 0])
+        ShowTextAttributes(["levia_fc1", 0, 0, 2])
+        ShowText(["\\n<Levia>"])
+        ShowText(["You're pretty serious about your job. I wish the Navy members would take a page from your book..."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 31, 1])
+      ShowTextAttributes(["giriel_fc1", 2, 0, 2])
+      ShowText(["\\n<Giriel>"])
+      ShowText(["Tournament day was a nightmare. We let the Monster Lord's cronies slip away, and Lady Uriela punished us good..."])
+      ShowText([""])
+      ShowTextAttributes(["giriel_fc1", 2, 0, 2])
+      ShowText(["\\n<Giriel>"])
+      ShowText(["Ugh, I never wanna relive that! Don't you dare bring up the tournament around me..."])
+      ShowText([""])
+      ConditionalBranch([4, 446, 0])
+        ShowTextAttributes(["sabiriel_fc1", 2, 0, 2])
+        ShowText(["\\n<Sabiriel>"])
+        ShowText(["H-How scary..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["giriel_fc1", 0, 0, 2])
+    ShowText(["\\n<Giriel>"])
+    ShowText(["Whoa, even pilgrims are here to watch the Colosseum fights...? Don't worry, I won't snitch to the priest."])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 30, 2])
+      ShowTextAttributes(["trooperloid_fc1", 0, 0, 2])
+      ShowText(["\\n<Trooperoid>"])
+      ShowText(["Looks like this year's tournament'll be a blast. Still, I doubt we'll get to see Lady Uriela in action..."])
+      ShowText([""])
+      ConditionalBranch([4, 382, 0])
+        ShowTextAttributes(["morrigan_fc1", 0, 0, 2])
+        ShowText(["\\n<Morrigan>"])
+        ShowText(["Heh, just you wait!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 31, 1])
+      ShowTextAttributes(["trooperloid_fc1", 2, 0, 2])
+      ShowText(["\\n<Trooperoid>"])
+      ShowText(["Don't even talk about the tournament... We got hammered with punishments from hell itself..."])
+      ShowText([""])
+      ConditionalBranch([4, 444, 0])
+        ShowTextAttributes(["giriel_fc1", 2, 0, 2])
+        ShowText(["\\n<Giriel>"])
+        ShowText(["Hieeek..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 30, 2])
+      ShowTextAttributes(["kirin_fc1", 0, 0, 2])
+      ShowText(["\\n<Kirin>"])
+      ShowText(["A human warrior took the championship a few years back and used the winner's right to challenge Lady Uriela afterward..."])
+      ShowText([""])
+      ShowTextAttributes(["kirin_fc1", 0, 0, 2])
+      ShowText(["\\n<Kirin>"])
+      ShowText(["The result was beyond brutal. No winner's bothered to use their challenge rights since."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 31, 1])
+      ShowTextAttributes(["kirin_fc1", 0, 0, 2])
+      ShowText(["\\n<Kirin>"])
+      ShowText(["That kitsune who crashed the tournament looked just like Lady Tamamo of the Six Ancestors from legend."])
+      ShowText([""])
+      ShowTextAttributes(["kirin_fc1", 0, 0, 2])
+      ShowText(["\\n<Kirin>"])
+      ShowText(["Lady Uriela overwhelmed her, but the kitsune still had insane power. Who in the world was she...?"])
+      ShowText([""])
+      ConditionalBranch([4, 21, 0])
+        ShowTextAttributes(["tamamo_fc1", 3, 0, 2])
+        ShowText(["\\n<Tamamo>"])
+        ShowText(["That's... best left forgotten."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 30, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thug>"])
+      ShowText(["Win the tournament, and you get a powerful weapon. They let you pick one out of three."])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thug>"])
+      ShowText(["Plus, the champ earns the right to challenge Lady Uriela. She'll grant any wish if you beat her here... or so they say."])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thug>"])
+      ShowText(["But hardly anyone actually uses that challenge right.\nDuking it out with Lady Uriela is basically suicide."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 31, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thug>"])
+      ShowText(["Those winners and that kitsune freak... I never thought I'd see Lady Uriela fight twice."])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Thug>"])
+      ShowText(["But man, her power was unreal! There's nobody alive who can take her on fair and square!"])
+      ShowText([""])
+      ConditionalBranch([4, 382, 0])
+        ShowTextAttributes(["morrigan_fc1", 3, 0, 2])
+        ShowText(["\\n<Morrigan>"])
+        ShowText(["Damn it...! She really was a monster..."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 30, 2])
+      ShowTextAttributes(["trooperloid_fc1", 0, 0, 2])
+      ShowText(["\\n<Trooperoid>"])
+      ShowText(["I'm getting transferred to Grangold next week. They've been shuffling us around a lot lately... wonder what's up?"])
+      ShowText([""])
+      ConditionalBranch([4, 394, 0])
+        ShowTextAttributes(["astaroth_fc1", 3, 0, 2])
+        ShowText(["\\n<Astaroth>"])
+        ShowText(["Seems our incursion stirred up the Angelic Dominion quite a bit."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 31, 1])
+      ShowTextAttributes(["trooperloid_fc1", 0, 0, 2])
+      ShowText(["\\n<Trooperoid>"])
+      ShowText(["My transfer to Grangold got canceled. Something about a breakout or riot over there, so everything's in chaos."])
+      ShowText([""])
+      ConditionalBranch([4, 755, 0])
+        ShowTextAttributes(["tezcatlipoca_fc1", 5, 0, 2])
+        ShowText(["\\n<Tezcatlipoca>"])
+        ShowText(["Nyaaa!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 754, 0])
+        ShowTextAttributes(["coatlus_fc1", 5, 0, 2])
+        ShowText(["\\n<Quetzalcoatl>"])
+        ShowText(["Heheh!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 30, 2])
+      ShowTextAttributes(["tatunoko_k_fc2", 0, 0, 2])
+      ShowText(["\\n<Seahorse Air Force>"])
+      ShowText(["Team Seahorse's gonna snag that championship!"])
+      ConditionalBranch([4, 203, 0])
+        ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+        ShowText(["\\n<Tatsuko>"])
+        ShowText(["I'll be rooting for you!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 31, 1])
+      ShowTextAttributes(["tatunoko_k_fc2", 1, 0, 2])
+      ShowText(["\\n<Seahorse Air Force>"])
+      ShowText(["We lost in the tournament, but we still did great! We showed the world our aerial prowess!"])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 30, 2])
+      ShowTextAttributes(["tatunoko_k_fc2", 0, 0, 2])
+      ShowText(["\\n<Seahorse Air Force>"])
+      ShowText(["Win, and you get a legendary weapon! I hope it's a really awesome spear!"])
+      ShowText([""])
+      ConditionalBranch([4, 203, 0])
+        ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+        ShowText(["\\n<Tatsuko>"])
+        ShowText(["We'll aim for the championship!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 31, 1])
+      ShowTextAttributes(["tatunoko_k_fc2", 1, 0, 2])
+      ShowText(["\\n<Seahorse Air Force>"])
+      ShowText(["We outdid everyone's expectations, and I'm proud of us! The captain's gonna praise us big time!"])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 30, 2])
+      ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+      ShowText(["\\n<Seahorse Air Force>"])
+      ShowText(["I'm getting nervous..."])
+      ConditionalBranch([4, 203, 0])
+        ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+        ShowText(["\\n<Tatsuko>"])
+        ShowText(["I've got a blue buddy!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 31, 1])
+      ShowTextAttributes(["tatunoko_k_fc2", 0, 0, 2])
+      ShowText(["\\n<Seahorse Air Force>"])
+      ShowText(["Time for our next operation to kick off. Let's head back to the airship!"])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 30, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Nun>"])
+      ShowText(["Ahh... I'm so excited!"])
+      ConditionalBranch([4, 316, 0])
+        ShowTextAttributes(["queenelf_fc1", 1, 0, 2])
+        ShowText(["\\n<Freya>"])
+        ShowText(["Me too, I--"])
+        ShowTextAttributes(["queenelf_fc1", 0, 0, 2])
+        ShowText(["\\n<Freya>"])
+        ShowText(["No, never mind."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 31, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Nun>"])
+      ShowText(["I'm always excited!"])
+      ConditionalBranch([4, 316, 0])
+        ShowTextAttributes(["queenelf_fc1", 1, 0, 2])
+        ShowText(["\\n<Freya>"])
+        ShowText(["Me too, I--"])
+        ShowTextAttributes(["queenelf_fc1", 0, 0, 2])
+        ShowText(["\\n<Freya>"])
+        ShowText(["No, never mind."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Noble Lady>"])
+    ShowText(["I've come all the way from San Ilia. I've got a front-row seat to watch the men lose miserably... hehe."])
+    ShowText([""])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Man>"])
+    ShowText(["I'm just here to watch. I'm no good in a fight..."])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 30, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Oddsmaker>"])
+      ShowText(["Hey there, fellas! Wanna hear a hot tip for the next tournament...?"])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Oddsmaker>"])
+      ShowText(["...Wait, you're pilgrims? Yeah, that's trouble. Never mind."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 31, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Oddsmaker>"])
+      ShowText(["Hey there, fellas! Wanna hear a hot tip for the next match...?"])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Oddsmaker>"])
+      ShowText(["...Wait, you're pilgrims? Yeah, that's trouble. Never mind."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ConditionalBranch([1, 1141, 0, 30, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Commentator>"])
+      ShowText(["I'm sleeping here 'til tournament day. Zzz..."])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Commentator>"])
+      ShowText(["...You're thinking I should just sleep at home, right?\nI wanna soak in the pre-tournament vibe, y'see."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 31, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Commentator>"])
+      ShowText(["I overslept on the big day. I dozed off right here, and nobody woke me up."])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Commentator>"])
+      ShowText(["I'm so bummed I can't even get up. I'll just stay here and keep sleeping 'til I turn into an earthbound ghost..."])
+      ShowText([""])
+      ConditionalBranch([4, 210, 0])
+        ShowTextAttributes(["ghost2_fc1", 0, 0, 2])
+        ShowText(["\\n<Botan>"])
+        ShowText(["Being an earthbound's got plenty of downsides..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["giriel_fc1", 0, 0, 2])
+    ShowText(["\\n<Giriel>"])
+    ShowText(["Ever heard of scarletite? It's known as the toughest metal in the Angelic Dominion."])
+    ShowText([""])
+    ShowTextAttributes(["giriel_fc1", 0, 0, 2])
+    ShowText(["\\n<Giriel>"])
+    ShowText(["They say Ilias uses it for legendary gear... Weapons forged from that scarletite are no joke."])
+    ShowText([""])
+    ShowTextAttributes(["giriel_fc1", 0, 0, 2])
+    ShowText(["\\n<Giriel>"])
+    ShowText(["Only Seraph-level angels ever get to wield that stuff. No way a grunt like me gets anywhere near it..."])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 27
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 28
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 29
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 30
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 31
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 32
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 33
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 34
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 35
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 36
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 37
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 38
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 39
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 40
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 41
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 42
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 43
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 44
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 45
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 46
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 47
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 48
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 49
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 50
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 51
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 52
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 53
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 54
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 662, 13, 18, 0, 0])
+    Empty([])
+
+CommonEvent 56
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 57
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 58
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 59
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 60
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 61
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 62
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 63
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 64
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 65
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 66
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 67
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 68
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 69
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 70
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 71
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 72
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 73
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 74
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 75
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 76
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 77
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 78
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 79
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 80
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 81
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 82
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 83
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 84
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 85
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 86
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 87
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 88
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 89
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 90
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 91
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 92
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 93
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 94
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 95
+Name = "通行止め"
+
+  Page 0
+    Empty([])
+
+CommonEvent 96
+Name = "EV096"
+
+  Page 0
+    ShowTextAttributes(["monk_sucubuss_fc1", 0, 0, 2])
+    ShowText(["\\n<Succubus Monk>"])
+    ShowText(["Word on the street is you'll score a special item for switching classes if you beat 40 Battle Fuckers."])
+    ShowText([""])
+    Empty([])

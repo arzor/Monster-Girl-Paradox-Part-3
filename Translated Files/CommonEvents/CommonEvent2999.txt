@@ -1,0 +1,21 @@
+CommonEvent 2999
+Name = "コラボ敗北後処理"
+
+  999([2999])
+  ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+  ControlSwitches([31, 39, 1])
+  ControlSwitches([97, 97, 1])
+  ControlSwitches([22, 22, 1])
+  ControlSwitches([89, 89, 1])
+  ChangeSaveAccess([1])
+  RecoverAll([0, 0])
+  ChangeTransparency([1])
+  ChangePlayerFollowers([1])
+  ConditionalBranch([0, 8, 1])
+    Script(["forced_transfer(154,18,52)"])
+    ChangePlayerFollowers([1])
+    Empty([])
+
+  BranchEnd([])
+  Script(["$game_map.screen.clear"])
+  Empty([])

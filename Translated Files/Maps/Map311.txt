@@ -1,0 +1,589 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 310, 22, 10, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 310, 28, 16, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 310, 15, 32, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Innkeeper>Will you be staying the night with us? It's 5G.\\$"])
+    ShowChoices([["Yes", "No"], 2])
+    When([0, "Yes"])
+      ConditionalBranch([7, 5, 0])
+        ChangeGold([1, 0, 5])
+        FadeoutScreen([])
+        PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+        Wait([150])
+        RecoverAll([0, 0])
+        FadeinScreen([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Innkeeper>Oh my, you don't have enough money..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    When([1, "No"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Alfonso>Oh, hi Marcellus...\nOh, you're not him?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>No, but you're the legendary chef Alfonso?!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Alfonso>Some call me that, yes.\nShall I whip something up since you're here?"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 7, 0, 2])
+        ShowText(["\\n<Alice>I'm so glad we came..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+        ShowText(["\\n<Ilias>That would be delightful, thanks."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 64, 0])
+        ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+        ShowText(["\\n<Teeny>I need to study how a legendary chef works..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Alfonso>All right then, give me a few minutes..."])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=29, @parameters=[4])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=29, @parameters=[4])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      FadeoutScreen([])
+      Wait([60])
+      FadeinScreen([])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=29, @parameters=[4])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=25, @parameters=[])\", \"RPG::MoveCommand(@code=38, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=29, @parameters=[4])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=25, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=38, @parameters=[])"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Alfonso>Here's a salad made with vegetables from my own garden. My apologies for serving you something so simple."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka and his companions eat the salad..."])
+      PlaySE(["RPG::SE(@name=\"Saint6\", @pitch=50, @volume=80)"])
+      ChangeParallaxBack(["BlueSky", true, false, 5, 0])
+      Wait([180])
+      ChangeParallaxBack(["", false, false, 0, 0])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 7, 0, 2])
+        ShowText(["\\n<Alice>Delicious! ♪"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+        ShowText(["\\n<Ilias>Magnificent...♪ Let's just say your place in Heaven is guaranteed."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 64, 0])
+        ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+        ShowText(["\\n<Teeny>How many years would I have to practice to come close to this...?"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Alfonso>Hahaha! I may have retired, but I haven't lost my touch."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Alfonso>I have but one regret, which is that I always worked alone and never took on an apprentice."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Alfonso>Now there's no one to inherit this \\C[3]\\ii[616]\\C[0] of mine. I think I'll just end up burying it at the base of the tree in front of my house before I die."])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+      ControlSwitches([2052, 2052, 0])
+      ConditionalBranch([8, 616])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>The \\ii[616] at the base of a tree...\nMaybe if we look in our world..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Alfonso>I have but one regret, which is that I always worked alone and never took on an apprentice."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Alfonso>Now there's no one to inherit this \\C[3]\\ii[616]\\C[0] of mine. I think I'll just end up burying it at the base of the tree in front of my house before I die."])
+      ConditionalBranch([8, 616])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>The \\ii[616] at the base of a tree...\nMaybe if we look in our world..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Woman>Things have been odd around here ever since that Tartarus rift appeared five years ago. There are regular tremors and earthquakes, and the crops grow with a vengeance."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Woman>I'm happy about the crops, except that lots of odd vegetables are springing up among them. Their colors and shapes are off, as if two different vegetables mixed together."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Woman>I have a feeling that these are signs of bad things to come, and I know I'm not the only one in the village thinking the same thing."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["41"])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["\\n<Promestein>Abnormal crops, you say? I'll have to get a few samples before we leave..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ControlVariables([1014, 1014, 0, 0, 2])
+    ControlVariables([1018, 1018, 0, 0, 1])
+    ControlVariables([1001, 1001, 0, 0, 11])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Chief>Oh, is that you, Marcellus? You seem quite different once again..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Chief>...hmm? You're not him? You bear quite the resemblance though..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Chief>The villagers saw more of him than me since I missed him the first time he visited."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Chief>We did meet the second time, however. I'll never forget that day he came knocking at my door."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Chief>We talked about Tartarus and the recent odd events. He was especially interested in the spate of earthquakes and the weird crops."])
+    ConditionalBranch([4, 41, 0])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["\\n<Promestein>I'm interested in them too. I'd love to acquire any data you have on the abnormal increase in seismic activity."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Chief>There was another thing he mentioned too."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Chief>He said something big might happen to the village within the next few years and that we should leave before then."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>Something big in the next few years...? Wait, was he talking about whatever disaster ends up destroying this village?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Something big in the next few years...? Wait, was he talking about whatever disaster ends up destroying this village?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>But how would Marcellus from this time period know about that? Could he really predict the village's destruction?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>But how would Marcellus from this time period know about that? Could he really predict the village's destruction?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Chief>Destruction? Please don't give me a heart attack... Recent events have scared all of us enough already."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Chief>Oh, Marcellus left a letter with me. He wanted me to deliver it to an acquaintance of his if he ever showed up here."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Someone who might come to this village? Who in the world would he be leaving a letter for?"])
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Chief>A young man named Luka."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>What?!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>That's ridiculous! Luka shouldn't even be born yet!"])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>How could Marcellus possibly know of you? And then he even left you a letter...?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>That's absurd and impossible! Luka isn't even born yet!"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>How could Marcellus possibly know of you? And then he even left you a letter..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Sir, I'm Luka! Can you please show me that letter?!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Chief>Well I'll be, you're Luka? This letter is all yours then..."])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ChangeItems([510, 0, 0, 1])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Luka unfolds the letter!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"To my son, Luka.\nIf you're reading this letter, it means that I haven't returned to Iliasville.\""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>My son, Luka?! But he isn't even my father yet..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"Most likely, Lucifina isn't with you anymore either. If she were, she'd never allow you to leave on an adventure. Please forgive your parents for not being there for you at such a crucial stage of your life.\""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>No, this letter was definitely written by my father!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>So your actual father wrote it, not the Marcellus from this time? Our world's Marcellus came here then?!"])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>That certainly explains why he seemed to have changed after only a week. The second Marcellus was a different person altogether."])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>The first Marcellus was the fresh adventurer from this world, then a week later, our Marcellus showed up..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>So your actual father wrote it, not the Marcellus from this time? Our world's Marcellus came here then?!"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>That certainly explains why he seemed to have changed after only a week. The second Marcellus was a different one altogether."])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The first Marcellus was the fresh adventurer from this world, then a week later, our Marcellus showed up..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"Seek Micaela's help, Luka. She lives in the hidden village of Enrika, deep inside the Lost Woods. Micaela should be able to help you, if anyone can.\""])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Micaela..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"I'm determined to drive out the darkness that's covering the entire world. Go to Micaela and protect your world. Know that I'm proud of you for making it this far.\""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"-your father, Marcellus.\""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["That's the end of the letter."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Father..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>So if the Marcellus from our world wrote this letter, that must mean he can open spacetime doors too."])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>Why do humans have that power?\nAnd what's he even trying to do?"])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>At any rate, it's been a month since he left that letter. It will probably be difficult to track him down now."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>So if the Marcellus from our world wrote this letter, that must mean he can open spacetime doors too."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Why would a normal human like him have that power? And what is his objective?"])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>At any rate, a month has passed since he left that letter. It will probably be difficult to track him down now."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>I doubt he's even in this world anymore. Did he return to ours, or go to a different world entirely?"])
+    PlayBGM(["RPG::BGM(@name=\"mura2\", @volume=100, @pitch=100)"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>Luka, do you know anything about this Micaela person? Marcellus wants us to meet with her, but..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>No, this is the first time I've heard her name. An old friend of my father's, maybe?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Meet with Micaela...\nI've never heard of her before."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>We know where we're going next then. Enrika, where this Micaela is supposed to be."])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>We'll need to go through the Lost Woods to reach Enrika. The woods span the area west of Iliasville."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>I know Micaela. She is your mother Lucifina's older sister..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>She's my aunt then?! I had no idea I still had family..."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>...it looks like we'll have to pay her a visit. To be honest, I wanted to avoid her."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>If she sees me like this, she might attack me... Luka, protect me if it comes to that."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>She'd attack you on sight?\nIs she really that scary?"])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>The scariest. She may unsheathe the Sword of the Heavens itself on me. Even if you were trying to protect me..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>What would happen?"])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>The two of us would be vaporized in a column of light... Enrika and a few surrounding kilometers of forest would probably be reduced to ash too."])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+        ShowText(["\\n<Sonya>Luka's aunt is crazy!"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>So that's why I don't want to meet with her. With me as weak as I am now, I'll be in big trouble..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>We have to go see her though. Since my father mentioned her in his letter, she must know something."])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+        ShowText(["\\n<Sonya>He wrote that she's in Enrika, which is through the Lost Woods. Those are just west of Iliasville."])
+        ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+        ShowText(["\\n<Sonya>To think that after traveling all over two different worlds, the person we need to speak to is so close to where we started..."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Micaela is in the hidden village of Enrika, west of Iliasville."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>To the hidden village of Enrika then! The Lost Woods are full of powerful monsters, but nothing we can't handle!"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>My whole life I was told never to go in there, and now we're stuck having to explore the place as part of our trip."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 41, 0])
+      ShowTextAttributes(["stein_fc2", 1, 0, 2])
+      ShowText(["\\n<Promestein>So we're going back to your world now? I get to explore so many different worlds! I'm so excited!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 79, 0])
+      ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+      ShowText(["\\n<Nuruko>Kyu kyu kyu!"])
+      Empty([])
+
+    BranchEnd([])
+    Script(["gain_medal(15)"])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Chief>It sounds like you all are caught up in some serious matters. I suppose I can't pretend that your warning about the village being destroyed was a joke anymore."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Chief>We'll prepare an evacuation plan in case of emergency. If something were to happen, we need to be able to respond immediately."])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Gadabout>If you want to use pleasure attacks, being a Prostitute is perfect. You can change your job to that once you master Gadabout."])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["dog_fc1", 0, 0, 2])
+    ShowText(["\\n<Traveling Dog Girl>Do you wonder whether you should equip your beast-type companions with fangs or claws? Fangs have high attack power, but claws have high agility."])
+    ShowTextAttributes(["dog_fc1", 0, 0, 2])
+    ShowText(["\\n<Traveling Dog Girl>Biting attacks make use of attack power, but scratching attacks need both attack power and agility."])
+    ShowTextAttributes(["dog_fc1", 0, 0, 2])
+    ShowText(["\\n<Traveling Dog Girl>Therefore, it's best to equip fangs if you like to fight with biting attacks. Fangs can also have special effects that strengthen your biting attacks."])
+    ShowTextAttributes(["dog_fc1", 0, 0, 2])
+    ShowText(["\\n<Traveling Dog Girl>If you want to use scratching attacks, go with claws that increase attack power and agility. Fist weapons also use attack power and agility so they're in the same category."])
+    ShowTextAttributes(["dog_fc1", 1, 0, 2])
+    ShowText(["\\n<Traveling Dog Girl>If you're going to use a variety of skills, you can choose either weapon. If you mainly focus on martial arts, definitely go with claws♪"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["71"])
+    ShowTextAttributes(["okami_fc1", 2, 0, 2])
+    ShowText(["\\n<Amara>That's so complicated...\nLuka, I'll leave it up to you!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Thief>If you master Hunter, you can become a Monster Tamer. With one of those in the party, you increase your chances of getting monsters to be your companions."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Thief>After I finish Thief I plan to change to Hunter. It'll be a lot easier to travel if I can add more companions."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["74"])
+    ShowTextAttributes(["usagi_fc1", 0, 0, 2])
+    ShowText(["\\n<Barbun>Of course, there are other advanced employment opportunities for Hunters. What's a girl to do..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Warrior>The party of three staying here today has horrible balance. Are you properly taking balance into consideration when forming your party?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Warrior>A common mistake is forming a party with all physical attacking types. You should really include one or two healers and someone with magical attacks."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Warrior>It's good to have someone like a Thief or Merchant as a support, too. Anyway, choose whatever is best for your style of adventuring."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["66"])
+    ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+    ShowText(["\\n<Vanilla>I've got Merchant covered!"])
+    ExitEventProcessing([])
+    Label(["72"])
+    ShowTextAttributes(["phoenix_fc1", 0, 0, 2])
+    ShowText(["\\n<Mini>Playing around as a Gadabout isn't very useful, but once I can change to Dancer or Minstrel, I'll be a great support!"])
+    ShowTextAttributes(["phoenix_fc1", 1, 0, 2])
+    ShowText(["\\n<Mini>...that's what the Don told me anyway. I'm useless for now, but I want to keep at it."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([431, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([379, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([756, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([393, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([302, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([798, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([313, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Cat>Mrrrrow..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["70"])
+    ShowTextAttributes(["nezumi_fc1", 2, 0, 2])
+    ShowText(["\\n<Ratty>Eeek, a cat! Save me!"])
+    ExitEventProcessing([])
+    Empty([])

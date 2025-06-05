@@ -1,0 +1,25 @@
+CommonEvent 113
+Name = "転職の書"
+
+  999([113])
+  ShowChoices([["Change Jobs and Races", "Organize Party", "Never Mind"], 3])
+  When([0, "転職・転種"])
+    Script(["SceneManager.call(Scene_JobChange)"])
+    Wait([1])
+    RecoverAll([0, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  When([1, "パーティ編成"])
+    GatherFollowers([])
+    ChangeState([0, 1, 1, 1])
+    Script(["call_party_edit"])
+    ExitEventProcessing([])
+    Empty([])
+
+  When([2, "何もしない"])
+    ExitEventProcessing([])
+    Empty([])
+
+  ChoicesEnd([])
+  Empty([])

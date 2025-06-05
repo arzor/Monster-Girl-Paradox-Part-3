@@ -1,0 +1,1363 @@
+Display Name = "Magistea Village"
+Parallax Name = "Sunset"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 47, 294, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 47, 294, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 48, 294, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 226, 12, 74, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 226, 11, 98, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 226, 28, 98, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ConditionalBranch([1, 1029, 0, 0, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This door is firmly closed..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1029, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This door is firmly closed..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([5221, 5221, 0])
+    ControlSwitches([100, 100, 0])
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ChangeMapDisplay([0])
+    TransferPlayer([0, 359, 39, 38, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>The opposition's assault was intense... But, we are mages, so we are beyond normal humans."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>I'm glad there wasn't much damage... This time, it's our turn to attack their headquarters!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["529"])
+    ShowTextAttributes(["sara_fc1", 4, 0, 2])
+    ShowText(["\\n<Sara>We have to do something before they both clash at full force..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1029, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【魔導師】"])
+      ShowText(["今度は、私がレジスタンスになるわ。"])
+      ShowText(["地下に潜伏してでも、ルシア達と戦い続けるわよ……！"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2097, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>It appears that Lucia, the opposition's leader, was defeated."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>She used to be Lady Lily's closest friend, and yet... I wonder how things turned out this way."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["163"])
+      ShowTextAttributes(["lily_fc1", 5, 0, 2])
+      ShowText(["\\n<Lily>Lucia determined that our power was responsible for the massacre. She was unable to bear the guilt of killing those men..."])
+      ShowTextAttributes(["lily_fc1", 5, 0, 2])
+      ShowText(["\\n<Lily>All of this was because she was a very kind girl..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2096, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>This time, I'm going to join the resistance. I'll hide in the basement and continue the fight against Lucia and the others!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 226, 13, 45, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 226, 57, 18, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Luka leaves his party members outside and enters the house alone..."])
+    ChangePlayerFollowers([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 226, 62, 42, 0, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 226, 64, 65, 0, 0])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>Until recently, witches were oppressed in this village. Well, that was really just an excuse to persecute women..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>Men justified their violence towards women with tradition and other nonsense... Over many long years, we were continuously abused."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>The one who has saved us from that life was the daughter of our lord, Lady Lily. She granted everyone tentacle magic, allowing us to change the status quo."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["72"])
+    ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+    ShowText(["\\n<Mini>This is a bad town... It's badder than Don."])
+    ExitEventProcessing([])
+    Label(["118"])
+    ShowTextAttributes(["meia_fc1", 3, 0, 2])
+    ShowText(["\\n<Meia>Then if Lily disappears, everything will..."])
+    ExitEventProcessing([])
+    Label(["529"])
+    ShowTextAttributes(["sara_fc1", 4, 0, 2])
+    ShowText(["\\n<Sara>......"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1029, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【魔導師】"])
+      ShowText(["リリィ様は伏せっておられるわ。"])
+      ShowText(["いくら内紛を収めるためでも、乱暴な話よ……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2097, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>Lady Lily has left on a journey, hasn't she? I know, it's because there are weak people to save outside of this village..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["163"])
+      ShowTextAttributes(["lily_fc1", 3, 0, 2])
+      ShowText(["\\n<Lily>You are all already strong enough. Even without me in the village, you should be fine."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2096, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>Why did Lady Lily..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowPicture([5, "80_wormv_st02", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["wormv_fc1", 1, 0, 2])
+    ShowText(["\\n<Village Woman>Oh, travelers... There is nothing of note in this village, but please take your time."])
+    ConditionalBranch([1, 1029, 0, 2, 2])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+        ShowText(["\\n<Sonya>W-what is that arm?"])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>W-what's with that arm?"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["wormv_fc1", 1, 0, 2])
+      ShowText(["\\n<Village Woman>Ufufu... this is proof that I was granted power by Lady Lily. I am very grateful to her."])
+      Script(["actor_label_jump"])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Label(["96"])
+      ShowTextAttributes(["delh_b_fc1", 0, 0, 2])
+      ShowText(["\\n<Marion>It appears to be similar to my tentacle summoning. To think humans would use magic that makes tentacles dwell in their bodies..."])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Label(["116"])
+      ShowTextAttributes(["iso_fc1", 0, 0, 2])
+      ShowText(["\\n<Isabelle>Humans with tentacles sure are unusual..."])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1029, 0, 7, 0])
+      ShowTextAttributes(["wormv_fc1", 2, 0, 2])
+      ShowText(["【村の女性】"])
+      ShowText(["黒づくめに眼鏡の男が、リリィ様を叩きのめしたのです。"])
+      ShowText(["村の内紛は落着しましたが、あの男はいったい……"])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([5, "80_wormv_st02", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ConditionalBranch([0, 2097, 0])
+      ShowTextAttributes(["wormv_fc1", 1, 0, 2])
+      ShowText(["\\n<Village Woman>Thanks to you, the opposition has been destroyed. I thank you from the bottom of my heart."])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2096, 0])
+      ShowTextAttributes(["wormv_fc1", 2, 0, 2])
+      ShowText(["\\n<Village Woman>The entire village is nursing Lady Lily. This village needs her..."])
+      Script(["actor_label_jump"])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Label(["167"])
+      ShowTextAttributes(["lusia_fc1", 2, 0, 2])
+      ShowText(["\\n<Lucia>I would like for Lily to once again become this village's hope, just as she was until now... but, from now on, without resorting to tentacle magic."])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ConditionalBranch([1, 1029, 0, 0, 0])
+      EraseEvent([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1029, 0, 1, 0])
+      ControlVariables([1029, 1029, 0, 0, 2])
+      ShowTextAttributes(["sara_fc1", 2, 0, 2])
+      ShowText(["\\n<Sara>We've finally arrived in Magistea Village. For now, let's go see its lord, Lily."])
+      SetMoveRoute([16, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>To think Lady Sara herself would come from Sabasa... However, it appears that you people from the capital have misunderstood us."])
+      ShowTextAttributes(["sara_fc1", 4, 0, 2])
+      ShowText(["\\n<Sara>Misunderstood?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>You think that we are old-fashioned and oppress the villagers, and that we all study unseemly magic."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>That is nothing but discrimination towards us. People from the capital see us as an insular and antiquated people, right?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>Because we are viewed with such prejudice, it leads to all our actions being seen with suspicion.... Am I wrong?"])
+      ShowTextAttributes(["sara_fc1", 2, 0, 2])
+      ShowText(["\\n<Sara>Arguing about whether or not it's prejudice is a pointless debate. That's why the capital doesn't interfere with people's thoughts and beliefs."])
+      ShowTextAttributes(["sara_fc1", 2, 0, 2])
+      ShowText(["\\n<Sara>We're dealing with you from an exclusively legal viewpoint. The problem is that there are reports of instances of oppression in this village and of armed conflict between villagers."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>Well, in that case, I see why you'd have to come and investigate. Please explore the village and see the truth for yourselves."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>Listen to our villagers' voices without any prejudice. If you do, you should understand that Lady Lily isn't wrong."])
+      ShowTextAttributes(["sara_fc1", 0, 0, 2])
+      ShowText(["\\n<Sara>...In that case, we'll inspect the village. After that we will visit Lily. Is that acceptable?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>We will give you our full cooperation. Please, make a fair judgment."])
+      SetMoveRoute([16, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Good grief, looks like this'll be a lot of trouble... Too bad we can't just go in and beat up the villain."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>This sounds quite troublesome... Can't we just go in and beat Lily up to resolve everything?"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 129, 0])
+        ShowTextAttributes(["brunhild_fc1", 0, 0, 2])
+        ShowText(["\\n<Hild>We can't beat them up...? Then there's no work for Hild..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 79, 0])
+        ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+        ShowText(["\\n<Nuruko>Kyu..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["sara_fc1", 0, 0, 2])
+      ShowText(["\\n<Sara>I don't know if we can completely trust what that mage said... but the conflict between the old-fashioned lord and her opposition can't be resolved that simply."])
+      ShowTextAttributes(["sara_fc1", 0, 0, 2])
+      ShowText(["\\n<Sara>She has a stronger backing than I expected... In which case, just eliminating her may not resolve the problem."])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>A successor would appear, and the problems would resurface... Which means we have to do something about the root of the problem."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>If a successor appears, the situation will repeat itself... It looks like we have to do something about the root of the problem."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>These kinds of problems arise from the hearts of the populace. Rather than a specific individual, we need to examine their roots."])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>However, since it's a problem with their mindset, resolving it will take time. The capital, too, has to have patience and perseverance."])
+        ShowTextAttributes(["sara_fc1", 3, 0, 2])
+        ShowText(["\\n<Sara>Those sound an awful lot like the thoughts of a ruler... Did you study politics or something?"])
+        ShowTextAttributes(["alice_fc5", 1, 0, 2])
+        ShowText(["\\n<Alice>Of course. I am the Monster Lord. Such knowledge was hammered into me by a certain furball."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["\\n<Ilias>If a successor appears, we just have to destroy them as well. If we eradicate all of them along with their roots, the problem will be completely resolved."])
+        ShowTextAttributes(["sara_fc1", 4, 0, 2])
+        ShowText(["\\n<Sara>If you were a queen, the police would likely have all the power... Your nation would be controlled via tyranny and reigns of terror."])
+        ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+        ShowText(["\\n<Ilias>Wha...?!"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Anyway, let's first listen to what the people have to say, and, after that, we can go to Lily's mansion."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>I'm serving as the village guide right now. So... where do you need to go?"])
+    Script(["unlimited_choices(11, [\"Inn\","])
+    ScriptMore(["\"Item Shop\",\"Lily's Mansion\","])
+    ScriptMore(["\"Nowhere\"])"])
+    ConditionalBranch([1, 11, 0, 0, 0])
+      TransferPlayer([0, 224, 41, 53, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 1, 0])
+      TransferPlayer([0, 224, 46, 34, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 2, 0])
+      TransferPlayer([0, 224, 38, 17, 2, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 3, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>Those men who kept hurting women for all that time...\nIt's best not to say what happened to them."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>The only remaining men are those who were compassionate to women even during the era of oppression. I don't have much to say about that."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>For a long time, the seeds of resentment have been sprouting inside this village's women. They just reaped what they sowed..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["74"])
+    ShowTextAttributes(["usagi_fc1", 4, 0, 2])
+    ShowText(["\\n<Barbun>That's a horrible story..."])
+    ExitEventProcessing([])
+    Label(["75"])
+    ShowTextAttributes(["hituzi_fc1", 2, 0, 2])
+    ShowText(["\\n<Mary>That's unusual... This story made me sober up."])
+    ExitEventProcessing([])
+    Label(["163"])
+    ShowTextAttributes(["lily_fc1", 3, 0, 2])
+    ShowText(["\\n<Lily>This story is already over. And I won't let it be repeated anywhere else in the world..."])
+    ExitEventProcessing([])
+    Label(["167"])
+    ShowTextAttributes(["lusia_fc1", 2, 0, 2])
+    ShowText(["\\n<Lucia>The inverted order has given birth to tragedy... And tentacle magic fulfilled it."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>There is no church in this village. After all, the Goddess didn't save us."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>The one who saved us and leads us is Lady Lily. SHE is our goddess."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["121"])
+    ShowTextAttributes(["page65537_fc1", 2, 0, 2])
+    ShowText(["\\n<Cornelia>The Ilias faith hasn't acquired a foothold in this village. What those girls needed was physical salvation..."])
+    ExitEventProcessing([])
+    Label(["531"])
+    ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+    ShowText(["\\n<King of San Ilia>How powerless we are... We should have been the ones to help them."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Girl>Soon I'll be granted power by Lady Lily!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["88"])
+    ShowTextAttributes(["jack_fc1", 0, 0, 2])
+    ShowText(["\\n<Pumpkin>You'll grow tentacles, right? You better think this over carefully..."])
+    ExitEventProcessing([])
+    Label(["98"])
+    ShowTextAttributes(["minikani_fc1", 2, 0, 2])
+    ShowText(["\\n<Amy>You shouldn't. Tentacles are gross..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1029, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【少女】"])
+      ShowText(["リリィ様、旅の不審者にやっつけられちゃった……"])
+      ShowText(["あたし、力をもらえないのかな。"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2097, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Girl>Looks like lady Lily will be busy for a while. When will I get my power...?"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2096, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Girl>They say tentacle magic is no good any more... I won't be given my power?"])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["141"])
+      ShowTextAttributes(["mino_fc1", 0, 0, 2])
+      ShowText(["\\n<Mina>Train your body instead of resorting to magic! And eat MEAT!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Woman>Lady Lily's mansion is the northernmost building of this village. If you go straight north, following this road, you'll reach it."])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1029, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【村の女性】"])
+      ShowText(["リリィ様のお屋敷は、この村の最北です。"])
+      ShowText(["しかしリリィ様は、ずっと伏せっておられますが……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2097, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Village Woman>Lady Lily's mansion is the northernmost building of this village. She's left on a journey, and is currently absent..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["163"])
+      ShowTextAttributes(["lily_fc1", 3, 0, 2])
+      ShowText(["\\n<Lily>Fufu, I'm right here. I leave the mansion's management to you. There are various things inside of it, after all..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Village Woman>Leave it to us. We are taking shifts to manage it."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2096, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Village Woman>Lady Lily's mansion is the northernmost building of this village. However, Lady Lily is currently unwell..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>There are surely other people out in the world who are oppressed like we were. Saving them is our duty."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>To grant them the power to break free... Lady Lily intends to spread the power of tentacle magic all over the world."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["62"])
+    ShowTextAttributes(["gob_fc1", 3, 0, 2])
+    ShowText(["\\n<Gob>Spread it all over the world? I don't want everyone to be tentacle-armed..."])
+    ExitEventProcessing([])
+    Label(["82"])
+    ShowTextAttributes(["suzume_fc1", 3, 0, 2])
+    ShowText(["\\n<Chirp>I want to become strong too, but tentacle arms are a bit..."])
+    ExitEventProcessing([])
+    Label(["163"])
+    ShowTextAttributes(["lily_fc1", 3, 0, 2])
+    ShowText(["\\n<Lily>I leave protecting this village to you."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>Yes, we shall await your return."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1029, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【魔導師】"])
+      ShowText(["我々の宿願が、断たれてしまうなんて……"])
+      ShowText(["虐げられた者達を、救わなければないのに……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2097, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>The time to spread tentacle magic has finally come. Following the example of Lady Lily, I also intend to depart on a journey."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2096, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>Our purpose and desire has been rejected... Even though we have to save the oppressed..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["167"])
+      ShowTextAttributes(["lusia_fc1", 2, 0, 2])
+      ShowText(["\\n<Lucia>I'm sure Lily isn't the only one who wants to assuage her guilt for causing a massacre by saving others..."])
+      ShowTextAttributes(["lusia_fc1", 2, 0, 2])
+      ShowText(["\\n<Lucia>You need to properly face what you have done. Of course, I'm no exception to that either..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Woman>I want to save oppressed people all over the world, not just this village. That is Lady Lily's ideal."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["26"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>People who say they want to save others shouldn't be trusted. ...Of course, I am an exception to that."])
+    ExitEventProcessing([])
+    Label(["68"])
+    ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+    ShowText(["\\n<Papi>So, she's a good person, right?!"])
+    ExitEventProcessing([])
+    Label(["136"])
+    ShowTextAttributes(["elf_fc1", 0, 0, 2])
+    ShowText(["\\n<Claudia>That's shady..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1029, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【村の女性】"])
+      ShowText(["リリィ様の夢は断たれました。"])
+      ShowText(["力は封じられ、二度と魔導の力は使えないでしょう。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【村の女性】"])
+      ShowText(["ああ、なんとおいたわしい……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2097, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Village Woman>Lady Lily... she has finally departed on a journey to save the oppressed all over the world."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["163"])
+      ShowTextAttributes(["lily_fc1", 3, 0, 2])
+      ShowText(["\\n<Lily>Yes, to save all of the weak... I need to grant them power."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2096, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Village Woman>Lady Lily's dream has been rejected. Her power was sealed, and she most likely won't be able to use magic any more."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Village Woman>Ahhh, it's heartrending..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>Even mages plow fields sometimes. ...Is that surprising?"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["61"])
+    ShowTextAttributes(["mimizu_fc1", 0, 0, 2])
+    ShowText(["\\n<Mimi>*dig dig* *digs a hole*..."])
+    ShowTextAttributes(["mdg_fc1", 0, 0, 2])
+    ShowText(["\\n<Mandragora>Hello. I was called upon by a witch. I'll give any vandals a harsh lesson..."])
+    ShowTextAttributes(["mdg_fc1", 2, 0, 2])
+    ShowText(["\\n<Mandragora>AAaAA AAAaAaAA AAAAAAAAAAAA!!!"])
+    ShowTextAttributes(["mimizu_fc1", 2, 0, 2])
+    ShowText(["\\n<Mimi>NOOO!"])
+    PlaySE(["RPG::SE(@name=\"Paralyze3\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Mimi was paralyzed!"])
+    ExitEventProcessing([])
+    Label(["119"])
+    ShowTextAttributes(["page17_fc1", 0, 0, 2])
+    ShowText(["\\n<Annie>Even witches can't live on air..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>In this village, we carry out our duties in strict accordance to law. Ergo, no one was charged with the crime of abuse."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>But I feel like the law has its limits. The current law didn't save those women... Nor those men."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["529"])
+    ShowTextAttributes(["sara_fc1", 4, 0, 2])
+    ShowText(["\\n<Sara>There is no perfect law in this world. Still, we have to comply to it..."])
+    ExitEventProcessing([])
+    Label(["531"])
+    ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+    ShowText(["\\n<King of San Ilia>People do not exist for the sake of law, it is law that exists for the sake of people. That is why law is precious."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Woman>I love farm work. I want to calmly live like this for my entire life..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["80"])
+    ShowTextAttributes(["orc_fc1", 0, 0, 2])
+    ShowText(["\\n<Hip>A drove of pigs is charging towards this peaceful village! ...It doesn't feel like one actually would, does it?"])
+    ExitEventProcessing([])
+    Label(["140"])
+    ShowTextAttributes(["taran_fc1", 0, 0, 2])
+    ShowText(["\\n<Rachura>It would be nice if you could live calmly..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>Ever since Lily's uprising, this village has been dominated by witches. Of course, if you consider what happened to the men, it's not like everything is perfect."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>But... we couldn't do anything else. The abuse the women of this village suffered was unnatural."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>People who came here from the city probably wouldn't understand. What the people of this land did was..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["125"])
+    ShowTextAttributes(["grizzly_fc1", 2, 0, 2])
+    ShowText(["\\n<Aisha>I'm starting to get angry. Can I go on a rampage here?"])
+    ExitEventProcessing([])
+    Label(["145"])
+    ShowTextAttributes(["mukade_fc1", 2, 0, 2])
+    ShowText(["\\n<Vanessa>How horrible. Even more so than my body..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Cow>Moo!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["92"])
+    ShowTextAttributes(["eater_fc1", 3, 0, 2])
+    ShowText(["\\n<Eater>Looks tasty..."])
+    ExitEventProcessing([])
+    Label(["139"])
+    ShowTextAttributes(["fairys_fc1", 3, 0, 2])
+    ShowText(["\\n<Fairies>Yaay, a coow♪"])
+    ExitEventProcessing([])
+    Label(["156"])
+    ShowTextAttributes(["d_fighter_fc1", 3, 0, 2])
+    ShowText(["\\n<Regina>How lewd, drooling like that..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Cow>Moo!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["92"])
+    ShowTextAttributes(["eater_fc1", 3, 0, 2])
+    ShowText(["\\n<Eater>Looks tasty..."])
+    ExitEventProcessing([])
+    Label(["139"])
+    ShowTextAttributes(["fairys_fc1", 3, 0, 2])
+    ShowText(["\\n<Fairies>Yaay, a coow♪"])
+    ExitEventProcessing([])
+    Label(["156"])
+    ShowTextAttributes(["d_fighter_fc1", 3, 0, 2])
+    ShowText(["\\n<Regina>How lewd, drooling like that..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Cow>Moo!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["92"])
+    ShowTextAttributes(["eater_fc1", 3, 0, 2])
+    ShowText(["\\n<Eater>Looks tasty..."])
+    ExitEventProcessing([])
+    Label(["139"])
+    ShowTextAttributes(["fairys_fc1", 3, 0, 2])
+    ShowText(["\\n<Fairies>Yaay, a coow♪"])
+    ExitEventProcessing([])
+    Label(["156"])
+    ShowTextAttributes(["d_fighter_fc1", 3, 0, 2])
+    ShowText(["\\n<Regina>How lewd, drooling like that..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Old Man>There was not a single truly strong person in this village. That's why..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["12"])
+    ShowTextAttributes(["sylph_fc1", 1, 0, 2])
+    ShowText(["\\n<Sylph>I wonder what \"strength\" really is..."])
+    ExitEventProcessing([])
+    Label(["141"])
+    ShowTextAttributes(["mino_fc1", 0, 0, 2])
+    ShowText(["\\n<Mina>Strength is muscles, like mine!!"])
+    ShowTextAttributes(["mino_fc1", 2, 0, 2])
+    ShowText(["\\n<Mina>...Is what I thought, but I'm not sure any more. I got hungry because I've been thinking too much. I should eat some beef."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>Most of those girls in the opposition are also mages. They're saying something about \"releasing the village from Lily's domination\"..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>Hmph. There should be a limit to what a person can misunderstand. We're just supporting Lady Lily with everything we have as thanks for breaking the traditions."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["62"])
+    ShowTextAttributes(["gob_fc1", 0, 0, 2])
+    ShowText(["\\n<Gob>Looks like there are lots of people who admire Lily. I guess she isn't a bad person...?"])
+    ExitEventProcessing([])
+    Label(["156"])
+    ShowTextAttributes(["d_fighter_fc1", 0, 0, 2])
+    ShowText(["\\n<Regina>That Lily person is quite highly regarded. I guess she's different from a mere villain?"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1029, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【魔導師】"])
+      ShowText(["あのメガネ男、信じられないほどの強さだったわ……"])
+      ShowText(["いったい、何者だったの……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2097, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>The opposition has calmed down. Finally, peace has been restored to this village..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2096, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>What have they done to Lady Lily... I won't forgive them..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["149"])
+      ShowTextAttributes(["lamp_fc1", 0, 0, 2])
+      ShowText(["\\n<Jeannie>Her desires were disturbing the world... There was no choice but to defeat her."])
+      ExitEventProcessing([])
+      Label(["164"])
+      ShowTextAttributes(["kooni_fc1", 2, 0, 2])
+      ShowText(["\\n<Shizuku>It couldn't be helped..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>There still are people who haven't been given power in this village. We aren't forcing it on anyone."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>Fortunately, I was blessed with good parents, so I didn't need any power. But it was necessary to give power to many other women in this village."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>My parents have moved to Saloon, but... I intend to stay in this village for a while."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["142"])
+    ShowTextAttributes(["bander_fc1", 0, 0, 2])
+    ShowText(["\\n<Banachi>I wonder what \"power\" really is...\nTo these people, power is merely fighting strength..."])
+    ExitEventProcessing([])
+    Label(["529"])
+    ShowTextAttributes(["sara_fc1", 4, 0, 2])
+    ShowText(["\\n<Sara>I know what those girls needed the most... and I know that the capital didn't give it to them..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Woman>The people in the opposition have finally attacked our village. However, the attacks have stopped for now, and they've returned to the tower to the south."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Woman>I don't want them to devastate this village any more than it already has been. I will fight to protect myself."])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1029, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【村の女性】"])
+      ShowText(["リリィ様のお力が失われるなんて……"])
+      ShowText(["そんな、私達はどうすれば……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2097, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Village Woman>Remnants of the opposition still remain in the tower to the south... but they probably don't have enough strength to attack our village."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Village Woman>I can't thank you enough."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2096, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Village Woman>This can't be... Lady Lily lost her strength... What do we do now...?"])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["529"])
+      ShowTextAttributes(["sara_fc1", 4, 0, 2])
+      ShowText(["\\n<Sara>A commotion is spreading... but I'm sure they'll overcome this."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ConditionalBranch([1, 1029, 0, 2, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This door is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1029, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The door is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1029, 0, 3, 1])
+      PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+      Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 226, 59, 88, 0, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Boy>Lady Lily is a very good person! She praised me when I gave her a flower!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Boy>She told me not to become a bad adult who would bully the weak! That's why I'll become an adult who protects the weak!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["118"])
+    ShowTextAttributes(["meia_fc1", 2, 0, 2])
+    ShowText(["\\n<Meia>My, what a splendid boy you are."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1029, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【少年】"])
+      ShowText(["リリィ様のために、お花を摘んでるんだ。"])
+      ShowText(["3日に1日は、お見舞いに行ってるよ。"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 163, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Boy>Oh, Lady Lily! I'll become strong so I can protect everyone!"])
+      ShowTextAttributes(["lily_fc1", 3, 0, 2])
+      ShowText(["\\n<Lily>Become a righteous person who's not afraid to stand against evil. Don't become like the men of this village were..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2096, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Boy>I'm picking flowers for Lady Lily. I go to visit her every three days."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2097, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Boy>Lady Lily is a very good person! She praised me when I gave her a flower!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Boy>She told me not to become a bad adult who would bully the weak! That's why I'll become an adult who protects the weak!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>This is Lady Lily's mansion. You're free to enter it, of course."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>The ones Lady Lily detests are those who act violently towards the weak. As long as you aren't guilty, she will treat you kindly."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["41"])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["\\n<Promestein>This entire village is blindly accepting everything. I think it's likely because of the recent change in their feudal order."])
+    ExitEventProcessing([])
+    Label(["136"])
+    ShowTextAttributes(["elf_fc1", 0, 0, 2])
+    ShowText(["\\n<Claudia>There's no way I would be guilty of anything!"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1029, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【魔導師】"])
+      ShowText(["こちらが、リリィ様のお屋敷です。"])
+      ShowText(["リリィ様が療養されている場所は、ここではありませんが……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2097, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>This is Lady Lily's mansion. You're free to enter it, of course."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["163"])
+      ShowTextAttributes(["lily_fc1", 3, 0, 2])
+      ShowText(["\\n<Lily>It seems that you're properly protecting the mansion. Please, take care of it from now on as well."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>Please leave it to me, Lady Lily."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2096, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mage>This is Lady Lily's mansion. She isn't receiving treatment here, though..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Woman>Aside from the mages, the rebels have apparently taken in monsters as their comrades. It seems that there are mercenary monsters out there in the world..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Village Woman>We can't allow such a bunch to disturb the peace we have worked hard to establish. We should thoroughly crush these terrorists!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["80"])
+    ShowTextAttributes(["orc_fc1", 0, 0, 2])
+    ShowText(["\\n<Hip>Mercenaries? So, there are monsters like that too. Well, human money IS valuable after all..."])
+    ExitEventProcessing([])
+    Label(["156"])
+    ShowTextAttributes(["d_fighter_fc1", 3, 0, 2])
+    ShowText(["\\n<Regina>Mercenaries... Monsters who move for monies must be devoid of aspirations."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([1, 1029, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【村の女性】"])
+      ShowText(["リリィ様を倒した不審な旅人、いったい何者なのよ。"])
+      ShowText(["黒ずくめに眼鏡の若い男で、大きな鎌を持っていたわ……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2097, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Village Woman>Thanks to your strength we were able to fight off the rebels. Thank you very much for bringing peace to this village."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2096, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Village Woman>To think that Lady Lily would be defeated by mere rebels... I hear that some adventurers helped them."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Village Woman>Could it be you people...? Leave this village at once!"])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["53"])
+      ShowTextAttributes(["slime_fc1", 2, 0, 2])
+      ShowText(["\\n<Lime>We did our best to do a good thing, though..."])
+      ExitEventProcessing([])
+      Label(["82"])
+      ShowTextAttributes(["suzume_fc1", 3, 0, 2])
+      ShowText(["\\n<Chirp>This is all right, isn't it...?"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ControlSwitches([100, 100, 1])
+    ConditionalBranch([4, 62, 0])
+      ShowTextAttributes(["gob_fc1", 3, 0, 2])
+      ShowText(["\\n<Gob>Is that Onee-chan really such a bad guy...?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Lily, eh? She doesn't appear to merely be a tyrant... This situation would sure be simpler if she were, though."])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>She hears the voices of the oppressed, eh... Those voices might just be in her own head."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Lily is no mere tyrant. And thus, the situation complicates."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>She hears the voices of the oppressed, does she? It might just be her own voice that she is hearing."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1529, 0])
+      ShowTextAttributes(["sara_fc1", 4, 0, 2])
+      ShowText(["\\n<Sara>Maybe, instead of saving the weak all over the world, the one Lily should actually save... is herself."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 79, 0])
+      ShowTextAttributes(["nuruko_fc1", 2, 0, 2])
+      ShowText(["\\n<Nuruko>Kyu..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["While we talk, I sense a magical presence approaching..."])
+    PlaySE(["RPG::SE(@name=\"mon_warp\", @pitch=100, @volume=100)"])
+    ControlSwitches([31, 31, 0])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>...Hello. Excuse me for interrupting, but I serve Lady Lucia."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>Please, I ask that you come to our base in this village. It's up the stairs east of the inn, in the eastern building."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mage>Again, pardon the interruption..."])
+    PlaySE(["RPG::SE(@name=\"mon_warp\", @pitch=100, @volume=100)"])
+    ControlSwitches([31, 31, 1])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Luka>Lucia is the rebels' leader, right?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>So, the rebels have contacted us too... I figured that the other side would try to win us over as well."])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>For now, let's go to the hill east of the inn. We can decide what's right after we listen to them."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>The rebel side has also contacted us... I predicted that they too would try to persuade us."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>For the time being, let's go to the hill east of the inn. We can decide what to do after listening to them."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 62, 0])
+      ShowTextAttributes(["gob_fc1", 0, 0, 2])
+      ShowText(["\\n<Gob>When you're trying to break up a fight, you need to listen carefully to both sides before deciding one-sidedly!"])
+      ShowTextAttributes(["gob_fc1", 0, 0, 2])
+      ShowText(["\\n<Gob>...that's what granny told me, at least."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 129, 0])
+      ShowTextAttributes(["brunhild_fc1", 0, 0, 2])
+      ShowText(["\\n<Hild>Once you decide who to beat, tell me. Until then, Hild will be drinking tea..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([307, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([440, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([4, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    ShowTextAttributes(["orc_fc1", 0, 0, 2])
+    ShowText(["\\n<Hip>Oink! It's an orc raid! ...I'm not reckless enough to actually say that around here."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"amira\", @volume=100, @pitch=100)"])
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      CallCommonEvent([322])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["amira_fc1", 0, 0, 2])
+      ShowText(["\\n<Amira>You've already found me here.\nKeep searching for me elsewhere..."])
+      Empty([])
+
+    BranchEnd([])
+    PlayBGM(["RPG::BGM(@name=\"mura3\", @volume=100, @pitch=100)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])

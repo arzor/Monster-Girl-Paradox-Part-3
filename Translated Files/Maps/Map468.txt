@@ -1,0 +1,990 @@
+Display Name = "ポケット魔王城 1F南"
+Parallax Name = "DarkSpace1"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    CallCommonEvent([298])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    CallCommonEvent([298])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    CallCommonEvent([298])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 7, 2])
+      ShowTextAttributes(["alice_fc1", 3, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["どこへ行くつもりだ？"])
+      ShowText(["今は一刻も早く、城の外に脱出するぞ！"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 456, 31, 53, 0, 0])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["どこに行くのですか！？"])
+    ShowText(["正門から出て、ガルダを呼ぶのです！！"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["どこに行くのですか！？"])
+    ShowText(["正門から出て、ガルダを呼ぶのです！！"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 7, 2])
+      ShowTextAttributes(["alice_fc1", 3, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["どこへ行くつもりだ？"])
+      ShowText(["今は一刻も早く、城の外に脱出するぞ！"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 456, 30, 53, 0, 0])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["正門から出ましょう！"])
+    ShowText(["そこからガルダに乗って脱出します！！"])
+    ControlVariables([1002, 1002, 0, 0, 144])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["どこへ逃げる気なんだい？"])
+    ShowText(["もう、逃げ場なんかないのさ！"])
+    ErasePicture([5])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss_chaos1\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 1966, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["どこに行くのですか！？"])
+    ShowText(["正門から出て、ガルダを呼ぶのです！！"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["stein_fc2", 2, 0, 2])
+    ShowText(["【プロメスティン】"])
+    ShowText(["現状では、逆転不能です！"])
+    ShowText(["あなた達だけでも、撤退を！"])
+    ConditionalBranch([0, 1053, 0])
+      ConditionalBranch([4, 53, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["slime_fc1", 2, 0, 2])
+        ShowText(["【ライム】"])
+        ShowText(["あとで助けにきてね～！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["無理無理無理……もう、逃げることさえ出来ないのさ！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["gob_fc1", 3, 0, 2])
+    ShowText(["【ゴブ】"])
+    ShowText(["このぉっ！　あっち行けっ！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["遊んでよ、子鬼ちゃ～ん♪"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["ほ～ら、がんばれ小悪魔～！"])
+    ShowTextAttributes(["inp_fc1", 3, 0, 2])
+    ShowText(["【ラミ】"])
+    ShowText(["あたしだって、ルカの仲間なんだから！"])
+    ConditionalBranch([0, 1057, 0])
+      ConditionalBranch([4, 57, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["inp_fc3", 4, 0, 2])
+        ShowText(["【ルミ】"])
+        ShowText(["戦うよ……！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1058, 0])
+      ConditionalBranch([4, 58, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["inp_fc2", 0, 0, 2])
+        ShowText(["【レミ】"])
+        ShowText(["負けない……"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ShowTextAttributes(["youko_fc1", 2, 0, 2])
+    ShowText(["【きつね】"])
+    ShowText(["わわわ～！　後がないよ～！"])
+    ShowText(["きつね忍法！　きつね身代わり！"])
+    ConditionalBranch([0, 1103, 0])
+      ConditionalBranch([4, 103, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["kamuro_fc1", 2, 0, 2])
+        ShowText(["【かむろ】"])
+        ShowText(["先輩！　大丈夫ですか、きつね先輩！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["ほ～ら、混沌空間に落ちちゃうよ～！"])
+    ShowText(["あははっ、もう助からないよ～！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["ほ～ら、がんばれ小悪魔～！"])
+    ShowTextAttributes(["inp_fc1", 3, 0, 2])
+    ShowText(["【ラミ】"])
+    ShowText(["あたしだって、ルカの仲間なんだから！"])
+    ConditionalBranch([0, 1057, 0])
+      ConditionalBranch([4, 57, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["inp_fc3", 4, 0, 2])
+        ShowText(["【ルミ】"])
+        ShowText(["戦うよ……！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1058, 0])
+      ConditionalBranch([4, 58, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["inp_fc2", 0, 0, 2])
+        ShowText(["【レミ】"])
+        ShowText(["負けない……"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["ほ～ら、がんばれ小悪魔～！"])
+    ShowTextAttributes(["inp_fc1", 3, 0, 2])
+    ShowText(["【ラミ】"])
+    ShowText(["あたしだって、ルカの仲間なんだから！"])
+    ConditionalBranch([0, 1057, 0])
+      ConditionalBranch([4, 57, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["inp_fc3", 4, 0, 2])
+        ShowText(["【ルミ】"])
+        ShowText(["戦うよ……！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1058, 0])
+      ConditionalBranch([4, 58, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["inp_fc2", 0, 0, 2])
+        ShowText(["【レミ】"])
+        ShowText(["負けない……"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ShowTextAttributes(["dragonp_fc1", 2, 0, 2])
+    ShowText(["【パピ】"])
+    ShowText(["なんなのだ！　どうなってるのだ！？"])
+    ConditionalBranch([0, 1072, 0])
+      ConditionalBranch([4, 72, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["phoenix_fc1", 2, 0, 2])
+        ShowText(["【ミニ】"])
+        ShowText(["ウサギがいっぱいやって来たぞ～！"])
+        ShowText(["新しい仲間じゃないよな！？"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["なんとアピロ・ラゴスが起き上がって、"])
+    ShowText(["仲間になりたそうにこちらを見ている！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["なんてね～♪"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["【ヌルコ】"])
+    ShowText(["きゅきゅきゅ～～！！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["君は、こっち側だろ？"])
+    ShowText(["なんでジャマするのさ……"])
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["【ヌルコ】"])
+    ShowText(["きゅ！　きゅきゅきゅきゅ～！！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["はいはい……じゃあ、ここで消えてよ。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ShowTextAttributes(["youko_fc1", 2, 0, 2])
+    ShowText(["【きつね】"])
+    ShowText(["わわわ～！　後がないよ～！"])
+    ShowText(["きつね忍法！　きつね身代わり！"])
+    ConditionalBranch([0, 1103, 0])
+      ConditionalBranch([4, 103, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["kamuro_fc1", 2, 0, 2])
+        ShowText(["【かむろ】"])
+        ShowText(["先輩！　大丈夫ですか、きつね先輩！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["ほ～ら、混沌空間に落ちちゃうよ～！"])
+    ShowText(["あははっ、もう助からないよ～！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ShowTextAttributes(["youko_fc1", 2, 0, 2])
+    ShowText(["【きつね】"])
+    ShowText(["わわわ～！　後がないよ～！"])
+    ShowText(["きつね忍法！　きつね身代わり！"])
+    ConditionalBranch([0, 1103, 0])
+      ConditionalBranch([4, 103, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["kamuro_fc1", 2, 0, 2])
+        ShowText(["【かむろ】"])
+        ShowText(["先輩！　大丈夫ですか、きつね先輩！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["ほ～ら、混沌空間に落ちちゃうよ～！"])
+    ShowText(["あははっ、もう助からないよ～！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["【ヌルコ】"])
+    ShowText(["きゅきゅきゅ～～！！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["君は、こっち側だろ？"])
+    ShowText(["なんでジャマするのさ……"])
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["【ヌルコ】"])
+    ShowText(["きゅ！　きゅきゅきゅきゅ～！！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["はいはい……じゃあ、ここで消えてよ。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["一泊いくら？　あたしも泊めてよ～。"])
+    ShowTextAttributes(["pramia_fc1", 2, 0, 2])
+    ShowText(["【プチ】"])
+    ShowText(["宿泊お断り！　出てって！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    ShowTextAttributes(["vgirl_fc1", 2, 0, 2])
+    ShowText(["【ヴァニラ】"])
+    ShowText(["我の店に近寄るな！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["客の選り好みは良くないよ～！"])
+    ShowText(["君達の命、いくらで売ってくれるの？"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    ShowTextAttributes(["dragonp_fc1", 2, 0, 2])
+    ShowText(["【パピ】"])
+    ShowText(["なんなのだ！　どうなってるのだ！？"])
+    ConditionalBranch([0, 1072, 0])
+      ConditionalBranch([4, 72, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["phoenix_fc1", 2, 0, 2])
+        ShowText(["【ミニ】"])
+        ShowText(["ウサギがいっぱいやって来たぞ～！"])
+        ShowText(["新しい仲間じゃないよな！？"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["なんとアピロ・ラゴスが起き上がって、"])
+    ShowText(["仲間になりたそうにこちらを見ている！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["なんてね～♪"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    ShowTextAttributes(["heinrich_fc1", 3, 0, 2])
+    ShowText(["【ハインリヒ】"])
+    ShowText(["ルカ君、このまま脱出するんだ！"])
+    ShowText(["体勢を立て直し、あらためて救援を願う！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["救援とか無理なの分かってて、捨て石になるつもりでしょ。"])
+    ShowText(["そういうのって、泣かせるよね～。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ShowTextAttributes(["s_mermaid_fc1", 0, 0, 2])
+    ShowText(["【ミンク】"])
+    ShowText(["営業妨害や、覚悟してもらうで～！"])
+    ConditionalBranch([0, 1222, 0])
+      ConditionalBranch([4, 222, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["nekomata_fc1", 1, 0, 2])
+        ShowText(["【たま】"])
+        ShowText(["フーッ！！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["かよわいなぁ……"])
+    ShowText(["弱い者イジメは好きじゃないんだよね。"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["……ウソ、大好き♪"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ShowTextAttributes(["s_mermaid_fc1", 0, 0, 2])
+    ShowText(["【ミンク】"])
+    ShowText(["営業妨害や、覚悟してもらうで～！"])
+    ConditionalBranch([0, 1222, 0])
+      ConditionalBranch([4, 222, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["nekomata_fc1", 1, 0, 2])
+        ShowText(["【たま】"])
+        ShowText(["フーッ！！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["かよわいなぁ……"])
+    ShowText(["弱い者イジメは好きじゃないんだよね。"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["……ウソ、大好き♪"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ShowTextAttributes(["salamander_fc1", 2, 0, 2])
+    ShowText(["【サラマンダー】"])
+    ShowText(["ここから消え失せろ！　おぉぉぉぉっ！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["暑苦しいなぁ……さっさと鎮火しないとねぇ。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ShowTextAttributes(["salamander_fc1", 2, 0, 2])
+    ShowText(["【サラマンダー】"])
+    ShowText(["ここから消え失せろ！　おぉぉぉぉっ！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["暑苦しいなぁ……さっさと鎮火しないとねぇ。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["ほ～ら、がんばれ小悪魔～！"])
+    ShowTextAttributes(["inp_fc1", 3, 0, 2])
+    ShowText(["【ラミ】"])
+    ShowText(["あたしだって、ルカの仲間なんだから！"])
+    ConditionalBranch([0, 1057, 0])
+      ConditionalBranch([4, 57, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["inp_fc3", 4, 0, 2])
+        ShowText(["【ルミ】"])
+        ShowText(["戦うよ……！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1058, 0])
+      ConditionalBranch([4, 58, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["inp_fc2", 0, 0, 2])
+        ShowText(["【レミ】"])
+        ShowText(["負けない……"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    ShowTextAttributes(["gob_fc1", 3, 0, 2])
+    ShowText(["【ゴブ】"])
+    ShowText(["このぉっ！　あっち行けっ！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["遊んでよ、子鬼ちゃ～ん♪"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 57
+Name = "EV057"
+
+  Page 0
+    ShowTextAttributes(["heinrich_fc1", 3, 0, 2])
+    ShowText(["【ハインリヒ】"])
+    ShowText(["ルカ君、このまま脱出するんだ！"])
+    ShowText(["体勢を立て直し、あらためて救援を願う！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["救援とか無理なの分かってて、捨て石になるつもりでしょ。"])
+    ShowText(["そういうのって、泣かせるよね～。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 58
+Name = "EV058"
+
+  Page 0
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["一泊いくら？　あたしも泊めてよ～。"])
+    ShowTextAttributes(["pramia_fc1", 2, 0, 2])
+    ShowText(["【プチ】"])
+    ShowText(["宿泊お断り！　出てって！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 59
+Name = "EV059"
+
+  Page 0
+    ShowTextAttributes(["vgirl_fc1", 2, 0, 2])
+    ShowText(["【ヴァニラ】"])
+    ShowText(["我の店に近寄るな！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["客の選り好みは良くないよ～！"])
+    ShowText(["君達の命、いくらで売ってくれるの？"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 60
+Name = "EV060"
+
+  Page 0
+    ShowTextAttributes(["stein_fc2", 2, 0, 2])
+    ShowText(["【プロメスティン】"])
+    ShowText(["現状では、逆転不能です！"])
+    ShowText(["あなた達だけでも、撤退を！"])
+    ConditionalBranch([0, 1053, 0])
+      ConditionalBranch([4, 53, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["slime_fc1", 2, 0, 2])
+        ShowText(["【ライム】"])
+        ShowText(["あとで助けにきてね～！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["無理無理無理……もう、逃げることさえ出来ないのさ！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 61
+Name = "EV061"
+
+  Page 0
+    ShowTextAttributes(["stein_fc2", 2, 0, 2])
+    ShowText(["【プロメスティン】"])
+    ShowText(["現状では、逆転不能です！"])
+    ShowText(["あなた達だけでも、撤退を！"])
+    ConditionalBranch([0, 1053, 0])
+      ConditionalBranch([4, 53, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["slime_fc1", 2, 0, 2])
+        ShowText(["【ライム】"])
+        ShowText(["あとで助けにきてね～！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["無理無理無理……もう、逃げることさえ出来ないのさ！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 62
+Name = "EV062"
+
+  Page 0
+    ShowTextAttributes(["s_mermaid_fc1", 0, 0, 2])
+    ShowText(["【ミンク】"])
+    ShowText(["営業妨害や、覚悟してもらうで～！"])
+    ConditionalBranch([0, 1222, 0])
+      ConditionalBranch([4, 222, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["nekomata_fc1", 1, 0, 2])
+        ShowText(["【たま】"])
+        ShowText(["フーッ！！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["かよわいなぁ……"])
+    ShowText(["弱い者イジメは好きじゃないんだよね。"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["……ウソ、大好き♪"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 64
+Name = "EV064"
+
+  Page 0
+    ShowTextAttributes(["dragonp_fc1", 2, 0, 2])
+    ShowText(["【パピ】"])
+    ShowText(["なんなのだ！　どうなってるのだ！？"])
+    ConditionalBranch([0, 1072, 0])
+      ConditionalBranch([4, 72, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["phoenix_fc1", 2, 0, 2])
+        ShowText(["【ミニ】"])
+        ShowText(["ウサギがいっぱいやって来たぞ～！"])
+        ShowText(["新しい仲間じゃないよな！？"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["なんとアピロ・ラゴスが起き上がって、"])
+    ShowText(["仲間になりたそうにこちらを見ている！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["なんてね～♪"])
+    Empty([])
+
+  Page 1
+    Empty([])

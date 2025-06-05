@@ -1,0 +1,194 @@
+Display Name = "Water Spirit's Spring"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 260, 180, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 260, 180, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 260, 180, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Jump into the Water Spirit's Spring?"])
+    ShowChoices([["Jump in", "Don't jump"], 2])
+    When([0, "飛び込む"])
+      ControlSwitches([100, 100, 0])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=14, @parameters=[0, -2])\", \"RPG::MoveCommand(@code=38, @parameters=[])\", \"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"Water1\\\\\\\", @pitch=100, @volume=80)\\\"])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, -2])"])
+      Unnamed(["RPG::MoveCommand(@code=38, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"Water1\\\", @pitch=100, @volume=80)\"])"])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 246, 12, 1, 2, 0])
+      Empty([])
+
+    When([1, "飛び込まない"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([2889, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>This is Undine's Spring... the place where the Water Spirit rests. We shouldn't have any business in such a depressing place."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["undine_fc1", 0, 0, 2])
+    ShowText(["\\n<Undine>There's no mistaking this place is home to the Water Spirit, but... she isn't here right now. Perhaps she has gone outside for a walk?"])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>There is nothing for us to gain from going inside now. Let's save the underwater cave stroll for another time."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There might be another opportunity for us to come back here later on. For now however, we should focus on our priorities."])
+    ShowText([""])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Wait([30])
+    ShowPicture([5, "80_utubom_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["utubom_fc1", 0, 0, 2])
+    ShowText(["\\n<Moray Girl>Queen Scylla is forming a contract with the water spirit. It's an important task, so I won't let you get in her way!"])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>No, that's fine...\nAre you also from the scylla clan?"])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["utubom_fc1", 0, 0, 2])
+    ShowText(["\\n<Moray Girl>Of course I'm a scylla, but..."])
+    ShowText([""])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>Still... you're a moray eel aren't you?"])
+    ShowText([""])
+    ShowPicture([5, "80_utubom_st03", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["utubom_fc1", 2, 0, 2])
+    ShowText(["\\n<Moray Girl>Huh...? Aren't moray eels part of the Scylla clan? We wriggle around..."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>They're fish, so you would be wrong.\nSpeaking in terms of apperaance alone, they would be closer to snakes..."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["utubom_fc1", 2, 0, 2])
+    ShowText(["\\n<Moray Girl>......!!"])
+    ShowText([""])
+    ConditionalBranch([1, 1142, 0, 62, 2])
+      ShowTextAttributes(["sonia_fc2", 3, 0, 2])
+      ShowText(["\\n<Sonya>Hey, please stop that!\nShe must have been genuinely shocked to hear that...!"])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["utubom_fc1", 2, 0, 2])
+    ShowText(["\\n<Moray Girl>We usually attend the scylla gatherings and stuff like that, but... I wonder what the other scylla think of us...?"])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Well, you're monsters who come from the water, so... I'm sure they consider you their friends... maybe..."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["utubom_fc1", 2, 0, 2])
+    ShowText(["\\n<Moray Girl>............"])
+    ShowText([""])
+    PlaySE(["RPG::SE(@name=\"mon_escape\", @pitch=100, @volume=100)"])
+    ControlSwitches([2513, 2513, 0])
+    ErasePicture([5])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The Moray Girl trudges away..."])
+    ConditionalBranch([1, 1142, 0, 62, 2])
+      ShowTextAttributes(["sonia_fc2", 3, 0, 2])
+      ShowText(["\\n<Sonya>Hey, what are you saying...?\nWouldn't it be better to just beat her up like we usually do...?"])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>She's started to have serious doubts about her own identity, and won't be able to get along with her friends like she used to any more."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>Huh... was this my fault?\nAll I did was raise a question..."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Setting that aside, the way into the spring is open. If we dive into the water, it should lead to an underground cavern."])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Queen Scylla must have gone all the way into the spring's depths. We have to chase after her and stop her from forming a contract!"])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>...It wasn't my fault."])
+    ShowText([""])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 3
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])

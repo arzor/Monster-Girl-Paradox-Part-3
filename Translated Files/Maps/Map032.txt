@@ -1,0 +1,1035 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 31, 22, 12, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 31, 31, 6, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 31, 40, 14, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 31, 40, 22, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 31, 15, 27, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 31, 17, 34, 0, 0])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 32, 26, 25, 0, 0])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 32, 28, 49, 0, 0])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 31, 28, 34, 0, 0])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>Hello, I live here with my husband. Despite appearances, I'm actually good at housework."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["86"])
+    ShowTextAttributes(["name_s_fc1", 0, 0, 2])
+    ShowText(["\\n<Rosary>Congratulations on the marriage! I hope you two live long and happy lives together."])
+    ExitEventProcessing([])
+    Label(["108"])
+    ShowTextAttributes(["kai_fc1", 0, 0, 2])
+    ShowText(["\\n<Shelly>It appears you lucked into a wonderful husband."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Shopkeeper>Argh, I can't keep this damn shop dry. My apologies for the state of my store, but please shop here anyway."])
+    ShopProcessing([0, 1, 0, 0, false])
+    ShopItem([0, 11, 0, 0])
+    ShopItem([0, 13, 0, 0])
+    ShopItem([0, 14, 0, 0])
+    ShopItem([0, 17, 0, 0])
+    ShopItem([0, 23, 0, 0])
+    ShopItem([0, 35, 0, 0])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Goldsmith>If you've come for goldsmithing, you're in the right place... assuming you brought your own raw gold."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Goldsmith>You should be able to dig some out of the mines to the northwest, but you might have to go in pretty deep."])
+    ConditionalBranch([4, 62, 0])
+      ShowTextAttributes(["gob_fc1", 0, 0, 2])
+      ShowText(["\\n<Gob>All right! Let's get to it!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Goldsmith>Since you're here, let me show you my regular wares, at least. There isn't much variety, but it's all of high quality."])
+    ShopProcessing([1, 476, 0, 0, false])
+    ShopItem([1, 845, 0, 0])
+    ShopItem([2, 20, 0, 0])
+    ShopItem([2, 181, 0, 0])
+    ShopItem([2, 259, 0, 0])
+    ConditionalBranch([1, 1017, 0, 2, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Goldsmith>I assume you're going to search for gold in the mines, but before that, could you help me out with something else? Help the whole village out, actually."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Goldsmith>You've seen all the slugs infesting our village, right? Of course you have. If you think you're up to it, we need something done about them..."])
+      ConditionalBranch([4, 64, 0])
+        ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+        ShowText(["\\n<Teeny>Pest control? I can't back down from that if I want to be a maid."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Goldsmith>Ask Flora for the details if you're interested. She lives in the northern house. She defeated the boss of the slugs once before, you see."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    ControlVariables([1015, 1015, 0, 0, 2])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Goldsmith>Oooh, that's a mighty fine lump of gold you've got there.\nI can make all the gold equipment you want with that."])
+    ShowChoices([["Browse normal wares", "Craft golden equipment", "Talk to the smith"], 5])
+    When([0, "Browse normal wares"])
+      ShopProcessing([1, 476, 0, 0, false])
+      ShopItem([1, 845, 0, 0])
+      ShopItem([2, 20, 0, 0])
+      ShopItem([2, 181, 0, 0])
+      ShopItem([2, 259, 0, 0])
+      Empty([])
+
+    When([1, "Craft golden equipment"])
+      ShopProcessing([1, 5, 0, 0, false])
+      ShopItem([1, 87, 0, 0])
+      ShopItem([1, 147, 0, 0])
+      ShopItem([1, 208, 0, 0])
+      ShopItem([1, 294, 0, 0])
+      ShopItem([1, 337, 0, 0])
+      ShopItem([1, 366, 0, 0])
+      ShopItem([1, 405, 0, 0])
+      ShopItem([1, 445, 0, 0])
+      ShopItem([1, 477, 0, 0])
+      ShopItem([1, 513, 0, 0])
+      ShopItem([1, 552, 0, 0])
+      ShopItem([1, 593, 0, 0])
+      ShopItem([1, 625, 0, 0])
+      ShopItem([1, 662, 0, 0])
+      ShopItem([1, 702, 0, 0])
+      ShopItem([1, 729, 0, 0])
+      ShopItem([1, 756, 0, 0])
+      ShopItem([1, 776, 0, 0])
+      ShopItem([1, 798, 0, 0])
+      ShopItem([1, 824, 0, 0])
+      ShopItem([1, 846, 0, 0])
+      ShopItem([2, 33, 0, 0])
+      ShopItem([2, 69, 0, 0])
+      ShopItem([2, 106, 0, 0])
+      ShopItem([2, 203, 0, 0])
+      ShopItem([2, 237, 0, 0])
+      ShopItem([2, 294, 0, 0])
+      Empty([])
+
+    When([2, "Talk to the smith"])
+      ConditionalBranch([1, 1007, 0, 0, 0])
+        ConditionalBranch([4, 68, 0])
+          ConditionalBranch([2, "B", 1])
+            ControlSelfSwitch(["B", 0])
+            ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+            ShowText(["\\n<Papi>Excuse me, but... Please teach me how to work gold!"])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["\\n<Goldsmith>Oh, the little dragon girl wants to be a goldsmith? Hmm, I can't just spill the secrets of goldsmithing to everybody..."])
+            ShowTextAttributes(["dragonp_fc1", 2, 0, 2])
+            ShowText(["\\n<Papi>Pretty please..."])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["\\n<Goldsmith>Awww don't cry. All right, look, I've got an idea."])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["\\n<Goldsmith>I've heard that some strange rocks have been found inside Tartarus. They've got my smith sense tingling."])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["\\n<Goldsmith>So here's the deal: you bring me one of those rocks, and I'll show you how to work gold."])
+            ShowTextAttributes(["dragonp_fc1", 3, 0, 2])
+            ShowText(["\\n<Papi>Yes, sir!"])
+            ExitEventProcessing([])
+            Empty([])
+          Else([])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["\\n<Goldsmith>Remember, bring me one of those rocks from Tartarus and I'll show you how to work gold."])
+            ConditionalBranch([8, 166])
+              ShowTextAttributes(["", 0, 0, 2])
+              ShowText(["Hand over 1 \\ii[166]?"])
+              ShowChoices([["Yes", "No"], 2])
+              When([0, "Yes"])
+                ChangeItems([166, 1, 0, 1])
+                ShowTextAttributes(["", 0, 0, 2])
+                ShowText(["\\ii[166] handed over!"])
+                JumpToLabel(["教える"])
+                Empty([])
+              When([1, "No"])
+                Empty([])
+              ChoicesEnd([])
+              Empty([])
+            BranchEnd([])
+            ConditionalBranch([8, 172])
+              ShowTextAttributes(["", 0, 0, 2])
+              ShowText(["Hand over 1 \\ii[172]?"])
+              ShowChoices([["Yes", "No"], 2])
+              When([0, "Yes"])
+                ChangeItems([172, 1, 0, 1])
+                ShowTextAttributes(["", 0, 0, 2])
+                ShowText(["\\ii[172] handed over!"])
+                JumpToLabel(["教える"])
+                Empty([])
+              When([1, "No"])
+                Empty([])
+              ChoicesEnd([])
+              Empty([])
+            BranchEnd([])
+            ExitEventProcessing([])
+            Label(["教える"])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["\\n<Goldsmith>Okay, a deal's a deal. I'll teach you how to work gold, but whether you can do it or not is up to you."])
+            ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+            ShowText(["\\n<Papi>My master drilled the basics into me! I'll work as hard as I have to!"])
+            FadeoutScreen([])
+            Wait([60])
+            PlaySE(["RPG::SE(@name=\"mon_kazi\", @pitch=100, @volume=100)"])
+            Wait([60])
+            PlaySE(["RPG::SE(@name=\"mon_kazi\", @pitch=100, @volume=100)"])
+            Wait([60])
+            FadeinScreen([])
+            ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+            ShowText(["\\n<Papi>...I got it. Like this!?"])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["\\n<Goldsmith>Wow, very nice! You're good, little lady. Your fundamentals are strong, and I don't see any bad habits."])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["\\n<Goldsmith>You must have learned from an excellent teacher. All you need now is more practice."])
+            ShowTextAttributes(["dragonp_fc1", 3, 0, 2])
+            ShowText(["\\n<Papi>Thank you so much! I'm very grateful for your help!"])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["\\n<Goldsmith>Keep up the good work!"])
+            PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["Papi learned how to craft golden equipment!"])
+            ControlVariables([1007, 1007, 0, 0, 1])
+            Wait([60])
+            Script(["gain_medal(1511)"])
+            ExitEventProcessing([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Goldsmith>All these slugs are hanging around like they have been. They're going to become this village's new claim to fame at this rate."])
+      ExitEventProcessing([])
+      Empty([])
+
+    WhenCancel([])
+      Empty([])
+
+    ChoicesEnd([])
+    ConditionalBranch([1, 1017, 0, 2, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Goldsmith>By the way, can you help me, or rather the village, out? It shouldn't be too hard for someone who was able to explore deep into the mines."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Goldsmith>You've seen all the slugs infesting our village, right? Of course you have. If you think you're up to it, we need something done about them..."])
+      ConditionalBranch([4, 64, 0])
+        ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+        ShowText(["\\n<Teeny>Pest control? I can't back down from that if I want to be a maid."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Goldsmith>Ask Flora for the details if you're interested. She lives in the northern house. She defeated the boss of the slugs once before, you see."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 10, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        ConditionalBranch([0, 4, 0])
+          ShowTextAttributes(["alice_fc5", 1, 0, 2])
+          ShowText(["\\n<Alice>Okay, I think we're good on gear now. Off to the eastern Tartarus rift!"])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 5, 0])
+          ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+          ShowText(["\\n<Ilias>I believe we are adequately equipped now. To the eastern Tartarus rift!"])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+          ShowText(["\\n<Sonya>First we have to cross the mountain range. There should be a cave through it north of Pornof."])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>First we have to cross the mountain range. There should be a cave through it north of Pornof."])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([4, 68, 0])
+          ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+          ShowText(["\\n<Papi>It's a long way! I'm looking forward to proving myself!"])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([4, 72, 0])
+          ShowTextAttributes(["phoenix_fc1", 1, 0, 2])
+          ShowText(["\\n<Mini>I'm here to help!"])
+          Empty([])
+        BranchEnd([])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>This inn is nice and calm. It'd be perfect if it were a bit more humid though..."])
+    CallCommonEvent([315])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>Is there anything in this pot..."])
+    CallCommonEvent([315])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Innkeeper>The slug girls are paying customers so they're here to stay, just so you know. It's 10G a night, would you like a room?\\$"])
+    ShowChoices([["Yes", "No"], 2])
+    When([0, "Yes"])
+      ConditionalBranch([7, 10, 0])
+        ChangeGold([1, 0, 10])
+        FadeoutScreen([])
+        PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+        Wait([150])
+        RecoverAll([0, 0])
+        FadeinScreen([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Innkeeper>Oh, you don't have enough money..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    When([1, "No"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>Is there anything in this pot..."])
+    CallCommonEvent([315])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>Nice and wet..."])
+    CallCommonEvent([315])
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>Nice and slimy, nice and sticky..."])
+    CallCommonEvent([315])
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>I won't let you buy salt..."])
+    CallCommonEvent([315])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>This store doesn't feel slimy enough."])
+    CallCommonEvent([315])
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>Nice and damp..."])
+    CallCommonEvent([315])
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>I hope it rains..."])
+    CallCommonEvent([315])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>Spare any lettuce?"])
+    CallCommonEvent([315])
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>The vegetables in this village are delicious. *Munch* *munch* *munch*"])
+    CallCommonEvent([315])
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>Nice and slimy..."])
+    CallCommonEvent([315])
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>Vegetables... *munch* *munch* *crunch*"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Goldsmith>Not again! That's not yours, damn it! Get out of here!"])
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>........"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=29, @parameters=[4])\", \"RPG::MoveCommand(@code=30, @parameters=[4])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=29, @parameters=[4])"])
+    Unnamed(["RPG::MoveCommand(@code=30, @parameters=[4])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    EraseEvent([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Goldsmith>I swear... Why are there so many slugs here this year? There's gotta be some reason for it."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["70"])
+    ShowTextAttributes(["nezumi_fc1", 0, 0, 2])
+    ShowText(["\\n<Ratty>Snitching food? What a gluttonous slug..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>The huge number of slugs is certainly a nuisance, but it also led to a chance encounter for me."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>The slug across from me is my wife. Our first daughter is going to be born soon too."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>...oh, the random slug fishing through that barrel isn't related to us. My wife just won't let me put out any salt..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["26"])
+    ShowTextAttributes(["iriasu_fc5", 0, 0, 2])
+    ShowText(["\\n<Ilias>You MARRIED a Slug Girl!? I hope you enjoy slug hell after you die!"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>I'll have to get Eden to prepare a huge number of slugs. What a pain..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>Is there something in this barrel..."])
+    CallCommonEvent([315])
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Man>This slug infestation has really become a problem.\nThey're tearing up our fields and inviting themselves into our houses."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["61"])
+    ShowTextAttributes(["mimizu_fc1", 2, 0, 2])
+    ShowText(["\\n<Mimi>I don't approve of fields being torn up by anyone other than earthworms!"])
+    ExitEventProcessing([])
+    Label(["70"])
+    ShowTextAttributes(["nezumi_fc1", 0, 0, 2])
+    ShowText(["\\n<Ratty>We rats invite ourselves into others' houses too though..."])
+    ExitEventProcessing([])
+    Label(["87"])
+    ShowTextAttributes(["name2_fc2", 1, 0, 2])
+    ShowText(["\\n<Melty>Our apologies for the trouble our family has caused you..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>I can't find a single good book to read..."])
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>\"How to Prevent Slugs from Eating Your Food\"?\nInto the trash you go..."])
+    CallCommonEvent([315])
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Slug Girl>Is there something in this barrel..."])
+    CallCommonEvent([315])
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>It's kind of annoying that they wander into houses like they belong here. Their slimy bodies are such a turn-on too..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>Last night one of them brushed up against my crotch...\nIt was so slimy... and sticky..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>Well anyway, I might have helped increase their number even further... Ilias forgive me."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["26"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>I will not. Instead, I shall prepare a special slug hell for you."])
+    ExitEventProcessing([])
+    Label(["55"])
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Melk>A momentary indiscretion eh... Well, you better take responsibility for it."])
+    ExitEventProcessing([])
+    Label(["83"])
+    ShowTextAttributes(["hapy_a_fc1", 0, 0, 2])
+    ShowText(["\\n<Reina>Ahaha, guess you got laid♪"])
+    ExitEventProcessing([])
+    Label(["87"])
+    ShowTextAttributes(["name2_fc2", 1, 0, 2])
+    ShowText(["\\n<Melty>Ah, so you helped us reproduce..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ConditionalBranch([1, 1017, 0, 0, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Flora>Welcome, travelers. I am Flora. I served as a maid for many a year in my prime."])
+        ConditionalBranch([4, 64, 0])
+          ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+          ShowText(["\\n<Teeny>She's gotten old, but wow, what an elegant and soothing aura! So this is a legendary maid..."])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Flora>I presume you are familiar with my reputation. Are you disappointed to find me so aged?"])
+        ShowChoices([["Absolutely not", "Kind of", "This village is mine!"], 0])
+        When([0, "Absolutely not"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Flora>Huhu, very suave. Would you like tea? It's quite good."])
+          Empty([])
+        When([1, "Kind of"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Flora>Huhu, an honest man, I see. Would you like tea? it's quite good."])
+          Empty([])
+        When([2, "This village is mine!"])
+          CallCommonEvent([303])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Flora>Oh my, has the long journey gotten to you? You shouldn't push yourself so hard..."])
+          Empty([])
+        ChoicesEnd([])
+        PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+        ControlSwitches([2037, 2037, 0])
+        SetMoveRoute([47, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=29, @parameters=[4])\", \"RPG::MoveCommand(@code=30, @parameters=[4])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=29, @parameters=[4])"])
+        Unnamed(["RPG::MoveCommand(@code=30, @parameters=[4])"])
+        Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+        ShowTextAttributes(["name_fc1", 0, 0, 2])
+        ShowText(["\\n<Slug Girl>Ah, nice and warm..."])
+        SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Flora>Oh my, no knock first? That's quite unladylike, young miss."])
+        SetMoveRoute([47, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+        ShowTextAttributes(["name_fc1", 0, 0, 2])
+        ShowText(["\\n<Slug Girl>I'm sorry..."])
+        SetMoveRoute([47, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=29, @parameters=[4])\", \"RPG::MoveCommand(@code=30, @parameters=[4])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=29, @parameters=[4])"])
+        Unnamed(["RPG::MoveCommand(@code=30, @parameters=[4])"])
+        Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+        PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+        ControlSwitches([2037, 2037, 1])
+        SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=25, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=25, @parameters=[])"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Flora>I swear, what a pain. They may not attack anyone, but they sure are making nuisances of themselves."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Flora>I am positive that the source of all these slugs is the Slug Tower to the west. They may have gotten a new boss..."])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+          ShowText(["\\n<Sonya>A new boss? Was there an old boss?"])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Flora>There was a similar slug infestation about 50 years ago. I'm embarrassed to admit it, but I was the one who defeated their boss back then."])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+          ShowText(["\\n<Sonya>Whaaa!? YOU fought monsters!?"])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Flora>I was in my twenties then and in active military service. Pest control is part of a maid's duty too, after all."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Flora>But now I'm an old lady who can barely walk. There's nothing I can do to help..."])
+        ConditionalBranch([4, 64, 0])
+          ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+          ShowText(["\\n<Teeny>Luka, let's exterminate the boss of the Slug Girls! I have to do my duty as a maid!"])
+          Empty([])
+        BranchEnd([])
+        Label(["本題"])
+        ShowChoices([["Offer to deal with the slugs", "Decline to help"], 2])
+        When([0, "Offer to deal with the slugs"])
+          ControlVariables([1017, 1017, 0, 0, 1])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Flora>Oh my, you'll go there in my stead? Let me give you these to protect you."])
+          PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+          ChangeArmor([1580, 0, 0, 2, false])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Flora>You'll take significant \\C[1]pleasure\\C[0] damage when \\C[27]slimed\\C[0] so please be careful."])
+          Label(["了承"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Flora>Please return here if you succeed. I will reward you with the \\ii[618]."])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Flora>The Slug Tower is to the west from here. Cross the bridge west of the shrine and then head northwest."])
+          ConditionalBranch([4, 64, 0])
+            ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+            ShowText(["\\n<Teeny>Okay, leave it to us! The slug boss is as good as gone!"])
+            Empty([])
+          BranchEnd([])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Flora>Again, please take care. Don't do anything reckless."])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "Decline to help"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Flora>Ah, pardon me. I just can't help but complain about them when I see such strong, reliable, capable-looking travelers like yourselves."])
+          ExitEventProcessing([])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Flora>I swear, what a pain. These slugs sure are making nuisances of themselves."])
+        JumpToLabel(["本題"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1017, 0, 1, 0])
+      JumpToLabel(["了承"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1017, 0, 2, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Flora>I heard you managed to defeat the slug boss. I knew I could count on you."])
+      ConditionalBranch([4, 64, 0])
+        ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+        ShowText(["\\n<Teeny>Ehehe... Am I on the road to becoming a legendary maid now?"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Flora>If you devote yourself to service and never waver, I'm sure you will succeed."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>The village is still full of slugs though..."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>The village is still full of slugs though..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Flora>Their numbers didn't immediately go down after I defeated their boss 50 years ago either."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Flora>However, more of them won't be showing up, and by next year, we'll be back to normal."])
+      ConditionalBranch([4, 53, 0])
+        ShowTextAttributes(["slime_fc1", 2, 0, 2])
+        ShowText(["\\n<Lime>Everyone will have to wait a year then..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Flora>Now then, for your reward. As promised, here is the \\ii[618]."])
+      PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+      ChangeItems([618, 0, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Flora>With this, you can change your job to \\C[14]Maid\\C[0] at Ilias Temple. You can get more details about the job from someone there."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Flora>Again, thank you so much. I pray for your continued success..."])
+      ControlVariables([1017, 1017, 0, 0, 3])
+      Script(["gain_medal(13)"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1017, 0, 3, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Flora>How wonderful to see you! I'd love to offer you tea, but..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Flora>The slugs were careless and ruined the tea leaves.\nI apologize for the inconvenience."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["64"])
+      ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+      ShowText(["\\n<Teeny>Can I talk to you for a minute? There are lots of things you can teach me, I bet..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Flora>Of course, I don't mind at all."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Teeny asked Flora for help and learned a lot of new things!"])
+      ExitEventProcessing([])
+      Label(["87"])
+      ShowTextAttributes(["name2_fc2", 1, 0, 2])
+      ShowText(["\\n<Melty>Ah, you were my predecessor's adversary I presume, Maid Flora?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Flora>You are the slug bosses... Have you come here for revenge?"])
+      ShowTextAttributes(["name2_fc2", 1, 0, 2])
+      ShowText(["\\n<Melty>That road has no end... We'd rather focus on having fun."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Flora>It's pointless to fight when you don't have to, isn't it? It's admirable of you to not hold a grudge."])
+      ShowTextAttributes(["name2_fc2", 1, 0, 2])
+      ShowText(["\\n<Melty>It's nothing worth praising us over. We are neighbors, after all, and should get along."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([165, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([21, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([32, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([7, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([31, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Female Mage>You should hold on to any equipment with elemental resistances. You never know when you might need it again."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Female Mage>For example, keep a Wind Shield around for whenever you fight enemies that use wind spells or abilities."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["56"])
+    ShowTextAttributes(["inp_fc1", 0, 0, 2])
+    ShowText(["\\n<Rami>Succubi have strong wind skills. If you're up against a powerful succubus, wind resist gear can really come in handy♪"])
+    ExitEventProcessing([])
+    Label(["74"])
+    ShowTextAttributes(["usagi_fc1", 0, 0, 2])
+    ShowText(["\\n<Barbun>Yeah, you should definitely keep any shield with a resistance. They'll always be useful during the adventure."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Thunder element attacks are extremely effective against slug-type monsters. Since they're slimy, their bodies conduct electricity well."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["55"])
+    ShowTextAttributes(["name_fc1", 0, 0, 2])
+    ShowText(["\\n<Melk>Don't tell everyone about our weakness..."])
+    ExitEventProcessing([])
+    Label(["78"])
+    ShowTextAttributes(["syesta_fc1", 0, 0, 2])
+    ShowText(["\\n<Shesta>I'll blow them away with my thunder magic."])
+    ExitEventProcessing([])
+    Label(["85"])
+    ShowTextAttributes(["highslag_fc1", 0, 0, 2])
+    ShowText(["\\n<Elisabeth>...could you keep that to yourself?"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([165, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

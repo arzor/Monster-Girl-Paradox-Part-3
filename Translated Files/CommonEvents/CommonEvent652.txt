@@ -1,0 +1,28 @@
+CommonEvent 652
+Name = "イベント：パープルスライム"
+
+  999([652])
+  ControlSwitches([73, 73, 0])
+  ConditionalBranch([0, 431, 0])
+    ShowTextAttributes(["slime_purple_fc1", 1, 0, 2])
+    ShowText(["\\n<Purple Slime>Boomerang, boomerang..."])
+    ShowText([""])
+    ShowTextAttributes(["slime_purple_fc1", 0, 0, 2])
+    ShowText(["\\n<Purple Slime>...Did you see it?"])
+    ShowText([""])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ShowTextAttributes(["slime_purple_fc1", 0, 0, 2])
+  ShowText(["\\n<Purple Slime>Let's strengthen the power of slime..."])
+  ShowText([""])
+  ControlSwitches([431, 431, 0])
+  PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["A mysterious power was given from the Purple Slime!\nThe power of slime skills is doubled until the next boss floor!"])
+  ShowText([""])
+  ControlSwitches([73, 73, 1])
+  ExitEventProcessing([])
+  Empty([])

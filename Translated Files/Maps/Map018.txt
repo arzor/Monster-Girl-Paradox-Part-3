@@ -1,0 +1,423 @@
+Display Name = "Saloon's Abandoned Mine B1F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 18, 73, 66, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 18, 56, 65, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 17, 40, 44, 2, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 198, 20, 38, 2, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1564, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([102, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ConditionalBranch([0, 2098, 1])
+      SetMoveRoute([8, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+      ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+      ShowText(["\\n<Lizard Boss>Ignoring me like that... I'm being underestimated, eh?"])
+      SetMoveRoute([8, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+      Empty([])
+
+    Else([])
+      ConditionalBranch([4, 66, 0])
+        ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+        ShowText(["\\n<Vanilla>Ohh, so this is the crystal!"])
+        Empty([])
+      BranchEnd([])
+      ControlSelfSwitch(["A", 0])
+      PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+      ChangeItems([154, 0, 0, 1])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 1, 0, 2])
+        ShowText(["\\n<Alice>All right, we've acquired some raw crystal. Let's go hand it over to the blacksmith right away."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["\\n<Ilias>With this we have acquired some raw crystal. Now, let us go hand it over to the blacksmith."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 62, 0])
+        ShowTextAttributes(["gob_fc1", 0, 0, 2])
+        ShowText(["\\n<Gob>I'm excited to get my hands on a new weapon!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowPicture([5, "80_lizardboss_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+    ShowText(["\\n<Lizard Boss>It seems that you've been taking good care of my underlings... I'm the boss of the Scale Bandits."])
+    ConditionalBranch([4, 68, 0])
+      ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+      ShowText(["\\n<Papi>Ugaa! What style...! So this is a bandit boss!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 529, 0])
+      ShowTextAttributes(["sara_fc1", 2, 0, 2])
+      ShowText(["\\n<Sara>I'm the Princess of Sabasa, Sara! I shall punish any bandits who torment Saloon's townspeople!"])
+      ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+      ShowText(["\\n<Lizard Boss>Hee... A princess will make for fine prey. I wonder how much money can I get by kidnapping you..."])
+      ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+      ShowText(["\\n<Lizard Boss>Fufufu, I'll take real good care of you... How about I teach you the joy of being a woman...?"])
+      ShowTextAttributes(["sara_fc1", 1, 0, 2])
+      ShowText(["\\n<Sara>Eh...? Th-that's... P-please, be gentle..."])
+      ShowPicture([5, "80_lizardboss_st04", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["lizardboss_fc1", 3, 0, 2])
+      ShowText(["\\n<Lizard Boss>...On second thought, forget it."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Stop your banditry! If you don't, I'll force you to!"])
+    ShowPicture([5, "80_lizardboss_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+    ShowText(["\\n<Lizard Boss>Unfortunately, that's not happening... It's not so easy to quit this job, you see."])
+    ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+    ShowText(["\\n<Lizard Boss>Besides, I can't keep my mouth shut and let you go after all the damage you've done. I'll make you a plaything for me and my underlings!"])
+    ConditionalBranch([4, 129, 0])
+      ShowTextAttributes(["brunhild_fc1", 0, 0, 2])
+      ShowText(["\\n<Hild>Incoming attack. Moving to intercept...\nCombat mode, start."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 79, 0])
+      ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+      ShowText(["\\n<Nuruko>Kyuuu!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 171, 0])
+      ShowTextAttributes(["lizardboss_fc1", 3, 0, 2])
+      ShowText(["\\n<Lizard Boss>...Oh, a fake? The Scale Bandits must be famous now."])
+      ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+      ShowText(["\\n<Miranda>You'll know whether I'm a fake once you taste my sword strikes."])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss1\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 291, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    ControlSwitches([2098, 2098, 0])
+    ShowPicture([5, "80_lizardboss_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["lizardboss_fc1", 2, 0, 2])
+    ShowText(["\\n<Lizard Boss>Khh, not bad... You're strong..."])
+    ConditionalBranch([4, 68, 0])
+      ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+      ShowText(["\\n<Papi>W-we won! This is my clean break from the dark side!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["lizardboss_fc1", 2, 0, 2])
+    ShowText(["\\n<Lizard Boss>Take the crystal or whatever you want! But I won't yield my dragon pride!"])
+    ShowTextAttributes(["lizardboss_fc1", 2, 0, 2])
+    ShowText(["\\n<Lizard Boss>You have nothing else to do here, right? Take the crystal and get lost!"])
+    ConditionalBranch([4, 134, 0])
+      ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+      ShowText(["\\n<Chrome>Villains sure are tenacious... However, their banditry should subside for now."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 118, 0])
+      ShowTextAttributes(["meia_fc1", 2, 0, 2])
+      ShowText(["\\n<Meia>Now the town should be at peace for the time being. It feels good to do a good deed."])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    ShowPicture([5, "80_lizardboss_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["lizardboss_fc1", 2, 0, 2])
+    ShowText(["\\n<Lizard Boss>Hmph, you don't need anything else from me, right? Get lost, you're in the way of our business."])
+    ShowChoices([["Invite her to the party", "Get lost"], 2])
+    When([0, "Invite her to the party"])
+      ShowTextAttributes(["lizardboss_fc1", 2, 0, 2])
+      ShowText(["\\n<Lizard Boss>......"])
+      ShowTextAttributes(["lizardboss_fc1", 2, 0, 2])
+      ShowText(["\\n<Lizard Boss>Traveling as an adventurer, huh? That doesn't seem too bad..."])
+      ConditionalBranch([0, 1169, 0])
+        ConditionalBranch([0, 1170, 0])
+          ShowTextAttributes(["lizardthief_fc1", 0, 0, 2])
+          ShowText(["\\n<Liru>Boss, let's go together!"])
+          ShowTextAttributes(["lizardthief_fc2", 0, 0, 2])
+          ShowText(["\\n<Len>We're on this side as well, no need to hold back."])
+          ShowPicture([5, "80_lizardboss_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+          ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+          ShowText(["\\n<Lizard Boss>You girls... All right, I'll look after you all!"])
+          ErasePicture([5])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(171)"])
+          PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Miranda has joined the party!"])
+          ControlSwitches([2139, 2139, 0])
+          Wait([60])
+          ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+          ShowText(["\\n<Lizard Boss>Okay... Scale Bandits, let's head out into the world!"])
+          ShowTextAttributes(["lizardthief_fc1", 1, 0, 2])
+          ShowText(["\\n<Liru>UOOO! I'm fired up!"])
+          ShowTextAttributes(["lizardthief_fc2", 1, 0, 2])
+          ShowText(["\\n<Len>Fufu, let's make our name resound all over the world."])
+          ConditionalBranch([0, 6, 0])
+            ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+            ShowText(["\\n<Sonya>...Luka, is this really okay?"])
+            Empty([])
+          BranchEnd([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>I need to re-educate them somehow..."])
+          ExitEventProcessing([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ShowPicture([5, "80_lizardboss_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+      ShowText(["\\n<Lizard Boss>...But I have underlings who are precious to me. I can't leave them here."])
+      ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+      ShowText(["\\n<Lizard Boss>Well, get lost. You're being a nuisance to our business today as well."])
+      ErasePicture([5])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 1, 0, 2])
+        ShowText(["\\n<Alice>So she won't leave this place without her underlings... That's some firm character for a bandit boss."])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Then how about picking up her underlings first? If we do that, we can probably persuade her..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>So she will not leave her underlings alone here... She has a needless sense of duty for a mere bandit."])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["\\n<Ilias>Then let's make her underlings our slaves...\nOr just have them join the party."])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Get lost"])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>It appears we completely forgot that we came here for crystals... Are you sure we should leave already?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>By the way, we have neglected to collect any crystal..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The barrel is filled with food and herbs."])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+    RecoverAll([0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The party's HP and MP have been fully recovered!"])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The pot was a Honey Pot!"])
+    BattleProcessing([0, 269, false, false])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1022, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([4, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([197, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([26, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([363, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([52, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

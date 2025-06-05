@@ -1,0 +1,1023 @@
+Display Name = "Grangold Palace 2F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 176, 30, 27, 2, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 176, 57, 22, 2, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 176, 3, 22, 2, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([225, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    GatherFollowers([])
+    PlayBGM(["RPG::BGM(@name=\"boss0-2\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_lilith2_st01b", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["lilith2_fc1", 0, 0, 2])
+    ShowText(["\\n<Lilith>So the intruders into the palace have arrived. I assume you're also responsible for the terrorist attacks in the city?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 1, 0, 2])
+      ShowText(["\\n<Alice>Lilith... This is an outrageous plan you've pulled off. Corrupting the king to take the throne and then corrupting the entire country? Insane!"])
+      ShowTextAttributes(["alice_fc6", 1, 0, 2])
+      ShowText(["\\n<Alice>This injustice ends today! We're here to defeat you and liberate Grangold!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Quite an ambitious scheme you've been running, Lilith. Ruling as a queen and corrupting the king and all the citizens."])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>But today's the day we settle the score!\nWe are here to end your wicked plans and liberate Grangold!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 382, 0])
+      ShowTextAttributes(["morrigan_fc1", 0, 0, 2])
+      ShowText(["\\n<Morrigan>It's been centuries since we had a sisterly squabble!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 203, 0])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["\\n<Tatsuko>The navy won't excuse your lawlessness!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["lilith2_fc1", 0, 0, 2])
+    ShowText(["\\n<Lilith>...I think you all have made a grave misunderstanding."])
+    ShowTextAttributes(["lilith2_fc1", 0, 0, 2])
+    ShowText(["\\n<Lilith>Corrupting a town is one thing, but the power to affect an entire kingdom? We sisters are powerful, but that is beyond our capabilities."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>What!? Then--"])
+      ErasePicture([5])
+      PlayBGM(["RPG::BGM(@name=\"boss0-3\", @volume=100, @pitch=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<？？？>Yes... This is all my work.\nI've greatly enjoyed getting to bring this country to its knees..."])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>Impossible! That voice, it can't be--"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<？？？>Subjugating countries, corrupting kings, toying with their citizens... These are my specialties."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>What are you talking about? Then who is--"])
+      ErasePicture([5])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<？？？>Your memory really is slipping, Ilias.\nHave you forgotten how much I enjoy bringing empires to their knees?"])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>No, it can't be...\nYou can't be the one behind this..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<？？？>Have you forgotten how many countries I've laid waste to? Have you forgotten the screams of their citizens as I devoured their lives?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowAnimation([8, 542, false])
+    Wait([60])
+    ControlSwitches([31, 31, 0])
+    Wait([60])
+    ShowPicture([5, "80_tamamo_st61b", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["tamamo_fc3", 0, 0, 2])
+    ShowText(["\\n<Tamamo>One of the Six Ancestors, the fair, golden nine-tailed great kitsune... Carve the name Tamamo into your very souls!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>Tamamo...? No, you're not the Tamamo I know!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Tamamo! When did you break your seal?!\nWait, Tamamo should still be wasting away at the fox shrine."])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>No, hold on...\nYou must have come from another world like those Seraphim--"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["tamamo_fc3", 0, 0, 2])
+    ShowText(["\\n<Tamamo>Indeed... I am not the Tamamo you're familiar with. I'm a different Tamamo who came here from a world overcome by darkness!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>So we're being invaded by monsters from parallel worlds in addition to the angels? And not just any monster, but one of the Six Ancestors..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>So monsters from parallel worlds have come here in addition to the angels? And not just any monster, but one of the Six Ancestors..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([6, "80_lilith2_st01b", 0, 0, -200, 0, 100, 100, 255, 0])
+    ShowPicture([5, "80_tamamo_st61b", 0, 0, 200, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lilith2_fc1", 0, 0, 2])
+    ShowText(["\\n<Lilith>So there you have it. Tamamo is the one doing the heavy lifting. My sisters and I are just helping her out."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>Wh-what do we do now!?\nIf they attack together..."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Wh-what do we do now!?\nIf they attack together..."])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([6])
+    ShowPicture([5, "80_tamamo_st61b", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tamamo_fc3", 0, 0, 2])
+    ShowText(["\\n<Tamamo>I wouldn't do something so crass.\nI'll take all of you on by myself."])
+    ShowPicture([5, "80_tamamo_st62b", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tamamo_fc3", 1, 0, 2])
+    ShowText(["\\n<Tamamo>Give me your best shot. At least provide me with a few moments of entertainment..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>We don't stand a chance against that level of magical power..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>We don't stand a chance against one of the Six Ancestors as we are now..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>It doesn't matter whether we can win or not, we can't just surrender! Let's fight!!"])
+    ConditionalBranch([4, 129, 0])
+      ShowTextAttributes(["brunhild_fc1", 0, 0, 2])
+      ShowText(["\\n<Hild>Overwhelming difference in power level detected...\nHowever, no alternative options available..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 79, 0])
+      ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+      ShowText(["\\n<Nuruko>Kyuu!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 682, 0])
+      ShowTextAttributes(["tamamo_fc3", 0, 0, 2])
+      ShowText(["【玉藻’】"])
+      ShowText(["くくっ、こちらにもウチがいるぞ。"])
+      ShowText(["すっかり化かされた心地だろう……？"])
+      ShowTextAttributes(["tamamo_fc3", 0, 0, 2])
+      ShowText(["【玉藻】"])
+      ShowText(["ほう、混沌の捻れが発生しておるか。"])
+      ShowText(["まあウチ自身の判断なら、それで上手く行こう……"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss_rikuso\", @volume=100, @pitch=100)"])
+    CallCommonEvent([10])
+    BattleProcessing([0, 874, false, false])
+    CallCommonEvent([11])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    Script(["gain_medal(3008)"])
+    PlayBGM(["RPG::BGM(@name=\"boss0-3\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_tamamo_st63b", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["tamamo_fc3", 2, 0, 2])
+    ShowText(["\\n<Tamamo>I see, you're quite strong yourselves. But no matter!"])
+    ShowAnimation([-1, 640, true])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Whoa!!"])
+    ControlSwitches([2265, 2265, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([29, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([22, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>Wait, is that...!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Wait, is she...!"])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    CallCommonEvent([338])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>Wait, is that...!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Wait, is she...!"])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    CallCommonEvent([338])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>Wait, is that...!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Wait, is she...!"])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    CallCommonEvent([338])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ShowTextAttributes(["queenant_fc1", 1, 0, 2])
+    ShowText(["\\n<Queen Ant>........."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Queen Ant seems ashamed of her own powerlessness..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>Help me...\nPlease open the cell door..."])
+    ConditionalBranch([0, 2190, 0])
+      ShowTextAttributes(["alice_fc5", 6, 0, 2])
+      ShowText(["\\n<Alice>You got captured\\*\\fi again?!\\*\\fi"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["alice_fc5", 6, 0, 2])
+      ShowText(["\\n<Alice>You got captured?!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>Let me out of here, please...\nI'm so hungry..."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>She doesn't even have enough energy to act haughty. She must be completely worn down."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>She doesn't even have enough energy to act haughty. She has to be in really bad shape."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["dog_fc1", 0, 0, 2])
+    ShowText(["\\n<Wanko>*sniffle* *sniffle*"])
+    ShowTextAttributes(["slime_fc1", 2, 0, 2])
+    ShowText(["\\n<Puruko>Save us!"])
+    ShowTextAttributes(["alice_fc5", 5, 0, 2])
+    ShowText(["\\n<Alice>What a pitiful party...\nToo bad for you, these cells can't be unlocked from this side either."])
+    ConditionalBranch([12, "exist_party_persona_id?(391)"])
+      ShowTextAttributes(["mefist_fc2", 0, 0, 2])
+      ShowText(["\\n<Mephisto>Even if we had the key, we wouldn't open it."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+      ShowText(["\\n<Mephisto>Even if we had the key, we wouldn't open it."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc4", 4, 0, 2])
+    ShowText(["\\n<Ilias>........."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc1", 5, 0, 2])
+      ShowText(["\\n<Sonya>HEY! No bullying!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Don't bully them..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["alice_fc5", 0, 0, 2])
+    ShowText(["\\n<Alice>Fine, whatever.\nSit tight and we'll defeat Lilith and open it for you."])
+    ShowTextAttributes(["iriasu_fc4", 4, 0, 2])
+    ShowText(["\\n<Ilias>........."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I guess we should hurry up and defeat the Lilith sisters to free them..."])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["alice_fc5", 1, 0, 2])
+    ShowText(["\\n<Alice>Operation Infiltrate Grangold Palace: Success!"])
+    ConditionalBranch([0, 2190, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>Have you learned absolutely nothing!?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>How is this not a complete failure!?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["bunnyslime_fc1", 2, 0, 2])
+    ShowText(["\\n<Usako>I miss carrots..."])
+    ShowTextAttributes(["youko_fc1", 2, 0, 2])
+    ShowText(["\\n<Mofuyu>I miss tofu..."])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>What a pitiful party...\nUnfortunately for you, these cells do not open from this side either."])
+    ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+    ShowText(["\\n<Ilias>Well, not like we'd open it even if we had the key."])
+    ShowTextAttributes(["alice_fc6", 1, 0, 2])
+    ShowText(["\\n<Alice>Damn you, petty goddess!"])
+    ShowTextAttributes(["iriasu_fc5", 0, 0, 2])
+    ShowText(["\\n<Ilias>That's rich coming from the Monster Lord!"])
+    ShowTextAttributes(["alice_fc6", 1, 0, 2])
+    ShowText(["\\n<Alice>Low life!"])
+    ShowTextAttributes(["iriasu_fc5", 0, 0, 2])
+    ShowText(["\\n<Ilias>No you!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Seriously..."])
+    ConditionalBranch([12, "exist_party_persona_id?(391)"])
+      ShowTextAttributes(["mefist_fc2", 2, 0, 2])
+      ShowText(["\\n<Mephisto>My students are more mature."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+      ShowText(["\\n<Mephisto>My students are more mature."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["alice_fc6", 1, 0, 2])
+    ShowText(["\\n<Alice>I believe there's still good in this world! I believe in the hope you turned your back on!"])
+    ShowTextAttributes(["iriasu_fc5", 0, 0, 2])
+    ShowText(["\\n<Ilias>Fool! Let me crush that hope then, and you can perish with the rest of this world!"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+      ShowText(["\\n<Sonya>Save those lines for the final boss battle...\nCome on, let's go."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Save those lines for the final boss battle...\nCome on, let's go."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc5", 0, 0, 2])
+    ShowText(["\\n<Ilias>You're gonna be stuck in there forever!"])
+    ShowTextAttributes(["alice_fc6", 1, 0, 2])
+    ShowText(["\\n<Alice>Hmph! I can escape from such a simple cell on my own!"])
+    ShowTextAttributes(["alice_fc5", 3, 0, 2])
+    ShowText(["\\n<Alice>........."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>She's really stubborn..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I guess we should hurry up and defeat the Lilith sisters to free them..."])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ConditionalBranch([0, 2194, 1])
+      ControlSwitches([2194, 2194, 0])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>The cell doesn't have a lock...\nIs it being sealed magically?"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>The cell does not have a lock...\nIt must be sealed magically."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([12, "exist_party_persona_id?(391)"])
+        ShowTextAttributes(["mefist_fc2", 0, 0, 2])
+        ShowText(["\\n<Mephisto>It should unlock when we defeat the one who placed the spell on it, namely the Queen."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+        ShowText(["\\n<Mephisto>It should unlock when we defeat the one who placed the spell on it, namely the Queen."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    CallCommonEvent([11])
+    ControlSwitches([2265, 2265, 1])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    PlayBGM(["RPG::BGM(@name=\"boss0-3\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_tamamo_st61b", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>I can't believe it... She's so strong..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>I knew I didn't stand a chance in this form..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["tamamo_fc3", 0, 0, 2])
+    ShowText(["\\n<Tamamo>Kukuku... You're all fools to oppose me. The people of this era are trash compared to the Six Ancestors."])
+    ErasePicture([5])
+    Wait([60])
+    FadeoutBGM([1])
+    ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+    ShowText(["\\n<Tamamo>My my, it appears the party already started..."])
+    PlayBGM(["RPG::BGM(@name=\"tamamo\", @volume=100, @pitch=100)"])
+    ControlSwitches([32, 32, 0])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([9, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 6, 0, 2])
+      ShowText(["\\n<Alice>Another Tamamo!?\nYou're the Tamamo I know, aren't you!?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>Another Tamamo!?\nYou're the Tamamo from this world, are you not!?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>You came to help us, after all!"])
+    ShowPicture([5, "80_tamamo_st04", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["tamamo_fc1", 1, 0, 2])
+    ShowText(["\\n<Tamamo>Mmn, after Alma Elma gave me a kick in the rear, I eventually realized she was right. I can't waste away the rest of my time on this earth."])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+    RecoverAll([0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Tamamo uses a Last Elixir!\nThe party's HP and MP have been fully restored!"])
+    ShowTextAttributes(["tamamo_fc1", 1, 0, 2])
+    ShowText(["\\n<Tamamo>On the way here, I encountered a modified human fighting some yakuza. I beat up the modified human. That was the right call, was it not?"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 6, 0, 2])
+      ShowText(["\\n<Sonya>So you helped Uncle Lazarus too...\nThanks, Tamamo!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I'm glad to hear Uncle Lazarus and Merlin are safe!"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    Wait([60])
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"mon_tamamo2\", @pitch=100, @volume=80)"])
+    SetMoveRoute([9, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=14, @parameters=[0, -5])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, -5])"])
+    Wait([60])
+    ShowPicture([5, "80_tamamo_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+    ShowText(["\\n<Tamamo>Well now... This level of opponent is too much for you. Shall I take over?"])
+    ShowPicture([6, "80_tamamo_st01", 0, 0, -200, 0, 100, 100, 255, 0])
+    ShowPicture([5, "80_tamamo_st61b", 0, 0, 200, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tamamo_fc3", 0, 0, 2])
+    ShowText(["\\n<Tamamo>Hohoo, you're me from this world?\nI heard your body had already been sealed."])
+    ErasePicture([6])
+    ShowPicture([5, "80_tamamo_st05", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tamamo_fc1", 4, 0, 2])
+    ShowText(["\\n<Tamamo>I ask thee, eternal time...\nReveal my body, yoked in twilight."])
+    PlaySE(["RPG::SE(@name=\"Darkness1\", @pitch=100, @volume=80)"])
+    ShowPicture([10, "sys_white", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([10, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    PlayBGM(["RPG::BGM(@name=\"scene_battle1\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_tamamo_st51", 0, 0, 0, 0, 100, 100, 255, 0])
+    MovePicture([10, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+    ShowTextAttributes(["tamamo_fc2", 0, 0, 2])
+    ShowText(["\\n<Tamamo>Return my true body to me--"])
+    ShowPicture([6, "80_tamamo_st52", 0, 0, -200, 0, 100, 100, 255, 0])
+    ShowPicture([5, "80_tamamo_st64b", 0, 0, 200, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tamamo_fc2", 1, 0, 2])
+    ShowText(["\\n<Tamamo>You shouldn't have any complaints now, Tamamo. Our powers are equally matched."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 6, 0, 2])
+      ShowText(["\\n<Alice>That's what you truly look like!?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>You've returned to your original form, but you can't maintain it for very long--"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["tamamo_fc3", 0, 0, 2])
+    ShowText(["\\n<Tamamo>Lilith, taking her on is not part of your job. Entertain the hero and his friends, instead."])
+    ErasePicture([6])
+    ShowPicture([5, "80_lilith2_st01b", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lilith2_fc1", 0, 0, 2])
+    ShowText(["\\n<Lilith>Minagi is our master.\nWe aren't bound to obey your orders without question, even if you are Tamamo."])
+    ShowTextAttributes(["lilith2_fc1", 1, 0, 2])
+    ShowText(["\\n<Lilith>...However, I am willing to accept your proposal in this instance. I'll be glad to show the hero a wonderful time!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 1, 0, 2])
+      ShowText(["\\n<Alice>Okay, leave Tamamo to Tamamo!\nWe'll take Lilith out!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Let's defeat Lilith while the Tamamos beat each other up! Come on!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Lilith, we won't let you and your sisters do as you please any longer! Let's settle this once and for all!"])
+    ConditionalBranch([4, 395, 0])
+      ShowTextAttributes(["lilith2_fc1", 0, 0, 2])
+      ShowText(["【リリス’】"])
+      ShowText(["己の作戦を、己で打ち破る……"])
+      ShowText(["それも一興ですね。"])
+      ShowTextAttributes(["lilith2_fc1", 2, 0, 2])
+      ShowText(["【リリス】"])
+      ShowText(["まさか、そちらにも私が？"])
+      ShowText(["ならばこの計画、失敗するのが世界の筋書き……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 396, 0])
+      ShowTextAttributes(["lilith2_fc2", 0, 0, 2])
+      ShowText(["【リリスオリジン’】"])
+      ShowText(["己の作戦を、己で打ち破る……"])
+      ShowText(["それも一興ですね。"])
+      ShowTextAttributes(["lilith2_fc1", 2, 0, 2])
+      ShowText(["【リリス】"])
+      ShowText(["まさか、私のオリジン……！？"])
+      ShowText(["いったい、そちらの歴史はどうなっているのです？"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss_lilith\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 719, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    PlayBGM(["RPG::BGM(@name=\"boss0-2\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_lilith2_st03b", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["lilith2_fc1", 2, 0, 2])
+    ShowText(["\\n<Lilith>I'm pretty sure I wasn't holding back...\nNevertheless, they still managed to push me this far..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>We can do this!\nJust a little more and victory is ours!"])
+    ShowTextAttributes(["lilith2_fc1", 2, 0, 2])
+    ShowText(["\\n<Lilith>I believe Astaroth was correct...\nIt may be preferable to include them in our plan, after all."])
+    ShowPicture([6, "80_lilith2_st01b", 0, 0, -200, 0, 100, 100, 255, 0])
+    ShowPicture([5, "80_tamamo_st64b", 0, 0, 200, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tamamo_fc3", 3, 0, 2])
+    ShowText(["\\n<Tamamo>If you're going to let them live, then withdraw. If you fight with your full power, it will surely result in a fight to the death..."])
+    ErasePicture([6])
+    ShowPicture([5, "80_lilith2_st01b", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lilith2_fc1", 0, 0, 2])
+    ShowText(["\\n<Lilith>Then with your permission, I'll take my leave...\nHero, next time we meet, I'll explain our reasons to you."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 1, 0, 2])
+      ShowText(["\\n<Alice>As if we'd listen to whatever they are!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>You really think we'd pay heed to your words, fiend!?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["lilith2_fc1", 0, 0, 2])
+    ShowText(["\\n<Lilith>Of course, you have no option but to listen.\nIf you want to save this world, there's no other way..."])
+    ShowTextAttributes(["lilith2_fc1", 0, 0, 2])
+    ShowText(["\\n<Lilith>...So until we meet again."])
+    ErasePicture([5])
+    Wait([60])
+    PlaySE(["RPG::SE(@name=\"mon_wind1\", @pitch=100, @volume=100)"])
+    SetMoveRoute([6, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    Wait([60])
+    PlayBGM(["RPG::BGM(@name=\"scene_battle1\", @volume=100, @pitch=100)"])
+    ShowPicture([6, "80_tamamo_st51", 0, 0, -200, 0, 100, 100, 0, 0])
+    ShowPicture([5, "80_tamamo_st64b", 0, 0, 200, 0, 100, 100, 0, 0])
+    MovePicture([6, nil, 0, 0, -200, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([5, nil, 0, 0, 200, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["tamamo_fc2", 0, 0, 2])
+    ShowText(["\\n<Tamamo>It's just the two of us now, other me."])
+    PlaySE(["RPG::SE(@name=\"mon_earth1\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The two Tamamos are locked in a magical duel!\nThey appear to be on even ground--"])
+    ShowTextAttributes(["tamamo_fc3", 3, 0, 2])
+    ShowText(["\\n<Tamamo>I'll let the hero live, but not you.\nNot since you've abandoned your duty to the Dark Goddess."])
+    ShowTextAttributes(["tamamo_fc2", 0, 0, 2])
+    ShowText(["\\n<Tamamo>Hmph, duty? The one who's done nothing but indulge in her own desires to devour this country dares question my sense of duty? Don't make me laugh!"])
+    ShowPicture([5, "80_tamamo_st61b", 0, 0, 200, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tamamo_fc3", 0, 0, 2])
+    ShowText(["\\n<Tamamo>I can tell that power of yours has a time limit.\nHow much do you have left? Barely a minute?"])
+    ShowTextAttributes(["tamamo_fc2", 2, 0, 2])
+    ShowText(["\\n<Tamamo>........."])
+    ShowTextAttributes(["tamamo_fc3", 0, 0, 2])
+    ShowText(["\\n<Tamamo>Right on the mark? Then you don't have time to waste talking! Perish, Tamamo!"])
+    PlaySE(["RPG::SE(@name=\"mon_earth1\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Our Tamamo is being pushed back!\nHer power is starting to wane, and she's quickly losing ground--"])
+    ErasePicture([5])
+    ErasePicture([6])
+    Wait([60])
+    ShowTextAttributes(["nero_fc1", 0, 0, 2])
+    ShowText(["\\n<Nero>Don't give up!"])
+    PlayBGM(["RPG::BGM(@name=\"boss_maou1\", @volume=100, @pitch=100)"])
+    ShowAnimation([10, 542, false])
+    Wait([30])
+    ShowAnimation([11, 542, false])
+    ControlSwitches([34, 34, 0])
+    Wait([60])
+    ShowPicture([5, "80_nero_st01", 0, 0, -175, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_neris_st03", 0, 0, 175, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -175, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 175, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["tamamo_fc3", 2, 0, 2])
+    ShowText(["\\n<Tamamo>Who the hell are you!?"])
+    ShowTextAttributes(["nero_fc1", 0, 0, 2])
+    ShowText(["\\n<Nero>Neris, go all out!"])
+    ShowTextAttributes(["neris_fc1", 2, 0, 2])
+    ShowText(["\\n<Neris>All out?! You want me to blow this palace sky high!?"])
+    ControlSwitches([35, 35, 0])
+    PlaySE(["RPG::SE(@name=\"Darkness1\", @pitch=100, @volume=80)"])
+    ShowPicture([5, "80_nero_st11", 0, 0, -175, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["nero_fc2", 0, 0, 2])
+    ShowText(["\\n<Nero>This isn't an opponent we can hold back against!\nGive her everything you've got!"])
+    PlaySE(["RPG::SE(@name=\"Darkness1\", @pitch=100, @volume=80)"])
+    ShowPicture([6, "80_neris_st11", 0, 0, 175, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["neris_fc2", 0, 0, 2])
+    ShowText(["\\n<Neris>OKAY! Here I go!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 6, 0, 2])
+      ShowText(["\\n<Alice>You two...!?\nYou look like...!?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>You two...!?\nYou look like...!?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([6, "80_tamamo_st51", 0, 0, -200, 0, 100, 100, 255, 0])
+    ShowPicture([5, "80_nero_st11b", 0, 0, 200, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tamamo_fc2", 2, 0, 2])
+    ShowText(["\\n<Tamamo>Just who are you, and why are you helping me?"])
+    ShowTextAttributes(["nero_fc2", 0, 0, 2])
+    ShowText(["\\n<Nero>Save it for later, master!\nPlease sync up with us!"])
+    ShowTextAttributes(["tamamo_fc2", 0, 0, 2])
+    ShowText(["\\n<Tamamo>I don't remember taking on any apprentices, but all right, let's go!"])
+    ErasePicture([5])
+    ErasePicture([6])
+    ShowAnimation([8, 610, false])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Nero, Neris, and Tamamo combine their magical power!\nThe Tamamo from the other world is being overpowered--"])
+    ShowTextAttributes(["tamamo_fc3", 2, 0, 2])
+    ShowText(["\\n<Tamamo>Such power... Nnngh...!!"])
+    ShowAnimation([8, 583, true])
+    PlaySE(["RPG::SE(@name=\"mon_earth1\", @pitch=100, @volume=100)"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>The palace isn't going to withstand this exchange of power! Luka, let's evacuate at once!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Such power... It's on par with the Great Monster War!\nThe palace can't take it! Let's get out of here!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Run for it! Hurry!"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ShowAnimation([8, 569, true])
+    FadeoutScreen([])
+    PlaySE(["RPG::SE(@name=\"mon_earth1\", @pitch=100, @volume=100)"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>Th-the palace... It's coming down!!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Th-the palace...is collapsing!"])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"mon_earth2\", @pitch=100, @volume=100)"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 1, 0, 2])
+      ShowText(["\\n<Alice>Don't just stand there! Get moving!!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Don't just stand there! Run!!"])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"mon_earth4\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Luka and party escape from Grangold Palace--"])
+    Wait([180])
+    TransferPlayer([0, 37, 47, 5, 2, 2])
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    ControlVariables([1001, 1001, 0, 0, 26])
+    ControlVariables([1063, 1063, 0, 0, 13])
+    ControlVariables([1002, 1002, 0, 0, 31])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    ControlSwitches([34, 34, 1])
+    ControlSwitches([35, 35, 1])
+    ControlSwitches([2270, 2270, 0])
+    FadeinScreen([])
+    CallCommonEvent([358])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>Wait, is that...!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Wait, is she...!"])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    CallCommonEvent([338])
+    Empty([])
+
+  Page 1
+    Empty([])

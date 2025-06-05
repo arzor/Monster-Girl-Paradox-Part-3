@@ -1,0 +1,895 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 469, 24, 15, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 469, 37, 18, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 469, 10, 26, 0, 0])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["mariel_fc1", 0, 0, 2])
+    ShowText(["【マリエル】"])
+    ShowText(["ミカエラ様の馴染みなら、大歓迎です。"])
+    ShowText(["外では決して手に入らない品ですよ。"])
+    ShowChoices([["装備品を買う", "アイテムを買う", "秘石の加工を頼む", "やめる"], 4])
+    When([0, "装備品を買う"])
+      ShopProcessing([1, 4185, 0, 0, false])
+      ShopItem([1, 238, 0, 0])
+      ShopItem([1, 4308, 0, 0])
+      ShopItem([1, 4332, 0, 0])
+      ShopItem([1, 4368, 0, 0])
+      ShopItem([1, 4496, 0, 0])
+      ShopItem([1, 4815, 0, 0])
+      ShopItem([2, 474, 0, 0])
+      ShopItem([2, 709, 0, 0])
+      ShopItem([2, 845, 0, 0])
+      ShopItem([2, 1093, 0, 0])
+      ShopItem([2, 1097, 0, 0])
+      ShopItem([2, 1136, 0, 0])
+      ShopItem([2, 1156, 0, 0])
+      ShopItem([2, 1590, 0, 0])
+      Empty([])
+
+    When([1, "アイテムを買う"])
+      ShopProcessing([0, 3, 0, 0, false])
+      ShopItem([0, 5, 0, 0])
+      ShopItem([0, 8, 0, 0])
+      ShopItem([0, 11, 0, 0])
+      ShopItem([0, 22, 0, 0])
+      ShopItem([0, 23, 0, 0])
+      ShopItem([0, 35, 0, 0])
+      ShopItem([0, 102, 0, 0])
+      ShopItem([0, 109, 0, 0])
+      ShopItem([0, 110, 0, 0])
+      ShopItem([0, 77, 0, 0])
+      ShopItem([0, 81, 0, 0])
+      ShopItem([0, 3310, 0, 0])
+      ShopItem([0, 3317, 0, 0])
+      ShopItem([0, 3285, 0, 0])
+      ShopItem([0, 2853, 0, 0])
+      ShopItem([0, 2857, 0, 0])
+      ShopItem([0, 2450, 0, 0])
+      ShopItem([0, 2465, 0, 0])
+      ShopItem([0, 2475, 0, 0])
+      Empty([])
+
+    When([2, "秘石の加工を頼む"])
+      Script(["call_synthesize(85)"])
+      Empty([])
+
+    When([3, "やめる"])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 469, 20, 30, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 469, 30, 29, 0, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ConditionalBranch([1, 1147, 0, 3, 2])
+      ConditionalBranch([2, "A", 1])
+        ShowTextAttributes(["dragonhead_fc1", 0, 0, 2])
+        ShowText(["【ドラゴンヘッド】"])
+        ShowText(["私は、世界三大鍛冶屋と言われた者の一人だ。"])
+        ShowText(["師匠の志を受け、我が武器で追われた者達を助けている。"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["dragonhead_fc1", 0, 0, 2])
+      ShowText(["【ドラゴンヘッド】"])
+      ShowText(["お前達も、この里に縁ある者だとか。"])
+      ShowText(["我が武器が、旅の助けにならん事を……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1147, 0, 4, 1])
+      ShowTextAttributes(["dragonhead_fc1", 1, 0, 2])
+      ShowText(["【ドラゴンヘッド】"])
+      ShowText(["師匠が戻ってきた！"])
+      ShowText(["お前達が助けてくれたようだな、礼を言うぞ！"])
+      Empty([])
+
+    BranchEnd([])
+    Script(["call_synthesize(37)"])
+    ConditionalBranch([0, 1068, 0])
+      ConditionalBranch([1, 1147, 0, 3, 2])
+        ConditionalBranch([2, "A", 1])
+          ControlSelfSwitch(["A", 0])
+          ShowTextAttributes(["dragonhead_fc1", 2, 0, 2])
+          ShowText(["【ドラゴンヘッド】"])
+          ShowText(["我等三人の師匠……伝説の鍛冶屋ランドルフは、死んだ。"])
+          ShowText(["義侠心から邪神の支配に立ち向かい、命を落としたのだ。"])
+          ShowTextAttributes(["dragonhead_fc1", 2, 0, 2])
+          ShowText(["【ドラゴンヘッド】"])
+          ShowText(["師匠の志は、私が引き継いだ。"])
+          ShowText(["時が来れば、自ら誂えた武器を持ち戦うのみだ！"])
+          ShowTextAttributes(["dragonp_fc1", 2, 0, 2])
+          ShowText(["【パピ】"])
+          ShowText(["親方、この世界では死んでいたのか……"])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["外部の客は泊めない決まりだが……"])
+    ShowText(["ミカエラ様の馴染みなら話は別、無料で泊まっていくがいい。"])
+    ShowChoices([["はい", "いいえ"], 2])
+    When([0, "はい"])
+      FadeoutScreen([])
+      PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+      Wait([150])
+      RecoverAll([0, 0])
+      FadeinScreen([])
+      Empty([])
+
+    When([1, "いいえ"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([1, 853, 0, 2, 1])
+      ConditionalBranch([0, 1602, 1])
+        ShowTextAttributes(["mob_wahu2_fc1", 0, 0, 2])
+        ShowText(["【カンナ】"])
+        ShowText(["うちも、暴れて憂さ晴らししたいわ……"])
+        ShowText(["連れて行ってくれへん？"])
+        ShowChoices([["仲間にする", "仲間にしない"], 0])
+        When([0, "仲間にする"])
+          ShowTextAttributes(["mob_wahu2_fc1", 0, 0, 2])
+          ShowText(["【カンナ】"])
+          ShowText(["ふふ……よろしゅうお願いします。"])
+          ErasePicture([5])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(602)"])
+          PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["カンナが仲間に加わった！"])
+          Wait([60])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "仲間にしない"])
+          ShowTextAttributes(["mob_wahu2_fc1", 0, 0, 2])
+          ShowText(["【カンナ】"])
+          ShowText(["それは残念やわぁ……"])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([7521])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["mariel_fc1", 0, 0, 2])
+    ShowText(["【マリエル】"])
+    ShowText(["隠れ里の教会にようこそ。"])
+    ShowText(["何のご用でしょうか……？"])
+    ShowChoices([["お祈りをする", "用はない"], 2])
+    When([0, "お祈りをする"])
+      ControlVariables([1002, 1002, 0, 0, 104])
+      ShowTextAttributes(["mariel_fc1", 0, 0, 2])
+      ShowText(["【マリエル】"])
+      ShowText(["それでは、イリアス様に祈りましょう。"])
+      ShowText(["……ああ、この場に導きの縁を感じます。"])
+      ShowTextAttributes(["mariel_fc1", 0, 0, 2])
+      ShowText(["【マリエル】"])
+      ShowText(["もし旅先で何かあった場合、この場に導かれるでしょう。"])
+      ShowText(["イリアス様のご加護があらん事を……"])
+      Empty([])
+
+    When([1, "用はない"])
+      ShowTextAttributes(["mariel_fc1", 0, 0, 2])
+      ShowText(["【マリエル】"])
+      ShowText(["イリアス様のご加護があらん事を……"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["エデン様は、今に至るまで魔界で戦い続けたという。"])
+    ShowText(["しかし、我々はそのような覇気など残されていない……"])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["これまで、邪神軍にさえこの場所は見付かっていなかった。"])
+    ShowText(["もっとも、天使の残党など放置されていただけかもしれん……"])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["第二次聖魔大戦……異世界の天使……"])
+    ShowText(["我々には、関わりのない話だな。"])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["ミカエラ様は、転生を果たされたが……"])
+    ShowText(["その大いなる力は、失われてしまったようだ。"])
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["それでも、この小さな隠れ里を守る程度なら十分。"])
+    ShowText(["先程のように、六祖クラスさえ現れなければな……"])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["天使解放軍の存在は知っていたが……"])
+    ShowText(["こうして訪問を受けるのは、初めてだ。"])
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["どちらにしろ、我々は力になれない。"])
+    ShowText(["ここにいるのは、下位の天使ばかりだからな……"])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ControlSwitches([2532, 2532, 0])
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["この隠れ里より北西に、ミトラ封印城が存在する。"])
+    ShowText(["そこには、20の神武器が眠っているという……"])
+    ConditionalBranch([0, 2531, 1])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["ミトラ封印城が、魔界にも存在するのですか！？"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["僕達の世界にもあった城だよね。"])
+      ShowText(["確か、20の神武器が眠っているっていう……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["その城は、僕達の世界にも存在していた。"])
+      ShowText(["ただし、神武器は一つも残っていなかったが……"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["だが城内の扉は閉ざされ、宝物庫に入る事が出来ん。"])
+    ShowText(["城の鍵は、六祖の沙蛇が厳重に管理しているという話だ。"])
+    ConditionalBranch([0, 2531, 1])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["それでは、神武器を奪うことは出来ませんね……"])
+      ShowText(["いちおう確認のため、城に行ってみても良いでしょう。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["我々はただ、平穏に暮らせる事を望んでいる。"])
+    ShowText(["天使の復権など、考えてはいない……"])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ShowTextAttributes(["micaela_fc1", 0, 0, 2])
+    ShowText(["【ミカエラ】"])
+    ShowText(["何度来られても、私の意志は揺らぎませんよ。"])
+    ShowText(["そもそも、あなた達と供に戦うほどの力はありません。"])
+    ShowTextAttributes(["micaela_fc1", 0, 0, 2])
+    ShowText(["【ミカエラ】"])
+    ShowText(["客人としてなら、歓迎しましょう。"])
+    ShowText(["しかし、仲間になる事はできません……"])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ConditionalBranch([1, 1147, 0, 4, 0])
+      ControlVariables([1147, 1147, 0, 0, 6])
+      ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+      ShowText(["【ランドルフ】"])
+      ShowText(["おお、あんた達か。"])
+      ShowText(["約束通り、邪神を倒すための武器を造ってやるぜ！"])
+      Script(["call_synthesize(40)"])
+      ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+      ShowText(["【ランドルフ】"])
+      ShowText(["むっ、その品は……？"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["ランドルフは、天軍の剣と明星の盾に目を付けた！"])
+      ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+      ShowText(["【ランドルフ】"])
+      ShowText(["これは、凄まじい力を秘めているな……"])
+      ShowText(["だが、劣化して真の力を発揮できてないようだ。"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["ランドルフさんなら、元通りに直せますか……？"])
+      ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+      ShowText(["【ランドルフ】"])
+      ShowText(["俺じゃ無理だな……"])
+      ShowText(["この種の聖具は、鍛冶の腕だけじゃ足りねぇんだ。"])
+      ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+      ShowText(["【ランドルフ】"])
+      ShowText(["これを造った奴が、直すしかねぇだろうな。"])
+      ShowText(["神様だか天使様だかは知らないが……"])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["これは、神聖鍛冶が手掛けたものです。"])
+      ShowText(["最上級の聖具を造るために生み出された専門の天使ですよ。"])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["総合的な鍛冶技術なら、ランドルフの方が上でしょうが……"])
+      ShowText(["神聖鍛冶は、聖具の精製に特化した技能を持っているのです。"])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["しかし……神聖鍛冶ララは、聖魔大戦で命を落としました。"])
+      ShowText(["おそらく、この魔界でも同様でしょうね……"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["そう言えば……"])
+      ShowText(["サン・イリアで、天界一の鍛冶を自称する天使に会ったなぁ。"])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["おそらく、ただの自信過剰な天使でしょうね。"])
+      ShowText(["その者がギャンブル狂でない限り、ララではないでしょう。"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["ずっとスロット回してたけど……"])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["まさしくララではないですか！"])
+      ShowText(["この世界で、生き延びていたんですか！？"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["でも、直後にサン・イリアが人形の襲撃を受けたから……"])
+      ShowText(["今はどこにいるか分かりませんね。"])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["あの者は、魔都サン・イリアから離れていない気がします。"])
+      ShowText(["酒場で酒でも喰らっているんじゃないでしょうか……"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["ずいぶん不道徳な天使なんですね……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["ともかく、神聖鍛冶の力はぜひ借りたい。"])
+      ShowText(["サン・イリアの酒場に探しに行ってみよう――"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1147, 0, 6, 1])
+      ConditionalBranch([1, 1147, 0, 7, 2])
+        ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+        ShowText(["【ランドルフ】"])
+        ShowText(["おお、あんた達か。"])
+        ShowText(["約束通り、邪神を倒すための武器を造ってやるぜ！"])
+        ShowChoices([["鍛冶を頼む", "虚竜鱗石製品を造ってもらう", "話をする", "やめる"], 5])
+        When([0, "鍛冶を頼む"])
+          Script(["call_synthesize(40)"])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "虚竜鱗石製品を造ってもらう"])
+          JumpToLabel(["虚竜鱗石"])
+          ExitEventProcessing([])
+          Empty([])
+        When([2, "話をする"])
+          ConditionalBranch([1, 1147, 0, 6, 0])
+            ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+            ShowText(["【ランドルフ】"])
+            ShowText(["神聖鍛冶か……"])
+            ShowText(["実在するなら、ぜひ会ってみたいもんだぜ。"])
+            ConditionalBranch([0, 2458, 1])
+              ShowTextAttributes(["", 0, 0, 2])
+              ShowText(["アミラに神聖鍛冶の捜索は頼んでおいた。"])
+              ShowText(["後で、彼女に話を聞いてみよう――"])
+              ExitEventProcessing([])
+              Empty([])
+            BranchEnd([])
+            ConditionalBranch([0, 2458, 0])
+              ShowTextAttributes(["", 0, 0, 2])
+              ShowText(["神聖鍛冶の力を借りられれば、さらなる装備強化が見込める。"])
+              ShowText(["サン・イリアの酒場に行ってみよう――"])
+              ExitEventProcessing([])
+              Empty([])
+            BranchEnd([])
+            Empty([])
+          BranchEnd([])
+          ConditionalBranch([1, 1147, 0, 7, 0])
+            ConditionalBranch([1, 1007, 0, 6, 2])
+              ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+              ShowText(["【パピ】"])
+              ShowText(["親方……いや、なんでもないのだ。"])
+              ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+              ShowText(["【ランドルフ】"])
+              ShowText(["んっ……何か言いたい事でもあるのか？"])
+              ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+              ShowText(["【パピ】"])
+              ShowText(["（あたしの腕が、親方に迫るまでは……言えないのだ）"])
+              ExitEventProcessing([])
+              Empty([])
+            BranchEnd([])
+            ConditionalBranch([1, 1007, 0, 7, 1])
+              ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+              ShowText(["【パピ】"])
+              ShowText(["親方……いや、アナザー親方。"])
+              ShowText(["あたしに、稽古を付けてほしいのだ。"])
+              ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+              ShowText(["【ランドルフ】"])
+              ShowText(["お嬢ちゃん……別世界の俺の弟子って話だったな。"])
+              ShowText(["なら、腕の方は見るまでもないだろう。"])
+              ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+              ShowText(["【ランドルフ】"])
+              ShowText(["それで今、お前は何を造りたい？"])
+              ShowText(["鍛え抜いてきた鍛冶の腕で、どうしたいんだ？"])
+              ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+              ShowText(["【パピ】"])
+              ShowText(["みんなのために、ルカのために……"])
+              ShowText(["最高の装備を造ってあげたいのだ！"])
+              ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+              ShowText(["【ランドルフ】"])
+              ShowText(["それなら、俺とお前で合作だ！"])
+              ShowText(["真の勇者のために、最高の武器を造ってやるぞ！"])
+              ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+              ShowText(["【パピ】"])
+              ShowText(["親方と一緒に……やってみるのだ！"])
+              ShowText(["これまで学んだ事、全てを出し尽くすのだ！"])
+              ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+              ShowText(["【ランドルフ】"])
+              ShowText(["じゃあ、やるぜ！"])
+              ShowText(["勇者ルカよ、注文は何にする……？"])
+              Script(["call_synthesize(45)"])
+              ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+              ShowText(["【ランドルフ】"])
+              ShowText(["流石だな、パピ……"])
+              ShowText(["俺一人じゃ、ここまでの品は造れなかったぜ。"])
+              ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+              ShowText(["【パピ】"])
+              ShowText(["また、一緒に親方と仕事がしたいのだ！"])
+              ShowText(["オーダーがあれば、いくらでも言うのだ！"])
+              PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+              ShowTextAttributes(["", 0, 0, 2])
+              ShowText(["パピは闇皇の装備を造れるようになった！"])
+              Wait([30])
+              ControlSwitches([7099, 7099, 0])
+              ControlVariables([1147, 1147, 0, 0, 8])
+              ExitEventProcessing([])
+              Empty([])
+            BranchEnd([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        When([3, "やめる"])
+          ExitEventProcessing([])
+          Empty([])
+        WhenCancel([])
+          ExitEventProcessing([])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1147, 0, 8, 0])
+      ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+      ShowText(["【ランドルフ】"])
+      ShowText(["おお、あんた達か。"])
+      ShowText(["約束通り、邪神を倒すための武器を造ってやるぜ！"])
+      ShowChoices([["鍛冶を頼む", "英雄鍛冶を頼む", "虚竜鱗石製品を造ってもらう", "やめる"], 5])
+      When([0, "鍛冶を頼む"])
+        Script(["call_synthesize(40)"])
+        ExitEventProcessing([])
+        Empty([])
+      When([1, "英雄鍛冶を頼む"])
+        ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+        ShowText(["【ランドルフ】"])
+        ShowText(["よし……やるぞ、パピ！"])
+        ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+        ShowText(["【パピ】"])
+        ShowText(["アナザー親方と合作なのだ！"])
+        Script(["call_synthesize(45)"])
+        ExitEventProcessing([])
+        Empty([])
+      When([2, "虚竜鱗石製品を造ってもらう"])
+        JumpToLabel(["虚竜鱗石"])
+        ExitEventProcessing([])
+        Empty([])
+      When([3, "やめる"])
+        ExitEventProcessing([])
+        Empty([])
+      WhenCancel([])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Label(["虚竜鱗石"])
+    ConditionalBranch([8, 944])
+      ShopProcessing([1, 4084, 0, 0, false])
+      ShopItem([1, 4134, 0, 0])
+      ShopItem([1, 4191, 0, 0])
+      ShopItem([1, 4255, 0, 0])
+      ShopItem([1, 4312, 0, 0])
+      ShopItem([1, 4337, 0, 0])
+      ShopItem([1, 4371, 0, 0])
+      ShopItem([1, 4392, 0, 0])
+      ShopItem([1, 4419, 0, 0])
+      ShopItem([1, 4448, 0, 0])
+      ShopItem([1, 4471, 0, 0])
+      ShopItem([1, 4502, 0, 0])
+      ShopItem([1, 4532, 0, 0])
+      ShopItem([1, 4559, 0, 0])
+      ShopItem([1, 4591, 0, 0])
+      ShopItem([1, 4612, 0, 0])
+      ShopItem([1, 4638, 0, 0])
+      ShopItem([1, 4665, 0, 0])
+      ShopItem([1, 4691, 0, 0])
+      ShopItem([1, 4710, 0, 0])
+      ShopItem([1, 4731, 0, 0])
+      ShopItem([1, 4750, 0, 0])
+      ShopItem([1, 4772, 0, 0])
+      ShopItem([2, 453, 0, 0])
+      ShopItem([2, 497, 0, 0])
+      ShopItem([2, 541, 0, 0])
+      ShopItem([2, 717, 0, 0])
+      ShopItem([2, 760, 0, 0])
+      ShopItem([2, 881, 0, 0])
+      ShopItem([0, 939, 0, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+      ShowText(["【ランドルフ】"])
+      ShowText(["素材がなけりゃ、どうにもならねぇな。"])
+      ShowText(["虚竜鱗石は、そんじょぞこらに転がってる鉱石じゃねぇ。"])
+      ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+      ShowText(["【ランドルフ】"])
+      ShowText(["情報が欲しけりゃ、各地の鍛冶屋を回ってみたらどうだ？"])
+      ShowText(["そういうとこの常連なら、何か知ってるかもしれないぜ。"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowPicture([5, "80_lala_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["lala_fc1", 0, 0, 2])
+    ShowText(["【ララ】"])
+    ShowText(["またあなた達ですか。"])
+    ShowText(["まったく、人使いが荒いですね……"])
+    ShowTextAttributes(["randolph_fc1", 0, 0, 2])
+    ShowText(["【ランドルフ】"])
+    ShowText(["さて、注文を言いな。"])
+    ShowText(["俺とララで、女神に相応しい品を仕上げてやるぜ！"])
+    ErasePicture([5])
+    Script(["call_synthesize(44)"])
+    ShowTextAttributes(["lala_fc1", 0, 0, 2])
+    ShowText(["【ララ】"])
+    ShowText(["どうせ、まだまだこき使う気なのでしょう。"])
+    ShowText(["なるべくお手柔らかにお願いしますね……"])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([78, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([111, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([4107, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([875, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["サバサからひたすら北西に進み、半島先端部まで達すると――"])
+    ShowText(["あのロザ海賊団が根城にしていた洞窟があるという。"])
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["そこには海賊団が残した秘宝はもちろん、"])
+    ShowText(["あの伝説の鉱石である虚竜鱗石が保管されているという。"])
+    ConditionalBranch([1, 1147, 0, 3, 2])
+      ShowTextAttributes(["angels_fc1", 0, 0, 2])
+      ShowText(["【天使兵】"])
+      ShowText(["まあ……虚竜鱗石を扱える鍛冶屋はもはや存在しない。"])
+      ShowText(["手に入れたところで、眺める程度しか出来んだろうがな。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1147, 0, 4, 1])
+      ShowTextAttributes(["angels_fc1", 0, 0, 2])
+      ShowText(["【天使兵】"])
+      ShowText(["そして今、ここに伝説の鍛冶屋がいる。"])
+      ShowText(["彼ならば、極めて強力な武具を造り出せるだろうな……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([8, 944])
+      Empty([])
+
+    Else([])
+      ConditionalBranch([1, 1142, 0, 61, 2])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["黒の屋敷に乗り込む前に、海賊の秘宝を漁るのも良いですね。"])
+        ShowText(["虚竜鱗石も、念のために入手しておきたいところです。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ControlSwitches([5591, 5591, 0])
+    ShowTextAttributes(["tennyo_fc1", 0, 0, 2])
+    ShowText(["【パイパイ】"])
+    ShowText(["ここでお店を間借りさせてもらったアル。"])
+    ShowText(["パイパイ製の豪華秘石、よそじゃ手に入らないアルよ～♪"])
+    ShowChoices([["買い物をする", "秘石の加工を頼む", "用はない"], 3])
+    When([0, "買い物をする"])
+      ShopProcessing([0, 2132, 0, 0, false])
+      ShopItem([0, 2137, 0, 0])
+      ShopItem([0, 2148, 0, 0])
+      ShopItem([0, 2122, 0, 0])
+      ShopItem([0, 2306, 0, 0])
+      ShopItem([0, 3105, 0, 0])
+      ShopItem([0, 3078, 0, 0])
+      ShopItem([0, 3084, 0, 0])
+      ShopItem([0, 3361, 0, 0])
+      ShopItem([0, 3364, 0, 0])
+      ShopItem([0, 3350, 0, 0])
+      ShopItem([0, 3207, 0, 0])
+      ShopItem([0, 3345, 0, 0])
+      ShopItem([0, 3375, 0, 0])
+      ShopItem([0, 3111, 0, 0])
+      ShopItem([0, 3603, 0, 0])
+      ShopItem([0, 3608, 0, 0])
+      ShopItem([0, 3595, 0, 0])
+      ShopItem([0, 3591, 0, 0])
+      ShopItem([0, 2480, 0, 0])
+      Empty([])
+
+    When([1, "秘石の加工を頼む"])
+      Script(["call_synthesize(87)"])
+      Empty([])
+
+    When([2, "用はない"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([92, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([92, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["魔獣の封印玉を盗んだ盗賊が、"])
+    ShowText(["恵みのオアシスで消息を絶ったという噂を聞いた事があるぞ。"])
+    ConditionalBranch([8, 761])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["恵みのオアシスは、サバサ攻略軍との合流地点でしたね。"])
+      ShowText(["そう言えば、あの地域をちゃんと調べていないようです……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ShowTextAttributes(["whiteyel_fc1", 2, 0, 2])
+    ShowText(["【ワイティエル】"])
+    ShowText(["リリスの攻撃により、ゴルドポートは壊滅しました。"])
+    ShowText(["私は現在、ここに身を寄せています……"])
+    ShopProcessing([0, 241, 0, 0, true])
+    ShopItem([0, 256, 1, 2000])
+    Empty([])

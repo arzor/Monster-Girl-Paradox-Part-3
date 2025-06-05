@@ -1,0 +1,257 @@
+Display Name = "ルシフィナの家"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 841, 8, 50, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 840, 23, 6, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 840, 23, 6, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 841, 8, 18, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowPicture([5, "80_doppele_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["doppele_fc1", 0, 0, 2])
+    ShowText(["【ルカ・ホリィ】"])
+    ShowText(["あたしも勇者ルカのクローン！"])
+    ShowText(["メチャクチャになった世界を、黙って見てられないよね。"])
+    ShowTextAttributes(["rucyfina_fc2", 0, 0, 2])
+    ShowText(["【ルシフィナ】"])
+    ShowText(["それじゃあ、一緒に行きましょう。"])
+    ShowText(["リノアにも声をかけてくるから、待ってなさい。"])
+    ShowTextAttributes(["doppele_fc1", 0, 0, 2])
+    ShowText(["【ルカ・ホリィ】"])
+    ShowText(["はーい！"])
+    ErasePicture([5])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowPicture([5, "80_doppele_st31", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["doppele_fc1", 2, 0, 2])
+    ShowText(["【ルカ・キリエ】"])
+    ShowText(["お待ちしておりました、ルシフィナ様。"])
+    ShowText(["いつでも出立する用意は出来ております。"])
+    ShowTextAttributes(["rucyfina_fc2", 0, 0, 2])
+    ShowText(["【ルシフィナ】"])
+    ShowText(["相変わらず、準備がいいわね……"])
+    ShowText(["それじゃあ、リノアに声をかけてくるわ。"])
+    ErasePicture([5])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowPicture([5, "80_doppele_st11", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["doppele_fc1", 4, 0, 2])
+    ShowText(["【ルカ・リノア】"])
+    ShowText(["ルシフィナ様、それにルカ……"])
+    ShowText(["あなた達を、お待ちしておりました。"])
+    ShowTextAttributes(["rucyfina_fc2", 0, 0, 2])
+    ShowText(["【ルシフィナ】"])
+    ShowText(["もう、何も言う必要はないようね。"])
+    ShowText(["それじゃあ……行くわよ。"])
+    ShowTextAttributes(["doppele_fc1", 4, 0, 2])
+    ShowText(["【ルカ・リノア】"])
+    ShowText(["はい！　我等四人、お供させて頂きます！"])
+    ErasePicture([5])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    Script(["add_actor_ex(506)"])
+    ScriptMore(["add_actor_ex(507)"])
+    ScriptMore(["add_actor_ex(508)"])
+    ScriptMore(["add_actor_ex(509)"])
+    Script(["level_adjust(506,114)"])
+    ScriptMore(["set_class_level(506, 370, 20, false, false)"])
+    ScriptMore(["set_class_level(506, 7025, 15, false, false)"])
+    ScriptMore(["set_class_level(506, 7029, 15, false, false)"])
+    ScriptMore(["level_adjust(507,118)"])
+    ScriptMore(["set_class_level(507, 370, 20, false, false)"])
+    ScriptMore(["set_class_level(507, 7011, 15, false, false)"])
+    ScriptMore(["set_class_level(507, 7014, 15, false, false)"])
+    Script(["level_adjust(508,115)"])
+    ScriptMore(["set_class_level(508, 370, 20, false, false)"])
+    ScriptMore(["level_adjust(509,120)"])
+    ScriptMore(["set_class_level(509, 370, 20, false, false)"])
+    ScriptMore(["set_class_level(509, 7022, 15, false, false)"])
+    RecoverAll([0, 506])
+    RecoverAll([0, 507])
+    RecoverAll([0, 508])
+    RecoverAll([0, 509])
+    ControlSwitches([3199, 3199, 0])
+    PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ドッペル四姉妹が仲間に加わった！"])
+    Wait([60])
+    ErasePicture([5])
+    ConditionalBranch([4, 19, 0])
+      ShowTextAttributes(["arumaeruma_fc2", 1, 0, 2])
+      ShowText(["【アルマエルマ】"])
+      ShowText(["ルカちゃんにそっくりな子が、四人も……"])
+      ShowText(["さて、どの子をもらおうかしら？"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["どれもあげないよ……"])
+      ShowTextAttributes(["arumaeruma_fc2", 3, 0, 2])
+      ShowText(["【アルマエルマ】"])
+      ShowText(["四人とも、ルカちゃんが独り占めしようというの……？"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["なんでそうなるんだ……？"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowPicture([5, "80_doppele_st21", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["doppele_fc1", 1, 0, 2])
+    ShowText(["【ルカ・ハイネ】"])
+    ShowText(["ルカ、やっぱり生きてたんだね！"])
+    ShowText(["来るの遅いよ、ずっと待ってたんだから！"])
+    ShowTextAttributes(["rucyfina_fc2", 0, 0, 2])
+    ShowText(["【ルシフィナ】"])
+    ShowText(["ハイネ……ちゃんと行儀良くしてたかしら？"])
+    ShowTextAttributes(["doppele_fc1", 1, 0, 2])
+    ShowText(["【ルカ・ハイネ】"])
+    ShowText(["わーい、お母様も一緒なんだ～！！"])
+    ErasePicture([5])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 3"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([2352, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([2166, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([855, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([94, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([918, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

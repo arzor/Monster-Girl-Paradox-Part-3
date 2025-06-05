@@ -1,0 +1,128 @@
+Display Name = "ミトラ封印城"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([8, 578])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["ミトラの鍵で扉を開けた！"])
+        Empty([])
+      BranchEnd([])
+      PlaySE(["RPG::SE(@name=\"Earth4\", @pitch=100, @volume=80)"])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+      Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 458, 45, 61, 0, 0])
+      Empty([])
+
+    Else([])
+      ControlSwitches([2530, 2530, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["扉は厳重に封鎖されている。"])
+      ShowText(["開けるには、鍵が必要なようだ……"])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["やはり、開きませんか。"])
+      ShowText(["今は引き返すより他にありませんね。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["鍵がなければ、どうにもならない。"])
+      ShowText(["重い扉を前にして、僕達は引き返すしかなかった――"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 235, 353, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 236, 353, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 236, 353, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ControlSwitches([2531, 2531, 0])
+    ConditionalBranch([0, 2532, 1])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["ここは、ミトラ封印城ではないですか……！？"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["僕達の世界にもあった城だよね。"])
+      ShowText(["確か、20の神武器が眠っているっていう……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["ただし僕達の世界では、神武器は一つも残っていなかった。"])
+      ShowText(["この世界では、どうだろうか……？"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["見た限り、現在もこの城は管理されているようですね。"])
+      ShowText(["だとすると、今も神武器が置いてあるかも……"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["そうだとしたら、ぜひ手に入れたいですね。"])
+      ShowText(["さっそく中に入ってみよう！"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2532, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["ミトラ封印城に着きましたね。"])
+      ShowText(["ここに、今も20の神武器が眠っているという事ですが……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["僕達の世界では、神武器は一つも残っていなかった。"])
+      ShowText(["しかしこの世界は、ちゃんと揃っているようだ。"])
+      ConditionalBranch([8, 578])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["すでに扉の鍵も手に入れています。"])
+        ShowText(["さあ、神武器を全て頂きましょう！"])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["話によれば、扉は封鎖されているとか。"])
+        ShowText(["念のために、確かめてみましょう……"])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])

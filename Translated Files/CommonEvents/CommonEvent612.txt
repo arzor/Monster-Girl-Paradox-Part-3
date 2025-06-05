@@ -1,0 +1,25 @@
+CommonEvent 612
+Name = "イベント：サラマンダー"
+
+  999([612])
+  ControlSwitches([73, 73, 0])
+  ConditionalBranch([0, 64, 0])
+    ShowTextAttributes(["salamander_fc1", 0, 0, 2])
+    ShowText(["\\n<Salamander>Now go. My power is yours."])
+    ShowText([""])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ShowTextAttributes(["salamander_fc1", 1, 0, 2])
+  ShowText(["\\n<Salamander>Fine, I'll give you a hand!"])
+  ShowText([""])
+  ControlSwitches([64, 64, 0])
+  PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["Looks like Salamander will lend you her power!\nUntil the next boss floor, the party will receive the blessing of fire!"])
+  ShowText([""])
+  ControlSwitches([73, 73, 1])
+  ExitEventProcessing([])
+  Empty([])

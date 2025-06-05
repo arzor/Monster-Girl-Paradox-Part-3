@@ -1,0 +1,853 @@
+Display Name = "Iliasville"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The simple grave is marked \"Sonya.\""])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>Mine?! This has to be a joke! Why is there a grave with my name on it?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>What in the world is going on..."])
+    PlayBGM(["RPG::BGM(@name=\"scene_kanasimi2\", @volume=100, @pitch=100)"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeGold([0, 0, 750])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["750\\G obtained!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 196, 59, 53, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 196, 60, 53, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Wh-what happened here?!"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>No way, Iliasville was destroyed?!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>What became of all the villagers?! Who in the world would do this?!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Calm down, Luka, nothing here adds up. Do you really think all of this could have happened in the short time we were gone?"])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>It looks like it's been quite awhile since the village was destroyed as well. I doubt this is the Iliasville where you were born."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Calm down, Luka, nothing here adds up. Do you really think all of this could have happened in the short time we were gone?"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>On top of that, it has clearly been months, if not years, since the village was destroyed. This is not your Iliasville."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>But it looks so familiar..."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>Either way, let's not stand around!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Either way, I guess we should look around..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The bones of some unknown villager... A weathered hoe lies beside them."])
+    ConditionalBranch([0, 1525, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>Oh no, Ms. Rena...?"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The bones of some unknown villager..."])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The bones of some unknown villager. An axe lies on the ground nearby."])
+    ConditionalBranch([0, 1525, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>Hans the lumberjack..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The bones of some unknown villager..."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>The nice old lady who sold vegetables? Poor soul..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 53, 0])
+      ShowTextAttributes(["slime_fc1", 2, 0, 2])
+      ShowText(["\\n<Lime>Vegetable lady is gone? No, that's not fair..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The bones of some unknown villager..."])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The bones of some unknown villager..."])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The bones of some unknown villager..."])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The building is completely destroyed."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>My house... How did this happen..."])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The bones of some unknown villager..."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>Probably the village chief, judging from the bend in his back. I gave him enough shoulder and back rubs to recognize him even like this..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>There are so many bones piled up that I can't tell how many died..."])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>There are so many bones piled up that I can't tell how many died..."])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>There are so many bones piled up that I can't tell how many died..."])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>There are so many bones piled up that I can't tell how many died..."])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>There are so many bones piled up that I can't tell how many died..."])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>There are so many bones piled up that I can't tell how many died..."])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>There are so many bones piled up that I can't tell how many died..."])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Fish bones are scattered all around the destroyed Slime Girl store."])
+    ConditionalBranch([0, 1525, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>I wonder what happened to the Slime Girl herself..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 53, 0])
+      ShowTextAttributes(["slime_fc1", 2, 0, 2])
+      ShowText(["\\n<Lime>Waaaaa! Waaaaa!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The remnants of the vegetable stand. Shreds of desiccated vegetables lay scattered on the ground."])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The remnants of the vegetable stand. Shreds of desiccated vegetables lay scattered on the ground."])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The remnants of the vegetable stand. Shreds of desiccated vegetables lay scattered on the ground."])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Innumerable human bones can be seen at the bottom of the well."])
+    ConditionalBranch([0, 1525, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>This is horrible..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The bones of some unknown villager..."])
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The bones of some unknown villager..."])
+    ConditionalBranch([0, 1525, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>Large build, deformed right arm... These definitely belong to Uncle Lazarus..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Words are written on the wall:"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"There are so many bodies, we can't bury them all. The village is finished.\""])
+    ConditionalBranch([0, 1525, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>This wasn't an epidemic. Was the village attacked?"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ControlSwitches([2046, 2046, 0])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>How can there be so many graves?"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>There must be one for almost every villager..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The simple grave is marked \"Sonya.\""])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>Mine?! This has to be a joke! Why is there a grave with my name on it?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>What in the world is going on..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "iv_ruka1", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The simple grave is marked \"Luka.\""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>No way! There's even one for me?!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["A diary lays in front of the tombstone."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>This is my diary..."])
+    Label(["0"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Start reading from where?"])
+    Script(["unlimited_choices(11, [\"Beginning\","])
+    ScriptMore(["\"A while back\",\"Recent\",\"???\","])
+    ScriptMore(["\"Close the diary\"])"])
+    ConditionalBranch([1, 11, 0, 0, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Johannes Calendar 14xx/1/1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Inside is a record of my, Luka's, growth to adulthood.\nLuka, please start making entries after this one."])
+      ShowText(["                                        Your Mother, Lucifina"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>This is the very first entry that my mother wrote for me. I made all the ones after it..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Johannes Calendar 14xx/4/15"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I climbed the mountain with my mom. Sonya climbed it with us."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The view was nice, and the food was good. The rice balls Sonya made were bad though."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I want my father to go with us next time. Please come home soon father."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Johannes Calendar 14xx/10/20"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I explored the mountains today. I wanted to go alone, but Sonya came for some reason."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I fell and hurt myself, but Sonya healed me with magic. She's violent, but good with healing magic."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["After that, we got turned around and lost. Me and Sonya cried, but Uncle came and found us."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Everyone in the village got really mad at us. My mother, uncle, and Betty too."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I never want to get lost again. Ilias, please guide my way."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Johannes Calendar 14xx/3/4"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["My dad didn't come back today either. He hasn't even sent a letter since he left."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["But my mom and I believe in him. We know he'll return from his adventure one day."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Today, I prayed to Ilias that he'd come back to us. I hope my prayers reach her one of these days."])
+      JumpToLabel(["0"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 1, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Johannes Calendar 14xx/7/21"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["My mother got sick and died. It happened over a month ago, but I was too scared to write it down."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Even Sonya cried at her funeral. Everyone in the village has been kind to me."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Betty asked me if I wanted to live with her, but I decided to keep living here."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Since I learned to take care of the inn from my mother, I can handle most of the housework by myself."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["That doesn't stop Betty and uncle from bothering me though. Sonya tries to \"help\" too, which is even worse."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I don't plan on crying anymore. Perhaps if my father hears the news, he'll come home..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Ilias, and mom in Heaven: Please watch over me."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Johannes Calendar 14xx/1/1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Today I did 200 practice swings and ran as usual. It's important to train my legs as well as my sword skill."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Someday I'm going to become a hero and leave the village. I'll set off on my own adventure and find my dad."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Johannes Calendar 14xx/4/6"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["It seems like Sonya is against my plan to leave. She's been following me everywhere and complaining."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["But I've already made up my mind, and she isn't changing it. I'm going on an adventure and finding my dad."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Johannes Calendar 14xx/8/2"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I was bored and reopened the inn last week. No guests, but I guess that's normal."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I have plenty of savings and no worries about living expenses. But running the inn should provide me with experience."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Plus, I should get lots of adventurers in here. I can ask them for advice and maybe pick up a skill or two."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is all for my eventual journey. If I want to catch up to my father, I have to work hard."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Johannes Calendar 14xx/12/2"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Sonya's tyranny has reached a new high. This time she hid the sword I use for practice."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["She told me I had to defeat her if I wanted to travel. I challenged her, but she kicked my ass instead..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Sonya is not fair. She's learning club skills directly from uncle..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>......"])
+      JumpToLabel(["0"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 2, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Johannes Calendar 1454/5/1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Today's my birthday, which marks one year until my departure. One year from today, I'll be baptized as a hero!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Although no one has seen Ilias since the Great Disaster. So it's not really a baptism, just a simple ceremony."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I don't care though. I'm still looking forward to the day."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Wait for me, father. I'm going to become a hero and go see you!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Johannes Calendar 1454/8/3"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Strange things are apparently happening all over the world. We've even heard about them in this peaceful, remote village."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Monsters are growing restless. Entire villages are suddenly found deserted. Natural disasters have been more frequent, and major countries are going to war for no reason..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is different from the Great Disaster that shook the world 30 years ago. These recent oddities are more like a disease slowly spreading and infecting everyone."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Rumors are that the Monster Lord is up to something. Just what is going on, and where is Ilias?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["It's possible that my father is out there fighting this. The day I leave is approaching. I need to get motivated and train harder!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Johannes Calendar 1454/11/4"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Sonya's been cold ever since she joined the temple and became a priest. I feel like she's distancing herself from me for some reason."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I asked her if she met someone she likes... and she beat me up with her club."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I desperately fought back with my training sword, but I couldn't beat her. Are six more months going to be enough?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Johannes Calendar 1455/4/30"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["It's finally here! Tomorrow is the day I leave. I'll get baptized and start my adventure!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I'm all packed and ready to go. I've closed up the inn for the time being too."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Even though I leave tomorrow, Sonya didn't come see me. I guess she's busy with her priestly duties."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Anyway, I'm heading to bed. The next time I wake up, it'll be time for my first step!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Wait for me, father. Watch over me, mother."])
+      JumpToLabel(["0"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 3, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Johannes Calendar 1455/5/20"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Huh? Why are there more entries? I don't remember making any after I left..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I couldn't do anything when faced with the Monster Swordswoman Granberia. That setback at Iliasburg was a setback for my adventure itself."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I kept telling myself I couldn't be expected to beat her then, but surely someday... Anyway, my adventure ended almost as soon as it began."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["But still... That was just bad luck. Eventually I'll get back on track."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I met Granberia in Iliasburg then returned to the village a failure?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I don't get it. This looks like my handwriting, but that never happened!"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>There's a final entry after that one... What the hell?!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Johannes Calendar 1456/8/8"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+        ShowText(["\\n<Sonya>What! That's over a year from now!"])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>This one is over a year in the future!"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The angel army razed the village to the ground. So many people died in just one attack."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I plan to fight if they come back. I'll pick my sword back up and defend the people of the village."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["...the final three lines were written by someone else. The handwriting is precise and resembles that of an elderly writer."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka fought bravely to the very end. In his final moments, he showed that he was really a hero. Rest in peace, true hero."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["That's the end of the diary."])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+      ErasePicture([5])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>The angel army? And I... What in the world does this mean..."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>This proves once and for all that we aren't in the Iliasville you know."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Not in Iliasville? Look around us and tell me how this isn't Iliasville!"])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>It is, but not the one you're from. It must be a different Iliasville."])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>On top of that, we've changed our point in time. This place was destroyed in 1456, which is still months away."])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>In other words, we've traveled to another dimension. Passing through Tartarus brought us to a different place in space and time."])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+          ShowText(["\\n<Sonya>Another dimension? Is that even possible?"])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>Another dimension? Is that even possible?"])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>It must be, otherwise none of this makes sense. I'm not sure I remember Tamamo ever talking about other worlds..."])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>This dimension is very similar, though. It has an Iliasville, and both you and Sonya existed."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>So we came to a different dimension from inside Tartarus? Is it really that easy to travel between dimensions?"])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>That white rabbit said you could come and go through your own volition, something not even a god can do."])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>Then again, it's rather suspicious that she was able to come here too. At any rate, I don't think we're going to learn anything more by talking about it."])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+          ShowText(["\\n<Sonya>So Tartarus led us to another dimension in which Iliasville was destroyed in the near future..."])
+          ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+          ShowText(["\\n<Sonya>...I give up. My head hurts from trying to understand."])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>So Tartarus led us to another dimension in which Iliasville was destroyed in the near future..."])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>Honestly, I'm having a hard time wrapping my head around it..."])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([4, 53, 0])
+          ShowTextAttributes(["slime_fc1", 2, 0, 2])
+          ShowText(["\\n<Lime>......???"])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>It's hard for me to believe too, but it's the only explanation given the circumstances."])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Anyway, what do we do now? Should we explore this world some more or get out of here?"])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+          ShowText(["\\n<Sonya>Let's leave. Every extra second here makes me more depressed..."])
+          ShowTextAttributes(["alice_fc5", 0, 0, 2])
+          ShowText(["\\n<Alice>All right. There probably isn't anything left for us here anyway, and it's cruel to subject you two to more of this village."])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>I'd rather get back to our world as soon as possible. This place is heartbreaking..."])
+          ShowTextAttributes(["alice_fc5", 0, 0, 2])
+          ShowText(["\\n<Alice>All right. There probably isn't anything left for us here anyway, and it's cruel to subject you to more of this village."])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>I wonder if we can use a Harpy Feather to get home? Let's try... tch."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Alice uses a Harpy Feather! But nothing happens..."])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>They don't work. Actually, you try to use one, Luka."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>I imagine the same thing will happen. Oh well, let's see..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka uses a Harpy Feather!"])
+        TransferPlayer([0, 2, 296, 356, 0, 0])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>We're home?!"])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>I knew it. It seems as though you have the ability to cross through different dimensions."])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Like the White Rabbit said, that's something even a god can't do. Geez, just who are you anyway?"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>I don't even know that myself lately..."])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Well, we aren't going to figure it out without more information. Let's head back to the Pocket Castle for now."])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+          ShowText(["\\n<Sonya>We need time to process what we saw. My head is still a mess, after all..."])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>Yeah, we need to discuss what to do next. My head is still messed up though..."])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>All right. Take a rest and then we'll hold a meeting to discuss strategy."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>It is as I thought. This place is not the Iliasville you know."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Not Iliasville? Look around us and tell me how this isn't Iliasville!"])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>It certainly is AN Iliasville, but not YOUR Iliasville."])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>Not only is the place different, but the time too. This is Iliasville a decade after it was destroyed in 1456."])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>In other words, this is another dimension. Tartarus appears to be a tunnel to alternate points in spacetime."])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+          ShowText(["\\n<Sonya>Another dimension? Is that even possible?"])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>Another dimension? Is that even possible?"])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>It is certainly not out of the question. Parallel worlds can potentially arise from disturbances in spacetime."])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>In theory, at least. But I never expected one so similar to our own..."])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+          ShowText(["\\n<Sonya>So Tartarus led us to another dimension in which Iliasville was destroyed in the near future..."])
+          ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+          ShowText(["\\n<Sonya>...I give up. My head hurts from trying to understand."])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>So Tartarus led us to another dimension in which Iliasville was destroyed in the near future..."])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>Honestly, I'm having a hard time wrapping my head around it..."])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([4, 53, 0])
+          ShowTextAttributes(["slime_fc1", 2, 0, 2])
+          ShowText(["\\n<Lime>......???"])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>This must be difficult for you, I know. Even I cannot fathom how this paradox has come to pass."])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>What matters now is our next step, however. Shall we explore this world more, or perhaps we should leave..."])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+          ShowText(["\\n<Sonya>Let's leave. Every extra second here makes me more depressed..."])
+          ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+          ShowText(["\\n<Ilias>We are in agreement then. I do not think there is anything more here to discover, and seeing this village is unhealthy for you..."])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>I'd rather get back to our world as soon as possible. This place is heartbreaking..."])
+          ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+          ShowText(["\\n<Ilias>We are in agreement then. I do not think there is anything more here to discover, and seeing this village is unhealthy for you..."])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>How do we return to our world, though? Can we use a Harpy Feather in a parallel world?"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Ilias uses a Harpy Feather! But nothing happens..."])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>I didn't think so. Actually... Luka, why don't you try?"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>I imagine the same thing will happen. Oh well, let's see..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka uses a Harpy Feather!"])
+        PlaySE(["RPG::SE(@name=\"Wind1\", @pitch=100, @volume=80)"])
+        TransferPlayer([0, 2, 296, 356, 0, 0])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+        ShotBalloonIcon([-1, 1, false])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>We're home?!"])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>I knew it. It seems as though you have the ability to cross through different dimensions."])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>That's a trick even I cannot perform. How can a human made of flesh and blood travel to parallel worlds..."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>I wish I knew..."])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>Given your bloodline, I could understand if you were able to distort spacetime, but opening doors to parallel worlds? Unfathomable."])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>The more I think about it, the more tired I become. Let's return to the Pocket Castle for now."])
+        ConditionalBranch([0, 6, 0])
+          ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+          ShowText(["\\n<Sonya>Yeah, we need time to process what we saw. My head is still a mess, after all..."])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>Yeah, we need to discuss what to do next. My head is still messed up though..."])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>Off we go then. After we rest up, shall we hold a meeting to discuss our strategy?"])
+        Empty([])
+      BranchEnd([])
+      ControlVariables([1001, 1001, 0, 0, 10])
+      ControlVariables([1009, 1009, 0, 0, 8])
+      FadeoutScreen([])
+      ChangeTransparency([0])
+      TransferPlayer([0, 586, 6, 6, 0, 2])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Look through the diary more thoroughly. Perhaps something in there will give us a hint to what happened here."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Please read it again, Luka. If I am not mistaken, then..."])
+      Empty([])
+
+    BranchEnd([])
+    JumpToLabel(["0"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ControlSwitches([2046, 2046, 0])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>How can there be so many graves?"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>There must be one for almost every villager..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])

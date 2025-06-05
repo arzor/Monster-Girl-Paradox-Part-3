@@ -1,0 +1,322 @@
+Display Name = "Lily's Mansion Laboratory"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 361, 48, 12, 4, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 361, 48, 12, 4, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 361, 48, 12, 4, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Comment(["明かり設定10320300"])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Comment(["明かり設定1500200"])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Comment(["明かり設定1500200"])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Comment(["明かり設定6500200"])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Comment(["明かり設定6500200"])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Comment(["明かり設定5320100"])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Comment(["明かり設定3300300"])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Comment(["明かり設定3300300"])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Comment(["明かり設定3300300"])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Comment(["明かり設定3300300"])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Comment(["明かり設定3300300"])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Comment(["明かり設定3300300"])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Comment(["明かり設定3300300"])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Comment(["明かり設定3300300"])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    TintScreen(["Tone(@red=-68.0, @green=-68.0, @blue=0.0, @gray=68.0)", 1, true])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Comment(["明かり設定2160400"])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"boss0\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_lily_st11", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["lily_fc1", 0, 0, 2])
+    ShowText(["\\n<Lily>I can't believe you came all this way to defeat me... Lucia instigated this, I presume?"])
+    ShowPicture([5, "80_lily_st13", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lily_fc1", 2, 0, 2])
+    ShowText(["\\n<Lily>You apparently think Lucia's claims are correct. Once tentacle magic spreads, the world will fall into chaos..."])
+    ShowTextAttributes(["lily_fc1", 2, 0, 2])
+    ShowText(["\\n<Lily>But hiding the tentacle magic techniques would mean that only a select few would control it."])
+    ShowTextAttributes(["lily_fc1", 2, 0, 2])
+    ShowText(["\\n<Lily>Don't you think that's the most dangerous outcome?"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>Certainly, that might be so..."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Certainly, that might be true..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["lily_fc1", 2, 0, 2])
+    ShowText(["\\n<Lily>The few will monopolize power... That will undoubtedly birth violence and oppression."])
+    ShowTextAttributes(["lily_fc1", 2, 0, 2])
+    ShowText(["\\n<Lily>And then, the lamenting voices won't stop... Listen, you can hear them, right...? Voices seeking help are..."])
+    ShowTextAttributes(["lily_fc1", 2, 0, 2])
+    ShowText(["\\n<Lily>I just want the voices to stop! I'm sure you hear them, the voices of the oppressed!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>......"])
+    ShowTextAttributes(["lily_fc1", 2, 0, 2])
+    ShowText(["\\n<Lily>My offer is still valid. Even now, if you defeat Lucia, I'll become your comrade."])
+    ShowTextAttributes(["lily_fc1", 2, 0, 2])
+    ShowText(["\\n<Lily>Do you want to defeat me... despite that? Will you trample over the voices of the oppressed and strike me down?"])
+    ShowChoices([["Fight Lily", "Accept the deal, fight Lucia"], 2])
+    When([0, "Fight Lily"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I do hear the cries of a person seeking help... Lily, it's your voice."])
+      ShowTextAttributes(["lily_fc1", 2, 0, 2])
+      ShowText(["\\n<Lily>Mine...?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>The one who's seeking help is you. Those voices are probably coming from inside of you."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>Inside of you is a lingering sense of guilt for orchestrating a slaughter. You're trying to overwrite it with a self-imposed duty to save the weak."])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>You're trying to conceal your broken heart with tentacle magic, and paint it as some sort of mission. You even pretend your own screams are someone else's..."])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>One day you will break, that's for certain. You have to face your own heart before that happens."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>Your mind is on the verge of breaking."])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>Even if you overwrite remorse and guilt with a sense of duty... What's done is done, and this crying voice won't disappear."])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>You should save yourself before you try to save others. Honestly face the screams of your heart."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["lily_fc1", 2, 0, 2])
+      ShowText(["\\n<Lily>You're wrong... I do this to save the oppressed... to erase the crying voices!"])
+      ShowTextAttributes(["lily_fc1", 2, 0, 2])
+      ShowText(["\\n<Lily>I mean, they won't disappear until I do that! Those crying voices... voices... voiceees..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>The power of tentacle magic saved you... That's undeniable. But now, that power is breaking you."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I will wield my sword to break that power! Let's go, Lily!"])
+      ShowTextAttributes(["lily_fc1", 2, 0, 2])
+      ShowText(["\\n<Lily>So, you intend to oppress us as well! You're just like the men of this village!"])
+      ShowPicture([5, "80_lily_st04", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["lily_fc1", 6, 0, 2])
+      ShowText(["\\n<Lily>I'll beat you down and make you pay! I'll devour you with this tentacle until you shrivel up in disgrace!"])
+      ConditionalBranch([4, 163, 0])
+        ShowTextAttributes(["lily_fc1", 5, 0, 2])
+        ShowText(["\\n<Lily'>......"])
+        ShowTextAttributes(["lily_fc1", 6, 0, 2])
+        ShowText(["\\n<Lily>Oh, I see another me... She must be seeking help..."])
+        ShowTextAttributes(["lily_fc1", 3, 0, 2])
+        ShowText(["\\n<Lily'>No, I have come to save you. To save myself..."])
+        ShowTextAttributes(["lily_fc1", 6, 0, 2])
+        ShowText(["\\n<Lily>I hear my own voice... It asks me for help..."])
+        ShowTextAttributes(["lily_fc1", 4, 0, 2])
+        ShowText(["\\n<Lily'>...Looks like I can't converse properly. Very well, I shall save myself..."])
+        Empty([])
+      BranchEnd([])
+      ErasePicture([5])
+      ChangeBattleBGM(["RPG::BGM(@name=\"boss1\", @volume=100, @pitch=100)"])
+      ControlSwitches([22, 22, 0])
+      BattleProcessing([0, 270, false, false])
+      ControlSwitches([22, 22, 1])
+      PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+      ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+      ShowPicture([5, "80_lily_st13", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["lily_fc1", 2, 0, 2])
+      ShowText(["\\n<Lily>So I am to be crushed underfoot after all..."])
+      ControlSwitches([2096, 2096, 0])
+      ControlSwitches([7017, 7017, 0])
+      PlaySE(["RPG::SE(@name=\"mon_down\", @pitch=100, @volume=100)"])
+      ErasePicture([5])
+      ControlVariables([1029, 1029, 0, 0, 5])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Lily loses consciousness..."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>She probably won't be able to use tentacle magic for a while now that she's this exhausted. This should fulfill our deal with Lucia..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["\\n<Ilias>She won't be able to use tentacle magic for the time being after having been exhausted to this point. Fortunately we were able to destroy her evil ambitions."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>It was difficult in many ways, but this is for the best, right...?"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Lily is surely a strong person... Released from her tentacle magic, I feel that she will be able to face her own heart."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Now, let's go report to Lucia!"])
+      PlayBGM(["RPG::BGM(@name=\"dungeon_madou\", @volume=100, @pitch=100)"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Accept the deal, fight Lucia"])
+      ShowPicture([5, "80_lily_st11", 0, 0, 0, 0, 100, 100, 255, 0])
+      ControlSwitches([2094, 2094, 0])
+      ShowTextAttributes(["lily_fc1", 0, 0, 2])
+      ShowText(["\\n<Lily>So, you changed your mind. As I thought, you can hear them, those crying voices..."])
+      ShowTextAttributes(["lily_fc1", 0, 0, 2])
+      ShowText(["\\n<Lily>Well then, I'll be waiting. Until you defeat Lucia, that is..."])
+      ErasePicture([5])
+      PlayBGM(["RPG::BGM(@name=\"dungeon_madou\", @volume=100, @pitch=100)"])
+      ConditionalBranch([0, 2095, 0])
+        Script(["gain_medal(2008)"])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The party uses the circle of healing..."])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+    RecoverAll([0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The party's HP and MP have been fully recovered!"])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([5, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

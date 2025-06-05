@@ -1,0 +1,305 @@
+Display Name = ""
+Parallax Name = "StarlitSky"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 918, 7, 1, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 910, 7, 6, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"scene_battle1\", @volume=100, @pitch=100)"])
+    Script(["keep_all_equip"])
+    Script(["set_temp_actors(819,823,802,801,825,814)"])
+    Script(["persona_change(825)"])
+    RecoverAll([0, 0])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    FadeinScreen([])
+    Wait([60])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["In Grand Noah's underground prison, the heroes who saved Tarsa stood in the newly summoned Château des Romances."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Surrounded by Nightmares and with new allies, they must break out of this pinch and escape the castle."])
+    ShowPicture([5, "80_succubusm_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>"])
+    ShowText(["Ha!"])
+    PlaySE(["RPG::SE(@name=\"mon_karaburi\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I swing my sword at the Nightmares, but..."])
+    ShowTextAttributes(["succubusm_fc1", 0, 0, 2])
+    ShowText(["\\n<Succubus>"])
+    ShowText(["That's no good... could you come at me in a different way?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>"])
+    ShowText(["So it really doesn't work..."])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>"])
+    ShowText(["You said you were... Lest? Focus on support!"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>"])
+    ShowText(["Okay, understood!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Novissa and Lars can fight sex battles, but I have no such ability."])
+    ErasePicture([5])
+    Wait([30])
+    ShowAnimation([-1, 856, false])
+    Wait([30])
+    ControlSwitches([31, 31, 0])
+    ShowPicture([5, "80_succubusm_st01", 0, 0, -150, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_succubusm_st01", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["succubusm_fc1", 0, 0, 2])
+    ShowText(["\\n<Succubus>"])
+    ShowText(["Ufufu, let's play..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Even more Nightmares appear!"])
+    ShowTextAttributes(["tarsa_fc2", 2, 0, 2])
+    ShowText(["\\n<Tarsa>"])
+    ShowText(["Hold on, you're still coming? At least keep it to three at a time... okay?"])
+    ShowTextAttributes(["nobissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Novissa>"])
+    ShowText(["............!!"])
+    ErasePicture([5])
+    ErasePicture([6])
+    BattleProcessing([0, 1368, false, false])
+    ControlSwitches([32, 32, 0])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>"])
+    ShowText(["It seems their numbers have dropped. Let's keep it up!"])
+    ShowTextAttributes(["lars_fc01", 0, 0, 2])
+    ShowText(["\\n<Lars>"])
+    ShowText(["............!!"])
+    BattleProcessing([0, 1369, false, false])
+    ControlSwitches([33, 33, 0])
+    ShowTextAttributes(["daimeikai_fc1", 1, 0, 2])
+    ShowText(["\\n<Daimyokai>"])
+    ShowText(["Am I supposed to do all this work for free?\nCan't anyone pay me for this?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>"])
+    ShowText(["There are only a few left... Everyone, keep going!"])
+    BattleProcessing([0, 1369, false, false])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    ControlVariables([1209, 1209, 0, 0, 1])
+    PlayBGM(["RPG::BGM(@name=\"scene_epilogue2\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>"])
+    ShowText(["There we go... that's the end of that."])
+    ShowTextAttributes(["tarsa_fc2", 0, 0, 2])
+    ShowText(["\\n<Tarsa>"])
+    ShowText(["Ufufu, that felt good...♡"])
+    ShowTextAttributes(["lars_fc01", 0, 0, 2])
+    ShowText(["\\n<Lars>"])
+    ShowText(["........................"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["After a fierce battle, the Nightmare horde finally cleared out. To defeat so many enemies, these are certainly some strong allies."])
+    ShowPicture([5, "80_rovissa_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>"])
+    ShowText(["We couldn't prevent the castle from being summoned, but it's lucky that we could meet two heroes here."])
+    ShowPicture([5, "80_daimeikai_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["daimeikai_fc1", 1, 0, 2])
+    ShowText(["\\n<Daimyokai>"])
+    ShowText(["But this situation is rather troublesome.\nWe're all alone, deep underground below the castle."])
+    ShowTextAttributes(["daimeikai_fc1", 1, 0, 2])
+    ShowText(["\\n<Daimyokai>"])
+    ShowText(["We beat back the first wave of enemies, but more could come at any time."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>"])
+    ShowText(["Let's escape from here before we get cornered."])
+    ShowPicture([5, "80_lars_st11", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_nobissa_st01", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["lars_fc01", 0, 0, 2])
+    ShowText(["\\n<Lars>"])
+    ShowText(["........................"])
+    ShowTextAttributes(["nobissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Novissa>"])
+    ShowText(["........................"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Lars and Novissa nod silently. They're reticent in the extreme, but are truly strong."])
+    ShowTextAttributes(["daimeikai_fc1", 1, 0, 2])
+    ShowText(["\\n<Daimyokai>"])
+    ShowText(["Hey, you guys... Don't you have any character?"])
+    ShowTextAttributes(["lars_fc01", 0, 0, 2])
+    ShowText(["\\n<Lars>"])
+    ShowText(["............!?"])
+    ShowTextAttributes(["nobissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Novissa>"])
+    ShowText(["............!?"])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>"])
+    ShowText(["...Don't be so rude. Alright, let's go!"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>"])
+    ShowText(["Yes... let's break out from here quickly."])
+    ErasePicture([5])
+    ErasePicture([6])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["We're in a deep recess of the castle; escaping from here will surely be a challenge. There's no choice but to work together and move forward."])
+    FadeoutScreen([])
+    ControlSwitches([2959, 2959, 0])
+    RecoverAll([0, 0])
+    TransferPlayer([0, 919, 20, 25, 2, 2])
+    FadeinScreen([])
+    PlayBGM(["RPG::BGM(@name=\"cb1\", @volume=100, @pitch=100)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([142, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    CallCommonEvent([500])
+    Empty([])

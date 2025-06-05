@@ -1,0 +1,384 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"field3\", @volume=100, @pitch=100)"])
+    Wait([60])
+    ConditionalBranch([0, 4, 0])
+      ShowPicture([5, "80_alice_st71", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>We're in position to confront Château des Romances. From here on, are we ready to begin the final battle?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowPicture([5, "80_iriasu_st38", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>From here we can see Château des Romances clearly... Now then, shall we start the final battle?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowChoices([["Prepare more", "Start the final battle"], 2])
+    When([0, "Prepare more"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>I see... Well then, we're turning back."])
+        ErasePicture([5])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>Understood, we'll retreat at once."])
+        ErasePicture([5])
+        Empty([])
+      BranchEnd([])
+      FadeoutScreen([])
+      Wait([60])
+      ChangeTransparency([1])
+      TransferPlayer([0, 2, 328, 187, 2, 2])
+      FadeinScreen([])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Start the final battle"])
+      Empty([])
+
+    ChoicesEnd([])
+    ControlVariables([1002, 1002, 0, 0, 43])
+    ControlSwitches([100, 100, 0])
+    ControlSwitches([81, 81, 0])
+    PlayBGM(["RPG::BGM(@name=\"title\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_ruka_st01", 0, 0, -100, 0, 75, 75, 0, 0])
+    ShowPicture([6, "80_byakunen_st01", 0, 0, 15, 0, 100, 100, 0, 0])
+    ShowPicture([7, "80_lawrat_st01", 0, 0, 200, 20, 95, 95, 0, 0])
+    ShowPicture([8, "80_lars_st11", 0, 0, -220, 150, 90, 90, 0, 0])
+    ShowPicture([9, "80_nobissa_st01", 0, 0, -50, 150, 90, 90, 0, 0])
+    ShowPicture([10, "80_kazuya_st01", 0, 0, 160, 150, 75, 75, 0, 0])
+    ShowPicture([11, "80_rest_st01", 0, 0, 250, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -100, 0, 75, 75, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 15, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([7, nil, 0, 0, 200, 20, 95, 95, 255, 0, 30, false])
+    MovePicture([8, nil, 0, 0, -220, 150, 90, 90, 255, 0, 30, false])
+    MovePicture([9, nil, 0, 0, -50, 150, 90, 90, 255, 0, 30, false])
+    MovePicture([10, nil, 0, 0, 160, 150, 75, 75, 255, 0, 30, false])
+    MovePicture([11, nil, 0, 0, 250, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Okay, at long last, the final battle!\nNow, let's start our plan!"])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>All right, I guess we should get fired up..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>I'm fully ready to go!"])
+    ShowTextAttributes(["byakunen_fc1", 0, 0, 2])
+    ShowText(["\\n<Hakunen>I'm still nervous, but... I'll do my best!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Facing the castle, we build our fervor for the battle to come. Right here and now, all seven heroes walk forward together."])
+    ShowTextAttributes(["sonia_fc1", 3, 0, 2])
+    ShowText(["\\n<Sonya>All the heroes shoulder-to-shoulder like this... It's quite a sight. It feels like we could beat any enemy!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>It looks like we could be routed by pleasure, though."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>It seems we could be routed by pleasure, though."])
+      Empty([])
+
+    BranchEnd([])
+    Wait([30])
+    PlaySE(["RPG::SE(@name=\"Wind6\", @pitch=100, @volume=100)"])
+    ShowPicture([12, "iv_ahe", 0, 0, 300, 0, 100, 100, 0, 0])
+    MovePicture([12, nil, 0, 0, 25, 300, 40, 40, 255, 0, 60, true])
+    PlaySE(["RPG::SE(@name=\"Thunder6\", @pitch=100, @volume=100)"])
+    FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 60, true])
+    Wait([90])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>(Lars doesn't lose to pleasure...)"])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>(Lauratt shouldn't lose to pleasure...)"])
+    ShowTextAttributes(["magatu_fc1", 1, 0, 2])
+    ShowText(["\\n<Magatsu>(I want to see Hakunen's face twisted in pleasure...)"])
+    ShowTextAttributes(["tarsa_fc2", 1, 0, 2])
+    ShowText(["\\n<Tarsa>(They all look so tasty...)"])
+    ErasePicture([6])
+    ErasePicture([7])
+    ErasePicture([8])
+    ErasePicture([9])
+    ErasePicture([10])
+    ErasePicture([11])
+    ErasePicture([12])
+    ConditionalBranch([0, 4, 0])
+      ShowPicture([5, "80_alice_st73", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Well then... The enemy should have a lot of Nightmares. Remember, Nightmares can't be affected by anything besides pleasure."])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>By the way, you heroes... How many of you fought sex battles in your worlds?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowPicture([5, "80_iriasu_st38", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Well then... The enemy should have a lot of Nightmares. All of you already know they can't be harmed beyond pleasure, yes?"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>On that note, heroes... Anyone who fought sex battles in their home world, please raise your hand."])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([6, "80_lawrat_st01", 0, 0, -200, 50, 100, 100, 255, 0])
+    ShowPicture([5, "80_lars_st11", 0, 0, 0, 30, 95, 95, 255, 0])
+    ShowPicture([7, "80_nobissa_st01", 0, 0, 200, 30, 95, 95, 255, 0])
+    ShowTextAttributes(["lars_fc01", 0, 0, 2])
+    ShowText(["\\n<Lars>............"])
+    ShowTextAttributes(["lawrat_fc1", 0, 0, 2])
+    ShowText(["\\n<Lauratt>............"])
+    ShowTextAttributes(["nobissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Novissa>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Lars, Lauratt, and Novissa raised their hands."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Three people... And they're all the silent guys.\n...Is there some reason for that?"])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Anyways, the remaining four are powerless against Nightmares. Don't forget this."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Three people... And they're all the silent guys.\n...Is there some reason for that?"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Anyways, the remaining four are powerless against Nightmares. Don't forget this."])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ErasePicture([6])
+    ErasePicture([7])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>So when fighting Nightmares, I can't do anything besides support... That's kind of frustrating."])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>This is the one thing I have no experience with...\nIn my world, if you insert in something you're as good as dead."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Well, we'll cover for you there. If we're fighting Nightmares, bring me out."])
+    PlayBGM(["RPG::BGM(@name=\"kiki4\", @volume=100, @pitch=100)"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>...Now then, let's execute our strategy.\nGilgorn, you know your role in this, yes?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>...Now then, let's execute our strategy.\nGilgorn, you understand your role, yes?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([5, "80_gilgoon_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+    ShowText(["\\n<Gilgorn>I understand, but...aren't you forgetting something? This was originally my castle!"])
+    ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+    ShowText(["\\n<Gilgorn>So really, you're telling me to destroy my own castle by my own hand. What a horrible thing to make me do..."])
+    ErasePicture([5])
+    Wait([30])
+    SetMoveRoute([3, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    ShowPicture([5, "80_rovissa_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>It should be fine if we rebuild it after.\nI'm going to pour my power into you now."])
+    ErasePicture([5])
+    Wait([30])
+    ShowAnimation([14, 42, false])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Rovissa places her palm on Gilgorn's back!\nThe power to fight Nightmares flows into Gilgorn's body..."])
+    ShowPicture([5, "80_gilgoon_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+    ShowText(["\\n<Gilgorn>When you say that, it's... Mu, oo, it's coming!\nWith this, even this castle, blended between reality and dreams, should be doable."])
+    ErasePicture([5])
+    Wait([30])
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    SetMoveRoute([14, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=41, @parameters=[\\\"Collaboration03_cip\\\", 6])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=41, @parameters=[\"Collaboration03_cip\", 6])"])
+    ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+    ShowText(["\\n<Gilgorn>Nightmares, I will teach you of my power!\nThe first wave, Meteor Eclipse!!"])
+    ShowPicture([5, "iv_castle1", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowAnimation([4, 544, true])
+    ShakeScreen([9, 9, 60, true])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Uwa! In-incredible!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 1, 0, 2])
+      ShowText(["\\n<Alice>More destructive power than I imagined...\nThis is sure to disorganize those inside."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>More destructive power than I imagined...\nThis is sure to disorganize those inside."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The castle swayed under the impact of Gilgorn's attack.\nTowers crumble, walls break down, and white smoke flows out."])
+    ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+    ShowText(["\\n<Gilgorn>Hahahaha! Here's another!\nTurn to dust, Meteor Eclipse!!"])
+    ShowAnimation([4, 544, true])
+    ShakeScreen([9, 9, 60, true])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Even more meteors strike the castle in a second wave.\nThe castle's damage worsens, and the left side's walls cave in completely."])
+    SetMoveRoute([14, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=41, @parameters=[\\\"Collaboration03_cip\\\", 3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=41, @parameters=[\"Collaboration03_cip\", 3])"])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+    ErasePicture([5])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Gilgorn, how many more meteors can you fire?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Gilgorn, how many more meteors can you fire?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+    ShowText(["\\n<Gilgorn>Heh, I have power for 30 more! Don't underestimate my magic power!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>A whole 30 more shots..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["If she fired that many meteors, the castle would be razed to the ground. But it's unlikely the enemy would sit back and watch that happen."])
+    ShowTextAttributes(["rejeo_fc1", 1, 0, 2])
+    ShowText(["\\n<Rigeo>...Look! Enemies are coming from the castle!"])
+    PlaySE(["RPG::SE(@name=\"Wind1\", @pitch=100, @volume=80)"])
+    ShowPicture([5, "iv_castle3", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Flying towards us from the castle are countless shadows.\nNightmares and monsters approaching to stop the incoming attack."])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+    ErasePicture([5])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>So they've come... Open fire!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>So they've come... Shoot them down!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["kazuya_fc1", 0, 0, 2])
+    ShowText(["\\n<Kazuya>Yeah, leave it to us!\nWe won't let them approach Gilgorn!"])
+    ShowTextAttributes(["byakunen_fc1", 0, 0, 2])
+    ShowText(["\\n<Hakunen>I-I'll go, too!"])
+    BattleProcessing([0, 1400, false, false])
+    ControlSwitches([31, 39, 1])
+    TransferPlayer([0, 944, 0, 0, 0, 2])
+    Empty([])

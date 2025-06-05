@@ -1,0 +1,207 @@
+Display Name = "Pyramid"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 77, 296, 0, 0])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 77, 296, 0, 0])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 77, 296, 0, 0])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ControlSwitches([100, 100, 0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 114, 30, 55, 0, 0])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["sasori_fc1", 0, 0, 2])
+      ShowText(["\\n<Scorpion Girl>Hey, did you come here to undertake the Dragon Seal Trial?"])
+      ShowChoices([["That's right", "We came for another reason", "Just passing by"], 0])
+      When([0, "That's right"])
+        ShowTextAttributes(["sasori_fc1", 0, 0, 2])
+        ShowText(["\\n<Scorpion Girl>Then you should expect to encounter fierce monsters once you enter the Pyramid. The Mummy Girl's special ability is particularly annoying."])
+        Empty([])
+      When([1, "We came for another reason"])
+        ShowTextAttributes(["sasori_fc1", 0, 0, 2])
+        ShowText(["\\n<Scorpion Girl>Is that so? But surely you intend to enter the Pyramid regardless, don't you? The Mummy Girl inside of the Pyramid has a particularly annoying ability."])
+        Empty([])
+      When([2, "Just passing by"])
+        ShowTextAttributes(["sasori_fc1", 0, 0, 2])
+        ShowText(["\\n<Scorpion Girl>Really? But since you're here, would you consider taking the Trial regardless? The Mummy Girls inside of the Pyramid have a particularly annoying ability, however."])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["sasori_fc1", 0, 0, 2])
+    ShowText(["\\n<Scorpion Girl>If you receive the Mummy Girl's Curse attack, your body will turn to stone. If this happens, you'll be unable to take any action until it's cured, and it won't wear off after the battle."])
+    ShowTextAttributes(["sasori_fc1", 0, 0, 2])
+    ShowText(["\\n<Scorpion Girl>This Gold Needle can release you from her petrification! Buy plenty of them now so you don't regret not buying them later!"])
+    ConditionalBranch([1, 1001, 0, 30, 2])
+      ShopProcessing([0, 20, 0, 0, true])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 31, 1])
+      ConditionalBranch([0, 2275, 1])
+        ControlSwitches([2275, 2275, 0])
+        ShowTextAttributes(["sasori_fc1", 1, 0, 2])
+        ShowText(["\\n<Scorpion Girl>Also...\nI've recently started a scorpion delivery service."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>You mean you mail scorpions to people?\nThat sounds like harassment to me..."])
+        ShowTextAttributes(["sasori_fc1", 1, 0, 2])
+        ShowText(["\\n<Scorpion Girl>That's not it! I deliver the customers themselves to the innermost room of the Pyramid."])
+        Empty([])
+      BranchEnd([])
+      ShowChoices([["Take me to the innermost room of the Pyramid", "I'll buy some gold needles", "I don't need anything"], 3])
+      When([0, "Take me to the innermost room of the Pyramid"])
+        ShowTextAttributes(["sasori_fc1", 1, 0, 2])
+        ShowText(["\\n<Scorpion Girl>Then, let's go!"])
+        ControlSwitches([100, 100, 0])
+        PlaySE(["RPG::SE(@name=\"mon_umaru\", @pitch=100, @volume=80)"])
+        TransferPlayer([0, 117, 19, 7, 2, 0])
+        ExitEventProcessing([])
+        Empty([])
+      When([1, "I'll buy some gold needles"])
+        ShopProcessing([0, 20, 0, 0, true])
+        Empty([])
+      When([2, "I don't need anything"])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([282])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ControlSwitches([2275, 2275, 0])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    ShowTextAttributes(["sasori_fc1", 1, 0, 2])
+    ShowText(["\\n<Scorpion Girl>Hey, do you have a moment?\nI've recently started a scorpion delivery service."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>You mean you mail scorpions to people?\nThat sounds like harassment to me..."])
+    ShowTextAttributes(["sasori_fc1", 1, 0, 2])
+    ShowText(["\\n<Scorpion Girl>That's not it! I deliver the customers themselves to the innermost room of the Pyramid."])
+    ShowTextAttributes(["sasori_fc1", 1, 0, 2])
+    ShowText(["\\n<Scorpion Girl>If you would like to use the service, talk to me. I'll escort you to the innermost room of the Pyramid."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])

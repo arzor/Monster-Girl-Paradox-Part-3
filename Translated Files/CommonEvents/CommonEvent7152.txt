@@ -1,0 +1,33 @@
+CommonEvent 7152
+Name = "サラ：敗北"
+
+  999([7152])
+  CallCommonEvent([7000])
+  ShowPicture([5, "80_sara_st12", 0, 0, 0, 0, 100, 100, 255, 0])
+  ShowTextAttributes(["sara_fc2", 1, 0, 2])
+  ShowText(["\\n<Sara>Fufu, too bad.\nAre you frustrated at only being able to come in my mouth?"])
+  ShowText([""])
+  ShowText([""])
+  ShowTextAttributes(["sara_fc2", 1, 0, 2])
+  ShowText(["\\n<Sara>If you want to be sucked again, come back some other time.\nI'll suck you dry with this mouth of mine..."])
+  ShowText([""])
+  ShowText([""])
+  ErasePicture([5])
+  ChangeMapDisplay([1])
+  ConditionalBranch([0, 443, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 1028, 0, 7, 2])
+    TransferPlayer([0, 378, 24, 10, 2, 0])
+    Empty([])
+
+  Else([])
+    TransferPlayer([0, 633, 24, 10, 2, 0])
+    Empty([])
+
+  BranchEnd([])
+  PlayBGM(["RPG::BGM(@name=\"castle2\", @volume=100, @pitch=100)"])
+  ExitEventProcessing([])
+  Empty([])

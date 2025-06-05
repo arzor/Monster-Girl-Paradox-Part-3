@@ -1,0 +1,467 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ShowTextAttributes(["slime_fc1", 0, 0, 2])
+    ShowText(["\\n<Lime>Oasis♪ Boomerang♪"])
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["slime_fc1", 0, 0, 2])
+      ShowText(["\\n<Lime>I'll give you a fish♪"])
+      PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+      ChangeItems([322, 0, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ConditionalBranch([1, 1001, 0, 14, 2])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>This is a different world from the true history's..."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>My own self from the true history... How much different was he from me right now?"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1001, 0, 15, 1])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>The correct course of history requires you obtaining the power of the spirits. By tracing the correct history, we can correct the distortion in this world."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>The version of me who acquired the power of spirits in the correct history... and me as I am now, are we different somehow?"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>As long as you're both Luka, your origins are probably the same... but the environment you grew up in can make a difference."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>But we were told about \"correcting history\"... Does that mean that this current history is incorrect?"])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>There are also strange interlopers in our world. The three Lilith sisters, the mysterious Seraphs..."])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Moreover, those two groups seem to be hostile towards each other, although their goals remain unclear..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>And we even have three Monster Lords..."])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>I don't know what my mother leading the Monster Lord's army is thinking... And the resurrected Black Alice is also shrouded in mystery..."])
+      ConditionalBranch([0, 2320, 1])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>That 17th Monster Lord, Neris, and Nero are definitely connected. They helped us for some reason, but we still don't know their motives..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>We know nothing about what any of them wants. Mhm... It looks like we're just out of the loop."])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>Mother wouldn't disrupt the world for no reason... There must be a compelling reason behind it. I want to believe that..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Also, my dad is missing, as always. We find his footprints, but the mysteries only deepen..."])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>They all keep connecting back to Tartarus... And to the Great Disaster thirty years ago."])
+      ShowTextAttributes(["alice_fc5", 1, 0, 2])
+      ShowText(["\\n<Alice>Let's see what is waiting for us in Sabasa's Tartarus rift. Together, Luka!"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Yeah!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["In the end, the key must be inside Tartarus. Until we unlock everything, we will continue our journey."])
+      ControlSwitches([2088, 2088, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>But when will I regain my original form? I don't want to stay like this forever..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    ConditionalBranch([2, "B", 1])
+      ControlSelfSwitch(["B", 0])
+      ConditionalBranch([1, 1001, 0, 14, 2])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>This world is different from the true history..."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>My own self from the true history... How much different was he from me right now?"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1001, 0, 15, 1])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>Luka, the correct course of history requires you obtaining the power of the spirits... By tracing that correct history, the distortion in the world will be corrected."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>The me of the correct history, who holds the power of spirits, and me in this current history... Is there a difference between us?"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Well, at the very least the Luka that I know, the original you, did not chase after his father..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>That's right. You mentioned that the Luka you knew hated his father."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>There's also the matter of the strange interlopers in this world. Seraphs I don't know, and the loathsome Lilith sisters..."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Those two factions appear hostile towards one another, but their goals are unknown..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>And there are three Monsters Lords too..."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>The 15th, mother of the current Monster Lord, is currently in charge of the army. Free of my watchful gaze, Black Alice has started acting on her own too..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>By Black Alice, you mean the Monster Lord defeated by the hero Heinrich, right? Did you know that she was alive?"])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>The moment she was struck down, I saved her.\n...But the circumstances behind that are a secret."])
+      ConditionalBranch([0, 2320, 1])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>That 17th Monster Lord Neris and Nero are also connected. They helped us for some reason, but we still don't know their motives..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>What on earth is happening in this world... It's frustrating to feel like I know nothing despite the fact I should know everything."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Also, my dad is missing, as always. We find his footprints, but the mysteries only deepen..."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>They all keep connecting back to Tartarus and to the Great Disaster that occurred thirty years ago."])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>Let's find out what is waiting for us in Sabasa's Tartarus rift. Follow me until the very end, Luka."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I will!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["In the end, the key must be inside Tartarus. Until we unlock everything, we will continue our journey."])
+      ControlSwitches([2053, 2053, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Still, when will I retrieve my original power? It can't be that I'll remain like this forever..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+      ShowText(["\\n<Sonya>There's a Tartarus rift north of Sabasa, right? I wonder what kind of parallel world we'll see this time?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>So far we've seen the past and the future... Maybe we'll see an ancient past, or a distant future."])
+      ShowTextAttributes(["sonia_fc1", 1, 0, 2])
+      ShowText(["\\n<Sonya>I wonder what Luka and I will be doing ten years from now. Maybe everything will have been resolved and we'll be living in Iliasville?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Who knows? I'm wondering that myself."])
+      ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+      ShowText(["\\n<Sonya>...This is a waste of effort. Damn blockhead... The enemy of maidens, a clueless man..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Effort? Block? ...Sonya, are you sleepy?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+      ShowText(["\\n<Sonya>This is a waste of effort. Damn blockhead... The enemy of maidens, a clueless man..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["brunhild_fc1", 0, 0, 2])
+    ShowText(["\\n<Hild>It's Hild's first time camping! This is so much fun!"])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ConditionalBranch([0, 1102, 0])
+      ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+      ShowText(["\\n<Kamuro>Kitsu-senpai, why is there so much sand in the desert?"])
+      ShowTextAttributes(["youko_fc1", 0, 0, 2])
+      ShowText(["\\n<Kitsu>Well, you see...\nIt's so that you can make lots of sand castles."])
+      ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+      ShowText(["\\n<Kamuro>You're so smart, Kitsu-senpai! You know everything!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+      ShowText(["\\n<Kamuro>I wonder why there is so much sand in the desert. I'll have to ask Kitsu-senpai about it..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ConditionalBranch([0, 1103, 0])
+      ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+      ShowText(["\\n<Kamuro>Kitsu-senpai, why is there so much sand in the desert?"])
+      ShowTextAttributes(["youko_fc1", 0, 0, 2])
+      ShowText(["\\n<Kitsu>Well, you see...\nIt's so that you can make lots of sand castles."])
+      ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+      ShowText(["\\n<Kamuro>You're so smart, Kitsu-senpai! You know everything!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["youko_fc1", 0, 0, 2])
+      ShowText(["\\n<Kitsu>I wonder why there's so much sand in the desert. I'll have to ask Tamamo next time I see her."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>It's still too early to go to sleep..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>It's still too early to go to sleep..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([2, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowTextAttributes(["alice_fc5", 1, 0, 2])
+    ShowText(["\\n<Alice>All right, let's do some sword training before going to bed. A fierce battle probably awaits us."])
+    ShowTextAttributes(["alice_fc5", 1, 0, 2])
+    ShowText(["\\n<Alice>It looks like your SP has finally increased... I'll teach you a great move."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Yes! Please help me out!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["And just like that, today's training begins..."])
+    FadeoutScreen([])
+    Wait([120])
+    FadeinScreen([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>TERYAHHH!!"])
+    PlaySE(["RPG::SE(@name=\"mon_miss\", @pitch=100, @volume=100)"])
+    Wait([10])
+    PlaySE(["RPG::SE(@name=\"mon_miss\", @pitch=100, @volume=100)"])
+    Wait([10])
+    PlaySE(["RPG::SE(@name=\"mon_miss\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I shout as I rapidly swing my sword. Unlike Flail Wildly, there are no openings between each attack."])
+    ShowTextAttributes(["alice_fc5", 2, 0, 2])
+    ShowText(["\\n<Alice>...So, you've memorized the form. By showering your enemy with a barrage of attacks, you score multiple hits."])
+    ShowTextAttributes(["alice_fc5", 2, 0, 2])
+    ShowText(["\\n<Alice>That is the Death Sword Chaos Star technique."])
+    ChangeSkills([0, 1, 0, 953])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Luka learned \\I[463]\\C[1]Death Sword Chaos Star\\C[0]!"])
+    ShowTextAttributes(["alice_fc5", 2, 0, 2])
+    ShowText(["\\n<Alice>This skill has tremendous power, but it also requires a large amount of SP. If you use it without planning ahead, it could leave you in a vulnerable position."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>I certainly can't use it continuously with how much SP it consumes... It's a finishing move in every sense of the term."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["And so, I've learned a powerful sword technique. After mastering it a bit more, I go to sleep."])
+    FadeoutScreen([])
+    PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+    Wait([180])
+    RecoverAll([0, 0])
+    TintScreen(["Tone(@red=0.0, @green=0.0, @blue=0.0, @gray=0.0)", 1, true])
+    ChangePlayerFollowers([0])
+    ControlVariables([11, 11, 0, 0, 2])
+    TransferPlayer([1, 11, 53, 54, 2, 2])
+    FadeinScreen([])
+    ControlSwitches([100, 100, 1])
+    Empty([])
+
+  Page 2
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>It's still too early to go to sleep..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([2, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["\\n<Ilias>We might as well train before we go to sleep. How about I teach you a new skill?"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Yes, please do! What kind of sword skill is it?!"])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["\\n<Ilias>Oh, it's not an attack skill. But it's highly effective when you go on the offensive..."])
+    FadeoutScreen([])
+    Wait([120])
+    FadeinScreen([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Put my fighting spirit in, and... HA!"])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Luka's SP has recovered!"])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["\\n<Ilias>This skill restores SP in exchange for MP. If you use it well, you can perform powerful attacks in rapid succession."])
+    ChangeSkills([0, 1, 0, 1092])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Luka learned \\I[836]\\C[1]High Charge\\C[0]!"])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["\\n<Ilias>This is actually a spear skill, but its effect is the same regardless of whether or not you are equipped with a spear."])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["\\n<Ilias>You can use spear skills no matter what your job is, so there's no problem with that. Use this skill to destroy all my enemies."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Yes, thank you very much!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["And so, I've made a useful skill my own. After mastering it a bit more, I go to sleep..."])
+    FadeoutScreen([])
+    PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+    Wait([180])
+    RecoverAll([0, 0])
+    TintScreen(["Tone(@red=0.0, @green=0.0, @blue=0.0, @gray=0.0)", 1, true])
+    ChangePlayerFollowers([0])
+    ControlVariables([11, 11, 0, 0, 2])
+    TransferPlayer([1, 11, 53, 54, 2, 2])
+    FadeinScreen([])
+    ControlSwitches([100, 100, 1])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["gob_fc1", 0, 0, 2])
+    ShowText(["\\n<Gob>*Bwooon*!"])
+    ShowTextAttributes(["gob_fc1", 0, 0, 2])
+    ShowText(["\\n<Gob>The desert is so wide, there are few obstacles, and I won't run into people!"])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["\\n<Nuruko>Kyuu! Kyuu!"])
+    ShowChoices([["Do nothing", "Push"], 1])
+    When([0, "Do nothing"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Push"])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=false, @list=[\"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=29, @parameters=[6])\", \"RPG::MoveCommand(@code=30, @parameters=[5])\", \"RPG::MoveCommand(@code=11, @parameters=[])\", \"RPG::MoveCommand(@code=11, @parameters=[])\", \"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=29, @parameters=[4])\", \"RPG::MoveCommand(@code=30, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=29, @parameters=[6])"])
+      Unnamed(["RPG::MoveCommand(@code=30, @parameters=[5])"])
+      Unnamed(["RPG::MoveCommand(@code=11, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=11, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=29, @parameters=[4])"])
+      Unnamed(["RPG::MoveCommand(@code=30, @parameters=[3])"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["stein_fc2", 1, 0, 2])
+    ShowText(["\\n<Promestein>A scorpion is beneath this rock... Let's capture it as a sample, fufufu..."])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+    ShowText(["\\n<Teeny>Aren't those tent stakes loose? Why is everyone so inattentive..."])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["phoenix_fc1", 0, 0, 2])
+    ShowText(["\\n<Mini>It feels so good inside a pot when the desert is so dry!"])
+    ShowTextAttributes(["phoenix_fc1", 2, 0, 2])
+    ShowText(["\\n<Mini>...WAAH! There's a scorpion insiiide!!"])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+    ShowText(["\\n<Vanilla>When my mantle flaps around here, it gets covered in sand... This is a harsh environment for us noble vampires."])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+    ShowText(["\\n<Papi>*gulp* *gulp*... This water is tasty!"])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["meia_fc1", 0, 0, 2])
+    ShowText(["\\n<Meia>Ohh, what pretty water... It makes me want to swim to my heart's content."])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+    ShowText(["\\n<Chrome>Oh, I found a dry bone. Maybe I could make something by using it as a medium..."])
+    ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+    ShowText(["\\n<Chrome>That's just a joke. I'll properly exorcise it..."])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["frederika_fc1", 0, 0, 2])
+    ShowText(["\\n<Frederica>So this is the desert... It's my first time seeing it..."])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["sylph_fc1", 0, 0, 2])
+    ShowText(["\\n<Sylph>Hey, hey, let's dance in a circle! I used to do this a lot during the Sylph Festival♪!"])
+    ShowTextAttributes(["sylph_fc1", 3, 0, 2])
+    ShowText(["\\n<Sylph>And we're going to meet Gnomey, right? Ehehe, I look forward to it...♪"])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["eva_fc1", 0, 0, 2])
+    ShowText(["\\n<Eva>Filling my stomach with food is happiness. It would be even better if I didn't have to work..."])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+    ShowText(["\\n<King of San Ilia>Replenishment of coolant water... Oh, and I need to remove the sand that has gotten into my parts..."])
+    ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+    ShowText(["\\n<King of San Ilia>Maintenance is hard in a land like this. Next time I need to request the development of a desert warfare pope design."])
+    Empty([])

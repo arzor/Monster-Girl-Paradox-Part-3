@@ -1,0 +1,959 @@
+Display Name = "大劇場"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([1, 1306, 0, 2, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["今は、ステージ占拠事件の解決を優先しよう……"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1306, 0, 3, 1])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 981, 7, 13, 0, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([1, 1306, 0, 2, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["今は、ステージ占拠事件の解決を優先しよう……"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1306, 0, 3, 1])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 981, 7, 13, 0, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【ピアノ弾き】"])
+    ShowText(["私が舞台に立った方が、まだ盛り上がりそうですね……"])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([1, 1306, 0, 2, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["今は、ステージ占拠事件の解決を優先しよう……"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1306, 0, 3, 1])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 981, 7, 13, 0, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【踊り子】"])
+    ShowText(["あの娘だって、そこまでダメな訳じゃないけど……"])
+    ShowText(["サキちゃんがハードルを引き上げすぎてるのよね。"])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【若い娘】"])
+    ShowText(["未来に絶望するか、大勇者ルカにすがるか……"])
+    ShowText(["そういえば、ルカを信望するファンが集まった町もあるみたいね。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【若い娘】"])
+    ShowText(["確か、グランゴルド近くのゴッダールだったっけ。"])
+    ShowText(["フィノアみたいに、三闘神だか何だかを信仰するよりはマシよね。"])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【商人】"])
+    ShowText(["この破滅ムードで、たいていの店の売り上げは上がってるんだ。"])
+    ShowText(["絶望した人たちが、ヤケになって散財するのさ。"])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ConditionalBranch([0, 3232, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【ダフネル公爵夫人】"])
+      ShowText(["世界中の本棚に現れた、謎の本をご存じですか？"])
+      ShowText(["ですが、最後まで読み切った者は未だに現れません……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【ダフネル公爵夫人】"])
+      ShowText(["この私に、お話の結末を教えてくれる方はおりませんか？"])
+      ShowText(["お礼として、特別な秘石をお贈りしましょう……"])
+      ConditionalBranch([1, 1352, 0, 4, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["しかし、まだ結末まで読んでいなかった……"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1352, 0, 5, 1])
+        ControlSwitches([3232, 3232, 0])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["ダフネル公爵夫人に、本の結末を語って聞かせた……"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【ダフネル公爵夫人】"])
+        ShowText(["なんと、それは……"])
+        ShowText(["忌まわしくも悲しいお話ですね。"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【ダフネル公爵夫人】"])
+        ShowText(["あなた達のおかげで、ついに結末を聞く事が出来ました。"])
+        ShowText(["お礼に、この品をお送りしましょう……"])
+        PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+        ChangeItems([3940, 0, 0, 1])
+        ChangeItems([1814, 0, 0, 1])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3232, 0])
+      ConditionalBranch([1, 1313, 0, 2, 2])
+        ConditionalBranch([1, 1313, 0, 0, 0])
+          ControlVariables([1313, 1313, 0, 0, 1])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【ダフネル公爵夫人】"])
+        ShowText(["そう言えば、夫から聞いた話なのですが……"])
+        ShowText(["間もなく、海軍本部で非常に重要な会議が開かれるとか。"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【ダフネル公爵夫人】"])
+        ShowText(["おそらく、全世界規模で発生している海面上昇の件でしょう。"])
+        ShowText(["この本の内容と合致しているのが、不気味ですね……"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1313, 0, 3, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【ダフネル公爵夫人】"])
+        ShowText(["これは、報われない恋の話。"])
+        ShowText(["私の涙が、世界を満たす物語――"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【ダフネル公爵夫人】"])
+        ShowText(["いいえ、これは呪いの話。"])
+        ShowText(["報われない恋が、世界を不幸にする物語。"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlayME(["RPG::ME(@name=\"lvup\", @pitch=100, @volume=100)"])
+    ShowPicture([5, "sys_oyakataf3b", 0, 0, 140, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_oyakata_st7-3", 0, 0, 140, 0, 100, 100, 0, 0])
+    ShowPicture([7, "sys_oyakataf3", 0, 0, 140, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 140, 0, 100, 100, 255, 0, 60, false])
+    MovePicture([6, nil, 0, 0, 140, 0, 100, 100, 255, 0, 60, false])
+    MovePicture([7, nil, 0, 0, 140, 0, 100, 100, 255, 0, 60, false])
+    Wait([30])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["地獄の親方を発見した！\\|\\|"])
+    Wait([30])
+    ShowTextAttributes(["randolph_fc7", 2, 0, 2])
+    ShowText(["【地獄の親方】"])
+    ShowText(["デトロイト・ロック・シティー！！"])
+    ConditionalBranch([1, 1319, 0, 4, 2])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["これじゃツッコミが追いつかない……"])
+      ShowText(["パピがいてくれたらなぁ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1319, 0, 5, 1])
+      ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+      ShowText(["【パピ】"])
+      ShowText(["ロックしてるな、親方！"])
+      ShowText(["熱い武器が出来そうだぞ！！"])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSwitches([3134, 3134, 0])
+    ControlVariables([1354, 1354, 1, 0, 1])
+    ConditionalBranch([1, 1354, 0, 80, 0])
+      Script(["gain_medal(1524)"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ErasePicture([6])
+    ErasePicture([7])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["異世界の親方に事情を説明し、混沌の鍛冶場に送った――"])
+    ShowText(["（発見した親方の数：\\V[1354]人）"])
+    Wait([30])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 437, 29, 44, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 437, 29, 44, 0, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "アジ"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【踊り子】"])
+    ShowText(["とどけ、私のハァァァト……キラッ☆"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["155"])
+    ShowTextAttributes(["saki_fc1", 3, 0, 2])
+    ShowText(["【サキ】"])
+    ShowText(["ちょっとハートが足りないかな……？"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 13
+Name = "サキ"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    CallCommonEvent([9008])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 76
+Name = "EV076"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【踊り子】"])
+    ShowText(["こんな雰囲気で、ステージには立ちたくないわね……"])
+    ShowText(["早く平和が訪れないかしら。"])
+    Empty([])
+
+CommonEvent 183
+Name = "EV183"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【青年】"])
+    ShowText(["いつものメンバーが、惰性のように来る感じ……"])
+    ShowText(["なんだか末期的だよな。"])
+    Empty([])
+
+CommonEvent 184
+Name = "EV184"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【身なりの良い男】"])
+    ShowText(["これじゃ、アジ・ダハーカの方がマシだったな……"])
+    Empty([])
+
+CommonEvent 186
+Name = "EV186"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【あらくれ】"])
+    ShowText(["ステージの上でバレーボールでもやった方が、よっぽど盛り上がるぜ。"])
+    Empty([])
+
+CommonEvent 187
+Name = "EV187"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【青年】"])
+    ShowText(["この醒めた感じ……"])
+    ShowText(["俺は、けっこう好きだよ。"])
+    Empty([])
+
+CommonEvent 190
+Name = "EV190"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【おやじ】"])
+    ShowText(["この、たるみきったステージ……"])
+    ShowText(["世界の終わりにはぴったりさ。"])
+    Empty([])
+
+CommonEvent 191
+Name = "EV191"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【青年】"])
+    ShowText(["サキちゃーんも、最近は忙しいみたいだな。"])
+    ShowText(["トップアイドルだもんな……"])
+    Empty([])
+
+CommonEvent 193
+Name = "EV193"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【戦士】"])
+    ShowText(["キラッキラッ☆　キラキラキラッ☆"])
+    Empty([])
+
+CommonEvent 196
+Name = "EV196"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【兵士】"])
+    ShowText(["いちおう、警備に来ております。"])
+    ShowText(["またステージ占拠があったら困りますからね。"])
+    Empty([])
+
+CommonEvent 198
+Name = "EV198"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【剣士】"])
+    ShowText(["今はこんなだけど、サキちゃんのステージは大いに盛り上がるぜ。"])
+    ShowText(["他にもスターは何人かいるけど、サキちゃんがトップだな。"])
+    Empty([])
+
+CommonEvent 200
+Name = "EV200"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【兵士】"])
+    ShowText(["世の中が大変な時に、こんな所にいていいのだろうか……"])
+    Empty([])
+
+CommonEvent 202
+Name = "EV202"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【支配人】"])
+    ShowText(["おおっ、皆さん！"])
+    ShowText(["ステージが、またしても乗っ取られてしまいました！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【支配人】"])
+    ShowText(["どうか、何とかしてください！"])
+    ShowText(["お願いします、大勇者様！"])
+    Empty([])
+
+  Page 1
+    ControlSwitches([601, 700, 1])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    ControlSwitches([34, 34, 1])
+    ControlSwitches([35, 35, 1])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【支配人】"])
+    ShowText(["公演を行いますか？"])
+    ShowText(["それとも、「サキちゃん夜のライブ」を楽しみますか？"])
+    Script(["unlimited_choices(11, [\"ステージ1\","])
+    ScriptMore(["\"ステージ2\",\"ステージ3\",\"ステージ4\","])
+    ScriptMore(["\"ステージ5\", \"ステージ6\", \"ステージ7\", \"ステージ8\", "])
+    ScriptMore(["\"サキちゃん夜のライブ\", \"やめる\"])"])
+    ConditionalBranch([1, 11, 0, 0, 0])
+      CallCommonEvent([121])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 1, 0])
+      CallCommonEvent([122])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 2, 0])
+      CallCommonEvent([123])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 3, 0])
+      CallCommonEvent([124])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 4, 0])
+      CallCommonEvent([125])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 5, 0])
+      CallCommonEvent([126])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 6, 0])
+      CallCommonEvent([127])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 7, 0])
+      CallCommonEvent([128])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 8, 0])
+      ConditionalBranch([0, 25, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["前章と統合していないため、夜のライブは行えません。"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ShowChoices([["ひみつコース（100G）", "勝負コース（500G）", "本番コース（1000G）", "やめる"], 4])
+      When([0, "ひみつコース（100G）"])
+        ConditionalBranch([8, 527])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["【支配人】"])
+          ShowText(["おや、サキちゃんパスを持っていますね。"])
+          ShowText(["ならばお代は頂きません。"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["【支配人】"])
+          ShowText(["それでは、サキちゃん夜のライブを楽しんで下さいね！"])
+          FadeoutBGM([1])
+          Script(["call_novel_scene(319)"])
+          ExitEventProcessing([])
+          Empty([])
+        Else([])
+          ConditionalBranch([7, 100, 0])
+            ChangeGold([1, 0, 100])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["【支配人】"])
+            ShowText(["それでは、サキちゃん夜のライブを楽しんで下さいね！"])
+            FadeoutBGM([1])
+            Script(["call_novel_scene(319)"])
+            ExitEventProcessing([])
+            Empty([])
+          Else([])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["【支配人】"])
+            ShowText(["おや、お金が足りないようですね……"])
+            ExitEventProcessing([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      When([1, "勝負コース（500G）"])
+        ConditionalBranch([8, 527])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["【支配人】"])
+          ShowText(["おや、サキちゃんパスを持っていますね。"])
+          ShowText(["ならばお代は頂きません。"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["【支配人】"])
+          ShowText(["それでは、サキちゃん夜のライブを楽しんで下さいね！"])
+          FadeoutBGM([1])
+          Script(["call_novel_scene(320)"])
+          ExitEventProcessing([])
+          Empty([])
+        Else([])
+          ConditionalBranch([7, 500, 0])
+            ChangeGold([1, 0, 500])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["【支配人】"])
+            ShowText(["それでは、サキちゃん夜のライブを楽しんで下さいね！"])
+            FadeoutBGM([1])
+            Script(["call_novel_scene(320)"])
+            ExitEventProcessing([])
+            Empty([])
+          Else([])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["【支配人】"])
+            ShowText(["おや、お金が足りないようですね……"])
+            ExitEventProcessing([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      When([2, "本番コース（1000G）"])
+        ConditionalBranch([8, 527])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["【支配人】"])
+          ShowText(["おや、サキちゃんパスを持っていますね。"])
+          ShowText(["ならばお代は頂きません。"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["【支配人】"])
+          ShowText(["それでは、サキちゃん夜のライブを楽しんで下さいね！"])
+          FadeoutBGM([1])
+          Script(["call_novel_scene(321)"])
+          ExitEventProcessing([])
+          Empty([])
+        Else([])
+          ConditionalBranch([7, 1000, 0])
+            ChangeGold([1, 0, 1000])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["【支配人】"])
+            ShowText(["それでは、サキちゃん夜のライブを楽しんで下さいね！"])
+            FadeoutBGM([1])
+            Script(["call_novel_scene(321)"])
+            ExitEventProcessing([])
+            Empty([])
+          Else([])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["【支配人】"])
+            ShowText(["おや、お金が足りないようですね……"])
+            ExitEventProcessing([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      When([3, "やめる"])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 9, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 203
+Name = "EV203"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 437, 29, 44, 0, 0])
+    Empty([])
+
+CommonEvent 204
+Name = "EV204"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【バニー】"])
+    ShowText(["サキちゃん、キラッ☆"])
+    Empty([])
+
+CommonEvent 205
+Name = "EV205"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【バニー】"])
+    ShowText(["みんな、孤独が怖いから劇場に集まってくる感じね。"])
+    ShowText(["心のどこかでは醒めてるから、どうしても盛り上がらないの。"])
+    Empty([])
+
+CommonEvent 206
+Name = "EV206"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【バニー】"])
+    ShowText(["いらっしゃい、いっぱい飲んでいってね♪"])
+    ShopProcessing([0, 428, 0, 0, false])
+    ShopItem([0, 431, 0, 0])
+    Empty([])
+
+CommonEvent 207
+Name = "EV207"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【芸人】"])
+    ShowText(["そろそろ出番か……"])
+    ShowText(["……サキちゃん、キラッ☆"])
+    Empty([])
+
+CommonEvent 208
+Name = "EV208"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【青年】"])
+    ShowText(["サキちゃんの夜のステージに出たいなぁ……"])
+    ShowText(["あぁぁぁぁ……"])
+    Empty([])
+
+CommonEvent 209
+Name = "EV209"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【男】"])
+    ShowText(["なんだか、お腹が減ったなぁ。"])
+    Empty([])
+
+CommonEvent 210
+Name = "EV210"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【紳士】"])
+    ShowText(["なかなか、サキちゃんのようなアイドルは現れませんね……"])
+    Empty([])
+
+CommonEvent 211
+Name = "EV211"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【淑女】"])
+    ShowText(["サキちゃん、キラッ☆"])
+    Empty([])
+
+CommonEvent 213
+Name = "EV213"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【男】"])
+    ShowText(["サキちゃんのステージを、ここでひたすら待っています。"])
+    Empty([])
+
+CommonEvent 216
+Name = "EV216"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【青年】"])
+      ShowText(["こういう、微妙にノれない感じで死んでいく……"])
+      ShowText(["そんな人生は嫌だな。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【青年】"])
+      ShowText(["平和になっても……"])
+      ShowText(["サキちゃんが戻らなきゃ、劇場は盛り上がらないな。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 219
+Name = "EV219"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【シーフ】"])
+    ShowText(["いまいち、ノリが悪いんだよな……"])
+    Empty([])
+
+CommonEvent 227
+Name = "EV227"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【おじさん】"])
+    ShowText(["劇場の空気を吸うためだけに、ここへ来てるんだ。"])
+    Empty([])
+
+CommonEvent 228
+Name = "EV228"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【屈強な男】"])
+    ShowText(["サキちゃんの公演は来週か……"])
+    ShowText(["英気を養わなきゃな。"])
+    Empty([])
+
+CommonEvent 235
+Name = "EV235"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【身なりの良い男性】"])
+    ShowText(["こちらはカジノになります。"])
+    ShowText(["どうぞ、お楽しみを。"])
+    Empty([])
+
+CommonEvent 236
+Name = "EV236"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【支配人の妻】"])
+    ShowText(["ステージが盛り上がらなくても、客の飲食費で黒字なのさ。"])
+    ShowText(["さあ、バリバリ働くよっ！"])
+    Empty([])
+
+CommonEvent 238
+Name = "EV238"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【メイド】"])
+    ShowText(["奥様はいつでもポジティブです。"])
+    ShowText(["その分、旦那様は相変わらず打たれ弱いですが……"])
+    Empty([])
+
+CommonEvent 239
+Name = "EV239"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【メイド】"])
+    ShowText(["この劇場の雰囲気では、デビューしても幸せにはなれなさそう。"])
+    ShowText(["奥様には評価されてるし、このままメイドとして生きましょうか。"])
+    Empty([])
+
+CommonEvent 269
+Name = "EV269"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([458, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 270
+Name = "EV270"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([925, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

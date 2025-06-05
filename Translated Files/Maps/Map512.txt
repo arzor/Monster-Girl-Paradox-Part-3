@@ -1,0 +1,470 @@
+Display Name = "Snake Shrine"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 510, 14, 1, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 510, 14, 1, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 510, 14, 1, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 510, 14, 1, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["sirohebisama_fc1", 3, 0, 2])
+    ShowText(["\\n<Shirohebi>Mmmn, and who might you be?"])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>Lady Shirohebi...?\nWhy is the ringleader herself out here wandering around?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>It's not her. This is her sister.\nThere are two Shirohebi, a vulgar older sister and a younger, gentle one."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Wait... This is her sister.\nShirohebi refers to a pair of sisters, a wicked older one and a slightly better younger one."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["sirohebisama_fc1", 3, 0, 2])
+    ShowText(["\\n<Shirohebi>I see... So you've come to extinguish the fires my sister has stoked? I myself was kicked out of the main shrine for expressing opposition."])
+    ShowTextAttributes(["sirohebisama_fc1", 3, 0, 2])
+    ShowText(["\\n<Shirohebi>My sister is not evil by nature, but she has been tempted by one who is..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Someone naturally evil? Who in the world are you talking about?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Someone who deceived Shirohebi...\nIf this is following the correct history, then..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["sirohebisama_fc1", 3, 0, 2])
+    ShowText(["\\n<Shirohebi>One calling herself Alipheese the 8th--Black Alice. My sister has rallied the youkai army with the intent of joining her cause."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>Black Alice is behind all this!?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>So it is Black Alice!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["sirohebisama_fc1", 3, 0, 2])
+    ShowText(["\\n<Shirohebi>I was actually expecting Grand Noah to send an army... The few of you aren't going to be able to stop my sister and her army."])
+    ShowTextAttributes(["durahan_fc1", 2, 0, 2])
+    ShowText(["\\n<Arthur>This is certainly more serious than I anticipated. If we're dealing with a rebellion, we better leave and call in reinforcements--"])
+    PlayBGM(["RPG::BGM(@name=\"\", @volume=100, @pitch=100)"])
+    Wait([15])
+    PlaySE(["RPG::SE(@name=\"mon_bom1\", @pitch=100, @volume=100)"])
+    ShakeScreen([7, 7, 120, true])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Wait([180])
+    ShotBalloonIcon([-1, 1, false])
+    ShotBalloonIcon([0, 1, false])
+    PlayBGM(["RPG::BGM(@name=\"kiki1\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["sirohebisama_fc1", 3, 0, 2])
+    ShowText(["\\n<Shirohebi>Did that explosion come from the main shrine?! What in the world just happened!?"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Let's go find out!"])
+    ControlSwitches([2178, 2178, 0])
+    ControlSwitches([2272, 2272, 0])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["sirohebisama_fc1", 3, 0, 2])
+    ShowText(["\\n<Shirohebi>Did that explosion come from the main shrine?! What in the world just happened!?"])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["durahan_fc1", 2, 0, 2])
+    ShowText(["\\n<Arthur>Wait... back up a second.\nIsn't that the white snake who's fanning the flames of war?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 513, 55, 16, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 513, 34, 38, 0, 0])
+    ConditionalBranch([1, 1060, 0, 0, 0])
+      ConditionalBranch([0, 2339, 1])
+        CallCommonEvent([333])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>This must be the snake shrine...\nIt's much larger and more extravagant than the others. Why would the head of such a nice place even want to take over the village..."])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>Perhaps the army she's gathered is not for taking it over... If a peaceful resolution proves impossible, we may have no choice but to fight Shirohebi."])
+    ConditionalBranch([4, 218, 0])
+      ShowTextAttributes(["nyumaou_fc1", 0, 0, 2])
+      ShowText(["\\n<Cow Demon Queen>Hmph, I'll give their army a solid beatdown!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc1", 3, 0, 2])
+      ShowText(["\\n<Sonya>C'mon, let's bust in!\nThis youkai army is clearly a threat!"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 5, 0, 2])
+        ShowText(["\\n<Alice>What's gotten into you...?"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>What are you talking about?\nIt's not like we're raiding the Ikedaya..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Sonya just really likes detective novels..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>Well, let's get to it. Proceed with caution!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["\\n<Ilias>Well then, let's rid the world of a few dirty monsters!"])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["durahan_fc1", 2, 0, 2])
+    ShowText(["\\n<Arthur>Wait... back up a second.\nIsn't that the white snake who's fanning the flames of war?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 513, 35, 38, 0, 0])
+    ConditionalBranch([1, 1060, 0, 0, 0])
+      ConditionalBranch([0, 2339, 1])
+        CallCommonEvent([333])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["durahan_fc1", 2, 0, 2])
+    ShowText(["\\n<Arthur>Wait... back up a second.\nIsn't that the white snake who's fanning the flames of war?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["durahan_fc1", 2, 0, 2])
+    ShowText(["\\n<Arthur>Wait... back up a second.\nIsn't that the white snake who's fanning the flames of war?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ConditionalBranch([1, 1060, 0, 1, 2])
+      ShowTextAttributes(["mikolamia_fc1", 0, 0, 2])
+      ShowText(["\\n<Miko Lamia>Welcome to the Snake Shrine.\nHave you too come to stand by Lady Shirohebi's side?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["mikolamia_fc1", 0, 0, 2])
+      ShowText(["\\n<Miko Lamia>Welcome to the Snake Shrine.\nBe on your best behavior before Lady Shirohebi."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Return to the Shrine Hill entrance?"])
+    ShowChoices([["Stay", "Return"], 1])
+    When([0, "Stay"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Return"])
+      TransferPlayer([0, 485, 14, 5, 2, 0])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ConditionalBranch([1, 1060, 0, 1, 2])
+      ShowTextAttributes(["mikolamia_fc1", 0, 0, 2])
+      ShowText(["\\n<Miko Lamia>Welcome to the Snake Shrine.\nYamatai will belong to us youkai very soon."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["mikolamia_fc1", 0, 0, 2])
+      ShowText(["\\n<Miko Lamia>Welcome to the Snake Shrine.\nAlas, suppressing one's desires is quite difficult..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Return to the Shrine Hill entrance?"])
+    ShowChoices([["Stay", "Return"], 1])
+    When([0, "Stay"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Return"])
+      TransferPlayer([0, 485, 14, 5, 2, 0])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["mikolamia_fc1", 0, 0, 2])
+    ShowText(["\\n<Miko Lamia>This is where we Miko Lamia sleep. There's nothing particularly special in there."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["youko_fc1", 0, 0, 2])
+    ShowText(["\\n<Cash Money>The Snake Shrine is sooooo big. Lady Shirohebi must be loaded."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["5"])
+    ShowTextAttributes(["alice_fc5", 6, 0, 2])
+    ShowText(["\\n<Alice>Never mind that.\nWhat's with your name!?"])
+    ConditionalBranch([4, 102, 0])
+      ShowTextAttributes(["youko_fc1", 0, 0, 2])
+      ShowText(["\\n<Kitsu>Perhaps she chose to name herself after her favorite thing?"])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Even your name isn't THAT dumb..."])
+      ShowTextAttributes(["youko_fc1", 2, 0, 2])
+      ShowText(["\\n<Kitsu>How rude!"])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Label(["226"])
+    ShowTextAttributes(["sirohebisama_fc1", 0, 0, 2])
+    ShowText(["\\n<Shirohebi>Kukuku, my great wealth has been passed down through generations."])
+    ExitEventProcessing([])
+    Label(["227"])
+    ShowTextAttributes(["mikolamia_fc1", 3, 0, 2])
+    ShowText(["\\n<Mitsuki>Lady Shirohebi is incredibly rich.\nHer ancestors managed their money well."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["nekomata_fc1", 0, 0, 2])
+    ShowText(["\\n<Nekomata>Nyaa, nyaa!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["222"])
+    ShowTextAttributes(["nekomata_fc1", 0, 0, 2])
+    ShowText(["\\n<Tama>Nyaa...?"])
+    ShowTextAttributes(["nekomata_fc1", 2, 0, 2])
+    ShowText(["\\n<Nekomata>Nyaaaaa♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Wait([60])
+    ShowPicture([5, "80_elfhime_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Elf Princess>............"])
+    ErasePicture([5])
+    Wait([30])
+    SetMoveRoute([22, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShotBalloonIcon([22, 1, true])
+    SetMoveRoute([22, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=29, @parameters=[5])\", \"RPG::MoveCommand(@code=30, @parameters=[4])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=29, @parameters=[5])"])
+    Unnamed(["RPG::MoveCommand(@code=30, @parameters=[4])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ControlVariables([1081, 1081, 0, 0, 3])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Ah...!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>It looks like the Elf Princess arrived before us. Let's meet her inside the shrine and begin negotiations for the Red Orb."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>It appears the Elf Princess had arrived before we did. Let us meet her inside the shrine and begin negotiations for the Red Orb."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+      ShowText(["\\n<Sonya>I've got a very, very bad feeling about this..."])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"kiki1\", @volume=100, @pitch=100)"])
+    EraseEvent([])
+    Empty([])

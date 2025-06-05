@@ -1,0 +1,231 @@
+Display Name = "レミナ研究所 入り口"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 501, 8, 55, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 623, 57, 56, 8, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 623, 57, 56, 8, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 623, 57, 56, 8, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["宝箱には高度な電子ロックが掛かっている……"])
+    ShowText(["今、これを開ける事は不可能のようだ。"])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1432, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"boss0\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_tukuyomi_st01b", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["やれやれ、またネクストドールか……"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["地下施設の扉の前に立ちはだかる、異様な人造妖魔――"])
+    ShowText(["それは、今まで何回か戦ってきたネクストドールの1体だった。"])
+    ShowTextAttributes(["tukuyomi_fc1", 0, 0, 2])
+    ShowText(["【ツクヨミ】"])
+    ShowText(["まさか、あの天使像ごときが門番だとでも？"])
+    ShowText(["レミナ研究所への入り口を守っているのは、この私です。"])
+    ShowTextAttributes(["tukuyomi_fc1", 0, 0, 2])
+    ShowText(["【ツクヨミ】"])
+    ShowText(["それに、警戒システムを作動すればどうなると思いますか？"])
+    ShowText(["何百ものトラップや隔壁に、警備兵の増援が――"])
+    ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+    ShowText(["【ラプラス】"])
+    ShowText(["……警戒システムは作動しません。"])
+    ShowText(["私が遮断しました。"])
+    ShowPicture([5, "80_tukuyomi_st03b", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tukuyomi_fc1", 2, 0, 2])
+    ShowText(["【ツクヨミ】"])
+    ShowText(["ラプラス……！？"])
+    ShowText(["なぜ、魔王達などに味方を……！？"])
+    ShowTextAttributes(["laplace_fc1", 0, 0, 2])
+    ShowText(["【ラプラス】"])
+    ShowText(["天使軍への協力よりも上位の任務を実行しています。"])
+    ShowText(["「智の同盟」への連絡を行うため、道を空けて下さい。"])
+    ShowPicture([5, "80_tukuyomi_st01b", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tukuyomi_fc1", 0, 0, 2])
+    ShowText(["【ツクヨミ】"])
+    ShowText(["私も、「智の同盟」に生み出されましたが……"])
+    ShowText(["現在の最上位任務は、現地妖魔および魔王の討伐。"])
+    ShowTextAttributes(["tukuyomi_fc1", 0, 0, 2])
+    ShowText(["【ツクヨミ】"])
+    ShowText(["ここを通りたければ、この私を倒すのですね……！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["道を開けてくれないなら、倒すまでだ……行くぞっ！"])
+    ConditionalBranch([4, 420, 0])
+      ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+      ShowText(["【八尾】"])
+      ShowText(["あの者、そうは見えぬが妖狐の改造体かと……"])
+      ShowText(["間違いなく、強力な術を使ってきおるぞ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 774, 0])
+      ShowTextAttributes(["pramia_fc2", 0, 0, 2])
+      ShowText(["【プッチーナ】"])
+      ShowText(["あんたも、氷の彫像に変えてあげるわ……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 503, 0])
+      ShowTextAttributes(["tukuyomi_fc1", 2, 0, 2])
+      ShowText(["【ツクヨミ’】"])
+      ShowText(["己を相手に、力を振るうことになろうとは……"])
+      ShowText(["混沌の成り行きとはいえ、複雑ですね。"])
+      ShowTextAttributes(["tukuyomi_fc1", 2, 0, 2])
+      ShowText(["【ツクヨミ】"])
+      ShowText(["まさか、私の同型機？"])
+      ShowText(["量産計画の話は聞いていましたが……"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss2\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 1592, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    ConditionalBranch([4, 420, 0])
+      ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+      ShowText(["【八尾】"])
+      ShowText(["おそらく、たまも様に対抗して造られたのであろう。"])
+      ShowText(["しかし、それしきではあの方の足元にも及ばんわ……"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["tukuyomi_fc1", 2, 0, 2])
+    ShowText(["【ツクヨミ】"])
+    ShowText(["この者達の力、すでにネクストドールより上……"])
+    ShowText(["私達の、存在意義は……"])
+    ConditionalBranch([4, 775, 0])
+      ShowTextAttributes(["vgirl_fc2", 0, 0, 2])
+      ShowText(["【ヴァンガード】"])
+      ShowText(["もう眠るがいい……"])
+      Empty([])
+
+    BranchEnd([])
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ツクヨミを破壊した……"])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["この人造妖魔達、なんだか可哀想ね。"])
+    ShowText(["兵器として造られて、こんな風に壊されて……"])
+    ShowTextAttributes(["morrigan_fc1", 6, 0, 2])
+    ShowText(["【モリガン】"])
+    ShowText(["哀れだけど、戦争だからなぁ。"])
+    ShowText(["いちいち同情してたら、こっちの心がやられちまうぜ。"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["モリガンの言う通りだ……"])
+    ShowText(["我々は、戦争に身を投じる選択をしたのだからな。"])
+    ConditionalBranch([4, 774, 0])
+      ShowTextAttributes(["pramia_fc2", 0, 0, 2])
+      ShowText(["【プッチーナ】"])
+      ShowText(["生命を尊ぶ気持ちは、幼年期と共に失われた……"])
+      ShowText(["敵は葬るのみよ。"])
+      ConditionalBranch([4, 773, 0])
+        ShowTextAttributes(["gob_fc2", 0, 0, 2])
+        ShowText(["【韋駄天】"])
+        ShowText(["同じく……我が刃に一片の慈悲無し。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["さて、これで門番は倒した。"])
+    ShowText(["このまま研究所内に突入するぞ！"])
+    ConditionalBranch([4, 41, 0])
+      ShowTextAttributes(["stein_fc2", 1, 0, 2])
+      ShowText(["【プロメスティン】"])
+      ShowText(["ふふふ、楽しみですね……"])
+      ShowText(["さあ、行きましょう！"])
+      ShowTextAttributes(["morrigan_fc1", 6, 0, 2])
+      ShowText(["【モリガン】"])
+      ShowText(["お前、そんなアグレッシブだったっけ？"])
+      ShowText(["なんかキャラ変わってない？"])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["研究施設となると、鼻息が荒くなる性分なのだ。"])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["【ソニア】"])
+      ShowText(["でも、生まれの門の時はそんなにはしゃいでなかったよね？"])
+      ShowTextAttributes(["stein_fc2", 1, 0, 2])
+      ShowText(["【プロメスティン】"])
+      ShowText(["空気を読む……"])
+      ShowText(["最近、私が身に付けた技能です。"])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["いや、読めてない時の方が多いぞ……"])
+      ShowText(["ともかく、先に進むか。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["警戒システムが作動しないとはいえ、警備兵は巡回しているはず。"])
+    ShowText(["やはり、研究所内でも激しい戦いは避けられないだろう――"])
+    PlayBGM(["RPG::BGM(@name=\"dungeon_labo5\", @volume=100, @pitch=100)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])

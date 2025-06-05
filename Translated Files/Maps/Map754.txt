@@ -1,0 +1,108 @@
+Display Name = "? ? ?"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ControlSwitches([2318, 2318, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There is a time-worn journal..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"Half a month has passed by since we drifted onto this island. The food stores from our ship have run out, and we now await our deaths.\""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"We wandered around this island aimlessly.\nAs we ascended a steep hill, we found ourselves surrounded by fog.\""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"The compass began pointing in strange directions and had clearly stopped working correctly. An unusual presence surrounded us.\""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"Once we had climbed the steep hill, there was a monument.\nIt was quite old, but still legible enough for us to read.\""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"............\""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"The inscription's contents were very unsettling.\nWho in the world made this, and why?\""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"As the fog wrapped around us, the eerie presence grew even stronger. I rushed to write up these last sentences of this adventurer's saga.\""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"If someone reads this journal...\nEscape from this island immediately.\""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The entry cuts off from there..."])
+    ConditionalBranch([0, 6, 0])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>There aren't any stone monuments anywhere...\nNor are there any steep hills on this small island..."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>There are no stone monuments anywhere...\nThere isn't even a steep hill on this small island to begin with."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>There are no stone monuments anywhere...\nThere isn't even a steep hill on this small island to begin with."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>Did they experience a vision in the face of death...? Or maybe..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Did they experience a vision in the face of death...? Or maybe..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Looks to be just a dead body..."])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There is nothing noteworthy inside this toolbox..."])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There is nothing noteworthy inside this tool bag..."])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 87, 207, 2, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 87, 207, 2, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 87, 207, 2, 0])
+    Empty([])

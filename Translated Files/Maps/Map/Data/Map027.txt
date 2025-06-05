@@ -1,0 +1,526 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 26, 20, 41, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 26, 39, 23, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 26, 15, 49, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 26, 13, 44, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 26, 28, 50, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 26, 21, 24, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShotBalloonIcon([34, 1, false])
+    ShotBalloonIcon([35, 1, false])
+    SetMoveRoute([34, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([35, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    Wait([60])
+    ShowPicture([5, "80_ranccubus_st03", 0, 0, -150, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_leeccubus_st03", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["I'm freeing the slaves here too!"])
+    ShowTextAttributes(["leeccubus_fc1", 2, 0, 2])
+    ShowText(["\\n<Leecubus>"])
+    ShowText(["Hey! What do you think you're doing with our pets?!"])
+    ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+    ShowText(["\\n<Lancubus>"])
+    ShowText(["Oh, do you want to take their place as our pets instead?"])
+    ShowText(["Fine, I'll make your wish come true!"])
+    ConditionalBranch([4, 401, 0])
+      ShowTextAttributes(["gnosis_fc1", 3, 0, 2])
+      ShowText(["\\n<Gnosis>"])
+      ShowText(["You monsters who treat humans as nothing more than toys..."])
+      ShowText(["Judgment will fall upon you..."])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([81, 81, 0])
+    BattleProcessing([0, 1740, false, false])
+    ControlSwitches([81, 81, 1])
+    ErasePicture([5])
+    ErasePicture([6])
+    ShowTextAttributes(["leeccubus_fc1", 2, 0, 2])
+    ShowText(["\\n<Leecubus>"])
+    ShowText(["Why?! I've taken such good care of them..."])
+    ShowTextAttributes(["sonia_fc1", 5, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["Humans are not pets!"])
+    ConditionalBranch([4, 284, 0])
+      ShowTextAttributes(["minccubus_fc1", 3, 0, 2])
+      ShowText(["\\n<Serra>"])
+      ShowText(["S-Sorry..."])
+      Empty([])
+
+    BranchEnd([])
+    FadeoutScreen([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["We send the enslaved men to the Pocket Castle!"])
+    ControlSwitches([2508, 2508, 0])
+    TransferPlayer([0, 27, 38, 11, 2, 2])
+    FadeinScreen([])
+    ConditionalBranch([0, 2509, 1])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["There are still slaves trapped at the inn."])
+      ShowText(["Let's go free them too!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["That's everyone. We've rescued all the slaves in the village."])
+      ShowText(["Now for the final act--let's storm the Queen's mansion!"])
+      ControlVariables([1157, 1157, 0, 0, 9])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Free the slaves held here!"])
+    ShowPicture([5, "80_ranccubus_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["ranccubus_fc1", 2, 0, 2])
+    ShowText(["\\n<Lancubus>"])
+    ShowText(["Those are my tools of the trade!"])
+    ShowText(["You can't just take them away!"])
+    ConditionalBranch([4, 34, 0])
+      ShowTextAttributes(["micaelac_fc1", 0, 0, 2])
+      ShowText(["\\n<Micaela-chan>"])
+      ShowText(["I won't stand by while you trample on human dignity..."])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ControlSwitches([81, 81, 0])
+    BattleProcessing([0, 1736, false, false])
+    ShowTextAttributes(["ranccubus_fc1", 2, 0, 2])
+    ShowText(["\\n<Lancubus>"])
+    ShowText(["You're ruining everything..."])
+    ShowText(["What are we supposed to eat to survive tomorrow...?"])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["You won't need to worry about tomorrow's meals."])
+    ShowText(["Because today is the day you die..."])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["Ilias, doesn't that sound like something a villain would say...?"])
+    ShowTextAttributes(["heinrich_fc1", 0, 0, 2])
+    ShowText(["\\n<Heinrich>"])
+    ShowText(["If you need a way to live, find something that doesn't involve oppressing the weak."])
+    ShowText(["As a fellow human, I can't turn a blind eye to this..."])
+    ShowTextAttributes(["sonia_fc1", 3, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["Yes, just like that!"])
+    ShowText(["Now that's the hero of heroes for you!"])
+    FadeoutScreen([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["We send the enslaved men to the Pocket Castle!"])
+    SetMoveRoute([25, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    SetMoveRoute([30, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    TransferPlayer([0, 27, 43, 44, 4, 2])
+    FadeinScreen([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["There are slaves in the next room too!"])
+    ShowText(["We've got to save them!"])
+    ControlSwitches([31, 31, 0])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    SetMoveRoute([32, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Wait([30])
+    ShowPicture([5, "80_ranccubus_st01", 0, 0, -150, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_greatorc_st01", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["greatorc_fc1", 0, 0, 2])
+    ShowText(["\\n<Great Orc>"])
+    ShowText(["Hey, what the hell do you think you're doing...?!"])
+    ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+    ShowText(["\\n<Lancubus>"])
+    ShowText(["I won't allow anyone to disrupt the rules of this village."])
+    ShowText(["You're going to end up as slaves yourselves...!"])
+    ConditionalBranch([4, 36, 0])
+      ShowTextAttributes(["rucyfinac_fc1", 0, 0, 2])
+      ShowText(["\\n<Lucifina-chan>"])
+      ShowText(["How about you take a trip to hell instead...?"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ErasePicture([6])
+    BattleProcessing([0, 1743, false, false])
+    ControlSwitches([81, 81, 1])
+    ControlSwitches([31, 31, 1])
+    ShowTextAttributes(["ranccubus_fc1", 0, 0, 2])
+    ShowText(["\\n<Lancubus>"])
+    ShowText(["This village has its own order..."])
+    ShowText(["Don't come here and disrupt it with your self-righteous justice..."])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["Does that order include the consent of those you oppress?"])
+    ShowText(["In the end, it's just force being imposed on the weak, isn't it..."])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["If oppressing the weak with power is your idea of order, then surely you won't mind if we, the strongest here, oppress you!"])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["That's a pretty rough argument, but I guess it's not entirely wrong since we're the ones storming in..."])
+    ShowText([""])
+    ConditionalBranch([4, 397, 0])
+      ShowTextAttributes(["shion_fc1", 1, 0, 2])
+      ShowText(["\\n<Zion>"])
+      ShowText(["If you've got a problem, then fight back with your strength!"])
+      Empty([])
+
+    BranchEnd([])
+    FadeoutScreen([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["We send the enslaved men to the Pocket Castle!"])
+    ControlSwitches([2509, 2509, 0])
+    TransferPlayer([0, 27, 42, 46, 4, 2])
+    FadeinScreen([])
+    ConditionalBranch([0, 2508, 1])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["There are still slaves trapped in the houses."])
+      ShowText(["Let's go free them too!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>"])
+      ShowText(["That's everyone. We've rescued all the slaves in the village."])
+      ShowText(["Now for the final act--let's storm the Queen's mansion!"])
+      ControlVariables([1157, 1157, 0, 0, 9])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ShowTextAttributes(["ranccubus_fc1", 2, 0, 2])
+    ShowText(["\\n<Lancubus>"])
+    ShowText(["Hey, don't go causing a scene in my shop..."])
+    ShowText(["Get out of here, now."])
+    Empty([])

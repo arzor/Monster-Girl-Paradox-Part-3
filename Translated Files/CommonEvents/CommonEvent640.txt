@@ -1,0 +1,25 @@
+CommonEvent 640
+Name = "イベント：MP軽減"
+
+  999([640])
+  ControlSwitches([73, 73, 0])
+  ConditionalBranch([0, 70, 0])
+    ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+    ShowText(["\\n<Two-Tailed Geisha>Please be careful..."])
+    ShowText([""])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+  ShowText(["\\n<Two-Tailed Geisha>I'm not perfect, but please let me help you...!"])
+  ShowText([""])
+  ControlSwitches([70, 70, 0])
+  PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["The Two-Tailed Geisha gives you the blessing of the Kitsune! MP consumption in battles is halved until the next boss floor!"])
+  ShowText([""])
+  ControlSwitches([73, 73, 1])
+  ExitEventProcessing([])
+  Empty([])

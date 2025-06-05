@@ -1,0 +1,74 @@
+Display Name = "Grangold Castle 2F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ControlSwitches([31, 31, 0])
+    PlaySE(["RPG::SE(@name=\"mon_bom3\", @pitch=100, @volume=100)"])
+    SetMoveRoute([2, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=14, @parameters=[-7, 4])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[-7, 4])"])
+    ShowTextAttributes(["shion_fc1", 0, 0, 2])
+    ShowText(["\\n<Zion>"])
+    ShowText(["Hraaah!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Zion smashes through a fortified wall and charges into the castle. She simply barges in at random without any real plan, and there..."])
+    ShowText([""])
+    ShowPicture([5, "80_shion_st11", 0, 0, -150, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_rafaera_st03b", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -150, 0, 100, 100, 255, 0, 60, false])
+    MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["rafaera_fc1", 2, 0, 2])
+    ShowText(["\\n<Raphaela>"])
+    ShowText(["What in the world... Zion!?"])
+    ShowPicture([5, "80_shion_st12", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["shion_fc1", 3, 0, 2])
+    ShowText(["\\n<Zion>"])
+    ShowText(["Huh, Lady Raphaela? I heard you'd been sealed away, but you look pretty lively to me~♪"])
+    ShowText([""])
+    ShowTextAttributes(["rafaera_fc1", 2, 0, 2])
+    ShowText(["\\n<Raphaela>"])
+    ShowText(["Zion, there's no time to lose!"])
+    ShowText(["Release me from this seal at once!"])
+    ShowPicture([5, "80_shion_st15", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["shion_fc1", 4, 0, 2])
+    ShowText(["\\n<Zion>"])
+    ShowText(["Undo the seal? I'm clueless when it comes to disenchanting... No can do..."])
+    ShowText([""])
+    ShowTextAttributes(["rafaera_fc1", 2, 0, 2])
+    ShowText(["\\n<Raphaela>"])
+    ShowText(["Then smash every last object around here! Destroy the magic circles, the crystal towers, anything you see!"])
+    ShowText([""])
+    ShowPicture([5, "80_shion_st12", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["shion_fc1", 3, 0, 2])
+    ShowText(["\\n<Zion>"])
+    ShowText(["If that's all, leave it to me! Here we gooo!!"])
+    ErasePicture([5])
+    ErasePicture([6])
+    ShowAnimation([21, 783, false])
+    Wait([90])
+    FadeoutBGM([1])
+    FadeoutScreen([])
+    Wait([120])
+    ChangeTransparency([1])
+    ControlVariables([1142, 1142, 0, 0, 25])
+    ChangeMapDisplay([1])
+    TransferPlayer([0, 46, 18, 6, 2, 2])
+    PlayBGM(["RPG::BGM(@name=\"boss0-rikuso\", @volume=100, @pitch=100)"])
+    FadeinScreen([])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])

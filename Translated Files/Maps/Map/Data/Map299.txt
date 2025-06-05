@@ -1,0 +1,254 @@
+Display Name = "Administrator's Tower 1F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 300, 25, 6, 2, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 300, 11, 13, 2, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 221, 192, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 300, 44, 23, 2, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 300, 40, 38, 2, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 221, 192, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 193, 221, 192, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([45, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([77, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowPicture([5, "80_mariel_st04", 0, 0, -150, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_mariel_st04", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["mariel_fc1", 3, 0, 2])
+    ShowText(["\\n<Mariel A>"])
+    ShowText(["You all are pilgrims...?\nWhy are you here at this tower..."])
+    ShowText([""])
+    ShowTextAttributes(["mariel_fc1", 3, 0, 2])
+    ShowText(["\\n<Mariel B>"])
+    ShowText(["No, something's off... The figures before me don't seem real..."])
+    ShowText([""])
+    ConditionalBranch([4, 203, 0])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["\\n<Tatsuko>"])
+      ShowText(["We-we'll be found out...!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["tamamo_fc3", 3, 0, 2])
+    ShowText(["\\n<Tamamo>"])
+    ShowText(["The strength of my illusion wanes under scrutiny. You can't rely on my spells here, break through with force."])
+    ShowText([""])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["There's no helping it... We'll force our way through!"])
+    ConditionalBranch([4, 45, 0])
+      ShowTextAttributes(["alicetromeria_fc1", 4, 0, 2])
+      ShowText(["\\n<Alicetroemeria>"])
+      ShowText(["Ufufu... I've come here after being invited to the party. For the first act, could you dance for us?"])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 520, 0])
+      ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+      ShowText(["\\n<Lazarus>"])
+      ShowText(["Oh bother... Here I am, raiding heaven.\nMy prospects for the afterlife aren't looking great..."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["mariel_fc1", 3, 0, 2])
+    ShowText(["\\n<Mariel A>"])
+    ShowText(["A-an enemy raid...!? We won't let you pass!"])
+    ConditionalBranch([4, 822, 0])
+      ShowTextAttributes(["mariel_fc1", 3, 0, 2])
+      ShowText(["\\n<Mariel B>"])
+      ShowText(["You over there, who are you? I've never seen an angel like you..."])
+      ShowText([""])
+      ShowTextAttributes(["muzet_fc1", 0, 0, 2])
+      ShowText(["\\n<Musette>"])
+      ShowText(["Sorry, but... I'm not an angel, actually."])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ErasePicture([6])
+    ControlSwitches([81, 81, 0])
+    BattleProcessing([0, 1521, false, false])
+    ControlSwitches([81, 81, 1])
+    ShowTextAttributes(["mariel_fc1", 2, 0, 2])
+    ShowText(["\\n<Mariel>"])
+    ShowText(["Aren't you a priestess? Doing this will bring you divine punishment, you know..."])
+    ShowText([""])
+    ShowTextAttributes(["sonia_fc1", 3, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["Your divine punishment can kiss my ass! Angel or Goddess, I'll beat them down with my club!"])
+    ShowText([""])
+    ConditionalBranch([4, 62, 0])
+      ShowTextAttributes(["gob_fc1", 0, 0, 2])
+      ShowText(["\\n<Gob>"])
+      ShowText(["Don't forget my club either!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 164, 0])
+      ShowTextAttributes(["kooni_fc1", 0, 0, 2])
+      ShowText(["\\n<Shizuku>"])
+      ShowText(["Throw in my club too!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 300, 0])
+      ShowTextAttributes(["youki_fc1", 0, 0, 2])
+      ShowText(["\\n<Kureha>"])
+      ShowText(["Taste my club as well!"])
+      Empty([])
+
+    BranchEnd([])
+    ControlVariables([1141, 1141, 0, 0, 7])
+    ShowTextAttributes(["tamamo_fc3", 3, 0, 2])
+    ShowText(["\\n<Tamamo>"])
+    ShowText(["At any rate, now all of the Angelic Dominion will be aware of our infiltration. Reach the warp devices before they get sealed off!"])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["But we don't know where those warp devices are..."])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["\\n<Alice>"])
+    ShowText(["They're probably on the top floor. It's the standard place to put that sort of thing."])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Probably, yeah...\nAlright, time to push on towards the top floor!"])
+    ShowText([""])
+    ConditionalBranch([4, 382, 0])
+      ShowTextAttributes(["morrigan_fc1", 0, 0, 2])
+      ShowText(["\\n<Morrigan>"])
+      ShowText(["Okay, we're going up, right? I'll rush on ahead!"])
+      ShowText([""])
+      ConditionalBranch([4, 394, 0])
+        ShowTextAttributes(["astaroth_fc1", 3, 0, 2])
+        ShowText(["\\n<Astaroth>"])
+        ShowText(["Morrigan... Try not to get too excited and slip off the stairs again."])
+        ShowText([""])
+        ShowTextAttributes(["morrigan_fc1", 6, 0, 2])
+        ShowText(["\\n<Morrigan>"])
+        ShowText(["Come on, sis, stop being such a worrywart! You're embarassing me!"])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It's unlikely that the angels here will just let us through. We must reach the warp facilities, even if we have to fight."])
+    ShowText([""])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])

@@ -1,0 +1,80 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 237, 24, 6, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["youki_fc1", 0, 0, 2])
+    ShowText(["\\n<Youki>You're crossing the wastes?\nThat takes some guts! Feel free to rest here!"])
+    FadeoutScreen([])
+    PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+    Wait([150])
+    RecoverAll([0, 0])
+    FadeinScreen([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["kooni_fc1", 2, 0, 2])
+    ShowText(["\\n<Oni>You're crossing these hills?\nThere's nothing worth seeing in the desert on the other side, you know..."])
+    ShowTextAttributes(["kooni_fc1", 2, 0, 2])
+    ShowText(["\\n<Oni>There are weird monsters roaming around the ruins, and I certainly wouldn't want to go anywhere near Tartarus."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["41"])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["\\n<Promestein>Weird monsters AND Tartarus?\nSounds like a lot worth seeing to me."])
+    ExitEventProcessing([])
+    Label(["286"])
+    ShowTextAttributes(["witchs_fc1", 0, 0, 2])
+    ShowText(["\\n<Witch>Lots of interesting things..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([26, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([215, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([105, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

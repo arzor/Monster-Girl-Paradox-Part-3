@@ -1,0 +1,47 @@
+CommonEvent 7193
+Name = "オーラン：敗北"
+
+  999([7193])
+  CallCommonEvent([7000])
+  ShowPicture([5, "80_mob_bukiya1_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+  ErasePicture([6])
+  ShowTextAttributes(["mob_bukiya1_fc1", 0, 0, 2])
+  ShowText(["\\n<Orlan>Looks like it's my win.\nI'll be taking that bet..."])
+  ShowText([""])
+  ShowText([""])
+  ConditionalBranch([0, 443, 1])
+    ChangeGold([1, 0, 350])
+    Empty([])
+
+  BranchEnd([])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["Luka hands over 350G!"])
+  ShowTextAttributes(["mob_bukiya1_fc1", 0, 0, 2])
+  ShowText(["\\n<Orlan>If you're annoyed at losing, challenge me again.\nI'll squeeze it out with my hand every time."])
+  ShowText([""])
+  ShowText([""])
+  ConditionalBranch([0, 443, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([0, 2331, 1])
+    ErasePicture([5])
+    ChangeMapDisplay([1])
+    ConditionalBranch([1, 1143, 0, 9, 2])
+      TransferPlayer([0, 43, 12, 36, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 10, 1])
+      ControlVariables([57, 57, 0, 0, 1441])
+      TransferPlayer([0, 441, 12, 36, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+  BranchEnd([])
+  ExitEventProcessing([])
+  Empty([])

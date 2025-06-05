@@ -1,0 +1,424 @@
+Display Name = "Chrome's Room"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>This corpse is...?"])
+    ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+    ShowText(["\\n<Chrome>He was found dead in the Zalzaneb Woodlands.\nHe left a note in his house, so his cause of death was declared to be suicide."])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>This corpse is...?"])
+    ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+    ShowText(["\\n<Chrome>A drowned body from the open sea that washed up at Port Nabla. It was probably the corpse of a local fisherman who went missing a few years ago."])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>This corpse is...?"])
+    ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+    ShowText(["\\n<Chrome>The corpse of a merchant who died wandering the Sabasa desert. You too, should be careful not to get lost."])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([1, 1105, 0, 6, 0])
+      ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+      ShowText(["\\n<Chrome>Nghhh, this is still an exhausting technique...\nThis had better be quick if you've got something to ask."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([551])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([36, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>This corpse is...?"])
+    ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+    ShowText(["\\n<Chrome>An old hermit, his cause of death was a heart attack... He held irrational views towards society, but there's otherwise nothing suspicious about his corpse."])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ConditionalBranch([1, 1105, 0, 2, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This corpse... Something about this corpse is different from the others."])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>Oho, you're interested in that corpse?\nYou've got an excellent eye."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>This is... No, who was this person?"])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>An unidentified corpse that I brought in from Finoa... He was one of the victims of the Land of Night incident."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>That incident in Finoa...\nSo he was a victim of Myusca's group..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["During the Land of Night incident, Myusca and her friends took over the village of Finoa. Many of the residents fell prey to them during that time."])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>As I'm sure you're aware, a lot of corpses piled up in that incident. There are still bodies that haven't been identified yet..."])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>I ended up receiving them since I go around doing autopsy work. Among the corpses there was this particularly strange one."])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>It's clear that he fell prey to those succubi... But his time of death doesn't match up; he died before the attack on Finoa."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>You mean he was killed before Myusca's group attacked Finoa?"])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>Yeah, it's strange right?\nAnd then there's this odd device he had in his hand..."])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>It's probably some kind of advanced communications makina. It's definitely not technology from this world."])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>Just who the heck was this guy before he died?\nHow about you? Doesn't that pique your curiosity?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>When did you bring this corpse over here?"])
+      ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+      ShowText(["\\n<Chrome>Just today at one o'clock in the afternoon...\nIs there something wrong with that?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>One in the afternoon...\nThat's the hour I always start back at..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This mysterious corpse...\nI've got a hunch that it's strongly connected to this strange phenomena."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Say...\nCan I borrow the little makina that the corpse was holding onto?"])
+      ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+      ShowText(["\\n<Chrome>I don't mind, but...\nTry not to be too rough with the deceased's belongings."])
+      PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Obtained the mysterious communications makina!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["If I can find out what this makina really is, it could lead to the identity of the corpse.\nI should show this to any companions who might know more about it, and gather information."])
+      ControlVariables([1105, 1105, 0, 0, 3])
+      ControlSwitches([2365, 2365, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1105, 0, 3, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["If I can find out what this makina the corpse was carrying really is, it could lead to discovering his identity. I should show this to any companions who might know more about it, and gather information."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1105, 0, 4, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I've found out what the makina the corpse had was.\nI should go report this to Promestein immediately..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1105, 0, 5, 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>This corpse is someone who came from Myusca's world...\nJust who the heck could he be..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka examined the corpse...\n...But since he's not a specialist, he couldn't learn anything just from looking."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I guess I still don't know after all.\nIf only I could talk to a corpse..."])
+      SetMoveRoute([4, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+      ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+      ShowText(["\\n<Chrome>Talk to a corpse, you say...?\nOf course you can."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Eh...?!"])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>With the magicrafts...you make corpses dance, spirits talk, and dolls play. Summoning the spirits of the dead is child's play for me."])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>Have you forgotten that I'm a talented woman of the Artiste family? Even if I'm not specialized in the spirit arts, I'm still better than the average medium."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Well in that case, please do.\nI want you to call upon the spirit of this corpse."])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>It's essentially taboo to communicate with the dead for autopsies... But with the circumstances being what they are, it can't be helped."])
+      ShowTextAttributes(["chrom_fc2", 0, 0, 2])
+      ShowText(["\\n<Chrome>All right, here I go!\nSoul brimming with regret, descend upon this world once more...!"])
+      PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["A soul reacted to Chrome's spiritualism..."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+      ShowAnimation([18, 51, false])
+      Wait([60])
+      ControlVariables([1105, 1105, 0, 0, 6])
+      Wait([60])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The corpse's owner materializes as a ghost!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Mysterious Ghost>I am...here..."])
+      ShowTextAttributes(["chrom_fc2", 1, 0, 2])
+      ShowText(["\\n<Chrome>Now, if you have anything you need to ask him, do so. This is quite an exhausting technique, so I won't be able to keep him materialized for long."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1105, 0, 7, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I now know the identity of the corpse.\nAlong with the core of the strange phenomena..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I should go report back to Promestein immediately.\nI'm sure she'll find an effective solution to all this."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+    ShowText(["\\n<Chrome>Hrm, what do you want?\nIf you're just looking around, try not to get in my way."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>...This room's terrible."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["In any case, something's been on my mind.\nI should take a look around this room for a little bit..."])
+    ControlVariables([1105, 1105, 0, 0, 2])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mysterious Ghost>............"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>You... Who in the world are you...?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mysterious Ghost>My name is Toru...\nThat succubus... Myusca... She killed me..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Toru>Many, many times... To Myusca...\nTo Nemea... To Vinum..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Toru>Every time they sucked me to death, time would turn back... Over, and over, and over again..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Myusca and her friends...\nSo it was them after all..."])
+    ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+    ShowText(["\\n<Chrome>Try to keep this talk short.\nLike I said before, I can only maintain his spirit for a short time."])
+    Label(["メイン"])
+    Script(["ex_choice_add(\"Consult regarding the phenomenon\",2,"])
+    ScriptMore(["\"s[2341]\",0)"])
+    ScriptMore(["ex_choice_add(\"Ask about any regrets\",3,"])
+    ScriptMore(["\"s[2342]\",0)"])
+    ScriptMore(["ex_choice_add(\"Ask about items that can loop time\",4,"])
+    ScriptMore(["\"s[2343]\",0)"])
+    ScriptMore(["ex_choice_add(\"Ask about the pizza order\",5,"])
+    ScriptMore(["\"s[2345]\",0)"])
+    ScriptMore(["ex_choice_add(\"Ask about the mysterious makina\",6,"])
+    ScriptMore(["\"s[2365]\",0)"])
+    Script(["ex_choice_show(0,11,[0,0])"])
+    ConditionalBranch([1, 9, 0, 2, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka asked for help regarding the strange phenomenon..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Toru>I have the same problem too...\nOver and over and over again, I keep repeating the same time..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Toru>Every time they suck me, they drain all of my strength... Again and again and again..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Umm, so about how this space-time phenomena started--"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Toru>And I go back to the same time over, and over...and over again..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Uhh, but my world is--"])
+      ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+      ShowText(["\\n<Chrome>...It's useless to keep asking, that ghost is near-delusional. Don't expect a rational thought out of him."])
+      JumpToLabel(["メイン"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 9, 0, 3, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Toru>............"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Toru>I was just trying to save myself...\nAnd I ended up sacrificing another human's life."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Toru>I went back in time many times to find a way...\nTo save his life..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Toru>But no matter how many times I tried, it was hopeless.\nIn that house, he kept dying in my place."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Toru>Even though I didn't know his name, I wanted to save him... That is my regret..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["In order to save that someone, Toru repeated the same time over and over... There's no mistaking this must be the conviction behind the strange phenomena."])
+      ControlSwitches([2359, 2359, 0])
+      ConditionalBranch([0, 2360, 0])
+        ConditionalBranch([0, 2361, 0])
+          CallCommonEvent([544])
+          ExitEventProcessing([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      JumpToLabel(["メイン"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 9, 0, 4, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Toru>I found it in that house...\nWith that statue, the same time repeats again and again..."])
+      ConditionalBranch([1, 1102, 0, 5, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Toru>I can feel...there is...\nAnother statue, here..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Toru>Maybe, it has the same effect...\nWith that statue, the same time repeats again and again...\nand again..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Toru apparently repeated time over and over using that statue's power. If he's connected to this strange phenomena, I'll need to obtain that similar statue."])
+        ControlSwitches([2360, 2360, 0])
+        ConditionalBranch([0, 2359, 0])
+          ConditionalBranch([0, 2361, 0])
+            CallCommonEvent([544])
+            ExitEventProcessing([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        JumpToLabel(["メイン"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1102, 0, 6, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Toru's ghost looked at the \\C[17]time reversal statue\\C[0] Luka was holding. I sensed a faint glimmer of reason return to his blank eyes..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Toru>That's not the same statue I have...\nBut it's very similar..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Toru>It may have the same effect...\nWith that statue, the same time repeats again and again...and again..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Toru seems to have obtained a similar statue as well.\nI wonder if that's what's causing this strange phenomena?"])
+        ControlSwitches([2360, 2360, 0])
+        ConditionalBranch([0, 2359, 0])
+          ConditionalBranch([0, 2361, 0])
+            CallCommonEvent([544])
+            ExitEventProcessing([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        JumpToLabel(["メイン"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 9, 0, 5, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Toru>...The one who ordered the pizza was me.\nTo bring another human into that demon's house."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Toru>And then...he became a sacrifice in my stead...\nThe pizza deliveryman... I..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Toru>I killed him...\nNo matter how much I regret it, it will never be enough..."])
+      ControlSwitches([2361, 2361, 0])
+      ConditionalBranch([0, 2359, 0])
+        ConditionalBranch([0, 2360, 0])
+          CallCommonEvent([544])
+          ExitEventProcessing([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      JumpToLabel(["メイン"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 9, 0, 6, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Toru>That's...\nMy smartphone..."])
+      JumpToLabel(["メイン"])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    CallCommonEvent([552])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 77, 3, 18, 6, 0])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])

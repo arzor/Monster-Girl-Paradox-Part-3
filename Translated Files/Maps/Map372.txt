@@ -1,0 +1,453 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 371, 24, 40, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 373, 16, 33, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([535, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([423, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeGold([0, 0, 12000])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["12000\\G acquired!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1526, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([511, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([168, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"boss0\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_beelzebub_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["beelzebub_fc1", 0, 0, 2])
+    ShowText(["\\n<Beelzebub A>Oh? I see... That pirate brought some help back with her. We were wondering how great of a hero would come for us, but you look pretty weak."])
+    ShowPicture([5, "80_beelzebub_st01", 0, 0, -50, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_beelzebub_st11", 0, 0, 220, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["beelzebub_fc2", 0, 0, 2])
+    ShowText(["\\n<Beelzebub B>Fufu... He is quite cute, though.\nI hope you've saved up enough for all of us, boy."])
+    ShowPicture([5, "80_beelzebub_st21", 0, 0, -220, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_beelzebub_st01", 0, 0, 250, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["beelzebub_fc3", 0, 0, 2])
+    ShowText(["\\n<Beelzebub C>Humans are nothing more than spawning beds, anyway. And if he can't even do that, we'll wring him dry and use him for food..."])
+    ConditionalBranch([4, 171, 0])
+      ShowTextAttributes(["lizardboss_fc1", 3, 0, 2])
+      ShowText(["\\n<Miranda>It's going to be rough fighting all three of them..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Who in the world are you..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>The fly queens..."])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>This area had a large island over a millennium ago. The monster flies lived there, but committed atrocity after atrocity."])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>Eventually, the Monster Lord Alipheese the First brought them down and sealed the queens in a box."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The fly queens!\nThe Monster Lord from back then regarded them as dangerous due to their exceptional reproductive abilities."])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Eventually, that Monster Lord brought them down and sealed all three in the \\C[17]Calamity Box\\C[0]."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc1", 5, 0, 2])
+      ShowText(["\\n<Sonya>That was no treasure box then!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>That was no treasure box then!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>It should have been well-known not to open it, but it appears the story was twisted into one of treasure at some point."])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>The monsters before us now are those sealed \\C[17]Fly Queens\\C[0], the Beelzebubs."])
+      ShowTextAttributes(["beelzebub_fc1", 0, 0, 2])
+      ShowText(["\\n<Beelzebub A>How wonderful that you appear to be a blood relative of the Monster Lord. I didn't expect to get our revenge so quickly."])
+      ShowTextAttributes(["alice_fc6", 1, 0, 2])
+      ShowText(["\\n<Alice>Hmph! Ghosts may creep me out, but I'm not the least bit afraid of you!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>It was originally well-known not to open the forbidden box, but stupid humans twisted the story in its retelling, turning the box into a legendary treasure."])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>The foul spawn before us now are those sealed \\C[17]Fly Queens\\C[0], the Beelzebubs."])
+      ShowTextAttributes(["beelzebub_fc1", 0, 0, 2])
+      ShowText(["\\n<Beelzebub A>You're rather knowledgeable, little angel.\nActually, I've always wanted to know what angel meat tastes like."])
+      ShowTextAttributes(["iriasu_fc5", 0, 0, 2])
+      ShowText(["\\n<Ilias>Eat me? Such insolence!\nI'll give you indigestion!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["serene_fc1", 5, 0, 2])
+    ShowText(["\\n<Selena>We can't loose the Beelzebubs on the world...\nLuka, I'm counting on you!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>No problem! Let's go, Beelzebubs!"])
+    ShowPicture([5, "80_beelzebub_st01", 0, 0, -50, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_beelzebub_st11", 0, 0, 220, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["beelzebub_fc2", 0, 0, 2])
+    ShowText(["\\n<Beelzebub B>Aaah, the boy looks positively delicious...\nI'm going to squeeze out his semen and birth thousands of babies."])
+    ShowPicture([5, "80_beelzebub_st21", 0, 0, -220, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_beelzebub_st01", 0, 0, 250, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["beelzebub_fc3", 0, 0, 2])
+    ShowText(["\\n<Beelzebub C>His companions are useless, though. Just kill them."])
+    ShowTextAttributes(["beelzebub_fc1", 0, 0, 2])
+    ShowText(["\\n<Beelzebub A>After we deal with all of you, we'll descend on the outside world with an army of thousands upon thousands of flies at our backs."])
+    ConditionalBranch([4, 202, 0])
+      ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+      ShowText(["\\n<Bonnie>As if we'd allow that!\nFishy Pirates, stand firm!"])
+      ConditionalBranch([4, 53, 0])
+        ShowTextAttributes(["slime_fc1", 0, 0, 2])
+        ShowText(["\\n<Lime>Aye aye, cap'n!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 275, 0])
+      ShowTextAttributes(["beelzebub_fc1", 0, 0, 2])
+      ShowText(["\\n<Barbarella>Give it up, the outside world is dangerous.\nYou'll be happier remaining in ignorance here."])
+      ShowTextAttributes(["beelzebub_fc1", 2, 0, 2])
+      ShowText(["\\n<Beelzebub A>Why do you look like me, and why should I believe you?! You can't fool me with parlor tricks!"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ErasePicture([6])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss1\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 730, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    ConditionalBranch([4, 129, 0])
+      ShowTextAttributes(["brunhild_fc1", 0, 0, 2])
+      ShowText(["\\n<Hild>Enemies out of action...\nHild and party: victorious."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["beelzebub_fc1", 2, 0, 2])
+    ShowText(["\\n<Beelzebub A>How could we lose..."])
+    ShowTextAttributes(["beelzebub_fc2", 2, 0, 2])
+    ShowText(["\\n<Beelzebub B>How are they so strong..."])
+    ShowTextAttributes(["beelzebub_fc3", 2, 0, 2])
+    ShowText(["\\n<Beelzebub C>........."])
+    PlaySE(["RPG::SE(@name=\"mon_warp\", @pitch=100, @volume=80)"])
+    ControlVariables([1067, 1067, 0, 0, 4])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The Beelzebubs burst into countless flies!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>They vanished!? Or did we defeat them...?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 1, 0, 2])
+      ShowText(["\\n<Alice>Hmm, I don't sense their presence at all anymore. They are completely defeated."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>Their presence has been erased. We successfully defeated them."])
+      Empty([])
+
+    BranchEnd([])
+    PlayBGM(["RPG::BGM(@name=\"dungeon_obakeyasiki\", @volume=100, @pitch=100)"])
+    ConditionalBranch([4, 202, 0])
+      ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+      ShowText(["\\n<Bonnie>Woo hoo! Victory for the Fishy Pirates!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["serene_fc1", 4, 0, 2])
+    ShowText(["\\n<Selena>Thank you, everyone.\nBecause of you, my conscience is finally clear."])
+    ShowTextAttributes(["serene_fc1", 4, 0, 2])
+    ShowText(["\\n<Selena>There's one final thing I want to tell you, but let's return to the ship first."])
+    ShowTextAttributes(["serene_fc1", 3, 0, 2])
+    ShowText(["\\n<Selena>...Oh, I almost forgot.\nThere's a valuable item in the treasure room that I'd like you to have."])
+    ShowTextAttributes(["serene_fc1", 3, 0, 2])
+    ShowText(["\\n<Selena>The key to the treasure is hidden in this room.\nUmm, I forgot where exactly... but I'm pretty sure I left a note about it..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowPicture([5, "80_beelzebub_st11", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["beelzebub_fc2", 0, 0, 2])
+    ShowText(["\\n<Beelzebub B>Fufu... Did you come all the way here to see us?\nWe'll give you a warm reception..."])
+    ErasePicture([5])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowPicture([5, "80_beelzebub_st21", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["beelzebub_fc3", 0, 0, 2])
+    ShowText(["\\n<Beelzebub C>Why would a human come here?\nDo you want to be devoured that badly?"])
+    ErasePicture([5])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Where are you going? Our targets are right in front of us."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Are you pretending those monsters don't exist?! Attack them already!"])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Where are you going? Our targets are right in front of us."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Are you pretending those monsters don't exist?! Attack them already!"])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Note on hiding place for treasure room key:\n\"Facing the captain, follow your left hand.\""])
+    ConditionalBranch([8, 535])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+        ShowText(["\\n<Sonya>This seems like an important bit of information.\nLet's make sure we remember it."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>This seems like an important bit of information.\nI better remember it."])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There's an inventory of the ship's treasure here.\nA Purple Orb is listed among the various valuable objects."])
+    ConditionalBranch([8, 541])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>The Purple Orb is on this ship?\nThat could prove useful to our adventure, so we should really take it with us."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>Oh that's right, the Purple Orb was on this ship.\nThere will likely come a time when we'll need it, so we should take it with us."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["serene_fc1", 5, 0, 2])
+      ShowText(["\\n<Selena>The Purple Orb is stored in the treasure room.\nWe'll need to get the key to access the room first."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([32, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

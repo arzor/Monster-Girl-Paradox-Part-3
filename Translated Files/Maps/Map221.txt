@@ -1,0 +1,691 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 221, 68, 28, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 221, 6, 6, 2, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 11, 45, 11, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 11, 36, 18, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 11, 26, 25, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 11, 41, 34, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 11, 50, 24, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 11, 56, 25, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 11, 54, 44, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 11, 50, 53, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 11, 31, 59, 0, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Shopkeeper>I'm the only one allowed to trade in this village. Ahh, this village is such a great place!"])
+    ShopProcessing([0, 2, 0, 0, false])
+    ShopItem([0, 13, 0, 0])
+    ShopItem([0, 17, 0, 0])
+    ShopItem([0, 63, 0, 0])
+    ShopItem([0, 67, 0, 0])
+    ShopItem([0, 71, 0, 0])
+    ShopItem([1, 558, 0, 0])
+    ShopItem([1, 666, 0, 0])
+    ShopItem([2, 1046, 0, 0])
+    ShopItem([2, 1731, 0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Shopkeeper>Ahh, this village is such a great place!"])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ConditionalBranch([1, 1022, 0, 1, 2])
+      ControlSwitches([2068, 2068, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>I can tell with a glance that you aren't righteous. Leave this sacred church at once!"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+        ShowText(["\\n<Sonya>Hey, that's horrible!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>He's gone insane because of faith... This is why I say that Ilias' faith is poison."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc5", 0, 0, 2])
+        ShowText(["\\n<Ilias>How insolent! You will burn in hell for all eternity!"])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>...Is what I want to say, but something's off. It doesn't seem like this priest really means it..."])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1022, 0, 2, 0])
+      ControlVariables([1022, 1022, 0, 0, 3])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>So, you are His Holiness's escort, yes? I've heard about you already."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>His Holiness the Pope will be here soon. Let's go to the rendezvous point."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>If we leave together, the villagers will get suspicious. Please enter the forest to the west ahead of me."])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>Uh... do you really want to keep this ritual that secret? Just praying in the ancient ruins isn't that big a deal..."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Um... is there a need to keep the ritual confidential? Praying in the ancient ruins shouldn't be that troubling..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>...This is the church's biggest secret. Soon, you too will understand it."])
+      ConditionalBranch([4, 41, 0])
+        ShowTextAttributes(["stein_fc2", 0, 0, 2])
+        ShowText(["\\n<Promestein>Religion sticks to its sacraments, but... this feels a little different."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>That's how it is, so please head to the forest on the western outskirts of the village. And please make sure the villagers don't notice you."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Yes, we understand..."])
+      ConditionalBranch([4, 53, 0])
+        ShowTextAttributes(["slime_fc1", 0, 0, 2])
+        ShowText(["\\n<Lime>Let's go secretly..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Puzzling... Still, we've got no choice but to do as we were told."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1022, 0, 3, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>If we leave together, the villagers will get suspicious. Please enter the forest to the west ahead of me, and make sure the villagers don't notice you."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    ConditionalBranch([1, 1022, 0, 5, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>Oh? Is there a problem?"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1022, 0, 6, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>Thank you very much for escorting His Holiness. I will continue secretly investigating this village."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>The church is not ignoring this place. We protect the villagers, aid escapees... We help out with many things."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>Ultimately, we wish to dismantle this village. Anyway, leave it to us."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>I will pray for your safety as well. Now, I beg your pardon. I can't have them realize I'm with the church faction."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The priest shouts so loudly he can be heard outside!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>Nghh! You devil's minions!! Hurry up and leave this sacred church!"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+        ShowText(["\\n<Sonya>He's in a difficult position..."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>That's a difficult position..."])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>Please leave... If someone from the village sees you here..."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>Let's go for now, Luka. We'll probably cause trouble for these people."])
+      ShowTextAttributes(["sonia_fc1", 5, 0, 2])
+      ShowText(["\\n<Sonya>We need to report this village to San Ilia. We'll save you soon!"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Middle-Aged Man>Port Marle is a filthy town drowning in luxuries. The cave there's blockaded? Good! Keep it that way to please the Goddess!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Middle-Aged Man>Their goods won't come? So what? Be self-sufficient and we'll be fine."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Middle-Aged Man>Listen, in the past, people were self-sufficient and did just fine. They ate things they raised by themselves, crafted whatever they needed..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Middle-Aged Man>Importing things from afar via trade, like they are doing now, is human arrogance. Humans can do fine with self-sufficiency!"])
+    ConditionalBranch([0, 1041, 0])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["\\n<Promestein>In the era when humans were self-sufficient, their lifespans were nearly half of their current length. Most of this gap is not medical knowledge, but rather better nutrition."])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["\\n<Promestein>As trade networks developed and diets became more varied, all populations saw drastic improvements in nutritional balance, and fewer people died of malnutrition."])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["\\n<Promestein>If you undo this, people will die younger. That's what primitivism does."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Woman>Because of the war, we can't import from Port Marle anymore... So many of our goods were suddenly cut off."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Woman>We may be trying for self-sufficiency, but there are many things we can't make... I would love to return to San Ilia, if only my husband would let me..."])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Girl>This is a good village. Everyone is kind and lives simply."])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>......"])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Something is carved into the wooden box. It looks like a little girl did it."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Happy village"])
+    ShowText(["Every day is wonderful"])
+    ShowText(["Loving family"])
+    ShowText(["Pretty surroundings"])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>What is it? I was told not to speak with outsiders..."])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The girl won't look you in the eyes..."])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>I want to leave this village as quickly as possible..."])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Innkeeper>The Pilgrimage Inn is 3G a night... Wait, for you, it's 30G.\\$"])
+    ShowChoices([["Yes", "No"], 2])
+    When([0, "Yes"])
+      ConditionalBranch([7, 30, 0])
+        ChangeGold([1, 0, 30])
+        FadeoutScreen([])
+        PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+        Wait([150])
+        RecoverAll([0, 0])
+        FadeinScreen([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Innkeeper>Seems you don't have enough money..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    When([1, "No"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Female Soldier>I can't say it too loudly... but, I want to leave this village as soon as possible."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["525"])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["\\n<Sonya>Me too... Luka, let's get out of here, and fast."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier>This village is more closed off than I expected. I'm pretty religious myself, but I can't stomach this level."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>I bet Ilias would still be delighted..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>I'm repulsed by it as well... Even the heavens are brighter and more liberated."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>We got some strange leaflets. Did someone just leave them in our house...?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>One of them says, \"I grant power to the weak and oppressed. If you wish to break away from your painful reality, seek out Lily's power.\""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>I want power... Should I go find this Lily person?"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["5"])
+    ShowTextAttributes(["alice_fc5", 0, 0, 2])
+    ShowText(["\\n<Alice>This leaflet smells strangely of magic. Is this Lily a mage, perhaps?"])
+    ExitEventProcessing([])
+    Label(["56"])
+    ShowTextAttributes(["inp_fc1", 0, 0, 2])
+    ShowText(["\\n<Rami>I want power too! ...But this leaflet smells shady."])
+    ExitEventProcessing([])
+    Label(["79"])
+    ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+    ShowText(["\\n<Nuruko>*nom* *nom*..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Nuruko ate the leaflet!"])
+    ShowTextAttributes(["nuruko_fc1", 2, 0, 2])
+    ShowText(["\\n<Nuruko>Pft!!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["...And just as suddenly, she spat it out!"])
+    ExitEventProcessing([])
+    Label(["88"])
+    ShowTextAttributes(["jack_fc1", 0, 0, 2])
+    ShowText(["\\n<Pumpkin>Will she give me power too? I should try going there..."])
+    ShowTextAttributes(["jack_fc1", 1, 0, 2])
+    ShowText(["\\n<Pumpkin>But there's no need to go now. I mean, I'm with everyone..."])
+    ExitEventProcessing([])
+    Label(["540"])
+    ShowTextAttributes(["amira_fc1", 0, 0, 2])
+    ShowText(["\\n<Amira>I occasionally hear rumors about these leaflets. Apparently, they appear out of nowhere in the houses of vulnerable people."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Girl>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The girl won't open her mouth..."])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>Um, would you buy some vegetables? Despite how the village seems, they're delicious..."])
+    ShopProcessing([0, 309, 0, 0, true])
+    ShopItem([0, 308, 0, 0])
+    ShopItem([0, 310, 0, 0])
+    ShopItem([0, 312, 0, 0])
+    ShopItem([0, 318, 0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Young Girl>Everything in the village is common property, so commerce is forbidden, but... At this rate, I won't be able to survive..."])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Shopkeeper's Wife>If we leave this village, there won't be enough medicine and food for the villagers. Things here would get even worse."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Shopkeeper's Wife>Knowing that, my husband is holding himself back. I won't ask you to understand..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["66"])
+    ShowTextAttributes(["vgirl_fc1", 2, 0, 2])
+    ShowText(["\\n<Vanilla>Because he doesn't want to forsake the villagers, he diligently does his business with a smile. He's a respectable person."])
+    ExitEventProcessing([])
+    Label(["109"])
+    ShowTextAttributes(["kani_fc1", 2, 0, 2])
+    ShowText(["\\n<Soapy>Is this village even worth going that far for...?"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Archbishop>I'm the archbishop, and this village's mayor. Who allowed you to enter this village?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Archbishop>I have nothing to say to you. Now, hurry up and leave."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["26"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>You will regret this remark forever as you are scorched in the fires of hell for millions of years."])
+    ExitEventProcessing([])
+    Label(["525"])
+    ShowTextAttributes(["sonia_fc1", 5, 0, 2])
+    ShowText(["\\n<Sonya>What's with this priest..."])
+    ExitEventProcessing([])
+    Label(["531"])
+    ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+    ShowText(["\\n<King of San Ilia>...We have already gathered criminal charges against you. Shouldn't you escape while you still can?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Archbishop>Th-this is oppression! We will unite and fight back against your tyranny!"])
+    ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+    ShowText(["\\n<King of San Ilia>Ignoring the real issue won't work any more. This village won't last for much longer now..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Archbishop>Nghh, leave, minions of the Dark Goddess!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Archbishop's Mistress>Wh-what is it?! If you don't leave now, you'll pay for this!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["5"])
+    ShowTextAttributes(["alice_fc5", 3, 0, 2])
+    ShowText(["\\n<Alice>Hmph, laughable... The archbishop has an interesting definition of faith."])
+    ExitEventProcessing([])
+    Label(["26"])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["\\n<Ilias>Yup, I've reserved a ticket to hell for him."])
+    ExitEventProcessing([])
+    Label(["525"])
+    ShowTextAttributes(["sonia_fc1", 5, 0, 2])
+    ShowText(["\\n<Sonya>What the hell... You've got to be kidding me!"])
+    ExitEventProcessing([])
+    Label(["531"])
+    ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+    ShowText(["\\n<King of San Ilia>I understand. We'll leave. But soon you, too, will have to leave this place."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ConditionalBranch([1, 1022, 0, 1, 2])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Nun>I have nothing to speak with you about. Go to hell right now."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1022, 0, 5, 2])
+      ConditionalBranch([2, "A", 0])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Nun>Please forgive me for my previous remark. I was only being rude to hide my identity."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Nun>Thank you very much for your help."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1022, 0, 6, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Nun>We will do what we need to do here. I wish you all luck in your battles."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["111"])
+      ShowTextAttributes(["suika_fc1", 0, 0, 2])
+      ShowText(["\\n<Melon>When it's hard, you should eat a watermelon and do your best♪"])
+      ExitEventProcessing([])
+      Label(["122"])
+      ShowTextAttributes(["sisterlamia_fc1", 3, 0, 2])
+      ShowText(["\\n<Sofia>O Goddess, please protect those of good faith..."])
+      ExitEventProcessing([])
+      Label(["123"])
+      ShowTextAttributes(["sisccubus_fc1", 2, 0, 2])
+      ShowText(["\\n<Christie>You too, please stay safe. If you get found out by the villagers, you will surely suffer a horrible fate..."])
+      ShowTextAttributes(["sisccubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Christie>...Should that happen, would you please switch places with me?"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([24, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([317, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([19, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([44, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([432, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([343, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([442, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

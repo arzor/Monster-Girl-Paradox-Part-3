@@ -1,0 +1,932 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([1, 1111, 0, 3, 0])
+      ConditionalBranch([0, 2387, 0])
+        ShowTextAttributes(["nemea_fc2", 2, 0, 2])
+        ShowText(["\\n<Nemea>Ara ara, why is the window like this...\nHow annoying..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Nemea is distracted by her virus-infected PC.\nThis should stall her for a while..."])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 153, 14, 47, 0, 0])
+    ConditionalBranch([1, 1111, 0, 1, 0])
+      SetMoveRoute([14, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      ShotBalloonIcon([-1, 1, false])
+      ShowTextAttributes(["nemea_fc2", 2, 0, 2])
+      ShowText(["\\n<Nemea>...Ara?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Ne..Nemea?!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This isn't good, Nemea was in this room...\nWhat should I do?"])
+      Label(["選択"])
+      Script(["ex_choice_add(\"Fight\",1)"])
+      ScriptMore(["ex_choice_add(\"Run away\",2)"])
+      ScriptMore(["ex_choice_add(\"Use the firecracker\",3,\"s[2420]\",0)"])
+      ScriptMore(["ex_choice_add(\"Use the caltrops\",4,\"s[2421]\",0)"])
+      ScriptMore(["ex_choice_add(\"Use the grenade\",5,\"s[2422]\",0)"])
+      ScriptMore(["ex_choice_add(\"Use the charm of binding\",6,\"s[2423]\",0)"])
+      ScriptMore(["ex_choice_add(\"Use Raquel's phlogiston\",7,\"s[2381]\",0)"])
+      ScriptMore(["ex_choice_add(\"Use the Labyrinth Book\",8,\"s[2371]\",0)"])
+      Script(["ex_choice_show(0,11,[0,0])"])
+      ConditionalBranch([1, 9, 0, 1, 0])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Khh, I've got no choice but to fight...!"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["I take up my sword--"])
+        Script(["display_skill_name(\"Demon Eyes of Seduction\")"])
+        Wait([15])
+        PlaySE(["RPG::SE(@name=\"mon_flash\", @pitch=100, @volume=100)"])
+        FlashScreen(["Color(@red=255.0, @green=204.0, @blue=255.0, @alpha=255.0)", 60, true])
+        Wait([15])
+        Script(["clear_skill_name"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Ah, aaah..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Her seduction magic coursed through my entire body in an instant. My strength leaves my body and I drop my sword..."])
+        JumpToLabel(["結果"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 9, 0, 2, 0])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Khh, I have no choice but to run...!"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Just as I was about to turn around--"])
+        Script(["display_skill_name(\"Demon Eyes of Seduction\")"])
+        Wait([15])
+        PlaySE(["RPG::SE(@name=\"mon_flash\", @pitch=100, @volume=100)"])
+        FlashScreen(["Color(@red=255.0, @green=204.0, @blue=255.0, @alpha=255.0)", 60, true])
+        Wait([15])
+        Script(["clear_skill_name"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Ah, aaah..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Her seduction magic coursed through my entire body in an instant. My strength leaves my body and I drop my sword..."])
+        JumpToLabel(["結果"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 9, 0, 3, 0])
+        PlaySE(["RPG::SE(@name=\"bakutiku\", @pitch=100, @volume=80)"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka threw the firecracker at Nemea!"])
+        ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+        ShowText(["\\n<Nemea>Ara, what a lovely little toy, just like you.\nBut I'll give you a \"no!\" if you make too much noise♪"])
+        JumpToLabel(["魔眼"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 9, 0, 4, 0])
+        PlaySE(["RPG::SE(@name=\"Wind7\", @pitch=100, @volume=80)"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka scattered the caltrops!"])
+        ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+        ShowText(["\\n<Nemea>Ara ara, are we playing ninja?\nThen big sister shall play the villain...♡"])
+        JumpToLabel(["魔眼"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 9, 0, 5, 0])
+        ShowAnimation([14, 505, false])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka threw the hand grenade at Nemea!"])
+        ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+        ShowText(["\\n<Nemea>Ara ara, aren't toys like this dangerous...?\nYou should have more fun playing with your big sister♪"])
+        JumpToLabel(["魔眼"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 9, 0, 6, 0])
+        ShowAnimation([14, 35, false])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka used the charm of binding!"])
+        ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+        ShowText(["\\n<Nemea>Ara, talismans are such a nostalgic art.\nBut they won't work on me..."])
+        JumpToLabel(["魔眼"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 9, 0, 7, 0])
+        ShowAnimation([14, 736, false])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka threw Raquel's phlogiston at Nemea!"])
+        ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+        ShowText(["\\n<Nemea>Ara ara, aren't toys like this dangerous...?\nYou should have more fun playing with your big sister♪"])
+        JumpToLabel(["魔眼"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 9, 0, 8, 0])
+        PlaySE(["RPG::SE(@name=\"Book2\", @pitch=100, @volume=80)"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka opened the Labyrinth Book!"])
+        ShowTextAttributes(["nemea_fc2", 2, 0, 2])
+        ShowText(["\\n<Nemea>Is this some transfer skill...?"])
+        Wait([30])
+        ShowAnimation([14, 542, false])
+        Wait([60])
+        SetMoveRoute([14, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+        Wait([60])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Did that work...?"])
+        Wait([30])
+        ShowAnimation([14, 542, false])
+        Wait([60])
+        SetMoveRoute([14, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=40, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=40, @parameters=[])"])
+        Wait([60])
+        ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+        ShowText(["\\n<Nemea>Ufufu... I've canceled your plans for mind games. Now I want to have fun with your body...♡"])
+        JumpToLabel(["魔眼"])
+        Empty([])
+      BranchEnd([])
+      JumpToLabel(["選択"])
+      Label(["魔眼"])
+      Script(["display_skill_name(\"Demon Eyes of Seduction\")"])
+      Wait([15])
+      PlaySE(["RPG::SE(@name=\"mon_flash\", @pitch=100, @volume=100)"])
+      FlashScreen(["Color(@red=255.0, @green=204.0, @blue=255.0, @alpha=255.0)", 60, true])
+      Wait([15])
+      Script(["clear_skill_name"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Luka>Ah, aaah..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Her seduction magic coursed through my entire body in an instant. My strength leaves my body and I drop my sword..."])
+      Label(["結果"])
+      SetMoveRoute([14, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+      ShowText(["\\n<Nemea>Ara ara...\nThat boy called in a very adorable helper."])
+      ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+      ShowText(["\\n<Nemea>And you're not a human from this world either... Could it be that you're a hero from...another world, perhaps?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Khh, stay away...!"])
+      ShowTextAttributes(["nemea_fc2", 5, 0, 2])
+      ShowText(["\\n<Nemea>But you appear to be very weak against temptation. Ufufu... Such a good boy...you look very delicious♡"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Uuuu..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["With my strength gone from my body, I was unable to resist. As I was, I had no choice but to become Nemea's prey..."])
+      ShowTextAttributes(["nemea_fc2", 1, 0, 2])
+      ShowText(["\\n<Nemea>Now, come over here..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Y...yes..."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["With my body afflicted by her seduction magic, I could only obey Nemea's commands. Like that, I went inside her room."])
+      ControlSwitches([2408, 2408, 0])
+      CallCommonEvent([5784])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 153, 13, 26, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ControlSwitches([32, 32, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 153, 3, 7, 0, 0])
+    ConditionalBranch([1, 1111, 0, 1, 0])
+      ControlSwitches([2412, 2412, 0])
+      CallCommonEvent([5788])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1111, 0, 2, 0])
+      ShotBalloonIcon([-1, 1, false])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+      SetMoveRoute([19, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+      ShowTextAttributes(["vinum_fc2", 2, 0, 2])
+      ShowText(["\\n<Vinum>...Who are you?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Vinum...!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["As I thought, Vinum was in this room.\nIf I can't get past her somehow, escaping will be impossible."])
+      ShowTextAttributes(["vinum_fc2", 2, 0, 2])
+      ShowText(["\\n<Vinum>Oh... From your appearance, you must be a warrior from another world."])
+      ShowTextAttributes(["vinum_fc2", 0, 0, 2])
+      ShowText(["\\n<Vinum>You're also stronger than you look...\nWas it that little brat who summoned you?"])
+      Wait([30])
+      ShowAnimation([19, 542, false])
+      Wait([60])
+      ControlSwitches([35, 35, 0])
+      Wait([60])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Vinum transformed into a succubus!"])
+      ShowTextAttributes(["vinum_fc1", 0, 0, 2])
+      ShowText(["\\n<Vinum>So, what do you want from here?\nHave you come all this way to strike me down, or...?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Guh..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This is a tough situation, but I can't back down from here.\nUnless I do something about Vinum, I can't acquire the item I need."])
+      Label(["選択"])
+      Script(["ex_choice_add(\"Fight\",1)"])
+      ScriptMore(["ex_choice_add(\"Use the firecracker\",3,\"s[2420]\",0)"])
+      ScriptMore(["ex_choice_add(\"Use the caltrops\",4,\"s[2421]\",0)"])
+      ScriptMore(["ex_choice_add(\"Use the grenade\",5,\"s[2422]\",0)"])
+      ScriptMore(["ex_choice_add(\"Use the charm of binding\",6,\"s[2423]\",0)"])
+      ScriptMore(["ex_choice_add(\"Use Raquel's phlogiston\",7,\"s[2381]\",0)"])
+      ScriptMore(["ex_choice_add(\"Use the Labyrinth Book\",8,\"s[2371]\",0)"])
+      Script(["ex_choice_show(0,11,[0,0])"])
+      ConditionalBranch([1, 9, 0, 1, 0])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Looks like I'll have to do this...!\nI'm the Hero Luka! Here I come!"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["I readied my sword.\nIn that instant, just as I was about to step towards her--"])
+        Script(["display_skill_name(\"Demon Eyes of Lethargy\")"])
+        Wait([15])
+        PlaySE(["RPG::SE(@name=\"mon_flash\", @pitch=100, @volume=100)"])
+        FlashScreen(["Color(@red=255.0, @green=204.0, @blue=255.0, @alpha=255.0)", 60, true])
+        Wait([15])
+        Script(["clear_skill_name"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Ah, aaah..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["After taking her demon eyes directly, my strength fades from my body. With Vinum standing before me, I had lost the will to fight..."])
+        JumpToLabel(["結果"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 9, 0, 3, 0])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+        PlaySE(["RPG::SE(@name=\"bakutiku\", @pitch=100, @volume=80)"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka threw the firecracker at Vinum!"])
+        ShowTextAttributes(["vinum_fc2", 2, 0, 2])
+        ShowText(["\\n<Vinum>...What was that?\nAre you trying to play with fire?"])
+        JumpToLabel(["魔眼"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 9, 0, 4, 0])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+        PlaySE(["RPG::SE(@name=\"Wind7\", @pitch=100, @volume=80)"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka scattered the caltrops!"])
+        ShowTextAttributes(["vinum_fc2", 2, 0, 2])
+        ShowText(["\\n<Vinum>What are you up to, scattering all that junk around? You've really...disappointed me."])
+        JumpToLabel(["魔眼"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 9, 0, 5, 0])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+        ShowAnimation([19, 505, false])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka threw the hand grenade at Vinum!"])
+        ShowTextAttributes(["vinum_fc2", 2, 0, 2])
+        ShowText(["\\n<Vinum>Did you think you could do anything to me with a toy like that? That hardly singed me at all..."])
+        JumpToLabel(["魔眼"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 9, 0, 6, 0])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+        ShowAnimation([19, 35, false])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka used the charm of binding!"])
+        ShowTextAttributes(["vinum_fc2", 2, 0, 2])
+        ShowText(["\\n<Vinum>Oh... I didn't expect you to be a talisman user... But did you think this would be enough to bind me?"])
+        JumpToLabel(["魔眼"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 9, 0, 7, 0])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+        ShowAnimation([19, 736, false])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka threw Raquel's phlogiston at Vinum!"])
+        ShowTextAttributes(["vinum_fc2", 2, 0, 2])
+        ShowText(["\\n<Vinum>Did you think you could do anything to me with a toy like that? That hardly singed me at all..."])
+        JumpToLabel(["魔眼"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 9, 0, 8, 0])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Vinum, this is from me...\nA challenge from a hero!"])
+        PlaySE(["RPG::SE(@name=\"Book2\", @pitch=100, @volume=80)"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka opened the Labyrinth Book before Vinum!\nThe book's magic pulled her into the labyrinth space!"])
+        ShowTextAttributes(["vinum_fc1", 2, 0, 2])
+        ShowText(["\\n<Vinum>This is...an item I never knew about.\nSome sort of interdimensional transfer magic..."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Your destination is a labyrinth of riddles that will test your brains... Use your wits to escape, if you can!"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["I dared Vinum with a provocation.\nShe could ignore the riddles and easily destroy the labyrinth..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["If that were to happen, she wouldn't be stalled at all.\nI need to keep her inside of the labyrinth for as long as possible..."])
+        ShowTextAttributes(["vinum_fc1", 1, 0, 2])
+        ShowText(["\\n<Vinum>Oh, how interesting...\nI saw through your provocation, but I was utterly bored anyways."])
+        ShowTextAttributes(["vinum_fc1", 1, 0, 2])
+        ShowText(["\\n<Vinum>I'll take you up on your challenge, hero.\nYou can await my return..."])
+        Wait([30])
+        ShowAnimation([19, 542, false])
+        Wait([60])
+        SetMoveRoute([19, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+        Wait([60])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Just like that, Vinum disappeared into the book...\nShe was imprisoned by the book and taken into the labyrinth."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Who'd ever want to wait around quietly for her...?\nI need to hurry up and find the black jewel."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["If I don't hurry, the pizza guy will arrive at this house. I'm not even sure how long the labyrinth book will keep Vinum occupied."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["I need to find the jewel that is the key to my escape as quickly as possible. I'm certain it's in this room..."])
+        ControlSwitches([35, 35, 1])
+        ControlVariables([1111, 1111, 0, 0, 3])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      JumpToLabel(["選択"])
+      Label(["魔眼"])
+      Script(["display_skill_name(\"Demon Eyes of Lethargy\")"])
+      Wait([15])
+      PlaySE(["RPG::SE(@name=\"mon_flash\", @pitch=100, @volume=100)"])
+      FlashScreen(["Color(@red=255.0, @green=204.0, @blue=255.0, @alpha=255.0)", 60, true])
+      Wait([15])
+      Script(["clear_skill_name"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Ah, aaah..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["After taking her demon eyes directly, my strength fades from my body. With Vinum standing before me, I had lost the will to fight..."])
+      Label(["結果"])
+      ControlSwitches([2414, 2414, 0])
+      CallCommonEvent([5789])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([0, 2390, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I still haven't found the black jewel yet...\nI'll only be able to escape from here after I've obtained that necessary item."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ConditionalBranch([0, 2387, 1])
+        ControlSwitches([32, 32, 0])
+        Empty([])
+      BranchEnd([])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 153, 28, 30, 0, 0])
+      ConditionalBranch([0, 2387, 1])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+        ShotBalloonIcon([-1, 1, false])
+        ShowTextAttributes(["nemea_fc2", 2, 0, 2])
+        ShowText(["\\n<Nemea>Ara... A boy I'm not familiar with."])
+        ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+        ShowText(["\\n<Nemea>Were you perhaps...\nsummoned from another world by that other boy?"])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Khh... Nemea!"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["I never thought I'd happen to run into her here..."])
+        Label(["選択"])
+        Script(["ex_choice_add(\"Fight\",1)"])
+        ScriptMore(["ex_choice_add(\"Run away\",2)"])
+        ScriptMore(["ex_choice_add(\"Use the firecracker\",3,\"s[2420]\",0)"])
+        ScriptMore(["ex_choice_add(\"Use the caltrops\",4,\"s[2421]\",0)"])
+        ScriptMore(["ex_choice_add(\"Use the grenade\",5,\"s[2422]\",0)"])
+        ScriptMore(["ex_choice_add(\"Use the charm of binding\",6,\"s[2423]\",0)"])
+        ScriptMore(["ex_choice_add(\"Use Raquel's phlogiston\",7,\"s[2381]\",0)"])
+        ScriptMore(["ex_choice_add(\"Use the Labyrinth Book\",8,\"s[2371]\",0)"])
+        Script(["ex_choice_show(0,11,[0,0])"])
+        ConditionalBranch([1, 9, 0, 1, 0])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>Khh, I've got no choice but to fight...!"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["I take up my sword--"])
+          Script(["display_skill_name(\"Demon Eyes of Seduction\")"])
+          Wait([15])
+          PlaySE(["RPG::SE(@name=\"mon_flash\", @pitch=100, @volume=100)"])
+          FlashScreen(["Color(@red=255.0, @green=204.0, @blue=255.0, @alpha=255.0)", 60, true])
+          Wait([15])
+          Script(["clear_skill_name"])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>Ah, aaah..."])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Her seduction magic coursed through my entire body in an instant. My strength leaves my body and I drop my sword..."])
+          JumpToLabel(["結果"])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([1, 9, 0, 2, 0])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>This is bad, I have to run...!"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Just as I was about to turn around--"])
+          Script(["display_skill_name(\"Demon Eyes of Seduction\")"])
+          Wait([15])
+          PlaySE(["RPG::SE(@name=\"mon_flash\", @pitch=100, @volume=100)"])
+          FlashScreen(["Color(@red=255.0, @green=204.0, @blue=255.0, @alpha=255.0)", 60, true])
+          Wait([15])
+          Script(["clear_skill_name"])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>Ah, aaah..."])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Her seduction magic coursed through my entire body in an instant. My strength leaves my body and I drop my sword..."])
+          JumpToLabel(["結果"])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([1, 9, 0, 3, 0])
+          PlaySE(["RPG::SE(@name=\"bakutiku\", @pitch=100, @volume=80)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Luka threw the firecracker at Nemea!"])
+          ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+          ShowText(["\\n<Nemea>Ara, what a lovely little toy, just like you.\nBut I'll give you a \"no!\" if you make too much noise♪"])
+          JumpToLabel(["魔眼"])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([1, 9, 0, 4, 0])
+          PlaySE(["RPG::SE(@name=\"Wind7\", @pitch=100, @volume=80)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Luka scattered the caltrops!"])
+          ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+          ShowText(["\\n<Nemea>Ara ara, are we playing ninja?\nThen big sister shall play the villain...♡"])
+          JumpToLabel(["魔眼"])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([1, 9, 0, 5, 0])
+          ShowAnimation([22, 505, false])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Luka threw the hand grenade at Nemea!"])
+          ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+          ShowText(["\\n<Nemea>Ara ara, aren't toys like this dangerous...?\nYou should have more fun playing with your big sister♪"])
+          JumpToLabel(["魔眼"])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([1, 9, 0, 6, 0])
+          ShowAnimation([22, 35, false])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Luka used the charm of binding!"])
+          ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+          ShowText(["\\n<Nemea>Ara, talismans are such a nostalgic art.\nBut they won't work on me..."])
+          JumpToLabel(["魔眼"])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([1, 9, 0, 7, 0])
+          ShowAnimation([22, 736, false])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Luka threw Raquel's phlogiston at Nemea!"])
+          ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+          ShowText(["\\n<Nemea>Ara ara, aren't toys like this dangerous...?\nYou should have more fun playing with your big sister♪"])
+          JumpToLabel(["魔眼"])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([1, 9, 0, 8, 0])
+          PlaySE(["RPG::SE(@name=\"Book2\", @pitch=100, @volume=80)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Luka opened the Labyrinth Book!"])
+          ShowTextAttributes(["nemea_fc2", 2, 0, 2])
+          ShowText(["\\n<Nemea>Is this some transfer skill...?"])
+          Wait([30])
+          ShowAnimation([22, 542, false])
+          Wait([60])
+          SetMoveRoute([22, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Wait([60])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>Did that work...?"])
+          Wait([30])
+          ShowAnimation([22, 542, false])
+          Wait([60])
+          SetMoveRoute([22, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=40, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=40, @parameters=[])"])
+          Wait([60])
+          ShowTextAttributes(["nemea_fc2", 0, 0, 2])
+          ShowText(["\\n<Nemea>Ufufu... I've canceled your plans for mind games. Now I want to have fun with your body...♡"])
+          JumpToLabel(["魔眼"])
+          Empty([])
+        BranchEnd([])
+        JumpToLabel(["選択"])
+        Label(["魔眼"])
+        Script(["display_skill_name(\"Demon Eyes of Seduction\")"])
+        Wait([15])
+        PlaySE(["RPG::SE(@name=\"mon_flash\", @pitch=100, @volume=100)"])
+        FlashScreen(["Color(@red=255.0, @green=204.0, @blue=255.0, @alpha=255.0)", 60, true])
+        Wait([15])
+        Script(["clear_skill_name"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Luka>Ah, aaah..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Her seduction magic coursed through my entire body in an instant. My strength leaves my body and I drop my sword..."])
+        Label(["結果"])
+        ShowTextAttributes(["nemea_fc2", 1, 0, 2])
+        ShowText(["\\n<Nemea>Fufu, what a cute and obedient little boy...♡\nCome to my room now..."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Y-yes..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["My body moved against my will...\nIt only responded immediately to Nemea's commands."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["I stood up and followed Nemea.\nLike that, she led me into her room..."])
+        FadeoutScreen([])
+        Wait([60])
+        TransferPlayer([0, 153, 12, 47, 4, 2])
+        FadeinScreen([])
+        ControlSwitches([2410, 2410, 0])
+        CallCommonEvent([5786])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 153, 27, 27, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 153, 27, 34, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 153, 32, 58, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 153, 34, 25, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 91, 30, 32, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 91, 30, 32, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 153, 33, 10, 0, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 153, 29, 25, 0, 0])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    EraseEvent([])
+    ControlSwitches([2404, 2404, 0])
+    CallCommonEvent([5780])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    Empty([])
+
+  Page 4
+    Empty([])
+
+  Page 5
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    Empty([])
+
+  Page 4
+    Empty([])
+
+  Page 5
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ConditionalBranch([0, 2369, 1])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>This must be a computer..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I couldn't believe something like this was a normal fixture of a room. This world appears to be more technologically advanced than the world I'm from."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["But I can't afford any time to be touching it.\nRight now, I have to do what I came here for."])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=40, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=40, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ConditionalBranch([0, 2387, 1])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>This must be a computer..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Speaking of which, I have that computer virus Promestein gave me."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["If I insert that into this computer, will it be able to stall Nemea?"])
+        ShowChoices([["Insert the virus", "Never mind"], 2])
+        When([0, "Insert the virus"])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>Okay, let's give this a try.\nI think I'm supposed to put this device into a slot."])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["She said it was for a USB slot if I'm remembering correctly... After finding an opening that looks like it, I plug it in."])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>That...doesn't look like it'll fit.\nIs it upside-down?"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["I tried turning it upside down this time...\nBut I still couldn't seem to fit it inside."])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>What could this mean...?\nI'm pretty sure this is the slot it's supposed to be plugged into, but..."])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["I flipped it around once more...\nThis time, it plugged in perfectly!"])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>I had it facing right the first time...\nSo why didn't it plug in then..."])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["In any case, the lights on the device started blinking repeatedly. It's probably sending in the virus now."])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["And then---after several seconds of blinking, the lights turned off."])
+          ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+          ShowText(["\\n<Luka>...Looks like it's finished.\nHopefully it will stall her for a while..."])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["I retrieved the device that had fulfilled its role.\nI shouldn't have any more business in this room..."])
+          ControlSwitches([2387, 2387, 0])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=40, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=40, @parameters=[])"])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "Never mind"])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=40, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=40, @parameters=[])"])
+          ExitEventProcessing([])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["I've already inserted the virus into the computer.\nI shouldn't have any more business in this room..."])
+        SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=40, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=40, @parameters=[])"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    Empty([])
+
+  Page 4
+    Empty([])
+
+  Page 5
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Is this...a key?"])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSwitches([2388, 2388, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Found an old key under the bed!"])
+    ConditionalBranch([0, 2389, 1])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>But where do I use it...?\nI should explore this room some more."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Does the key go to that shelf...?\nOkay, let's try it out..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ControlSwitches([2389, 2389, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The shelf is locked..."])
+    ConditionalBranch([0, 2388, 1])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>This one looks suspicious...\nLet's see if I can find a key somewhere..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>How about this key...?"])
+      PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+      ControlSwitches([2390, 2390, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The old key opened the shelf!\nObtained a mysterious jewel!"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>This must be the black jewel...\nAll right, I've obtained the item I needed!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I shouldn't have any more business in Vinum's room.\nLet's get out of here at once..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    Empty([])

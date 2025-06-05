@@ -1,0 +1,1203 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([1, 1205, 0, 1, 1])
+      ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+      ShowText(["\\n<Rigeo>We don't have any more business in this village, do we? It's become a total mess since the attack, so we'd only be getting in the way..."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1201, 0, 5, 0])
+      ControlSwitches([31, 31, 1])
+      ControlSwitches([32, 32, 1])
+      ControlSwitches([33, 33, 1])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 937, 31, 49, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 852, 28, 58, 8, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ConditionalBranch([1, 1203, 0, 9, 0])
+      CallCommonEvent([534])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1204, 0, 5, 0])
+      CallCommonEvent([510])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ControlVariables([1201, 1201, 0, 0, 5])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Somehow, we managed to get down from that mountain safely.\nBut this scenery..."])
+    ShowTextAttributes(["lawrat_fc1", 0, 0, 2])
+    ShowText(["\\n<Lauratt>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Both Lauratt and Rigeo were left dumbfounded.\nThe surrounding landscape was completely different from where they came from."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Where in the world are we...\nLauratt, have you ever seen a region like this?"])
+    ShowTextAttributes(["lawrat_fc1", 0, 0, 2])
+    ShowText(["\\n<Lauratt>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Lauratt shakes his head.\nHe couldn't help but feel lost at this totally unfamiliar scenery."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    ScrollMap([4, 8, 5])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Ah... Look!\nThere's a village over there!"])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Let's head there and hear what they have to say.\nMaybe they can tell us how to get back home."])
+    ScrollMap([6, 8, 5])
+    ShowTextAttributes(["lawrat_fc1", 0, 0, 2])
+    ShowText(["\\n<Lauratt>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["He wonders if there is even a way to overcome this situation and return home."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["This could be an entirely different world.\nThey might not be lost so much as they've found themselves in another dimension."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Nonetheless, they had no choice but to visit that village. After descending from the mountain, Lauratt heads to the village near its base."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 869, 21, 38, 8, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Grand Noah is to the east.\nWe don't need to take a detour, do we...?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Ah... You're right."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Grand Noah is to the east.\nWe don't need to take a detour, do we...?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Ah... You're right."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Grand Noah is to the east.\nWe don't need to take a detour, do we...?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Ah... You're right."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Grand Noah is to the east.\nWe don't need to take a detour, do we...?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Ah... You're right."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Grand Noah is to the east.\nWe don't need to take a detour, do we...?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Ah... You're right."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Grand Noah is to the east.\nWe don't need to take a detour, do we...?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Ah... You're right."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Grand Noah is to the east.\nWe don't need to take a detour, do we...?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Ah... You're right."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Grand Noah is to the east.\nWe don't need to take a detour, do we...?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Ah... You're right."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Grand Noah is to the east.\nWe don't need to take a detour, do we...?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Ah... You're right."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Grand Noah is to the east.\nWe don't need to take a detour, do we...?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Ah... You're right."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Grand Noah is to the east.\nWe don't need to take a detour, do we...?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Ah... You're right."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ConditionalBranch([1, 1205, 0, 4, 1])
+      ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+      ShowText(["\\n<Rigeo>Gold Volcano isn't this way."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1205, 0, 1, 0])
+      ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+      ShowText(["\\n<Rigeo>Succubus Village isn't this way."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1201, 0, 5, 1])
+      ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+      ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ConditionalBranch([1, 1205, 0, 4, 1])
+      ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+      ShowText(["\\n<Rigeo>Gold Volcano isn't this way."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1205, 0, 1, 0])
+      ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+      ShowText(["\\n<Rigeo>Succubus Village isn't this way."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1201, 0, 5, 1])
+      ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+      ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    FadeoutBGM([1])
+    RecoverAll([0, 0])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowAnimation([24, 501, false])
+    Wait([30])
+    ControlSwitches([31, 31, 0])
+    ShowAnimation([25, 501, false])
+    Wait([30])
+    ControlSwitches([32, 32, 0])
+    Wait([60])
+    PlayBGM(["RPG::BGM(@name=\"boss0\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_lira_st01", 0, 0, -150, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_bell_st01", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["bell_fc1", 0, 0, 2])
+    ShowText(["\\n<Bell>Almighty Swordsman...\nWe can't let you go any further."])
+    ShowTextAttributes(["lira_fc1", 0, 0, 2])
+    ShowText(["\\n<Lyla>To think you would get in our way even in this world..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Y-You...!\nBell! And even Lyla!?"])
+    ShowTextAttributes(["tarsa_fc1", 2, 0, 2])
+    ShowText(["\\n<Tarsa>Do you know them, Lest...?"])
+    ShowTextAttributes(["bell_fc1", 0, 0, 2])
+    ShowText(["\\n<Bell>Indeed, young lady.\nThe Almighty Swordsman took good care of us."])
+    ShowTextAttributes(["lira_fc1", 0, 0, 2])
+    ShowText(["\\n<Lyla>We'll get revenge for that here and now~♪"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>You're allies of the Queen of Dreams, aren't you!?\nYou even sent assassins after me..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Bell and Lyra are allies of the Queen of Dreams.\nI see, no wonder they knew about me."])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>In other words, both of you are the heroes' enemies...!"])
+    ShowTextAttributes(["bell_fc1", 0, 0, 2])
+    ShowText(["\\n<Bell>Oh dear... Young lady, could you please not bother us?"])
+    ShowTextAttributes(["lira_fc1", 0, 0, 2])
+    ShowText(["\\n<Lyla>If you don't want to get hurt, you should run away..."])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>I won't run away... I'll fight too!"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Bell, Lyla... Out of my way!"])
+    ShowTextAttributes(["bell_fc1", 0, 0, 2])
+    ShowText(["\\n<Bell>We can't do that.\nIt would be a problem to let you go to Grand Noah..."])
+    ShowTextAttributes(["lira_fc1", 0, 0, 2])
+    ShowText(["\\n<Lyla>Which is why...\nWe'll defeat you here!"])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss1\", @volume=100, @pitch=100)"])
+    BattleProcessing([0, 1330, false, false])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    PlayBGM(["RPG::BGM(@name=\"scene_epilogue2\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["bell_fc1", 0, 0, 2])
+    ShowText(["\\n<Bell>Kh... He's strong, as expected.\nBut don't think you've won!"])
+    ShowTextAttributes(["lira_fc1", 0, 0, 2])
+    ShowText(["\\n<Lyla>We'll retreat for now!"])
+    ErasePicture([5])
+    ErasePicture([6])
+    Wait([30])
+    ShowAnimation([24, 501, false])
+    Wait([30])
+    ControlSwitches([31, 31, 1])
+    ShowAnimation([25, 501, false])
+    Wait([30])
+    ControlSwitches([32, 32, 1])
+    Wait([60])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Bell and Lyla quickly fled..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>If Bell and Lyla are in this world...\nThen she must be here as well..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Bell and Lyla's master, the winged demon Musette.\nSomeone as problematic as her definitely became one of the Queen of Dreams' allies."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>To think I would have to fight them...\nThings have become quite difficult."])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>It's okay.\nThere is you, and Novissa, and the five other heroes."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Yeah..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I have to live up to Tarsa's expectations.\nBesides, the people living in this world are in danger as well."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>I must give it my all more than ever before...\nAll right, let's go see the queen of Grand Noah!"])
+    PlayBGM(["RPG::BGM(@name=\"field2\", @volume=100, @pitch=100)"])
+    ControlVariables([1203, 1203, 0, 0, 9])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ConditionalBranch([1, 1204, 0, 5, 1])
+      ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+      ShowText(["\\n<Rovissa>Grand Noah isn't that way.\nWe shouldn't be taking detours right now."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1203, 0, 8, 1])
+      ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+      ShowText(["\\n<Tarsa>"])
+      ShowText(["I think that's the opposite direction..."])
+      ShowText(["Lest, you don't have a sense of direction?"])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>"])
+      ShowText(["N-No, that's not the case..."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>I think we went past the Grand Noah Castle...\nLest, you don't have a sense of direction?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>N-No, that's not the case..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["daimeikai_fc1", 0, 0, 2])
+    ShowText(["\\n<Daimyokai>The cave to Grand Noah is directly southeast of here. From what I've heard, it is quite a long cavern."])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>Everyone's going through so much hardship...\nThis is all because of Est."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>Grand Noah isn't that way.\nWe shouldn't be taking detours right now."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"\", @volume=100, @pitch=100)"])
+    Script(["keep_all_equip"])
+    Script(["release_temp_actors"])
+    Script(["set_temp_actors(807,808,812)"])
+    RecoverAll([0, 0])
+    Wait([60])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Lauratt's party clashed with the three sisters of the alliance at Lady's Village. They were saved by Magatsu, who managed to fend off the sisters."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Afterwards, the White Rabbit appeared to inform them all of a shocking fact... The threat posed by the Queen of Dreams was spreading across the world."])
+    Wait([60])
+    FadeinScreen([])
+    PlayBGM(["RPG::BGM(@name=\"field2\", @volume=100, @pitch=100)"])
+    Wait([30])
+    ControlVariables([1205, 1205, 0, 0, 1])
+    ShowTextAttributes(["magatu_fc1", 2, 0, 2])
+    ShowText(["\\n<Magatsu>It's a really bizarre story...\nHard to believe we're in another world."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>What's more, Magatsu and I came from different worlds. I couldn't even imagine that possibility."])
+    ShowTextAttributes(["lawrat_fc1", 0, 0, 2])
+    ShowText(["\\n<Lauratt>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It was hard for Lauratt to believe as well, but he had no choice but to accept it. The only way they would be able to return to their world would be to defeat the Queen of Dreams."])
+    ShowTextAttributes(["magatu_fc1", 2, 0, 2])
+    ShowText(["\\n<Magatsu>Now, what's next...?\nI'd prefer to avoid wandering this unknown world aimlessly."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Hey, look at this map.\nSuccubus Village looks to be rather close by, right?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Rigeo was looking at a map of the region they received while they were in Lady's Village. She says the village is just southeast from here."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>I wonder if anyone there will be able to help us? Contrary to my appearance, I'm a succubus as well..."])
+    ShowTextAttributes(["magatu_fc1", 0, 0, 2])
+    ShowText(["\\n<Magatsu>I see, so you're counting on your kin to lend us a hand. I suppose we could expect some help from them..."])
+    ShowTextAttributes(["lawrat_fc1", 0, 0, 2])
+    ShowText(["\\n<Lauratt>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Lauratt expressed his approval for Rigeo's suggestion."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["They were still unfamiliar with this world. They would like to receive any help they could from the people living here."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["This was to say nothing of the fact they still couldn't use runes. The White Rabbit told them that it was due to a difference in magic systems..."])
+    ShowTextAttributes(["magatu_fc1", 0, 0, 2])
+    ShowText(["\\n<Magatsu>The laws of magic are different in this world. Ever since I came here, it feels like my magic has gotten stronger."])
+    ShowTextAttributes(["magatu_fc1", 0, 0, 2])
+    ShowText(["\\n<Magatsu>I must say, it's very interesting...\nFrom Lauratt's perspective, he'd be at a disadvantage."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>I would like for Lauratt to be able to use his runes somehow. I wonder if there's anyone in Succubus Village who is well-versed in the magic of this world?"])
+    ShowTextAttributes(["lawrat_fc1", 0, 0, 2])
+    ShowText(["\\n<Lauratt>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Systems of magic are very complex and intricate, even in their world. It is for that reason that they are an established field of study."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Since this world is different, it would appear it also has a different system of magic. If they could somehow use the magic of this world..."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Well then, let's go to Succubus Village."])
+    ShowTextAttributes(["magatu_fc1", 0, 0, 2])
+    ShowText(["\\n<Magatsu>Mhm... According to the map, we should arrive there before nightfall."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Succubus Village is directly southeast from here.\nThey head there in hopes of receiving some assistance..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Succubus Village isn't this way."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Succubus Village isn't this way."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>Succubus Village isn't this way."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["magatu_fc1", 0, 0, 2])
+    ShowText(["\\n<Magatsu>So we're heading to Gold Volcano...\nFirst, we'll need to enter the mountain range to the southeast."])
+    ShowTextAttributes(["magatu_fc1", 0, 0, 2])
+    ShowText(["\\n<Magatsu>From there, we just follow the road...\nWe should arrive at the volcano before long."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>I got a map while we were in the village...\nI'll let you know if we start going in the wrong direction."])
+    ShowTextAttributes(["lawrat_fc1", 0, 0, 2])
+    ShowText(["\\n<Lauratt>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Enter the mountain range to the southeast, then keep following the road... If they do that, they should arrive at the volcano."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There they will meet one of the Four Great Spirits, Salamander, and ask her to lend them her strength in order to fight the powerful being known as the Queen of Dreams."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>This port town doesn't feel like a safe place.\nDon't you think we should stay away from it...?"])
+    ShowTextAttributes(["magatu_fc1", 2, 0, 2])
+    ShowText(["\\n<Magatsu>I heard while we were in Succubus Village that this town is dominated by anti-monster sentiment. There's places like that in every world."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>This port town doesn't feel like a safe place.\nDon't you think we should stay away from it...?"])
+    ShowTextAttributes(["magatu_fc1", 2, 0, 2])
+    ShowText(["\\n<Magatsu>I heard while we were in Succubus Village that this town is dominated by anti-monster sentiment. There's places like that in every world."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>We just passed by Gold Volcano.\nLook, it's just west from here."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ShowTextAttributes(["daimeikai_fc1", 1, 0, 2])
+    ShowText(["\\n<Daimyokai>This cave...appears to be a yoma's den.\nI cannot recommend setting foot if we have no business there."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 25, 16, 38, 8, 0])
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 25, 16, 38, 8, 0])
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    ConditionalBranch([1, 1203, 0, 9, 0])
+      CallCommonEvent([534])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1204, 0, 5, 0])
+      CallCommonEvent([510])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>That village we saw earlier... Wasn't it back the other way?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    CallCommonEvent([509])
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    CallCommonEvent([509])
+    Empty([])
+
+CommonEvent 61
+Name = "EV061"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 852, 28, 58, 8, 0])
+    Empty([])
+
+CommonEvent 63
+Name = "EV063"
+
+  Page 0
+    ConditionalBranch([1, 1205, 0, 1, 1])
+      ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+      ShowText(["\\n<Rigeo>We don't have any more business in this village, do we? It's become a total mess since the attack, so we'd only be getting in the way..."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1201, 0, 5, 0])
+      ControlSwitches([31, 31, 1])
+      ControlSwitches([32, 32, 1])
+      ControlSwitches([33, 33, 1])
+      ChangeMapDisplay([0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 937, 31, 49, 8, 0])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 94
+Name = "EV094"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 850, 19, 91, 8, 0])
+    Empty([])
+
+CommonEvent 95
+Name = "EV095"
+
+  Page 0
+    ShowTextAttributes(["daimeikai_fc1", 1, 0, 2])
+    ShowText(["\\n<Daimyokai>This...appears to be some sacred mountain.\nI cannot recommend setting foot if we have no business there."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 96
+Name = "EV096"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 851, 36, 13, 8, 0])
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["daimeikai_fc1", 0, 0, 2])
+      ShowText(["\\n<Daimyokai>This cavern... I'm getting the impression that it is far more spacious than I had anticipated."])
+      ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+      ShowText(["\\n<Rovissa>This dampness feels gross...\nThis is the problem with always being physically materialized."])
+      ShowTextAttributes(["lars_fc01", 0, 0, 2])
+      ShowText(["\\n<Lars>............"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["If they go through this cave, they will come out near Grand Noah. Naturally, there will be lots of monsters along the way."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Failing before they reached their destination was out of the question. They would have to proceed with caution..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 100
+Name = "EV100"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 854, 15, 6, 2, 0])
+    Empty([])
+
+CommonEvent 112
+Name = "EV112"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 845, 11, 48, 8, 0])
+    Empty([])
+
+CommonEvent 125
+Name = "EV125"
+
+  Page 0
+    ConditionalBranch([1, 1204, 0, 5, 1])
+      ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+      ShowText(["\\n<Rovissa>Grand Noah isn't that way.\nWe shouldn't be taking detours right now."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 848, 9, 5, 2, 0])
+    Empty([])
+
+CommonEvent 141
+Name = "EV141"
+
+  Page 0
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>This cave isn't Gold Volcano.\nWe need to go further ahead."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+CommonEvent 252
+Name = "EV252"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["→　Grand Noah Palace"])
+    ShowText(["↓　Finoa Village"])
+    Empty([])
+
+CommonEvent 253
+Name = "EV253"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["↑　Grand Noah Palace"])
+    ShowText(["→　Cave to Yamatai Village"])
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+      ShowText(["\\n<Rovissa>It looks like we just need to follow the road from here."])
+      ShowTextAttributes(["daimeikai_fc1", 0, 0, 2])
+      ShowText(["\\n<Daimyokai>Hmm, this place is very considerate. It's quite different from the countryside."])
+      ShowTextAttributes(["lars_fc01", 0, 0, 2])
+      ShowText(["\\n<Lars>............"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Grand Noah is close by at last.\nBut it would seem great danger still lies ahead."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["They will have to be more vigilant from here on out..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 255
+Name = "EV255"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["→　Grand Noah Palace"])
+    ShowText(["←　Esta"])
+    Empty([])
+
+CommonEvent 256
+Name = "EV256"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["↑　Undine's Spring"])
+    ShowText(["↓　Esta"])
+    ShowText(["※Danger! Monster village in western forest!"])
+    Empty([])
+
+CommonEvent 257
+Name = "EV257"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["↑　Undine's Spring"])
+    ShowText(["↓　Esta"])
+    Empty([])
+
+CommonEvent 258
+Name = "EV258"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["↗ Lima"])
+    ShowText(["← Gold Fort"])
+    ShowText(["※Warzone: All Noah citizens, evacuate immediately."])
+    Empty([])
+
+CommonEvent 259
+Name = "EV259"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["※Due to the war, going north beyond this point is forbidden."])
+    Empty([])
+
+CommonEvent 261
+Name = "EV261"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["→　Undine's Spring"])
+    ShowText(["←　Lima, Gold Fort"])
+    Empty([])
+
+CommonEvent 263
+Name = "EV263"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["～ Gold Volcano ～"])
+    ShowText(["The sacred lair of the burning Salamander.\nAccess is strictly forbidden!"])
+    Empty([])
+
+CommonEvent 264
+Name = "EV264"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["↗ Gold Port"])
+    ShowText(["↖ Lava Mines"])
+    ShowText(["↓ Western Gold Checkpoint"])
+    Empty([])

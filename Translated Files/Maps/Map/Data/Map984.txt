@@ -1,0 +1,252 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "アリス"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["", 0, 1, 1])
+    ShowText(["逃げるな！"])
+    ShowText(["責任から逃げるな！！"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["しかし、宝箱は空っぽだった……"])
+    ShowText(["僕の責任感も空っぽだ。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["iriasu_fc1", 1, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["なんと、この私と結婚したいというのですか……？"])
+    ShowTextAttributes(["iriasu_fc1", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["まんざらでもありませんが、それは適いません。"])
+    ShowText(["さあ、結婚相手を選びなさい……"])
+    Empty([])
+
+CommonEvent 5
+Name = "コンス"
+
+  Page 0
+    ShowPicture([5, "80_mob_kisi_st01b", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["mob_kisi_fc1", 0, 0, 2])
+    ShowText(["【コンスタンツェ】"])
+    ShowText(["わ、私で良いのか……？"])
+    ShowText(["女王陛下を選ばずに、後悔しないのか……？"])
+    ShowChoices([["いいえ", "はい"], 1])
+    When([0, "いいえ"])
+      ShowPicture([5, "80_mob_kisi_st02b", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["mob_kisi_fc1", 0, 0, 2])
+      ShowText(["【コンスタンツェ】"])
+      ShowText(["そう、やはり勇者は姫と結ばれるもの……"])
+      ShowText(["勇者と勇者が結ばれるなど、聞いたこともない……"])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "はい"])
+      ShowTextAttributes(["mob_kisi_fc1", 0, 0, 2])
+      ShowText(["【コンスタンツェ】"])
+      ShowText(["ほ、本当に私を選んでくれるなんて……"])
+      ShowText(["式場までは、私を抱えて運んでほしい……"])
+      ControlSwitches([31, 31, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 6
+Name = "レミナ"
+
+  Page 0
+    ShowPicture([5, "80_mob_hime_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["mob_hime_fc1", 0, 0, 2])
+    ShowText(["【レミナ】"])
+    ShowText(["ふふ、私を選んでくれるのですね……"])
+    ShowText(["本当に、それでよろしいのですか？"])
+    ShowChoices([["いいえ", "はい"], 1])
+    When([0, "いいえ"])
+      ShowPicture([5, "80_mob_hime_st02", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["mob_hime_fc1", 1, 0, 2])
+      ShowText(["【レミナ】"])
+      ShowText(["この期に及んで、焦らすのは……"])
+      ShowText(["あまり賢い駆け引きとは言えませんわよ。"])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "はい"])
+      ShowTextAttributes(["mob_hime_fc1", 0, 0, 2])
+      ShowText(["【レミナ】"])
+      ShowText(["光栄です、大勇者ルカ。"])
+      ShowText(["それではさっそく、式の準備を――"])
+      ControlSwitches([31, 31, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["iriasu_fc1", 0, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["ついに年貢の納め時……"])
+    ShowText(["さあルカ、好きな相手にプロポーズをするのです。"])
+    EraseEvent([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    FadeoutBGM([1])
+    ErasePicture([5])
+    Wait([30])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([5, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([6, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShowAnimation([11, 542, false])
+    Wait([60])
+    ControlSwitches([32, 32, 0])
+    PlayBGM(["RPG::BGM(@name=\"boss0-3\", @volume=100, @pitch=100)"])
+    Wait([90])
+    ShowTextAttributes(["sonia_fc2", 5, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["ちょっと待ったーっ！！"])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["その結婚、認めん！！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["な……どうなってるの！？"])
+    ShowTextAttributes(["sonia_fc2", 5, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["私こそ幼馴染みにして正ヒロイン！"])
+    ShowText(["ルカと結ばれるのは、私よ！！"])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["正史での正ヒロインは余だ！"])
+    ShowText(["余とルカが結婚するのは、宿命なのだぞ！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["ふ、二人とも落ち着いて……！"])
+    Wait([30])
+    SetMoveRoute([1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([9, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"mon_earth1\", @pitch=100, @volume=100)"])
+    ShakeScreen([5, 5, 60, true])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["むっ、ゲートが鳴動している！"])
+    ShowText(["まだまだ多くの有象無象が湧いてくるぞ！"])
+    ShowTextAttributes(["sonia_fc2", 4, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["これ以上、馬の骨が増えてたまるもんですか！"])
+    ShowText(["ゲートを閉じるわよ！"])
+    Wait([30])
+    PlayBGM(["RPG::BGM(@name=\"boss0-4\", @volume=100, @pitch=100)"])
+    PlaySE(["RPG::SE(@name=\"mon_earth1\", @pitch=100, @volume=100)"])
+    ShakeScreen([5, 5, 60, true])
+    ShowTextAttributes(["alice_fc2", 1, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["駄目だ、抑えきれん……！！"])
+    ShowTextAttributes(["sonia_fc2", 3, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["大量の憎悪や嫉妬、負の感情が……"])
+    ShowText(["ゲートから溢れ出して……"])
+    ShowAnimation([-1, 1089, true])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["うわぁぁぁぁ――！！"])
+    Wait([30])
+    FadeoutBGM([1])
+    FadeoutScreen([])
+    Wait([180])
+    TransferPlayer([0, 983, 0, 0, 0, 2])
+    TintScreen(["Tone(@red=-68.0, @green=-68.0, @blue=0.0, @gray=68.0)", 1, true])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ChangeTransparency([0])
+    FadeinScreen([])
+    Empty([])
+
+CommonEvent 9
+Name = "ソニア"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 98
+Name = "EV098"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["しかし、宝箱は空っぽだった……"])
+    ShowText(["僕の甲斐性と同じだ。"])
+    Empty([])
+
+  Page 1
+    Empty([])

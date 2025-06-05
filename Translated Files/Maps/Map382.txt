@@ -1,0 +1,1562 @@
+Display Name = "Grand Noah Palace 1F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 21, 38, 5, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>The unit I'm a part of will be moving to the front line next month. I've written a will to my family..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>With the end of the Grangold war, the front lines have been discontinued. But now we're fighting a war against the Monster Lord..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 21, 38, 5, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 21, 38, 5, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 21, 38, 5, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 21, 38, 5, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowPicture([5, "80_durahan_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>Got a minute, hero?\nAfter seeing your prowess, I'd like to ask for your help..."])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>There have been a few issues at the shrines of Yamatai Village. Supposedly, odd things have happened to the monsters revered at each of the shrines."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Yamatai has shrines to the kitsune, tanuki, cat, and snake, I believe."])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Other than Shirohebi who defends the snake shrine, none of the monsters there are noteworthy. What could have happened?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>The culture there worships certain monsters as gods. Their four major shrines are to the kitsune, tanuki, cat, and snake."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Other than Shirohebi who defends the snake shrine, the monsters there are of little significance. So what in the world is going on in Yamatai?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>According to reports, there are even monsters baring their fangs and harming the villagers. Would you be willing to travel to Yamatai with me and help solve this mystery?"])
+    ShowChoices([["Offer Help", "Not Right Now"], 2])
+    When([0, "Offer Help"])
+      ShowTextAttributes(["durahan_fc1", 1, 0, 2])
+      ShowText(["\\n<Arthur>I'm in your debt. Shall we head there now?"])
+      ErasePicture([5])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+      Script(["add_actor_ex(212)"])
+      PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Arthur has joined the party!"])
+      ControlVariables([1055, 1055, 0, 0, 1])
+      Wait([60])
+      ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+      ShowText(["\\n<Arthur>Do you know the way to Yamatai?"])
+      ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+      ShowText(["\\n<Arthur>Heading east from the castle towards Finoa, there's a cave to Yamatai."])
+      ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+      ShowText(["\\n<Arthur>The path through the cave itself is long, but Yamatai is right on the other side. Once there, we should ask the village elder for more details."])
+      ConditionalBranch([1, 1052, 0, 7, 2])
+        ConditionalBranch([0, 4, 0])
+          ShowTextAttributes(["alice_fc5", 0, 0, 2])
+          ShowText(["\\n<Alice>I'd prefer to take care of this request before we infiltrate the Magical Academy, but that's up to you..."])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 5, 0])
+          ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+          ShowText(["\\n<Ilias>Let's wrap this up quickly prior to infiltrating the Magical Academy. Well, that is what I would do. I suppose it's your choice..."])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Not Right Now"])
+      ShowPicture([5, "80_durahan_st03", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["durahan_fc1", 2, 0, 2])
+      ShowText(["\\n<Arthur>So you're busy, too?\nWell, if you get some free time, I'd appreciate the backup."])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowPicture([5, "80_kerberos_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>Hey, hold up!\nCould you give me a second!?"])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>So this all started when a few Minotauros friends of mine disappeared. After a little digging, I discovered a shocking bit of information."])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>It turns out that over forty minotauros have disappeared recently. I'd appreciate your help in investigating this matter..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>Over forty missing minotauros?\nTheir disappearance could possibly be related to the missing residents of Esta..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Over forty missing minotauros?\nIt is possible this is related to the disappearance of the residents of Esta..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>It should go without saying, but I'll accompany you on the investigation. So will you help me?"])
+    ShowChoices([["Offer Help", "Not Right Now"], 2])
+    When([0, "Offer Help"])
+      ShowTextAttributes(["kerberos_fc1", 1, 0, 2])
+      ShowText(["\\n<Caesar>I'm in your debt! Let's get started at once!"])
+      ErasePicture([5])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+      Script(["add_actor_ex(213)"])
+      PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Caesar has joined the party!"])
+      Wait([60])
+      ControlVariables([1054, 1054, 0, 0, 1])
+      ShowTextAttributes(["kerberos_fc1", 1, 0, 2])
+      ShowText(["\\n<Caesar>Should we head to the bar first? Bars are the best place to get information!"])
+      ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+      ShowText(["\\n<Caesar>...It's not like I'm a drunk or anything."])
+      ConditionalBranch([4, 75, 0])
+        ShowTextAttributes(["hituzi_fc1", 1, 0, 2])
+        ShowText(["\\n<Mary>...suuuure."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1052, 0, 7, 2])
+        ConditionalBranch([0, 4, 0])
+          ShowTextAttributes(["alice_fc5", 0, 0, 2])
+          ShowText(["\\n<Alice>I'd prefer to take care of this request before we infiltrate the Magical Academy, but that's up to you..."])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 5, 0])
+          ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+          ShowText(["\\n<Ilias>Let's wrap this up quickly prior to infiltrating the Magical Academy. Well, that is what I would do. I suppose it's your choice..."])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Not Right Now"])
+      ShowPicture([5, "80_kerberos_st03", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["kerberos_fc1", 2, 0, 2])
+      ShowText(["\\n<Caesar>Oh...\nIf you change your mind, let me know. I'll be hanging around here."])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"scene_comi2\", @volume=100, @pitch=100)"])
+    ControlVariables([1052, 1052, 0, 0, 7])
+    ControlSelfSwitch(["A", 0])
+    ControlSwitches([100, 100, 1])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>Hey, hold up!\nCould you give me a second!?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>Got a minute, hero?\nAfter seeing your prowess, I'd like to ask for your help..."])
+    ShowPicture([5, "80_kerberos_st01", 0, 0, -150, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_durahan_st01", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>............"])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>............"])
+    ShowTextAttributes(["kerberos_fc1", 2, 0, 2])
+    ShowText(["\\n<Caesar>Come on, Arthur, wait your turn..."])
+    ShowTextAttributes(["durahan_fc1", 2, 0, 2])
+    ShowText(["\\n<Arthur>Why don't you wait?\nI've got urgent business to discuss."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>So this all started when a few minotauros friends of mine disappeared. After a little digging, I discovered a shocking bit of information."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>There have been a few issues at the shrines of Yamatai Village. Supposedly, odd things have happened to the monsters revered at each of the shrines."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>It turns out that over forty minotauros have disappeared in all. I'd appreciate your help in investigating this matter..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>Supposedly at least one of the goddesses has been threatening and even harming the villagers. Would you be willing to travel to Yamatai with me?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+      ShowText(["\\n<Sonya>What the hell is going on!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Hold on, one at a time!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 1, 0, 2])
+      ShowText(["\\n<Alice>Gah, one of you shut up!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc5", 0, 0, 2])
+      ShowText(["\\n<Ilias>There's only one of me to listen to you two! Speak one at a time!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>Ummm, then..."])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>I'll go first."])
+    ShowTextAttributes(["kerberos_fc1", 2, 0, 2])
+    ShowText(["\\n<Caesar>........."])
+    ShowTextAttributes(["durahan_fc1", 2, 0, 2])
+    ShowText(["\\n<Arthur>........."])
+    ErasePicture([5])
+    ErasePicture([6])
+    PlayBGM(["RPG::BGM(@name=\"castle3\", @volume=100, @pitch=100)"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 383, 22, 34, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 383, 22, 34, 0, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 383, 22, 34, 0, 0])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>There are ruins to the northwest from here, on the other side of the mountain range... According to some old documents, they're called the \\C[17]Minotauros' Labyrinth\\C[0]."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>It is said that ferocious cow monsters roam about the place... That's just according to legend; in truth, it's really just an old tower."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["141"])
+    ShowTextAttributes(["mino_fc1", 0, 0, 2])
+    ShowText(["\\n<Mina>Are my fellow minotaurs there?\nWell, it's not like we have anything better to do."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mermaid>I'm a combat medic for Grand Noah's Fifth Regiment. Even now, I'm accepted as if I was born in Grand Noah."])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>I'm a glorious knight of Grand Noah's First Regiment!\nUnder the noble and beautiful Regiment Commander Arthur, I give everything I've got!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>The people in the Second Regiment amount to nothing but savages! Our regiment is Grand Noah's strongest!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["212"])
+    ShowTextAttributes(["durahan_fc1", 1, 0, 2])
+    ShowText(["\\n<Arthur>Hmm, I'll rely on you from now on."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Knight>Ha!"])
+    ExitEventProcessing([])
+    Label(["213"])
+    ShowTextAttributes(["kerberos_fc1", 2, 0, 2])
+    ShowText(["\\n<Caesar>Hmph..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["grizzly_fc1", 0, 0, 2])
+    ShowText(["\\n<Grizzly Girl>I'm from the Second Regiment!\nI hate how the First Regiment acts so high-and-mighty!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["212"])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>Good grief..."])
+    ExitEventProcessing([])
+    Label(["213"])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>Oh, I'll get you fired up!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Minister>Both the First Regiment and Second Regiment of our army are key divisions of our army, but... The two are also rivals, and it's worrisome they don't get along well."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Minister>They cooperate with each other just fine on the battlefield, but... They never stop arguing at strategy meetings."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["212"])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>I'm performing normally.\nCaesar is the one who snarls at me..."])
+    ExitEventProcessing([])
+    Label(["213"])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>Arthur is the one who keeps attacking me with false accusations. I guess she's jealous of our great efforts..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["orc_fc1", 0, 0, 2])
+    ShowText(["\\n<Orc Girl>The Second Regiment is savage...? Please call us brave! They just have to admit they're jealous of Regiment Commander Caesar!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["212"])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>You need a little more character..."])
+    ExitEventProcessing([])
+    Label(["213"])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>Oh, we'll go crazy!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>I am Arthur, Commander of Grand Noah's First Regiment. I was on the front lines for a long time, but the war council wanted me to return to the palace immediately."])
+    ConditionalBranch([4, 201, 0])
+      ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+      ShowText(["\\n<Ashel>As expected, you appear to be considerably skilled..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 203, 0])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Tatsuko>You look so strong!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>Naturally, I'm planning to participate in the Queen's Cup. I must inspire the troubled citizens with my swordsmanship."])
+    SetMoveRoute([20, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>Acting all heroic now, huh Arthur?\nI can't wait to break that sword and snobby attitude of yours."])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>Hmph, full of hot air as usual..."])
+    SetMoveRoute([20, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>Are you also competing in the tournament?\nYou seem to have some considerable ability judging from your appearance."])
+    ShowTextAttributes(["durahan_fc1", 1, 0, 2])
+    ShowText(["\\n<Arthur>I'll be looking forward to when we battle in the tournament... We shall fight each other bravely."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>I'm the Second Regiment's Commander, Caesar.\nI lead the bravest unit in Grand Noah."])
+    ConditionalBranch([4, 202, 0])
+      ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+      ShowText(["\\n<Bonnie>Mmm, you sound pretty strong..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 204, 0])
+      ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Stacy>Grand Noah's Second Regiment Commander Caesar...\nHer courageous reputation is known among marines."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>I can't remain silent while Arthur is participating in the Queen's Cup! I'll be participating as well to show the whole world which of us is superior."])
+    SetMoveRoute([19, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    ShowTextAttributes(["durahan_fc1", 0, 0, 2])
+    ShowText(["\\n<Arthur>Getting a little too competitive, aren't we...?\nAt best, you'll lose before you can even touch me."])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>Don't waste your breath, I'll throw all those words back at you!"])
+    SetMoveRoute([19, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>...that's not to say I'm on particularly bad terms with the First Regiment. Our differences in character give us many opportunities to clash in one way or another."])
+    ShowTextAttributes(["kerberos_fc1", 1, 0, 2])
+    ShowText(["\\n<Caesar>Besides, I can't fight an ally on the front lines. This tournament is just right for settling our dispute."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ConditionalBranch([1, 1052, 0, 5, 2])
+        ShowTextAttributes(["mino_fc1", 0, 0, 2])
+        ShowText(["\\n<Minotauros>Our commander is sure to win the tournament! Regiment Commander Arthur is going down!"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1052, 0, 6, 1])
+        ShowTextAttributes(["mino_fc1", 0, 0, 2])
+        ShowText(["\\n<Minotauros>You were amazing!\nConsider joining our regiment!"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ConditionalBranch([1, 1001, 0, 28, 2])
+        ShowTextAttributes(["mino_fc1", 2, 0, 2])
+        ShowText(["\\n<Minotauros>The Monster Lord is seriously starting a war...\nEven relations between monsters are being split into two camps..."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["mino_fc1", 2, 0, 2])
+      ShowText(["\\n<Minotauros>Those elves and fairies have held resentment towards humans all this time... I've heard this region was an elven territory a long time ago."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ConditionalBranch([1, 1052, 0, 5, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Knight>I'd consider the odds of Regiment Commander Arthur losing to Regiment Commander Caesar to be one in a million. The Queen's Cup will end with Arthur winning the championship."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1052, 0, 6, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Knight>Oh, hero Luka.\nYou're truly skilled to have defeated Regiment Commander Arthur..."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Knight>Since the Monster Lord's declaration of war, I've felt a sense of inferiority from the monsters. While it has not turned into contempt and discrimination, it's likely to affect the balance of power in this army."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Knight>I'm a human, but I've fought alongside the First Regiment with many monsters for a long time. I feel indignation towards these recent developments."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ConditionalBranch([1, 1052, 0, 5, 2])
+        ShowTextAttributes(["delh_a_fc1", 1, 0, 2])
+        ShowText(["\\n<Dark Elf>Regiment Commander Arthur is Grand Noah's strongest swordsman. She'll become the champion of the Queen's Cup."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1052, 0, 6, 1])
+        ShowTextAttributes(["delh_a_fc1", 2, 0, 2])
+        ShowText(["\\n<Dark Elf>To have defeated Regiment Commander Arthur...\nYour skills are great indeed."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ConditionalBranch([1, 1001, 0, 28, 2])
+        ShowTextAttributes(["delh_a_fc1", 2, 0, 2])
+        ShowText(["\\n<Dark Elf>The Monster Lord hasn't only declared war...\nIndeed, she was likely pulling the strings behind the war with Grangold as well..."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["delh_a_fc1", 2, 0, 2])
+      ShowText(["\\n<Dark Elf>Elves cannot live in this city anymore.\nOur reputation has diminished and everyone stares coldly at us."])
+      ShowTextAttributes(["delh_a_fc1", 2, 0, 2])
+      ShowText(["\\n<Dark Elf>I'm also resigning from the military, and have considered migrating to another land. After this war has ended, of course."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["316"])
+      ShowTextAttributes(["queenelf_fc1", 0, 0, 2])
+      ShowText(["\\n<Freya>A bond that has broken once does not recover easily...\nWhat have I done..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ConditionalBranch([1, 1052, 0, 5, 2])
+        ShowTextAttributes(["okami_fc1", 0, 0, 2])
+        ShowText(["\\n<Wolf Girl>Caesar is going to win the Queen's Cup in the end! Preparations for a congratulatory toast are already done!"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1052, 0, 6, 1])
+        ShowTextAttributes(["okami_fc1", 2, 0, 2])
+        ShowText(["\\n<Wolf Girl>I was betting on Caesar to win, but I lost big...\nBe sure to take responsibility..."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ConditionalBranch([1, 1001, 0, 28, 2])
+        ShowTextAttributes(["okami_fc1", 1, 0, 2])
+        ShowText(["\\n<Wolf Girl>I don't care about the little details surrounding the Monster Lord! I'll only fight the enemies of Grand Noah!"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["okami_fc1", 1, 0, 2])
+      ShowText(["\\n<Wolf Girl>I don't care about what those elves are saying!\nIt's my job to protect the people of Grand Noah!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Please go up the stairs ahead to have an audience with Her Majesty the Queen."])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Grand Noah is a country that coexists with nature.\nWe have more monster soldiers than any other country."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Although we don't compare to Grangold as of now....\nThe soldiers of that country consist of only ant girls and automatic dolls."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Grand Noah is a country that coexists with nature.\nWe have more monster soldiers than any other country."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Since the Monster Lord's declaration of war however, unrest has spread amongst the monsters in our army. Naturally, I believe they will fight for Grand Noah..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>We knew that Grangold excelled at magic science and have been sending autonomous dolls at us. But why on earth are ant girls also integrated into their forces...?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>Controlling ant girls should be impossible without their Queen. Perhaps Grangold has devised a method for controlling the Queen Ant."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>Or rather, Queen Ant is manipulating the King of Grangold..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>Perhaps it is the opposite...\nThe King of Grangold is being manipulated by the Queen Ant..."])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>Grangold was in the hands of the Monster Lord...\nIt is reassuring that we can join forces from now on."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>According to a spy's report...\nThere are research institutes equipped with sophisticated makina underneath Grangold."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>How did they acquire that technology?\nPerhaps the technology flowed in from the ruins of Remina..."])
+      ConditionalBranch([4, 41, 0])
+        ShowTextAttributes(["stein_fc2", 1, 0, 2])
+        ShowText(["\\n<Promestein>I would love to see it!"])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>Grangold's makina technology still remains outstanding.\nBut at one time, Remina's surpassed them."])
+      ConditionalBranch([4, 41, 0])
+        ShowTextAttributes(["stein_fc2", 0, 0, 2])
+        ShowText(["\\n<Promestein>Remina's advanced technology...\nAs I thought, I was involved in this world as well..."])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>Even among the citizens, war anxiety is spreading.\nThe number of people attending church has increased in recent years."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>This is the first time since the Great Disaster that the church has been bustling, but... In this context of war panic, I'm not exactly pleased to be honest."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>Ever since the Monster Lord's declaration of war, the number of churchgoers has continued to increase. This is an indication of public anxiety, and is definitely nothing to congratulate."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>The war with Grangold is still unfolding on the front lines. I'll be defending Her Majesty the Queen at her side."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>...If Grangold's soldiers march all the way here, it will mean the final days of Grand Noah. I'll make sure the pillow this castle dies on is one of battle."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ConditionalBranch([1, 1001, 0, 28, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>Currently, a state of high alert has been imposed across the entire territory. It pains me to say this, but we don't know where the next attack will come from..."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Right now, small-scale battles with the Monster Lord's army are sporadically taking place throughout the territory. There hasn't been a large-scale offensive on the capital since the last time..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>We don't know what will happen from now on.\nWe can't afford to relax at any moment."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>There are those among us who believe we're going to lose this great war, but... Now that Sabasa has returned to the alliance, we can turn this situation around."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>In addition, we also have Mephisto on our country's side.\nHer ingenuity will surely bring victory to Grand Noah!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ConditionalBranch([1, 1001, 0, 28, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>Mephisto's strategy and the hero Luka's strength have brought victory to our country. But now we're facing war with the Monster Lord's army..."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>My left arm was injured in the previous battle.\nI can't fight adequately like this..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>A custom has been made out of playing with defeated combatants at the Colosseum. I'm totally envious..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>No no, it's deplorable..."])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>In here, we look after our weapons..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>...How impolite of me, Mr. Hero.\nPlease come on in."])
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>The general public is currently prohibited from entering the royal palace... Only believers who have a definite background with the church may be permitted entry."])
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>You'll be among scholars in here.\nYou may enter, but please remain quiet..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["41"])
+    ShowTextAttributes(["stein_fc2", 1, 0, 2])
+    ShowText(["\\n<Promestein>I'm getting excited about what kind of research they're doing..."])
+    ExitEventProcessing([])
+    Label(["202"])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>This doesn't look very fun!\nI want to go to the Colosseum!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Minister>Magic Advisor Mephisto... I don't trust her at all..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Minister>...Excuse me. Please forget whatever you may have heard just now."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ConditionalBranch([1, 1001, 0, 28, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Minister>The day the Monster Lord wages war on us has arrived...\nIt feels as if we've gone back to the era of the hero Heinrich."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Minister>The opinions that monsters shouldn't be appointed to positions of military leadership have been on the rise. The pressure from the masses has been relentless these days..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ConditionalBranch([1, 1052, 0, 5, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>This is the soldiers' lounge.\nThe First and Second Regiment Commanders have just returned."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1052, 0, 6, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>This is the soldiers' lounge.\nIt's not a particularly fun place."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>I was fighting on the front lines up until last month...\nNow, I'm working in the castle."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Ant girl and automated doll soldiers...\nOh, how horrible it was..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ConditionalBranch([1, 1001, 0, 28, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>Just when I returned from the front lines, the situation changed completely... The future can be so unpredictable."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Just when I returned from the front lines, there's a massive raid on the capital... I don't have any time to rest my body."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>During the battle of Lima Bridge, a golem from the enemy nation appeared. An opponent that huge is impossible to oppose with ordinary soldiers."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>I've been reading through ancient books of magic to devise countermeasures. Since it's a creation of magic, it must have some weak point..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>I've picked out books from the era of the hero Heinrich. There may be hints to the Monster Lord's behavioral principles that will help us find countermeasures."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>Industries and academia are being mobilized to meet the demands for this war. I specialize in pharmaceutics, but was ordered to study in the medical field."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>Some scholars are opposed to this situation...\nI'm trying to do the best I can for the sake of my younger brother serving in the military."])
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>A seahorse marine unit was dispatched as reinforcements from the Navy. Their cute appearance soothes us."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["203"])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Tatsuko>I'd hoped you needed us for our fighting abilities..."])
+    ExitEventProcessing([])
+    Label(["204"])
+    ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+    ShowText(["\\n<Stacy>We'll help you unwind♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>This castle is really big!\nDoing patrols here is hard work!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["203"])
+    ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+    ShowText(["\\n<Tatsuko>We must each do our best for the Navy!"])
+    ExitEventProcessing([])
+    Label(["204"])
+    ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+    ShowText(["\\n<Stacy>Do your best! ♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>ZZZ..."])
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Noblewoman>Goddess, please lead our country to victory...\nAnd let my husband who was sent to the front lines return safely..."])
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>Once the Grangold army floods into this castle...\nI think I'll be spending more time praying to the Goddess."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ConditionalBranch([1, 1001, 0, 28, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Man>Once the Monster Lord's army floods into this castle...\nI think I'll be spending more time praying to the Goddess."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Man>My prayers have not reached the Goddess...\nAn army of elves has overrun the city..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Man>My grandchild who went off to war got sent to heaven before me... How cruel the Goddess can be..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["86"])
+    ShowTextAttributes(["name_s_fc1", 0, 0, 2])
+    ShowText(["\\n<Rosary>Goddess, grant this brave warrior a peaceful rest..."])
+    ExitEventProcessing([])
+    Label(["122"])
+    ShowTextAttributes(["sisterlamia_fc1", 2, 0, 2])
+    ShowText(["\\n<Sofia>How unfortunate...\nI pray he finds happiness in the next world."])
+    ExitEventProcessing([])
+    Label(["123"])
+    ShowTextAttributes(["sisccubus_fc1", 0, 0, 2])
+    ShowText(["\\n<Christie>Please find peace in heaven..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Woman>I will never forget the atrocities that occurred in Lima Village... Goddess, cast your divine judgment upon Grangold..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Woman>Should we really let the king off just because he was being manipulated...? I cannot forget what those Grangold brutes did to Lima Village..."])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Label(["535"])
+      ShowTextAttributes(["grangold_fc2", 0, 0, 2])
+      ShowText(["\\n<King of Grangold>I understand the onus lies with me..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>I'll be heading to the front lines next month.\nGoddess, grant me your protection..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>I've been guarding the castle for quite some time, but...\nI can't help but feel uneasy about what will happen next."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>We're going to lose this war anyhow.\nWe're all going to get captured by the ant girls and sexually violated."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Oh, I can't take it anymore...\n...Ulp!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ConditionalBranch([1, 1001, 0, 28, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>We're going to lose this war anyhow.\nWe're all going to get captured by the Monster Lord's army and sexually violated."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>Oh, I can't take it anymore...\n...Ulp!"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>We're going to lose this war anyhow.\nWe're all going to get captured by the elves and sexually violated."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Oh, I can't take it anymore...\n...Ulp!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ConditionalBranch([1, 1052, 0, 5, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>There are some people opposed to holding a fighting tournament under these circumstances... On the other hand, wouldn't the masses erupt with disgruntlement if we discontinued it?"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1052, 0, 6, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>The fighting tournament was a great success.\nEven during wartime, entertainment is necessary."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ConditionalBranch([1, 1001, 0, 28, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Guard>Anxiety is also spreading amongst the citizens.\nWhat could the Monster Lord be plotting..."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Prejudice against monsters has been gradually spreading, even in Grand Noah. Our soldiers understand that their comrades are monsters..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>It appears this isn't necessarily the case among politicians and the general public. The other day, a bill to reduce the number of monster officers was proposed."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>We cannot let the tragedy of Lima Village repeat itself...\nIn that respect, our thoughts are in agreement."])
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ConditionalBranch([1, 1061, 0, 0, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>A battle between monsters has been confirmed at Plansect Village. Until just a little while ago, that place was in a state of calm... What happened there?"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1061, 0, 1, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>It appears that the feud in Plansect Village has ended.\nThere are all sorts of disputes, even among monsters..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>There are sprawling caverns beneath Undine's Spring.\nThey appear to be the home of the Slime race."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["53"])
+    ShowTextAttributes(["slime_fc1", 0, 0, 2])
+    ShowText(["\\n<Lime>I have lots of friends♪"])
+    ExitEventProcessing([])
+    Label(["54"])
+    ShowTextAttributes(["bunnyslime_fc1", 2, 0, 2])
+    ShowText(["\\n<Bunni>I'm a rabbit, so it doesn't matter to me."])
+    ExitEventProcessing([])
+    Label(["110"])
+    ShowTextAttributes(["slimelord_fc1", 0, 0, 2])
+    ShowText(["\\n<Bess>Yaaay, let's go and visit!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Minister>I managed to preserve the front near Lima Village somehow, but... Human casualties have increased exponentially, and we're in dire straits."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Minister>Even with the reinforcements from Sabasa and San Ilia, we cannot turn this situation around. In the event of a war of attrition, this country will not hold out..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ConditionalBranch([1, 1001, 0, 28, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Minister>Since I'm a civil official and not a soldier, I've been thinking about how to finally bring an end to war. However, the Monster Lord has openly called for the extermination of humans..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Minister>What kind of negotiations would even be feasible with such opponents? Sometimes, politics can be powerless..."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Minister>War should be one of the means of politics.\nBut this situation has demonstrated that we're now in a struggle for our survival."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Knight>We must wage a decisive battle while we still have enough resources in this country. With the relentless exhaustion of soldiers, it will become more disadvantageous as time passes by."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Knight>However, it's unlikely we'll come out victorious if we face the enemy head-on. We need to come up with a strategy that could turn this hopeless situation around..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ConditionalBranch([1, 1001, 0, 28, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Knight>We blitzkrieged the enemy capital with the military strength of our elite troops... You and Mephisto are both truly magnificent to have been this successful."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Knight>However, our next opponent is the Monster Lord...\nIt's just like the return of the crisis from 500 years ago."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Knight>The capital somehow managed to weather the assault this time. But the damage here was tremendous, and the situation still remains bad."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Knight>I guess you're the one the higher-ups in the military are placing their hopes in. While I'd like to see a hero subdue the Monster Lord similar to the legends, it seems like wishful thinking."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["datyou_fc1", 3, 0, 2])
+      ShowText(["\\n<Ostrich Girl>With my ostrich kick, I'll fight Grangold's army!"])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ShowTextAttributes(["datyou_fc1", 3, 0, 2])
+      ShowText(["\\n<Ostrich Girl>With my ostrich kick, I'll fight the Monster Lord's army!"])
+      Script(["actor_label_jump"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Label(["148"])
+    ShowTextAttributes(["datyou_fc1", 3, 0, 2])
+    ShowText(["\\n<Miu>Let's do our best, ostrich comrades!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 57
+Name = "EV057"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Nobleman>The most famous work of the mysterious artist Fir'almo, \"Smiling Lady\"...Oh, it's so magnificent..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Nobleman>Although I've heard rumors of other works in the series, known as \"Angry Lady\" and \"Shy Lady\"... They have yet to appear in public."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["19"])
+    ShowTextAttributes(["arumaeruma_fc2", 0, 0, 2])
+    ShowText(["\\n<Alma Elma>(I wasn't satisfied with \"Shy Lady\"...\nI wonder if I should paint it once more from the beginning?)"])
+    ExitEventProcessing([])
+    Label(["181"])
+    ShowTextAttributes(["gaistvine_fc1", 0, 0, 2])
+    ShowText(["\\n<Lisa>It is indeed a wonderful painting...\nThe lasciviousness lurking behind the nobility is just like a spice..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 58
+Name = "EV058"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Minister>Luv Manitã's signature song \"Night\"... It's absolutely wonderful. They're apparently a female composer, but nobody knows her true identity. I'm eagerly awaiting news of her next composition."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["19"])
+    ShowTextAttributes(["arumaeruma_fc2", 0, 0, 2])
+    ShowText(["\\n<Alma Elma>(My next composition... I don't have any inspiration these days.)"])
+    ExitEventProcessing([])
+    Label(["59"])
+    ShowTextAttributes(["mdg_fc1", 0, 0, 2])
+    ShowText(["\\n<Ragora>A really good song... I wonder if I should try singing it a little."])
+    ExitEventProcessing([])
+    Label(["155"])
+    ShowTextAttributes(["saki_fc1", 0, 0, 2])
+    ShowText(["\\n<Saki>Classical music is outside my comfort zone, but...\nI can feel an amazing pathos from this song♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 59
+Name = "EV059"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>Are you familiar with the legend of the \\C[17]royal family's blood\\C[0]? Within the blood of the royal family sleeps a mighty power inherited from ancient times."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>It has yet to be proven true by magic science, but...\nOnce we became aware of the King of Grangold's superhuman strength, we've been investigating this legend more thoroughly."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>Particularly among the Gold royal family, their founder, the \\C[17]Magic King\\C[0], was incredibly famous. There have been rumors and gossip that the current King of Grangold is the second coming of the Magic King."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>It is my responsibility as a scholar to refute these rumors with justifiable logic. It's not going very well, and I've become keenly aware of my own powerlessness."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["535"])
+    ShowTextAttributes(["grangold_fc2", 0, 0, 2])
+    ShowText(["\\n<King of Grangold>Is there any research on a way to return me back to normal...?"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 60
+Name = "EV060"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>Be quiet, calm your mind, and pray to the Goddess..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ConditionalBranch([1, 1001, 0, 28, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Old Man>The war against the Monster Lord has begun...\nIlias, save us..."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Man>Oh, Grand Noah is under attack...\nIlias, please save us..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 61
+Name = "EV061"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Minstrel>If the melodies I play can soothe people even a little..."])
+    Empty([])
+
+CommonEvent 62
+Name = "EV062"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>Old people can't help turning to the Goddess for help..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ConditionalBranch([1, 1001, 0, 28, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Youth>If you pray to the Goddess in some way, the church will become more prosperous..."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Youth>I want to pray to the Goddess too..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 63
+Name = "EV063"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 25, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Noble Girl>I hope this war will end soon..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 26, 1])
+      ConditionalBranch([1, 1001, 0, 28, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Noble Girl>Why is the Monster Lord challenging humans to a fight? Shouldn't humans and monsters be coexisting...?"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Noble Girl>Elves and fairies have a deep hatred towards us.\nWhat on earth are they mad at us for...?"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 64
+Name = "EV064"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>There are six kinds of status abnormalities that can be cured with white magic: Poison, blind, confusion, silence, sleep, and paralysis."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>Therefore, Cure will not work for minimum, petrified, zombie, and so forth. Similarly, it will have no effect on pleasure-based status abnormalities such as trance and seduction."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>If you have a mermaid or plant-based monster who is skilled at healing however... They will learn skills that can even cure those status abnormalities as they grow."])
+    Empty([])
+
+CommonEvent 65
+Name = "EV065"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Minister>This red carpet was purchased at \\C[17]Sheep's Forest\\C[0].\nIt is among the highest quality items in the royal palace."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Minister>Where is \\C[17]Sheep's Forest\\C[0]?\nIt is located on a small island west of the Navy Headquarters, but there's no point in going there except when you need a carpet."])
+    Empty([])

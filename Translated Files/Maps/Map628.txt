@@ -1,0 +1,116 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ControlSwitches([11, 11, 1])
+    FadeinScreen([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>......"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Was that a dream? Or maybe..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I remembered it as if I had experienced it myself. And yet it never happened."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>To think mom was an angel..."])
+    ConditionalBranch([12, "actor_class_level_over?(1, 362, 1)"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Upon learning this truth, a hidden power awakens inside of Luka."])
+      PlaySE(["RPG::SE(@name=\"Saint7\", @pitch=100, @volume=80)"])
+      Script(["set_class_level(1, 362, 1, false, true)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka has become a Lowly Angel!"])
+      Empty([])
+
+    BranchEnd([])
+    Wait([30])
+    SetMoveRoute([1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Still. What on earth happened?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["We were attacked by an Armored Berserker in the Forest of Spirits. I can remember being at my wit's end, and then I was defeated."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But how did I survive that? There is not even a scratch on my body anymore..."])
+    PlayBGM(["RPG::BGM(@name=\"scene_epilogue2\", @volume=100, @pitch=100)"])
+    ControlSwitches([11, 11, 0])
+    SetMoveRoute([1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    SetMoveRoute([3, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>So you're awake. Looks like we were rescued by that self-proclaimed Alipheese the 17th."])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>I remember Nero being there too, but I lost consciousness after seeing him. To think we would be saved by those two, how shameful."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>So you have awoken, Luka. It seems as if we were saved by Alipheese the 17th."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Apparently Nero was there as well, but I lost my consciousness as well so I don't know the details. In any case, it looks like those two saved us."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Really? We keep being saved by those two, don't we?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>I think they're up to something. Also, what on earth is an Armored Berserker?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I don't know. I've never seen anything like it."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>But the fact remains that we don't know why they keep saving us. And what happened to Heinrich?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Heinrich. As in the legendary hero, Heinrich?"])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>No... It doesn't matter, I'm just talking to myself."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Still, we managed to complete our objective. I contracted with Sylph, after all."])
+    CallCommonEvent([306])
+    FadeoutScreen([])
+    FadeoutBGM([1])
+    Wait([120])
+    ChangeTransparency([1])
+    ChangePlayerFollowers([0])
+    ChangeMapDisplay([1])
+    ControlVariables([21, 21, 0, 0, 2])
+    ControlVariables([22, 22, 0, 0, 236])
+    ControlVariables([23, 23, 0, 0, 261])
+    TransferPlayer([0, 228, 24, 34, 2, 2])
+    FadeinScreen([])
+    Script(["gain_medal(23)"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])

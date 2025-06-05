@@ -1,0 +1,72 @@
+Display Name = ""
+Parallax Name = "BlueSky"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"mon_fall3\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["うわぁぁぁぁぁ……！！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["2万メートル以上の上空から、地上へと降下する――"])
+    ShowText(["その速度と風圧は、予想をはるかに上回る凄まじさだった。"])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["よし……来い、ガルダ！！"])
+    ShowTextAttributes(["galda_fc1", 1, 0, 2])
+    ShowText(["【ガルダ】"])
+    ShowText(["くぇぇっ！"])
+    PlaySE(["RPG::SE(@name=\"Wind1\", @pitch=100, @volume=80)"])
+    ControlSwitches([31, 31, 0])
+    SetMoveRoute([3, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=14, @parameters=[-12, 2])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[-12, 2])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    SetMoveRoute([1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["飛来したガルダが、ルカ達を背に受け止める！"])
+    ShowText(["そのままガルダは、一気に降下していった――"])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["行けぇぇぇぇ！！"])
+    ConditionalBranch([4, 754, 0])
+      ShowTextAttributes(["coatlus_fc1", 3, 0, 2])
+      ShowText(["【ケツァルコァトル】"])
+      ShowText(["この高度からの降下は、流石に私も初めてよ！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 755, 0])
+      ShowTextAttributes(["tezcatlipoca_fc1", 5, 0, 2])
+      ShowText(["【テスカトリポカ】"])
+      ShowText(["これ、楽しいニ　ャ　ァ　ァ　　ァ　　ァ　　ァ"])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Wind1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([3, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=14, @parameters=[0, 9])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, 9])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    FadeoutScreen([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["そのまま僕達は、一気に魔王城へと突入した――"])
+    Wait([60])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    TransferPlayer([0, 862, 8, 19, 6, 2])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])

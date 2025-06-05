@@ -1,0 +1,28 @@
+CommonEvent 7000
+Name = "共通：BF敗北"
+
+  999([7000])
+  Script(["$game_library.count_up_battlefuck_lose"])
+  ControlVariables([905, 905, 1, 0, 1])
+  PlaySE(["RPG::SE(@name=\"Down3\", @pitch=100, @volume=80)"])
+  ControlSwitches([98, 98, 1])
+  ChangeState([0, 1, 1, 1])
+  ControlSwitches([96, 96, 1])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["Luka was bested by the battle fucker..."])
+  ConditionalBranch([1, 905, 0, 1, 1])
+    Script(["gain_medal(1421)"])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 905, 0, 30, 1])
+    Script(["gain_medal(1422)"])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 905, 0, 50, 1])
+    Script(["gain_medal(1423)"])
+    Empty([])
+
+  BranchEnd([])
+  Empty([])

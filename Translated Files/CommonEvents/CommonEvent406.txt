@@ -1,0 +1,27 @@
+CommonEvent 406
+Name = "Angelic Dominion Grangold"
+
+  999([406])
+  ConditionalBranch([1, 1141, 0, 30, 1])
+    ConditionalBranch([1, 1141, 0, 60, 2])
+      ShowTextAttributes(["alice_fc1", 3, 0, 2])
+      ShowText(["\\n<Alice>Grangold is still under Sariela's control.\nGoing back there now would be like trying to get yourself captured again."])
+      ShowText([""])
+      ShowText([""])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 1141, 0, 61, 1])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 605, 47, 58, 8, 0])
+    Empty([])
+
+  BranchEnd([])
+  Empty([])

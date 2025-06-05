@@ -1,0 +1,75 @@
+CommonEvent 500
+Name = "Collab: Demonic Castle Crystal"
+
+  999([500])
+  PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+  FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+  RecoverAll([0, 0])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["The party's HP and MP have been fully recovered!"])
+  ConditionalBranch([1, 1210, 0, 0, 0])
+    ShowChoices([["Organize Party", "Never Mind"], 2])
+    When([0, "転職・転種を行う"])
+      Script(["SceneManager.call(Scene_JobChange)"])
+      Wait([1])
+      RecoverAll([0, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "何もしない"])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 1210, 0, 1, 1])
+    Script(["unlimited_choices(11, [\"Change Jobs and Races\","])
+    ScriptMore(["\"Change Party Members\","])
+    ScriptMore(["\"Register/Call Party\","])
+    ScriptMore(["\"Item Storage\", "])
+    ScriptMore(["\"Never mind\"])"])
+    ConditionalBranch([1, 11, 0, 0, 0])
+      Script(["SceneManager.call(Scene_JobChange)"])
+      RecoverAll([0, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 1, 0])
+      GatherFollowers([])
+      ChangeState([0, 1, 1, 1])
+      Script(["call_party_edit"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 2, 0])
+      ShowChoices([["Call registered party", "Register party", "Do nothing"], 3])
+      When([0, "登録したパーティを呼び出す"])
+        Script(["SceneManager.call(Scene_PartyLoad)"])
+        Empty([])
+
+      When([1, "パーティを登録する "])
+        Script(["SceneManager.call(Scene_PartySave)"])
+        Empty([])
+
+      When([2, "やめる"])
+        ExitEventProcessing([])
+        Empty([])
+
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 3, 0])
+      Script(["SceneManager.call(Scene_Storehouse)"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  Empty([])

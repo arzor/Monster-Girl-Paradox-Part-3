@@ -1,0 +1,260 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 47, 21, 10, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 47, 36, 13, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 47, 13, 22, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 47, 34, 23, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 47, 19, 32, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ControlVariables([1035, 1035, 1, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>This shop used to be the local tool store, so I've arranged most of its stock on this table. Strangely enough, it was well organized before we got here."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>According to this list of goods, no items are missing. If they left of their own free will, they should have brought at least some of these things with them."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>We investigators rest here as it used to be the village inn."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>Would you like to rest here as well?"])
+    ShowChoices([["Yes", "No"], 2])
+    When([0, "Yes"])
+      FadeoutScreen([])
+      PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+      Wait([150])
+      RecoverAll([0, 0])
+      FadeinScreen([])
+      Empty([])
+
+    When([1, "No"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ControlVariables([1035, 1035, 1, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>The villagers who disappeared didn't leave any messages behind, except this one line. But it's unclear in its meaning."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The letter is written with beautiful penmanship..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"We set off to the world of God.\""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>I wonder what \"We set off to the world of God.\" means. Some of the other investigators suggest mass suicide..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>I don't think all of the villagers would just commit suicide. There would be people who resist and oppose that."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>And why have they only left this cryptic note behind? Did they want to avoid conveying to other people where they were going?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>Of course, the villagers from here had plenty of relatives and acquaintances outside of Rubiana. Why would they not let them know where they were going?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>It can't have been due to a lack of time. The residents of every house had cleaned up before leaving."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>If they had the time for that, why couldn't they have left any clear message or let their relatives know... Good grief, nothing about this village makes sense."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ControlVariables([1035, 1035, 1, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>The strange thing is, the inhabitants left all their belongings behind."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>Not just their money and daily necessities, but even food and medicine. If they meant to travel elsewhere, why would they leave all of their stuff behind?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>Where on earth have they gone and why did they leave all of their belongings?"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ControlVariables([1035, 1035, 1, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>As you can see, there is no evidence of fighting or property damage. There is, however, lots of evidence that the villagers left out of their own free will."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>But where have they gone? To think such a large number of people would disappear without notice and nobody else realized for so long."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>It seems as if they disappeared like smoke in the air. I wonder what happened..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([32, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([335, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([176, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([188, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>This household looks like it kept a dog, but there's no sign of that dog anymore."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>Similarly, the other households also have missing pets and livestock. I wonder if the villagers took them along..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["60"])
+    ShowTextAttributes(["dog_fc1", 0, 0, 2])
+    ShowText(["\\n<Pochi>Did doggies also disappear?"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>I know it sounds strange, but every house seems too clean. It looks as if they organized everything exactly as it should be before leaving the village."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Investigator>They dispose of the raw ingredients, they clean the kitchens to perfection, and then every one of the villagers disappears after they finish cleaning. Seriously?"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([36, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

@@ -1,0 +1,1808 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 12, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Male Weapon Vendor>Oh, welcome to the \\C[17]World Merchant\\C[0]! We might be running low on inventory on account of the storm, but this store has been in my family for generations, and we ain't going down any time soon."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 13, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Male Weapon Vendor>Welcome to the \\C[0]World Merchant\\C[0]! This store has been passed down my family line for generations!"])
+      Empty([])
+
+    BranchEnd([])
+    ShopProcessing([1, 6, 0, 0, false])
+    ShopItem([1, 58, 0, 0])
+    ShopItem([1, 193, 0, 0])
+    ShopItem([1, 209, 0, 0])
+    ShopItem([1, 365, 0, 0])
+    ShopItem([1, 402, 0, 0])
+    ShopItem([1, 441, 0, 0])
+    ShopItem([1, 476, 0, 0])
+    ShopItem([1, 556, 0, 0])
+    ShopItem([1, 661, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Female Armor Vendor>Welcome to the \\C[17]World Merchant\\C[0]! Feel free to examine our wide selection of armor."])
+    ShopProcessing([2, 20, 0, 0, false])
+    ShopItem([2, 56, 0, 0])
+    ShopItem([2, 123, 0, 0])
+    ShopItem([2, 148, 0, 0])
+    ShopItem([2, 183, 0, 0])
+    ShopItem([2, 193, 0, 0])
+    ShopItem([2, 234, 0, 0])
+    ShopItem([2, 274, 0, 0])
+    ShopItem([2, 280, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 140, 3, 11, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 140, 4, 11, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 140, 3, 37, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 140, 4, 37, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 139, 22, 31, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 139, 34, 14, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 139, 33, 25, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 139, 12, 33, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 139, 34, 38, 0, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>Oh, welcome to the \\C[17]World Merchant\\C[0]! The store has been in the family for generations, and I'm next in line to inherit it. For right now, leave synthesis to me."])
+    Script(["call_synthesize(7)"])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Shopkeeper>Welcome, although our stocks are beginning to run low."])
+    ShopProcessing([0, 1, 0, 0, false])
+    ShopItem([0, 11, 0, 0])
+    ShopItem([0, 13, 0, 0])
+    ShopItem([0, 14, 0, 0])
+    ShopItem([0, 15, 0, 0])
+    ShopItem([0, 17, 0, 0])
+    ShopItem([0, 23, 0, 0])
+    ShopItem([0, 35, 0, 0])
+    ShopItem([0, 101, 0, 0])
+    CallCommonEvent([277])
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shopkeeper>As you know, the storm is blocking trade so my inventory has been hit hard."])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+        ShowText(["\\n<Sonya>Really? The other shops seemed to have decent stocks."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Really? The other shops seem to be doing fine."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shopkeeper>We used to have much more than this. Heck, before this, our shop was the best on the entire continent."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shopkeeper>The last time I was in Port Natalia was at least a year ago. I miss the Mermaid Pub so much. I wonder how that mermaid Mana is doing..."])
+      SetMoveRoute([14, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shopkeeper's Wife>Please, keep going. I want to hear all about this Mana."])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shopkeeper>I-I... Uhhhh well I-I..."])
+      FadeoutScreen([])
+      PlaySE(["RPG::SE(@name=\"Damage2\", @pitch=100, @volume=80)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shopkeeper>Gyaaaaaaaa...!!"])
+      SetMoveRoute([14, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+      Wait([30])
+      FadeinScreen([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 12, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shopkeeper's Wife>The ships aren't sailing, but we have a good choice of accessories. Since accessories are expensive and thieves can steal them from wild monster girls, we don't go through a lot of our inventory."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 13, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Shopkeeper's Wife>Welcome, we have great accessories!"])
+      Empty([])
+
+    BranchEnd([])
+    ShopProcessing([2, 1054, 0, 0, false])
+    ShopItem([2, 1723, 0, 0])
+    ShopItem([2, 1725, 0, 0])
+    ShopItem([2, 1730, 0, 0])
+    ShopItem([2, 1732, 0, 0])
+    ShopItem([2, 1733, 0, 0])
+    ShopItem([2, 1735, 0, 0])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>I saw a fox on the outskirts of town. I was really surprised, I wasn't even that far away from town. I step out of the city limit for a bit and bam, it's just there."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>All foxes should just end up in a hot pot."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Alice, do you hate foxes?"])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>Yeah. Only a bit though."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>......"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<City Girl>Captain Selene, she was one of the most legendary, I mean, infamous pirates ever. She ruled over hundreds of violent men with an iron fist like she ruled over the seas."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<City Girl>However, apparently news of her pirate ship just stopped one day. She was in the middle of her journey and any traces of her vanished. Most say a storm or monsters got her."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<City Girl>Her last voyage is shrouded in mystery. Apparently she was looking for some special treasure or something. Some say she went missing because she found the treasure. Cursed treasure and all that."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<City Girl>I'm not obsessed with pirates or anything. I just kinda think the stories are cool."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Facing Young Man>You clearly aren't obsessed. You are just a walking encyclopedia of everything pirate."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["118"])
+    ShowTextAttributes(["meia_fc1", 2, 0, 2])
+    ShowText(["\\n<Meia>Well, it certainly is interesting♪"])
+    ExitEventProcessing([])
+    Label(["144"])
+    ShowTextAttributes(["saboresu_fc1", 0, 0, 2])
+    ShowText(["\\n<Sunny>I want to become a pirate tooo♪"])
+    ExitEventProcessing([])
+    Label(["202"])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>I'm going to carve my name into history, too!"])
+    ExitEventProcessing([])
+    Label(["536"])
+    ShowTextAttributes(["serene_fc1", 4, 0, 2])
+    ShowText(["\\n<Selene>Fufu... let's keep it a secret that Selene is right in front of her."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Books about pirates are lined up next to one another."])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Warrior>The monsters in this area are the strongest on the entire Ilias Continent. We're the farthest away from the temple, so it's to be expected."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Warrior>And as you go north, monsters get stronger and stronger. As you would expect with this logic, the Monster Lord's Castle should be at the northernmost point, and it is. It's on Hellgondo."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["93"])
+    ShowTextAttributes(["liot_fc1", 1, 0, 2])
+    ShowText(["\\n<Riot>Fufu, my body is itching for a fight."])
+    ExitEventProcessing([])
+    Label(["95"])
+    ShowTextAttributes(["delh_a_fc1", 0, 0, 2])
+    ShowText(["\\n<Lona>Stronger monsters are better for training."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 12, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Traveling Elf>With ships not leaving, I'm stuck here for the time being. I don't know what monster would be inconsiderate enough to stop a trading lane, but she clearly lacks any common decency."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Traveling Elf>Still, a storm strong enough to sink ships... She must be a very strong monster."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Traveling Elf>To get rid of a succubus strong enough to sink ships, there are some amazing adventures out there."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>It's not like we defeated her. That angel must have scared her off."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>It's not like we defeated her. That strange angel must have forced the foul succubus to flee with her tail between her legs."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 30, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Traveling Elf>For all of the four great powers to be attacked by the Monster Lord's army at the same time... I think I'll just stay here for a while."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ConditionalBranch([1, 1001, 0, 12, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Swordsman>Good grief, this is some bad news. Apparently a sailor who survived his ship sinking saw a succubus controlling the storm."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Swordsman>Even for me, fighting a succubus that powerful would be near impossible. Still, why is she even doing this?"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>A storm strong enough to sink ships. Alma Elma, what are you doing?"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>A storm strong enough to sink a ship, you say? The only suspect would be the Monster Lord's obscene lackey, Alma Elma."])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 29, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Swordsman>Finally, the storm has passed. I can finally go to Sentora."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 30, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Old Swordsman>I was low on funds, so my voyage to Sentora kept being delayed, but... with what's going on over there lately, it seems it was for the best."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Soldier Customer>The blacksmith here is young but very skilled. From what I've heard, he was an apprentice to a kitsune smith from Yamatai, and that's where he learned to make armor and weapons with the earth element."])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Innkeeper>The price is 10G, are you going to stay?\\$"])
+    ShowChoices([["Yes", "No"], 2])
+    When([0, "Yes"])
+      ConditionalBranch([7, 10, 0])
+        ChangeGold([1, 0, 10])
+        FadeoutScreen([])
+        PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+        Wait([150])
+        RecoverAll([0, 0])
+        FadeinScreen([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Innkeeper>Oh my, you don't have enough money..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    When([1, "No"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Medical Scientist>This is troubling. The \\ni[512] stockpile is running out. It's an important supplement to the medicine we give our patients."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Medical Scientist>You guys are adventurers, right? If you happen to find some \\ii[512], would you give it to me?"])
+    ShowChoices([["Yes", "No"], 2])
+    When([0, "Yes"])
+      ConditionalBranch([8, 512])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Medical Scientist>Ohh, you'll give it to me?! Thank you very much!"])
+        ChangeItems([512, 1, 0, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Luka gave the \\ni[512] to the Medical Scientist!"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Medical Scientist>Give me a moment and I'll grant you a university permit. With this you should be able to go to the upper floors."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Medical Scientist>If you need something then please, just ask me. I'll do my best to assist you however I can."])
+        ControlSwitches([2063, 2063, 0])
+        ExitEventProcessing([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Medical Scientist>Is that so, thank you, that would be a great help. An elven healer should be able to mix \\ni[512]."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Medical Scientist>Speaking of which, I heard there's a hidden village of elves beyond the Lost Woods. How about you try visiting them."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Medical Scientist>I can't give you much as thanks, but if you get it for me, I'll give you a permit for entering the university."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Medical Scientist>Please, if you could."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    When([1, "No"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Medical Scientist>It's a medicine that's only used to supplement treatments done by medical researchers. It's of no use to you or the general public, so you can't sell it either."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Medical Scientist>I can't give you much as thanks, but if you get it for me, I'll give you a permit for entering the university."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Medical Scientist>Please, I really need this."])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Medical Scientist>If you need something then please, just ask me. I'll do whatever I can do to help."])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ConditionalBranch([0, 2061, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Student>Our professor is very arrogant, he bullies us, and apparently sexually harasses female students. He's hated by everyone, but everyone keeps it to themselves."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Student>I wonder if there's a way to outwit him? It would be great if someone beat him at his own game. I mean in an argument, not at bullying and sexually harassing the students."])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Student>Ahh, it was really thrilling to see that professor get taken down a peg."])
+      ConditionalBranch([4, 41, 0])
+        ShowTextAttributes(["stein_fc2", 0, 0, 2])
+        ShowText(["\\n<Promestein>No, it might have been a little childish of me."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["\\n<Student>By the way, can I cum on your glasses sometime?"])
+        ShowTextAttributes(["stein_fc2", 0, 0, 2])
+        ShowText(["\\n<Promestein>Put your semen samples in this test tube. There's lots of uses for it, such as feed for experimental organisms."])
+        ConditionalBranch([1, 1142, 0, 62, 2])
+          ConditionalBranch([0, 6, 0])
+            ShowTextAttributes(["sonia_fc3", 0, 0, 2])
+            ShowText(["\\n<Sonya>(This student definitely comes from Pornof. I wonder if anyone will notice if he goes missing?)"])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ConditionalBranch([1, 1019, 0, 1, 2])
+      ShowTextAttributes(["mob_gakusya1_fc1", 0, 0, 2])
+      ShowText(["\\n<Fizz>What is it? I'm busy writing a report right now. How about later?"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 810, 0, 2, 1])
+      ConditionalBranch([0, 1553, 1])
+        ShowTextAttributes(["mob_gakusya1_fc1", 0, 0, 2])
+        ShowText(["\\n<Fizz>Can I join you as well? It feels like my research will advance that way."])
+        ShowChoices([["Let her join", "Decline for now"], 0])
+        When([0, "Let her join"])
+          ShowTextAttributes(["mob_gakusya1_fc1", 0, 0, 2])
+          ShowText(["\\n<Fizz>Please take care of me. I'll do my best."])
+          ErasePicture([5])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(553)"])
+          PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Fizz joined the party!"])
+          Wait([60])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "Decline for now"])
+          ShowTextAttributes(["mob_gakusya1_fc1", 0, 0, 2])
+          ShowText(["\\n<Fizz>Is that so? Someone like me will be just a burden then..."])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([7091])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Magic Sciences Laboratory"])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 140, 68, 32, 0, 0])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 140, 69, 32, 0, 0])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 140, 70, 32, 0, 0])
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Archives and Warehouse"])
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Student>Nightingale from the medical faculty is strangely erotic. Nurses like that raise my blood pressure."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["73"])
+    ShowTextAttributes(["hiru_fc1", 0, 0, 2])
+    ShowText(["\\n<Hiru>How about I suck it out for you?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Student>Semen is one thing, but spare my blood."])
+    ExitEventProcessing([])
+    Label(["166"])
+    ShowTextAttributes(["narcubus_fc1", 0, 0, 2])
+    ShowText(["\\n<Nabisu>That's no good, I'll have to give you an injection♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Meteorology and Geology Laboratory"])
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Medical Laboratory"])
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 140, 68, 62, 0, 0])
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 140, 69, 62, 0, 0])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 140, 70, 62, 0, 0])
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Question: let's say you have a sword imbued with the wind element and attack a kitsune, which are weak to wind."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>What would happen in comparison to an attack with a normal sword?"])
+    ShowChoices([["The damage would increase", "The damage wouldn't change", "Don't know"], 3])
+    When([0, "The damage would increase"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Exactly, damage increases when you attack with an element the enemy is weak against. Well, that's obvious though."])
+      Empty([])
+
+    When([1, "The damage wouldn't change"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Hey, hey, this is the basic of the basics. If you attack an enemy with an element they are weak against, the damage will increase."])
+      Empty([])
+
+    When([2, "Don't know"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Hey, hey, this is the basic of the basics. If you attack an enemy with an element they are weak against, the damage will increase."])
+      Empty([])
+
+    ChoicesEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Similarly, let's say you attack a harpy that halves the wind damage with your wind sword."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>...What would happen in comparison to an attack with a normal sword?"])
+    ShowChoices([["The damage would halve", "The damage wouldn't change", "Don't know"], 3])
+    When([0, "The damage would halve"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>You'd think so, but that's actually wrong. In fact, the correct answer is that damage wouldn't change when you use a normal sword."])
+      Empty([])
+
+    When([1, "The damage wouldn't change"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Ohh, so you know. In that case, there's no point in me explaining."])
+      Empty([])
+
+    When([2, "Don't know"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>In that case, remember this: the damage wouldn't change from when you use a normal sword."])
+      Empty([])
+
+    ChoicesEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Let's think about it in more detail. A sword imbued with wind counts as both wind and physical elemental."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>That's why even if an enemy is resistant to wind, the physical element deals normal damage to them. A sword filled with an extra element never gets a damage decrease."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>You can see many misunderstand this in the world out there, but elemental weapons also deliver good attacks to resistant enemies."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>However, there are a few exceptions. Attacks with a harp don't have a physical element and are purely sonic element."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Therefore, it's hard to damage an enemy resistant to sonic with a harp. When equipped with a harp, you should be careful of mermaid-type enemies who have resistance to sonic."])
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 140, 69, 5, 0, 0])
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 140, 70, 5, 0, 0])
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 140, 69, 33, 0, 0])
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Biological Laboratory"])
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 140, 69, 33, 0, 0])
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 140, 69, 33, 0, 0])
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>Hm, you want to visit my laboratory? None of you look like scholars to me."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>Listen, truth is a concept bestowed by the Goddess. Those who don't know that are merely pebbles by the road."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>In fact, I once succeeded in synthesizing Remeton Magic Pillars. Do you all understand what that means?"])
+    ConditionalBranch([4, 41, 0])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["\\n<Promestein>You said \"once\"? Can I take this to assume you can't replicate your results?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>What! ...well you've got me there. But don't you understand how valuable it was that I did it once?!"])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["\\n<Promestein>If you can't replicate it, then others can't verify your results. Parlor tricks that can't even follow the scientific method don't deserve to be called \"science.\""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>Damn you girl, how dare you criticize me!"])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["\\n<Promestein>Science and criticism go hand in hand. You aspire to be a scientist, but you aren't prepared for your results to be criticized?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>Damn, I can't believe this! Listen, intellectual laziness is the most heinous enemy in pursuit of truth."])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["\\n<Promestein>Fools speak of simple matters in esoteric terms. The wise speak of esoteric things in simple terms."])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["\\n<Promestein>Your speech only sounds to me of an inverse reflection of your empty mind. With your experiments backed up only by your word of mouth, you pose as a scientist?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>Grr, what does a girl like you know!"])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["\\n<Promestein>Your \"girl\" is merely a personal attack. Should I interpret that as you being unable to logically refute my position?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Scholar>Nghhh, d-damn you! J-just you wait!"])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=29, @parameters=[5])\", \"RPG::MoveCommand(@code=30, @parameters=[5])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"Move\\\\\\\", @pitch=100, @volume=80)\\\"])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=29, @parameters=[5])"])
+      Unnamed(["RPG::MoveCommand(@code=30, @parameters=[5])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"Move\\\", @pitch=100, @volume=80)\"])"])
+      Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+      ControlSwitches([2061, 2061, 0])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["\\n<Promestein>Whew. I showed him his place."])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["\\n<Ilias>Snappy as always, aren't you, Promestein? Ever since you were small, you've always bullied angels like that."])
+        ShowTextAttributes(["stein_fc2", 2, 0, 2])
+        ShowText(["\\n<Promestein>I-I didn't bully anyone!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ConditionalBranch([1, 1019, 0, 1, 2])
+      ShowTextAttributes(["mob_nasu1_fc1", 0, 0, 2])
+      ShowText(["\\n<Nightingale>Ufufu... I'm a little tied up, maybe later?"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 811, 0, 2, 1])
+      ConditionalBranch([0, 1554, 1])
+        ShowTextAttributes(["mob_nasu1_fc1", 0, 0, 2])
+        ShowText(["\\n<Nightingale>There will probably be lots of injured people on your journey. How about I go with you and heal them?"])
+        ShowChoices([["Let her join", "Decline for now"], 0])
+        When([0, "Let her join"])
+          ShowTextAttributes(["mob_nasu1_fc1", 0, 0, 2])
+          ShowText(["\\n<Nightingale>Take care of me, ufufu."])
+          ErasePicture([5])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(554)"])
+          PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Nightingale joined the party!"])
+          Wait([60])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "Decline for now"])
+          ShowTextAttributes(["mob_nasu1_fc1", 0, 0, 2])
+          ShowText(["\\n<Nightingale>You don't have to hold back, ufufu."])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([7101])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ConditionalBranch([2, "A", 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Makina Scholar>We recently finished testing two makina. Unfortunately, both of them were weapons."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Makina Scholar>Our university is a place of research. We don't want to store munitions here."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Makina Scholar>However, destroying technology we have no means to safely destroy nor replicate seems... ill advised."])
+      ShowChoices([["Give them to me", "Not interested"], 2])
+      When([0, "Give them to me"])
+        ConditionalBranch([8, 613])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Makina Scholar>I see. You seem to have the qualifications for using makina. I'll leave them with you guys then."])
+          ControlSelfSwitch(["A", 0])
+          PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+          ChangeItems([706, 0, 0, 1])
+          ChangeItems([707, 0, 0, 1])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Makina Scholar>I hope they're of use to you. Be careful when handling them, okay?"])
+          ExitEventProcessing([])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["\\n<Makina Scholar>No way, I can't just give weapons we barely understand to passing travelers. However, it's another thing if you come with a license for handling makina."])
+          ExitEventProcessing([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      When([1, "Not interested"])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Makina Scholar>I hope they're of use to you. Be careful when handling them, okay?"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Biologist>The bio element is associated with poison, and confusion is associated with the sonic element. There aren't many monsters who use these elements, but you should be wary of those that can."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Biologist>Zombies use the bio element, and mermaids use the sonic element for example. Those two races are fairly skilled with these elements."])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Biologist>In the world, there are places where mimics frequently appear. For instance, any place uninhabited by normal humans that has treasure chests."])
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Fairy Scholar>Fairies have strong magic, yet are physically weak due to their small size. However, there are documents saying that an advanced species of fairies called earth fairies pride themselves on great strength despite being so small."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Fairy Scholar>When you fight against such fairies, you need to change tactics. Of course, I'm more of an indoors person myself, so I don't really have a chance to meet one."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["137"])
+    ShowTextAttributes(["braunys_fc1", 6, 0, 2])
+    ShowText(["\\n<Love & Lamb>Then how about we have a contest of strength here?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Fairy Scholar>Ekkkk! No! Please! I-I'm weak and prone to injury!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Traveling Warrior>When you master the Warrior and Martial Artist jobs, you can change into the Battle Master job. Apparently it uses a mix of sword and fist skills, allowing you to acquire multi-weapon attack skills."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["68"])
+    ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+    ShowText(["\\n<Papi>Sword and fist skills! That's so coooool!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>I heard that succubi excel at the wind element but are weak to earth."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Ahh, I want to try fighting against a succubus. No, no, it's for training, of course."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["5"])
+    ShowTextAttributes(["alice_fc5", 0, 0, 2])
+    ShowText(["\\n<Alice>...pervert."])
+    ExitEventProcessing([])
+    Label(["56"])
+    ShowTextAttributes(["inp_fc1", 0, 0, 2])
+    ShowText(["\\n<Rami>If you're fine with an imp, then I'll fight yooou♪"])
+    ExitEventProcessing([])
+    Label(["143"])
+    ShowTextAttributes(["eva_fc1", 0, 0, 2])
+    ShowText(["\\n<Eva>If you want to give me semen, then I don't mind taking you on, I think?"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Thief>Thief's \\C[1]Escape\\C[0] allows you to escape from normal monsters with one hundred percent probability. It's a great help to have someone who has mastered it in the party, just in case."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["82"])
+    ShowTextAttributes(["suzume_fc1", 0, 0, 2])
+    ShowText(["\\n<Chirp>To someone as timid as me, it's basically a requirement."])
+    ExitEventProcessing([])
+    Label(["93"])
+    ShowTextAttributes(["liot_fc1", 0, 0, 2])
+    ShowText(["\\n<Riot>Hmph. As if I'd run away from a fight."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Lecturer>After mastering the Magician job, it splits into two jobs, the Black Mage and the Time Mage."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Lecturer>Black Mage is just a better Magician. Time Mage, on the other hand, learns unique magic called Time Magic."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Lecturer>You should note that there's a Magician-type job called Summoner, but you need a job change item for it."])
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Anthropologist>I've heard of people mastering the \\C[14]Human\\C[0] race, but I've never heard of a higher race of the \\C[14]Human\\C[0] type."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Anthropologist>Well, that's natural. After all, there's no higher race for humans."])
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>I mastered the Priest job, what should I do next? Become a White Mage and learn even more powerful White Magic?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>Or maybe become a Magician and aim to become a Sage. Aa-aah Goddess, please show me the way."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["525"])
+    ConditionalBranch([4, 525, 2, 44])
+      ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+      ShowText(["\\n<Sonya>It's about time I thought of my promotion as well. Do I become a better healer as a White Mage, or become a Magician to help provide some damage?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>How about becoming a Warrior and aiming to become a Power Fighter?"])
+      ShowTextAttributes(["sonia_fc2", 4, 0, 2])
+      ShowText(["\\n<Sonya>Did you say something?"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Nope."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+      ShowText(["\\n<Sonya>What's after Priest? I guess that's a question every Priest has to face, though I think it depends on what you are planning to do or what your party needs."])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Label(["531"])
+    ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+    ShowText(["\\n<King of San Ilia>White Mage sounds good. Healing even more people appears to suit you better."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>Y-you are...?!"])
+    ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+    ShowText(["\\n<King of San Ilia>Just a passing mecha."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 57
+Name = "EV057"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Kitsune are a race of monsters that receive the blessing of earth, so it's natural that they resist the earth element."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>You should also be careful of their powerful earth element attacks. If you encounter one, check if any of your comrades is weak to earth."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Also, kitsune are weak to wind. If you have access to wind skills, you should definitely use them against kitsune."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["56"])
+    ShowTextAttributes(["inp_fc1", 0, 0, 2])
+    ShowText(["\\n<Rami>I'll beat up aaalll enemies weak to wind!"])
+    ExitEventProcessing([])
+    Label(["102"])
+    ShowTextAttributes(["youko_fc1", 2, 0, 2])
+    ShowText(["\\n<Kitsu>Stop spreading my weaknesses aroouundd!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>S-sorry."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 58
+Name = "EV058"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mana Researcher>Dark mana, the so-called dark energy used with the dark element, is extremely special. Based on an ancient covenant, to use it you need to sacrifice your own life force."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mana Researcher>In other words, using dark-based techniques and magic consumes HP. The texts say that in exchange, their power is enormous."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 1, 0, 2])
+      ShowText(["\\n<Alice>However, direct descendants of the Monster Lord's bloodline can activate the power of darkness without sacrificing HP at all."])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>But now that I'm weakened, I can't use the power of darkness completely free. I still need to sacrifice half of the normally needed amount of HP."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 59
+Name = "EV059"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mana Researcher>Holy mana, the so-called holy energy used with the holy element, is extremely special. Based on a covenant with the Goddess, to use it you need to sacrifice your own magic."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mana Researcher>In other words, using holy-based techniques and magic consumes MP. Using both SP and MP is quite a burden, isn't it?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Mana Researcher>In exchange, their power is tremendous. If you are able to learn them, they'll be a great asset to your adventure."])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>However, I am the Goddess who bestowed the covenant herself. Of course, I don't need to consume MP to activate holy element techniques."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>But now, with the limited power this body has, I still need to consume half of the normally needed amount of MP."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 60
+Name = "EV060"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>Monsters that are made with magic are resistant to the three magic elements. In other words, they are hard to damage with fire, ice, and lightning."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>In exchange, they are very weak against three natural elements. When fighting magic monsters use wind, earth, and water."])
+    Empty([])
+
+CommonEvent 61
+Name = "EV061"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Lecturer>There are armors and weapons that have similar effects, but it seems like their effects don't overlap."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Lecturer>For example, \\C[4]XP 150%\\C[0]. You might have a 150% XP ability set and an accessory with the same effect."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Lecturer>Unfortunately, the amount of experience gained with both of those active won't go beyond 150%, only the strongest effect applies. You can check whether effects overlap in the status screen."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Lecturer>In general, if an effect says \\C[4]Attack +x%\\C[0] or such, it stacks. But if it says \\C[4]Gold Drop xxx%\\C[0], it won't, keep an eye out for that + symbol."])
+    Empty([])
+
+CommonEvent 62
+Name = "EV062"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Once you master the Warrior job, it branches out into the Swordsman and Power Fighter jobs."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>A Swordsman, just as the name suggests, is an expert in handling swords. A Power Fighter is a warrior of Herculean strength who uses clubs and flails."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>If you want improvement and versatility, pick Swordsman. If you only want raw strength, Power Fighter would be good."])
+    Empty([])
+
+CommonEvent 63
+Name = "EV063"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Doctor>The \\C[5]Medicine\\C[0] skills that doctor-type jobs use are healing techniques that use SP rather than MP. It frees you from heartrending troubles over managing your mana."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Doctor>Instead, you get to stress over your remaining SP! I guess both jobs have their merits and demerits."])
+    Empty([])
+
+CommonEvent 64
+Name = "EV064"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Student>Once you master \\C[14]Scholar\\C[0], it splits into three jobs. First is a straight up upgrade, \\C[14]Magical Scholar\\C[0]."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Student>Next is \\C[14]Alchemist\\C[0], or someone who studies \\C[5]alchemy\\C[0]. And last is \\C[14]Magical Librarian\\C[0], who learns \\C[5]Grimoire\\C[0] skills."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Student>I wonder which one is the best for finding a job? As for adventuring, I'm even more clueless."])
+    Empty([])
+
+CommonEvent 65
+Name = "EV065"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>\\C[14]Alchemist\\C[0] is an intermediate job which transmutes special items and artifacts. In combat, an alchemist relies on alchemical creations, such as items, weapons, or special armor."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>You'll need ingredients to transmute them, such as regular items, synthesis materials, or special Alchemist Materials. Moreover, these transmuted items can't be stored for long.\nIf you make one, you need to use it immediately."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>With that said, being able to create these powerful items is something amazing. I feel like I should begin training to become an Alchemist and go on an adventure."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>Rescue a Princess, be assaulted by a beautiful monster... uhehe..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["167"])
+    ShowTextAttributes(["lusia_fc1", 0, 0, 2])
+    ShowText(["\\n<Lucia>Alchemists have dreams, don't they? You should follow your dream as an Alchemist."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+      ShowText(["\\n<Sonya>Lucia, is that really okay?"])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 66
+Name = "EV066"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>\\C[14]Magical Librarian\\C[0] is a higher job of Scholar who uses \\C[5]Grimoire\\C[0] skills. While \\C[5]Grimoire\\C[0] is a type of magic..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>...instead of MP, you use consumable items called \\C[3]Grimoire Pages\\C[0]. By doing so, you activate powerful magics."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>\\C[3]Grimoire Pages\\C[0] can be purchased at specialty stores. It costs a lot to use \\C[5]grimoire\\C[0] skills, but the power is worth it."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["121"])
+    ShowTextAttributes(["page65537_fc1", 0, 0, 2])
+    ShowText(["\\n<Cornelia>Rather than normal magic, it would be best used as a trump card. While it uses up the item, the magic's power is guaranteed."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 67
+Name = "EV067"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Student>Yamatai's rural areas seem to have many monsters emigrating. Apparently, they are currently spreading their habitat beyond Yamatai."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Student>Biologically speaking, they are called Demi-Human type monsters. They have a high life force and are characterized by high resistance to the ice element."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["62"])
+    ShowTextAttributes(["gob_fc1", 0, 0, 2])
+    ShowText(["\\n<Gob>I'm from Yamatai toooooo!"])
+    ExitEventProcessing([])
+    Label(["157"])
+    ShowTextAttributes(["oogumo_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashidaka>I'm a spider youkai! I was born in Yamatai you see!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 68
+Name = "EV068"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Biologist>Yoma are, needless to say, demons. They boast high physical ability and magical power that surpasses that of other monsters."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Biologist>They are especially good at fire techniques and appear to be highly-resistant to fire. Of course, this is knowledge from documents. I've never seen one myself."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["5"])
+    ShowTextAttributes(["alice_fc5", 1, 0, 2])
+    ShowText(["\\n<Alice>You say that as one is right in front of you."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Biologist>Whoa, so small."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 69
+Name = "EV069"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>Doll-type monsters are immune to many ailments. Their spirit and body are completely different from other monsters, so it's natural."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["71"])
+    ShowTextAttributes(["okami_fc1", 2, 0, 2])
+    ShowText(["\\n<Amara>I'm envious. Beasts are weak against ailments, so we get dizzy right away."])
+    ExitEventProcessing([])
+    Label(["131"])
+    ShowTextAttributes(["doll_fc1", 0, 0, 2])
+    ShowText(["\\n<Miyabi>That way we can play a lot more."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 70
+Name = "EV070"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Ninja>Shurikens disappear upon throwing. On that note, I need to restock soon."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Ninja>Well it's just Ninja who throw shurikens. If you have no Ninja in your party, then they're useless."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["102"])
+    ShowTextAttributes(["youko_fc1", 1, 0, 2])
+    ShowText(["\\n<Kitsu>Nin nin! I'm a newbie Niinjaaa♪!"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 71
+Name = "EV071"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>\\C[14]Taoist\\C[0] is a magician-type job, but it has overall high stats. While Magician is weak in general, that's not the case for Taoists."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>However to become a Taoist, you need a job change item. While it seems the item is passed down in the East, it's difficult to get, down here especially."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["103"])
+    ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+    ShowText(["\\n<Kamuro>I was taught at a school for kitsune, so while I'm an apprentice, I do have a Taoist job."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>Amazing, it's the first time I've seen a real Taoist! Do you have some kind of talisman? Come on, show me!"])
+    ShowTextAttributes(["kamuro_fc1", 2, 0, 2])
+    ShowText(["\\n<Kamuro>He's making me really nervous..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 72
+Name = "EV072"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([340, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 73
+Name = "EV073"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([14, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 74
+Name = "EV074"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([237, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 75
+Name = "EV075"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([101, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 76
+Name = "EV076"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([52, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 77
+Name = "EV077"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([64, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 78
+Name = "EV078"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1509, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 79
+Name = "EV079"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>A thousand years ago, there was a great war between the Goddess of Creation and the First Monster Lord. Angels led by Ilias and an army led by the Monster Lord battled fiercely."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>By the end of the conflict, with the land in ruins, Ilias defeated the Monster Lord. Even now there are traces of the Great Monster War's destruction all over the world."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["26"])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["\\n<Ilias>Justice always prevails. Luka, you too must overcome great evil."])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>...Or so I thought. I guess I'm not in a position to gloat about my victory yet since I'm in the same position as that vile creature."])
+    ExitEventProcessing([])
+    Label(["99"])
+    ShowTextAttributes(["namazu_fc1", 2, 0, 2])
+    ShowText(["\\n<Gigi>To leave traces on the terrain itself. What a fierce war."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 80
+Name = "EV080"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>We're amusing geoscientistic bastardos♪\nWe expedition everywhere from mountains to valleys♪"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["59"])
+    ShowTextAttributes(["mdg_fc1", 0, 0, 2])
+    ShowText(["\\n<Ragora>Can I sing together with you?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>No."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 81
+Name = "EV081"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Student>Ahh, I need to hurry and finish these problems! My credits are at stake!"])
+    ConditionalBranch([1, 1142, 0, 62, 2])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+        ShowText(["\\n<Sonya>If he's in such a hurry, then why is he walking back and forth in here?"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 82
+Name = "EV082"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>Strange phenomena were seen around various Tartarus rifts. Apparently, plants grow abnormally fast and are deformed."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>Before Rostrum was destroyed, such reports had come from there. I wonder if the cause was some unknown influence from Tartarus."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["41"])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["\\n<Promestein>Radiation dosage has to be measured, samples need to be taken. I need more data, but I can't exactly spend a few weeks researching it. Maybe if I had some help..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 83
+Name = "EV083"
+
+  Page 0
+    ConditionalBranch([0, 2063, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Upstairs is off limits to the general public. They study magic science and have many dangerous objects up there."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>It seems like you have an entrance permit. Go on and be careful."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 84
+Name = "EV084"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Upstairs is off limits to the general public. They study magic science and have many dangerous objects up there."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 85
+Name = "EV085"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Upstairs is off limits to the general public. They study magic science and have many dangerous objects up there."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 86
+Name = "EV086"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Cow>Moo!"])
+    ConditionalBranch([1, 1142, 0, 62, 2])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+        ShowText(["\\n<Sonya>Why the hell is there a cow here?!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 87
+Name = "EV087"
+
+  Page 0
+    Empty([])
+
+CommonEvent 88
+Name = "EV088"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Question: let's say you have a sword that's filled with a combination of fire and ice elements and attack an enemy that's immune to fire and weak to ice."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>What would happen in comparison to an attack with a normal sword?"])
+    ShowChoices([["Large damage", "Normal damage", "No damage", "Don't know"], 4])
+    When([0, "Large damage"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Correct, so you knew. In this case, the element that deals a larger amount of damage takes precedence."])
+      Empty([])
+
+    When([1, "Normal damage"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>No, that's wrong. In this case, the ice element takes priority since it deals larger damage."])
+      Empty([])
+
+    When([2, "No damage"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>No, that's wrong. In this case, the ice element takes priority since it deals larger damage."])
+      Empty([])
+
+    When([3, "Don't know"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Guard>Is that so? In this case, the ice element takes priority since it deals larger damage."])
+      Empty([])
+
+    ChoicesEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>When your attack is equipped with multiple elements, the one with the highest damage takes precedence."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>It's the same for skills that combine multiple elements. Remember this."])
+    Empty([])
+
+CommonEvent 89
+Name = "EV089"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>I tried to investigate data concerning the Great Disaster from over 30 years ago. Geomagnetic changes, mana diffusion, and various other data points."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>All of it shows that the origin of this Great Disaster is at Remina. What on earth happened in that town?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>So the Great Disaster did start at Remina. Was that actually Remina in the Tartarus rift?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Remina, even in Tartarus it was ruined."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 90
+Name = "EV090"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>I'd like to go to San Ilia's great library. There are supposedly books on every subject conceivable there."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["119"])
+    ShowTextAttributes(["page17_fc1", 0, 0, 2])
+    ShowText(["\\n<Annie>There are surprisingly few books. Well, books for monsters I mean."])
+    ExitEventProcessing([])
+    Label(["120"])
+    ShowTextAttributes(["page257_fc1", 0, 0, 2])
+    ShowText(["\\n<Yoko>It's mostly just academic material. It's so boring."])
+    ExitEventProcessing([])
+    Label(["121"])
+    ShowTextAttributes(["page65537_fc1", 1, 0, 2])
+    ShowText(["\\n<Cornelia>Come by all means. All who love books are welcome."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 91
+Name = "EV091"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Are you remembering to swap party members in combat? Being able to replace them on a case-by-case basis is beyond useful."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>For example, when your comrade faints and you're in a pinch or they ran out of SP and MP, becoming useless."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>At times like these you should bring out some of the fresh back line. Also, it's clever to swap around party members as they receive ailments."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>But in case of ailments that are treated after a turn passes, automatic recovery doesn't work when they are in the back, so be careful."])
+    Empty([])
+
+CommonEvent 92
+Name = "EV092"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Lecturer>This lobby is open for normal adventurers. Please listen to useful adventurer lectures."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["41"])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["\\n<Promestein>Adventurer lectures? Not interested."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 93
+Name = "EV093"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Female Martial Artist>SP also recovers on counterattacks, so if you have a high counter rate, there are more opportunities to recover SP!"])
+    Empty([])
+
+CommonEvent 94
+Name = "EV094"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>Martial artists have multiple fist strike skills that hit more than once, right? Those fist strikes are quite powerful but..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>When used on an enemy with high defense, the damage per hit falls significantly. As a result, the skill's overall power decreases."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Guard>It's best to refrain from using skills with multiple strikes against defensive enemies. It's best to use single attacks on them."])
+    Empty([])
+
+CommonEvent 95
+Name = "EV095"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([375, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 96
+Name = "EV096"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>I think that the best invention of the magic revolution is this pot. By using magic power, you can keep food fresh forever."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>This pot is already spreading to commoner homes. The inventor must have made quite the tidy sum of money from this."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["70"])
+    ShowTextAttributes(["nezumi_fc1", 0, 0, 2])
+    ShowText(["\\n<Ratty>So this pot held such a secret! And here I wondered why its food wasn't rotting."])
+    ExitEventProcessing([])
+    Label(["162"])
+    ShowTextAttributes(["mitutubo_fc1", 0, 0, 2])
+    ShowText(["\\n<Mitsuko>It's a good pot. It makes me want to enter it at times."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 97
+Name = "EV097"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Lecturer>There's an ability called \\C[4]Magic Reflection +x%.\\C[0] When you are attacked with magic when you have this ability equipped, magic is reflected with a probability based on the number."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Lecturer>Of course, the person reflecting it doesn't receive damage. It's clearly quite useful against mages."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Lecturer>It should be noted that magic coming from allies isn't reflected. No need to worry about your healing magic being repelled."])
+    Empty([])
+
+CommonEvent 98
+Name = "EV098"
+
+  Page 0
+    ShowTextAttributes(["dog_fc1", 0, 0, 2])
+    ShowText(["\\n<Dog Girl>Woof woof. When I'm here I feel like I'm smarter."])
+    ConditionalBranch([4, 60, 0])
+      ShowTextAttributes(["dog_fc1", 2, 0, 2])
+      ShowText(["\\n<Pochi>You entered the best university, my fellow... Are you biting into human society to dominate it from the inside?"])
+      ShowTextAttributes(["dog_fc1", 4, 0, 2])
+      ShowText(["\\n<Pochi>...Never mind."])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        ControlVariables([1036, 1036, 1, 0, 1])
+        ConditionalBranch([1, 1036, 0, 9, 1])
+          CallCommonEvent([311])
+          Empty([])
+        Else([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 99
+Name = "EV099"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<White Mage>Support magic such as Enhance Guard simply raises the ability of one member, but the higher level version of it has an effect on the entire party."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<White Mage>You might think single target support magic is inferior to full party support, but it's not always the case."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<White Mage>For example, single target magic has a longer duration. Full party magic effects expire faster."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<White Mage>Keep that in mind. It might be helpful."])
+    Empty([])
+
+CommonEvent 100
+Name = "EV100"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>I'm often asked why are we studying magic science. Is there any point to it and such."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Scholar>There's one answer, and it's because we seek the truth. We want to explain the mechanisms moving this world."])
+    ConditionalBranch([4, 41, 0])
+      ShowTextAttributes(["stein_fc2", 1, 0, 2])
+      ShowText(["\\n<Promestein>Well put. The true nature of this world and the way it functions..."])
+      ShowTextAttributes(["stein_fc2", 1, 0, 2])
+      ShowText(["\\n<Promestein>The moment we understand it, we well up with joy and excitement! The more we unveil, the more we are urged on by curiosity and excitement!"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>It's a miracle you actually fit into angel society with thinking like that."])
+        ShowTextAttributes(["stein_fc2", 0, 0, 2])
+        ShowText(["\\n<Promestein>But I didn't... They categorically reject curiosity. They've never had that excitement you feel when you discover something new."])
+        ShowTextAttributes(["stein_fc2", 0, 0, 2])
+        ShowText(["\\n<Promestein>To be satisfied with answers that are pathetic excuses for lies? I abhor the fools who trample the feelings of those seeking the truth."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["\\n<Ilias>Promestein, if you keep acting like this, you'll never fit in as an angel. You should adhere to my teachings faithfully and do my will like the other angels."])
+        ShowTextAttributes(["stein_fc2", 0, 0, 2])
+        ShowText(["\\n<Promestein>You must be joking, right? They categorically reject curiosity. They've never had that excitement you feel when you discover something new."])
+        ShowTextAttributes(["stein_fc2", 0, 0, 2])
+        ShowText(["\\n<Promestein>To be satisfied with answers that are pathetic excuses for lies? I abhor the fools who trample the feelings of those seeking the truth."])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>(Annnnnd it's back to the cave with you.)"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])

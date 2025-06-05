@@ -1,0 +1,814 @@
+Display Name = "Château des Romances Layer 4"
+Parallax Name = "StarlitSky"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 924, 37, 61, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 924, 37, 61, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 924, 37, 61, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([1, 1228, 0, 4, 2])
+      ControlVariables([1228, 1228, 0, 0, 5])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 926, 69, 83, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ConditionalBranch([1, 1216, 0, 3, 1])
+      ConditionalBranch([1, 1216, 0, 4, 2])
+        PlayBGM(["RPG::BGM(@name=\"boss0\", @volume=100, @pitch=100)"])
+        ShowPicture([5, "80_gilgoon_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+        MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+        ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+        ShowText(["\\n<Gilgorn>Hmph, it's futile no matter how many times you come at me!"])
+        PlaySE(["RPG::SE(@name=\"mon_break\", @pitch=100, @volume=100)"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Gilgorn forms a Wall of Reality around herself!\nOur pleasure attacks cannot affect her at all..."])
+        ErasePicture([5])
+        SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+        ConditionalBranch([0, 4, 0])
+          ShowTextAttributes(["alice_fc5", 0, 0, 2])
+          ShowText(["\\n<Alice>Like she said, we have no choice but to retreat from here. We won't be able to make a dent in her without some way to counteract her barrier."])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 5, 0])
+          ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+          ShowText(["\\n<Ilias>This is vexing, but we have no choice but to fall back. Let's return after we've come up with a new strategy..."])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["As long as Gilgorn is protected by the Wall of Reality, we cannot fight her. But maybe if we had an attack powerful enough to break her barrier..."])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>...We don't have anything powerful enough right now. We'll just have to put this matter behind us for now."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Something might come to mind while we go after the other alliance members. Let's continue exploring the Demonic Castle for now..."])
+        PlayBGM(["RPG::BGM(@name=\"cb1\", @volume=100, @pitch=100)"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1216, 0, 5, 0])
+      PlayBGM(["RPG::BGM(@name=\"boss0\", @volume=100, @pitch=100)"])
+      ShowPicture([5, "80_gilgoon_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+      ShowText(["\\n<Gilgorn>Hmph, it's futile no matter how many times you come at me!"])
+      PlaySE(["RPG::SE(@name=\"mon_break\", @pitch=100, @volume=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Gilgorn forms a Wall of Reality around herself!"])
+      Wait([30])
+      PlayBGM(["RPG::BGM(@name=\"kiki4\", @volume=100, @pitch=100)"])
+      ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+      ShowText(["\\n<Rigeo>Lauratt... It's up to you!"])
+      ShowTextAttributes(["lawrat_fc1", 0, 0, 2])
+      ShowText(["\\n<Lauratt>......!!"])
+      Script(["display_skill_name(\"Shining Rage\")"])
+      ShowAnimation([5, 1215, false])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Lauratt casts Shining Rage!\nThe lightning which judges darkness pierces the wicked!"])
+      PlaySE(["RPG::SE(@name=\"mon_break\", @pitch=100, @volume=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The Wall of Reality takes 999,999 damage!\nThe Wall of Reality was destroyed!"])
+      Script(["clear_skill_name"])
+      ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+      ShowText(["\\n<Gilgorn>...Wha?"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>Now your protective barrier is gone!\nWe can make you succumb to pleasure now!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>With that, you no longer have the protection of your barrier. Now, we shall make you succumb to pleasure!"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["tarsa_fc2", 1, 0, 2])
+      ShowText(["\\n<Tarsa>Horny and trance work well against you♪\nUfufu, I'm going to make you feel amazing...♡"])
+      ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+      ShowText(["\\n<Rigeo>I'll help you too.\nWhile I may be a Nightmare after a fashion, pleasure is still my specialty..."])
+      ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+      ShowText(["\\n<Rovissa>Come on, I'll torture you 'till you can't stand anymore!"])
+      ShowPicture([5, "80_gilgoon_st02", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["gilgoon_fc1", 1, 0, 2])
+      ShowText(["\\n<Gilgorn>Eep...!\nStooooop! Don't come any closer!!"])
+      ErasePicture([5])
+      ChangeBattleBGM(["RPG::BGM(@name=\"cb3\", @volume=100, @pitch=100)"])
+      BattleProcessing([0, 1422, false, false])
+      ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+      PlayBGM(["RPG::BGM(@name=\"scene_comi2\", @volume=100, @pitch=100)"])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=41, @parameters=[\\\"Collaboration03_cip\\\", 6])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=41, @parameters=[\"Collaboration03_cip\", 6])"])
+      RecoverAll([0, 0])
+      ShowTextAttributes(["gilgoon_fc1", 1, 0, 2])
+      ShowText(["\\n<Gilgorn>I-I won't let you humiliate me like this...\nI don't want to leave...this place..."])
+      ShowTextAttributes(["gilgoon_fc1", 1, 0, 2])
+      ShowText(["\\n<Gilgorn>Uuuugh...\nHow I loathe this body that was created to serve the Nightmares..."])
+      ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+      ShowText(["\\n<Rovissa>As someone who also bears the title of Demon Lord... I kinda feel sorry for her."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 1, 0, 2])
+        ShowText(["\\n<Alice>If you behave yourself and do as you're told, we won't let anyone know of the humiliation you've suffered."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 1, 0, 2])
+        ShowText(["\\n<Ilias>No matter how much you try to fight us with words, your body tells us the truth."])
+        Empty([])
+      BranchEnd([])
+      ErasePicture([5])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+      Script(["add_actor_ex(810)"])
+      PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Gilgorn was forced into the party!"])
+      ControlVariables([1216, 1216, 0, 0, 6])
+      Wait([60])
+      ShowTextAttributes(["gilgoon_fc1", 1, 0, 2])
+      ShowText(["\\n<Gilgorn>*sob* *sob*..."])
+      ShowTextAttributes(["kazuya_fc4", 7, 0, 2])
+      ShowText(["\\n<Kazuya>(It feels like we've done something horrible...)"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>In any case, we've acquired Gilgorn.\nThis matter should be solved...hopefully."])
+      ShowTextAttributes(["tarsa_fc2", 0, 0, 2])
+      ShowText(["\\n<Tarsa>Ufufu... This girl is such a cutie..."])
+      ShowTextAttributes(["gilgoon_fc1", 1, 0, 2])
+      ShowText(["\\n<Gilgorn>D-damn you... Stooop..."])
+      ConditionalBranch([0, 1830, 0])
+        ShowTextAttributes(["succubusm_fc1", 0, 0, 2])
+        ShowText(["\\n<Mare>I'll show you plenty of loving...♡"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1829, 0])
+        ShowTextAttributes(["succubusq_fc1", 0, 0, 2])
+        ShowText(["\\n<Lilin>Fufu, I'll make you feel really good..."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["gilgoon_fc1", 1, 0, 2])
+      ShowText(["\\n<Gilgorn>Hyaaaaah..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>............"])
+      ShowTextAttributes(["lawrat_fc1", 0, 0, 2])
+      ShowText(["\\n<Lauratt>............"])
+      ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+      ShowText(["\\n<Rigeo>............"])
+      ConditionalBranch([1, 1213, 0, 3, 1])
+        ConditionalBranch([1, 1214, 0, 9, 1])
+          ConditionalBranch([1, 1215, 0, 5, 1])
+            ConditionalBranch([1, 1216, 0, 6, 1])
+              ConditionalBranch([1, 1217, 0, 5, 1])
+                ConditionalBranch([1, 1218, 0, 3, 1])
+                  ShowTextAttributes(["", 0, 0, 2])
+                  ShowText(["At any rate, we've recruited all of the alliance members lingering around this world. This time, we have truly tied up all the loose ends..."])
+                  FadeoutBGM([1])
+                  FadeoutScreen([])
+                  Wait([60])
+                  ChangeTransparency([0])
+                  TransferPlayer([0, 950, 22, 17, 0, 2])
+                  FadeinScreen([])
+                  ExitEventProcessing([])
+                  Empty([])
+                BranchEnd([])
+                Empty([])
+              BranchEnd([])
+              Empty([])
+            BranchEnd([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["At any rate, this matter has been resolved.\nLet's continue chasing after the other alliance members..."])
+      PlayBGM(["RPG::BGM(@name=\"cb1\", @volume=100, @pitch=100)"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ControlVariables([1216, 1216, 0, 0, 3])
+    PlayBGM(["RPG::BGM(@name=\"boss0\", @volume=100, @pitch=100)"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    SetMoveRoute([5, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShowPicture([5, "80_gilgoon_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+    ShowText(["\\n<Gilgorn>It's you people...\nNow that the Nightmare incident has been resolved, I don't believe you have any more business with me."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Your very existence is throwing the world into disarray. Shouldn't you know that if you're a ruler?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>We cannot simply allow someone as powerful as yourself to go unchecked. Your very existence here throws the world into disarray."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+    ShowText(["\\n<Gilgorn>Hmph... Am I really causing turmoil by not doing anything? That said, I have no intention of moving from here."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>I imagine you still want to return to your original world. If you come with us, it will be easier for you to do that."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>I imagine you still want to return to your original world. If you stay with us, it will be easier to find a way to do so."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+    ShowText(["\\n<Gilgorn>I said I'm not moving from here!\nIf you're going to coerce me, I'll remove you by force!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Kh... What a stubborn brat!\nIt can't be helped, we'll just have to make her surrender to pleasure!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>You really are quite stubborn!\nIn that case, we'll just torture you with pleasure like last time!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+    ShowText(["\\n<Gilgorn>Fwahahahaha!\nI thought you'd resort to that, so I've prepared countermeasures!"])
+    PlaySE(["RPG::SE(@name=\"mon_break\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Gilgorn forms a Wall of Reality around herself!"])
+    ShowTextAttributes(["rejeo_fc1", 1, 0, 2])
+    ShowText(["\\n<Rigeo>This barrier... Is she rejecting the dream world?"])
+    ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+    ShowText(["\\n<Gilgorn>That's right... This barrier can negate the physics of the dream world. Any form of pleasure will have no effect on me whatsoever!"])
+    ShowTextAttributes(["tarsa_fc2", 1, 0, 2])
+    ShowText(["\\n<Tarsa>Really...?\nThen shall I put that to the test...?"])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>I suppose we have no choice but to try..."])
+    FadeoutScreen([])
+    PlaySE(["RPG::SE(@name=\"mon_karaburi\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Tarsa and Rigeo use their pleasure attacks on Gilgorn!\nBut they were blocked completely..."])
+    FadeinScreen([])
+    ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+    ShowText(["\\n<Gilgorn>Haaah-haahahaha!\nNow do you understand?!"])
+    ShowTextAttributes(["tarsa_fc2", 2, 0, 2])
+    ShowText(["\\n<Tarsa>It really doesn't affect her..."])
+    ShowTextAttributes(["rejeo_fc1", 1, 0, 2])
+    ShowText(["\\n<Rigeo>...It's pointless for us to keep trying."])
+    ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+    ShowText(["\\n<Gilgorn>Now go on, get out of my sight this instant!"])
+    ErasePicture([5])
+    SetMoveRoute([5, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Like she said, we have no choice but to retreat from here. We won't be able to make a dent in her without some way to counteract her barrier."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>This is vexing, but we have no choice but to fall back. Let's return after we've come up with a new strategy..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["As long as Gilgorn is protected by the Wall of Reality, we cannot fight her. But maybe if we had an attack powerful enough to break her barrier..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>...We don't have anything powerful enough right now. We'll just have to put this matter behind us for now."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Something might come to mind while we go after the other alliance members. Let's continue exploring the Demonic Castle for now..."])
+    PlayBGM(["RPG::BGM(@name=\"cb1\", @volume=100, @pitch=100)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 953, 6, 7, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There's a note on the ground..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"Dr. Yui's Note\""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Yoohoo! (^○^)\nHow are you doing, Kazuya-kun? (^w^)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I have confirmed that the \"Safety Device\" that was used in Mukuro's design has been activated, so I'm sending you this. (；゜∀゜)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["To be honest, I have no idea where this will end up because I half-assed the transfer to the displayed coordinates. (/ー￣;)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Don't worry! As long as it's not in the middle of the final boss's territory, Kazuya should have no trouble finding it! (σ≧▽≦)σ"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I've also included some other useful things in there, so make good use of them. （＾◇＾）"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["p.s.\nI'm sorry＾＾；"])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There's a note on the ground..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Look at this...\nIt seems to be addressed to Kazuya."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Look at this...\nIt would appear this is addressed to Kazuya."])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([5, "80_kazuya_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["kazuya_fc2", 3, 0, 2])
+    ShowText(["\\n<Kazuya>Eh...? To me?!\nWhy is there a note for me in a place like this...?!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\"Dr. Yui's Note\""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Yoohoo! (^○^)\nHow are you doing, Kazuya-kun? (^w^)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I've confirmed that the \"Safety Device\" that was used in Mukuro's design has been activated, so I'm sending you this. (；゜∀゜)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["To be honest, I have no idea where this will end up because I half-assed the transfer to the displayed coordinates. (/ー￣;)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Don't worry! As long as it's not in the middle of the final boss's territory, Kazuya should have no trouble finding it! (σ≧▽≦)σ"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I've also included some other useful things in there, so make good use of them. （＾◇＾）"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["p.s.\nI'm sorry＾＾；"])
+    ShowTextAttributes(["kazuya_fc4", 7, 0, 2])
+    ShowText(["\\n<Kazuya>Dr. Yui...\nThe aforementioned design is unmistakably Yuru-san's..."])
+    ShowTextAttributes(["kazuya_fc2", 2, 0, 2])
+    ShowText(["\\n<Kazuya>She mentioned \"other useful things\"...\nBut I can't find the important stuff anywhere..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["All there was on the ground was this note.\nThe items that were supposed to have been sent were nowhere to be seen..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>They probably got separated during the transfer.\nI'm pretty sure we'll find them somewhere in the Demonic Castle."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>It's possible that they got separated during the transfer. I suppose we will find them somewhere in the Demonic Castle."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>We should search around thoroughly. These sound like they'll be very helpful..."])
+    ShowTextAttributes(["kazuya_fc4", 7, 0, 2])
+    ShowText(["\\n<Kazuya>Sorry for making you go out of your way...\nMy doctor can be a real handful."])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["\\n<Promestein>Indeed... She truly is annoying isn't she?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 5, 0, 2])
+      ShowText(["\\n<Alice>You shouldn't talk as if this were someone else's problem... Aren't you two exactly the same?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>How could you speak as if this were someone else's problem... Are you two not exactly the same?"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["In any case, it would seem that there is some equipment for Mukuro as well as some \"other useful things\" in the Demonic Castle. They should help us in battle if we can retrieve them, so let's search around the castle thoroughly."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ConditionalBranch([6, -1, 8])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"hand-drum01\\\\\\\", @pitch=100, @volume=100)\\\"])\", \"RPG::MoveCommand(@code=41, @parameters=[\\\"sanmai\\\", 1])\", \"RPG::MoveCommand(@code=14, @parameters=[0, 0])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"hand-drum01\\\", @pitch=100, @volume=100)\"])"])
+      Unnamed(["RPG::MoveCommand(@code=41, @parameters=[\"sanmai\", 1])"])
+      Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, 0])"])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"Sand\\\\\\\", @pitch=150, @volume=80)\\\"])\", \"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=41, @parameters=[\\\"!Flame\\\", 7])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=29, @parameters=[5])\", \"RPG::MoveCommand(@code=33, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[30])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"Sand\\\", @pitch=150, @volume=80)\"])"])
+      Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=41, @parameters=[\"!Flame\", 7])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=29, @parameters=[5])"])
+      Unnamed(["RPG::MoveCommand(@code=33, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=15, @parameters=[30])"])
+      ShowTextAttributes(["youkosan_fc1", 3, 0, 2])
+      ShowText(["\\n<Spirit Fox>Mugyaaa!!\\^\\.\\."])
+      ControlSelfSwitch(["A", 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["youkosan_fc2", 0, 0, 2])
+      ShowText(["\\n<Fox Statue>Fufufu... I am a Fox Statue.\nI won't step aside unless you talk to my \"arse.\""])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    ConditionalBranch([6, -1, 8])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"hand-drum01\\\\\\\", @pitch=100, @volume=100)\\\"])\", \"RPG::MoveCommand(@code=41, @parameters=[\\\"sanmai\\\", 1])\", \"RPG::MoveCommand(@code=14, @parameters=[0, 0])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"hand-drum01\\\", @pitch=100, @volume=100)\"])"])
+      Unnamed(["RPG::MoveCommand(@code=41, @parameters=[\"sanmai\", 1])"])
+      Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, 0])"])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"Sand\\\\\\\", @pitch=150, @volume=80)\\\"])\", \"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=41, @parameters=[\\\"!Flame\\\", 7])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=29, @parameters=[5])\", \"RPG::MoveCommand(@code=33, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[30])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"Sand\\\", @pitch=150, @volume=80)\"])"])
+      Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=41, @parameters=[\"!Flame\", 7])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=29, @parameters=[5])"])
+      Unnamed(["RPG::MoveCommand(@code=33, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=15, @parameters=[30])"])
+      ShowTextAttributes(["youkosan_fc1", 3, 0, 2])
+      ShowText(["\\n<Spirit Fox>Mugyaaa!!\\^\\.\\."])
+      ControlSelfSwitch(["B", 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ConditionalBranch([2, "A", 0])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Huh?\nThe Fox Statue should've been driven away from here, but..."])
+        ShowTextAttributes(["youkosan_fc2", 0, 0, 2])
+        ShowText(["\\n<Fox Statue>The Demon Lord asked me to be her gatekeeper here for a bit."])
+        ExitEventProcessing([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["youkosan_fc2", 0, 0, 2])
+        ShowText(["\\n<Fox Statue>Fufufu... I am a Fox Statue.\nI won't step aside unless you talk to my \"arse.\""])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 3
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+    ShowText(["\\n<Sheep Girl>Meeeh... Meeeeeh..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The Sheep Girl is crying in sorrow..."])
+    ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+    ShowText(["\\n<Rigeo>You poor girl... What's wrong?"])
+    ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+    ShowText(["\\n<Gilgorn>With the castle in this state, she's been completely terrified. She won't leave my side..."])
+    ConditionalBranch([1, 1216, 0, 6, 1])
+      ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+      ShowText(["\\n<Sheep Girl>Meeeh... Meeeeeh..."])
+      ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+      ShowText(["\\n<Gilgorn>However... I'm leaving this place.\nWhat will you do?"])
+      ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+      ShowText(["\\n<Sheep Girl>............"])
+      ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+      ShowText(["\\n<Sheep Girl>I want to come with you..."])
+      ShowTextAttributes(["gilgoon_fc1", 0, 0, 2])
+      ShowText(["\\n<Gilgorn>Very well, I'll allow it.\nYou can come with me!"])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+      PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+      ChangeArmor([348, 0, 0, 1, false])
+      ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+      ShowText(["\\n<Sonya>She became an accessory?!"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>What a weird sheep...\nShe might not even be from our world."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>That was a very strange sheep...\nPerhaps she is not even from our world."])
+        Empty([])
+      BranchEnd([])
+      ControlSwitches([2958, 2958, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["rejeo_fc1", 0, 0, 2])
+      ShowText(["\\n<Rigeo>I see... I feel sorry for her."])
+      ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+      ShowText(["\\n<Sheep Girl>Meeeh... Meeeeeh..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Let's leave her alone for now..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSwitches([2938, 2938, 0])
+    ChangeWeapons([953, 0, 0, 1, false])
+    ShowTextAttributes(["mukuro_fc1", 3, 0, 2])
+    ShowText(["\\n<Mukuro>This belongs to me.\nDid Dr. Yui send this here...?"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSwitches([2937, 2937, 0])
+    ChangeArmor([337, 0, 0, 1, false])
+    ShowTextAttributes(["rovissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Rovissa>This amulet...is an item from my world.\nI'll make use of it."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSwitches([2939, 2939, 0])
+    ChangeArmor([370, 0, 0, 1, false])
+    ShowTextAttributes(["tarsa_fc2", 1, 0, 2])
+    ShowText(["\\n<Tarsa>This card is something from my world.\nIt looks as if it was prepared just for me."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    CallCommonEvent([499])
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ControlVariables([1229, 1229, 0, 0, 4])
+    ConditionalBranch([0, 2937, 0])
+      ControlVariables([1229, 1229, 2, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2938, 0])
+      ControlVariables([1229, 1229, 2, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2939, 0])
+      ControlVariables([1229, 1229, 2, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2915, 0])
+      ControlVariables([1229, 1229, 2, 0, 1])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1229, 0, 0, 0])
+      ShowTextAttributes(["youkosan_fc1", 0, 0, 2])
+      ShowText(["\\n<Spirit Fox>Seems you've found all the treasure chests on this floor. Congratulations♪"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1229, 0, 1, 0])
+      ShowTextAttributes(["youkosan_fc1", 0, 0, 2])
+      ShowText(["\\n<Spirit Fox>There is still \\V[1229] treasure chest on this floor.\nKeep searching for it!!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1229, 0, 2, 1])
+      ShowTextAttributes(["youkosan_fc1", 0, 0, 2])
+      ShowText(["\\n<Spirit Fox>There are still \\V[1229] treasure chests on this floor.\nKeep searching for them!!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1216, 0, 5, 2])
+      ShowTextAttributes(["youkosan_fc1", 0, 0, 2])
+      ShowText(["\\n<Spirit Fox>A Demon Lord has also shut herself in on this floor. It looks like she's been researching something all this time."])
+      Empty([])
+
+    Else([])
+      ConditionalBranch([0, 2958, 1])
+        ShowTextAttributes(["youkosan_fc1", 0, 0, 2])
+        ShowText(["\\n<Spirit Fox>There's also a strange sheep on this floor. She's crying away in misery where the Demon Lord used to be."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])

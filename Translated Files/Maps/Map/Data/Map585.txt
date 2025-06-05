@@ -1,0 +1,186 @@
+Display Name = "ヤマタイ村"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 32, 2])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["【ソニア】"])
+      ShowText(["なんなの、この厳重な施設は……！"])
+      ShowText(["ここはヤマタイ村じゃないの……！？"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["中の警戒も厳しそうですね……"])
+      ShowText(["用も無いのに侵入するのは、避けた方が無難でしょう。"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 33, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["さて、ヤマタイ村に着きましたね。"])
+      ShowText(["ここに乗り込む前に、エデンに協力を頼むのが先のはず。"])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["エデンは、蓬莱山を根城にしています。"])
+      ShowText(["ここから、すぐ北の山地ですね……"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 34, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["さて、ヤマタイに着きましたね。"])
+      ShowText(["他のチームですが、準備は良いですか……？"])
+      ShowTextAttributes(["metatorone_fc1", 0, 0, 2])
+      ShowText(["【メタトローネ】"])
+      ShowText(["オッケー！"])
+      ShowText(["いつでも砲撃可能だよ～♪"])
+      ShowTextAttributes(["sandalforne_fc1", 0, 0, 2])
+      ShowText(["【サンダルフォーネ】"])
+      ShowText(["だよ～♪"])
+      ShowTextAttributes(["eden_fc3", 0, 0, 2])
+      ShowText(["【エデン】"])
+      ShowText(["こちらも、待機中です。"])
+      ShowText(["いつでも突入可能ですので……"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["皆、いつでも行けるようです。"])
+      ShowText(["それではルカ、作戦を開始しますか……？"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["※作戦が始まると、終了するまで退却できない！"])
+      ShowText(["　事前に万全の準備をしておこう！"])
+      ShowChoices([["もう少し準備する", "作戦を開始する"], 1])
+      When([0, "もう少し準備する"])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["そうですか……"])
+        ShowText(["激戦になりますので、しっかり準備を整えて下さい。"])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+        ExitEventProcessing([])
+        Empty([])
+      When([1, "作戦を開始する"])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["それでは……作戦を開始します！"])
+        FadeoutScreen([])
+        ChangeTransparency([0])
+        ControlSwitches([31, 31, 1])
+        TransferPlayer([0, 73, 0, 0, 0, 2])
+        FadeinScreen([])
+        ShowPicture([6, "80_metatorone_st11b", 0, 0, -160, 0, 100, 100, 255, 0])
+        ShowPicture([5, "80_sandalforne_st11b", 0, 0, 160, 0, 100, 100, 255, 0])
+        ShowTextAttributes(["metatorone_fc1", 0, 0, 2])
+        ShowText(["【メタトローネ】"])
+        ShowText(["それじゃあ、まずはあたし達から……"])
+        ShowText(["砲撃のご挨拶だよ～♪"])
+        ShowTextAttributes(["sandalforne_fc1", 0, 0, 2])
+        ShowText(["【サンダルフォーネ】"])
+        ShowText(["みんな、吹っ飛んじゃえ……"])
+        ErasePicture([5])
+        ErasePicture([6])
+        PlaySE(["RPG::SE(@name=\"mon_bom1\", @pitch=100, @volume=100)"])
+        ShowPicture([5, "iv_metatosanda3", 0, 0, -213, 0, 100, 100, 255, 0])
+        MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 45, false])
+        ShowTextAttributes(["metatorone_fc2", 0, 0, 2])
+        ShowText(["【メタトローネ＆サンダルフォーネ】"])
+        ShowText(["……アトミックヘブン！！"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["上空から降り注ぐ、目も眩むようなビーム射撃。"])
+        ShowText(["それが二度三度と、連続して行われる。"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["空が激しく光る度、地面が揺れ轟音が響き――"])
+        ShowText(["強固な建物は、上空からの破壊に晒された。"])
+        ShowPicture([5, "", 0, 0, 0, 0, 100, 100, 255, 0])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["【ルカ】"])
+        ShowText(["なんとも、凄まじいね……"])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["さて次は、玉藻がどう出るかですが――"])
+        FadeoutScreen([])
+        Wait([60])
+        TransferPlayer([0, 74, 0, 0, 0, 2])
+        FadeinScreen([])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 35, 0])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 112, 24, 48, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 36, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["まだ、ヤマタイでは戦闘が繰り広げられています。"])
+      ShowText(["私達は、サン・イリアに向かいましょう！"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 37, 1])
+      PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 595, 24, 48, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 372, 165, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 372, 165, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 372, 165, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 372, 165, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 372, 165, 0, 0])
+    Empty([])

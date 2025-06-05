@@ -1,0 +1,162 @@
+Display Name = "Haunted Mansion Storehouse"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 346, 2, 16, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["zonbe_fc3", 0, 0, 2])
+    ShowText(["\\n<Zombie Girl>King of the zombies..."])
+    ShowTextAttributes(["zonbe_fc3", 0, 0, 2])
+    ShowText(["\\n<Zombie Girl>Thrilleerr..."])
+    ShowTextAttributes(["zonbe_fc3", 0, 0, 2])
+    ShowText(["\\n<Zombie Girl>Thriller niighttt..."])
+    ConditionalBranch([0, 2080, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The zombies are dancing happily."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The zombies are dancing happily. What do we do?"])
+    ShowChoices([["Fight them", "Leave them be"], 2])
+    When([0, "Fight them"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>Is that really okay? I don't think the ones dancing here are causing any trouble."])
+        Empty([])
+      BranchEnd([])
+      ShowChoices([["Fight them", "Leave them be"], 2])
+      When([0, "Fight them"])
+        BattleProcessing([0, 193, false, false])
+        ControlSwitches([2085, 2085, 0])
+        ControlSwitches([2080, 2080, 0])
+        ShowTextAttributes(["zonbe_fc3", 0, 0, 2])
+        ShowText(["\\n<Zombie Girl>......"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Looking lonely, the zombies went back to their coffins."])
+        ExitEventProcessing([])
+        Empty([])
+      When([1, "Leave them be"])
+        ControlSwitches([2080, 2080, 0])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>We don't have to defeat them. They aren't hurting anyone."])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    When([1, "Leave them be"])
+      ControlSwitches([2080, 2080, 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>We don't have to defeat them. They aren't hurting anyone."])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([213, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>...What?"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>They're dancing."])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Zombie Girl>Aaa...uuu..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Zombie Girl>Aaauu..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Zombie Girl>OOooo..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Zombie Girl>Thrillleerr..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Zombie Girl>Ohh yeaa..."])
+    Empty([])
+
+  Page 1
+    Empty([])

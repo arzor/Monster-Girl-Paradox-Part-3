@@ -1,0 +1,463 @@
+Display Name = "ポケット魔王城 会議場"
+Parallax Name = "DarkSpace1"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 456, 40, 19, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 456, 40, 19, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 456, 40, 19, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["People3", 5, 0, 2])
+    ShowText(["【メイド】"])
+    ShowText(["ご用を申し付け下さい。"])
+    ShowText(["座標取得エラーにより、城内ワープは使用不可能です。"])
+    Script(["unlimited_choices(11, [\"パーティを編集する\","])
+    ScriptMore(["\"パーティの登録・呼び出しを行う\","])
+    ScriptMore(["\"アイテム倉庫を使う\", "])
+    ScriptMore(["\"控えメンバーの装備を全て外す\",  "])
+    ScriptMore(["\"用はない\"])"])
+    ConditionalBranch([1, 11, 0, 0, 0])
+      GatherFollowers([])
+      ChangeState([0, 1, 1, 1])
+      Script(["call_party_edit"])
+      RecoverAll([0, 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 1, 0])
+      ShowChoices([["登録したパーティを呼び出す", "パーティを登録する ", "やめる"], 3])
+      When([0, "登録したパーティを呼び出す"])
+        Script(["SceneManager.call(Scene_PartyLoad)"])
+        Empty([])
+      When([1, "パーティを登録する "])
+        Script(["SceneManager.call(Scene_PartySave)"])
+        Empty([])
+      When([2, "やめる"])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 2, 0])
+      CallCommonEvent([144])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 3, 0])
+      PlaySE(["RPG::SE(@name=\"Sand\", @pitch=100, @volume=80)"])
+      Script(["stand_members.each{|m|"])
+      ScriptMore(["  m.clear_equipments"])
+      ScriptMore(["}"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 4, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["どれだけ戦ったって無駄さ！"])
+    ShowText(["僕は偏在しているんだからね！"])
+    ErasePicture([5])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss_chaos1\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 1966, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["どれだけ戦ったって無駄さ！"])
+    ShowText(["僕は偏在しているんだからね！"])
+    ErasePicture([5])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss_chaos1\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 1966, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["どれだけ戦ったって無駄さ！"])
+    ShowText(["僕は偏在しているんだからね！"])
+    ErasePicture([5])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss_chaos1\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 1966, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["alice_fc2", 1, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["なっ……！　ポケット魔王城が……！！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["アピロ・ラゴスの放った混沌の瘴気が、室内を侵蝕する。"])
+    ShowText(["時空が歪み、僕達の存在する空間を蚕食する――"])
+    ShowPicture([5, "80_apiro_ragos_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["あははははっ！！"])
+    ShowText(["みんな、混沌に呑み込まれて消えるのさ！！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["まずい、このままではポケット魔王城は崩壊する。"])
+    ShowText(["なんとしても、アピロ・ラゴスを止めないと――"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["くっ、戦うしかない！"])
+    ShowText(["みんな、やるぞ！！"])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["あははっ、僕と遊びたいのぉ……？"])
+    ShowText(["それじゃあ、相手をしてあげるよ！"])
+    ConditionalBranch([4, 818, 0])
+      ShowTextAttributes(["dakki_fc1", 0, 0, 2])
+      ShowText(["【妲己】"])
+      ShowText(["お主には、一度会ったな……"])
+      ShowText(["口上には飽いた、力を見せてもらおうか。"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss_chaos1\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 1966, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    ControlSwitches([31, 31, 1])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["アピロ・ラゴスを、倒した――"])
+    ShowText(["それも、あっけなく――"])
+    ShowTextAttributes(["morrigan_fc1", 6, 0, 2])
+    ShowText(["【モリガン】"])
+    ShowText(["おい、やけに弱くなかったか……？"])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["気を抜くな、おそらくこいつは――"])
+    Wait([30])
+    ShowAnimation([12, 542, false])
+    Wait([60])
+    ControlSwitches([32, 32, 0])
+    Wait([90])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["そう、ボクは偏在しているのさ！"])
+    ShowText(["白兎がそうだったようにね！"])
+    Wait([30])
+    ShowAnimation([14, 542, false])
+    Wait([60])
+    ControlSwitches([33, 33, 0])
+    ShowAnimation([13, 542, false])
+    Wait([60])
+    ControlSwitches([34, 34, 0])
+    Wait([90])
+    ShowTextAttributes(["apiro_ragos_fc1", 0, 0, 2])
+    ShowText(["【アピロ・ラゴス】"])
+    ShowText(["ボクはどこにでもいるんだ！"])
+    ShowText(["何人でも、どこにでもね！　あはははっ！！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["次々に、周囲からアピロ・ラゴスが姿を見せる。"])
+    ShowText(["敵は多勢、まともに戦っても勝ち目はない――"])
+    ConditionalBranch([4, 818, 0])
+      ShowTextAttributes(["dakki_fc1", 0, 0, 2])
+      ShowText(["【妲己】"])
+      ShowText(["ふん、分裂体とは小癪な真似を。"])
+      ShowText(["大昔の妾のような凌ぎ方をしおるわ…。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["いちいち相手にしていられません！"])
+    ShowText(["逃げますよ！"])
+    ShowTextAttributes(["astaroth_fc1", 2, 0, 2])
+    ShowText(["【アスタロト】"])
+    ShowText(["逃げるって……どこへ！？"])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["知るか！"])
+    ShowText(["とにかく、ここから出るぞ！！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["混沌の使徒の襲撃を受け、混乱に陥ったポケット魔王城。"])
+    ShowText(["とにかくここから離れなければ、全滅は避けられない。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["とにかく今は、脱出を優先する。"])
+    ShowText(["立ちはだかる敵は、倒すのが厄介なら逃げてしまおう――"])
+    FadeoutScreen([])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    ControlSwitches([34, 34, 1])
+    ControlVariables([1143, 1143, 0, 0, 7])
+    ControlSwitches([5431, 5431, 0])
+    ControlSwitches([100, 100, 0])
+    ControlVariables([1002, 1002, 0, 0, 141])
+    ChangeTransparency([1])
+    TransferPlayer([0, 455, 12, 10, 2, 2])
+    FadeinScreen([])
+    PlayBGM(["RPG::BGM(@name=\"kiki6\", @volume=100, @pitch=100)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])

@@ -1,0 +1,80 @@
+Display Name = "Haunted Mansion Parlor 2"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 346, 57, 48, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([482, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([0, 2069, 0])
+      ConditionalBranch([0, 2073, 0])
+        ConditionalBranch([0, 2078, 0])
+          ConditionalBranch([0, 2079, 0])
+            ConditionalBranch([0, 2080, 0])
+              ConditionalBranch([2, "A", 1])
+                ControlSelfSwitch(["A", 0])
+                ShowTextAttributes(["mimic_fc1", 1, 0, 2])
+                ShowText(["\\n<Mimic>*mushmush*... I'm a good mimic."])
+                ShowTextAttributes(["mimic_fc1", 1, 0, 2])
+                ShowText(["\\n<Mimic>Thank you, take this. Chrome, unaware of me being a mimic, put this into my chest."])
+                PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+                ChangeItems([614, 0, 0, 1])
+                ShowTextAttributes(["mimic_fc1", 1, 0, 2])
+                ShowText(["\\n<Mimic>With this, you will be able to change jobs to \\C[14]Spiritualist\\C[0]. You'll be able to summon zombies and ghosts."])
+                ShowTextAttributes(["mimic_fc1", 1, 0, 2])
+                ShowText(["\\n<Mimic>Is it okay for me to give it to you, you ask? Chrome hasn't returned for it in fifty years."])
+                ExitEventProcessing([])
+                Empty([])
+              Else([])
+                ShowTextAttributes(["mimic_fc1", 1, 0, 2])
+                ShowText(["\\n<Mimic>*mushmush*... I'm a good mimic."])
+                ShowTextAttributes(["mimic_fc1", 1, 0, 2])
+                ShowText(["\\n<Mimic>Recently, the Cursed Doll has been mischievous. When I'm asleep she puts heavy things on top of my lid."])
+                ExitEventProcessing([])
+                Empty([])
+              BranchEnd([])
+              Empty([])
+            BranchEnd([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["mimic_fc1", 1, 0, 2])
+    ShowText(["\\n<Mimic>*mushmush* I'm a good mimic."])
+    ShowTextAttributes(["mimic_fc1", 1, 0, 2])
+    ShowText(["\\n<Mimic>Lately, everyone in the mansion has been making a commotion. I think they're nervous since humans showed up here."])
+    ShowTextAttributes(["mimic_fc1", 1, 0, 2])
+    ShowText(["\\n<Mimic>If you defeat them, then talk to them, won't they calm down? Once you calm everyone down, I'll give you a thank you gift."])
+    ExitEventProcessing([])
+    Empty([])

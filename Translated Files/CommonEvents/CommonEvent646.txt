@@ -1,0 +1,29 @@
+CommonEvent 646
+Name = "イベント：ナターシャ"
+
+  999([646])
+  ControlSwitches([73, 73, 0])
+  ConditionalBranch([1, 129, 0, 0, 0])
+    ShowTextAttributes(["d_succubus_fc1", 0, 0, 2])
+    ShowText(["\\n<Natasha>Are you short on grimoire pages?\nI'll make a special deal for you..."])
+    ShowText([""])
+    ShowText([""])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ChangeItems([109, 0, 0, 10])
+    ControlVariables([129, 129, 0, 0, 1])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 129, 0, 1, 0])
+    ShowTextAttributes(["d_succubus_fc1", 0, 0, 2])
+    ShowText(["\\n<Natasha>I can't give you any more...\nBecause my grimoire has become really thin from the pages I tore out."])
+    ShowText([""])
+    ShowText([""])
+    ControlSwitches([73, 73, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  Empty([])

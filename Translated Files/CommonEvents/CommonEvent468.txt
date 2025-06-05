@@ -1,0 +1,24 @@
+CommonEvent 468
+Name = "Near the Dark Goddess' Castle"
+
+  999([468])
+  ConditionalBranch([1, 1142, 0, 75, 2])
+    ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+    ShowText(["\\n<Ilias>Hold on...\nI told you not to go near the Dark Goddess' Castle!"])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["\\n<Ilias>I won't allow you to take any more risks.\nCome on, we're turning back now!"])
+    ShowText([""])
+    ShowText([""])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  FadeoutScreen([])
+  ChangeTransparency([0])
+  TransferPlayer([0, 207, 8, 7, 0, 0])
+  FadeinScreen([])
+  Empty([])

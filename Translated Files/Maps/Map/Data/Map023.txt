@@ -1,0 +1,828 @@
+Display Name = "ラダイト村"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ShowTextAttributes(["sabasa_fc4", 0, 0, 2])
+    ShowText(["【サラサ】"])
+    ShowText(["ここは陸の孤島さ……"])
+    ShowText(["飛空挺がないと、脱出も出来ないよ。"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["sabasa_fc4", 0, 0, 2])
+    ShowText(["【サラサ】"])
+    ShowText(["ここは陸の孤島さ……"])
+    ShowText(["飛空挺がないと、脱出も出来ないよ。"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 22, 66, 40, 0, 0])
+    PlayBGM(["RPG::BGM(@name=\"kiki3\", @volume=100, @pitch=100)"])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ControlSwitches([31, 31, 0])
+    SetEventLocation([14, 0, 34, 26, 2])
+    FadeinScreen([])
+    SetMoveRoute([14, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Wait([30])
+    ShowPicture([5, "80_doppele_st31", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["doppele_fc1", 2, 0, 2])
+    ShowText(["【ルカ・キリエ】"])
+    ShowText(["目標座標、ラダイト村に到着……"])
+    ShowText(["これより、レプリカントの植民計画を粉砕するわ。"])
+    ShowTextAttributes(["doppele_fc1", 2, 0, 2])
+    ShowText(["【ルカ・キリエ】"])
+    ShowText(["ドッペル達、村を制圧しなさい！"])
+    ShowText(["ここにいる者は、みな敵よ！"])
+    Wait([30])
+    ShowPicture([5, "80_doppeleb_st01", 0, 0, -180, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_doppeleb_st01", 0, 0, 120, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["了解です、キリエ様！！"])
+    Wait([60])
+    FadeoutScreen([])
+    Wait([30])
+    ErasePicture([5])
+    ErasePicture([6])
+    ChangeTransparency([1])
+    TransferPlayer([0, 23, 54, 44, 2, 2])
+    ControlSwitches([31, 31, 1])
+    FadeinScreen([])
+    ShowPicture([5, "80_sabasa_st33", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["sabasa_fc4", 2, 0, 2])
+    ShowText(["【サラサ】"])
+    ShowText(["まずいね……あの連中は、あたし達も容赦なく襲うよ。"])
+    ShowText(["敵の敵は味方、ってのが通じない連中さ。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["ああ、分かってる。"])
+    ShowText(["三つ巴の戦いは避けられないな……"])
+    ShowTextAttributes(["morrigan_fc1", 0, 0, 2])
+    ShowText(["【モリガン】"])
+    ShowText(["いっそ、レプリカント共の始末は月の民に任せたらどうだ？"])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["根絶やしにされる前に、出来る限り情報を得たい。"])
+    ShowText(["さあ、鍵の掛かった重要区画に急ぐぞ！"])
+    ConditionalBranch([4, 775, 0])
+      ShowTextAttributes(["vgirl_fc2", 0, 0, 2])
+      ShowText(["【ヴァンガード】"])
+      ShowText(["まったく、またあの連中との三つ巴か……"])
+      ShowText(["苦労をさせられるな。"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["まさか、ここに来て月の民が攻めてくるなんて。"])
+    ShowText(["僕達は、レプリカントの守る重要区画へと急ぐのだった――"])
+    PlayBGM(["RPG::BGM(@name=\"kiki3\", @volume=100, @pitch=100)"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 22, 59, 17, 0, 0])
+    PlayBGM(["RPG::BGM(@name=\"kiki3\", @volume=100, @pitch=100)"])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 22, 27, 38, 0, 0])
+    PlayBGM(["RPG::BGM(@name=\"kiki3\", @volume=100, @pitch=100)"])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 22, 85, 16, 0, 0])
+    PlayBGM(["RPG::BGM(@name=\"kiki3\", @volume=100, @pitch=100)"])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 22, 41, 42, 0, 0])
+    PlayBGM(["RPG::BGM(@name=\"kiki3\", @volume=100, @pitch=100)"])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 22, 7, 40, 0, 0])
+    PlayBGM(["RPG::BGM(@name=\"kiki3\", @volume=100, @pitch=100)"])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 22, 14, 67, 0, 0])
+    PlayBGM(["RPG::BGM(@name=\"kiki3\", @volume=100, @pitch=100)"])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 22, 41, 62, 0, 0])
+    PlayBGM(["RPG::BGM(@name=\"kiki3\", @volume=100, @pitch=100)"])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 22, 67, 62, 0, 0])
+    PlayBGM(["RPG::BGM(@name=\"kiki3\", @volume=100, @pitch=100)"])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    GatherFollowers([])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ScrollMap([2, 4, 4])
+    ControlSwitches([32, 32, 0])
+    SetMoveRoute([17, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Wait([90])
+    PlayBGM(["RPG::BGM(@name=\"boss0-3\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_doppele_st31", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["doppele_fc1", 2, 0, 2])
+    ShowText(["【ルカ・キリエ】"])
+    ShowText(["オリジナル……あなた達もいたとはね。"])
+    ShowText(["私達の戦いの邪魔はしないで……"])
+    ShowTextAttributes(["sabasa_fc4", 0, 0, 2])
+    ShowText(["【サラサ】"])
+    ShowText(["邪魔をしてるのは、そっちだよ。"])
+    ShowText(["サラサ号、艦砲射撃！！"])
+    ShowTextAttributes(["umiusi_k_fc2", 1, 0, 2])
+    ShowText(["【そらうし空兵】"])
+    ShowText(["1番砲門、2番砲門……ファイア！！"])
+    ErasePicture([5])
+    Wait([30])
+    SetMoveRoute([17, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShowAnimation([17, 661, false])
+    Wait([120])
+    ShowTextAttributes(["doppele_fc1", 2, 0, 2])
+    ShowText(["【ルカ・キリエ】"])
+    ShowText(["くっ……邪魔な船ね。"])
+    ShowText(["墜ちなさい……"])
+    PlaySE(["RPG::SE(@name=\"Wind1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([17, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=14, @parameters=[3, -12])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[3, -12])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ShowAnimation([-1, 201, false])
+    Wait([120])
+    ControlSwitches([32, 32, 1])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ルカ・キリエは天高く跳び、飛行船めがけて一撃を繰り出した！"])
+    ShowPicture([5, "80_tatunoko_k_st13", 0, 0, -150, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_umiusi_k_st13", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["ひ、左舷に大ダメージなのです！"])
+    ShowTextAttributes(["umiusi_k_fc2", 2, 0, 2])
+    ShowText(["【そらうし空兵】"])
+    ShowText(["第三、第四エンジン停止……"])
+    ShowText(["高度低下……これ、ヤバいんじゃ……"])
+    ShowTextAttributes(["sabasa_fc4", 2, 0, 2])
+    ShowText(["【サラサ】"])
+    ShowText(["総員、退艦！"])
+    ShowText(["すぐに飛び降りな！！"])
+    PlaySE(["RPG::SE(@name=\"mon_fall1\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["あああ～～！！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["空兵達が、次々にサラサ号から飛び降りていく！"])
+    ShowText(["そのまま、サラサ号は高度を下げていき――"])
+    ErasePicture([5])
+    ErasePicture([6])
+    PlaySE(["RPG::SE(@name=\"mon_bom3\", @pitch=100, @volume=100)"])
+    Wait([30])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["地上に墜落、爆発炎上した！"])
+    ShowText(["総員は脱出に成功し、犠牲者はいないようだ――"])
+    ScrollMap([8, 4, 4])
+    Wait([60])
+    ShowTextAttributes(["alice_fc2", 1, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["なんという奴だ、槍で飛行船を撃墜するとは……"])
+    ConditionalBranch([4, 69, 0])
+      ShowTextAttributes(["dragonp_fc2", 1, 0, 2])
+      ShowText(["【グランパピー】"])
+      ShowText(["並外れた使い手だな……"])
+      ShowText(["我が槍とどちらが上か、試したくなったぞ！"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["sabasa_fc4", 4, 0, 2])
+    ShowText(["【サラサ】"])
+    ShowText(["大丈夫、団員は全員脱出済みだよ！"])
+    ShowText(["船くらい、またかっぱらえばいいさ！"])
+    ShowTextAttributes(["alice_fc1", 1, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["それを笑って言えるとは……貴様も、大したタマだな。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["とにかく、今は重要区画に急ごう！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ルカ・キリエは飛行船を撃墜し、離れた所に着地したようだ。"])
+    ShowText(["今のうちに、鍵の掛かった区画へと向かおう――"])
+    ControlVariables([1150, 1150, 0, 0, 17])
+    PlayBGM(["RPG::BGM(@name=\"kiki3\", @volume=100, @pitch=100)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Key\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["重要区画の鍵を使った！"])
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 22, 7, 21, 0, 0])
+    PlayBGM(["RPG::BGM(@name=\"kiki3\", @volume=100, @pitch=100)"])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["doppele_fc2", 1, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["この子、可愛い♪"])
+    ShowText(["月に持って帰っちゃおうっと～♪"])
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["たすけて！　拉致されるのです～！！"])
+    BattleProcessing([0, 1619, false, false])
+    ControlSwitches([2579, 2579, 0])
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["危なかったのです……"])
+    ShowText(["お持ち帰りされるところだったのです……"])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["tatunoko_k_fc2", 1, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["月に持ち帰られるところだった補給たつのこです！"])
+    ShowText(["転職の書もありますよ！"])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+    RecoverAll([0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ルカ達のHPとMPが全快した！"])
+    CallCommonEvent([113])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ShowTextAttributes(["doppele_fc2", 2, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["あれ、未確認の敵がいる……"])
+    ShowText(["どちらにしても、地上の者は全て敵！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["相変わらず、誰彼構わず襲ってくるのか……"])
+    ShowText(["容赦はしない、行くぞ！"])
+    BattleProcessing([0, 1618, false, false])
+    ControlSelfSwitch(["A", 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    ShowTextAttributes(["doppele_fc2", 2, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["あれ、未確認の敵がいる……"])
+    ShowText(["どちらにしても、地上の者は全て敵！"])
+    ShowTextAttributes(["sonia_fc1", 5, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["ルカのクローンとは言え……"])
+    ShowText(["ここは容赦せず、叩き潰す！"])
+    BattleProcessing([0, 1618, false, false])
+    ControlSelfSwitch(["A", 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["戦闘開始！　いっくよ～！！"])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["月に逃げたルカのクローン達か……"])
+    ShowText(["襲ってくる以上、返り討ちにさせてもらうぞ！"])
+    BattleProcessing([0, 1618, false, false])
+    ControlSelfSwitch(["A", 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["戦闘開始！　いっくよ～！！"])
+    ShowTextAttributes(["sabasa_fc4", 2, 0, 2])
+    ShowText(["【サラサ】"])
+    ShowText(["月の民……まさか、ここで交戦する事になるなんてね。"])
+    ShowText(["相当強いと話は聞いてる、全力で行くよ！"])
+    BattleProcessing([0, 1618, false, false])
+    ControlSelfSwitch(["A", 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["人間代替存在レプリカント！"])
+    ShowText(["ここでみんな始末するよ！"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["滅ぼされるわけにはいかない……"])
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["人間代替存在レプリカント！"])
+    ShowText(["ここでみんな始末するよ！"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["滅ぼされるわけにはいかない……"])
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    ShowTextAttributes(["doppele_fc2", 1, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["この子、可愛い♪"])
+    ShowText(["月に持って帰っちゃおうっと～♪"])
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["たすけて！　拉致されるのです～！！"])
+    BattleProcessing([0, 1619, false, false])
+    ControlSwitches([2579, 2579, 0])
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["危なかったのです……"])
+    ShowText(["お持ち帰りされるところだったのです……"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["ここ、変な生命反応があるなぁ……"])
+    ShowText(["よ～し、調べてみよっと！"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=25, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=25, @parameters=[])"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["悪いが、我等が先だ。"])
+    ShowText(["どちらにしろ、この鍵がないと扉は開かんぞ。"])
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["それじゃあ、その鍵を渡してもらうからね！！"])
+    BattleProcessing([0, 1619, false, false])
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["邪魔者は消えたな……"])
+    ShowText(["それでは、重要区画とやらの内部を調べるぞ！"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["全力で抵抗するのみ……"])
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["流石は次世代生物、一筋縄ではいかないか……！"])
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["全力で抵抗するのみ……"])
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["流石は次世代生物、一筋縄ではいかないか……！"])
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["想像以上に、辺鄙な村じゃない……"])
+    ShowText(["これも何かのカモフラージュ？"])
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["答える必要はない……"])
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ShowTextAttributes(["replicant_fc1", 0, 0, 2])
+    ShowText(["【レプリカント】"])
+    ShowText(["全力で抵抗するのみ……"])
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["流石は次世代生物、一筋縄ではいかないか……！"])
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["ボコボコの陣を使っても、若干形勢不利なのです！"])
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["悪いけど……こっちは、一体多数の戦いに慣れてるのよ！"])
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["たつのこの威信にかけて、ここは何とかするのです！"])
+    ShowText(["あなた達は、重要区画に急ぐのです！"])
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["ボコボコの陣を使っても、若干形勢不利なのです！"])
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["悪いけど……こっちは、一体多数の戦いに慣れてるのよ！"])
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["たつのこの威信にかけて、ここは何とかするのです！"])
+    ShowText(["あなた達は、重要区画に急ぐのです！"])
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["ボコボコの陣を使っても、若干形勢不利なのです！"])
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["悪いけど……こっちは、一体多数の戦いに慣れてるのよ！"])
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["たつのこの威信にかけて、ここは何とかするのです！"])
+    ShowText(["あなた達は、重要区画に急ぐのです！"])
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["ボコボコの陣を使っても、若干形勢不利なのです！"])
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["悪いけど……こっちは、一体多数の戦いに慣れてるのよ！"])
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["たつのこの威信にかけて、ここは何とかするのです！"])
+    ShowText(["あなた達は、重要区画に急ぐのです！"])
+    Empty([])
+
+CommonEvent 57
+Name = "EV057"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["ボコボコの陣を使っても、若干形勢不利なのです！"])
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["悪いけど……こっちは、一体多数の戦いに慣れてるのよ！"])
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["たつのこの威信にかけて、ここは何とかするのです！"])
+    ShowText(["あなた達は、重要区画に急ぐのです！"])
+    Empty([])
+
+CommonEvent 58
+Name = "EV058"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["ボコボコの陣を使っても、若干形勢不利なのです！"])
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["悪いけど……こっちは、一体多数の戦いに慣れてるのよ！"])
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["たつのこの威信にかけて、ここは何とかするのです！"])
+    ShowText(["あなた達は、重要区画に急ぐのです！"])
+    Empty([])
+
+CommonEvent 59
+Name = "EV059"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["ボコボコの陣を使っても、若干形勢不利なのです！"])
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["悪いけど……こっちは、一体多数の戦いに慣れてるのよ！"])
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["たつのこの威信にかけて、ここは何とかするのです！"])
+    ShowText(["あなた達は、重要区画に急ぐのです！"])
+    Empty([])
+
+CommonEvent 60
+Name = "EV060"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["ボコボコの陣を使っても、若干形勢不利なのです！"])
+    ShowTextAttributes(["doppele_fc2", 0, 0, 2])
+    ShowText(["【ドッペル】"])
+    ShowText(["悪いけど……こっちは、一体多数の戦いに慣れてるのよ！"])
+    ShowTextAttributes(["tatunoko_k_fc2", 2, 0, 2])
+    ShowText(["【たつのこ空兵】"])
+    ShowText(["たつのこの威信にかけて、ここは何とかするのです！"])
+    ShowText(["あなた達は、重要区画に急ぐのです！"])
+    Empty([])

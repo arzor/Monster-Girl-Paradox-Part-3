@@ -1,0 +1,374 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 300, 16, 25, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 300, 39, 33, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 300, 7, 46, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 300, 49, 46, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["kunoitielf2_fc1", 0, 0, 2])
+    ShowText(["\\n<Kunoichi Elf>This is the only inn in the village.\nIt'll be 10G. Do you want to stay?\\$"])
+    ShowText([""])
+    ShowText([""])
+    ShowChoices([["Yes", "No"], 2])
+    When([0, "Yes"])
+      ConditionalBranch([7, 10, 0])
+        ChangeGold([1, 0, 10])
+        FadeoutScreen([])
+        PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+        Wait([150])
+        RecoverAll([0, 0])
+        FadeinScreen([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["kunoitielf2_fc1", 0, 0, 2])
+        ShowText(["\\n<Kunoichi Elf>You don't have enough money..."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    When([1, "No"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["kunoitielf2_fc1", 0, 0, 2])
+    ShowText(["\\n<Kunoichi Elf>This is the only item shop in the village.\nWe also have some very outstanding accessories."])
+    ShowText([""])
+    ShowText([""])
+    ShopProcessing([0, 2, 0, 0, false])
+    ShopItem([0, 4, 0, 0])
+    ShopItem([0, 7, 0, 0])
+    ShopItem([0, 11, 0, 0])
+    ShopItem([0, 13, 0, 0])
+    ShopItem([0, 14, 0, 0])
+    ShopItem([0, 15, 0, 0])
+    ShopItem([0, 16, 0, 0])
+    ShopItem([0, 17, 0, 0])
+    ShopItem([0, 18, 0, 0])
+    ShopItem([0, 19, 0, 0])
+    ShopItem([0, 20, 0, 0])
+    ShopItem([0, 21, 0, 0])
+    ShopItem([0, 23, 0, 0])
+    ShopItem([0, 35, 0, 0])
+    ShopItem([0, 102, 0, 0])
+    ShopItem([0, 109, 0, 0])
+    ShopItem([0, 110, 0, 0])
+    ShopItem([2, 1186, 0, 0])
+    ShopItem([2, 1092, 0, 0])
+    ShopItem([2, 1096, 0, 0])
+    ShopItem([2, 1717, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["kunoitielf2_fc1", 2, 0, 2])
+    ShowText(["\\n<Kunoichi Elf>We're sold out of weapons and armor...\nWhat you see here is fake stuff for display."])
+    ShowText([""])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["kunoitielf2_fc3", 2, 0, 2])
+    ShowText(["\\n<Kunoichi Elf>Because of the sudden state of high alert, we're running low on equipment. Even this shop is sold out..."])
+    ShowText([""])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([1, 838, 0, 2, 1])
+      ConditionalBranch([0, 1587, 1])
+        ShowTextAttributes(["mob_elf2_fc1", 0, 0, 2])
+        ShowText(["\\n<Ruri>Traveling with you guys looks like it would be interesting. Can I come with you too...?"])
+        ShowText([""])
+        ShowText([""])
+        ShowChoices([["Let her join", "Decline for now"], 0])
+        When([0, "仲間にする"])
+          ShowTextAttributes(["mob_elf2_fc1", 0, 0, 2])
+          ShowText(["\\n<Ruri>All right then, take good care of me..."])
+          ShowText([""])
+          ErasePicture([5])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(587)"])
+          PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Ruri joined the party!"])
+          Wait([60])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "仲間にしない"])
+          ShowTextAttributes(["mob_elf2_fc1", 0, 0, 2])
+          ShowText(["\\n<Ruri>Oh... That's disappointing."])
+          ShowText([""])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([7371])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Elf>We've got lots of work to do because of the sudden call to arms. We need to get the necessary supplies like medicine or weapons..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Elf>We're lucky the war didn't break out in the end.\nThe Elf Princess cut off the root of the threat..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["kuno_succubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Succubus>I will write a will before the great battle... That's how determined I am to go to the battlefield."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["kuno_succubus_fc1", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Succubus>Looks like I wrote that will for nothing earlier.\nOh well, I'll just reuse it the next time there is a fight."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["kuno_scylla_fc1", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Scylla>I got information that the enemy we're up against this time is the Monster Lord's army. I heard this from an executive close to the Elf Princess."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["kuno_scylla_fc1", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Scylla>Could it be that she's planning to start a rebellion against the Monster Lord...? What in the world is the Elf Princess thinking..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["kuno_scylla_fc1", 0, 0, 2])
+      ShowText(["\\n<Kunoichi Scylla>We were informed that the enemy we're up against is the Monster Lord's army, but... There seems to have been a misunderstanding, as said Monster Lord is Black Alice."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["kuno_hapy_fc1", 0, 0, 2])
+    ShowText(["\\n<Kunoichi Harpy>We are the Four Kunoichi Sisters (by oath)!\nThough we were born at different times, we shall die together!"])
+    ShowText([""])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["kuno_arachne_fc1", 0, 0, 2])
+    ShowText(["\\n<Kunoichi Arachne>The Elf Princess is an expert of every single martial art. She's peerless with a katana, and her spear and archery skills are unparalleled under the heavens."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["kuno_arachne_fc1", 0, 0, 2])
+    ShowText(["\\n<Kunoichi Arachne>She truly is the strongest shut-in.\nNo one can drag the princess out of her room."])
+    ShowText([""])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Elf>Ah, I'm busy, so busy...\nIf you want to have a battle fuck match, do it with the girl in that room over there."])
+    ShowText([""])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["slime_fc1", 0, 0, 2])
+    ShowText(["\\n<Slime Girl>We gave it our all and made it this far♪\nWe're just a few steps away from the goal of this journey!"])
+    ShowText([""])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["slime_fc1", 0, 0, 2])
+    ShowText(["\\n<Slime Girl>The goal is almost there.\nI guess our adventure is almost over...?"])
+    ShowText([""])
+    ShowText([""])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["youko_fc1", 0, 0, 2])
+      ShowText(["\\n<Chinryu Souseki>The village's security is very tight for some reason. I came here to play at a troublesome time, it seems..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["youko_fc1", 0, 0, 2])
+      ShowText(["\\n<Chinryu Souseki>I can't write my name in kanji.\nI don't even know what it means."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ConditionalBranch([1, 1138, 0, 6, 2])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Junior Tanuki>I'm here to supply tanuki antidotes, but...\nI don't want to get caught up in a fight."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1138, 0, 7, 1])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["\\n<Junior Tanuki>The mess seems to be under control and the negotiations went smoothly. I think I'll just relax in this village for a little while longer."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([405, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The pot was a Magic Pot!"])
+    BattleProcessing([0, 1450, false, false])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ShowTextAttributes(["kunoitielf2_fc1", 0, 0, 2])
+    ShowText(["\\n<Kunoichi Elf>Critical Evasion doesn't allow you to evade critical hits. It actually makes you take the critical hit like it's a normal one."])
+    ShowText([""])
+    ShowText([""])
+    ShowTextAttributes(["kunoitielf2_fc1", 0, 0, 2])
+    ShowText(["\\n<Kunoichi Elf>Enemies at higher levels have very effective Critical Evasion abilities. That's why it's so hard to land a critical hit in boss fights."])
+    ShowText([""])
+    ShowText([""])
+    Empty([])

@@ -1,0 +1,571 @@
+Display Name = "光の塔と闇の塔"
+Parallax Name = "CloudySky2"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([1, 1334, 0, 1, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["塔の入り口は固く封じられている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1334, 0, 2, 1])
+      CallCommonEvent([9041])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([1, 1334, 0, 1, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["塔の入り口は固く封じられている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1334, 0, 2, 1])
+      CallCommonEvent([9041])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 3
+Name = "黒のアリス"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["ここが、光と闇の交差する場所か――"])
+    SetMoveRoute([3, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    Wait([30])
+    ShowPicture([5, "80_alicetromeria_st05", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["alicetromeria_fc1", 4, 0, 2])
+    ShowText(["【アリストロメリア】"])
+    ShowText(["……おや、ずいぶん遅かったのですね。"])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["貴様は……黒のアリス！"])
+      ShowText(["まさか、貴様も――"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc2", 1, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["貴様は……黒のアリス！"])
+      ShowText(["まさか、貴様も――"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc8", 1, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["貴様は……黒のアリス！"])
+      ShowText(["まさか、貴様も――"])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([5, "80_alicetromeria_st02", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["alicetromeria_fc1", 1, 0, 2])
+    ShowText(["【アリストロメリア】"])
+    ShowText(["どうやら私も、13人の魔導師として認められたようです。"])
+    ShowText(["光栄な事ですわ、うふふっ……"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["魔導師ごっこのくせに……"])
+    ShowText(["さっさと元の姿に戻ったらどうです？"])
+    ShowPicture([5, "80_alicetromeria_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["alicetromeria_fc1", 0, 0, 2])
+    ShowText(["【アリストロメリア】"])
+    ShowText(["うふふっ……そうですわね。"])
+    ShowText(["ごっこ遊びも、詮無きこと。"])
+    PlaySE(["RPG::SE(@name=\"Darkness1\", @pitch=100, @volume=80)"])
+    ShowPicture([6, "80_alice8th_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([6, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 60, true])
+    ControlSwitches([31, 31, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["アリストロメリアは、黒のアリスの姿に戻った！"])
+    ShowTextAttributes(["alice8th_fc1", 0, 0, 2])
+    ShowText(["【黒のアリス】"])
+    ShowText(["この塔ですが、一人では攻略出来ません。"])
+    ShowText(["光の塔と闇の塔、二手に分かれる必要があるのです。"])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["13人の魔導師が、潰し合いながら頂上を目指す儀式――"])
+      ShowText(["複数が参加しなければ、上への道が開けんシステムか。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["13人の魔導師が、潰し合いながら頂上を目指す儀式――"])
+      ShowText(["複数が参加しなければ、上への道が開けんシステムか。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["13人の魔導師が、潰し合いながら頂上を目指す儀式――"])
+      ShowText(["複数が参加しなければ、上への道が開けんシステムか。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["alice8th_fc1", 0, 0, 2])
+    ShowText(["【黒のアリス】"])
+    ShowText(["そういうわけで、私一人では難儀しておりました。"])
+    ShowText(["ここから先は、一緒に行きませんか？"])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["天界の冒険では、共に戦った仲間だ。"])
+      ShowText(["余はもちろん、異存はないが――"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["天界の冒険では、共に戦った仲間だ。"])
+      ShowText(["余はもちろん、異存はないが――"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["天界の冒険では、共に戦った仲間だ。"])
+      ShowText(["余はもちろん、異存はないが――"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["もはや私も、文句は言いませんよ。"])
+    ShowText(["影紬や邪神さえ、仲間にいる有様ですから。"])
+    ShowTextAttributes(["alice8th_fc1", 0, 0, 2])
+    ShowText(["【黒のアリス】"])
+    ShowText(["それでは……"])
+    ShowText(["あらためて、よろしくお願いします。"])
+    ErasePicture([6])
+    SetMoveRoute([3, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    Script(["add_actor_ex(709)"])
+    ConditionalBranch([1, 912, 0, 0, 0])
+      Script(["level_adjust(45,200)"])
+      ScriptMore(["set_class_level(45, 2, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 3, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 4, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 7, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 8, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 13, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 14, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 19, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 20, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 35, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 36, 10, false, false)"])
+      Script(["set_class_level(45, 37, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 39, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 41, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 42, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 43, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 44, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 45, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 46, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 47, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 48, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 160, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 161, 10, false, false)"])
+      Script(["set_class_level(45, 162, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 163, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 164, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 166, 20, false, false)"])
+      ScriptMore(["set_class_level(45, 256, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 257, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 258, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 259, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 260, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 261, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 262, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 264, 20, false, false)"])
+      Script(["set_class_level(45, 268, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 269, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 270, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 271, 10, false, false)"])
+      ScriptMore(["set_class_level(45, 273, 20, false, false)"])
+      ScriptMore(["set_class_level(45, 7014, 15, false, false)"])
+      ScriptMore(["set_class_level(45, 7018, 15, false, false)"])
+      ScriptMore(["set_class_level(45, 7019, 15, false, false)"])
+      ScriptMore(["set_class_level(45, 7020, 15, false, false)"])
+      ScriptMore(["set_class_level(45, 7021, 15, false, false)"])
+      ScriptMore(["set_class_level(45, 7022, 15, false, false)"])
+      ScriptMore(["set_class_level(45, 7023, 15, false, true)"])
+      Script(["set_class_level(45, 7414, 12, false, true)"])
+      Script(["force_change_equip(45,1,1,4520)"])
+      ScriptMore(["force_change_equip(45,2,2,863)"])
+      ScriptMore(["force_change_equip(45,3,2,777)"])
+      ScriptMore(["force_change_equip(45,4,2,580)"])
+      ScriptMore(["force_change_equip(45,5,2,4026)"])
+      ScriptMore(["force_change_equip(45,6,2,4751)"])
+      ScriptMore(["change_actor_equip_stone(45,0,2104,2846,3311)"])
+      ScriptMore(["change_actor_equip_stone(45,1,2104,2846,3318)"])
+      ScriptMore(["change_actor_equip_stone(45,2,2846,3060,3784)"])
+      ScriptMore(["change_actor_equip_stone(45,3,2846,3070,3790)"])
+      ScriptMore(["change_actor_equip_stone(45,4,2846,3595)"])
+      ScriptMore(["change_actor_equip_stone(45,5,2846,3719)"])
+      Empty([])
+
+    BranchEnd([])
+    ChangeSkills([0, 709, 0, 9207])
+    ChangeSkills([0, 709, 0, 9237])
+    RecoverAll([0, 709])
+    ControlSwitches([7093, 7093, 0])
+    ControlSwitches([7040, 7040, 0])
+    Script(["set_actor_had(710,711,712)"])
+    PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["黒のアリスが仲間に加わった！"])
+    ShowText(["ポケット魔王城で黒のアリスを強化形態に変更できるようになった！"])
+    Wait([60])
+    ControlVariables([1353, 1353, 1, 0, 1])
+    CallCommonEvent([9056])
+    ShowPicture([5, "80_alice8th_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ConditionalBranch([0, 1684, 0])
+      ShowTextAttributes(["alice0_fc2", 0, 0, 2])
+      ShowText(["【アリスフィーズ】"])
+      ShowText(["お前が、黒のアリスか……"])
+      ShowText(["我が血から現れた異端児、とんでもない曲者よな。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1685, 0])
+      ShowTextAttributes(["alice0_fc1", 0, 0, 2])
+      ShowText(["【アリスフィーズ】"])
+      ShowText(["お前が、黒のアリスか……"])
+      ShowText(["我が血から現れた異端児、とんでもない曲者よな。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1686, 0])
+      ShowTextAttributes(["alice0_fc1", 1, 0, 2])
+      ShowText(["【カオスフィーズ】"])
+      ShowText(["お前が、黒のアリスか……"])
+      ShowText(["我が血から現れた異端児、とんでもない曲者よな。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["alice8th_fc1", 0, 0, 2])
+    ShowText(["【黒のアリス】"])
+    ShowText(["これはこれは、初代陛下……"])
+    ShowText(["お目にかかれて、光栄に存じますわ。"])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ところで、黒のアリスよ……"])
+      ShowText(["神になった黒のアリスとは、合一しなかったのか？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ところで、黒のアリスよ……"])
+      ShowText(["神になった黒のアリスとは、合一しなかったのか？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ところで、黒のアリスよ……"])
+      ShowText(["神になった黒のアリスとは、合一しなかったのか？"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["alice8th_fc1", 0, 0, 2])
+    ShowText(["【黒のアリス】"])
+    ShowText(["誘いはありましたが、丁重にお断り致しました。"])
+    ShowText(["神になど、なりたくはないので……"])
+    ShowTextAttributes(["alice0_fc2", 0, 0, 2])
+    ShowText(["【アリスフィーズ】"])
+    ShowText(["うむ、賢明だな。"])
+    ShowText(["望んで神になるなど、ただの愚か者に過ぎん。"])
+    ShowTextAttributes(["iriasu_fc5", 0, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["あてつけですか！　私は賢いです！"])
+    ErasePicture([5])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ともかく、いよいよ光の塔と闇の塔に乗り込むのだ。"])
+    ShowText(["二つのグループに分かれる以上、準備は入念にしなければ――"])
+    ControlVariables([1334, 1334, 0, 0, 2])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ControlSwitches([3440, 3440, 0])
+    ShowTextAttributes(["conquista_fc1", 0, 0, 2])
+    ShowText(["【コンキスタ】"])
+    ShowText(["ここは、奇妙な場所だな……"])
+    ShowText(["左手の塔は、天界にあった建築物であるという。"])
+    ShowTextAttributes(["conquista_fc1", 0, 0, 2])
+    ShowText(["【コンキスタ】"])
+    ShowText(["一方、右手にある塔は魔界に建っていたものだ。"])
+    ShowText(["天界と魔界が一つになる事で、このような姿になった――"])
+    ShowTextAttributes(["conquista_fc1", 0, 0, 2])
+    ShowText(["【コンキスタ】"])
+    ShowText(["しかし、今の光景こそ本来あるべきもののように感じる。"])
+    ShowText(["実に奇妙な建築物だと思わんか……？"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["天界と魔界が一つになって、初めて完成した場所か――"])
+    ShowText(["ここの事は、覚えておいた方がいいかもしれないね。"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 159, 81, 2, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 159, 81, 2, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 159, 81, 2, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 159, 81, 2, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 159, 81, 2, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 159, 81, 2, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 159, 81, 2, 0])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 159, 81, 2, 0])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 159, 81, 2, 0])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 159, 81, 2, 0])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 159, 81, 2, 0])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 160, 81, 2, 0])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 160, 81, 2, 0])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 160, 81, 2, 0])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 160, 81, 2, 0])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 160, 81, 2, 0])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 160, 81, 2, 0])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 160, 81, 2, 0])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 160, 81, 2, 0])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 160, 81, 2, 0])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 160, 81, 2, 0])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 160, 81, 2, 0])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 160, 81, 2, 0])
+    Empty([])

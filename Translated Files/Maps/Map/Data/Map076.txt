@@ -1,0 +1,426 @@
+Display Name = "月面の機械要塞"
+Parallax Name = "StarlitSky"
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ControlSwitches([100, 100, 0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 77, 34, 66, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ControlSwitches([100, 100, 0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 77, 34, 66, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ControlSwitches([100, 100, 0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 77, 34, 66, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Wait([60])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["これが、シンギュラリティの基地……"])
+    ShowText(["……っていうか、要塞だね。"])
+    ShowTextAttributes(["stein_fc1", 0, 0, 2])
+    ShowText(["【プロメスティン】"])
+    ShowText(["シンギュラリティは、機械と同化するという話だったが……"])
+    ShowText(["正確には、ある程度の磁気を帯びた金属を取り込むようだな。"])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["シンギュラリティは鉱物と同化し、この要塞を築いたのか。"])
+      ShowText(["つまり我々は、敵の体内に突入するというわけだな。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["シンギュラリティは鉱物と同化し、この要塞を築いたのか。"])
+      ShowText(["つまり我々は、敵の体内に突入するというわけだな。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["シンギュラリティは鉱物と同化し、この要塞を築いたのか。"])
+      ShowText(["つまり我々は、敵の体内に突入するというわけだな。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["stein_fc2", 0, 0, 2])
+    ShowText(["【プロメスティン】"])
+    ShowText(["でも、月って磁場がほとんどないですよね？"])
+    ShowText(["それなのに、なぜわざわざ月に拠点を……"])
+    ShowTextAttributes(["stein_fc1", 1, 0, 2])
+    ShowText(["【プロメスティン】"])
+    ShowText(["うむ、良い着眼点だ。"])
+    ShowText(["おそらく酸素に乏しい月面で、珪素が――"])
+    FadeoutBGM([1])
+    Wait([30])
+    ShowAnimation([10, 501, false])
+    Wait([30])
+    ControlSwitches([31, 31, 0])
+    ShowAnimation([11, 501, false])
+    Wait([30])
+    ControlSwitches([32, 32, 0])
+    Wait([120])
+    PlayBGM(["RPG::BGM(@name=\"boss0-nanadaitenshi\", @volume=100, @pitch=100)"])
+    ShowPicture([6, "80_metatorone_st13b", 0, 0, -160, 0, 100, 100, 255, 0])
+    ShowPicture([5, "80_sandalforne_st11b", 0, 0, 160, 0, 100, 100, 255, 0])
+    MovePicture([6, nil, 0, 0, -160, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([5, nil, 0, 0, 160, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["metatorone_fc1", 2, 0, 2])
+    ShowText(["【メタトローネ】"])
+    ShowText(["……あんた達、よくもやってくれたわね！"])
+    ShowText(["ここから先は、通さないわ！"])
+    ShowTextAttributes(["sandalforne_fc1", 0, 0, 2])
+    ShowText(["【サンダルフォーネ】"])
+    ShowText(["……通さないからね。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["メタトローネに、サンダルフォーネ――"])
+    ShowText(["やはり、魔導船のミサイルで倒せる訳がなかったか。"])
+    ShowTextAttributes(["stein_fc1", 0, 0, 2])
+    ShowText(["【プロメスティン】"])
+    ShowText(["なんだお前達、講義の邪魔だ……"])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["いや、講義は結構だ……"])
+      ShowText(["後で別の場所でやってくれ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 3, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["いや、講義は結構だ……"])
+      ShowText(["後で別の場所でやってくれ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 3, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["いや、講義は結構だ……"])
+      ShowText(["後で別の場所でやってくれ。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["この者達を倒さねば、要塞の中には入れませんね。"])
+    ShowText(["良心は痛みますが、叩きのめして正気に戻しましょう。"])
+    ShowTextAttributes(["rucyfina_fc2", 0, 0, 2])
+    ShowText(["【ルシフィナ】"])
+    ShowText(["あなたに良心なんてあったの……？"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["この二人とは、それなりに仲良くなったんですよ……"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["それなら、なおさら正気に戻してやらないとね。"])
+    ShowText(["厄介な相手だけど、なんとしても捕縛するんだ！"])
+    ConditionalBranch([4, 397, 0])
+      ShowTextAttributes(["shion_fc1", 4, 0, 2])
+      ShowText(["【シオン】"])
+      ShowText(["ヒェ～、双子天使が相手かよ。"])
+      ShowText(["アトミックヘブンの直撃だけは勘弁願いたいぜ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 16, 0])
+      ShowTextAttributes(["granberia_fc4", 0, 0, 2])
+      ShowText(["【グランベリア】"])
+      ShowText(["可哀想だが、手が抜ける相手ではない……"])
+      ShowText(["全力で行くぞ！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 513, 0])
+      ShowTextAttributes(["sariera_fc1", 0, 0, 2])
+      ShowText(["【サリエラ】"])
+      ShowText(["まさか、この二人と戦う事になるとはな……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 512, 0])
+      ShowTextAttributes(["uriera_fc1", 0, 0, 2])
+      ShowText(["【ウリエラ】"])
+      ShowText(["やれやれ、あんまりぶっ壊さないようにしないとな……"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ErasePicture([6])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss_nanadaitensi\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 2006, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    PlayBGM(["RPG::BGM(@name=\"moon1\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["metatorone_fc1", 4, 0, 2])
+    ShowText(["【メタトローネ】"])
+    ShowText(["体が、もう限界……"])
+    ShowTextAttributes(["sandalforne_fc1", 4, 0, 2])
+    ShowText(["【サンダルフォーネ】"])
+    ShowText(["やられちゃった……"])
+    ConditionalBranch([4, 37, 0])
+      ShowTextAttributes(["stein_fc1", 0, 0, 2])
+      ShowText(["【プロメスティン】"])
+      ShowText(["これが七大天使の力か……"])
+      ShowText(["図らずも、良い戦闘サンプルが取れたぞ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 38, 0])
+      ShowTextAttributes(["stein_fc1", 4, 0, 2])
+      ShowText(["【プロメスティン】"])
+      ShowText(["これが七大天使の力か……"])
+      ShowText(["図らずも、良い戦闘サンプルが取れたぞ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 39, 0])
+      ShowTextAttributes(["stein_fc1", 7, 0, 2])
+      ShowText(["【プロメスティン】"])
+      ShowText(["これが七大天使の力か……"])
+      ShowText(["図らずも、良い戦闘サンプルが取れたぞ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 40, 0])
+      ShowTextAttributes(["stein_fc4", 0, 0, 2])
+      ShowText(["【プロメスティン】"])
+      ShowText(["これが七大天使の力か……"])
+      ShowText(["図らずも、良い戦闘サンプルが取れたぞ。"])
+      Empty([])
+
+    BranchEnd([])
+    FadeoutScreen([])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["メタトローネとサンダルフォーネを戦闘不能に追い込んだ！"])
+    ShowText(["対策プログラムをインストールし、正気に戻そう――"])
+    FadeinScreen([])
+    ShowPicture([5, "80_metatorone_st05b", 0, 0, -160, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_sandalforne_st01b", 0, 0, 160, 0, 100, 100, 255, 0])
+    MovePicture([5, nil, 0, 0, -160, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 160, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["metatorone_fc1", 4, 0, 2])
+    ShowText(["【メタトローネ】"])
+    ShowText(["……あれ？　あたし、何をしてたの？"])
+    ShowTextAttributes(["sandalforne_fc1", 0, 0, 2])
+    ShowText(["【サンダルフォーネ】"])
+    ShowText(["記憶がない……なんで……？"])
+    ConditionalBranch([4, 21, 0])
+      ShowTextAttributes(["tamamo_fc1", 1, 0, 2])
+      ShowText(["【たまも】"])
+      ShowText(["上手くいったようじゃのう！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 22, 0])
+      ShowTextAttributes(["tamamo_fc2", 1, 0, 2])
+      ShowText(["【玉藻】"])
+      ShowText(["上手くいったようじゃのう！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 512, 0])
+      ShowTextAttributes(["uriera_fc1", 1, 0, 2])
+      ShowText(["【ウリエラ】"])
+      ShowText(["正気に戻ったか！"])
+      ShowText(["手間を掛けさせてくれるぜ！"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["まったく……"])
+    ShowText(["あなた達双子は、よく操られますね。"])
+    ConditionalBranch([4, 513, 0])
+      ShowTextAttributes(["sariera_fc1", 0, 0, 2])
+      ShowText(["【サリエラ】"])
+      ShowText(["魅凪にも操られていたな……"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["双子姉妹に、シンギュラリティについて説明した――"])
+    Wait([30])
+    ShowPicture([5, "80_metatorone_st06b", 0, 0, -160, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["metatorone_fc1", 5, 0, 2])
+    ShowText(["【メタトローネ】"])
+    ShowText(["何がシンギュラリティよ、名前からしてふざけてるわね。"])
+    ShowText(["たっぷりお礼返ししてやるわ。"])
+    ShowPicture([6, "80_sandalforne_st06b", 0, 0, 160, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["sandalforne_fc1", 5, 0, 2])
+    ShowText(["【サンダルフォーネ】"])
+    ShowText(["でも、助けてくれてありがとう……"])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["やれやれ、心配を掛けて……"])
+    ShowText(["これからは、一緒に戦いましょう。"])
+    ErasePicture([5])
+    ErasePicture([6])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    Script(["add_actor_ex(514)"])
+    ScriptMore(["add_actor_ex(515)"])
+    PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["メタトローネとサンダルフォーネが仲間に加わった！"])
+    Wait([60])
+    ControlVariables([1308, 1308, 0, 0, 12])
+    ConditionalBranch([4, 397, 0])
+      ShowTextAttributes(["shion_fc1", 3, 0, 2])
+      ShowText(["【シオン】"])
+      ShowText(["双子姉妹も一緒か！"])
+      ShowText(["こりゃ、心強いぜ～！！"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["それじゃあ、いよいよ要塞の中に突入だね。"])
+    ShowText(["気合いを入れて行こう！"])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ああ……なんとしても、この要塞を突破するぞ！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 3, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ああ……なんとしても、この要塞を突破するぞ！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ああ……なんとしても、この要塞を突破するぞ！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 16, 0])
+      ShowTextAttributes(["granberia_fc4", 1, 0, 2])
+      ShowText(["【グランベリア】"])
+      ShowText(["要塞攻略か……腕が鳴るな！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 19, 0])
+      ShowTextAttributes(["arumaeruma_fc2", 2, 0, 2])
+      ShowText(["【アルマエルマ】"])
+      ShowText(["とっても楽しくなさそうな場所ね……"])
+      ShowText(["あたしも、一緒に行かなきゃダメ？"])
+      ConditionalBranch([4, 23, 0])
+        ShowTextAttributes(["erbetie_fc1", 0, 0, 2])
+        ShowText(["【エルベティエ】"])
+        ShowText(["ダメ。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 24, 0])
+        ShowTextAttributes(["erbetie_fc2", 0, 0, 2])
+        ShowText(["【エルベティエ・カナデ】"])
+        ShowText(["ダメ。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["行きますよ、メタトローネにサンダルフォーネ。"])
+    ShowText(["機械の王を気取るシンギュラリティの鼻柱をへし折るのです。"])
+    ShowTextAttributes(["metatorone_fc1", 0, 0, 2])
+    ShowText(["【メタトローネ】"])
+    ShowText(["任せといて！　思いっきり、暴れてやるから！"])
+    ShowTextAttributes(["sandalforne_fc1", 5, 0, 2])
+    ShowText(["【サンダルフォーネ】"])
+    ShowText(["イリアス様、おともだち……"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 837, 40, 16, 2, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 837, 40, 16, 2, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 837, 40, 16, 2, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "メタト"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "サンダル"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])

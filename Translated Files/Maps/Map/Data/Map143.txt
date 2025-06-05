@@ -1,0 +1,536 @@
+Display Name = "罪人の封牢"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 142, 5, 13, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 144, 1, 5, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 144, 2, 5, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 142, 10, 2, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["一階の囚人は、みな解放しました。"])
+    ShowText(["これより二階の制圧に取りかかります。"])
+    ShowTextAttributes(["angels_fc1", 0, 0, 2])
+    ShowText(["【天使兵】"])
+    ShowText(["ただ、まだ一階にも敵は残っていますので……"])
+    ShowText(["油断されないようお願いします。"])
+    ConditionalBranch([4, 397, 0])
+      ShowTextAttributes(["shion_fc1", 3, 0, 2])
+      ShowText(["【シオン】"])
+      ShowText(["おう、任せときな！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["cupid_fc1", 0, 0, 2])
+    ShowText(["【キューピッド】"])
+    ShowText(["な～んかこの先、スペースがある気がするんだよね。"])
+    ShowText(["でも、どうやって回り込むのかなぁ……？"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Open3\", @pitch=100, @volume=80)"])
+    ControlSwitches([2539, 2539, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["封牢の鍵で牢を開けた！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Open3\", @pitch=100, @volume=80)"])
+    ControlSwitches([2539, 2539, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["封牢の鍵で牢を開けた！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    GatherFollowers([])
+    PlayBGM(["RPG::BGM(@name=\"scene_epilogue2\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_mefist_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["メフィストではありませんか！"])
+    ShowText(["こんな所に監禁されていたのですね！？"])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["ああ、皆様……よく助けに来て下さいました。"])
+    ShowText(["私がいない間、色々と不便を掛けたでしょう……"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["えっと、そういうわけでもなくて……"])
+    ShowText(["魔界のメフィストが、入れ替わってて……"])
+    FadeoutScreen([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ルカは、事情を説明した――"])
+    ShowPicture([5, "80_mefist_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+    FadeinScreen([])
+    PlayBGM(["RPG::BGM(@name=\"scene_comi2\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["な、なんということ……"])
+    ShowText(["私が、ずっと壁を眺めている間に……"])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["私の偽物が、私のような顔をして……"])
+    ShowText(["あなた達と一緒に……"])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["気付かなかったのですか！？"])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["私が入れ替わっていた事に気付かず、ずっと一緒にいて！？"])
+    ShowText(["ただの一度も！？　誰も！？　おかしいとは思わずに！？"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["ご、ごめん……"])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["ああ、なんと薄情な……"])
+    ShowText(["私は一途に、あなた達を待ち続けたというのに……"])
+    ErasePicture([5])
+    PlayBGM(["RPG::BGM(@name=\"boss0-3\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【？？？】"])
+    ShowText(["ふふふ……あなたの存在感など、その程度のものですよ。"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["……何者です！？"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    ShowAnimation([12, 542, false])
+    Wait([60])
+    ControlSwitches([31, 31, 0])
+    Wait([60])
+    ShowPicture([5, "80_mefist_st31", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["mefist_fc3", 0, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["それとも……"])
+    ShowText(["私の方が、そこの偽物よりも役に立ったのではないですか？"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["その場に現れたのは、魔界のメフィスト――"])
+    ShowText(["ずっと仲間の振りをして、僕達を騙してきた妖魔だった。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["妖星デミウルゴスでの戦いで、生死不明になっていたが――"])
+    ShowText(["どうやら、生き延びていたようだ。"])
+    ShowPicture([5, "80_mefist_st03", 0, 0, -170, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_mefist_st31", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["何を言うのです、偽物はそちらではないですか！"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["いちおう、どちらも本人です。"])
+    ShowText(["並行世界の同一人物ですからね……"])
+    ErasePicture([6])
+    ShowPicture([5, "80_mefist_st31", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["mefist_fc3", 0, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["ともかく、その者を解放させはしません。"])
+    ShowText(["私こそが、唯一無二のメフィストなのですから……"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["悪いけど、メフィストは大切な仲間だ。"])
+    ShowText(["お前を倒してでも、ここから助け出す！"])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["大切な仲間が入れ替わっていても……"])
+    ShowText(["誰も気付きませんでしたけどね。"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["根に持ちますね……"])
+    ShowText(["これ、たぶん五年は言われ続けますよ。"])
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    ShowPicture([10, "sys_white", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([10, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowPicture([5, "80_mefist_st41", 0, 0, 0, 0, 100, 100, 255, 0])
+    ControlSwitches([32, 32, 0])
+    MovePicture([10, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+    ShowTextAttributes(["mefist_fc4", 0, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["今度こそ、本気の力で相手をしましょう。"])
+    ShowText(["ここであなた達を倒し、邪神様への捧げ物とします……"])
+    ConditionalBranch([4, 397, 0])
+      ShowTextAttributes(["shion_fc1", 0, 0, 2])
+      ShowText(["【シオン】"])
+      ShowText(["はっ、返り討ちだ！"])
+      ShowText(["首を引っこ抜いて、イリアス様への捧げ物にしてやるぜ！"])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["いえ、いりませんよ……"])
+      ShowText(["お気持ちだけ受け取っておきます。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 233, 0])
+      ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+      ShowText(["【メフィスト’】"])
+      ShowText(["さて、私はこちらにもいるのですが。"])
+      ShowTextAttributes(["mefist_fc4", 2, 0, 2])
+      ShowText(["【メフィスト】"])
+      ShowText(["なっ！？　私がさらに、もう一人……！？"])
+      ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+      ShowText(["【メフィスト】"])
+      ShowText(["もう、何が何やら分かりませんね……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 391, 0])
+      ShowTextAttributes(["mefist_fc2", 0, 0, 2])
+      ShowText(["【メフィスト’】"])
+      ShowText(["さて、私はこちらにもいるのですが。"])
+      ShowTextAttributes(["mefist_fc4", 2, 0, 2])
+      ShowText(["【メフィスト】"])
+      ShowText(["なっ！？　私がさらに、もう一人……！？"])
+      ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+      ShowText(["【メフィスト】"])
+      ShowText(["もう、何が何やら分かりませんね……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 392, 0])
+      ShowTextAttributes(["mefist_fc3", 0, 0, 2])
+      ShowText(["【メフィスト’】"])
+      ShowText(["さて、私はこちらにもいるのですが。"])
+      ShowTextAttributes(["mefist_fc4", 2, 0, 2])
+      ShowText(["【メフィスト】"])
+      ShowText(["なっ！？　私がさらに、もう一人……！？"])
+      ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+      ShowText(["【メフィスト】"])
+      ShowText(["もう、何が何やら分かりませんね……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 393, 0])
+      ShowTextAttributes(["mefist_fc4", 0, 0, 2])
+      ShowText(["【メフィスト’】"])
+      ShowText(["さて、私はこちらにもいるのですが。"])
+      ShowTextAttributes(["mefist_fc4", 2, 0, 2])
+      ShowText(["【メフィスト】"])
+      ShowText(["なっ！？　私がさらに、もう一人……！？"])
+      ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+      ShowText(["【メフィスト】"])
+      ShowText(["もう、何が何やら分かりませんね……"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss2\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    BattleProcessing([0, 1935, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    PlayBGM(["RPG::BGM(@name=\"scene_epilogue2\", @volume=100, @pitch=100)"])
+    PlaySE(["RPG::SE(@name=\"Darkness1\", @pitch=100, @volume=80)"])
+    ControlSwitches([32, 32, 1])
+    Wait([60])
+    ShowPicture([5, "80_mefist_st33", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ConditionalBranch([4, 401, 0])
+      ShowTextAttributes(["gnosis_fc1", 0, 0, 2])
+      ShowText(["【グノーシス】"])
+      ShowText(["すでに、お前の力は割れている……"])
+      ShowText(["我々に勝てる道理などない。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["mefist_fc3", 2, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["くっ、ここまで強いとは……"])
+    ShowText(["邪神様、申し訳ありません……"])
+    ShowPicture([5, "80_mefist_st01", 0, 0, -170, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_mefist_st33", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["私がいない間の、記憶を埋める方法を思いつきました。"])
+    ShowText(["私とあの者は、元々は一人だったのですよね……？"])
+    ErasePicture([5])
+    ErasePicture([6])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Wait([30])
+    ShowPicture([5, "80_mefist_st01", 0, 0, -170, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_mefist_st33", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -170, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["ならば、合一すれば一人に戻れるはず……"])
+    ShowText(["記憶も能力も、全て一体の存在として……"])
+    ShowTextAttributes(["mefist_fc3", 2, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["な、何をする気なのです！"])
+    ShowText(["私はお断りです、こんな――"])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["さあ、一つになりましょう……"])
+    ShowText(["その記憶、頂きます……！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["メフィストは、魔界メフィストの頭を鷲掴みにした！"])
+    ShowTextAttributes(["mefist_fc3", 2, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["や、やめ……あぁぁぁ！！"])
+    PlaySE(["RPG::SE(@name=\"mon_flash\", @pitch=100, @volume=100)"])
+    ShowPicture([10, "sys_white", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([10, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ErasePicture([6])
+    ShowPicture([5, "80_mefist_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ControlSwitches([31, 31, 1])
+    ConditionalBranch([0, 7086, 1])
+      ControlSwitches([7086, 7086, 0])
+      Script(["level_adjust(233,102)"])
+      ScriptMore(["set_class_level(233, 35, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 36, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 37, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 38, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 39, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 40, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 41, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 46, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 47, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 48, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 104, 10, false, false)"])
+      Script(["set_class_level(233, 105, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 109, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 160, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 161, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 162, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 166, 18, false, true)"])
+      ScriptMore(["set_class_level(233, 256, 10, false, false)"])
+      ScriptMore(["set_class_level(233, 7018, 15, false, true)"])
+      ScriptMore(["set_class_level(233, 7019, 15, false, false)"])
+      ScriptMore(["set_class_level(233, 7020, 12, false, false)"])
+      ScriptMore(["set_class_level(233, 7022, 9, false, false)"])
+      ScriptMore(["set_class_level(233, 7023, 6, false, false)"])
+      Script(["set_class_level(233, 7040, 15, false, false)"])
+      Script(["set_actor_had(391,392,393)"])
+      Empty([])
+
+    BranchEnd([])
+    MovePicture([10, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+    ErasePicture([10])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["メフィストの魂は合一し、一つの存在に還った！"])
+    Wait([30])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["……なるほど、これが合一ですか。"])
+    ShowText(["確かに、二人分の記憶を同時に持っていますね。"])
+    ConditionalBranch([4, 401, 0])
+      ShowTextAttributes(["gnosis_fc1", 0, 0, 2])
+      ShowText(["【グノーシス】"])
+      ShowText(["……メフィストの合一を確認。"])
+      ShowText(["混沌的揺らぎは観測されず、成功したものと思われる。"])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["……これまでのいきさつ、理解しました。"])
+    ShowText(["本当、みんな全然気付いていないのですね……"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["私達とずっと旅をした記憶もあるのなら、"])
+    ShowText(["それで良いじゃないですか。"])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["その間、ずっと汚い壁を眺め続けた記憶もありますけどね。"])
+    ShowText(["ともかく……このメフィスト、仲間に復帰しましょう。"])
+    ErasePicture([5])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    Script(["add_actor_ex(233)"])
+    PlayME(["RPG::ME(@name=\"mon_fanfale3\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["メフィストが再び仲間になった！"])
+    Wait([60])
+    ControlSwitches([2540, 2540, 0])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["邪神の配下だった記憶もあるんだよね？"])
+    ShowText(["それなのに、僕達の仲間になっていいの……？"])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["邪神様や玉藻様にも、それなりに恩はありますが……"])
+    ShowText(["退屈な仕事ばかりで、あまり楽しくはないのですよ。"])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["やはり、知謀を存分に活かして大きな仕事をしたいところ。"])
+    ShowText(["あなた達と一緒にいる方が、やり甲斐があります。"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["そう言いつつ、また裏切ったりしませんよね……？"])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["また、とはなんなのですか。"])
+    ShowText(["私の半分は裏切っていません、むしろ被害者です。"])
+    ShowTextAttributes(["mefist_fc3", 1, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["裏切ったのは、私の半分ですよ……"])
+    ShowText(["潜入中は最高にスリリングで、生き甲斐を感じました。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["大丈夫なの、これ……？"])
+    ShowTextAttributes(["mefist_fc1", 0, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["いちおう、ポケット魔王城で人格の切り替えが可能です。"])
+    ShowText(["どちらの私が良いですか？"])
+    ShowTextAttributes(["mefist_fc3", 0, 0, 2])
+    ShowText(["【メフィスト】"])
+    ShowText(["もちろん、私の方が良いですよね？"])
+    ShowText(["幾多の危機を、共に乗り切ってきたのですから……"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["もともと腹黒だったのに、"])
+    ShowText(["輪を掛けて扱い辛くなりましたね……"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ともかくメフィストを救出し、合一による強化まで果たした。"])
+    ShowText(["いちおう、これで良かった事にしよう――"])
+    CallCommonEvent([466])
+    PlayBGM(["RPG::BGM(@name=\"dungeon_toride\", @volume=100, @pitch=100)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([34, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([277, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([78, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([92, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

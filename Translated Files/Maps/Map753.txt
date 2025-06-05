@@ -1,0 +1,595 @@
+Display Name = "MS Gloria"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    Empty([])
+
+CommonEvent 51
+Name = "EV051"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 478, 12, 32, 0, 0])
+    Empty([])
+
+CommonEvent 52
+Name = "EV052"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The door is locked..."])
+    Empty([])
+
+CommonEvent 53
+Name = "EV053"
+
+  Page 0
+    ConditionalBranch([1, 836, 0, 2, 1])
+      ConditionalBranch([0, 1585, 1])
+        ShowTextAttributes(["mob_kaizoku3_fc1", 1, 0, 2])
+        ShowText(["\\n<Gloria>Life as a pirate is starting to get old...\nWill you take care of me, instead?"])
+        ShowChoices([["Let her join", "Decline for now"], 0])
+        When([0, "Let her join"])
+          ShowTextAttributes(["mob_kaizoku3_fc1", 0, 0, 2])
+          ShowText(["\\n<Gloria>Well then, I'll be counting on you.\nWe'll be feasting tonight..."])
+          ErasePicture([5])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(585)"])
+          PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Gloria joined the party!"])
+          Wait([60])
+          ShowTextAttributes(["mob_kaizoku3_fc1", 1, 0, 2])
+          ShowText(["\\n<Gloria>And take this too.\nIt was nice when I obtained it, but it's a bit too heavy for me..."])
+          PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+          ChangeItems([633, 0, 0, 1])
+          ConditionalBranch([0, 2148, 0])
+            ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+            ShowText(["\\n<Tatsuko>I can be promoted to Navy General with this!"])
+            Empty([])
+          BranchEnd([])
+          ConditionalBranch([0, 2149, 0])
+            ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+            ShowText(["\\n<Bonnie>Ooh!\nI can become a Pirate King with this!"])
+            Empty([])
+          BranchEnd([])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "Decline for now"])
+          ShowTextAttributes(["mob_kaizoku3_fc1", 1, 0, 2])
+          ShowText(["\\n<Gloria>That didn't go so smoothly..."])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([7351])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 54
+Name = "EV054"
+
+  Page 0
+    ConditionalBranch([1, 834, 0, 2, 1])
+      ConditionalBranch([0, 1583, 1])
+        ShowTextAttributes(["mob_kaizoku1_fc1", 0, 0, 2])
+        ShowText(["\\n<Ariadne>Hey, take me with you!"])
+        ShowChoices([["Let her join", "Decline for now"], 0])
+        When([0, "Let her join"])
+          ShowTextAttributes(["mob_kaizoku1_fc1", 1, 0, 2])
+          ShowText(["\\n<Ariadne>All right, let's go wild!"])
+          ErasePicture([5])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(583)"])
+          PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Ariadne joined the party!"])
+          Wait([60])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "Decline for now"])
+          ShowTextAttributes(["mob_kaizoku1_fc1", 0, 0, 2])
+          ShowText(["\\n<Ariadne>What a tightwad!"])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([7331])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 55
+Name = "EV055"
+
+  Page 0
+    ConditionalBranch([1, 835, 0, 2, 1])
+      ConditionalBranch([0, 1584, 1])
+        ShowTextAttributes(["mob_kaizoku2_fc1", 0, 0, 2])
+        ShowText(["\\n<Cresta>Hey, why don't you take me with you?\nMy shooting skills are first-class!"])
+        ShowChoices([["Let her join", "Decline for now"], 0])
+        When([0, "Let her join"])
+          ShowTextAttributes(["mob_kaizoku2_fc1", 0, 0, 2])
+          ShowText(["\\n<Cresta>I never miss! You'll see! ♪"])
+          ErasePicture([5])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(584)"])
+          PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Cresta joined the party!"])
+          Wait([60])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "Decline for now"])
+          ShowTextAttributes(["mob_kaizoku2_fc1", 1, 0, 2])
+          ShowText(["\\n<Cresta>Hmph, really now..."])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([7341])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 56
+Name = "EV056"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowPicture([5, "80_mob_kaizoku3_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["mob_kaizoku3_fc1", 1, 0, 2])
+    ShowText(["\\n<Gloria>Fufu, I'm glad you've come...\nI am Gloria, Captain of the Gloria Pirates."])
+    ShowPicture([5, "80_mob_kaizoku1_st01", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_mob_kaizoku2_st01", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["mob_kaizoku1_fc1", 0, 0, 2])
+    ShowText(["\\n<Ariadne>And I'm Ariadne!\nI lead the assault team of the Gloria Pirates!"])
+    ShowTextAttributes(["mob_kaizoku2_fc1", 0, 0, 2])
+    ShowText(["\\n<Cresta>I'm Cresta, the artillery chief!\nNice to meet you!"])
+    ErasePicture([6])
+    ShowPicture([5, "80_mob_kaizoku3_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ConditionalBranch([0, 2148, 0])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["\\n<Tatsuko>Gloria Pirates, we're resolved to arrest you!"])
+      ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+      ShowText(["\\n<Stacy>Our military strength is superior to yours. Wouldn't it be better if you surrendered quietly...?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 2149, 0])
+      ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+      ShowText(["\\n<Bonnie>Long time no see, Gloria!\nBut the Fishy Pirates are totally different now from the last time we met!"])
+      ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+      ShowText(["\\n<Ashel>We've improved our skills dramatically in our adventures across the world. I can say with confidence we won't lose to you now."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["mob_kaizoku3_fc1", 1, 0, 2])
+    ShowText(["\\n<Gloria>Indeed, we are just humans after all.\nThere's no way we could take you head-on and win."])
+    ShowTextAttributes(["mob_kaizoku3_fc1", 1, 0, 2])
+    ShowText(["\\n<Gloria>...So we're going to have a fair-and-square battle fuck duel. We designate your hero over there as our opponent!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>...Eh?! Me?!"])
+    ShowPicture([5, "80_mob_kaizoku1_st01", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_mob_kaizoku2_st01", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["mob_kaizoku1_fc1", 0, 0, 2])
+    ShowText(["\\n<Ariadne>I'll take you on first!"])
+    ShowTextAttributes(["mob_kaizoku2_fc1", 0, 0, 2])
+    ShowText(["\\n<Cresta>If you can beat me and Ariadne, then you can challenge Captain Gloria. We save our star performer for last, of course."])
+    ErasePicture([6])
+    ShowPicture([5, "80_mob_kaizoku3_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["mob_kaizoku3_fc1", 1, 0, 2])
+    ShowText(["\\n<Gloria>Well, what will you do?\nWill you accept our battle fuck challenge?"])
+    ShowChoices([["Challenge", "Decline"], 0])
+    When([0, "Challenge"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Understood, I accept your challenge!"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc1", 5, 0, 2])
+        ShowText(["\\n<Sonya>............"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    When([1, "Decline"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I refuse!"])
+      ConditionalBranch([0, 2148, 0])
+        ShowTextAttributes(["mob_kaizoku3_fc1", 1, 0, 2])
+        ShowText(["\\n<Gloria>Then just run away with a harpy feather.\nHow long will it take you to find my ship again?"])
+        ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+        ShowText(["\\n<Tatsuko>That would be a problem...\nI think it would be best to accept their battle fuck challenge."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 2149, 0])
+        ShowTextAttributes(["mob_kaizoku3_fc1", 1, 0, 2])
+        ShowText(["\\n<Gloria>The Fishy Pirates are running away from my challenge... This will cause a drop in your reputation."])
+        ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+        ShowText(["\\n<Bonnie>Th-that wouldn't be good!\nLuka, accept their battle fuck challenge!"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    ChoicesEnd([])
+    ShowTextAttributes(["mob_kaizoku3_fc1", 0, 0, 2])
+    ShowText(["\\n<Gloria>Now we're talking...\nVery well then, I'll have you play with Ariadne and Cresta first!"])
+    ShowPicture([5, "80_mob_kaizoku1_st01", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_mob_kaizoku2_st01", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["mob_kaizoku1_fc1", 0, 0, 2])
+    ShowText(["\\n<Ariadne>I don't plan to lose when it comes to battle fucking! I'll make you come with my technique, rumored hero!"])
+    ShowTextAttributes(["mob_kaizoku2_fc1", 0, 0, 2])
+    ShowText(["\\n<Cresta>Go easy on me, okay?\nWell, you'll probably come right away anyways..."])
+    ErasePicture([5])
+    ErasePicture([6])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 67
+Name = "EV067"
+
+  Page 0
+    ShowTextAttributes(["k_mermaid_fc1", 0, 0, 2])
+    ShowText(["\\n<Mermaid Pirate>Head back to land?"])
+    ShowChoices([["Stay", "Return"], 1])
+    When([0, "Stay"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Return"])
+      FadeoutScreen([])
+      PlaySE(["RPG::SE(@name=\"Water1\", @pitch=100, @volume=80)"])
+      Wait([60])
+      TransferPlayer([0, 2, 335, 240, 4, 2])
+      SetVehicleLocation([1, 0, 2, 334, 240])
+      FadeinScreen([])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+    ShowText(["\\n<Seahorse Marine>Do you want to return to land?"])
+    ShowChoices([["Stay", "Return"], 1])
+    When([0, "Stay"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Return"])
+      FadeoutScreen([])
+      PlaySE(["RPG::SE(@name=\"Water1\", @pitch=100, @volume=80)"])
+      Wait([60])
+      TransferPlayer([0, 2, 335, 240, 4, 2])
+      SetVehicleLocation([1, 0, 2, 334, 240])
+      FadeinScreen([])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])

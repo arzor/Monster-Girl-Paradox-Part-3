@@ -1,0 +1,382 @@
+Display Name = "魔王城 B1F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "たまも"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_tamamo_st04", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["tamamo_fc1", 1, 0, 2])
+    ShowText(["【たまも】"])
+    ShowText(["おお、魔王様！"])
+    ShowText(["助けに来てくれたのか……！"])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["そうだが……監禁されているのは、貴様だけか？"])
+    ShowText(["エルベティエはどうした……？"])
+    ShowPicture([5, "80_tamamo_st03", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tamamo_fc1", 3, 0, 2])
+    ShowText(["【たまも】"])
+    ShowText(["少し前まで、ここにいたが……"])
+    ShowText(["どうやら、天界に移送されてしまったようじゃ。"])
+    ShowTextAttributes(["alice_fc1", 4, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["くっ、一歩遅かったか……"])
+    ShowText(["ともかくたまも、早くそこから出ろ！"])
+    ErasePicture([5])
+    Wait([30])
+    PlaySE(["RPG::SE(@name=\"Key\", @pitch=100, @volume=80)"])
+    SetMoveRoute([2, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    SetMoveRoute([6, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["アリスは扉を開いた！"])
+    ShowPicture([5, "80_tamamo_st04", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["tamamo_fc1", 1, 0, 2])
+    ShowText(["【たまも】"])
+    ShowText(["ふぅ、助かるのう！"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["貴様なら、自力で牢を破れたのではないのか……？"])
+    ShowPicture([5, "80_tamamo_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+    ShowText(["【たまも】"])
+    ShowText(["玉藻の姿に戻れば、牢は吹き飛ばせるが……"])
+    ShowText(["その後の消耗状態に、何が起きるか分からんからのう。"])
+    ShowPicture([5, "80_tamamo_st04", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tamamo_fc1", 1, 0, 2])
+    ShowText(["【たまも】"])
+    ShowText(["危機が迫るまでは、息をひそめる事にしておったのじゃ。"])
+    ShowText(["お主達が助けに来ることを信じてな！"])
+    ShowTextAttributes(["alice_fc1", 1, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["まあ、無事で良かった。"])
+    ShowText(["今から貴様にも、存分に働いてもらうぞ！"])
+    ShowTextAttributes(["tamamo_fc1", 1, 0, 2])
+    ShowText(["【たまも】"])
+    ShowText(["やれやれ、年寄りをこき使いおるのう……"])
+    ShowText(["それでは、思いっきり暴れてやるとしようか！"])
+    ErasePicture([5])
+    SetMoveRoute([1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    Script(["add_actor_ex(21)"])
+    PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["たまもが仲間に加わった！"])
+    ControlVariables([1173, 1173, 0, 0, 4])
+    Wait([60])
+    PlayBGM(["RPG::BGM(@name=\"dungeon_maouzyou\", @volume=100, @pitch=100)"])
+    ConditionalBranch([4, 102, 0])
+      ShowTextAttributes(["youko_fc1", 2, 0, 2])
+      ShowText(["【きつね】"])
+      ShowText(["たまも様～！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 103, 0])
+      ShowTextAttributes(["kamuro_fc1", 2, 0, 2])
+      ShowText(["【かむろ】"])
+      ShowText(["た、たまも様……うぅっ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 420, 0])
+      ShowTextAttributes(["hatibi_fc1", 0, 0, 2])
+      ShowText(["【八尾】"])
+      ShowText(["たまも様……"])
+      ShowText(["どれだけ心配した事か……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 106, 0])
+      ShowTextAttributes(["nanabi_fc1", 0, 0, 2])
+      ShowText(["【七尾】"])
+      ShowText(["たまも様の救出に立ち会えた事……"])
+      ShowText(["これ以上の喜びはありません。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 21, 0])
+      ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+      ShowText(["【たまも】"])
+      ShowText(["お主達も、ずいぶん心配を掛けてしまったのう。"])
+      ShowText(["これからは、肩を並べて共に戦うのじゃ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 19, 0])
+      ShowTextAttributes(["arumaeruma_fc2", 0, 0, 2])
+      ShowText(["【アルマエルマ】"])
+      ShowText(["お帰り、たまもちゃん。"])
+      ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+      ShowText(["【たまも】"])
+      ShowText(["おう、お主も……元気そうじゃのう。"])
+      ShowTextAttributes(["arumaeruma_fc2", 0, 0, 2])
+      ShowText(["【アルマエルマ】"])
+      ShowText(["もしかしたら、あたしがイリアスの側についたかも……"])
+      ShowText(["そう考えてた？"])
+      ShowTextAttributes(["tamamo_fc1", 3, 0, 2])
+      ShowText(["【たまも】"])
+      ShowText(["……あの者に挑む為なら、やりかねんと思っただけじゃ。"])
+      ShowText(["こっちにいてくれて、感謝するぞ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 775, 0])
+      ShowTextAttributes(["vgirl_fc2", 0, 0, 2])
+      ShowText(["【ヴァンガード】"])
+      ShowText(["あれが、特異点世界における四天王の一人……"])
+      ShowText(["すさまじい魔力を秘めているな、底知れん狐だ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 773, 0])
+      ShowTextAttributes(["gob_fc2", 0, 0, 2])
+      ShowText(["【韋駄天】"])
+      ShowText(["たまも……ヤマタイに残る伝説の妖狐の名が玉藻だが……"])
+      ShowText(["まさか、な……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 413, 0])
+      ShowTextAttributes(["kurodanuki_fc1", 0, 0, 2])
+      ShowText(["【黒狸】"])
+      ShowText(["おう、たまもよ。"])
+      ShowText(["長い牢住まいで、腕は鈍っておらんだろうな？"])
+      ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+      ShowText(["【たまも】"])
+      ShowText(["黒狸……まさかお主が、魔王様に手を貸してくれていたとは。"])
+      ShowText(["四天王として、礼を言うぞ。"])
+      ConditionalBranch([4, 412, 0])
+        ShowTextAttributes(["inugami_fc1", 1, 0, 2])
+        ShowText(["【隠神刑部】"])
+        ShowText(["あたしも、助けてあげてたわよ～ォ♪"])
+        ShowTextAttributes(["tamamo_fc1", 0, 0, 2])
+        ShowText(["【たまも】"])
+        ShowText(["酒臭いぞ、顔を洗ってこい。"])
+        ShowTextAttributes(["kurodanuki_fc1", 2, 0, 2])
+        ShowText(["【黒狸】"])
+        ShowText(["ほら、さっさと行け……"])
+        ShowTextAttributes(["inugami_fc1", 2, 0, 2])
+        ShowText(["【隠神刑部】"])
+        ShowText(["えっ、マジで顔洗いに行かされるの……？"])
+        ShowText(["ここらへんのタルの水とか、キレイなの……？"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["alice_fc1", 3, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["これで、目的の一つは達した。"])
+    ShowText(["次は、この魔王城の制圧だな。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["ああ……玉座の間にいるエデンを倒そう！"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["総大将のエデンさえ倒せば、他の天使も撤退するだろう。"])
+    ShowText(["魔王城奪還のため、玉座の間へと進撃するのだ――"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 861, 10, 32, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 861, 10, 32, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 861, 10, 32, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["trooperloid_fc1", 2, 0, 2])
+    ShowText(["【トルーパーロイド】"])
+    ShowText(["おい、見逃してくれ！"])
+    ShowText(["あの蛭蟲って奴に食われたくないんだよ！！"])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["戦意のない者を攻撃はせん。"])
+    ShowText(["蛭蟲に見付からないよう、どこかに隠れていろ。"])
+    ShowTextAttributes(["trooperloid_fc1", 0, 0, 2])
+    ShowText(["【トルーパーロイド】"])
+    ShowText(["ありがとよ！　これは礼だぜ！"])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ChangeItems([3849, 0, 0, 1])
+    PlaySE(["RPG::SE(@name=\"mon_dassyutu\", @pitch=100, @volume=100)"])
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["トルーパーロイドは逃げ出した！"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 2"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([491, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([4334, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([3783, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([248, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 3"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([756, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([92, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

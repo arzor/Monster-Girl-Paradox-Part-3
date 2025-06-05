@@ -1,0 +1,992 @@
+Display Name = "Grand Noah Palace B1F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 871, 20, 5, 2, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 871, 20, 5, 2, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 871, 20, 5, 2, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"\", @volume=100, @pitch=100)"])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    Script(["keep_all_equip"])
+    Script(["set_temp_actors(819)"])
+    RecoverAll([0, 0])
+    Wait([60])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Lest>Uh...uuuh..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I slowly regained consciousness from my deep slumber.\nWhen I opened my eyes, I saw--"])
+    PlayBGM(["RPG::BGM(@name=\"dungeon1\", @volume=100, @pitch=100)"])
+    FadeinScreen([])
+    ShowPicture([5, "80_rest_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Am I...in a prison?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I now remember how I ended up here.\nIt seems the Queen of Grand Noah was brainwashed by Musette."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Tarsa was manipulated by Musette and taken captive by her.\nI was then raped repeatedly by Tarsa after she had transformed into a succubus."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Oh no...\nI was supposed to escort Tarsa to Novissa..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But now she has fallen under Musette's control.\nThe enemy is plotting to use her powers for some purpose."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["At any rate, I have to put a stop to them.\nBut first I need to break out of this prison..."])
+    ErasePicture([5])
+    ControlVariables([1207, 1207, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>These are made from a very sturdy alloy...\nNot only that, they're also reinforced with magic."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It would be impossible to break these metal bars to escape.\nI need to find another way out..."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Ugh, it reeks...!\nThis must be the toilet..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I took a look inside, just in case...\nBut there was nothing in there that could help me escape."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ConditionalBranch([1, 1207, 0, 1, 0])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>Is this drinking water...?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["There doesn't appear to be anything inside the barrel I could use. However, there were a few pieces of paper squished underneath it!"])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>Is this...a diary?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\"○Month ×Day\n　I'm the jailbreak expert, Whitestone.\n　It's been one month since I was imprisoned here.\""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\" I used a spoon to dig away at the wall little by little.\n　The storage room was on the other side of that wall, so I\n　made no mistake in that respect.\""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\"○Month ×Day\n　　It would seem the Queen has gone nuts.\n　　A lot of people have just been imprisoned, many of them\n　　on false charges.\""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\"　As the number of prisoners grew, it became impossible to\n　　monitor us all. I'd carefully check around my cell to make\n　　sure the guards didn't notice me writing these notes.\""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\"○Month ×Day\n　The wall should give way with just another push.\n　　But I'm a jailbreak expert, so I came up with another\n　　escape plan.\""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\"　I'll remove a joint from the ventilation shaft and escape\n　　through it. It's a physically-demanding trick that only\n　　someone strong like me could pull off, but it's much\n　　safer.\""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\"　The hole I dug into the wall has been left alone.\n　　I doubt the current prison guards would notice it\n　　anyways.\""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\"　So to the next prisoner who is reading this, I give you\n　　permission to use that hole in the wall.\""])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>There's a hole in the wall...?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I couldn't tell where it was just from looking at it...\nMaybe I'll find it if I examine it more closely."])
+      ControlVariables([1207, 1207, 0, 0, 2])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1207, 0, 2, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["According to the diary found underneath the barrel, there should be a secret passage dug into the wall."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I couldn't tell where it was just from looking at it...\nMaybe I'll find it if I examine it more closely."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>This wall...is covered in dirt?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["When I looked closely at the wall, I noticed parts of it were packed with dirt. There was an opening large enough for someone to pass through the wall."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>This must be that hole the jailbreak expert dug.\nIf I can make use of it..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["After removing the dirt, a hole was revealed in the wall.\nIt was deeper than I expected, but it was still a short distance to the adjacent room."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>If the hole is this deep, it shouldn't take much force to break the wall open... Eiii!!"])
+    PlaySE(["RPG::SE(@name=\"mon_break2\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I repeatedly kicked at the hole in the wall.\nHaving done that, the wall crumbled away..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>All right, it's opened!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Like that, the tunnel to the next room was opened.\nI should be thankful to that jailbreak expert..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=38, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=38, @parameters=[])"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>He said this was a storage room.\nMaybe I can find..."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>...Ah, these are my belongings."])
+    PlayME(["RPG::ME(@name=\"mon_fanfale2\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Lest retrieved his items and equipment!"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Now, let's get out of here!\nI have to find Tarsa and rescue her...!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Anyhow, I managed to get out of the prison cell.\nI'll need to be on my guard to escape from here..."])
+    ControlVariables([1207, 1207, 0, 0, 3])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["artm_fc1", 0, 0, 2])
+    ShowText(["\\n<Automata Girl>Jailbreak confirmed.\nStop right there, whoever you are..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Damn, I got careless...!"])
+    PlaySE(["RPG::SE(@name=\"mon_asioto4\", @pitch=100, @volume=100)"])
+    FadeoutScreen([])
+    Wait([60])
+    TransferPlayer([0, 855, 34, 32, 6, 2])
+    FadeinScreen([])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>I managed to get away from her somehow.\nI need to make sure she doesn't spot me again..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowPicture([5, "80_artm_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["artm_fc1", 0, 0, 2])
+    ShowText(["\\n<Automata Girl>Currently on patrol..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Is that...a prison guard?\nThis doll is our prison guard?!"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>I shouldn't have any problem defeating one of them on my own, but...it would be bad if the noise attracted reinforcements."])
+    ErasePicture([5])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It would be better if I just looked for gaps in their security to bypass them. I'll need to move carefully to avoid being discovered..."])
+    ControlVariables([1207, 1207, 0, 0, 4])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ConditionalBranch([1, 1207, 0, 5, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The door is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1207, 0, 6, 1])
+      ConditionalBranch([1, 1207, 0, 7, 2])
+        ControlVariables([1207, 1207, 0, 0, 7])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["The door is locked..."])
+        ShowTextAttributes(["rest_fc1", 0, 0, 2])
+        ShowText(["\\n<Lest>...No good, it's locked.\nI'll have to find whoever has the key."])
+        ShowTextAttributes(["nobissa_fc1", 0, 0, 2])
+        ShowText(["\\n<Novissa>............"])
+        ShowTextAttributes(["rest_fc1", 0, 0, 2])
+        ShowText(["\\n<Lest>Yeah, the head of the prison guards should have the key. Going after them might be dangerous, but it can't be helped..."])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["We have no choice but to steal the key from the prison warden. We need to find out where they could be..."])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1207, 0, 8, 0])
+      PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+      Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      ControlSelfSwitch(["A", 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShotBalloonIcon([-1, 1, true])
+    ShowPicture([5, "80_artm_st01", 0, 0, -200, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_artm_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    ShowPicture([7, "80_artm_st01", 0, 0, 200, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -200, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([7, nil, 0, 0, 200, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["artm_fc1", 0, 0, 2])
+    ShowText(["\\n<Automata Girl A>Jailbreak confirmed, commencing apprehension..."])
+    ShowTextAttributes(["artm_fc1", 0, 0, 2])
+    ShowText(["\\n<Automata Girl B>Cease your resistance.\nIf you do not comply, we shall attack..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Damn, there's a lot of them..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It would be impossible for me to fight this many on my own.\nThis is looking bad..."])
+    ErasePicture([5])
+    ErasePicture([6])
+    ErasePicture([7])
+    Wait([30])
+    PlayBGM(["RPG::BGM(@name=\"kiki4\", @volume=100, @pitch=100)"])
+    ControlSwitches([31, 31, 0])
+    SetMoveRoute([16, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([12, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowPicture([5, "80_nobissa_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["nobissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Mysterious Swordsman>............"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>The prison guards brought reinforcements...?!\nNo wait--"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["No matter how I look at him, this swordsman doesn't appear to be a prison guard."])
+    ShowTextAttributes(["artm_fc1", 0, 0, 2])
+    ShowText(["\\n<Automata Girl A>Unregistered inmate.\nRegarding him as an intruder."])
+    ShowTextAttributes(["artm_fc1", 0, 0, 2])
+    ShowText(["\\n<Automata Girl B>B1F, an intruder has been confirmed in Section A12. Commencing apprehension at once..."])
+    ShowTextAttributes(["nobissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Mysterious Swordsman>......!!"])
+    ErasePicture([5])
+    Wait([30])
+    SetMoveRoute([12, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"mon_slash\\\\\\\", @pitch=100, @volume=100)\\\"])\", \"RPG::MoveCommand(@code=15, @parameters=[10])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"mon_slash\\\", @pitch=100, @volume=100)\"])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[10])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    SetMoveRoute([16, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    SetMoveRoute([17, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    SetMoveRoute([13, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    SetMoveRoute([18, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    SetMoveRoute([17, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"mon_slash3\\\\\\\", @pitch=100, @volume=100)\\\"])\", \"RPG::MoveCommand(@code=15, @parameters=[10])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"mon_slash3\\\", @pitch=100, @volume=100)\"])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[10])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The swordsman acted before the automata girls could make a move. Effortlessly swinging the huge sword in his hands, he knocked down the prison guard dolls."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=29, @parameters=[5])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=29, @parameters=[4])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=29, @parameters=[5])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=29, @parameters=[4])"])
+    SetMoveRoute([19, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"mon_slash3\\\\\\\", @pitch=100, @volume=100)\\\"])\", \"RPG::MoveCommand(@code=15, @parameters=[10])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"mon_slash3\\\", @pitch=100, @volume=100)\"])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[10])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["And then I went on the offensive.\nSwinging my sword, I joined forces with the mysterious swordsman..."])
+    FadeoutScreen([])
+    PlaySE(["RPG::SE(@name=\"mon_slash\", @pitch=100, @volume=100)"])
+    Wait([30])
+    PlaySE(["RPG::SE(@name=\"mon_slash\", @pitch=100, @volume=100)"])
+    Wait([30])
+    PlaySE(["RPG::SE(@name=\"mon_slash3\", @pitch=100, @volume=100)"])
+    Wait([90])
+    FadeoutBGM([1])
+    Wait([60])
+    ControlVariables([1207, 1207, 0, 0, 5])
+    SetEventLocation([16, 0, 56, 38, 4])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    GatherFollowers([])
+    ErasePicture([5])
+    FadeinScreen([])
+    PlayBGM(["RPG::BGM(@name=\"scene_epilogue2\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Within moments, all of the prison guards had been silenced.\nThe mysterious swordsman then turns towards me."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Who in the world are you...?"])
+    ShowTextAttributes(["nobissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Mysterious Swordsman>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["He then spoke some astonishing words.\n\"Do you know of a woman named Tarsa?\""])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>You know Tarsa...?\nAre you Novissa by any chance?!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["This was the man Tarsa was looking for, who appears to be her boyfriend. He's quite a fearless man, perhaps even one of the Seven Heroes..."])
+    ShotBalloonIcon([16, 2, false])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["He was curious how I came to be acquainted with her.\nI explained the situation to Novissa, and he nodded in understanding."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>...And that's how Tarsa fell into the enemy's hands. I'm really sorry, if only I had found you first..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Novissa slaps me on the shoulder, telling me not to worry about it."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>And that's not all.\nTarsa then transformed into a succubus, and raped me several times..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>I'm sorry, but your lover was..."])
+    ShotBalloonIcon([16, 8, false])
+    Wait([60])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Eh...? You don't mind...?"])
+    ShotBalloonIcon([16, 8, false])
+    Wait([60])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Aren't you bothered at all by the fact Tarsa has raped a lot of men?! I thought you'd be furious...?!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Is he really fine with his lover doing that...?\nI thought he'd be worried about something like that."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Putting that aside, Novissa came here searching for Tarsa.\nI don't believe that this powerful man just happened to have arrived at a prison on a whim."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>From now on, I'll go with you.\nWe'll rescue Tarsa together!"])
+    ShowTextAttributes(["nobissa_fc1", 0, 0, 2])
+    ShowText(["\\n<Novissa>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Novissa nodded assuringly.\nLike that, a quiet yet reliable companion joined my side."])
+    SetMoveRoute([16, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    Script(["add_temp_actors(823)"])
+    PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Novissa joined the party!"])
+    ControlSwitches([31, 31, 1])
+    Wait([60])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Anyways, Novissa...\nDo you have any idea where Tarsa could be?"])
+    ShotBalloonIcon([-1, 8, false])
+    Wait([60])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["A boy swordsman and a dancer girl claiming to have come from different worlds had gone missing after their audience with the queen."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Novissa's investigation had revealed that much to him.\nBut he tells me he doesn't know where Tarsa is."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>The enemy said they were going to summon something with Tarsa's power. And they needed her to perform some ritual for that..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It's unlikely that this ritual will be performed on a grand scale. If this is supposed to be some conspiracy, it would need to be carried out in secret."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>It's going to be dangerous, but we have no choice but to gather information here. The prisoners might know more about what's going on in this world."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["For now, we should talk with the people imprisoned here.\nOne of them might've seen or heard something important..."])
+    PlayBGM(["RPG::BGM(@name=\"dungeon1\", @volume=100, @pitch=100)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ConditionalBranch([1, 1207, 0, 5, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Prisoner>Is Tarsa that green-haired dancer girl?\nIf that's her, then I definitely saw her."])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>You have...?\nTell me everything you know!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Prisoner>But not for freeee!\nOn that subject, I'm feeling kinda hungry."])
+      ShowTextAttributes(["nobissa_fc1", 0, 0, 2])
+      ShowText(["\\n<Novissa>............"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Novissa slides a cookie through the prison bars.\nEven something as simple as this would be considered a treat from a prisoner's point of view..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Prisoner>Oh, you guys know what I'm talking about!\nA few days ago, the dancer girl passed by here with several guards."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Prisoner>They went down into the lower basement shortly afterwards. The second basement is the prison for felons. I wonder what she did?"])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>Tarsa...is even further underground from here?!"])
+      ShowTextAttributes(["nobissa_fc1", 0, 0, 2])
+      ShowText(["\\n<Novissa>......!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Tarsa was brought to the lower basement...\nWe need to head there right away."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Prisoner>The stairway to the second basement is just west of this section. It's right past that door... Was my information helpful?"])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>Thanks, your information was valuable.\nLet's hurry downstairs right away!"])
+      ControlVariables([1207, 1207, 0, 0, 6])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1207, 0, 6, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Prisoner>A few days ago, the dancer girl passed by here with several guards. They went down into the lower basement shortly afterwards."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Prisoner>The stairway to the second basement is just west of this section. It's right past that door... Was my information helpful?"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ConditionalBranch([1, 1207, 0, 7, 0])
+      ShowPicture([5, "80_mononohuyonbi_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Four-Tailed Samurai>Mmm, are you trying to break out of prison...?!\nI admire your boldness in coming here to pay me a greeting!"])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>Sorry, but we need the key to the lower floor!"])
+      ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Four-Tailed Samurai>Hmph... If you want it, then you're going to have to take it from me by force!"])
+      BattleProcessing([0, 1363, false, false])
+      ShowPicture([5, "80_mononohuyonbi_st03", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["mononohuyonbi_fc1", 2, 0, 2])
+      ShowText(["\\n<Four-Tailed Samurai>All right, I surrender.\nYou can have the key."])
+      PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["You obtained the key to the second basement!"])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>Is this okay?\nYou're handing over the key so easily..."])
+      ShowPicture([5, "80_mononohuyonbi_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Four-Tailed Samurai>I'm aware the queen has been acting crazy lately.\nInnocent humans are being sent to this prison every day."])
+      ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Four-Tailed Samurai>The opportune time for this job to end is now."])
+      ShowTextAttributes(["nobissa_fc1", 0, 0, 2])
+      ShowText(["\\n<Novissa>............"])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>This country needs to go back to the way it was..."])
+      ErasePicture([5])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["If we defeat Musette, her brainwashing over the queen should also be released. For the sake of liberating this country, we can't afford to lose..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Anyways, we've got the key now.\nWe need to hurry to the dungeon where they've taken Tarsa to."])
+      ControlVariables([1207, 1207, 0, 0, 8])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1207, 0, 8, 0])
+      ShowPicture([5, "80_mononohuyonbi_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+      ShowText(["\\n<Four-Tailed Samurai>You don't have any further business with me...\nNow leave."])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>There's someone in the room up ahead..."])
+    ShowTextAttributes(["mononohuyonbi_fc1", 0, 0, 2])
+    ShowText(["\\n<Four-Tailed Samurai>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["She doesn't have the air of an ordinary person.\nLet's avoid any unnecessary confrontations while we're on the run."])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["These stairs lead upwards...\nWe can't make our escape until we've found Tarsa!"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["These stairs lead upwards...\nWe can't make our escape until we've found Tarsa!"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["These stairs lead upwards...\nWe can't make our escape until we've found Tarsa!"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Prisoner>Aaah, what are you doing out there?!\nAre you trying to break out of prison?!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Prisoner>Watch out for the automatic dolls.\nThey appear to be specially-made prison guards that were imported from Grangold."])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Prisoner>The guy in the cell next door was taken away to somewhere yesterday...but he hasn't come back yet. I've got a really bad feeling about this."])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Of course, there would be other prisoners here.\nMaybe their stories will tell me something useful..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I should be able to talk to the prisoners through the bars. They might give us some valuable information..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ShowTextAttributes(["paizuridoll_fc1", 0, 0, 2])
+    ShowText(["\\n<Paizuri Doll>............"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The Paizuri Doll is bouncing her breasts..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Is this a prison guard?\nWhat a weird world..."])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    ShowTextAttributes(["artm_fc1", 0, 0, 2])
+    ShowText(["\\n<Automata Girl>Currently off duty...\n...Please excuse me while I recharge."])
+    Empty([])
+
+CommonEvent 34
+Name = "EV034"
+
+  Page 0
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Noblewoman>Hey, let me out of here!\nI'll reward you greatly as thanks in return!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Noblewoman>Eh? What was my crime...?\n...Marriage fraud."])
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Noblewoman>Hey, let me out of here!\nI'll reward you greatly as thanks in return!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Noblewoman>Eh? What was my crime...?\n...Marriage fraud."])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Adventurer A>Ah... It's you!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Adventurer B>Weren't you that succubus's friend from a while back?"])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>I-it's you guys...!\nWeren't you the kind people I met in that cave? The adventurers who helped me out?!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Those two even provided me a meal and a bed to sleep in...\nI did think there was something suspicious going on when they were gone the next morning."])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>What happened during that night...?"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Adventurer A>Your friend seduced us back there...\nLook, we were really turned on by her."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Adventurer B>Naturally, we agreed to have a shot at sex with her...\n...You know what happened after that?"])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>Yeah... I can already guess without asking."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Adventurer A>She left us unable to stand on our legs.\nThen we got shoved into the shade of a rock."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Adventurer B>A couple hours later, we staggered our way back to the city... When we made a complaint to the guards, they threw us in here."])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>I'm...really sorry to hear that..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["I'm not sure whether to feel bad for them or tell them they've reaped what they've sown."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Adventurer A>Well...it was an awful experience, but at least I got a taste of heaven. Comparing the awfulness and the sweetness of it all, I'd say the sweetness wins out."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Adventurer B>That's why we're not holding it against you guys.\nAah... Just one more time, I'd like to have sex with that succubus..."])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>............"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["If they aren't holding any grudge against us, then it's just water under the bridge now. Let's just leave it at that."])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Adventurer A>Eh? That girl's locked up here?!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Adventurer B>We can't sit around here any longer!\nWe'll help you out, maybe we'll even get rewarded!"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The two tried to get up, but they appeared to be unsteady..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Adventurer A>Ah, uuugh...\nTo be honest, my legs still feel shaky..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Adventurer B>I feel like...I've become a newborn goat..."])
+      ShowTextAttributes(["rest_fc1", 0, 0, 2])
+      ShowText(["\\n<Lest>I-I'll just accept your regards..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 38
+Name = "EV038"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["A book of job-change is left open..."])
+    Script(["SceneManager.call(Scene_JobChange)"])
+    RecoverAll([0, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 39
+Name = "EV039"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([216, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 40
+Name = "EV040"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1286, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 41
+Name = "EV041"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([11, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 42
+Name = "EV042"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([32, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 43
+Name = "EV043"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([5, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 44
+Name = "EV044"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([302, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 45
+Name = "EV045"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([8, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 46
+Name = "EV046"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([69, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 47
+Name = "EV047"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([9, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 48
+Name = "EV048"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([344, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 49
+Name = "EV049"
+
+  Page 0
+    Empty([])
+
+CommonEvent 50
+Name = "EV050"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["This barrel is packed full of food and medicinal herbs..."])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+    RecoverAll([0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The party's HP and MP have been fully restored!"])
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Both Novissa and I lack reliable healing skills. We would do well to keep the locations of these recovery points in mind..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])

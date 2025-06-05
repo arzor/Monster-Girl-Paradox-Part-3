@@ -1,0 +1,397 @@
+Display Name = "メダル女王の城"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["slime_fc1", 0, 0, 2])
+    ShowText(["【スライム娘】"])
+    ShowText(["メダル王様も、とっても優しいよ。"])
+    ShowText(["釣りが得意で、色んな魚を釣って料理してくれるの。"])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Script(["gain_medal(12)"])
+    ShowPicture([5, "80_grandnoa_st11", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["grandnoa_fc1", 3, 0, 2])
+    ShowText(["【メダル女王】"])
+    ShowText(["私は、正体不明のメダル女王……"])
+    ShowText(["メダルの枚数に応じて、貴重な宝物を授けましょう。"])
+    CallCommonEvent([8])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 338, 272, 0, 0])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 338, 272, 0, 0])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 338, 272, 0, 0])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1395, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 2"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1281, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ShowTextAttributes(["slime_fc1", 0, 0, 2])
+    ShowText(["【スライム娘】"])
+    ShowText(["小さなメダルが、お花の中や植木鉢の下から見つかるの。"])
+    ShowText(["だから、城中を探してたんだけど……"])
+    ShowTextAttributes(["slime_fc1", 0, 0, 2])
+    ShowText(["【スライム娘】"])
+    ShowText(["メダル女王様が、あたし達のためにこっそり隠してたんだね。"])
+    ShowText(["最近、気付いちゃったの。"])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["slime_fc1", 0, 0, 2])
+      ShowText(["【スライム娘】"])
+      ShowText(["だから今は、あたしがこっそりメダルを隠してるの。"])
+      ShowText(["難易度高めだけど、みんなに見つけられるかな～？"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["slime_fc1", 0, 0, 2])
+    ShowText(["【スライム娘】"])
+    ShowText(["メダル女王様のお城にようこそ！"])
+    ShowText(["ここで、小さなメダルを色々なアイテムと交換できるよ。"])
+    ConditionalBranch([1, 1303, 0, 3, 2])
+      ShowTextAttributes(["slime_fc1", 0, 0, 2])
+      ShowText(["【スライム娘】"])
+      ShowText(["でも、女王様はお休み中なの。"])
+      ShowText(["今は、メダル王様が代わりをやってるよ！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1303, 0, 3, 2])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【身なりの良い男】"])
+        ShowText(["メダル女王、どこへ行ってしまったんだろうね……"])
+        ShowText(["スライム娘達も寂しそうだし、早く戻ってほしいなぁ。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1303, 0, 4, 1])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【身なりの良い男】"])
+        ShowText(["少し城を空けていたメダル女王が、戻ってきたよ。"])
+        ShowText(["何だかいつも忙しそうだけど、何をしてる人なのかね……？"])
+        Script(["actor_label_jump"])
+        ExitEventProcessing([])
+        Label(["533"])
+        ShowTextAttributes(["grandnoa_fc1", 0, 0, 2])
+        ShowText(["【グランドノア女王】"])
+        ShowText(["私は、正体不明のメダル女王……"])
+        ShowText(["何者でもありませんよ。"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【身なりの良い男】"])
+      ShowText(["世界が平和になって、一安心だよ。"])
+      ShowText(["これで、メダル集めの冒険にも出られるな。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ControlSwitches([3455, 3455, 0])
+    ConditionalBranch([1, 1303, 0, 3, 2])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        ShowTextAttributes(["People4", 0, 0, 2])
+        ShowText(["【メダル王】"])
+        ShowText(["メダル女王は、多忙ゆえ席を外しておる。"])
+        ShowText(["代わりに、私が業務を行おう。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["People4", 0, 0, 2])
+    ShowText(["【メダル王】"])
+    ShowText(["さあ、メダルと引き換えに貴重な品を授けようぞ。"])
+    ShowText(["小さなメダルの他に、大きなメダルも扱っておるぞ。"])
+    ShowChoices([["大きなメダルを交換する", "小さなメダルを交換する", "用はない"], 3])
+    When([0, "大きなメダルを交換する"])
+      CallCommonEvent([137])
+      Empty([])
+
+    When([1, "小さなメダルを交換する"])
+      CallCommonEvent([140])
+      Empty([])
+
+    When([2, "用はない"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【身なりの良い女】"])
+      ShowText(["世界が合一してから、大きなメダルというものが出回っています。"])
+      ShowText(["あまりの大きさにビックリしましたわ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【身なりの良い女】"])
+      ShowText(["結局、世界に散らばるこのメダルは何なのでしょう。"])
+      ShowText(["まったくの同一規格で、こうまで拡散されているなんて……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    ConditionalBranch([1, 1303, 0, 3, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【衛兵】"])
+      ShowText(["メダル王様にご謁見ですね。"])
+      ShowText(["どうぞ、そのままお進み下さい。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1303, 0, 4, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【衛兵】"])
+      ShowText(["メダル女王様とメダル王様にご謁見ですね。"])
+      ShowText(["どうぞ、そのままお進み下さい。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【衛兵】"])
+    ShowText(["メダル王様は、実は亡霊なのだとか。"])
+    ShowText(["ちょっと意味が分からないですが、私は務めを果たすのみです。"])
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1303, 0, 3, 2])
+        ShowTextAttributes(["slime_fc1", 0, 0, 2])
+        ShowText(["【スライム娘】"])
+        ShowText(["メダル女王様、はやく帰ってこないかな～。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1303, 0, 4, 1])
+        ShowTextAttributes(["slime_fc1", 0, 0, 2])
+        ShowText(["【スライム娘】"])
+        ShowText(["メダル女王様が、帰ってきたよ～！"])
+        ShowText(["昨日、一緒にピクニックに行ったの♪"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["slime_fc1", 0, 0, 2])
+      ShowText(["【スライム娘】"])
+      ShowText(["イリアスヴィルの裏山に、遊びに行きたいな～♪"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])

@@ -1,0 +1,190 @@
+Display Name = "Tartarus (Western Hellgondo Continent)"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ControlSwitches([5255, 5255, 0])
+    ControlSwitches([100, 100, 0])
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 385, 28, 9, 2, 1])
+    ConditionalBranch([2, "A", 1])
+      ControlSelfSwitch(["A", 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>This is the Tartarus which leads to the Dark Goddess' world... Brace yourselves as we proceed onwards!"])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>This is an all-too familiar sight to be honest.\nIt's almost making me feel nostalgic..."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>............"])
+      ShowText([""])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Sonya's words stuck in my head for some reason.\nBut right now, we have to keep moving forward..."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 1, 0])
+      ShowPicture([5, "80_gran_centa_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["gran_centa_fc1", 0, 0, 2])
+      ShowText(["\\n<Grand Centaur>This area has been designated as off-limits.\nIt would be best if you turn back immediately."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>It appears one of the Monster Lord's minions is blocking the way... She should be a trifling opponent, so let's just brush her aside and move onwards!"])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["gran_centa_fc1", 0, 0, 2])
+      ShowText(["\\n<Grand Centaur>Trying to make your way through here by brute force, how barbaric...!"])
+      ShowText([""])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>We have no choice but to force our way through... Let's do this!"])
+      ShowText([""])
+      ConditionalBranch([4, 538, 0])
+        ShowTextAttributes(["heinrich_fc1", 0, 0, 2])
+        ShowText(["\\n<Heinrich>I'm guessing she's only following orders from her superiors, but... We have our reasons for pushing forward!"])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ErasePicture([5])
+      BattleProcessing([0, 1495, false, false])
+      ControlVariables([1142, 1142, 0, 0, 2])
+      ConditionalBranch([4, 34, 0])
+        ShowTextAttributes(["micaelac_fc1", 0, 0, 2])
+        ShowText(["\\n<Micaela-chan>When it came to spearmanship, I was superior..."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 207, 0])
+        ShowTextAttributes(["centa_fc1", 0, 0, 2])
+        ShowText(["\\n<Pony>I feel guilty beating up one of my kin..."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>We took care of her easily.\nLet us keep moving and enter the Tartarus!"])
+      ShowText([""])
+      ShowText([""])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1141, 0, 1, 1])
+      ShowPicture([5, "80_gran_centa_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["gran_centa_fc1", 0, 0, 2])
+      ShowText(["\\n<Grand Centaur>Monster Lord...\nShould I continue keeping this area blockaded?"])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["\\n<Alice>Mhm, don't let anyone through here.\nEven though it's impossible to pass through the door without Luka's power, it's still dangerous inside."])
+      ShowText([""])
+      ShowText([""])
+      ErasePicture([5])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["This must be the Tartarus connected to the Monster Realm.\nWe can travel to the Dark Goddess' world by warping, so there's no need to go inside."])
+      ShowText([""])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([5, "80_gran_centa_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["gran_centa_fc1", 0, 0, 2])
+    ShowText(["\\n<Grand Centaur>This area has been designated as off-limits.\nIt would be best if you turn back immediately."])
+    ShowText([""])
+    ShowText([""])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>This Tartarus is being blocked off...\nThere's no reason for us to force our way through, we've got other things we need to do right now."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>This Tartarus is being blocked off...\nHowever, we have other priorities to attend to at the moment."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>That's right... We need to hurry to the Monster Lord's Castle now!"])
+    ShowText([""])
+    ErasePicture([5])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 151, 88, 6, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 151, 88, 6, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 151, 88, 6, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 151, 88, 6, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 151, 88, 6, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 151, 88, 6, 0])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 151, 88, 6, 0])
+    Empty([])

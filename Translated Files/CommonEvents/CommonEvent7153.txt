@@ -1,0 +1,27 @@
+CommonEvent 7153
+Name = "サラ：勝利"
+
+  999([7153])
+  ShowPicture([5, "80_sara_st12", 0, 0, 0, 0, 100, 100, 255, 0])
+  ShowTextAttributes(["sara_fc2", 1, 0, 2])
+  ShowText(["\\n<Sara>Nnnng... Oho, you managed to endure it.\nDid you want to fuck me that badly?"])
+  ShowText([""])
+  ShowText([""])
+  PlaySE(["RPG::SE(@name=\"mon_lvup\", @pitch=100, @volume=100)"])
+  ControlSwitches([98, 98, 1])
+  ControlSwitches([96, 96, 1])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["Luka emerged from the battle fuck victorious!"])
+  ConditionalBranch([0, 443, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 816, 0, 0, 0])
+    ControlVariables([816, 816, 0, 0, 2])
+    CallCommonEvent([6999])
+    Empty([])
+
+  BranchEnd([])
+  Script(["call_novel_scene(4071)"])
+  Empty([])

@@ -1,0 +1,405 @@
+Display Name = "Oxton Coast"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 848, 7, 50, 2, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Script(["keep_all_equip"])
+    Script(["set_temp_actors(819)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Lest>..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Woman's Voice>Hey, wake up...\nAre you okay? Wake up..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Uh... Uhh..."])
+    FadeinScreen([])
+    PlayBGM(["RPG::BGM(@name=\"dungeon_sinpi\", @volume=100, @pitch=100)"])
+    Wait([60])
+    ShotBalloonIcon([-1, 8, true])
+    ShowPicture([5, "80_rest_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>T-This is... the coast?"])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Mysterious Woman>I'm glad, you don't have any serious injury...\nYou haven't lost your memory, have you?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Memory...?"])
+    ErasePicture([5])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I remember seeing a black vortex in the middle of my adventure.\nJust after that, I was sucked into it."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>I was swallowed inside a black vortex...\nI don't remember anything after that..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Then, I was lying here when I regained consciousness.\nBut why was I transported to the coast...?"])
+    ShowPicture([5, "80_tarsa_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Mysterious Woman>Indeed... You saw the black vortex, after all...\nActually, it was the same for me."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>The same...?\nThe black vortex got you as well?"])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Mysterious Woman>Yes. When I was walking outside, I got sucked into the black vortex..."])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Mysterious Woman>The next thing I knew, I found myself lying here.\nI woke up before you, but that's the only difference there is between us."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>I see... Which means we're both comrades who've been involved in some strange trouble."])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>I'm Tarsa, a priestess from Comodo. And you?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>I'm Lest... a swordsman.\nHave you ever heard of the Almighty Swordsman?"])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Sorry, this is the first time I've heard that title..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>I-I see...\nBy the way, what's Comodo?"])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Never heard of it?\nIt's a pretty famous island though..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>No... I've never heard of that place."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["...Something feels wrong.\nI feel an inexplicable sense of discomfort."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But for now, we should get out of here.\nYou never know what kind of danger there might be in a strange place you know nothing about..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Anyway, let's move to a safer place.\nIf someone has kidnapped us, we're not safe here."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["To be frank, I don't think we've been kidnapped.\nI don't feel any sign of anyone monitoring us."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["But for now, our priority is to keep ourselves safe.\nI have to protect Tarsa as well, not just myself."])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Yeah, it might be dangerous here..."])
+    ErasePicture([5])
+    Wait([30])
+    SetMoveRoute([3, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Anyway, let's find a human village."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Thus Tarsa and I have decided to move on without knowing where we're going.\nBut for now, we need to get somewhere safe and settle down..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Um, by the way...\nCould you put some clothes on...?"])
+    ShowPicture([5, "80_tarsa_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Tarsa's outfit is way too revealing.\nHonestly, I can't help but look at her."])
+    ShowPicture([5, "80_tarsa_st02", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tarsa_fc1", 1, 0, 2])
+    ShowText(["\\n<Tarsa>Lest... Are you shy?\nThis is a normal outfit in Comodo."])
+    ShowTextAttributes(["tarsa_fc1", 1, 0, 2])
+    ShowText(["\\n<Tarsa>Are you the innocent type, Lest?\nI'm sorry if I've gotten you excited."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>No, that's not it..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I wiped the sweat on my face with the back of my hand, and..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Hm...? This is..."])
+    ShowPicture([5, "iv_collabo_emb", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["I notice a strange crest on the back of my hand.\nThat thing wasn't there before."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>What the..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There does not seem to be anything similar on Tarsa's hand.\nI wonder what's happening to our bodies..."])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+    ErasePicture([5])
+    Script(["add_temp_actors(824)"])
+    ControlVariables([1203, 1203, 0, 0, 1])
+    PlayBGM(["RPG::BGM(@name=\"umi\", @volume=100, @pitch=100)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ControlSwitches([31, 31, 0])
+    SetMoveRoute([4, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=44, @parameters=[\\\"RPG::SE(@name=\\\\\\\"Water1\\\\\\\", @pitch=100, @volume=80)\\\"])\", \"RPG::MoveCommand(@code=14, @parameters=[-1, -1])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=44, @parameters=[\"RPG::SE(@name=\\\"Water1\\\", @pitch=100, @volume=80)\"])"])
+    Unnamed(["RPG::MoveCommand(@code=14, @parameters=[-1, -1])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_mermaid_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["mermaid_fc1", 3, 0, 2])
+    ShowText(["\\n<Mermaid>Oh... It's rare to find humans here.\nSince you're here, why don't you play with me...?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>I'm sorry, but we don't have time to play.\nBut we'd appreciate it if you could tell us where we are..."])
+    ShowTextAttributes(["mermaid_fc1", 3, 0, 2])
+    ShowText(["\\n<Mermaid>Hm, so you're lost...\nWell, that's too bad, because you're never going home again♪"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Her tone is blatantly malicious.\nThis mermaid seems to be the kind who assaults people..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>...She's an enemy!\nTarsa, step back."])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>I'm a dancer, I can assist you at the very least.\nI've fought sea monsters before."])
+    ShowTextAttributes(["mermaid_fc1", 3, 0, 2])
+    ShowText(["\\n<Mermaid>My, you're both full of spirit.\nI'll have plenty of fun...♪"])
+    ErasePicture([5])
+    BattleProcessing([0, 1315, false, false])
+    ControlVariables([1203, 1203, 0, 0, 2])
+    ControlSwitches([31, 31, 1])
+    PlayBGM(["RPG::BGM(@name=\"umi\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>To think we would be attacked by a monster out of the blue...\nThis place seems to be more dangerous than I thought."])
+    ShowPicture([5, "80_tarsa_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>I wonder if Novissa is here as well..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Novissa...?"])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>One of my acquaintances.\nWe were together when we got sucked into the black vortex."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Then... it wouldn't be strange to find that person around here.\nBut for now, my priority is to escort you to a safe place."])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Yeah, that's fine.\nKnowing Novissa, I don't need to be worried..."])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>I'm sure Novissa is looking for me, too.\nRegardless of how strong the enemy might be..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Novissa... must probably be quite powerful.\nAnd I can tell that this man is very special to Tarsa."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["All the more reason to bring her back to Novissa's side..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>...Let's go.\nThis place seems to be infested with monsters, so we have to be careful."])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>I'm not going to be a burden.\nI'll assist you, Lest!"])
+    ErasePicture([5])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    GatherFollowers([])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShotBalloonIcon([-1, 8, false])
+    Wait([90])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>What an intricate cove...\nI really wonder if there are any humans around here."])
+    ShowPicture([5, "80_tarsa_st03", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["tarsa_fc1", 2, 0, 2])
+    ShowText(["\\n<Tarsa>This place seems to be quite far from any human habitation.\nSo this isn't Comodo's coast...?"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Comodo...\nIf I remember correctly, Comodo is where you live."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["She said it's a famous island, but I've never heard of it.\nSuddenly, I had a bad feeling."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Um, Tarsa... You know Wylat, right?\nOr Eslar..."])
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["tarsa_fc1", 2, 0, 2])
+    ShowText(["\\n<Tarsa>Are those place names?\n...I've never heard of either of them."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>No way..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Both Wylat and Eslar are world-renowned great powers.\nThere isn't anyone who hasn't heard of those two countries, even in the countryside."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["And there's a strange feeling of discomfort coming from the world itself.\nIt feels like when the cogs of a mechanism aren't functioning properly..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Could it be...\nDo we both come from different worlds?"])
+    ShowTextAttributes(["tarsa_fc1", 2, 0, 2])
+    ShowText(["\\n<Tarsa>Huh...!?\nNo, that's not pos-"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>But that's all I can think of..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["We both shared the knowledge of our worlds with each other and nothing matches."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Also, we drew simple world maps on the sandy beach...\nEven those were completely different."])
+    ShowTextAttributes(["tarsa_fc1", 2, 0, 2])
+    ShowText(["\\n<Tarsa>Unbelievable...\nSomething like this..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>And perhaps...\nThis world is different from both mine and yours."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>It must be because of that black vortex.\nI think we were transported to another world through that."])
+    ShowTextAttributes(["tarsa_fc1", 2, 0, 2])
+    ShowText(["\\n<Tarsa>When you think about it... it makes sense."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Why did we get pulled into another world?\nIs it someone's trap? Or..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Either way, the priority is to ensure our safety.\nThis place is full of monsters."])
+    ShowPicture([5, "80_tarsa_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>Hehe, you're right.\nIf we want to gather information, we have to go to a human settlement..."])
+    ErasePicture([5])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["In the end, the fact that we have to get away from the coast hasn't changed.\nTarsa and I traveled on the coast, our minds full of questions..."])
+    PlayBGM(["RPG::BGM(@name=\"umi\", @volume=100, @pitch=100)"])
+    ControlVariables([1203, 1203, 0, 0, 3])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Looks like a cave entrance.\nThis signboard is old and hard to read..."])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>It looks like it says \"Cave to Grand Noah\"..."])
+    ShowTextAttributes(["rest_fc1", 0, 0, 2])
+    ShowText(["\\n<Lest>Grand Noah... Sounds like the name of a very large city.\nIf we go through this cave, will we be able to reach that city?"])
+    ShowTextAttributes(["tarsa_fc1", 0, 0, 2])
+    ShowText(["\\n<Tarsa>I think so.\nLet's get in there!"])
+    ControlVariables([1203, 1203, 0, 0, 4])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([302, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1017, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([167, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([264, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1336, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([8, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+    RecoverAll([0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The party members have recovered all their HP and MP!"])
+    Empty([])

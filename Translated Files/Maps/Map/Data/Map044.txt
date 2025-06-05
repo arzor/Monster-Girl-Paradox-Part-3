@@ -1,0 +1,304 @@
+Display Name = "Grangold Underground Waterway"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ControlSwitches([33, 33, 1])
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 49, 21, 1, 2, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["Why would you go back into danger after all the trouble we took to get this far...?"])
+    ShowText([""])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["This underground waterway... I've seen it before in our world. We used it when we snuck into Grangold Castle."])
+    ShowText([""])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["So it's likely connected to the city."])
+    ShowText(["We can escape if we follow it out."])
+    ScrollMap([2, 5, 4])
+    Wait([60])
+    PlayBGM(["RPG::BGM(@name=\"scene_kanasimi2\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["...But what's with all these bones...?"])
+    ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+    ShowText(["\\n<Chrome>"])
+    ShowText(["They're all human from what I can see."])
+    ShowText(["Most of them belonged to young men..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["So those young men who vanished in Grangold... They were toyed with and killed inside the castle, then dumped down here."])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The cruelty... the depravity... how far will she go before she's satisfied? Kanon of the Six Ancestors, I will never forgive you."])
+    ShowText([""])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["Mephisto... Can you check if Suiki's body is among these?"])
+    ShowText([""])
+    PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["\\n<Mephisto>"])
+    ShowText(["I'll try using her notes to perform a magical trace."])
+    ShowText(["Let me search for its master from the book's memory..."])
+    PlaySE(["RPG::SE(@name=\"Saint3\", @pitch=100, @volume=80)"])
+    ControlSwitches([31, 31, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["One of the skeletons glows brightly!"])
+    ShowTextAttributes(["mefist_fc1", 2, 0, 2])
+    ShowText(["\\n<Mephisto>"])
+    ShowText(["There's a reaction..."])
+    ShowText(["That body belongs to Suiki."])
+    ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["No... so she really is gone..."])
+    ConditionalBranch([4, 397, 0])
+      ShowTextAttributes(["shion_fc1", 4, 0, 2])
+      ShowText(["\\n<Zion>"])
+      ShowText(["Tch... This is one bitter ending."])
+      Empty([])
+
+    BranchEnd([])
+    ScrollMap([8, 5, 4])
+    Wait([60])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["...Let's take a look."])
+    ShowText(["She may've left something behind."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([1, 1142, 0, 17, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["We should examine those remains first."])
+      ShowText(["We'll leave after that..."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 45, 37, 9, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 45, 47, 42, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 45, 21, 29, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 45, 7, 42, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ControlSwitches([31, 31, 1])
+    GatherFollowers([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Suiki, one of Ilias Kreuz's operatives..."])
+    ShowText(["I hate that we found her like this..."])
+    ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+    ShowText(["\\n<Chrome>"])
+    ShowText(["No doubt about it, this is a young woman's skeleton."])
+    ShowText(["Its surface is damaged, likely from acidic digestion."])
+    ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+    ShowText(["\\n<Chrome>"])
+    ShowText(["And it happened recently. I'd say within the past week, judging by the condition..."])
+    ShowText([""])
+    ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["So there's no mistake..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Wait, this is... a notebook?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Near the bones lies a small booklet with a ruined cover."])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Looks like we can still read inside."])
+    ShowText(["Weird it didn't dissolve..."])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["She protected it with some kind of magic."])
+    ShowText(["Likely so her notes would remain, even if she died..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["The pages... let's see..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["It contains maps of the town, diagrams of these canals..."])
+    ShowText(["Details on patrol routes and times... it's very thorough."])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["This is her legacy. She gave her life, but left us this intelligence. We'll make use of it."])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["This'll really help with the plan to capture Grangold."])
+    ShowText(["Now let's get out of here and head to Gold Port..."])
+    FadeoutBGM([1])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<？？？>"])
+    ShowText(["Come on now, leaving without so much as a greeting?"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"mon_ero_makituki3\", @pitch=100, @volume=100)"])
+    ControlSwitches([32, 32, 0])
+    PlayBGM(["RPG::BGM(@name=\"boss0-3\", @volume=100, @pitch=100)"])
+    Wait([30])
+    ShowPicture([6, "80_kanon_st12", 0, 0, -150, 0, 100, 100, 0, 0])
+    ShowPicture([5, "80_kanon_st11", 0, 0, 200, 0, 100, 100, 0, 0])
+    MovePicture([6, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([5, nil, 0, 0, 200, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["A voice echoes through the sewers... As if on cue, countless giant pitcher plants tear through the floor!"])
+    ShowText([""])
+    ShowTextAttributes(["kanon_fc1", 0, 0, 2])
+    ShowText(["\\n<Kanon>"])
+    ShowText(["I was the one who devoured that little mouse."])
+    ShowText(["The trained flesh of a human taste so good...♪"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["Kanon...!?"])
+    ShowText(["Damn it, she's found us...!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Kanon, one of the Six Ancestors, progenitor of plant monsters... She's way beyond what we can handle right now."])
+    ShowText([""])
+    ShowTextAttributes(["kanon_fc1", 0, 0, 2])
+    ShowText(["\\n<Kanon>"])
+    ShowText(["Too bad... I've got my hands full, so I can't greet you properly. But don't you worry, my clones will entertain you just fine!"])
+    ShowText([""])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The monstrous pitcher plants snap their maws, closing in."])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["We run, Luka! We'll knock aside these pitcher plants one by one as we escape!"])
+    ShowText([""])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["Maybe we can manage if it's just her clone... Let's go!"])
+    ShowText([""])
+    ErasePicture([5])
+    ErasePicture([6])
+    ControlSwitches([509, 509, 0])
+    BattleProcessing([0, 1768, false, false])
+    PlayBGM(["RPG::BGM(@name=\"dungeon1\", @volume=100, @pitch=100)"])
+    ControlSwitches([32, 32, 1])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["We defeat one of the giant pitcher plants under Kanon's control... but there are countless more surrounding us."])
+    ShowText([""])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["We'll bust through the rest and get out of this waterway!"])
+    ShowText(["We must escape Grangold!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>"])
+    ShowText(["...Right!!"])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["(So Kanon said her hands were full...? Just what is she so busy with...?)"])
+    ShowText([""])
+    ConditionalBranch([4, 397, 0])
+      ShowTextAttributes(["shion_fc1", 4, 0, 2])
+      ShowText(["\\n<Zion>"])
+      ShowText(["Hey, can't we bring Suiki's bones along?"])
+      ShowText(["Just leaving her here feels too cruel..."])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["We're fugitives ourselves... we don't have the means."])
+      ShowText(["We'll bury her properly when we retake this castle."])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>"])
+      ShowText(["You're more soft-hearted than I expected, Zion..."])
+      ShowTextAttributes(["gnosis_fc1", 0, 0, 2])
+      ShowText(["\\n<Gnosis>"])
+      ShowText(["We take missions risking our own lives..."])
+      ShowText(["Seeing a comrade who died at her post affects us."])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>"])
+      ShowText(["For now... we should leave."])
+      ShowText(["We'll inform Ilias Kreuz about this..."])
+      Empty([])
+
+    BranchEnd([])
+    ControlVariables([1142, 1142, 0, 0, 18])
+    ControlVariables([1002, 1002, 0, 0, 77])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 45, 9, 5, 0, 0])
+    Empty([])

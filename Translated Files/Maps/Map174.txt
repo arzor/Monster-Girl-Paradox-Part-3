@@ -1,0 +1,712 @@
+Display Name = "Administrator's Tower 4F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ConditionalBranch([1, 1032, 0, 4, 0])
+      ShowTextAttributes(["radio_fc1", 0, 0, 2])
+      ShowText(["\\n<Radio>Hurry, pLEase meet master..."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1032, 0, 5, 0])
+      ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+      ShowText(["\\n<La Croix>Adramelech has reached the floor below. Going down there is too dangerous."])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([713, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([125, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowPicture([5, "80_radio_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ConditionalBranch([1, 1032, 0, 4, 0])
+      ShowTextAttributes(["radio_fc1", 0, 0, 2])
+      ShowText(["\\n<Radio>Please, speAk to master..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1032, 0, 5, 0])
+      ShowTextAttributes(["radio_fc1", 0, 0, 2])
+      ShowText(["\\n<Radio>......"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    GatherFollowers([])
+    PlayBGM(["RPG::BGM(@name=\"stein\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_shirom_st52", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>Welcome, guests from another world. I am La Croix, the lord of this tower."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>Who the heck are you?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Who are you...?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 134, 0])
+      ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+      ShowText(["\\n<Chrome>......?!"])
+      ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+      ShowText(["\\n<La Croix>......"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    Wait([15])
+    PlaySE(["RPG::SE(@name=\"mon_bom1\", @pitch=100, @volume=100)"])
+    ShakeScreen([7, 7, 120, true])
+    ShowTextAttributes(["radio_fc1", 0, 0, 2])
+    ShowText(["\\n<Radio>Adramelech hAs intruded into the TOWer..."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>Have all defensive monsters attack her. Buy us some time, even if it's just a little."])
+    ShowTextAttributes(["radio_fc1", 0, 0, 2])
+    ShowText(["\\n<Radio>Understood, focusing all forces on one poiNt..."])
+    ShowPicture([5, "80_shirom_st52", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>As you can see, there's no time left. My identity isn't important..."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>Just think of me as just an undead monster. There is no one left alive in this world."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Why did this... What on earth happened?!"])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>Year 1456 of Johannes calendar, the chaosization of the world began from Remina's location. Dimensional cracks covered the world, and chaos eroded existence."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>And this is how everything turned out thirty years later. This world won't last even an hour longer before it disappears into chaos."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>What caused all this? Why did the world begin to turn into chaos in the first place?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>What is the cause of all this? Why did the world start to turn into chaos in the first place?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>While chaos spread all over the world, the strong and the highly intelligent gathered in this tower."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>No... It would be more accurate to say that we were cornered here. Everyone desperately wished to overcome this situation, but ultimately perished..."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>Some were struck down by apoptosis... Some were swallowed by chaos..."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>Even as we struggled every day, the others and I were desperately researching chaos."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>And what we found out... was the fact that this world did not follow the correct history."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Correct... history?!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["That was in Dad's memo... and the White Rabbit also mentioned it..."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>At some point in history, a paradox occurred. The contradiction of events disrupted reality, turning the world itself into chaos."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>By the time we had reached this conclusion... I was the only one left."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>A paradox giving birth to chaosization... and the world returning to a disordered state..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>A paradox giving birth to chaosization... and the world returning to a disordered state..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>Chaos is \\C[17]nothingness\\C[0]. They are essentially the same."])
+    ShowTextAttributes(["radio_fc1", 0, 0, 2])
+    ShowText(["\\n<Radio>Adramelech has intruded on the seCond floor... Ally losses have eXCEeded 50%..."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>Have all reserves attack. Slow her down as much as possible."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>Everything I just described happened in this world. There are parts I am unsure of or that cannot be substantiated, but..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Because a paradox occurred at some point in history... this world turned out like this..."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>However, it appears that this world was not the source of the essential paradox."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>The paradox occurred in a different, parallel world, and its chain reaction impacted ours."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>You're saying this was all caused from the influence of another world? If that's true, then..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>You're saying this was all caused from the influence of another world? If that's possible, then..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>It is as you have guessed. In conclusion, your world will soon follow the same path."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>Our world will...?!"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Our world will...?!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>No, not just your world. All parallel worlds will be entangled by it and disappear."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>And once all worlds have been swallowed by chaos, all that will remain is complete \\C[17]nothingness\\C[0]."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc6", 0, 0, 2])
+      ShowText(["\\n<Alice>You've got to be kidding..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>That can't be..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["radio_fc1", 0, 0, 2])
+    ShowText(["\\n<Radio>Adramelech has intrUded on the thirDFloor... Ally losses haVe exceeded 90%..."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>Concentrate anti-chaos field on the third floor. I don't care if the devices break. Well, it appears we're out of time."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>Return to your world... and take this."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["La Croix passes us a single notebook..."])
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ChangeItems([523, 0, 0, 1])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>This is what my comrades and I fought for. The results of our observations and studies are written down in here in great detail."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>If seen by the right person, they may be enough to help plan countermeasures. Take this notebook... and pass it on to the me of your world."])
+    ConditionalBranch([4, 41, 0])
+      ShowTextAttributes(["stein_fc2", 0, 0, 2])
+      ShowText(["\\n<Promestein>Let me see..."])
+      ShowTextAttributes(["stein_fc2", 2, 0, 2])
+      ShowText(["\\n<Promestein>...No, I don't get this at all... I can't understand any of this with my current level of knowledge..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>This notebook... Don't waste the fruits of our struggle. I leave our hope in your hands."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>If you leave it to us then... La Croix, are you...?!"])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+    Wait([15])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=38, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=38, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Wait([15])
+    ControlVariables([1032, 1032, 0, 0, 5])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>...The high class apoptosis will be here any moment. I will buy you time to escape."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>Use the magic circle in the back of the room to get down to the first floor. Escape to your world."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>You can't... If this world is being destroyed, then you have to escape too!"])
+    ConditionalBranch([4, 529, 0])
+      ShowTextAttributes(["sara_fc1", 4, 0, 2])
+      ShowText(["\\n<Sara>Let's escape together! At this rate, you won't make it!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>I already entrusted our hope to you. Deliver it to the myself of your world."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>We can't leave you! We'll fight that apoptosis with you!"])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>...Do you want your own world to turn out like this one? If you fall here, everything will be lost."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>Hurry and go... and protect your own world."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>Luka, let's fulfill our duty... She will fulfill hers. We will fulfill ours."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["\\n<Ilias>Let's go, Luka. We have to fulfill this hope..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 134, 0])
+      ShowTextAttributes(["chrom_fc2", 7, 0, 2])
+      ShowText(["\\n<Chrome>......"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    PlayBGM(["RPG::BGM(@name=\"dungeon_labo1\", @volume=100, @pitch=100)"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowPicture([5, "80_cirque_st23", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["cirque_fc3", 2, 0, 2])
+    ShowText(["\\n<Roza>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There's no answer. She seems to have completely ceased functioning..."])
+    ConditionalBranch([1, 1032, 0, 5, 0])
+      ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+      ShowText(["\\n<La Croix>After repeated battles with apoptosis, she approached the limit of her flesh. She abused it quite a bit..."])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowPicture([5, "80_cirque_st33", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["cirque_fc4", 2, 0, 2])
+    ShowText(["\\n<Queen Lamia>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There's no answer. She seems to have completely ceased functioning..."])
+    ConditionalBranch([1, 1032, 0, 5, 0])
+      ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+      ShowText(["\\n<La Croix>After repeated battles with apoptosis, she approached the limit of her flesh. She abused it quite a bit..."])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowPicture([5, "80_cirque_st51", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["cirque_fc6", 0, 0, 2])
+    ShowText(["\\n<Queen Scylla>......"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There's no answer. She seems to have completely ceased functioning..."])
+    ConditionalBranch([1, 1032, 0, 5, 0])
+      ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+      ShowText(["\\n<La Croix>After repeated battles with apoptosis, she approached the limit of her flesh. She abused it quite a bit..."])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowPicture([5, "80_radio_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ControlSwitches([94, 94, 0])
+    ChangeSaveAccess([0])
+    ShowTextAttributes(["radio_fc1", 0, 0, 2])
+    ShowText(["\\n<Radio>Apoptosis Adramelech... rapidly approaching thiSTower..."])
+    ShowTextAttributes(["radio_fc1", 0, 0, 2])
+    ShowText(["\\n<Radio>Hurry, please speak to maSter..."])
+    ErasePicture([5])
+    SetMoveRoute([4, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    ControlVariables([1032, 1032, 0, 0, 4])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    GatherFollowers([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Escape this place?"])
+    ShowChoices([["Yes", "No"], 2])
+    When([0, "Yes"])
+      ScrollMap([8, 5, 4])
+      Wait([60])
+      SetMoveRoute([18, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+      ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+      ShowText(["\\n<La Croix>I have one last request... It's about Radio."])
+      ShowTextAttributes(["radio_fc1", 0, 0, 2])
+      ShowText(["\\n<Radio>......"])
+      ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+      ShowText(["\\n<La Croix>She is an early model made by my comrades, to whom I'm indebted. Her capabilities aren't high... but I can't bear to see her destroyed here."])
+      ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+      ShowText(["\\n<La Croix>Could you take her with you?"])
+      ShowChoices([["Yes", "No"], 0])
+      When([0, "Yes"])
+        ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+        ShowText(["\\n<La Croix>I see. I'm grateful... Radio, transfer master privileges."])
+        Empty([])
+      When([1, "No"])
+        ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+        ShowText(["\\n<La Croix>Nevertheless, I'm going to force the issue. Radio, transfer master privileges."])
+        Empty([])
+      ChoicesEnd([])
+      ShowTextAttributes(["radio_fc1", 0, 0, 2])
+      ShowText(["\\n<Radio>UnderSTOod... Luka has been seT as new maSter..."])
+      ErasePicture([5])
+      SetMoveRoute([5, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=14, @parameters=[0, 4])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, 4])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ShowTextAttributes(["radio_fc1", 0, 0, 2])
+      ShowText(["\\n<Radio>Please take caRe of me, master..."])
+      SetMoveRoute([5, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+      Script(["add_actor_ex(185)"])
+      PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Radio has joined the party!"])
+      Wait([60])
+      ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+      ShowText(["\\n<La Croix>...Go now."])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>Thank you very much, La Croix!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>We are grateful, La Croix. You can leave the rest to us."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>La Croix, I compliment your work. We will surely save our world."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>This notebook... No, this hope the people of your world have woven! We shall take good care of it!"])
+      ConditionalBranch([4, 134, 0])
+        ShowTextAttributes(["chrom_fc2", 7, 0, 2])
+        ShowText(["\\n<Chrome>Sister..."])
+        ShowTextAttributes(["chrom_fc2", 7, 0, 2])
+        ShowText(["\\n<Chrome>......"])
+        ShowTextAttributes(["chrom_fc2", 1, 0, 2])
+        ShowText(["\\n<Chrome>I am the youngest daughter of the Artiste family, Chrome! Leave everything to me!"])
+        Empty([])
+      BranchEnd([])
+      ErasePicture([5])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+      PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+      ShowPicture([1, "sys_white", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([1, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ChangeTransparency([0])
+      MovePicture([1, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+      ErasePicture([1])
+      Wait([60])
+      ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+      ShowText(["\\n<La Croix>Please... save the world..."])
+      ConditionalBranch([4, 134, 0])
+        ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+        ShowText(["\\n<La Croix>......"])
+        ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+        ShowText(["\\n<La Croix>Really, I'm too old for these grand dramatics.\nAnd to think that in the end I would see Chrome..."])
+        Empty([])
+      BranchEnd([])
+      ScrollMap([8, 4, 4])
+      SetMoveRoute([18, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+      ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+      ShowText(["\\n<La Croix>...Cirque du Croix! Come, it's our last performance!"])
+      PlaySE(["RPG::SE(@name=\"mon_door1\", @pitch=100, @volume=100)"])
+      ControlSwitches([31, 31, 0])
+      Wait([15])
+      SetMoveRoute([7, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      SetMoveRoute([10, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+      SetMoveRoute([12, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      PlayBGM(["RPG::BGM(@name=\"boss0-3\", @volume=100, @pitch=100)"])
+      Wait([60])
+      SetMoveRoute([15, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Wait([30])
+      ShowPicture([5, "80_adramelek_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["adramelek_fc0", 0, 0, 2])
+      ShowText(["\\n<Adramelech>Class Two Cross-World Contact detected... Eliminating immediately."])
+      ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+      ShowText(["\\n<La Croix>The last performance, and there's no audience... However, we'll dance to our hearts content!"])
+      Wait([30])
+      FadeoutScreen([])
+      FadeoutBGM([2])
+      ErasePicture([5])
+      ControlSwitches([31, 31, 1])
+      ChangeTransparency([1])
+      Wait([180])
+      TransferPlayer([0, 619, 36, 20, 8, 2])
+      PlayBGM(["RPG::BGM(@name=\"dungeon_tarutaro1\", @volume=100, @pitch=100)"])
+      FadeinScreen([])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc6", 0, 0, 2])
+        ShowText(["\\n<Alice>Existence has been eroded this far?! Adramelech is that powerful?!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+        ShowText(["\\n<Ilias>Reality has been eroded this far?! So this is the true power of the apoptosis?!"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["radio_fc1", 0, 0, 2])
+      ShowText(["\\n<Radio>Previous master has enGAged Adramelech in battle..."])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Let's hurry and escape! We can't let La Croix's sacrifice go to waste!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "No"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["This is a healing pot..."])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+    RecoverAll([0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The party's HP and MP have been fully restored!"])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([9, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>I have fought Adramelech several times already. Each time she comes back, her power increases. She's the highest class of apoptosis."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>You stand no chance against her. I will hold her back."])
+    ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+    ShowText(["\\n<La Croix>Now, hurry and escape through the magic circle in the back."])
+    ConditionalBranch([4, 134, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        ShowTextAttributes(["chrom_fc2", 7, 0, 2])
+        ShowText(["\\n<Chrome>Sis... sister? It's really you, isn't it?"])
+        ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+        ShowText(["\\n<La Croix>......"])
+        ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+        ShowText(["\\n<La Croix>...No. I'm a different person from your sister."])
+        ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+        ShowText(["\\n<La Croix>I also had a little sister similar to you...\nbut I lost her many decades ago."])
+        ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+        ShowText(["\\n<La Croix>And I, too, am a similar yet different person from your sister... We are inhabitants of different worlds, and thus aren't related by blood."])
+        ShowTextAttributes(["chrom_fc2", 7, 0, 2])
+        ShowText(["\\n<Chrome>B-but...!"])
+        ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+        ShowText(["\\n<La Croix>Your sister has probably started walking down the wrong path. You are the only one who can save her."])
+        ShowTextAttributes(["chrom_fc2", 5, 0, 2])
+        ShowText(["\\n<Chrome>...Eh?"])
+        ShowTextAttributes(["shirom_fc2", 1, 0, 2])
+        ShowText(["\\n<La Croix>Go, Chrome. Save your sister..."])
+        ShowTextAttributes(["chrom_fc2", 7, 0, 2])
+        ShowText(["\\n<Chrome>......"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([37, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["A book of job-change lies open here..."])
+    CallCommonEvent([113])
+    Empty([])

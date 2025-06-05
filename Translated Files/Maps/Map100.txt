@@ -1,0 +1,414 @@
+Display Name = "Slug Tower 3F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 99, 31, 20, 2, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The party uses the circle of healing..."])
+    PlaySE(["RPG::SE(@name=\"Heal7\", @pitch=100, @volume=80)"])
+    FlashScreen(["Color(@red=255.0, @green=255.0, @blue=255.0, @alpha=255.0)", 30, true])
+    RecoverAll([0, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The party's HP and MP have been fully recovered!"])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1375, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([5, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([12, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["name2_fc1", 0, 0, 2])
+    ShowText(["\\n<Sluggy Star A>His sperm count has gone down drastically, hasn't it? Did we suck him dry already?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>Huaaa... Aaaah..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Three slug monsters have wrapped themselves around the youth's body."])
+    ConditionalBranch([4, 53, 0])
+      ShowTextAttributes(["slime_fc1", 2, 0, 2])
+      ShowText(["\\n<Lime>Uwaa! The slug bosses!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Are you the bosses of the slugs? Let that youth go!"])
+    ConditionalBranch([4, 64, 0])
+      ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+      ShowText(["\\n<Teeny>I will exterminate you! For the village, and to become a proper maid!"])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=25, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=25, @parameters=[])"])
+    SetMoveRoute([7, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=25, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=25, @parameters=[])"])
+    SetMoveRoute([8, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=25, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=25, @parameters=[])"])
+    ShowPicture([5, "80_name2_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["name2_fc1", 0, 0, 2])
+    ShowText(["\\n<Sluggy Star A>Oh my, what's a human doing here? Did you come to help us reproduce, perhaps?"])
+    ShowTextAttributes(["name2_fc1", 3, 0, 2])
+    ShowText(["\\n<Sluggy Star B>Huhuhu... I can tell your seed is excellent from here. You'll help us birth strong children..."])
+    ShowTextAttributes(["name2_fc1", 6, 0, 2])
+    ShowText(["\\n<Sluggy Star C>Let's get to mating right away! Let us give you a taste of Heaven!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Sluggy Stars attack!"])
+    ConditionalBranch([4, 64, 0])
+      ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+      ShowText(["\\n<Teeny>This is a test to see if I have what it takes to be a maid. I won't fail!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 79, 0])
+      ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+      ShowText(["\\n<Nuruko>Kyukyukyu!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 87, 0])
+      ShowTextAttributes(["name2_fc1", 0, 0, 2])
+      ShowText(["\\n<Sluggy Star A>Oh dear, we have more sisters than just the three of us?"])
+      ShowTextAttributes(["name2_fc2", 1, 0, 2])
+      ShowText(["\\n<Melty>Not exactly... Don't worry about it."])
+      Empty([])
+
+    BranchEnd([])
+    ChangeBattleBGM(["RPG::BGM(@name=\"boss1\", @volume=100, @pitch=100)"])
+    ControlSwitches([22, 22, 0])
+    ChangeBattleBack(["slagbg", ""])
+    BattleProcessing([0, 80, false, false])
+    ControlSwitches([22, 22, 1])
+    ChangeBattleBGM(["RPG::BGM(@name=\"battle\", @volume=100, @pitch=100)"])
+    ControlVariables([1017, 1017, 0, 0, 2])
+    ShowPicture([5, "80_name2_st03", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["name2_fc1", 2, 0, 2])
+    ShowText(["\\n<Sluggy Star A>I can't believe it! How did we lose..."])
+    ConditionalBranch([4, 64, 0])
+      ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+      ShowText(["\\n<Teeny>We, we won! I've made the first step to becoming a proper maid! ♪"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>We won't let you continue in your evil ways! Now release that youth!"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>C-come on, cut it out... I want to mate with them more, so much more..."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>......"])
+    ShowPicture([5, "80_name2_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["name2_fc1", 4, 0, 2])
+    ShowText(["\\n<Sluggy Star B>Well, now what?"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>...stop making more children, at least. All your Slug Girls are causing a huge problem for the neighboring village."])
+    ShowTextAttributes(["name2_fc1", 6, 0, 2])
+    ShowText(["\\n<Sluggy Star C>I see. I guess we'll have to stop. Either way, we're about at the limit of how many slugs we can support."])
+    ShowTextAttributes(["name2_fc1", 0, 0, 2])
+    ShowText(["\\n<Sluggy Star A>We'll obey since we lost to you. We'll just have sex for fun now, not for procreation."])
+    ShowTextAttributes(["name2_fc1", 4, 0, 2])
+    ShowText(["\\n<Sluggy Star B>Our numbers are sufficient. We won't make more children for a while. Does this meet your approval?"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Umm, yeah. That's good enough."])
+    ConditionalBranch([4, 72, 0])
+      ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+      ShowText(["\\n<Mini>Eh... that's all we're going to do?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+      ShowText(["\\n<Sonya>Not exactly a guaranteed solution, but I guess the situation is resolved?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Not exactly a guaranteed solution, but the situation is resolved for now."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["name2_fc1", 0, 0, 2])
+    ShowText(["\\n<Sluggy Star A>Until fate brings us together again..."])
+    ShowTextAttributes(["name2_fc1", 4, 0, 2])
+    ShowText(["\\n<Sluggy Star B>You're welcome to mate with us whenever. We can have a lot of fun together..."])
+    ShowTextAttributes(["name2_fc1", 6, 0, 2])
+    ShowText(["\\n<Sluggy Star C>You'll never want to leave after being with us... Huhuhu."])
+    ConditionalBranch([4, 68, 0])
+      ShowTextAttributes(["dragonp_fc1", 0, 0, 2])
+      ShowText(["\\n<Papi>Farewell then!"])
+      Empty([])
+
+    BranchEnd([])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+    ErasePicture([5])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+    SetMoveRoute([7, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+    SetMoveRoute([8, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+    Empty([])
+
+  Page 1
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=25, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=25, @parameters=[])"])
+    SetMoveRoute([7, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=25, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=25, @parameters=[])"])
+    SetMoveRoute([8, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=25, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=25, @parameters=[])"])
+    ShowPicture([5, "80_name2_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["name2_fc1", 0, 0, 2])
+    ShowText(["\\n<Sluggy Star A>Oh, do you still have business with us? I assume you aren't here for mating?"])
+    ShowTextAttributes(["name2_fc1", 3, 0, 2])
+    ShowText(["\\n<Sluggy Star B>Of course, if you are, we'll make you very welcome..."])
+    ShowTextAttributes(["name2_fc1", 6, 0, 2])
+    ShowText(["\\n<Sluggy Star C>Or do you want us to join your adventure?"])
+    ConditionalBranch([4, 53, 0])
+      ShowTextAttributes(["slime_fc1", 2, 0, 2])
+      ShowText(["\\n<Lime>Eeeh?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowChoices([["Invite them to join", "Don't invite them"], 2])
+    When([0, "Invite them to join"])
+      ShowTextAttributes(["name2_fc1", 0, 0, 2])
+      ShowText(["\\n<Sluggy Star A>We can't join you that easily though..."])
+      ShowTextAttributes(["name2_fc1", 3, 0, 2])
+      ShowText(["\\n<Sluggy Star B>We won't travel with anyone unless they can prove they're kind to slugs."])
+      ShowTextAttributes(["name2_fc1", 6, 0, 2])
+      ShowText(["\\n<Sluggy Star C>Can you prove your bonds to our sisters?"])
+      ConditionalBranch([4, 79, 0])
+        ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+        ShowText(["\\n<Nuruko>Kyukyu?"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([8, 509])
+        ShowChoices([["Show them the slug medal", "No"], 2])
+        When([0, "Show them the slug medal"])
+          ShowTextAttributes(["name2_fc1", 0, 0, 2])
+          ShowText(["\\n<Sluggy Star A>Since our sisters approve of you, we have no complaints."])
+          ShowTextAttributes(["name2_fc1", 3, 0, 2])
+          ShowText(["\\n<Sluggy Star B>Pleasure to be part of the adventure then..."])
+          ShowTextAttributes(["name2_fc1", 6, 0, 2])
+          ShowText(["\\n<Sluggy Star C>The three of us shall join you then."])
+          MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+          ErasePicture([5])
+          SetMoveRoute([7, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          SetMoveRoute([8, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(87)"])
+          PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["Sluggy Stars join the party!"])
+          ControlSwitches([2131, 2131, 0])
+          Wait([60])
+          ConditionalBranch([4, 53, 0])
+            ShowTextAttributes(["slime_fc1", 2, 0, 2])
+            ShowText(["\\n<Lime>Ewwww..."])
+            ConditionalBranch([4, 79, 0])
+              ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+              ShowText(["\\n<Nuruko>Kyu! Kyukyu!"])
+              Empty([])
+            BranchEnd([])
+            Empty([])
+          BranchEnd([])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "No"])
+          JumpToLabel(["証明できない"])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      Else([])
+        Label(["証明できない"])
+        ShowTextAttributes(["name2_fc1", 0, 0, 2])
+        ShowText(["\\n<Sluggy Star A>If you can show that you're on good terms with other slugs, we'll approve of you too."])
+        ShowTextAttributes(["name2_fc1", 3, 0, 2])
+        ShowText(["\\n<Sluggy Star B>See you then."])
+        MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+        ErasePicture([5])
+        SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+        SetMoveRoute([7, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+        SetMoveRoute([8, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+        Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    When([1, "Don't invite them"])
+      ShowTextAttributes(["name2_fc1", 0, 0, 2])
+      ShowText(["\\n<Sluggy Star A>Oh, then you don't need us for anything? If you ever want to mate, we'll be here..."])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 30, true])
+      ErasePicture([5])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+      SetMoveRoute([7, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+      SetMoveRoute([8, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["name2_fc1", 3, 0, 2])
+    ShowText(["\\n<Sluggy Star B>Uhuhu... Heavenly, isn't it?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>Huaaa... Aaaah..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Three slug monsters have wrapped themselves around the youth's body."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["name2_fc1", 6, 0, 2])
+    ShowText(["\\n<Sluggy Star C>More, more... You can come..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>Huaaa... Aaaah..."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Three slug monsters have wrapped themselves around the youth's body."])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Youth>Nnngh... I want to mate with you more. I'll be waiting here for you to come back..."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["87"])
+    ShowTextAttributes(["name2_fc2", 1, 0, 2])
+    ShowText(["\\n<Melty>Uhuhu, good boy. Wait for us."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])

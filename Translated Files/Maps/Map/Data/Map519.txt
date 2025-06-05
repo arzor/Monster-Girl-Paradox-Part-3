@@ -1,0 +1,390 @@
+Display Name = "Grand Noah"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "城門"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ControlSwitches([100, 100, 0])
+    TransferPlayer([0, 58, 24, 47, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    FadeoutScreen([])
+    TransferPlayer([0, 482, 38, 55, 8, 2])
+    TintScreen(["Tone(@red=-40.0, @green=-40.0, @blue=100.0, @gray=153.0)", 1, true])
+    FadeinScreen([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    FadeoutScreen([])
+    TransferPlayer([0, 482, 38, 13, 0, 0])
+    TintScreen(["Tone(@red=-40.0, @green=-40.0, @blue=100.0, @gray=153.0)", 1, true])
+    FadeinScreen([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    FadeoutScreen([])
+    TransferPlayer([0, 482, 38, 13, 0, 0])
+    TintScreen(["Tone(@red=-40.0, @green=-40.0, @blue=100.0, @gray=153.0)", 1, true])
+    FadeinScreen([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    FadeoutScreen([])
+    TransferPlayer([0, 482, 38, 13, 0, 0])
+    TintScreen(["Tone(@red=-40.0, @green=-40.0, @blue=100.0, @gray=153.0)", 1, true])
+    FadeinScreen([])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    FadeoutScreen([])
+    TransferPlayer([0, 482, 38, 13, 0, 0])
+    TintScreen(["Tone(@red=-40.0, @green=-40.0, @blue=100.0, @gray=153.0)", 1, true])
+    FadeinScreen([])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ScrollMap([8, 7, 4])
+    Wait([120])
+    ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["What on earth is this city...!?"])
+    ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["Almost the entire place is underwater. What's going on here...?"])
+    ShowText([""])
+    ConditionalBranch([4, 397, 0])
+      ShowTextAttributes(["shion_fc1", 4, 0, 2])
+      ShowText(["\\n<Zion>"])
+      ShowText(["Don't tell me it got flooded out...!?"])
+      ConditionalBranch([4, 401, 0])
+        ShowTextAttributes(["gnosis_fc1", 0, 0, 2])
+        ShowText(["\\n<Gnosis>"])
+        ShowText(["No, my scans suggest it was built this way from the start. I can sense a whole town spread out on the seafloor..."])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ScrollMap([2, 7, 4])
+    Wait([120])
+    ShowTextAttributes(["bombslime_fc1", 2, 0, 2])
+    ShowText(["\\n<Bomb Slime>"])
+    ShowText(["What, the Angel Army?! Attacking when we're understaffed's a real slick move..."])
+    ShowText([""])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["Ah, no time to just stand here gawking. We'll deal with the gatekeepers first...!"])
+    ShowText([""])
+    ControlSwitches([81, 81, 0])
+    BattleProcessing([0, 1771, false, false])
+    ControlSwitches([81, 81, 1])
+    ConditionalBranch([4, 34, 0])
+      ShowTextAttributes(["micaelac_fc1", 0, 0, 2])
+      ShowText(["\\n<Micaela-chan>"])
+      ShowText(["Their defenses don't look too tough with these guys as the gatekeepers."])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["\\n<Sonya>"])
+    ShowText(["But hold on a sec. How're we supposed to get inside the city?"])
+    ShowText([""])
+    ShowTextAttributes(["bombslime_fc1", 0, 0, 2])
+    ShowText(["\\n<Bomb Slime>"])
+    ShowText(["Step on that warp gate deeper in and you'll get right into town. Take your time enjoyin' our lovely underwater scenery!"])
+    ShowText([""])
+    ShowTextAttributes(["bombslime_fc1", 2, 0, 2])
+    ShowText(["\\n<Bomb Slime>"])
+    ShowText(["Aw crap, I wasn't supposed to give you a tour. I'm more of a tourist guide than a guard, y'see..."])
+    ShowText([""])
+    ControlVariables([1142, 1142, 0, 0, 28])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The bomb slime passes out..."])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["\\n<Ilias>"])
+    ShowText(["Dear me, slimes are such simpletons. Anyway, time to storm the city."])
+    ShowText([""])
+    ConditionalBranch([4, 36, 0])
+      ShowTextAttributes(["rucyfinac_fc1", 1, 0, 2])
+      ShowText(["\\n<Lucifina-chan>"])
+      ShowText(["Yaaay, can't wait to see what an underwater city's like~♪"])
+      ConditionalBranch([4, 34, 0])
+        ShowTextAttributes(["micaelac_fc1", 0, 0, 2])
+        ShowText(["\\n<Micaela-chan>"])
+        ShowText(["Lucifina-chan, we're not here to sightsee..."])
+        ConditionalBranch([4, 538, 0])
+          ShowTextAttributes(["heinrich_fc1", 7, 0, 2])
+          ShowText(["\\n<Heinrich>"])
+          ShowText(["(Actually, I'm kinda excited to check it out too...)"])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    FadeoutScreen([])
+    TransferPlayer([0, 482, 38, 13, 0, 0])
+    TintScreen(["Tone(@red=-40.0, @green=-40.0, @blue=100.0, @gray=153.0)", 1, true])
+    FadeinScreen([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The door is firmly shut."])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The door is firmly shut."])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The door is firmly shut."])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The door is firmly shut."])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 328, 186, 0, 0])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 328, 186, 0, 0])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 328, 186, 0, 0])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    Empty([])
+
+CommonEvent 31
+Name = "EV031"
+
+  Page 0
+    Empty([])
+
+CommonEvent 32
+Name = "EV032"
+
+  Page 0
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    Empty([])
+
+CommonEvent 34
+Name = "エデン"
+
+  Page 0
+    Empty([])
+
+CommonEvent 35
+Name = "EV035"
+
+  Page 0
+    Empty([])

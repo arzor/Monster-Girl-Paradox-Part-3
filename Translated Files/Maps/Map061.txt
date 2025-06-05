@@ -1,0 +1,215 @@
+Display Name = "North Ilias Monastery"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 213, 14, 31, 2, 1])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 350, 278, 0, 0])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 350, 278, 0, 0])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 350, 278, 0, 0])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>Welcome to the North Ilias Monastery. What can I do for you?"])
+    ShowChoices([["Pray", "Never mind"], 2])
+    When([0, "Pray"])
+      ControlVariables([1002, 1002, 0, 0, 10])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>Well then, let us pray to Ilias. ...there, you should feel a bond drawing you to this place."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>If something were to happen to you on your journey, the bond should lead you back here. May Ilias watch over you..."])
+      Empty([])
+
+    When([1, "Never mind"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Priest>May Ilias watch over you..."])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Priest>After you master Priest, you can become a White Mage. They learn much stronger recovery magic than Priests."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["525"])
+    ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+    ShowText(["\\n<Sonya>As much as I'd love to continue advancing beyond Priest, I'd really like to improve my club skills too..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Warrior>If you master both Warrior and Priest, you can become a Temple Knight. They use spears and are extremely strong against the undead."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Warrior>It's possible to infuse spears with healing power to heal your allies. They can also raise defenses and protect the party."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Warrior>I'm aiming to become one myself, but this whole Priest thing is a real pain. I'm not made out for it at all, but I'm here trying anyway."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["525"])
+    ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+    ShowText(["\\n<Sonya>Holy Knight sounds attractive to me too, but then I'd have to gain experience as a Warrior..."])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Martial Artist>Are you familiar with Paladins? They are pious fighters who serve the Goddess."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Martial Artist>If you master Martial Artist and Priest, you can become one. In addition to holy fighting techniques, they learn recovery and support skills."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Martial Artist>Attack and recovery skills all in one package? Sign me up!"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["525"])
+    ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+    ShowText(["\\n<Sonya>Even if it requires training as a Martial Artist, Paladin could be a good job... maybe?"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Female Warrior>A Dancer's \\C[5]Dancing\\C[0] skills and Maid's \\C[5]Service\\C[0] skills act very quickly. It's useful to be able to activate them before anyone else's turn."])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["64"])
+    ShowTextAttributes(["pramia_fc1", 0, 0, 2])
+    ShowText(["\\n<Teeny>You can always count on my Maid skills to come through! ♪"])
+    ExitEventProcessing([])
+    Label(["72"])
+    ShowTextAttributes(["phoenix_fc1", 1, 0, 2])
+    ShowText(["\\n<Mini>I'll help everyone no matter how long I have to dance! ♪"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["\\n<Swordsman>Did you know that physical attack skills inherit the attributes of your weapons and abilities?"])
+    ShowChoices([["No idea", "Of course I do"], 1])
+    When([0, "No idea"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Swordsman>The attributes and effects of your normal attack are carried over into your skills."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Swordsman>For example, if you equip the ability \\C[4]Fire Strike\\C[0], then any physical attack skill will have the fire element added to it.\nThis can be extremely powerful depending on how you use it."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Swordsman>Additional elements can be added to weapons of any element, like using a fiery skill with a freezing sword. Inheritance isn't limited to just elements either."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Swordsman>You can stack status affliction and slayer attributes such as \\C[4]Blind Strike\\C[0] and \\C[4]Harpy Slayer\\C[0]. However, you can't inherit effects that only apply to your normal attack, such as \\C[4]Double Attack\\C[0] or \\C[4]Drain Strike\\C[0]."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Swordsman>So make sure you pay attention to skill effect inheritance."])
+      Empty([])
+
+    When([1, "Of course I do"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["\\n<Swordsman>Oh yeah? You must be an experienced adventurer then. Use these skills well and you're sure to benefit greatly."])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])

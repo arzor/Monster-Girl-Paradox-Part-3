@@ -1,0 +1,576 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 995, 16, 8, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 995, 9, 11, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 995, 14, 12, 0, 0])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 995, 31, 11, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 995, 15, 26, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 995, 5, 27, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 995, 8, 36, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 995, 35, 8, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 995, 45, 34, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 995, 36, 38, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【店主】"])
+    ShowText(["品揃えは、前と変わらないぜ……"])
+    ShowText(["すっかり世の中から置いてけぼりだな。"])
+    ShopProcessing([1, 1, 0, 0, false])
+    ShopItem([1, 46, 0, 0])
+    ShopItem([1, 190, 0, 0])
+    ShopItem([1, 290, 0, 0])
+    ShopItem([2, 3, 0, 0])
+    ShopItem([2, 53, 0, 0])
+    ShopItem([2, 177, 0, 0])
+    ShopItem([2, 272, 0, 0])
+    ShopItem([0, 1, 0, 0])
+    ShopItem([0, 13, 0, 0])
+    ShopItem([0, 17, 0, 0])
+    ShopItem([0, 23, 0, 0])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【おやじ】"])
+    ShowText(["どいつもこいつも、とろけた目をしやがって……"])
+    ShowText(["まあ、俺も人のことは言えないけどな。"])
+    ShopProcessing([0, 428, 0, 0, true])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowPicture([5, "80_dondaria_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ConditionalBranch([8, 507])
+      ConditionalBranch([1, 804, 0, 2, 1])
+        ConditionalBranch([0, 1547, 1])
+          ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+          ShowText(["【ドン・ダリア】"])
+          ShowText(["……お前、いいコネ持ってそうな気がするぜ。"])
+          ShowText(["オレも混ぜてくれないか？"])
+          ShowChoices([["仲間にする", "仲間にしない"], 0])
+          When([0, "仲間にする"])
+            ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+            ShowText(["【ドン・ダリア】"])
+            ShowText(["儲け話の種はあちこちに転がってるもんだぜ。"])
+            ShowText(["楽しみだな、くくくっ……"])
+            ErasePicture([5])
+            SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+            Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+            Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+            Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+            Script(["add_actor_ex(547)"])
+            PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["ドン・ダリアが仲間に加わった！"])
+            Wait([60])
+            ExitEventProcessing([])
+            Empty([])
+          When([1, "仲間にしない"])
+            ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+            ShowText(["【ドン・ダリア】"])
+            ShowText(["そうか……なら、無理強いはしねぇよ。"])
+            Empty([])
+          ChoicesEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      CallCommonEvent([7031])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["dondaria_fc1", 0, 0, 2])
+      ShowText(["【ドン・ダリア】"])
+      ShowText(["お楽しみチケットは……ないのか。"])
+      ShowText(["なら、用はないな。"])
+      ErasePicture([5])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【怪しい男】"])
+    ShowText(["こ、この席のギリギリ感が……"])
+    ShowText(["お、押すな……絶対に押すなよ……！"])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【シーフ】"])
+    ShowText(["エスタやルビアナなど……"])
+    ShowText(["ここと同じように復活した町も、似たような有様だとか。"])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"\", @volume=100, @pitch=100)"])
+    Wait([30])
+    PlayBGM(["RPG::BGM(@name=\"scene_comi1\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_Karen_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+    ShowTextAttributes(["karen_fc1", 0, 0, 2])
+    ShowText(["【カレン】"])
+    ShowText(["あら、ソニア……お帰りなさい。"])
+    ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["母さん、若っ！！"])
+    ShowText(["そしてなんなの、その卑猥すぎる全身タイツ！？"])
+    Wait([60])
+    FadeoutBGM([1])
+    FadeoutScreen([])
+    ControlVariables([1403, 1403, 0, 0, 3])
+    Wait([60])
+    ErasePicture([5])
+    TransferPlayer([0, 996, 9, 55, 0, 2])
+    FadeinScreen([])
+    PlayBGM(["RPG::BGM(@name=\"scene_epilogue2\", @volume=100, @pitch=100)"])
+    Wait([60])
+    ShowPicture([5, "80_Karen_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["正史では、カレンさんは30年前に亡くなった。"])
+    ShowText(["ゆえに、それ以降の正規データは存在しないんだ。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["だから、30年前の姿で再生させる事しか出来なかった。"])
+    ShowText(["父さん達と一緒に、冒険者として活躍していた頃の姿にね。"])
+    ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["……………………"])
+    ShowPicture([5, "80_Karen_st02", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["karen_fc1", 1, 0, 2])
+    ShowText(["【カレン】"])
+    ShowText(["そういうわけで、現役の頃の姿になっちゃったのね。"])
+    ShowText(["まあ私は、若返って万々歳なんだけど……"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["記憶の方は、大丈夫だよ。"])
+    ShowText(["中身は、ちゃんと君の母さんだ。"])
+    ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["それで……その卑猥タイツは何？"])
+    ShowPicture([5, "80_Karen_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["karen_fc1", 0, 0, 2])
+    ShowText(["【カレン】"])
+    ShowText(["この姿は、私の現役時代の装束よ。"])
+    ShowText(["これが一番動きやすかったから、愛用してたの。"])
+    ShowTextAttributes(["sonia_fc3", 2, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["母さんが……痴女に……"])
+    ShowTextAttributes(["karen_fc1", 0, 0, 2])
+    ShowText(["【カレン】"])
+    ShowText(["あなたも、たいがい破廉恥な格好してると思うけど……"])
+    ShowTextAttributes(["chaos_fc1", 0, 0, 2])
+    ShowText(["【カオス】"])
+    ShowText(["母娘揃って、破廉恥というわけか……"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["カオス、そういう言い方しちゃいけないよ。"])
+    ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["それで……父さんは？"])
+    ShowTextAttributes(["karen_fc1", 0, 0, 2])
+    ShowText(["【カレン】"])
+    ShowText(["ちょうど昨日、巡回診察に出掛けたわ。"])
+    ShowText(["今回のルートだと……帰ってくるのは来週ね。"])
+    ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["相変わらず、恵まれない人達のために頑張ってるのね。"])
+    ShowTextAttributes(["karen_fc1", 0, 0, 2])
+    ShowText(["【カレン】"])
+    ShowText(["私は、ミトラ周りの診療所を回って……"])
+    ShowText(["一昨日、ここに戻ってきたの。"])
+    ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["母さんも……姿は変わっても、志は変わらないのね。"])
+    ShowText(["私も、今じゃすっかり神殿僧侶なんだから！"])
+    ShowTextAttributes(["karen_fc1", 0, 0, 2])
+    ShowText(["【カレン】"])
+    ShowText(["立派になったわね、ソニア……"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ソニアとカレンは、しばらく母娘の会話を交わした――"])
+    Wait([30])
+    ShowTextAttributes(["karen_fc1", 0, 0, 2])
+    ShowText(["【カレン】"])
+    ShowText(["そう言えば、変わった事があって……"])
+    ShowText(["最近になって、私の聖なる力が格段に増したのよ。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["……それは、ソニアが混沌の使徒になった影響だね。"])
+    ShowText(["因果を遡って、カレンさんの体に影響を与えたんだ。"])
+    ShowTextAttributes(["chaos_fc1", 0, 0, 2])
+    ShowText(["【カオス】"])
+    ShowText(["……だが、実害はないな。"])
+    ShowText(["大きな力を得ただけで、人間のままだ。"])
+    ShowTextAttributes(["karen_fc1", 0, 0, 2])
+    ShowText(["【カレン】"])
+    ShowText(["せっかくだし、あなた達の仲間に入れてくれない？"])
+    ShowText(["ちょっと力が増しすぎちゃって、僧侶として不安なのよ。"])
+    ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["どうする、ルカ？"])
+    ShowText(["私は、別に構わないけど……"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["もちろん、一緒にどうぞ。"])
+    ShowText(["増えすぎた力、徐々に慣らしていって下さい。"])
+    ShowTextAttributes(["karen_fc1", 0, 0, 2])
+    ShowText(["【カレン】"])
+    ShowText(["ありがとう、ルカ君。"])
+    ShowText(["久々の冒険なんて、ワクワクするわね……♪"])
+    ErasePicture([5])
+    SetMoveRoute([18, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=2, @parameters=[])\", \"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=2, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    Script(["add_actor_ex(927)"])
+    PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["カレンが仲間に加わった！"])
+    ControlVariables([1403, 1403, 0, 0, 4])
+    Wait([60])
+    ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["でも、正直複雑よね。"])
+    ShowText(["その卑猥なタイツは、どうにかならないものか……"])
+    ShowTextAttributes(["karen_fc1", 0, 0, 2])
+    ShowText(["【カレン】"])
+    ShowText(["僧侶らしく、肌の露出は少ないわよ。"])
+    ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+    ShowText(["【ソニア】"])
+    ShowText(["いろいろ終わってる。"])
+    Wait([30])
+    ShowTextAttributes(["marcellus_fc1", 0, 0, 2])
+    ShowText(["【マルケルス】"])
+    ShowText(["相変わらずだな、カレン……"])
+    ShowTextAttributes(["karen_fc1", 0, 0, 2])
+    ShowText(["【カレン】"])
+    ShowText(["そっちはずいぶん変わったわね、マルケルス。"])
+    ConditionalBranch([0, 1520, 0])
+      ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+      ShowText(["【ラザロ】"])
+      ShowText(["まったく、その格好までそのままか……"])
+      ShowTextAttributes(["karen_fc1", 0, 0, 2])
+      ShowText(["【カレン】"])
+      ShowText(["ラザロ君、結局家は継がなかったの？"])
+      ShowText(["なんだかずいぶんガラが悪くなったけど……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1522, 0])
+      ShowTextAttributes(["merlin_fc1", 0, 0, 2])
+      ShowText(["【マーリン】"])
+      ShowText(["お帰りなさい、カレンさん。"])
+      ShowTextAttributes(["karen_fc1", 0, 0, 2])
+      ShowText(["【カレン】"])
+      ShowText(["マーリン……ずいぶん雰囲気変わったわね。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1922, 0])
+      ShowTextAttributes(["merlin_fc2", 0, 0, 2])
+      ShowText(["【マーリン】"])
+      ShowText(["お帰りなさい、カレンさん。"])
+      ShowTextAttributes(["karen_fc1", 0, 0, 2])
+      ShowText(["【カレン】"])
+      ShowText(["マーリン……あなたもずいぶん若返ったわね。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1923, 0])
+      ShowTextAttributes(["merlin_fc3", 0, 0, 2])
+      ShowText(["【マーリン】"])
+      ShowText(["ずいぶん久しいね、カレン。"])
+      ShowTextAttributes(["karen_fc1", 1, 0, 2])
+      ShowText(["【カレン】"])
+      ShowText(["えっと……誰かしら？"])
+      ShowTextAttributes(["merlin_fc3", 1, 0, 2])
+      ShowText(["【マーリン】"])
+      ShowText(["聞いて驚け、マーリンさ！！"])
+      ShowTextAttributes(["karen_fc1", 0, 0, 2])
+      ShowText(["【カレン】"])
+      ShowText(["びっくり。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["こうして、復活したカレンを仲間に迎えたのだった。"])
+    ShowText(["さあ、冒険の旅を続けよう――"])
+    PlayBGM(["RPG::BGM(@name=\"mura3\", @volume=100, @pitch=100)"])
+    Script(["gain_medal(209)"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "カレン"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【冒険者】"])
+    ShowText(["情欲を、頭から振り払わねば……"])
+    ShowText(["酒の力を借りてでも、正気に戻らなければ……"])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【あらくれ】"])
+    ShowText(["こんな場所だが、いちおう宿さ。"])
+    ShowText(["10Gで泊まっていくかい？\\$"])
+    ShowChoices([["はい", "いいえ"], 2])
+    When([0, "はい"])
+      ConditionalBranch([7, 10, 0])
+        ChangeGold([1, 0, 10])
+        FadeoutScreen([])
+        PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+        Wait([150])
+        RecoverAll([0, 0])
+        FadeinScreen([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["【あらくれ】"])
+        ShowText(["金が足りんよ。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    When([1, "いいえ"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([174, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【おばさん】"])
+    ShowText(["男どもは、あれで頭がすっかりとろけちまったよ。"])
+    ShowText(["この集落も、もう終わりかねぇ……"])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【おじさん】"])
+    ShowText(["モリガン様……"])
+    ShowText(["あの時のように、モリガン様に弄ばれながら死にたい……"])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【若者】"])
+    ShowText(["サキュバスに搾られるのが、あんなに良いなんて……"])
+    ShowText(["予想以上にすごかったよ……"])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【商人】"])
+    ShowText(["また、あの快感を味わえるのなら……"])
+    ShowText(["俺は、命だって差し出すぜ。"])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【若者】"])
+    ShowText(["リリス様に……たっぷり時間をかけて吸ってもらった……"])
+    ShowText(["ああ、幸せだったよぉ……"])
+    Empty([])
+
+CommonEvent 33
+Name = "EV033"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([305, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 36
+Name = "EV036"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【中年】"])
+    ShowText(["元より、無気力な人間が多かったスラム街だけど……"])
+    ShowText(["復活以後は、ますます活力が失われてしまったな。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【中年】"])
+    ShowText(["まあ、無理もない。"])
+    ShowText(["人外の快楽を知ってしまったんだから……"])
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([341, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])

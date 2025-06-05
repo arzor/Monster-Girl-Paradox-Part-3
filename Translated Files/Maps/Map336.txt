@@ -1,0 +1,134 @@
+Display Name = "Erubetie's Room"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 325, 56, 46, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 325, 56, 46, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>This is Erubetie's room.\nThere's nothing particularly noteworthy about it..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>This certainly looks like Erubetie's room.\nIt's absolutely dismal."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["sonia_fc2", 3, 0, 2])
+    ShowText(["\\n<Sonya>Isn't Erubetie one of the Four Heavenly Knights?\nHard to believe such a distinguished monster lives in such a shabby room..."])
+    ShowText([""])
+    ShowText([""])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>I offered her a respectable room just like the other Heavenly Knights... She chose to settle in the waterways, insisting it was calmer down here."])
+      ShowText([""])
+      ShowText([""])
+      ConditionalBranch([4, 53, 0])
+        ShowTextAttributes(["slime_fc1", 0, 0, 2])
+        ShowText(["\\n<Lime>I'd rather live here too next to the flowing water than in a big fancy room."])
+        ShowText([""])
+        ShowText([""])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>In any case, we don't need to stick around here.\nErubetie doesn't seem to be here right now, but it would be trouble for us if she were to return."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>That's just what the Monster Lord is like.\nShe gives rooms like this to her underlings while she indulges herself in lavishness."])
+      ShowText([""])
+      ShowText([""])
+      ShowTextAttributes(["eden_fc1", 0, 0, 2])
+      ShowText(["\\n<Eden>Lady Ilias gave the angels a room with warm blankets. They are grateful for that..."])
+      ShowText([""])
+      ShowText([""])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["There is a lever here... Will you pull it?"])
+    ShowChoices([["Yes", "No"], 2])
+    When([0, "はい"])
+      PlaySE(["RPG::SE(@name=\"Push\", @pitch=100, @volume=80)"])
+      ControlSwitches([2569, 2569, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["You heard the sound of doors opening outside..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "いいえ"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The lever has already been pulled..."])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The pot was a Magic Pot!"])
+    BattleProcessing([0, 1450, false, false])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])

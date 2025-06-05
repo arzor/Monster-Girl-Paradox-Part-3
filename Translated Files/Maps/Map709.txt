@@ -1,0 +1,449 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 703, 20, 15, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 708, 28, 31, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 708, 2, 29, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 708, 5, 23, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 708, 12, 3, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    PlaySE(["RPG::SE(@name=\"mon_fanfale2\", @pitch=100, @volume=80)"])
+    ChangeWeapons([156, 0, 0, 1])
+    Wait([120])
+    ShowPicture([5, "80_bonny_st02", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>It's finally mine! This is the Dark Saber, Pirate Queen Roza's hidden treasure!"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>Umm... It doesn't seem very powerful to me. It's a nice sword and all, but for a pirate queen's treasure..."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>It's definitely a nice sword, but it doesn't seem like it's worthy of being a pirate queen's treasure..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>It's a fairly strong sword as-is, but if tempered properly, it could bring out considerable power."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>The potential of this sword is high, however. If tempered properly, the sword could live up to its reputation as a treasure."])
+      Empty([])
+
+    BranchEnd([])
+    ShowPicture([5, "80_bonny_st02", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowPicture([6, "80_ashel_st02", 0, 0, 150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["\\n<Ashel>In any case, its quality is not a big deal."])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["\\n<Ashel>As Roza's descendant, it was important to milady just to have her treasure."])
+    ConditionalBranch([4, 171, 0])
+      ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+      ShowText(["\\n<Miranda>Yeah, that's how it is in the world of villains. Reputation is the greatest treasure of all."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 103, 0])
+      ShowTextAttributes(["kamuro_fc1", 0, 0, 2])
+      ShowText(["\\n<Kamuro>I see... Very educational."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["\\n<Ashel>News of this will quickly spread among pirates, which will increase the reputation of the Fishy Pirates."])
+    ConditionalBranch([4, 72, 0])
+      ShowTextAttributes(["phoenix_fc1", 4, 0, 2])
+      ShowText(["\\n<Mini>Congratulations on your world debut! I wonder if the Don will hear about this too!?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>Time for our triumphant return! Back to the MS Fish everyone!"])
+    ConditionalBranch([4, 53, 0])
+      ShowTextAttributes(["slime_fc1", 0, 0, 2])
+      ShowText(["\\n<Lime>Aye aye, cap'n!"])
+      Empty([])
+
+    BranchEnd([])
+    ErasePicture([5])
+    ErasePicture([6])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Luka and party exit the cave."])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 376, 12, 12, 8, 0])
+    PlayBGM(["RPG::BGM(@name=\"scene_epilogue2\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_bonny_st02", 0, 0, -150, 0, 100, 100, 0, 0])
+    ShowPicture([6, "80_ashel_st02", 0, 0, 150, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, -150, 0, 100, 100, 255, 0, 30, false])
+    MovePicture([6, nil, 0, 0, 150, 0, 100, 100, 255, 0, 30, true])
+    Script(["gain_medal(31)"])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>As promised, we'll take you to Grand Noah. What business do you have there, anyway?"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>That's a long story--"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Luka told the pirates about the circumstances behind his adventure..."])
+    ShowPicture([5, "80_bonny_st03", 0, 0, -150, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["bonny_fc1", 2, 0, 2])
+    ShowText(["\\n<Bonnie>So you started your adventure to chase after your father... That's such a great story!"])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["\\n<Ashel>Milady, this could be a chance to make a name for the Fishy Pirates. If we were able to save the world with them..."])
+    ShowTextAttributes(["bonny_fc1", 2, 0, 2])
+    ShowText(["\\n<Bonnie>It's settled then! We'll help you on your adventure! Let's search for your father together!"])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["\\n<Ashel>This is our big chance! We'll become famous worldwide, and if it all works out, great heroes!"])
+    ErasePicture([5])
+    ErasePicture([6])
+    PlaySE(["RPG::SE(@name=\"mon_fanfale3\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The two Fishy Pirates formally join your party!"])
+    ShowTextAttributes(["bonny_fc1", 2, 0, 2])
+    ShowText(["\\n<Bonnie>Oooh, such a great story..."])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["\\n<Ashel>Fishy Pirates... Big chance..."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+      ShowText(["\\n<Sonya>......"])
+      Empty([])
+
+    BranchEnd([])
+    FadeoutScreen([])
+    ControlSwitches([100, 100, 1])
+    ControlSwitches([7068, 7068, 0])
+    ControlVariables([1051, 1051, 0, 0, 5])
+    ControlVariables([1001, 1001, 0, 0, 22])
+    ControlVariables([1002, 1002, 0, 0, 20])
+    RecoverAll([0, 0])
+    SetVehicleLocation([1, 0, 2, 21, 211])
+    Wait([60])
+    TransferPlayer([0, 2, 20, 211, 6, 2])
+    FadeinScreen([])
+    PlaySE(["RPG::SE(@name=\"mon_fanfale3\", @pitch=100, @volume=80)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["You received the MS Fish!"])
+    ConditionalBranch([1, 56, 0, 0, 0])
+      ControlVariables([56, 56, 0, 0, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Your party member size has increased by 2!"])
+      ShowText(["You can now take a total of 10 characters with you!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["\\n<Ashel>We'll entrust operation of the MS Fish to you. From here on, our destinies are intertwined."])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>Pirates always keep their word! We'll follow you anywhere!"])
+    ConditionalBranch([4, 53, 0])
+      ShowTextAttributes(["slime_fc1", 0, 0, 2])
+      ShowText(["\\n<Lime>Yay! The cap'n is coming with us!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 171, 0])
+      ShowTextAttributes(["lizardboss_fc1", 0, 0, 2])
+      ShowText(["\\n<Miranda>First you recruited us bandits, now pirates too? The party is going to be full of bad guys before long."])
+      ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+      ShowText(["\\n<Bonnie>The Fishy Pirates don't do anything bad! We've never targeted anyone but the navy and villains!"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>Before you take the helm, let me provide a few instructions. First, you can press buttons 7 or 8 (Q- and W-keys) to open the map while on the ocean."])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>Your location will be marked with a yellow circle. Always knowing where you are is the most important rule of sailing."])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>If you lose track of the ship, use a harpy feather or warp magic. If you warp to a port or the Navy Headquarters, the ship will warp there with you."])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>One more thing... This is really for our benefit, but there's another operation we'd appreciate your assistance with."])
+    ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+    ShowText(["\\n<Bonnie>Oh, the flag that was stolen?\nWith Luka's help, I bet we can take it back from the navy!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Huh? What are you talking about?"])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>A while back, we had a little skirmish with a naval warship, and they managed to steal our pirate flag."])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>We've wanted to get it back from them, but storming their headquarters isn't so easy for us, you see?"])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>So you want us to launch a raid on the Navy Headquarters... That's going to cause a huge uproar."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>So you want us to launch a raid on the Navy Headquarters..."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ashel_fc1", 0, 0, 2])
+    ShowText(["\\n<Ashel>It doesn't have to be done immediately, but take some time to consider recovering our flag."])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["\\n<Ashel>Also, the Navy Headquarters stores an [Oceanic Business Permit]. Steal that and you'll be able to take on a few nautical jobs."])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>That's not a bad deal for you guys. I'm looking forward to the day we storm the Navy Headquarters!"])
+    ConditionalBranch([4, 53, 0])
+      ShowTextAttributes(["slime_fc1", 0, 0, 2])
+      ShowText(["\\n<Lime>Aye aye, cap'n!"])
+      ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+      ShowText(["\\n<Bonnie>Yeah! You're an excellent crew member, Lime."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Hmm... The pirate flag aside, the job change item is tempting. Raiding the Navy Headquarters doesn't sound like a bad idea, does it?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>I have no interest in a pirate flag, but I want the job change item. Luka, can we raid the Navy Headquarters?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Sure, I'll think about it."])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Heading to the Noah region to the northwest is our priority, but it might not be bad to raid the Navy Headquarters before that."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([29, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeGold([0, 0, 6600])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["6600\\G acquired!"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([134, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([219, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 1"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The chest is locked..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([97, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([204, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([202, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["\\n<Sea Horse Marine>I got lost...\nCan we call a truce?"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["58"])
+    ShowTextAttributes(["inp_fc2", 0, 0, 2])
+    ShowText(["\\n<Remi>...are you okay?"])
+    ExitEventProcessing([])
+    Label(["66"])
+    ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+    ShowText(["\\n<Vanilla>What a useless marine..."])
+    ExitEventProcessing([])
+    Label(["130"])
+    ShowTextAttributes(["ghost_fc1", 0, 0, 2])
+    ShowText(["\\n<Carrie>I'm always lost..."])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+    ShowText(["\\n<Bonnie>Roza's treasure must be just ahead!"])
+    ConditionalBranch([4, 66, 0])
+      ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+      ShowText(["\\n<Vanilla>I wonder what kind of treasure a legendary pirate queen would leave behind. Weapons? Armor? Precious items?"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ashel_fc1", 1, 0, 2])
+    ShowText(["\\n<Ashel>According to records, it's a valuable weapon. Perhaps even the one Roza herself wielded..."])
+    Empty([])
+
+  Page 1
+    Empty([])

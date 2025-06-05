@@ -1,0 +1,301 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlayBGM(["RPG::BGM(@name=\"kiki2\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_serene_st11", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["serene_fc1", 3, 0, 2])
+    ShowText(["\\n<Selena>There it is... That's the ghost ship."])
+    ConditionalBranch([4, 202, 0])
+      ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+      ShowText(["\\n<Bonnie>Captain Selene's pirate ship is amazing...\nIt's bigger than the MS Fish."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>So it's been drifting at sea for decades?\nI wonder what we'll find inside..."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 6, 0, 2])
+      ShowText(["\\n<Alice>...*shiver*"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc1", 3, 0, 2])
+        ShowText(["\\n<Sonya>Wait, are you seriously scared?"])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>J-Just a cold breeze..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 5, 0, 2])
+      ShowText(["\\n<Ilias>...*shiver*"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc1", 3, 0, 2])
+        ShowText(["\\n<Sonya>Wait, are you seriously scared?"])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>The ocean breeze is just cold..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["serene_fc1", 3, 0, 2])
+    ShowText(["\\n<Selena>Look alive, we're getting close...\nPull alongside and we'll board her!"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Okay, ready for battle!"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>Brrrr...."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Bbbbrrrr..."])
+      Empty([])
+
+    BranchEnd([])
+    FadeoutScreen([])
+    ErasePicture([5])
+    ChangeTransparency([1])
+    PlaySE(["RPG::SE(@name=\"Water1\", @pitch=100, @volume=80)"])
+    Wait([60])
+    ControlSwitches([5251, 5251, 0])
+    ControlSwitches([100, 100, 0])
+    ChangeMapDisplay([0])
+    RecoverAll([0, 0])
+    TransferPlayer([0, 369, 5, 30, 6, 0])
+    FadeinScreen([])
+    Empty([])
+
+  Page 1
+    PlayBGM(["RPG::BGM(@name=\"scene_epilogue2\", @volume=100, @pitch=100)"])
+    ShowPicture([5, "80_serene_st12", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["serene_fc1", 4, 0, 2])
+    ShowText(["\\n<Selena>Thank you, Hero Luka and companions.\nBecause of you, those fearsome monsters were destroyed."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Selena, what are you..."])
+    ShowPicture([5, "80_serene_st11", 0, 0, 0, 0, 100, 100, 255, 0])
+    ShowTextAttributes(["serene_fc1", 3, 0, 2])
+    ShowText(["\\n<Selena>I haven't been honest with you all.\nI'm not Captain Selene's granddaughter."])
+    ShowTextAttributes(["serene_fc1", 3, 0, 2])
+    ShowText(["\\n<Selena>...I'm Captain Selene herself."])
+    ConditionalBranch([4, 202, 0])
+      ShowTextAttributes(["bonny_fc1", 0, 0, 2])
+      ShowText(["\\n<Bonnie>Seriously!?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc3", 7, 0, 2])
+      ShowText(["\\n<Sonya>Huh? But Captain Selene is long..."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Huh? But Captain Selene is long..."])
+      Empty([])
+
+    BranchEnd([])
+    PlayBGM(["RPG::BGM(@name=\"scene_kanasimi1\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["serene_fc1", 3, 0, 2])
+    ShowText(["\\n<Selena>I'm not a living human.\nFifty years ago when we opened that box, we all lost our lives on the spot."])
+    ShowTextAttributes(["serene_fc1", 3, 0, 2])
+    ShowText(["\\n<Selena>But due to the regret of having released the Fly Queen, we couldn't pass on to the next world."])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>I see..."])
+    ShowTextAttributes(["serene_fc1", 4, 0, 2])
+    ShowText(["\\n<Selena>Now we can rest in peace with no regrets."])
+    ShowTextAttributes(["serene_fc1", 4, 0, 2])
+    ShowText(["\\n<Selena>Thank you, Luka.\nI wish you the best of luck on your travels..."])
+    ErasePicture([5])
+    Wait([60])
+    ShowAnimation([10, 501, false])
+    Wait([60])
+    ControlSwitches([31, 31, 0])
+    Wait([60])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>........."])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc1", 4, 0, 2])
+      ShowText(["\\n<Sonya>It looks like she passed on peacefully..."])
+      Empty([])
+
+    BranchEnd([])
+    PlayBGM(["RPG::BGM(@name=\"scene_epilogue2\", @volume=100, @pitch=100)"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Who would have thought that we were on a ghost ship from the very beginning?"])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I bet you're surprised, Alice..."])
+      ShowTextAttributes(["alice_fc5", 4, 0, 2])
+      ShowText(["\\n<Alice>........."])
+      SetMoveRoute([8, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>...Alice?"])
+      ShowTextAttributes(["alice_fc5", 4, 0, 2])
+      ShowText(["\\n<Alice>........."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["She's passed out upright..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      SetMoveRoute([8, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I bet you're surprised, Ilias..."])
+      ShowTextAttributes(["iriasu_fc4", 4, 0, 2])
+      ShowText(["\\n<Ilias>........."])
+      Wait([60])
+      ShowAnimation([9, 501, false])
+      Wait([60])
+      ControlSwitches([32, 32, 0])
+      Wait([60])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Whoa! Ilias too!"])
+      Empty([])
+
+    BranchEnd([])
+    Wait([60])
+    FadeoutScreen([])
+    PlaySE(["RPG::SE(@name=\"Water1\", @pitch=100, @volume=80)"])
+    Wait([60])
+    ControlVariables([1067, 1067, 0, 0, 5])
+    ControlVariables([1002, 1002, 0, 0, 34])
+    ControlSwitches([100, 100, 1])
+    ControlSwitches([31, 31, 1])
+    ControlSwitches([32, 32, 1])
+    ChangeTransparency([1])
+    ChangeMapDisplay([0])
+    RecoverAll([0, 0])
+    TransferPlayer([0, 143, 14, 7, 2, 0])
+    FadeinScreen([])
+    Script(["gain_medal(45)"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>Let's return to Selena's house. We should get her things together and hold a service for her."])
+    ConditionalBranch([4, 202, 0])
+      ShowTextAttributes(["bonny_fc1", 1, 0, 2])
+      ShowText(["\\n<Bonnie>Yeah! We have to show respect to the pirate queen who ruled her era!"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 143, 0])
+      ShowTextAttributes(["eva_fc1", 1, 0, 2])
+      ShowText(["\\n<Eva>You mean take her valuables and sell them off, right? You're a terrible person!"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>I didn't mean that at all..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 4, 0, 2])
+      ShowText(["\\n<Alice>I refuse. It's cursed."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 4, 0, 2])
+      ShowText(["\\n<Ilias>I'll pass."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc1", 0, 0, 2])
+      ShowText(["\\n<Sonya>Don't say that... Come on, let's go."])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Don't say that... Come on, let's go."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+  Page 3
+    Empty([])
+
+  Page 4
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])

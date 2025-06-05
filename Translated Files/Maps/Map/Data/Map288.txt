@@ -1,0 +1,426 @@
+Display Name = "イリアス神殿 1階"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 281, 13, 9, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 281, 13, 9, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 281, 13, 9, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 289, 13, 11, 2, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 289, 41, 11, 2, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["alice_fc1", 0, 0, 2])
+    ShowText(["【アリス】"])
+    ShowText(["これは……想像以上に混沌の侵蝕が進んでいるな。"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["ああ、なんという事でしょう……"])
+    ShowText(["この私を称える神殿が、このような有様に……"])
+    ShowTextAttributes(["rucyfina_fc2", 0, 0, 2])
+    ShowText(["【ルシフィナ】"])
+    ShowText(["イリアス様の心に相応しい様相になったのでは？"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["ルシフィナ、少し口が過ぎませんか……？"])
+    ShowTextAttributes(["rucyfina_fc2", 0, 0, 2])
+    ShowText(["【ルシフィナ】"])
+    ShowText(["イリアス様の御心に相応しい様相になられましたね。"])
+    ShowText(["まっことお似合いの神殿です。"])
+    ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["敬語になっただけではないですか……"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["とにかく、冥府への扉まで進もう。"])
+    ShowText(["……すぐ近くに、人の気配を感じるな。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["神殿は封鎖されているはずだから、関係者だろうか。"])
+    ShowText(["今の目的には関係ないが、確かめてみた方が良いかもしれない――"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 21, 1])
+      ConditionalBranch([1, 1358, 0, 0, 0])
+        ShowTextAttributes(["mob_sister2_fc1", 0, 0, 2])
+        ShowText(["【ノア】"])
+        ShowText(["……おや？"])
+        ShowText(["もしや、あなた様は……！"])
+        CallCommonEvent([9067])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1358, 0, 1, 0])
+        ShotBalloonIcon([8, 1, false])
+        ShowTextAttributes(["mob_sister2_fc1", 0, 0, 2])
+        ShowText(["【ノア】"])
+        ShowText(["えっ……！？"])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+        ShowPicture([5, "80_mob_sister2_st02", 0, 0, 0, 0, 100, 100, 0, 0])
+        MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+        ShowTextAttributes(["mob_sister2_fc1", 0, 0, 2])
+        ShowText(["【ノア】"])
+        ShowText(["それは、転送装置だったのですね……"])
+        ShowText(["今、初めて知りました……"])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["今まで、何だと思っていたのですか……？"])
+        ShowTextAttributes(["mob_sister2_fc1", 0, 0, 2])
+        ShowText(["【ノア】"])
+        ShowText(["何か分かりませんが……"])
+        ShowText(["ここにある以上、何かありがたい物かと……"])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["やれやれ、思考停止の極みですね……"])
+        ShowText(["だいたい、こんな場所でひたすら祈って何になるのです。"])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["神殿を再興したいなら、やるべきはまず資金調達でしょう。"])
+        ShowText(["祈っていても、資材や職人は空から降ってはきませんよ。"])
+        ShowTextAttributes(["mob_sister2_fc1", 0, 0, 2])
+        ShowText(["【ノア】"])
+        ShowText(["わ、分かりました！"])
+        ShowText(["イリアス様がそう仰せなら、今すぐ諸国を巡り募金を――"])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["いえ……正直、神殿の再興は結構です。"])
+        ShowText(["ここまで荒れ果てた以上、新築した方が早いですよ。"])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["そもそも、あなたのすべき事は神殿の再興ではありません。"])
+        ShowText(["破滅に瀕した世界を救うため、その身を捧げなさい。"])
+        ShowTextAttributes(["mob_sister2_fc1", 0, 0, 2])
+        ShowText(["【ノア】"])
+        ShowText(["し、しかし……"])
+        ShowText(["私に、何が出来るというのでしょう……"])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["あなたは転職を行えるほどの神官――"])
+        ShowText(["その力量は、祖父の大神官にも匹敵します。"])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["その才を、こんな場所で腐らせてどうすると言うのですか。"])
+        ShowText(["ちょうど良いです、こちらに来なさい。"])
+        ShowTextAttributes(["mob_sister2_fc1", 0, 0, 2])
+        ShowText(["【ノア】"])
+        ShowText(["えっ、何を――ひゃぁぁっ！"])
+        PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+        FadeoutScreen([])
+        ErasePicture([5])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["イリアスは、ノアをポケット魔王城に引きずり込んだ――"])
+        ControlVariables([57, 57, 0, 0, 228])
+        TransferPlayer([0, 544, 20, 22, 4, 2])
+        ControlVariables([1358, 1358, 0, 0, 2])
+        FadeinScreen([])
+        Wait([60])
+        ShowPicture([5, "80_mob_sister2_st02", 0, 0, 0, 0, 100, 100, 0, 0])
+        MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["そう、その場所を定位置にしてください。"])
+        ShowText(["そこにいてもらえると、非常に楽になります。"])
+        ShowTextAttributes(["mob_sister2_fc1", 0, 0, 2])
+        ShowText(["【ノア】"])
+        ShowText(["は、はい……分かりました。"])
+        PlayME(["RPG::ME(@name=\"mon_fanfale3\", @pitch=100, @volume=100)"])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["ノアはポケット魔王城の大神官に就任した！"])
+        Wait([60])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["【ルカ】"])
+        ShowText(["これで、ポケット魔王城でも転職が出来るようになるね。"])
+        ShowText(["ありがとう、とっても助かるよ！"])
+        ShowTextAttributes(["mob_sister2_fc1", 0, 0, 2])
+        ShowText(["【ノア】"])
+        ShowText(["ど、どういたしまして……"])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["それでは、イリアス神殿に戻りましょう。"])
+        PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+        FadeoutScreen([])
+        ErasePicture([5])
+        ControlVariables([57, 57, 0, 0, 1288])
+        TransferPlayer([0, 544, 25, 8, 2, 2])
+        FadeinScreen([])
+        ControlSwitches([5094, 5094, 0])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["思わぬ形で、拠点に転職要員を確保できましたね。"])
+        ShowText(["あと、神殿中層にワープマーカーを設置しておきました。"])
+        ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+        ShowText(["【イリアス】"])
+        ShowText(["これからは、ハーピーの羽やワープで神殿中層に飛べます。"])
+        ShowText(["それでは、旅を続けましょう。"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3192, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["ワープ装置がある……"])
+      ShowText(["どの階層にワープしますか？"])
+      ShowChoices([["下層", "中層", "上層"], 5])
+      When([0, "下層"])
+        PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+        TransferPlayer([0, 288, 25, 8, 2, 1])
+        ExitEventProcessing([])
+        Empty([])
+      When([1, "中層"])
+        PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+        TransferPlayer([0, 791, 15, 19, 2, 1])
+        ExitEventProcessing([])
+        Empty([])
+      When([2, "上層"])
+        ControlSwitches([100, 100, 0])
+        PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+        TransferPlayer([0, 294, 29, 8, 2, 1])
+        ExitEventProcessing([])
+        Empty([])
+      WhenCancel([])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 3191, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["ワープ装置がある……"])
+      ShowText(["どの階層にワープしますか？"])
+      ShowChoices([["下層", "中層"], 5])
+      When([0, "下層"])
+        PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+        TransferPlayer([0, 288, 25, 8, 2, 1])
+        ExitEventProcessing([])
+        Empty([])
+      When([1, "中層"])
+        PlaySE(["RPG::SE(@name=\"Magic1\", @pitch=100, @volume=80)"])
+        TransferPlayer([0, 791, 15, 19, 2, 1])
+        ExitEventProcessing([])
+        Empty([])
+      WhenCancel([])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ワープ装置がある……"])
+    ShowText(["しかしワープ先が登録されていないようだ。"])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ConditionalBranch([1, 1358, 0, 0, 0])
+      ShowTextAttributes(["mob_sister2_fc2", 0, 0, 2])
+      ShowText(["【ノア】"])
+      ShowText(["イリアス様……"])
+      ShowText(["どうか、御身のおわす大神殿の復興を……"])
+      CallCommonEvent([9067])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1358, 0, 1, 0])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=25, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=25, @parameters=[])"])
+      ShowPicture([5, "80_mob_sister2_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+      ShowTextAttributes(["mob_sister2_fc2", 0, 0, 2])
+      ShowText(["【ノア】"])
+      ShowText(["おや、あなた方ですか。"])
+      ShowText(["神官のはしくれとして、勤めを果たしましょう――"])
+      Script(["SceneManager.call(Scene_JobChange)"])
+      Wait([1])
+      RecoverAll([0, 0])
+      ShowTextAttributes(["mob_sister2_fc2", 0, 0, 2])
+      ShowText(["【ノア】"])
+      ShowText(["転職後は、装備やアビリティの確認を忘れずに。"])
+      ShowText(["どうか、イリアス様のお導きがあらん事を……"])
+      ErasePicture([5])
+      SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=35, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=35, @parameters=[])"])
+      ShowTextAttributes(["mob_sister2_fc2", 0, 0, 2])
+      ShowText(["【ノア】"])
+      ShowText(["イリアス様……"])
+      ShowText(["どうか、御身のおわす大神殿の復興を……"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["ノアはひたすらに祈りを捧げている――"])
+      ShowText(["邪魔をしないでおこう。"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([920, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([93, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1332, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1323, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1290, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 3"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSwitches([3460, 3460, 0])
+    ChangeWeapons([4201, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])

@@ -1,0 +1,48 @@
+CommonEvent 7163
+Name = "Salaan: Defeat"
+
+  999([7163])
+  ShowTextAttributes(["mob_assasin1_fc1", 1, 0, 2])
+  ShowText(["\\n<Salaan>It's my victory.\nAbout the bet...?"])
+  ShowText([""])
+  ShowText([""])
+  ConditionalBranch([0, 443, 1])
+    ChangeGold([1, 0, 500])
+    Empty([])
+
+  BranchEnd([])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["Luka hands over 500G!"])
+  ShowTextAttributes(["mob_assasin1_fc1", 1, 0, 2])
+  ShowText(["\\n<Salaan>If you're frustrated, challenge me again.\nI'll make you come any number of times..."])
+  ShowText([""])
+  ShowText([""])
+  ConditionalBranch([0, 443, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([0, 2331, 1])
+    ErasePicture([5])
+    ChangeActorName([66, "Vanilla"])
+    ChangeActorGraphic([66, "Evil01_cip", 0, "vgirl_fc1", 0])
+    ControlSwitches([100, 100, 1])
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    ConditionalBranch([1, 1143, 0, 9, 2])
+      TransferPlayer([0, 476, 16, 43, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 10, 1])
+      ControlVariables([57, 57, 0, 0, 1441])
+      TransferPlayer([0, 441, 12, 50, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+  BranchEnd([])
+  ExitEventProcessing([])
+  Empty([])

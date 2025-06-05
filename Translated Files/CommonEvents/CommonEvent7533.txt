@@ -1,0 +1,31 @@
+CommonEvent 7533
+Name = "ノア：敗北"
+
+  999([0])
+  CallCommonEvent([7000])
+  ShowPicture([5, "80_mob_sister2_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+  ErasePicture([6])
+  ShowTextAttributes(["mob_sister2_fc2", 0, 0, 2])
+  ShowText(["【ノア】"])
+  ShowText(["それでは、私の勝ちということで。"])
+  ShowText(["ふふっ、意外とすぐに漏らしちゃいましたね。"])
+  ShowTextAttributes(["mob_sister2_fc2", 0, 0, 2])
+  ShowText(["【ノア】"])
+  ShowText(["良かったら、また勝負してくださいね。"])
+  ShowText(["次もお尻でイかせちゃいますから……"])
+  ErasePicture([5])
+  ConditionalBranch([0, 443, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([0, 2331, 1])
+    ChangeMapDisplay([1])
+    TransferPlayer([0, 228, 24, 22, 2, 0])
+    PlayBGM(["RPG::BGM(@name=\"castle6\", @volume=100, @pitch=100)"])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+  BranchEnd([])
+  ExitEventProcessing([])
+  Empty([])

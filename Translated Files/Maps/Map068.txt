@@ -1,0 +1,414 @@
+Display Name = "Labyrinth Caverns"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 306, 189, 6, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ConditionalBranch([1, 1054, 0, 3, 0])
+      ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+      ShowText(["\\n<Caesar>Wait! There's a minotauros here."])
+      ShowText(["Let's listen to her story for a moment!"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ControlSwitches([100, 100, 1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 302, 189, 4, 0])
+    ConditionalBranch([1, 1054, 0, 4, 0])
+      ConditionalBranch([2, "A", 1])
+        ControlSelfSwitch(["A", 0])
+        SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+        Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+        ConditionalBranch([0, 4, 0])
+          ShowTextAttributes(["alice_fc5", 0, 0, 2])
+          ShowText(["\\n<Alice>Geez, we're finally out of that cave."])
+          ShowText(["I can see some sort of building to the northeast."])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 5, 0])
+          ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+          ShowText(["\\n<Ilias>We finally escaped that cave, I see."])
+          ShowText(["I believe there should be a ruined stronghold to the northeast."])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+        ShowText(["\\n<Caesar>There sure is! Let's go!"])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([831, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([32, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([1028, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([56, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeArmor([12, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ControlSelfSwitch(["B", 0])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Just where could this cave lead...?"])
+      ShowText(["In any case, we don't need to go through it right now."])
+      ShowTextAttributes(["alice_fc5", 3, 0, 2])
+      ShowText(["\\n<Alice>We have other priorities at the moment."])
+      ShowText(["But if you want to venture forward, I won't stop you..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>The other side of this cave has the ruins of... something or other, but we don't need to go there right now."])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>Luka, our main mission should take priority."])
+      ShowText(["We don't have time to stop along the way."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    ControlSelfSwitch(["A", 0])
+    ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+    ShowText(["\\n<Caesar>From what we gathered, if we pass through this cave, sukiyaki awaits on the other side."])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["\\n<Alice>Well, the cave isn't that long."])
+      ShowText(["Let's pass through it quickly and shed some light on this case."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>The cave doesn't seem to be very long..."])
+      ShowText(["Let's pass through it quickly and get this pointless diversion over with."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 3
+    Empty([])
+
+  Page 4
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([1, 1054, 0, 2, 2])
+      ShowTextAttributes(["mino_fc1", 0, 0, 2])
+      ShowText(["\\n<Minotauros>Sukiyaki♪\nSukiyaki♪"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["\\n<Alice>What are you on about?"])
+        ShowText(["Weirdo."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>What are you talking about?"])
+        ShowText(["I guess her head is nothing but muscle."])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1054, 0, 3, 0])
+      ControlVariables([1054, 1054, 0, 0, 4])
+      ShowTextAttributes(["mino_fc1", 0, 0, 2])
+      ShowText(["\\n<Minotauros>Sukiyaki! ♪\n Sukiyaki! ♪"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc1", 5, 0, 2])
+        ShowText(["\\n<Sonya>Don't go!"])
+        ShowText(["The sukiyaki is a trap!"])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>You can't go! You are being duped!"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["mino_fc1", 2, 0, 2])
+      ShowText(["\\n<Minotauros>Wha—? Are you getting in the way of me and my sukiyaki?"])
+      ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+      ShowText(["\\n<Caesar>...She won't listen to that line of reasoning. Just leave this to me."])
+      ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+      ShowText(["\\n<Caesar>Hey, minotauros. Think logically."])
+      ShowText(["How many of us are there?"])
+      ConditionalBranch([1, 56, 0, 3, 1])
+        ShowTextAttributes(["mino_fc1", 0, 0, 2])
+        ShowText(["\\n<Minotauros>Err, about ten of you?"])
+        ShowText(["I feel like there are more than that, but counting that high is hard."])
+        ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+        ShowText(["\\n<Caesar>Close enough. Let's say we have ten people here. In other words, if we go to the sukiyaki party, there will be sukiyaki for the ten of us."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["mino_fc1", 0, 0, 2])
+        ShowText(["\\n<Minotauros>Ten of you, right?"])
+        ShowText(["I may be a musclehead, but I can still count!"])
+        ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+        ShowText(["\\n<Caesar>Yes. There's only one of you but there are ten of us. In other words, if we go to the sukiyaki party, we can get sukiyaki for ten."])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["kerberos_fc1", 0, 0, 2])
+      ShowText(["\\n<Caesar>So just wait here."])
+      ShowText(["Let us go for you instead and we'll bring back ten helpings of sukiyaki."])
+      ShowTextAttributes(["mino_fc1", 0, 0, 2])
+      ShowText(["\\n<Minotauros>Ah! That's right! I'll be able to eat ten times the sukiyaki!"])
+      ShowText(["You're both smart and kind!"])
+      ShowTextAttributes(["mino_fc1", 0, 0, 2])
+      ShowText(["\\n<Minotauros>I get ya! I'll be waiting here!"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+        ShowText(["\\n<Sonya>......"])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>......"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>What an idiot..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>Such a fool..."])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1054, 0, 4, 1])
+      ConditionalBranch([1, 1054, 0, 6, 2])
+        ShowTextAttributes(["mino_fc1", 0, 0, 2])
+        ShowText(["\\n<Minotauros>Sukiyaki! ♪ Sukiyaki! ♪"])
+        ShowText(["I'll be waiting for the ten of you!"])
+        ExitEventProcessing([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1054, 0, 7, 0])
+      ShowTextAttributes(["mino_fc1", 2, 0, 2])
+      ShowText(["\\n<Minotauros>Where are my ten helpings of sukiyaki..."])
+      ShowText(["I'm going to starve to death soon..."])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc4", 0, 0, 2])
+        ShowText(["\\n<Sonya>Ah, she's still waiting..."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Ah, she's still waiting..."])
+        Empty([])
+      BranchEnd([])
+      ControlVariables([11, 11, 0, 3, 0, 378, 0])
+      ConditionalBranch([1, 11, 0, 9, 2])
+        ConditionalBranch([1, 11, 0, 0, 0])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["You don't have any \\ii[378]..."])
+          Empty([])
+        Else([])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["You only have \\V[11] helpings of \\ii[378]..."])
+          Empty([])
+        BranchEnd([])
+        ShowTextAttributes(["mino_fc1", 2, 0, 2])
+        ShowText(["\\n<Minotauros>Oh man, I'm so hungry that I'm feeling dizzy...\nQuickly, hand over the ten helpings of sukiyaki..."])
+        ExitEventProcessing([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["Give 10 helpings of \\ii[378]? (Have: \\V[11])"])
+        ShowChoices([["Give", "Don't give"], 2])
+        When([0, "Give"])
+          ChangeItems([378, 1, 0, 10])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["10 helpings of \\ii[378] were given..."])
+          ShowTextAttributes(["mino_fc1", 0, 0, 2])
+          ShowText(["\\n<Minotauros>*Munch* *Munch* ..."])
+          ShowText(["Ahh! My energy is back!"])
+          ShowTextAttributes(["mino_fc1", 0, 0, 2])
+          ShowText(["\\n<Minotauros>Thank you, dear friends!"])
+          ShowText(["Please take this as proof of our friendship!"])
+          PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+          ChangeItems([532, 0, 0, 1])
+          ShowTextAttributes(["mino_fc1", 0, 0, 2])
+          ShowText(["\\n<Minotauros>Well then, see you later!"])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=29, @parameters=[4])\", \"RPG::MoveCommand(@code=30, @parameters=[4])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=3, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=29, @parameters=[4])"])
+          Unnamed(["RPG::MoveCommand(@code=30, @parameters=[4])"])
+          Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=3, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+          ControlSelfSwitch(["A", 0])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "Don't give"])
+          ShowTextAttributes(["mino_fc1", 2, 0, 2])
+          ShowText(["\\n<Minotauros>Oh man, I'm so hungry that I'm feeling dizzy..."])
+          ShowText(["Quickly, hand over the ten helpings of sukiyaki..."])
+          ExitEventProcessing([])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+  Page 2
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["The treasure chest was a Boxed Girl!"])
+    BattleProcessing([0, 606, false, false])
+    ControlSelfSwitch(["A", 0])
+    Empty([])
+
+  Page 1
+    Empty([])

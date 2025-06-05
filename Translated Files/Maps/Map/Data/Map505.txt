@@ -1,0 +1,672 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 504, 16, 25, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 504, 39, 33, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 504, 7, 46, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 504, 49, 46, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["kunoitielf2_fc1", 0, 0, 2])
+    ShowText(["【くのいちエルフ】"])
+    ShowText(["ここが、里で唯一の宿よ。"])
+    ShowText(["10Gになるけど、泊まっていく？\\$"])
+    ShowChoices([["はい", "いいえ"], 2])
+    When([0, "はい"])
+      ConditionalBranch([7, 10, 0])
+        ChangeGold([1, 0, 10])
+        FadeoutScreen([])
+        PlayME(["RPG::ME(@name=\"Inn\", @pitch=100, @volume=100)"])
+        Wait([150])
+        RecoverAll([0, 0])
+        FadeinScreen([])
+        ConditionalBranch([0, 3263, 0])
+          ShowTextAttributes(["kunoitielf2_fc1", 1, 0, 2])
+          ShowText(["【くのいちエルフ】"])
+          ShowText(["ゆうべはお楽しみだったわね。"])
+          ShowText(["一部始終、見守らせてもらったわ。"])
+          Script(["gain_medal(2148)"])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 3264, 0])
+          ShowTextAttributes(["kunoitielf2_fc1", 1, 0, 2])
+          ShowText(["【くのいちエルフ】"])
+          ShowText(["ゆうべはお楽しみだったわね。"])
+          ShowText(["一部始終、見守らせてもらったわ。"])
+          Script(["gain_medal(2148)"])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["kunoitielf2_fc1", 0, 0, 2])
+        ShowText(["【くのいちエルフ】"])
+        ShowText(["お金が足りないわね……"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    When([1, "いいえ"])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【エルフ商人】"])
+      ShowText(["ヤマタイに出向していたのですが、戻りました。"])
+      ShowText(["新商品の魔水銀は、ここでしか買えない錬金アイテムですよ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【エルフ商人】"])
+      ShowText(["平和が来て以来、武器の需要も普通に戻りました。"])
+      ShowText(["また魔水銀は、ここでしか買えない錬金アイテムですよ。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowChoices([["装備品を買う", "アイテムを買う", "鍛冶を頼む", "虹製品を造ってもらう"], 5])
+    When([0, "装備品を買う"])
+      ShopProcessing([1, 274, 0, 0, false])
+      ShopItem([2, 268, 0, 0])
+      ShopItem([2, 1047, 0, 0])
+      ShopItem([2, 1057, 0, 0])
+      ShopItem([2, 1058, 0, 0])
+      ShopItem([2, 4064, 0, 0])
+      ShopItem([2, 1092, 0, 0])
+      ShopItem([2, 1096, 0, 0])
+      ShopItem([2, 1131, 0, 0])
+      ShopItem([2, 1139, 0, 0])
+      ShopItem([2, 1186, 0, 0])
+      ShopItem([2, 4523, 0, 0])
+      ShopItem([2, 4530, 0, 0])
+      ShopItem([2, 4537, 0, 0])
+      ShopItem([2, 1549, 0, 0])
+      ShopItem([2, 1551, 0, 0])
+      ShopItem([2, 1553, 0, 0])
+      ShopItem([2, 1555, 0, 0])
+      ShopItem([2, 1557, 0, 0])
+      ShopItem([2, 1559, 0, 0])
+      ShopItem([2, 1709, 0, 0])
+      ShopItem([2, 1717, 0, 0])
+      Empty([])
+
+    When([1, "アイテムを買う"])
+      ShopProcessing([0, 2, 0, 0, false])
+      ShopItem([0, 4, 0, 0])
+      ShopItem([0, 7, 0, 0])
+      ShopItem([0, 11, 0, 0])
+      ShopItem([0, 13, 0, 0])
+      ShopItem([0, 14, 0, 0])
+      ShopItem([0, 15, 0, 0])
+      ShopItem([0, 16, 0, 0])
+      ShopItem([0, 17, 0, 0])
+      ShopItem([0, 18, 0, 0])
+      ShopItem([0, 19, 0, 0])
+      ShopItem([0, 20, 0, 0])
+      ShopItem([0, 21, 0, 0])
+      ShopItem([0, 23, 0, 0])
+      ShopItem([0, 35, 0, 0])
+      ShopItem([0, 76, 0, 0])
+      ShopItem([0, 80, 0, 0])
+      ShopItem([0, 102, 0, 0])
+      ShopItem([0, 109, 0, 0])
+      ShopItem([0, 110, 0, 0])
+      ShopItem([0, 111, 1, 10000])
+      ShopItem([0, 3213, 0, 0])
+      Empty([])
+
+    When([2, "鍛冶を頼む"])
+      Script(["call_synthesize(20)"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([3, "虹製品を造ってもらう"])
+      ConditionalBranch([8, 157])
+        ShopProcessing([1, 26, 0, 0, false])
+        ShopItem([1, 74, 0, 0])
+        ShopItem([1, 161, 0, 0])
+        ShopItem([1, 226, 0, 0])
+        ShopItem([1, 252, 0, 0])
+        ShopItem([1, 276, 0, 0])
+        ShopItem([1, 316, 0, 0])
+        ShopItem([1, 350, 0, 0])
+        ShopItem([1, 386, 0, 0])
+        ShopItem([1, 427, 0, 0])
+        ShopItem([1, 459, 0, 0])
+        ShopItem([1, 494, 0, 0])
+        ShopItem([1, 534, 0, 0])
+        ShopItem([1, 573, 0, 0])
+        ShopItem([1, 609, 0, 0])
+        ShopItem([1, 644, 0, 0])
+        ShopItem([1, 685, 0, 0])
+        ShopItem([1, 715, 0, 0])
+        ShopItem([1, 743, 0, 0])
+        ShopItem([1, 766, 0, 0])
+        ShopItem([1, 787, 0, 0])
+        ShopItem([1, 811, 0, 0])
+        ShopItem([1, 835, 0, 0])
+        ShopItem([1, 860, 0, 0])
+        ShopItem([2, 46, 0, 0])
+        ShopItem([2, 90, 0, 0])
+        ShopItem([2, 117, 0, 0])
+        ShopItem([2, 219, 0, 0])
+        ShopItem([2, 251, 0, 0])
+        ShopItem([2, 314, 0, 0])
+        ShopItem([0, 106, 0, 0])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["", 0, 0, 2])
+        ShowText(["しかし、虹の結晶を持っていない……"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    WhenCancel([])
+      Empty([])
+
+    ChoicesEnd([])
+    CallCommonEvent([287])
+    ConditionalBranch([1, 1005, 0, 22, 0])
+      ConditionalBranch([0, 7066, 1])
+        ConditionalBranch([12, "sw(1066) || sw(1067)"])
+          ConditionalBranch([1, 1370, 0, 0, 0])
+            ControlVariables([1370, 1370, 0, 0, 1])
+            ConditionalBranch([0, 1066, 0])
+              ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+              ShowText(["【ヴァニラ】"])
+              ShowText(["錬金術の上位素材、魔水銀……"])
+              ShowText(["店で扱っているのは、ここだけだぞ！"])
+              ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+              ShowText(["【ヴァニラ】"])
+              ShowText(["お世話になっています、ヴァニラです。"])
+              ShowText(["魔水銀を、うちの店でも扱いたいのですが――"])
+              Empty([])
+            BranchEnd([])
+            ConditionalBranch([0, 1067, 0])
+              ShowTextAttributes(["vgirl_fc3", 0, 0, 2])
+              ShowText(["【ヴァニラ】"])
+              ShowText(["錬金術の上位素材、魔水銀……"])
+              ShowText(["店で扱っているのは、ここだけだぞ！"])
+              ShowTextAttributes(["vgirl_fc3", 0, 0, 2])
+              ShowText(["【ヴァニラ】"])
+              ShowText(["お世話になっています、ヴァニラです。"])
+              ShowText(["魔水銀を、うちの店でも扱いたいのですが――"])
+              Empty([])
+            BranchEnd([])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["【エルフ商人】"])
+            ShowText(["魔水銀は、危険な品。"])
+            ShowText(["特殊な資格を持っている方でないと、店での販売は出来ないのですよ。"])
+            ConditionalBranch([0, 1066, 0])
+              ShowTextAttributes(["vgirl_fc1", 2, 0, 2])
+              ShowText(["【ヴァニラ】"])
+              ShowText(["クリスでも資格は持っていないようだ……むむむ、困ったな。"])
+              ShowText(["手練れの錬金術師がいれば良いのだが……"])
+              Empty([])
+            BranchEnd([])
+            ConditionalBranch([0, 1067, 0])
+              ShowTextAttributes(["vgirl_fc3", 2, 0, 2])
+              ShowText(["【ヴァニラ】"])
+              ShowText(["クリスでも資格は持っていないようだ……むむむ、困ったな。"])
+              ShowText(["手練れの錬金術師がいれば良いのだが……"])
+              Empty([])
+            BranchEnd([])
+            ConditionalBranch([1, 1328, 0, 6, 1])
+              JumpToLabel(["成功"])
+              Empty([])
+            BranchEnd([])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["資格を持つ錬金術師がいなければ、魔水銀は扱えないようだ。"])
+            ShowText(["どこかに、協力してくれる者はいないだろうか。"])
+            ExitEventProcessing([])
+            Empty([])
+          BranchEnd([])
+          ConditionalBranch([1, 1370, 0, 1, 0])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["【エルフ商人】"])
+            ShowText(["魔水銀は、危険な品。"])
+            ShowText(["特殊な資格を持っている方でないと、店での販売は出来ないのですよ。"])
+            ConditionalBranch([1, 1328, 0, 6, 1])
+              Label(["成功"])
+              ControlVariables([1370, 1370, 0, 0, 2])
+              ConditionalBranch([0, 1167, 0])
+                ShowTextAttributes(["lusia_fc1", 0, 0, 2])
+                ShowText(["【ルシア】"])
+                ShowText(["私が資格を持っていますよ。"])
+                ShowText(["魔水銀の扱いならば、手を貸しましょう……"])
+                Empty([])
+              BranchEnd([])
+              ConditionalBranch([0, 1837, 0])
+                ShowTextAttributes(["lusia_fc2", 0, 0, 2])
+                ShowText(["【ルシア】"])
+                ShowText(["私が資格を持っていますよ。"])
+                ShowText(["魔水銀の扱いならば、手を貸しましょう……"])
+                Empty([])
+              BranchEnd([])
+              ShowTextAttributes(["", 0, 0, 2])
+              ShowText(["【エルフ商人】"])
+              ShowText(["資格をお持ちのようですね。"])
+              ShowText(["それなら問題なく商取引をさせて頂きましょう。"])
+              ConditionalBranch([0, 1066, 0])
+                ShowTextAttributes(["vgirl_fc1", 0, 0, 2])
+                ShowText(["【ヴァニラ】"])
+                ShowText(["ありがとうなのだ！"])
+                ShowText(["ルシアにも感謝なのだ！"])
+                Empty([])
+              BranchEnd([])
+              ConditionalBranch([0, 1067, 0])
+                ShowTextAttributes(["vgirl_fc3", 0, 0, 2])
+                ShowText(["【ヴァニラ】"])
+                ShowText(["ありがとうなのだ！"])
+                ShowText(["ルシアにも感謝なのだ！"])
+                Empty([])
+              BranchEnd([])
+              PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+              ShowTextAttributes(["", 0, 0, 2])
+              ShowText(["ヴァニラの店で魔水銀を扱うようになった！"])
+              ControlSwitches([7066, 7066, 0])
+              Wait([60])
+              ExitEventProcessing([])
+              Empty([])
+            BranchEnd([])
+            ShowTextAttributes(["", 0, 0, 2])
+            ShowText(["資格を持つ錬金術師がいなければ、魔水銀は扱えないようだ。"])
+            ShowText(["どこかに、協力してくれる者はいないだろうか。"])
+            ExitEventProcessing([])
+            Empty([])
+          BranchEnd([])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1307, 0, 3, 2])
+        ShowTextAttributes(["kunoitielf2_fc1", 2, 0, 2])
+        ShowText(["【くのいちエルフ】"])
+        ShowText(["マガツオオミカミって、倒された訳じゃないんでしょ？"])
+        ShowText(["あんなのが来たら、この里も終わりね……"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1307, 0, 4, 1])
+        ShowTextAttributes(["kunoitielf2_fc1", 2, 0, 2])
+        ShowText(["【くのいちエルフ】"])
+        ShowText(["マガツオオミカミが倒されても、ヤバいのはまだまだいるわ。"])
+        ShowText(["装備を整えて、訓練も怠らないようにしないと……"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["kunoitielf2_fc1", 2, 0, 2])
+      ShowText(["【くのいちエルフ】"])
+      ShowText(["北の勇者ってヒトが、大勇者様の結婚相手って話もあるの。"])
+      ShowText(["もしかして大勇者様って……チャラ男？"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ShowTextAttributes(["kunoitielf2_fc3", 0, 0, 2])
+    ShowText(["【くのいちエルフ】"])
+    ShowText(["私……魔界じゃ、ギャルだったの。"])
+    ShowText(["何を言ってるか分からないと思うけど、ギャルなの。"])
+    Empty([])
+
+  Page 1
+    ShowTextAttributes(["rogueelf_fc1", 0, 0, 2])
+    ShowText(["【くのいちエルフ？】"])
+    ShowText(["ギャル時代の姿に戻っちゃった……♪"])
+    ShowText(["ねぇねぇ、イけてる？"])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([1, 838, 0, 2, 1])
+      ConditionalBranch([0, 1587, 1])
+        ShowTextAttributes(["mob_elf2_fc1", 0, 0, 2])
+        ShowText(["【ルリ】"])
+        ShowText(["あなた達と旅をすると、面白そう。"])
+        ShowText(["一緒に行ってもいい……？"])
+        ShowChoices([["仲間にする", "仲間にしない"], 0])
+        When([0, "仲間にする"])
+          ShowTextAttributes(["mob_elf2_fc1", 0, 0, 2])
+          ShowText(["【ルリ】"])
+          ShowText(["それじゃあ、よろしく……"])
+          ErasePicture([5])
+          SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=10, @parameters=[])\", \"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+          Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=10, @parameters=[])"])
+          Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+          Script(["add_actor_ex(587)"])
+          PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+          ShowTextAttributes(["", 0, 0, 2])
+          ShowText(["ルリが仲間に加わった！"])
+          Wait([60])
+          ExitEventProcessing([])
+          Empty([])
+        When([1, "仲間にしない"])
+          ShowTextAttributes(["mob_elf2_fc1", 0, 0, 2])
+          ShowText(["【ルリ】"])
+          ShowText(["そう……残念ね。"])
+          Empty([])
+        ChoicesEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    CallCommonEvent([7371])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【くのいちエルフ】"])
+      ShowText(["この村に、何があっても大丈夫なように……"])
+      ShowText(["武装はしっかり整えておかないとね。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【くのいちエルフ】"])
+      ShowText(["平和になると、売れなくなるのが武器よね。"])
+      ShowText(["でも、備えは大切だよ？"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["kuno_succubus_fc1", 0, 0, 2])
+      ShowText(["【くのいちサキュバス】"])
+      ShowText(["もうすぐ、世界が滅んじまうってさ。"])
+      ShowText(["それが本当だったら、もっと遊ばなくちゃいけないねぇ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["kuno_succubus_fc1", 0, 0, 2])
+      ShowText(["【くのいちサキュバス】"])
+      ShowText(["十五勇士に、姫様が入ってるってのは当然だけどさぁ……"])
+      ShowText(["それでも魔王様や、六祖の方々と肩を並べてるのは光栄だね。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["kuno_scylla_fc1", 0, 0, 2])
+      ShowText(["【くのいちスキュラ】"])
+      ShowText(["全てのスキュラ族に、招集が掛かったわ。"])
+      ShowText(["なんでも、どこかの廃村を開拓するとか……"])
+      ShowTextAttributes(["kuno_scylla_fc1", 0, 0, 2])
+      ShowText(["【くのいちスキュラ】"])
+      ShowText(["……肉体労働させられるなら、行かないわ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["kuno_scylla_fc1", 0, 0, 2])
+      ShowText(["【くのいちスキュラ】"])
+      ShowText(["スキュラとラミアの開拓村が、大発展を遂げたらしいわ。"])
+      ShowText(["それなら、もっと早く行っておくべきだったわね……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["kuno_hapy_fc1", 0, 0, 2])
+      ShowText(["【くのいちハーピー】"])
+      ShowText(["私たちは、くのいち四姉妹（義理）！"])
+      ShowText(["生まれし時は違えども、死ぬ時は一緒よ！"])
+      ShowTextAttributes(["kuno_hapy_fc1", 2, 0, 2])
+      ShowText(["【くのいちハーピー】"])
+      ShowText(["……なんか、ほんとに死ぬ時は一緒になりそう。"])
+      ShowText(["私だけ、遅くてもいいかな。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["kuno_hapy_fc1", 0, 0, 2])
+      ShowText(["【くのいちハーピー】"])
+      ShowText(["私たちは、くのいち四姉妹（義理）！"])
+      ShowText(["生まれし時は違えども、死ぬ時は一緒よ！"])
+      ShowTextAttributes(["kuno_hapy_fc1", 0, 0, 2])
+      ShowText(["【くのいちハーピー】"])
+      ShowText(["まあ、これで当分死ぬ時は来ないだろうし……"])
+      ShowText(["くのいち四姉妹（義理）も、しばらく安泰よ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1307, 0, 3, 2])
+        ShowTextAttributes(["kuno_arachne_fc1", 0, 0, 2])
+        ShowText(["【くのいちアラクネ】"])
+        ShowText(["姫様は、里を守る決意を固めたらしいわ。"])
+        ShowText(["マガツオオミカミが退治されるまで、部屋を動かないとか。"])
+        ShowTextAttributes(["kuno_arachne_fc1", 0, 0, 2])
+        ShowText(["【くのいちアラクネ】"])
+        ShowText(["……単に引きこもりたいだけじゃないの？"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1307, 0, 4, 1])
+        ShowTextAttributes(["kuno_arachne_fc1", 0, 0, 2])
+        ShowText(["【くのいちアラクネ】"])
+        ShowText(["マガツオオミカミが退治されて、ほっと一安心よ。"])
+        ShowText(["世界を滅ぼすレベルのバケモノ、どうやって倒したのかしら。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["kuno_arachne_fc1", 0, 0, 2])
+      ShowText(["【くのいちアラクネ】"])
+      ShowText(["混沌の神って、あのマガツオオミカミよりも強いんでしょ。"])
+      ShowText(["そんなの、どうやって倒したのかしら……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【エルフ】"])
+      ShowText(["ああ、忙しい忙しい……"])
+      ShowText(["バトルファックなら、あっちの部屋の娘とやってね。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【エルフ】"])
+      ShowText(["お祝いムードで商売繁盛よ。"])
+      ShowText(["忙しすぎて、息をする暇もないわ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["youko_fc1", 0, 0, 2])
+      ShowText(["【枕流漱石】"])
+      ShowText(["大きな玉藻様が、ヤマタイ村に来たの！"])
+      ShowText(["あいさつしたら、頭を撫でてもらえたよ～♪"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["youko_fc1", 0, 0, 2])
+      ShowText(["【枕流漱石】"])
+      ShowText(["玉藻様の側近になりたいな～。"])
+      ShowText(["がんばって、尻尾をもっと増やさないと！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["【豆狸】"])
+      ShowText(["世界が合一してから、たぬきの里が面白いことになったの。"])
+      ShowText(["みんな、はしゃいでるよ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["【豆狸】"])
+      ShowText(["平和が来てから、たぬきの里はすっかり空気が抜けちゃって。"])
+      ShowText(["みんな太って、ゴロゴロしてるよ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([397, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["kunoitielf2_fc1", 0, 0, 2])
+      ShowText(["【くのいちエルフ】"])
+      ShowText(["ヤマタイ村にはもう行ったかしら？"])
+      ShowText(["あんな事になって、驚くわよね……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["kunoitielf2_fc1", 0, 0, 2])
+      ShowText(["【くのいちエルフ】"])
+      ShowText(["姫様と大勇者様との結婚式には、誰が参列するのかしら。"])
+      ShowText(["魔王様とか六祖とか、すごい顔触れになるんじゃない？"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])

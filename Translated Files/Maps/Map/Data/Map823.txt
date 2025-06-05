@@ -1,0 +1,183 @@
+Display Name = "フィノア北の関所"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 358, 190, 2, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 358, 190, 2, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 358, 190, 2, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 358, 188, 8, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 358, 188, 8, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 1, 358, 188, 8, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    SetMoveRoute([10, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    SetMoveRoute([11, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowPicture([5, "80_galfox_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["galfox_fc1", 0, 0, 2])
+    ShowText(["【ガルフォックス】"])
+    ShowText(["ほう、旅人とは珍しいな……"])
+    ShowText(["現在は厳戒態勢につき、陸路は封鎖されておる。"])
+    ShowTextAttributes(["caitsith_fc1", 0, 0, 2])
+    ShowText(["【ケット・シー】"])
+    ShowText(["ヒキカエセ！　ヒキカエセ！"])
+    ShowTextAttributes(["galfox_fc1", 0, 0, 2])
+    ShowText(["【ガルフォックス】"])
+    ShowText(["そういうわけで、ここは通せん。"])
+    ShowText(["気の毒じゃが、こちらも職務ゆえな。"])
+    ConditionalBranch([1, 1142, 0, 35, 2])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["無理矢理に通る事も出来るでしょうが……"])
+      ShowText(["関係ないところで騒ぎを起こせば、作戦に支障が出ますね。"])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["そういうわけで、引き返しましょう。"])
+      ShowText(["今のところ、この先に用事はありません。"])
+      ErasePicture([5])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      SetMoveRoute([10, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+      SetMoveRoute([11, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1142, 0, 36, 0])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["ナタリア方面に進むには、ここを突破しなければ……"])
+      ShowText(["大した警備ではありません、一気に行きますよ！"])
+      ShowPicture([5, "80_galfox_st03", 0, 0, 0, 0, 100, 100, 255, 0])
+      ShowTextAttributes(["galfox_fc1", 2, 0, 2])
+      ShowText(["【ガルフォックス】"])
+      ShowText(["なんと、関所破りか！？"])
+      ShowText(["ここは通さぬぞ！"])
+      ConditionalBranch([4, 374, 0])
+        ShowTextAttributes(["cirquec_fc4", 2, 0, 2])
+        ShowText(["【アリア・ラミア】"])
+        ShowText(["ああ、また罪を重ねてしまった……"])
+        ShowText(["偉大なる蛇神よ、お許し下さい……"])
+        Empty([])
+      BranchEnd([])
+      ErasePicture([5])
+      ControlSwitches([81, 81, 0])
+      BattleProcessing([0, 1813, false, false])
+      ControlSwitches([81, 81, 1])
+      ControlVariables([1142, 1142, 0, 0, 37])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["こんなところで時間を食ってはいられません。"])
+      ShowText(["さあ、先に進みますよ。"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["でも、グランゴルドや他の都市はどうなってるんだろう……"])
+      ShowText(["何とか持ちこたえていればいいんだけど。"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["グランゴルドとグランドノアは、今も敵の侵攻に晒されている。"])
+      ShowText(["ヤマタイでも、サリエラやエデン達と玉藻達の死闘が繰り広げられ――"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["いずこかへと姿を消したアルマエルマも、戻ってくる気配がない。"])
+      ShowText(["現状を考えただけでも、気が気ではない思いだが――"])
+      ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+      ShowText(["【イリアス】"])
+      ShowText(["ルカ……心を乱してはなりません。"])
+      ShowText(["皆を信じ、私達は為すべき事を為すのです。"])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["【ルカ】"])
+      ShowText(["そうですね……"])
+      ShowText(["僕達は、僕達の出来る事をしよう！"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["戦況が気になるが、僕達では何もできない。"])
+      ShowText(["今は、サン・イリアの攻略にのみ専念するのだ――"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=false, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
+      FadeoutScreen([])
+      Wait([120])
+      ChangeTransparency([0])
+      TransferPlayer([0, 94, 0, 0, 2, 2])
+      FadeinScreen([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])

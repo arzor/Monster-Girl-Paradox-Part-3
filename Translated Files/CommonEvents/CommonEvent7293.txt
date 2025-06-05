@@ -1,0 +1,57 @@
+CommonEvent 7293
+Name = "マグダ：敗北"
+
+  999([7293])
+  CallCommonEvent([7000])
+  ShowPicture([5, "80_mob_sanzoku_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+  ErasePicture([6])
+  ShowTextAttributes(["mob_sanzoku_fc1", 0, 0, 2])
+  ShowText(["\\n<Magda>This is my victory!\nAfter your semen, I'll be taking your money."])
+  ShowText([""])
+  ShowText([""])
+  ConditionalBranch([0, 443, 1])
+    ChangeGold([1, 0, 1100])
+    Empty([])
+
+  BranchEnd([])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["Luka hands over 1100G!"])
+  ShowTextAttributes(["mob_sanzoku_fc1", 0, 0, 2])
+  ShowText(["\\n<Magda>Now, wash your cock and come back again.\nI'll be sure to make you feel really good next time..."])
+  ShowText([""])
+  ShowText([""])
+  ConditionalBranch([0, 443, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([0, 2331, 1])
+    ErasePicture([5])
+    ChangeMapDisplay([1])
+    ConditionalBranch([1, 1143, 0, 9, 2])
+      TransferPlayer([0, 143, 5, 28, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 10, 1])
+      ConditionalBranch([1, 1325, 0, 11, 2])
+        ControlVariables([57, 57, 0, 0, 1472])
+        TransferPlayer([0, 472, 5, 28, 2, 0])
+        Empty([])
+
+      BranchEnd([])
+      ConditionalBranch([1, 1325, 0, 12, 1])
+        ControlVariables([57, 57, 0, 0, 1762])
+        TransferPlayer([0, 762, 21, 51, 2, 0])
+        Empty([])
+
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+  BranchEnd([])
+  ExitEventProcessing([])
+  Empty([])

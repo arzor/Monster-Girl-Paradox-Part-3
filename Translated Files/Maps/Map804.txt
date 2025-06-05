@@ -1,0 +1,815 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    ControlVariables([16, 16, 0, 2, 1, 5])
+    ConditionalBranch([8, 561])
+      ChangeItems([561, 1, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave Lazarus a Regular Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([8, 562])
+      ChangeItems([562, 1, 0, 1])
+      ControlVariables([1095, 1095, 1, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave Lazarus a Tasty Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([8, 563])
+      ChangeItems([563, 1, 0, 1])
+      ControlVariables([1095, 1095, 2, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave Lazarus an Awful Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 0, 0])
+      ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+      ShowText(["\\n<Lazarus>I have indigestion, my body is at it's limit...\nPlease help me..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Lazarus's condition seems bad..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 1, 0])
+      ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+      ShowText(["\\n<Lazarus>I feel a little bit better...\nFish... Give me more fish..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Lazarus' condition is heading to recovery!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 2, 1])
+      ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+      ShowText(["\\n<Lazarus>Fuu, it's alright now.\nI'm completely healthy!"])
+      PlayME(["RPG::ME(@name=\"lvup\", @pitch=100, @volume=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Lazarus has recovered completely!"])
+      ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+      ShowText(["\\n<Lazarus>You helped me a lot...\nHere, take this as a thank you."])
+      CallCommonEvent([832])
+      Wait([60])
+      ControlVariables([121, 121, 2, 0, 1])
+      CallCommonEvent([901])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, -1, 0])
+      ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
+      ShowText(["\\n<Lazarus>Indigestion...ugh, geh!\nI guess that was no good..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Lazarus is extremely weak..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, -2, 2])
+      ShowTextAttributes(["lazarus3_fc1", 3, 0, 2])
+      ShowText(["\\n<Lazarus>Guh!"])
+      EraseEvent([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Lazarus is exhausted..."])
+      Wait([60])
+      ControlVariables([121, 121, 2, 0, 1])
+      CallCommonEvent([901])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    ControlVariables([16, 16, 0, 2, 1, 5])
+    ConditionalBranch([8, 561])
+      ChangeItems([561, 1, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave Eva a Regular Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([8, 562])
+      ChangeItems([562, 1, 0, 1])
+      ControlVariables([1095, 1095, 1, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave Eva a Tasty Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([8, 563])
+      ChangeItems([563, 1, 0, 1])
+      ControlVariables([1095, 1095, 2, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave Eva an Awful Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 0, 0])
+      ShowTextAttributes(["eva_fc1", 2, 0, 2])
+      ShowText(["\\n<Eva>I am dying of hunger...\nAnything... give me something to eat..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Eva's condition seems bad..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 1, 0])
+      ShowTextAttributes(["eva_fc1", 0, 0, 2])
+      ShowText(["\\n<Eva>I might be a little more hungry...\nHey, let me eat more fish..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Eva's condition is on the way to recovery!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 2, 1])
+      ShowTextAttributes(["eva_fc1", 0, 0, 2])
+      ShowText(["\\n<Eva>Thank you, I'm full♪"])
+      PlayME(["RPG::ME(@name=\"lvup\", @pitch=100, @volume=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Eva has recovered completely!"])
+      ShowTextAttributes(["eva_fc1", 0, 0, 2])
+      ShowText(["\\n<Eva>You're bringing me so much food, living in society is really easy～♪"])
+      ShowText(["Here, I'll give you this!"])
+      CallCommonEvent([834])
+      Wait([60])
+      ControlVariables([121, 121, 2, 0, 1])
+      CallCommonEvent([901])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, -1, 0])
+      ShowTextAttributes(["eva_fc1", 2, 0, 2])
+      ShowText(["\\n<Eva>So hungry... at the limit..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Eva is extremely weak..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, -2, 2])
+      ShowTextAttributes(["eva_fc1", 0, 0, 2])
+      ShowText(["\\n<Eva>Oh, there's a large parfait in front of my eyes!♪\nAnd potatoes as far as the eye can see~♪"])
+      ShowTextAttributes(["eva_fc1", 0, 0, 2])
+      ShowText(["\\n<Eva>Happy~♪ happy~♪\nI don't have to work anymore~♪"])
+      ShowTextAttributes(["eva_fc1", 0, 0, 2])
+      ShowText(["\\n<Eva>Hap...py..."])
+      EraseEvent([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Eva is exhausted..."])
+      Wait([60])
+      ControlVariables([121, 121, 2, 0, 1])
+      CallCommonEvent([901])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 2
+    ControlVariables([16, 16, 0, 2, 1, 5])
+    ConditionalBranch([8, 561])
+      ChangeItems([561, 1, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave Sheep Girl a Regular Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([8, 562])
+      ChangeItems([562, 1, 0, 1])
+      ControlVariables([1095, 1095, 1, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave Sheep Girl a Tasty Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([8, 563])
+      ChangeItems([563, 1, 0, 1])
+      ControlVariables([1095, 1095, 2, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave Sheep Girl an Awful Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    JumpToLabel(["会話"])
+    ConditionalBranch([1, 1095, 0, 0, 0])
+      ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+      ShowText(["\\n<Sheep Girl>Wow～～～～～～\nA snack...I want a snack...."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The Sheep Girl's condition seems to be bad..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 1, 0])
+      ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+      ShowText(["\\n<Sheep Girl>The snack has arrived...\n*crunch crunch crunch*..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The Sheep Girl's condition is heading for recovery!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 2, 1])
+      ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+      ShowText(["\\n<Sheep Girl>*crunch crunch crunch*..."])
+      ShowTextAttributes(["hituzi_fc1", 7, 0, 2])
+      ShowText(["\\n<Sheep Girl>*gulp*..."])
+      ShowTextAttributes(["hituzi_fc1", 1, 0, 2])
+      ShowText(["\\n<Sheep Girl>...So good."])
+      PlayME(["RPG::ME(@name=\"lvup\", @pitch=100, @volume=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The Sheep Girl has completely recovered!"])
+      ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+      ShowText(["\\n<Sheep Girl>To give hanks, I will gith you this~~!"])
+      CallCommonEvent([834])
+      Wait([60])
+      ControlVariables([121, 121, 2, 0, 1])
+      CallCommonEvent([901])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, -1, 0])
+      ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+      ShowText(["\\n<Sheep Girl>The bad fish aren't good snacks.\n\n\nAt least I can drink~~!!"])
+      ShowTextAttributes(["hituzi_fc1", 7, 0, 2])
+      ShowText(["\\n<Sheep Girl>*glug glug glug*..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The Sheep Girl is extremely weak..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, -2, 2])
+      ShowTextAttributes(["hituzi_fc1", 7, 0, 2])
+      ShowText(["\\n<Sheep Girl>*glug glug glug*..."])
+      ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+      ShowText(["\\n<Sheep Girl>Oh, Rabbit\nCome pick me up and pamper me..."])
+      ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+      ShowText(["\\n<Sheep Girl>Cha, rabbit! Where you take me~!!"])
+      ShowText(["You must not cross the river!!"])
+      ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+      ShowText(["\\n<Sheep Girl>Rabbit~! Stop it, Rabbit~!"])
+      ShowTextAttributes(["hituzi_fc1", 3, 0, 2])
+      ShowText(["\\n<Sheep Girl>Stop..."])
+      EraseEvent([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The Sheep Girl is exhausted..."])
+      Wait([60])
+      ControlVariables([121, 121, 2, 0, 1])
+      CallCommonEvent([901])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 3
+    ControlVariables([16, 16, 0, 2, 1, 5])
+    ConditionalBranch([8, 561])
+      ChangeItems([561, 1, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave King of San Ilia a Regular Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([8, 562])
+      ChangeItems([562, 1, 0, 1])
+      ControlVariables([1095, 1095, 1, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave King of San Ilia a Tasty Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([8, 563])
+      ChangeItems([563, 1, 0, 1])
+      ControlVariables([1095, 1095, 2, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave King of San Ilia an Awful Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 0, 0])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>Battery...Low battery...\nI need DHA as soon as possible."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The King of San Ilia seems to be in bad condition."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 1, 0])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>Power recovering...\nIf I ingest a little more DHA..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["King of San Ilia is on his way to recovery!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 2, 1])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>Power fully charged...\nThanks to you, I've completely recovered."])
+      PlayME(["RPG::ME(@name=\"lvup\", @pitch=100, @volume=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The King of San Ilia has completely recovered!"])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>I appreciate your effort.\nPlease take this as thanks."])
+      CallCommonEvent([835])
+      Wait([60])
+      ControlVariables([121, 121, 2, 0, 1])
+      CallCommonEvent([901])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, -1, 0])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>Spare power in use."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["King of San Ilia is extremely weak..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, -2, 2])
+      ShowTextAttributes(["saniria_fc2", 0, 0, 2])
+      ShowText(["\\n<King of San Ilia>In the next life I'll be reborn..."])
+      ShowText(["as an angelic robot."])
+      EraseEvent([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["King of San Ilia's power has been exhausted."])
+      Wait([60])
+      ControlVariables([121, 121, 2, 0, 1])
+      CallCommonEvent([901])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 4
+    ControlVariables([16, 16, 0, 2, 1, 5])
+    ConditionalBranch([8, 561])
+      ChangeItems([561, 1, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave Morrigan a Regular Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([8, 562])
+      ChangeItems([562, 1, 0, 1])
+      ControlVariables([1095, 1095, 1, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave Morrigan a Tasty Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([8, 563])
+      ChangeItems([563, 1, 0, 1])
+      ControlVariables([1095, 1095, 2, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave Morrigan an Awful Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 0, 0])
+      ShowTextAttributes(["morrigan_fc1", 2, 0, 2])
+      ShowText(["\\n<Morrigan>Damn, my body..."])
+      ShowText(["I need food..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Morrigan's condition seems to be bad."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 1, 0])
+      ShowTextAttributes(["morrigan_fc1", 2, 0, 2])
+      ShowText(["\\n<Morrigan>I feel a little better...\nIf you bring me more food, I'll thank you."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Morrigan's condition is on the way to recovery!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 2, 1])
+      ShowTextAttributes(["morrigan_fc1", 0, 0, 2])
+      ShowText(["\\n<Morrigan>Haha, thanks!\nI am full of energy!"])
+      PlayME(["RPG::ME(@name=\"lvup\", @pitch=100, @volume=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Morrigan has completely recovered!"])
+      ShowTextAttributes(["morrigan_fc1", 0, 0, 2])
+      ShowText(["\\n<Morrigan>Come on, take this item as thanks!"])
+      CallCommonEvent([833])
+      ShowTextAttributes(["morrigan_fc1", 1, 0, 2])
+      ShowText(["\\n<Morrigan>Haha, did you think I'd do something else to thank you?\nSorry~!"])
+      ShowTextAttributes(["morrigan_fc1", 0, 0, 2])
+      ShowText(["\\n<Morrigan>...Maybe next time."])
+      Wait([60])
+      ControlVariables([121, 121, 2, 0, 1])
+      CallCommonEvent([901])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, -1, 0])
+      ShowTextAttributes(["morrigan_fc1", 2, 0, 2])
+      ShowText(["\\n<Morrigan>Damn, my body is feeling weak...\nHurry up and get me food..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Morrigan is extremely weak..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, -2, 2])
+      ShowTextAttributes(["morrigan_fc1", 2, 0, 2])
+      ShowText(["\\n<Morrigan>Big sis..."])
+      ShowText(["...help..."])
+      EraseEvent([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Morrigan is exhausted..."])
+      Wait([60])
+      ControlVariables([121, 121, 2, 0, 1])
+      CallCommonEvent([901])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 5
+    ControlVariables([16, 16, 0, 2, 1, 5])
+    ConditionalBranch([8, 561])
+      ChangeItems([561, 1, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave Domaimer a Regular Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([8, 562])
+      ChangeItems([562, 1, 0, 1])
+      ControlVariables([1095, 1095, 1, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave Domaimer a Tasty Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([8, 563])
+      ChangeItems([563, 1, 0, 1])
+      ControlVariables([1095, 1095, 2, 0, 1])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Luka gave Domaimer an Awful Fish..."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 0, 0])
+      ShowTextAttributes(["domeima_fc1", 0, 0, 2])
+      ShowText(["\\n<Domaimer>Wa...ter..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Domaimer's condition seems to be bad."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 1, 0])
+      ShowTextAttributes(["domeima_fc1", 0, 0, 2])
+      ShowText(["\\n<Domaimer>Wa...ter..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Domaimer's condition is heading for recovery!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, 2, 1])
+      ShowTextAttributes(["domeima_fc1", 0, 0, 2])
+      ShowText(["\\n<Domaimer>Wa...ter..."])
+      PlayME(["RPG::ME(@name=\"lvup\", @pitch=100, @volume=100)"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Domaimer has recovered completely!"])
+      ShowTextAttributes(["domeima_fc1", 0, 0, 2])
+      ShowText(["\\n<Domaimer>Instead of this...water..."])
+      CallCommonEvent([834])
+      Wait([60])
+      ControlVariables([121, 121, 2, 0, 1])
+      CallCommonEvent([901])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, -1, 0])
+      ShowTextAttributes(["domeima_fc1", 0, 0, 2])
+      ShowText(["\\n<Domaimer>Wa..."])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Domaimer is extremely weak..."])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1095, 0, -2, 2])
+      PlaySE(["RPG::SE(@name=\"Scream\", @pitch=100, @volume=80)"])
+      ShowTextAttributes(["domeima_fc1", 0, 0, 2])
+      ShowText(["\\n<Domaimer>Gee!!!!!"])
+      EraseEvent([])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Domaimer is exhausted..."])
+      Wait([60])
+      ControlVariables([121, 121, 2, 0, 1])
+      CallCommonEvent([901])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["slime_fc1", 0, 0, 2])
+    ShowText(["\\n<Slime Girl>Eating a delicious fish makes people that are sick even better.\nBut if you eat a bad fish, you might be weakened..."])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["Would you like to go to the next floor?"])
+    ShowChoices([["Not yet", "Proceed to next floor"], 1])
+    When([0, "Not yet"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
+      ExitEventProcessing([])
+      Empty([])
+
+    When([1, "Proceed to next floor"])
+      ChangeItems([561, 1, 0, 1])
+      ChangeItems([562, 1, 0, 1])
+      ChangeItems([563, 1, 0, 1])
+      ControlVariables([121, 121, 2, 0, 1])
+      CallCommonEvent([901])
+      ExitEventProcessing([])
+      Empty([])
+
+    ChoicesEnd([])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([561, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 2
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([562, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 3
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([561, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 4
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([563, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([561, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 2
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([562, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 3
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([563, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([562, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 2
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([561, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 3
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([563, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 4
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([561, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([563, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 2
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([561, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 3
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([562, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([563, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 2
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([561, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 3
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([562, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 4
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlVariables([16, 16, 0, 0, 0])
+    ChangeItems([561, 0, 0, 1])
+    ExitEventProcessing([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ControlSwitches([49, 49, 0])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSwitches([45, 45, 0])
+    CallCommonEvent([903])
+    ControlSwitches([49, 49, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ControlSwitches([49, 49, 0])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSwitches([46, 46, 0])
+    CallCommonEvent([903])
+    ControlSwitches([49, 49, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    FadeoutScreen([])
+    ControlSwitches([41, 41, 1])
+    ControlSwitches([52, 52, 1])
+    ChangeSaveAccess([1])
+    ControlSwitches([61, 61, 1])
+    ControlSwitches([62, 62, 1])
+    ControlSwitches([63, 63, 1])
+    ControlSwitches([64, 64, 1])
+    ControlSwitches([65, 65, 1])
+    ControlSwitches([69, 69, 1])
+    ControlSwitches([70, 70, 1])
+    ControlSwitches([71, 71, 1])
+    ControlSwitches([72, 72, 1])
+    ControlSwitches([54, 54, 1])
+    ControlSwitches([66, 66, 1])
+    ControlSwitches([67, 67, 1])
+    ControlSwitches([68, 68, 1])
+    ControlVariables([131, 131, 0, 0, 0])
+    ControlVariables([121, 121, 0, 0, 0])
+    CallCommonEvent([112])
+    ConditionalBranch([1, 121, 1, 122, 1])
+      ControlVariables([122, 122, 0, 1, 121])
+      Empty([])
+
+    BranchEnd([])
+    TransferPlayer([0, 576, 14, 50, 2, 2])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["With the renewal of the Labyrinth of Chaos, the past labyrinth got erased!"])
+    ConditionalBranch([1, 912, 0, 0, 0])
+      ConditionalBranch([0, 2332, 0])
+        ConditionalBranch([0, 4, 0])
+          Script(["delete_actor_ex(26)"])
+          Empty([])
+        BranchEnd([])
+        ConditionalBranch([0, 5, 0])
+          Script(["delete_actor_ex(5)"])
+          Empty([])
+        BranchEnd([])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Wait([60])
+    FadeinScreen([])
+    EraseEvent([])
+    Empty([])
+
+  Page 1
+    Empty([])

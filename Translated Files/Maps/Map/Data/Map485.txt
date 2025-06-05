@@ -1,0 +1,438 @@
+Display Name = ""
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    Comment(["明かり設定2160500"])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 484, 6, 40, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 484, 4, 20, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 484, 37, 25, 0, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 484, 35, 10, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ChangeMapDisplay([1])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 484, 18, 32, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["shinobitanuki_fc1", 0, 0, 2])
+      ShowText(["【忍狸】"])
+      ShowText(["なんか世界中、大変な事になってるよ。"])
+      ShowText(["みんな、もっと危機感持った方がいいんじゃないかなぁ……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["shinobitanuki_fc1", 0, 0, 2])
+      ShowText(["【忍狸】"])
+      ShowText(["みんな、目一杯だらけてるなぁ……"])
+      ShowText(["まあ、たぬきだし仕方ないよね。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+    ShowText(["【豆狸】"])
+    ShowText(["たぬきの食堂にようこそ！"])
+    ShowText(["化かしたりしないから、安心してね♪"])
+    ShopProcessing([0, 395, 0, 0, false])
+    ShopItem([0, 403, 0, 0])
+    ShopItem([0, 404, 0, 0])
+    ShopItem([0, 408, 0, 0])
+    ShopItem([0, 410, 0, 0])
+    ShopItem([0, 411, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["【豆狸】"])
+      ShowText(["中は、いたって普通なんだよ。"])
+      ShowText(["驚いたでしょ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["【豆狸】"])
+      ShowText(["いらっしゃい。"])
+      ShowText(["流石に官僚たぬき達は、ちゃんと働いてるよ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ConditionalBranch([12, "unlock_level < 4"])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["宝箱には鍵が掛かっている……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([4224, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+    ShowText(["【豆狸】"])
+    ShowText(["妖精の島に行商に行った仲間が、未知の鉱石を見つけたの。"])
+    ShowText(["……と言っても、小指の先ほどの大きさだけどね。"])
+    ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+    ShowText(["【豆狸】"])
+    ShowText(["島の奥には、もっと大量にあるんじゃないかな……"])
+    ShowText(["混沌が凝固したような、とても不気味な石だってさ。"])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    CallCommonEvent([9142])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+    ShowText(["【豆狸】"])
+    ShowText(["たぬきのお店にようこそ！"])
+    ShowText(["扱ってる品が増えたよ～♪"])
+    ShopProcessing([0, 2, 0, 0, false])
+    ShopItem([0, 13, 0, 0])
+    ShopItem([0, 17, 0, 0])
+    ShopItem([0, 21, 0, 0])
+    ShopItem([0, 80, 0, 0])
+    ShopItem([2, 1048, 0, 0])
+    ShopItem([2, 1049, 0, 0])
+    ShopItem([2, 1083, 0, 0])
+    ShopItem([2, 1084, 0, 0])
+    ShopItem([2, 1150, 0, 0])
+    ShopItem([0, 3202, 0, 0])
+    ShopItem([0, 1804, 1, 30000])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["zyoutanuki_fc1", 0, 0, 2])
+      ShowText(["【上狸】"])
+      ShowText(["私は、冷徹に世界情勢を見通しています。"])
+      ShowText(["世界が滅びるというのは、きっとデマですね。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["zyoutanuki_fc1", 0, 0, 2])
+      ShowText(["【上狸】"])
+      ShowText(["ここで目一杯食べた後、外の芝生でゴロゴロします。"])
+      ShowText(["お腹がへったらここに戻って、目一杯食べます。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["【豆狸】"])
+      ShowText(["世界が滅ぶ前に、おなかいっぱい食べておくよ～♪"])
+      ShowText(["むしゃむしゃ、もぐもぐもぐ……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["【豆狸】"])
+      ShowText(["世界が滅ぶ前に、おなかいっぱい食べておくよ～♪"])
+      ShowText(["むしゃむしゃ、もぐもぐもぐ……"])
+      ShowTextAttributes(["mametanuki_fc1", 2, 0, 2])
+      ShowText(["【豆狸】"])
+      ShowText(["……なんて言ってたら、平和な今でも食べクセついちゃって。"])
+      ShowText(["おなかがブヨンブヨンだよ～！！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["【豆狸】"])
+      ShowText(["ヒーロー連合って、いつでも加入受付してるらしいよ。"])
+      ShowText(["あたしも、たぬきヒーローになりたいな～！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["【豆狸】"])
+      ShowText(["あたしは流石に商人だから、サボってばかりはいられないよ。"])
+      ShowText(["次は、サバサまで行ってみようかな～。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["zyoutanuki_fc1", 0, 0, 2])
+      ShowText(["【上狸】"])
+      ShowText(["大きい玉藻様が、ヤマタイを治めていますよ。"])
+      ShowText(["うちの里も傘下に入ったとか、なんかそういう感じです。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["zyoutanuki_fc1", 1, 0, 2])
+      ShowText(["【上狸】"])
+      ShowText(["黒狸様が、十五勇士に数えられているとか！"])
+      ShowText(["まあ、当然の話ですね！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["【官僚狸】"])
+      ShowText(["世界合一後は、市場が大変な事になってるね。"])
+      ShowText(["近場との取引を中心にして、安定を図った方がいいかも……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["【官僚狸】"])
+      ShowText(["みんな働いてないけど、里の財政は大丈夫だよ。"])
+      ShowText(["公的資金の積立金を運用して、十分に黒字出してるから。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1307, 0, 2, 2])
+        ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+        ShowText(["【官僚狸】"])
+        ShowText(["黒狸様と隠神刑部様は、ヤマタイにお出かけしてます。"])
+        ShowText(["なんでも、玉藻様に呼び出されたとか。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1307, 0, 3, 1])
+        ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+        ShowText(["【官僚狸】"])
+        ShowText(["黒狸様と隠神刑部様は、冒険の旅へと出ました。"])
+        ShowText(["あっ、あなた達とご一緒していたんですね。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["mametanuki_fc1", 0, 0, 2])
+      ShowText(["【官僚狸】"])
+      ShowText(["黒狸様が、さぞ迷惑をお掛けしていると存じます。"])
+      ShowText(["どうか、見捨てずお付き合いしてあげてくださいね。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeWeapons([4672, 0, 0, 1, false])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([826, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    CallCommonEvent([9142])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    CallCommonEvent([9142])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    CallCommonEvent([9142])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    CallCommonEvent([9142])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    CallCommonEvent([9142])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    CallCommonEvent([9142])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 30
+Name = "EV030"
+
+  Page 0
+    CallCommonEvent([9142])
+    Empty([])
+
+  Page 1
+    Empty([])

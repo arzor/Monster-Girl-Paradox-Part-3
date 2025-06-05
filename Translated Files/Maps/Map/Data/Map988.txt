@@ -1,0 +1,170 @@
+Display Name = ""
+Parallax Name = "StarlitSky"
+Note = ""
+
+CommonEvent 1
+Name = "グランベリア"
+
+  Page 0
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ControlVariables([11, 11, 0, 0, 1])
+    CallCommonEvent([9106])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["装置は作動している。"])
+    ShowText(["中央の魔法陣に、魔力を供給しているようだ……"])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["装置は作動している。"])
+    ShowText(["中央の魔法陣に、魔力を供給しているようだ……"])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["装置は作動している。"])
+    ShowText(["中央の魔法陣に、魔力を供給しているようだ……"])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["装置は作動している。"])
+    ShowText(["中央の魔法陣に、魔力を供給しているようだ……"])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ConditionalBranch([0, 1005, 0])
+      ShowTextAttributes(["alice_fc5", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ここは……今までの転送先とは異なるようだな。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1006, 0])
+      ShowTextAttributes(["alice_fc1", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ここは……今までの転送先とは異なるようだな。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 1007, 0])
+      ShowTextAttributes(["alice_fc7", 0, 0, 2])
+      ShowText(["【アリス】"])
+      ShowText(["ここは……今までの転送先とは異なるようだな。"])
+      Empty([])
+
+    BranchEnd([])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowTextAttributes(["mob_mahousyouzyo_fc1", 0, 0, 2])
+    ShowText(["【マジカルまりんちゃん】"])
+    ShowText(["このすぐ先に、グランベリアちゃんの気配を感じるよ。"])
+    ShowText(["それに、とても禍々しいオーラも――"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["アガリアレプトがいるのか……"])
+    ShowText(["長かった悪夢の旅も、いよいよ終着点のようだね。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["アガリアレプトの悪夢から、グランベリアを救い出す――"])
+    ShowText(["いよいよ、その時が近付いてきたようだ。"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["これまで見てきた異世界の光景が、何なのかは分からない。"])
+    ShowText(["だが、グランベリアを救い出すために進むのみだ――"])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ControlVariables([11, 11, 0, 0, 0])
+    CallCommonEvent([9106])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ControlVariables([11, 11, 0, 0, 2])
+    CallCommonEvent([9106])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 13
+Name = "アガリアレプト"
+
+  Page 0
+    Empty([])
+
+CommonEvent 14
+Name = "魔法少女グランベリア"
+
+  Page 0
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    FadeoutBGM([1])
+    ShowPicture([5, "sys_white", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    Wait([120])
+    TransferPlayer([0, 940, 27, 26, 2, 2])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 0, 0, 60, true])
+    ErasePicture([5])
+    Empty([])

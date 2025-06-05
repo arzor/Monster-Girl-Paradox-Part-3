@@ -1,0 +1,47 @@
+CommonEvent 7233
+Name = "ジュリア：敗北"
+
+  999([7233])
+  CallCommonEvent([7000])
+  ShowPicture([5, "80_mob_sensi1_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+  ErasePicture([6])
+  ShowTextAttributes(["mob_sensi1_fc1", 0, 0, 2])
+  ShowText(["\\n<Julia>It's my win.\nI'll take the wager then."])
+  ShowText([""])
+  ShowText([""])
+  ConditionalBranch([0, 443, 1])
+    ChangeGold([1, 0, 600])
+    Empty([])
+
+  BranchEnd([])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["Luka hands over 600G!"])
+  ShowTextAttributes(["mob_sensi1_fc1", 0, 0, 2])
+  ShowText(["\\n<Julia>I'll challenge you any time.\nNo matter what, I'll always win..."])
+  ShowText([""])
+  ShowText([""])
+  ConditionalBranch([0, 443, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([0, 2331, 1])
+    ErasePicture([5])
+    ChangeMapDisplay([1])
+    ConditionalBranch([1, 1143, 0, 9, 2])
+      TransferPlayer([0, 21, 65, 41, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 10, 1])
+      ControlVariables([57, 57, 0, 0, 1766])
+      TransferPlayer([0, 766, 65, 41, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+  BranchEnd([])
+  ExitEventProcessing([])
+  Empty([])

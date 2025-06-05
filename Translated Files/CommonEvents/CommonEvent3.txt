@@ -1,0 +1,55 @@
+CommonEvent 3
+Name = "Pocket Monster Lord's Castle"
+
+  999([3])
+  ConditionalBranch([1, 1143, 0, 9, 1])
+    ConditionalBranch([1, 1143, 0, 17, 2])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([1, 1143, 0, 18, 1])
+    ConditionalBranch([1, 1143, 0, 20, 2])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["The Pocket Castle is being eroded by chaos..."])
+      ShowText(["It can't be used now!"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([0, 100, 0])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["You can't use that here!"])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([12, "!$game_player.normal_walk?"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["You can only use this on land!"])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([12, "$game_map.field?"])
+    ControlVariables([21, 21, 0, 3, 7, 0, 0])
+    ControlVariables([22, 22, 0, 3, 5, -1, 0])
+    ControlVariables([23, 23, 0, 3, 5, -1, 1])
+    PlaySE(["RPG::SE(@name=\"Magic2\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 126, 15, 14, 2, 1])
+    Empty([])
+
+  Else([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["You can't use that here!"])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  Empty([])

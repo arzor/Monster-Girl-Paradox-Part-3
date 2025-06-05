@@ -1,0 +1,48 @@
+CommonEvent 7443
+Name = "ジーン：敗北"
+
+  999([7363])
+  CallCommonEvent([7000])
+  ShowPicture([5, "80_mob_maid3_st01", 0, 0, 0, 0, 100, 100, 255, 0])
+  ErasePicture([6])
+  ShowTextAttributes(["mob_maid3_fc1", 0, 0, 2])
+  ShowText(["【ジーン】"])
+  ShowText(["これで、私の勝ちね。"])
+  ShowText(["悪いけど、賭け金の5000Gを頂くわ。"])
+  ConditionalBranch([0, 443, 1])
+    ChangeGold([1, 0, 5000])
+    Empty([])
+
+  BranchEnd([])
+  ShowTextAttributes(["", 0, 0, 2])
+  ShowText(["ルカは 5000G 支払った！"])
+  ShowTextAttributes(["mob_maid3_fc1", 0, 0, 2])
+  ShowText(["【ジーン】"])
+  ShowText(["ふふっ、また搾ってほしくなったらいらっしゃい。"])
+  ShowText(["君のミルク、何度でも搾り出してあげるから……"])
+  ErasePicture([5])
+  ConditionalBranch([0, 443, 0])
+    ExitEventProcessing([])
+    Empty([])
+
+  BranchEnd([])
+  ConditionalBranch([0, 2331, 1])
+    ChangeMapDisplay([1])
+    ConditionalBranch([1, 1143, 0, 9, 2])
+      ControlVariables([57, 57, 0, 0, 1886])
+      TransferPlayer([0, 886, 55, 11, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 10, 1])
+      ControlVariables([57, 57, 0, 0, 1408])
+      TransferPlayer([0, 408, 47, 14, 2, 0])
+      Empty([])
+
+    BranchEnd([])
+    ChangePlayerFollowers([0])
+    Empty([])
+
+  BranchEnd([])
+  ExitEventProcessing([])
+  Empty([])

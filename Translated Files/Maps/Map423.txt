@@ -1,0 +1,300 @@
+Display Name = "Tartarus (Western Gold)"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 428, 13, 1, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 116, 137, 2, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 116, 137, 2, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 116, 137, 2, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 116, 137, 2, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 116, 137, 2, 0])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 116, 137, 2, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 2, 116, 137, 2, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    GatherFollowers([])
+    ConditionalBranch([0, 6, 0])
+      ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+      ShowText(["\\n<Sonya>What's this fire doing here?"])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>What's this fire doing here?"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>I suppose anyone without the ability to manipulate fire wouldn't be able to get past it. It's obvious whose work this is."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+      ShowText(["\\n<Ilias>I suppose anyone without the ability to manipulate fire wouldn't be able to get past it. It's as clear as day whose work this is."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 72, 0])
+      ShowTextAttributes(["phoenix_fc1", 3, 0, 2])
+      ShowText(["\\n<Mini>Is it my turn to be useful?\n...Nope, I'm useless."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1001, 0, 28, 1])
+      ShowTextAttributes(["salamander_fc1", 0, 0, 2])
+      ShowText(["\\n<Salamander>Oh, were you referring to me?\nHmph, this is child's play."])
+      PlaySE(["RPG::SE(@name=\"Fire2\", @pitch=100, @volume=80)"])
+      ControlSwitches([2159, 2159, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["Salamander extinguishes the flames blocking our path!"])
+      SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc6", 1, 0, 2])
+        ShowText(["\\n<Alice>All right, now that we've removed that hindrance, you can show yourself!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>All right, we've removed that hindrance!\nI know you're there, so show yourself!"])
+        Empty([])
+      BranchEnd([])
+      PlayBGM(["RPG::BGM(@name=\"shirousagi\", @volume=100, @pitch=100)"])
+      ControlSwitches([2029, 2029, 0])
+      PlaySE(["RPG::SE(@name=\"mon_tamamo2\", @pitch=100, @volume=80)"])
+      SetMoveRoute([11, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=14, @parameters=[0, 0])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, 0])"])
+      Wait([15])
+      ShowPicture([5, "80_sirousagi_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+      MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 60, true])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["\\n<White Rabbit>Ta-dah!"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc1", 5, 0, 2])
+        ShowText(["\\n<Sonya>Of course this was your doing!"])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>Of course this was your doing!"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["\\n<White Rabbit>Yeeeep! ♪"])
+      ShowText(["And now you have the four spirits, as history dictates."])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["\\n<White Rabbit>You gathered the spirits thanks to the letter Marcellus left you, which meant that you weren't in need of my guidance."])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["\\n<White Rabbit>Could my entire existence be replaced with a notebook? Should I simply write down everything you need to do from this point on?"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>That would certainly be a big help to us.\nSo your goal is to guide us along the correct history?"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>If possible, that would be appreciated.\nSo your goal is to guide us along the correct history?"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["\\n<White Rabbit>Sure, that's the gist of it."])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["\\n<White Rabbit>I believe you already know that the more this world deviates from the correct history, the faster chaos spreads."])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["\\n<White Rabbit>Which is why everyone is keeping their various schemes as close to the correct history as they can."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>Everyone?\nYou mean my mother, the Lilith Sisters, and even the Seraphim?"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>Everyone?\nYou mean the Monster Lord, the Lilith Sisters, and even the Seraphim?"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["\\n<White Rabbit>...That's right.\nTheir goals may differ, but they're trying to not disturb history too much."])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["\\n<White Rabbit>Hmm? Feels like someone is hot on my trail...\nChuuni glasses boy? The half-mecha father?\nBoth immediate family members of yours."])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["\\n<White Rabbit>They appear to consider me an enemy, but honestly, they can kill as many of me as they want, and it won't make any difference."])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["\\n<White Rabbit>I'm part of the natural order given form, not a person. Killing me is like trying to kill the Pythagorean theorem."])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["\\n<White Rabbit>No matter how much you try to break a right triangle, you can't change the fact that the square of the hypotenuse is equal to the sum of the squares of the other sides."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>What kind of useless, half-baked explanation is that?!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>Part of the natural order given form, not a person...\nSo you're like a general concept with a will of its own?"])
+        Empty([])
+      BranchEnd([])
+      ShowTextAttributes(["sirousagi_fc1", 0, 0, 2])
+      ShowText(["\\n<White Rabbit>Welp, I like my head where it is right now, so I'm outta here! See you next tiiiiime! ♪"])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc6", 0, 0, 2])
+        ShowText(["\\n<Alice>Hey, wait!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>Don't you dare--"])
+        Empty([])
+      BranchEnd([])
+      ErasePicture([5])
+      Wait([60])
+      PlaySE(["RPG::SE(@name=\"mon_tamamo2\", @pitch=100, @volume=80)"])
+      SetMoveRoute([11, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=14, @parameters=[0, 0])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+      Unnamed(["RPG::MoveCommand(@code=14, @parameters=[0, 0])"])
+      ControlSwitches([2029, 2029, 1])
+      PlayBGM(["RPG::BGM(@name=\"ooana\", @volume=100, @pitch=100)"])
+      ConditionalBranch([0, 6, 0])
+        ShowTextAttributes(["sonia_fc2", 2, 0, 2])
+        ShowText(["\\n<Sonya>She's gone..."])
+        Empty([])
+      Else([])
+        ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+        ShowText(["\\n<Luka>She's gone..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 2, 0, 2])
+        ShowText(["\\n<Alice>Hmph, I don't think we'll ever get an explanation out of her. Anyway, let's descend into the rift!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+        ShowText(["\\n<Ilias>We do not have time to waste on that thing anyway. Let's head down into the rift!"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 41, 0])
+        ShowTextAttributes(["stein_fc2", 1, 0, 2])
+        ShowText(["\\n<Promestein>I'm giddy at the prospects of what we might find down there♪"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([4, 79, 0])
+        ShowTextAttributes(["nuruko_fc1", 0, 0, 2])
+        ShowText(["\\n<Nuruko>Kyu kyuu!!"])
+        Empty([])
+      BranchEnd([])
+      ExitEventProcessing([])
+      Empty([])
+
+    Else([])
+      ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+      ShowText(["\\n<Luka>Someone who manipulates fire? The fire spirit Salamander? It seems we'll have to form a contract with her before proceeding."])
+      ConditionalBranch([0, 4, 0])
+        ShowTextAttributes(["alice_fc5", 3, 0, 2])
+        ShowText(["\\n<Alice>Is this part of that damn rabbit's guidance? I don't like it..."])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 5, 0])
+        ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
+        ShowText(["\\n<Ilias>Guiding us again, White Rabbit?\nI don't like this one bit..."])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ControlSelfSwitch(["A", 0])
+    ConditionalBranch([0, 4, 0])
+      ShowTextAttributes(["alice_fc5", 2, 0, 2])
+      ShowText(["\\n<Alice>We finally made it...\nNow let's start investigating."])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([0, 5, 0])
+      ShowTextAttributes(["iriasu_fc4", 0, 0, 2])
+      ShowText(["\\n<Ilias>So we finally made it...\nAll right, let's explore this rift."])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["\\n<Luka>I wonder what kind of parallel world this one connects to... We might run into my father again, too..."])
+    ConditionalBranch([4, 185, 0])
+      ShowTextAttributes(["radio_fc1", 0, 0, 2])
+      ShowText(["\\n<Radio>Let's go-go-go..."])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    Empty([])

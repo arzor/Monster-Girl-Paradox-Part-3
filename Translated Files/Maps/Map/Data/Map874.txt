@@ -1,0 +1,514 @@
+Display Name = "ヤマタイ村 B1F"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    TintScreen(["Tone(@red=0.0, @green=0.0, @blue=0.0, @gray=0.0)", 1, false])
+    EraseEvent([])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【機械音声】"])
+    ShowText(["どの階に移動しますか？"])
+    Script(["unlimited_choices(11, [\"1階\", \"2階\", "])
+    ScriptMore(["\"3階\",\"4階\",\"B1階\"])"])
+    ConditionalBranch([1, 11, 0, 0, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【機械音声】"])
+      ShowText(["1階に移動します……"])
+      PlaySE(["RPG::SE(@name=\"Autodoor\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 852, 26, 24, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 1, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【機械音声】"])
+      ShowText(["2階に移動します……"])
+      PlaySE(["RPG::SE(@name=\"Autodoor\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 854, 26, 24, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 2, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【機械音声】"])
+      ShowText(["3階に移動します……"])
+      PlaySE(["RPG::SE(@name=\"Autodoor\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 865, 26, 24, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 3, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【機械音声】"])
+      ShowText(["4階に移動します……"])
+      PlaySE(["RPG::SE(@name=\"Autodoor\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 871, 26, 24, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 11, 0, 4, 0])
+      ShowTextAttributes(["", 0, 0, 2])
+      ShowText(["【機械音声】"])
+      ShowText(["B1階に移動します……"])
+      PlaySE(["RPG::SE(@name=\"Autodoor\", @pitch=100, @volume=80)"])
+      TransferPlayer([0, 874, 26, 24, 8, 0])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 876, 46, 9, 0, 0])
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 876, 46, 9, 0, 0])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 876, 46, 9, 0, 0])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["狐の者どもは、繊細よのう。"])
+      ShowText(["冷徹にならねば、技術の発展はないぞ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["この書類もダメじゃ、破棄じゃな……"])
+      ShowText(["い、隠蔽！？　なんの事じゃ……！？"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["【エレベーターガール】"])
+    ShowText(["ヤマタイへようこそ、何階へ行かれますか？"])
+    ShowText(["なお、お客様自身がパネルをご操作下さい。"])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["イリアス神殿に、女神子飼いの技術者集団がいたという。"])
+      ShowText(["連中は今、どこで何をしておるのかのう……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["書類を焼いた後、次に焼かれるのは関係者だったり……"])
+      ShowText(["さ、流石の玉藻様もそこまではされぬよな？"])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["……夜逃げの準備はしておくか。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["バイオテクノロジーは、天界よりも遅れておる。"])
+      ShowText(["だが、サイバー技術はこちらの方が上だぞ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["まったく、通達が急じゃわい。"])
+      ShowText(["カテゴリー4に属する記録を全て破棄せよなどと……"])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["いや、何でもない。"])
+      ShowText(["ちょっとした事務作業の話じゃ……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["onmyougobi_fc1", 2, 0, 2])
+      ShowText(["【陰陽五尾】"])
+      ShowText(["捕虜を使った実験は、気が乗らんかった……"])
+      ShowText(["なくなって良かったわ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["onmyougobi_fc1", 2, 0, 2])
+      ShowText(["【陰陽五尾】"])
+      ShowText(["な、何の用じゃ？"])
+      ShowText(["何も怪しいことはしておらんぞ……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["caitsith_fc1", 0, 0, 2])
+      ShowText(["【ケット・シー】"])
+      ShowText(["ホンワカパッパー♪"])
+      ShowText(["ホンワカパッパー♪"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["caitsith_fc1", 0, 0, 2])
+      ShowText(["【ケット・シー】"])
+      ShowText(["双子姉妹ニ、マタ会イタイナ。"])
+      ShowText(["頭、ナデナデシテモライタイナー。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["この町は眠らない……"])
+      ShowText(["つまり、この電力施設にも休みはないという事じゃ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["日々の消費電力は、上がる一方じゃ。"])
+      ShowText(["発電計画の練り直しも、急務じゃのう。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+    ShowText(["【陰陽蠍】"])
+    ShowText(["ここは電力施設よ。"])
+    ShowText(["大事故を起こしたくなかったら、機器に触るでないぞ。"])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ShowTextAttributes(["caitsith_fc1", 0, 0, 2])
+    ShowText(["【ケット・シー】"])
+    ShowText(["機関チェック、異常ナシダゾー！！"])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    ShowTextAttributes(["caitsith_fc1", 0, 0, 2])
+    ShowText(["【ケット・シー】"])
+    ShowText(["今日モ……ヨシ！"])
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["世界合一以来、科学部門は縮小する一方よ。"])
+      ShowText(["危機的状況ゆえ、支出を絞るのは理解できるが……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["サン・イリアから、優秀な機械技師が流れてきておる。"])
+      ShowText(["もちろん、問題人物は門前払いじゃがな。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([842, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["このシーラカンスも、処分せねばならんな。"])
+      ShowText(["……いっそ、活け作りにして喰ってしまうか。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["今度、近くに水族館を作る話が持ち上がってな。"])
+      ShowText(["このシーラカンスも、そちらに引っ越す事になりそうじゃ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([840, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([851, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["caitsith_fc1", 0, 0, 2])
+      ShowText(["【ケット・シー】"])
+      ShowText(["ゴロニャーゴ！"])
+      ShowText(["実験サポートスルゾー！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["caitsith_fc1", 0, 0, 2])
+      ShowText(["【ケット・シー】"])
+      ShowText(["ゴロニャーゴ！　実験サポートスルゾー！"])
+      ShowText(["デモ、新入リノ面接ハ業務外ダゾー。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["caitsith_fc1", 0, 0, 2])
+      ShowText(["【ケット・シー】"])
+      ShowText(["ココモ、人ガ減ッタナ……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["caitsith_fc1", 0, 0, 2])
+      ShowText(["【ケット・シー】"])
+      ShowText(["平和ニナッテ、予算ガ増エルトイイナ！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["onmyougobi_fc1", 0, 0, 2])
+      ShowText(["【陰陽五尾】"])
+      ShowText(["ここで勤務できるのは、一部のエリートのみ。"])
+      ShowText(["狐族の者と、陰陽蠍がほとんどよ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["onmyougobi_fc1", 0, 0, 2])
+      ShowText(["【陰陽五尾】"])
+      ShowText(["えっ、みんな書類を焼いている……？"])
+      ShowText(["それは……ほら、記録のデジタル化じゃ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 26
+Name = "EV026"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["サバサにあった、大規模なクローン施設が廃棄されたという。"])
+      ShowText(["勿体ない事をするものよ……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["この記録もアウトじゃな……焼却処分じゃ。"])
+      ShowText(["これも、平和な世には出せぬのう……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 27
+Name = "EV027"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["陰陽蠍は、みな冷酷でのう。"])
+      ShowText(["それが、ここで狐を差し置いて幅を利かせておる理由よ。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["書類破棄……おっと、書類整理が忙しいわい。"])
+      ShowText(["別にやましい事はしておらんぞ。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 28
+Name = "EV028"
+
+  Page 0
+    ShowTextAttributes(["oiranrokubi_fc1", 2, 0, 2])
+    ShowText(["【花魁六尾】"])
+    ShowText(["好奇心旺盛な二尾の子達も、ここには来ん。"])
+    ShowText(["忌まわしい施設である事、察しておるのだろうな……"])
+    Empty([])
+
+CommonEvent 29
+Name = "EV029"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["ここのゴミは危険物よ。"])
+      ShowText(["決して漁るでないぞ……"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["onmyosasori_fc1", 0, 0, 2])
+      ShowText(["【陰陽蠍】"])
+      ShowText(["今、書類を燃やすのに忙しい。"])
+      ShowText(["用があるなら、後にしてくれんか……？"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])

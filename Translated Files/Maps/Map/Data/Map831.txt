@@ -1,0 +1,666 @@
+Display Name = "海軍本部"
+Parallax Name = ""
+Note = ""
+
+CommonEvent 1
+Name = "EV001"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 336, 240, 0, 0])
+    Empty([])
+
+CommonEvent 2
+Name = "EV002"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Earth4\", @pitch=100, @volume=80)"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=37, @parameters=[])"])
+    SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=true, @wait=true, @list=[\"RPG::MoveCommand(@code=12, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=12, @parameters=[])"])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 462, 19, 56, 0, 0])
+    Empty([])
+
+CommonEvent 3
+Name = "EV003"
+
+  Page 0
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["三世界合一以来、初めて訪れた海軍本部は――"])
+    ShowText(["水位の上昇により、なんと港の大半が水没していた。"])
+    ConditionalBranch([1, 1313, 0, 0, 0])
+      ConditionalBranch([0, 1005, 0])
+        ShowTextAttributes(["alice_fc6", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["これは……いったい何があったというのだ？"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1006, 0])
+        ShowTextAttributes(["alice_fc2", 1, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["これは……いったい何があったというのだ？"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1007, 0])
+        ShowTextAttributes(["alice_fc8", 1, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["これは……いったい何があったというのだ？"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1313, 0, 1, 0])
+      ConditionalBranch([0, 1005, 0])
+        ShowTextAttributes(["alice_fc5", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["世界の海位が上昇しているという噂だったが――"])
+        ShowText(["ここまで危機的状況だとはな。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1006, 0])
+        ShowTextAttributes(["alice_fc1", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["世界の海位が上昇しているという噂だったが――"])
+        ShowText(["ここまで危機的状況だとはな。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([0, 1007, 0])
+        ShowTextAttributes(["alice_fc7", 0, 0, 2])
+        ShowText(["【アリス】"])
+        ShowText(["世界の海位が上昇しているという噂だったが――"])
+        ShowText(["ここまで危機的状況だとはな。"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 21, 0])
+      ShowTextAttributes(["tamamo_fc1", 3, 0, 2])
+      ShowText(["【たまも】"])
+      ShowText(["ウチも長く生きてきたが……"])
+      ShowText(["このような現象は、初めて見るのう。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 22, 0])
+      ShowTextAttributes(["tamamo_fc2", 2, 0, 2])
+      ShowText(["【玉藻】"])
+      ShowText(["ウチも長く生きてきたが……"])
+      ShowText(["このような現象は、初めて見るのう。"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 19, 0])
+      ShowTextAttributes(["arumaeruma_fc2", 2, 0, 2])
+      ShowText(["【アルマエルマ】"])
+      ShowText(["このままじゃ……"])
+      ShowText(["大陸全部、海に沈んじゃうんじゃない？"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([4, 16, 0])
+      ShowTextAttributes(["granberia_fc4", 2, 0, 2])
+      ShowText(["【グランベリア】"])
+      ShowText(["増大する海位が相手では……"])
+      ShowText(["我が剣も、さすがに無力か。"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
+    ShowText(["【イリアス】"])
+    ShowText(["詳しい話を聞く必要がありますね。"])
+    ShowText(["海軍大将の元に行きましょう。"])
+    ControlVariables([1313, 1313, 0, 0, 2])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 4
+Name = "EV004"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1313, 0, 4, 2])
+        ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+        ShowText(["【たつのこ海兵】"])
+        ShowText(["もう、こんなに水位が上がって……"])
+        ShowText(["このままでは……"])
+        ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+        ShowText(["【たつのこ海兵】"])
+        ShowText(["……どうなるのですか？"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1313, 0, 5, 1])
+        ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+        ShowText(["【たつのこ海兵】"])
+        ShowText(["こんなに水位が上がってしまいました。"])
+        ShowText(["いずれ、土木工事でこき使われるのです……"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["平和の到来は嬉しいのですが、"])
+      ShowText(["これから本部復旧の大工事でこき使われると思うと……"])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["……半年ほど、おなかが痛くなるので休みます。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 5
+Name = "EV005"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1313, 0, 4, 2])
+        ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+        ShowText(["【たつのこ海兵】"])
+        ShowText(["海軍本部へようこそ……"])
+        ShowText(["この建物も、水没の危機にあるのです。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1313, 0, 5, 1])
+        ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+        ShowText(["【たつのこ海兵】"])
+        ShowText(["海軍本部へようこそ！"])
+        ShowText(["水位の上昇は止まり、これ以上は水没しないのです！"])
+        ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+        ShowText(["【たつのこ海兵】"])
+        ShowText(["でも、増えた水かさが減る事はないらしいです……"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["あっ、大勇者ルカ様なのです！"])
+      ShowText(["海軍本部へようこそ！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 6
+Name = "EV006"
+
+  Page 0
+    ConditionalBranch([1, 1313, 0, 4, 2])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["いっそ、沈んでしまってもいいのでは？"])
+      ShowText(["あたし達は泳げますし、何の問題もないのです！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1313, 0, 5, 1])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["大勇者ルカが現れたのです！"])
+      ShowText(["サインが欲しいのです！"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 7
+Name = "EV007"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 336, 240, 0, 0])
+    Empty([])
+
+CommonEvent 8
+Name = "EV008"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 336, 240, 0, 0])
+    Empty([])
+
+CommonEvent 9
+Name = "EV009"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 336, 240, 0, 0])
+    Empty([])
+
+CommonEvent 10
+Name = "EV010"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 287, 336, 240, 0, 0])
+    Empty([])
+
+CommonEvent 11
+Name = "EV011"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+    ShowText(["【たつのこ海兵】"])
+    ShowText(["わぁっ、本物の大勇者ルカなのです！"])
+    ShowText(["どうそ、お入り下さい！"])
+    Empty([])
+
+CommonEvent 12
+Name = "EV012"
+
+  Page 0
+    ConditionalBranch([1, 1313, 0, 4, 2])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["さすがに、居眠りできる情勢ではないのです。"])
+      ShowText(["目薬を差して、おめめパッチリなのです！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1313, 0, 5, 1])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["ＺＺＺ……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 13
+Name = "EV013"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1313, 0, 4, 2])
+        ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+        ShowText(["【たつのこ海兵】"])
+        ShowText(["世界中で、海面の水位が上昇しているのです。"])
+        ShowText(["各地の港町など、壊滅的被害も出ているとか……"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1313, 0, 5, 1])
+        ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+        ShowText(["【たつのこ海兵】"])
+        ShowText(["大勇者ルカの活躍で、海面の水位上昇が止まったのです！"])
+        ShowText(["このままでは、世界全体が海に沈んでいたのです！"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["ついに、世界が平和になったのです！"])
+      ShowText(["これで、我々の仕事も――"])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["……ぜんぜん減っていないのです。"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 14
+Name = "EV014"
+
+  Page 0
+    ConditionalBranch([1, 1362, 0, 8, 2])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["これは、幽霊船行きの船なのです。"])
+      ShowText(["討伐の任を受けた、北の勇者のチャーター船ですが……"])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["その北の勇者が、なかなか来てくれないのです……"])
+      ShowText(["緊急任務が次々に入って、とても忙しいのだとか。"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1362, 0, 9, 0])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["無理なものは無理なのです。"])
+      ShowText(["ここは役所、したっぱが勝手に許可なんて出せないのです……"])
+      ExitEventProcessing([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1362, 0, 10, 1])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["幽霊船に行くのですか？"])
+      ShowChoices([["出航する", "出航しない"], 2])
+      When([0, "出航する"])
+        FadeoutScreen([])
+        PlaySE(["RPG::SE(@name=\"Water1\", @pitch=100, @volume=80)"])
+        Wait([60])
+        ControlSwitches([5476, 5476, 0])
+        ControlSwitches([100, 100, 0])
+        ChangeMapDisplay([0])
+        TransferPlayer([0, 428, 5, 29, 6, 0])
+        FadeinScreen([])
+        Empty([])
+      When([1, "出航しない"])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 15
+Name = "EV015"
+
+  Page 0
+    Empty([])
+
+CommonEvent 16
+Name = "EV016"
+
+  Page 0
+    ConditionalBranch([1, 1143, 0, 24, 2])
+      ConditionalBranch([1, 1362, 0, 10, 2])
+        ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+        ShowText(["【たつのこ海兵】"])
+        ShowText(["幽霊船が沿岸に出没し、人々を不安がらせているのです。"])
+        ShowText(["討伐するために抜擢されたのは、北の勇者！"])
+        ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+        ShowText(["【たつのこ海兵】"])
+        ShowText(["……北の勇者って、何者なのですか？"])
+        ShowText(["そんなマイナー勇者より、大勇者ルカが来てほしかったです。"])
+        Empty([])
+      BranchEnd([])
+      ConditionalBranch([1, 1362, 0, 11, 1])
+        ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+        ShowText(["【たつのこ海兵】"])
+        ShowText(["幽霊船が沿岸に出没し、人々を不安がらせているのです。"])
+        ShowText(["討伐するために抜擢されたのは、北の勇者！"])
+        ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+        ShowText(["【たつのこ海兵】"])
+        ShowText(["でも、結局は大勇者ルカが幽霊船の主を討伐したとか。"])
+        ShowText(["北の勇者はいい匂いをさせてただけで、役に立たず……"])
+        Empty([])
+      BranchEnd([])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1143, 0, 25, 1])
+      ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["この前、仕事で幽霊船に乗ったのです……"])
+      ShowText(["怖かったです……"])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 17
+Name = "EV017"
+
+  Page 0
+    ShowTextAttributes(["mob_kisi_fc1", 1, 0, 2])
+    ShowText(["【コンスタンツェ】"])
+    ShowText(["来たか……だが、少々雲行きが怪しくなってきた。"])
+    ShowText(["お前達を船に乗せてもらえないか、交渉中なのだが。"])
+    SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["【たつのこ海兵】"])
+    ShowText(["名簿に載ってる討伐隊メンバーは、コンスタンツェだけ。"])
+    ShowText(["書類に載ってない人は、討伐船には乗せられません。"])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["【たつのこ海兵】"])
+    ShowText(["ここは役所なので、そういう規則は厳しいのです。"])
+    ShowText(["どれだけ頼まれても、無理なものは無理なのです。"])
+    ShowTextAttributes(["mob_kisi_fc1", 1, 0, 2])
+    ShowText(["【コンスタンツェ】"])
+    ShowText(["そこを、何とか出来ないだろうか……"])
+    ShowTextAttributes(["tatunoko_k_fc1", 2, 0, 2])
+    ShowText(["【たつのこ海兵】"])
+    ShowText(["ダメなのです。"])
+    ShowText(["規則を破れば、海軍大将に怒られるのです。"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["それじゃあ、仕方ないな。"])
+    ShowText(["僕達は、自前の船があるし――"])
+    ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+    ShowText(["【たつのこ海兵】"])
+    ShowText(["あっ、大勇者ルカなのです！"])
+    ShowText(["ワールドドロウンの一件、お疲れ様でした！！"])
+    ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+    ShowText(["【たつのこ海兵】"])
+    ShowText(["もしかして、同乗する助っ人とはルカ達なのですか？"])
+    ShowText(["それなら、全然ＯＫなのです！"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["えっ、いいの？　規則があるんじゃ……"])
+    ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+    ShowText(["【たつのこ海兵】"])
+    ShowText(["ルカなら大丈夫、海軍大将も大歓迎ですよ。"])
+    ShowText(["はい、どうぞどうぞ……"])
+    ShowTextAttributes(["mob_kisi_fc1", 1, 0, 2])
+    ShowText(["【コンスタンツェ】"])
+    ShowText(["……………………"])
+    ShowTextAttributes(["ruka_fc1", 0, 0, 2])
+    ShowText(["【ルカ】"])
+    ShowText(["そ、そういうわけで……僕達も乗っていいんだって。"])
+    ShowText(["それじゃあ、行こうか。"])
+    ShowTextAttributes(["mob_kisi_fc1", 1, 0, 2])
+    ShowText(["【コンスタンツェ】"])
+    ShowText(["海軍にも、コネがあったのだな……"])
+    ShowText(["しかも、大将とも親しいとは……"])
+    ConditionalBranch([4, 205, 0])
+      ShowTextAttributes(["levia_fc1", 0, 0, 2])
+      ShowText(["【リヴィア】"])
+      ShowText(["挨拶が遅れたが……"])
+      ShowText(["私が海軍大将リヴァイアサンだ。"])
+      ShowTextAttributes(["mob_kisi_fc1", 1, 0, 2])
+      ShowText(["【コンスタンツェ】"])
+      ShowText(["あっ、大将本人も仲間で……"])
+      ShowText(["うん……"])
+      Empty([])
+
+    BranchEnd([])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["こうして僕達は、海軍の船へと乗り込むのだった。"])
+    ShowText(["さあ、幽霊船へと向かおう――"])
+    FadeoutBGM([1])
+    FadeoutScreen([])
+    PlaySE(["RPG::SE(@name=\"Water1\", @pitch=100, @volume=80)"])
+    Wait([120])
+    ChangeTransparency([0])
+    TransferPlayer([0, 177, 0, 0, 0, 2])
+    FadeinScreen([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 18
+Name = "EV018"
+
+  Page 0
+    PlaySE(["RPG::SE(@name=\"Item1\", @pitch=100, @volume=80)"])
+    ControlSelfSwitch(["A", 0])
+    ChangeItems([911, 0, 0, 1])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 19
+Name = "EV019"
+
+  Page 0
+    ChangeMapDisplay([0])
+    PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
+    TransferPlayer([0, 832, 13, 20, 8, 0])
+    Empty([])
+
+CommonEvent 20
+Name = "EV020"
+
+  Page 0
+    Empty([])
+
+CommonEvent 21
+Name = "EV021"
+
+  Page 0
+    ConditionalBranch([1, 1313, 0, 3, 2])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["大きな作戦に向けて、準備中なのです！"])
+      Empty([])
+
+    BranchEnd([])
+    ConditionalBranch([1, 1313, 0, 4, 1])
+      ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+      ShowText(["【たつのこ海兵】"])
+      ShowText(["呪われた島に行くのですか？"])
+      ShowChoices([["出航する", "出航しない"], 2])
+      When([0, "出航する"])
+        FadeoutScreen([])
+        PlaySE(["RPG::SE(@name=\"Water1\", @pitch=100, @volume=80)"])
+        Wait([60])
+        ChangeMapDisplay([0])
+        TransferPlayer([0, 832, 13, 20, 8, 0])
+        FadeinScreen([])
+        Empty([])
+      When([1, "出航しない"])
+        ExitEventProcessing([])
+        Empty([])
+      ChoicesEnd([])
+      Empty([])
+
+    BranchEnd([])
+    Empty([])
+
+CommonEvent 22
+Name = "EV022"
+
+  Page 0
+    Empty([])
+
+CommonEvent 23
+Name = "EV023"
+
+  Page 0
+    Empty([])
+
+CommonEvent 24
+Name = "EV024"
+
+  Page 0
+    ShowPicture([5, "80_umiusi_k_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+    ShowText(["【ウミウシ海兵】"])
+    ShowText(["勇者ルカご一行ですね？"])
+    ShowText(["あなた達をお助けせよと、大将より命令が届いています。"])
+    ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+    ShowText(["【ウミウシ海兵】"])
+    ShowText(["ねぇ、ちょっと！　そこで歌ってるたつのこちゃ～ん！"])
+    ShowText(["一緒に来てくれませんか～！？"])
+    ErasePicture([5])
+    Wait([60])
+    SetMoveRoute([25, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
+    Unnamed(["RPG::MoveCommand(@code=19, @parameters=[])"])
+    Wait([60])
+    ShowPicture([5, "80_tatunoko_k_st02", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+    ShowText(["【たつこ】"])
+    ShowText(["えっ？　どこに行くのですか？"])
+    ShowText(["よく分からないけど、一緒に行くのです！"])
+    ErasePicture([5])
+    SetMoveRoute([25, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=39, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
+    Unnamed(["RPG::MoveCommand(@code=39, @parameters=[])"])
+    Script(["add_actor_ex(203)"])
+    PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["たつこが仲間に加わった！"])
+    Wait([60])
+    ShowPicture([5, "80_umiusi_k_st01", 0, 0, 0, 0, 100, 100, 0, 0])
+    MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
+    ShowTextAttributes(["umiusi_k_fc1", 0, 0, 2])
+    ShowText(["【ステイシー】"])
+    ShowText(["私も仲間として同行しますね。"])
+    ShowText(["ふつつかものですが、よろしくお願いします。"])
+    ErasePicture([5])
+    Script(["add_actor_ex(204)"])
+    PlayME(["RPG::ME(@name=\"fanfale\", @pitch=100, @volume=100)"])
+    ShowTextAttributes(["", 0, 0, 2])
+    ShowText(["ステイシーが仲間に加わった！"])
+    Wait([60])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 25
+Name = "EV025"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 1, 0, 2])
+    ShowText(["【たつのこ海兵】"])
+    ShowText(["うーみーはー♪　ひろいーなー♪"])
+    Script(["actor_label_jump"])
+    ExitEventProcessing([])
+    Label(["59"])
+    ShowTextAttributes(["mdg_fc1", 0, 0, 2])
+    ShowText(["【ラゴラ】"])
+    ShowText(["休憩中かしら？"])
+    ShowText(["一緒に歌いたいわね……"])
+    ExitEventProcessing([])
+    Label(["155"])
+    ShowTextAttributes(["saki_fc1", 0, 0, 2])
+    ShowText(["【サキ】"])
+    ShowText(["今度、海ライブやっちゃおうかな……？"])
+    ExitEventProcessing([])
+    Empty([])
+
+  Page 1
+    Empty([])
+
+CommonEvent 37
+Name = "EV037"
+
+  Page 0
+    ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+    ShowText(["【たつのこ海兵】"])
+    ShowText(["海兵心得、その１！"])
+    ShowText(["海でもボタン７か８を押せば地図が開けるのです！"])
+    ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+    ShowText(["【たつのこ海兵】"])
+    ShowText(["自分の位置は、黄色い丸印で表示されるのです！"])
+    ShowText(["どこにいるのか常に把握し、迷子にならないようにするのです！"])
+    ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+    ShowText(["【たつのこ海兵】"])
+    ShowText(["海兵心得、その２！"])
+    ShowText(["自分の船を見失った場合は、ハーピーの羽かワープの魔法！"])
+    ShowTextAttributes(["tatunoko_k_fc1", 0, 0, 2])
+    ShowText(["【たつのこ海兵】"])
+    ShowText(["どこかの町にワープすれば、近くの海に船がついてくるのです。"])
+    ShowText(["海のそばの港町や、この海軍本部などがおすすめなのです。"])
+    Empty([])
