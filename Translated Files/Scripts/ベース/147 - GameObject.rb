@@ -1160,7 +1160,6 @@ class Game_Actor < Game_Battler
     value *= booster_actor_down
     value *= booster_actor_orgasm
     value *= booster_actor_defeat
-    value *= booster_actor_carry
     value *= booster_actor_steal
     value *= booster_actor_love
     value

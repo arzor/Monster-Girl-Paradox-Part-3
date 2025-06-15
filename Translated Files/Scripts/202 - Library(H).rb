@@ -18968,7 +18968,7 @@ module NWConst::Library
       }
     },
     233 => {
-      :name => "嫉妬のリリィ",
+      :name => "Envious Lily",
       :condition => {
         :type => 3,
         :id => 914
@@ -19376,7 +19376,7 @@ module NWConst::Library
       }
     },
     238 => {
-      :name => "嫉妬のルシア",
+      :name => "Envious Lucia",
       :condition => {
         :type => 2,
         :id => 837
@@ -23272,7 +23272,7 @@ module NWConst::Library
       }
     },
     381 => {
-      :name => "憤怒の牛魔王",
+      :name => "Wrathful Cow Demon Queen",
       :condition => {
         :type => 3,
         :id => 915
@@ -30127,7 +30127,7 @@ module NWConst::Library
       }
     },
     462 => {
-      :name => "色欲のウィッチサキュバス",
+      :name => "Lustful Succubus Witch",
       :condition => {
         :type => 3,
         :id => 918
@@ -30910,7 +30910,7 @@ module NWConst::Library
       }
     },
     469 => {
-      :name => "暴食のカサンドラ",
+      :name => "Gluttonous Cassandra",
       :condition => {
         :type => 3,
         :id => 916
@@ -35023,7 +35023,7 @@ module NWConst::Library
       }
     },
     518 => {
-      :name => "傲慢のファティマ",
+      :name => "Prideful Fatima",
       :condition => {
         :type => 3,
         :id => 921
@@ -41591,7 +41591,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（触手コキ）",
+          :name => "Request 1 (Tentaclejob)",
           :common => 6111,
           :condition => {
             :type => 1,
@@ -42381,7 +42381,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（バキュームユニット1）",
+          :name => "Request 1 (Vacuum Unit 1)",
           :common => 6151,
           :condition => {
             :type => 1,
@@ -47118,7 +47118,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（素股）",
+          :name => "Request 1 (Intercrural)",
           :common => 6416,
           :condition => {
             :type => 1,
@@ -52937,7 +52937,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（フェラ）",
+          :name => "Request 1 (Blowjob)",
           :common => 6861,
           :condition => {
             :type => 1,

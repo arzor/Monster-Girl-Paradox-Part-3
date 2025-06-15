@@ -4,10 +4,10 @@
 # ■ NWConst::Synthesize
 #==============================================================================
 module NWConst::Synthesize
-    CONFIRM_TEXT = "%s will be synthesized. Proceed?"
+  CONFIRM_TEXT = "%s will be synthesized. Proceed?"
   EQUIP_ACTOR_TEXT = "※ The equipped gear will be used as a material."
   EQUIP_ACTOR_TEXT_CONTENTS = "  %s(%s)"
-    SELECT_BEFORE_ACTOR_TEXT = "Synthesizing %s while equipped.\\nSelect the character equipped it's equipped on."
+  SELECT_BEFORE_ACTOR_TEXT = "Synthesizing %s while equipped.\\nSelect a character who has it equipped."
 end
 
 module Synthesize

@@ -2092,7 +2092,7 @@ module NWConst::JobChange
         "",
       ],
       [
-        "Equip: Fangs",
+        "Equip: Fang",
         "Skills: All Racial Skills",
         "Passive: Racial Skill Booster 15%, Critical Rate +15%",
         "",
@@ -2107,7 +2107,7 @@ module NWConst::JobChange
         "",
       ],
       [
-        "Equip: Fangs",
+        "Equip: Fang",
         "Skills: All Racial Skills",
         "Passive: Racial Skill Booster 30%, Critical Rate +20%",
         "",
@@ -2122,7 +2122,7 @@ module NWConst::JobChange
         "",
       ],
       [
-        "Equip: Fangs",
+        "Equip: Fang",
         "Skills: All Racial Skills",
         "Passive: Racial Skill Booster 50%, Fang Mastery,",
         "  Critical Rate +20%",
@@ -3246,56 +3246,56 @@ module NWConst::JobChange
         "Passive: 闇技究極威力アップ　全攻撃終焉付加",
         "　　　　　　終焉吸収　時間停止無視　全武器マスタリー＋",
       ]],
-    7074 => # 虚職
+    7074 => # 虚職 / Neveremployed
       [[
-        "無職を拡張した、存在しない上級職",
-        "職業レベルは上がるが、スキルはいっさい覚えない",
-        "能力も高くなく、修練を積むこと自体が苦行となる",
-        "ただし、これを極めれば無職の最上級職に進む事ができる",
+        "A nonexistent intermediate extension of Unemployed. Learns no new skills at all, even as its job level is raised. Has overall poor stats and is an ordeal to train in of itself. Mastering it however can allow you to access an advanced Unemployed job.",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 短剣",
-        "Skills: なし",
-        "Passive: なし",
+        "Equip: Dagger",
+        "Skills: None",
+        "Passive: None",
         "",
       ]],
-    7075 => # 空職
+    7075 => # 空職 / Nullemployed
       [[
-        "無職を拡張した、存在しない最上級職",
-        "職業レベルは上がるが、スキルはいっさい覚えない",
-        "能力も平均的だが、とりわけ強いとは言えない",
-        "ただし、これを極めれば無職の封印職に進む事ができる",
+        "A nonexistent advanced extension of Unemployed. Learns no new skills at all, even as its job level is raised. Has overall average stats and cannot be considered particularly strong. Mastering it however can allow you to access a sealed Unemployed job.",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 短剣",
-        "Skills: なし",
-        "Passive: なし",
+        "Equip: Dagger",
+        "Skills: None",
+        "Passive: None",
         "",
       ]],
-    7076 => # 零職
+    7076 => # 零職 / Voidemployed
       [[
-        "無職を拡張した、存在しない封印職",
-        "職業レベルは上がるが、スキルはいっさい覚えない",
-        "能力は高めだが、アビリティも存在せず活用は難しい",
-        "ただし、これを極めれば――",
+        "A nonexistent sealed extension of Unemployed. Learns no new skills at all, even as its job level is raised. Has overall high stats, but its lack of innate abilities makes them difficult to utilize. However, once you master this job...",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 短剣",
-        "Skills: なし",
-        "Passive: なし",
+        "Equip: Dagger",
+        "Skills: None",
+        "Passive: None",
         "",
       ]],
-    7077 => # 職無キ者
+    7077 => # 職無キ者 / Jobless
       [[
-        "無職を拡張した、存在しない禁職",
-        "能力は高めだが、アビリティも存在せず活用は難しい",
-        "ただし、習得出来るアビリティは極めて強力なものばかり",
-        "能力習得の機会と割り切り、苦行を重ねよう",
+        "A nonexistent forbidden extension of Unemployed. Has overall high stats, but its lack of innate abilities makes them difficult to utilize. The abilities it can learn however, are extremely powerful. Take this an an opportunity to learn abilities for all of your hard work.",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 短剣",
-        "Skills: なし",
-        "Passive: なし",
+        "Equip: Dagger",
+        "Skills: None",
+        "Passive: None",
         "",
       ]],
     7078 => # もんむす・くえすと！
@@ -5329,7 +5329,7 @@ module NWConst::JobChange
       ]],
     273 => # インフィニティスキュラ / Infinity Scylla
       [[
-        "The ultimate scylla possessing an inifinite number of tentacles. They captured the angel armies in a hell of tentacles during the Great Monster Wars and were designated a sealed race. The Infinity Scylla inflicts tremendous damage to foes with an overwhelming number of attacks. While their offense is outstanding, one must be careful with their brittle defenses.",
+        "The ultimate scylla possessing an infinite number of tentacles. They captured the angel armies in a hell of tentacles during the Great Monster Wars and were designated a sealed race. The Infinity Scylla inflicts tremendous damage to foes with an overwhelming number of attacks. While their offense is outstanding, one must be careful with their brittle defenses.",
         "",
         "",
         "",
