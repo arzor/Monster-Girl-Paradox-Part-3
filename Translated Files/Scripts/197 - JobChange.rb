@@ -3265,6 +3265,7 @@ module NWConst::JobChange
         "",
         "",
         "",
+        "",
       ],
       [
         "Equip: Dagger",
@@ -3287,7 +3288,8 @@ module NWConst::JobChange
       ]],
     7077 => # 職無キ者 / Jobless
       [[
-        "A nonexistent forbidden extension of Unemployed. Has overall high stats, but its lack of innate abilities makes them difficult to utilize. The abilities it can learn however, are extremely powerful. Take this an an opportunity to learn abilities for all of your hard work.",
+        "A nonexistent forbidden extension of Unemployed. Has overall high stats, but its lack of innate abilities makes them difficult to utilize. The abilities it can learn however, are extremely powerful. Take this an opportunity to learn abilities for all of your hard work.",
+        "",
         "",
         "",
         "",
