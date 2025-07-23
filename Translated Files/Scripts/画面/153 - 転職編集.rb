@@ -916,6 +916,7 @@ class Foo::JobChange::Window_ClassStatus < Window_Base
     desc = desc_text[num] if desc_text
     return y + lht unless desc
     lht -= (desc.size - 4) * 2 if desc.size > 4
+    lht = 16 if lht < 16
     rect = Rect.new(4, y, contents.width - 4, lht * desc.size)
     r = Rect.new(rect.x, rect.y, rect.width, lht)
     desc.each_with_index do |text, _i|
@@ -952,16 +953,16 @@ class Foo::JobChange::Window_ClassStatus < Window_Base
   end
 
   #--------------------------------------------------------------------------
-  # ● ジョブパラメータの描画
+  # ● ジョブパラメータの描画 #Drawing Job Stat Modifiers edited in translation to reduce font size
   #--------------------------------------------------------------------------
   def draw_job_param(y)
     rect = standard_rect(y, 3)
     rect_width =  rect.width / 3
-    rect_height = rect.height / 3
+    rect_height = rect.height / 3 - 8
     rect1 = Rect.new(0, 0, rect_width - 70, rect_height)
     rect2 = Rect.new(0, 0, rect_width - rect1.width - 10, rect_height)
 
-    reset_font_settings
+#    reset_font_settings
     change_color(system_color)
     param_names.each_with_index do |name, i|
       rect1.x = rect.x + rect_width  * (i % 3)
@@ -975,7 +976,7 @@ class Foo::JobChange::Window_ClassStatus < Window_Base
       param += 100 if i == 2
       draw_text(rect2, "#{param}%", 2)
     end
-    rect.y + rect.height
+    rect.y + rect.height - 24
   end
 
   #--------------------------------------------------------------------------

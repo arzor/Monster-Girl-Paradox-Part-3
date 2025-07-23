@@ -8501,7 +8501,7 @@ module NWConst::Library
       }
     },
     82 => {
-      :name => "影紬（最終形態）",
+      :name => "Kagetsumugi (Final Form)",
       :condition => {
         :type => 3,
         :id => 795
@@ -8556,7 +8556,7 @@ module NWConst::Library
       }
     },
     83 => {
-      :name => "影紬（お茶汲み）",
+      :name => "Kagetsumugi (Tea Server)",
       :condition => {
         :type => 2,
         :id => 928
@@ -8741,7 +8741,7 @@ module NWConst::Library
       }
     },
     84 => {
-      :name => "黄泉蜘蛛",
+      :name => "Yomigumo",
       :condition => {
         :type => 3,
         :id => 770
@@ -8798,7 +8798,7 @@ module NWConst::Library
       }
     },
     85 => {
-      :name => "魁狐々",
+      :name => "Kaiko Kitsune",
       :condition => {
         :type => 3,
         :id => 771
@@ -8882,7 +8882,7 @@ module NWConst::Library
       }
     },
     86 => {
-      :name => "蘭天狗",
+      :name => "Rantengu",
       :condition => {
         :type => 3,
         :id => 772
@@ -8941,7 +8941,7 @@ module NWConst::Library
       }
     },
     87 => {
-      :name => "マガツカルラ",
+      :name => "Magatsu-Karura",
       :condition => {
         :type => 3,
         :id => 796
@@ -38549,7 +38549,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（触手吸精）",
+          :name => "Request 1 (Tentacle Semen Sucking)",
           :common => 5713,
           :condition => {
             :type => 1,
@@ -38575,7 +38575,7 @@ module NWConst::Library
           }
         },
         4 => {
-          :name => "おねだり3（エラ）",
+          :name => "Request 3 (Gills)",
           :common => 5715,
           :condition => {
             :type => 1,
@@ -49003,7 +49003,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（溶解捕食）",
+          :name => "Request 1 (Dissolving Predation)",
           :common => 6586,
           :condition => {
             :type => 1,
@@ -49016,7 +49016,7 @@ module NWConst::Library
           }
         },
         3 => {
-          :name => "おねだり2（溶解捕食？）",
+          :name => "Request 2 (Dissolving Predation...?)",
           :common => 6587,
           :condition => {
             :type => 1,
@@ -49403,7 +49403,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（全身蹂躙）",
+          :name => "Request 1 (Full-Body Violation)",
           :common => 6616,
           :condition => {
             :type => 1,
@@ -49555,7 +49555,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（睡姦1）",
+          :name => "Request 1 (Sleeping Sex 1)",
           :common => 6626,
           :condition => {
             :type => 1,
@@ -49568,7 +49568,7 @@ module NWConst::Library
           }
         },
         3 => {
-          :name => "おねだり2（睡姦2）",
+          :name => "Request 2 (Sleeping Sex 2)",
           :common => 6627,
           :condition => {
             :type => 1,
@@ -49673,7 +49673,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（触手搾精）",
+          :name => "Request 1 (Tentacle Semen Squeezing)",
           :common => 6631,
           :condition => {
             :type => 1,
@@ -49686,7 +49686,7 @@ module NWConst::Library
           }
         },
         3 => {
-          :name => "おねだり2（通常フェラ）",
+          :name => "Request 2 (Normal Blowjob)",
           :common => 6632,
           :condition => {
             :type => 1,
@@ -49699,7 +49699,7 @@ module NWConst::Library
           }
         },
         4 => {
-          :name => "おねだり3（長舌フェラ捕食）",
+          :name => "Request 3 (Long Tongue Blowjob Predation)",
           :common => 6633,
           :condition => {
             :type => 1,
@@ -49712,7 +49712,7 @@ module NWConst::Library
           }
         },
         5 => {
-          :name => "おねだり4（長舌フェラ捕食？）",
+          :name => "Request 4 (Long Tongue Blowjob Predation...?)",
           :common => 6634,
           :condition => {
             :type => 1,
@@ -49883,7 +49883,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（フェラ）",
+          :name => "Request 1 (Blowjob)",
           :common => 6646,
           :condition => {
             :type => 1,

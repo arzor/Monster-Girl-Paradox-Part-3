@@ -1,4 +1,4 @@
-Display Name = "ゴッダール"
+Display Name = "Goddard"
 Parallax Name = ""
 Note = ""
 
@@ -61,7 +61,7 @@ Name = "EV004"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["ルカは仲間を外に待たせ、一人で民家に入った……"])
+    ShowText(["Luka leaves his party members outside and enters the house alone..."])
     ChangePlayerFollowers([1])
     PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
     SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
@@ -318,9 +318,9 @@ Name = "EV032"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【おばさん】"])
-    ShowText(["グランゴルド城の西には、ゴルド火山があるんだ。"])
-    ShowText(["天使達に管理されていて、炎の精霊がいるとか……"])
+    ShowText(["\\n<Old Woman>"])
+    ShowText(["West of Grangold lies Gold Volcano. Angels are monitoring the area, but there's word of a fire spirit within..."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 33
@@ -328,9 +328,9 @@ Name = "EV033"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【おばさん】"])
-    ShowText(["あんた達が、噂の救世主だね。"])
-    ShowText(["ゴッダール住人一同、あんた達を歓迎するよ！"])
+    ShowText(["\\n<Old Woman>"])
+    ShowText(["So you're the saviors we've heard about. All of us in Goddard welcome you with open arms!"])
+    ShowText([""])
     Empty([])
 
 CommonEvent 34
@@ -338,13 +338,13 @@ Name = "EV034"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【農夫】"])
-    ShowText(["俺達は、父祖の代から貧しく惨めな暮らしを強いられてきた。"])
-    ShowText(["二級市民ってのは、天使にとって人間じゃないんだよ。"])
+    ShowText(["\\n<Farmer>"])
+    ShowText(["We've been forced to endure this life of poverty and hard labor since the time of our ancestors... We second-class citizens aren't human in the eyes of the angels."])
+    ShowText([""])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【農夫】"])
-    ShowText(["天使共に痛い目を見せてやれるなら、死んでも構わねぇ。"])
-    ShowText(["あんた達の役に立てるなら、何だってするぜ！"])
+    ShowText(["\\n<Farmer>"])
+    ShowText(["If it meant getting back at those angels, I'd give my life to show them what for. I'll do anything I can to help you guys out!"])
+    ShowText([""])
     Empty([])
 
 CommonEvent 35
@@ -352,21 +352,21 @@ Name = "EV035"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【あらくれ】"])
-    ShowText(["月の民の乗ってきた船なんだが……"])
-    ShowText(["男衆が総出で、全部村の外に運んでいったぜ。"])
+    ShowText(["\\n<Ruffian>"])
+    ShowText(["Remember all those Lunarian ship capsules? All the men worked together to carry them out of the village."])
+    ShowText([""])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【あらくれ】"])
-    ShowText(["あれだけデカいのに、男二人で運べるほど軽いんだ。"])
-    ShowText(["いったい、何で出来てるんだろうな……"])
+    ShowText(["\\n<Ruffian>"])
+    ShowText(["They're huge, yet light enough that it only takes two men to lift each one. Just what are those things made of..."])
+    ShowText([""])
     ShowTextAttributes(["stein_fc2", 0, 0, 2])
-    ShowText(["【プロメスティン】"])
-    ShowText(["炭素繊維強化プラスチックだと思われますが……"])
-    ShowText(["それにしても、軽量でしたね。"])
+    ShowText(["\\n<Promestein>"])
+    ShowText(["They look to be made of carbon fiber-reinforced polymers, but even then they're unusually light."])
+    ShowText([""])
     ShowTextAttributes(["stein_fc2", 1, 0, 2])
-    ShowText(["【プロメスティン】"])
-    ShowText(["ちゃんとサンプルは取ってあります。"])
-    ShowText(["後で、ゆっくりじっくりと調べますよ。"])
+    ShowText(["\\n<Promestein>"])
+    ShowText(["I made sure to grab samples earlier. I'll take my time studying these later..."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 36
@@ -374,26 +374,26 @@ Name = "EV036"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【神父】"])
-    ShowText(["肩身の狭い教会にようこそ。"])
-    ShowText(["何のご用ですかな？"])
-    ShowChoices([["お祈りをする", "用はない"], 2])
+    ShowText(["\\n<Priest>"])
+    ShowText(["Welcome to the Church of Shame."])
+    ShowText(["What can I do for you?"])
+    ShowChoices([["Pray", "Never mind"], 2])
     When([0, "お祈りをする"])
       ControlVariables([1002, 1002, 0, 0, 57])
       ShowTextAttributes(["", 0, 0, 2])
-      ShowText(["【神父】"])
-      ShowText(["それでは、イリアス様に祈りましょう。"])
-      ShowText(["……ああ、この場に導きの縁を感じます。"])
+      ShowText(["\\n<Priest>"])
+      ShowText(["Well then, let us pray to Ilias.\n...There, you should feel a bond drawing you to this place."])
+      ShowText([""])
       ShowTextAttributes(["", 0, 0, 2])
-      ShowText(["【神父】"])
-      ShowText(["もし旅先で何かあった場合、この場に導かれるでしょう。"])
-      ShowText(["イリアス様のご加護があらん事を……"])
+      ShowText(["\\n<Priest>"])
+      ShowText(["If something happens to you on your journey, the bond should lead you back here. May Ilias watch over you..."])
+      ShowText([""])
       Empty([])
 
     When([1, "用はない"])
       ShowTextAttributes(["", 0, 0, 2])
-      ShowText(["【神父】"])
-      ShowText(["イリアス様のご加護があらん事を……"])
+      ShowText(["\\n<Priest>"])
+      ShowText(["May Ilias watch over you..."])
       Empty([])
 
     ChoicesEnd([])
@@ -404,12 +404,12 @@ Name = "EV037"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【中年】"])
-    ShowText(["ここは二級市民の町、ゴッダールさ。"])
-    ShowText(["行きたいところがあれば、案内してやるぜ。"])
-    Script(["unlimited_choices(11, [\"宿屋に行く\","])
-    ScriptMore(["\"武器・防具・鍛冶屋に行く\",\"道具屋に行く\","])
-    ScriptMore(["\"教会に行く\",\"酒場に行く\",\"やめる\"])"])
+    ShowText(["\\n<Middle-Aged Man>"])
+    ShowText(["This is Goddard, a town for second-class citizens."])
+    ShowText(["Let me know if there's any place you want me to show you to."])
+    Script(["unlimited_choices(11, [\"Inn\","])
+    ScriptMore(["\"Armory/Smithy\",\"Item shop\","])
+    ScriptMore(["\"Church\",\"Pub\",\"Nowhere\"])"])
     ConditionalBranch([1, 11, 0, 0, 0])
       TransferPlayer([0, 601, 37, 32, 2, 0])
       ExitEventProcessing([])
@@ -453,36 +453,36 @@ Name = "EV038"
   Page 0
     ConditionalBranch([1, 1141, 0, 31, 2])
       ShowTextAttributes(["", 0, 0, 2])
-      ShowText(["【神官】"])
-      ShowText(["この町は、天使に対する反感が非常に強く……"])
-      ShowText(["それゆえ、リバースクロイツに全面的に協力してくれています。"])
+      ShowText(["\\n<Priest>"])
+      ShowText(["The people of this town harbor a powerful resentment against the angels, so the town supports Reverse Kreuz as much as possible."])
+      ShowText([""])
       ShowTextAttributes(["", 0, 0, 2])
-      ShowText(["【神官】"])
-      ShowText(["潜伏している団員も多く、住人の大半は組織と関わりがありますね。"])
-      ShowText(["今回の一件で、天使側にもそれが露呈してしまいましたが……"])
+      ShowText(["\\n<Priest>"])
+      ShowText(["Several members of the organization hide here, and over half of the people have some connection with Reverse Kreuz. With the earlier attack, the angels certainly found this out, too..."])
+      ShowText([""])
       ShowTextAttributes(["alice_fc1", 0, 0, 2])
-      ShowText(["【アリス】"])
-      ShowText(["我々を支援してくれたせいだな、申し訳ない……"])
+      ShowText(["\\n<Alice>"])
+      ShowText(["The angel army attacked you because you supported us... I'm sorry you had to be dragged into this."])
       ShowTextAttributes(["", 0, 0, 2])
-      ShowText(["【神官】"])
-      ShowText(["とんでもない、今こそ天使の支配を覆すチャンス。"])
-      ShowText(["団員一同、あなた方のご活躍を祈っています。"])
+      ShowText(["\\n<Priest>"])
+      ShowText(["Don't worry about it, this is finally our chance to overthrow the angels' oppression. Everyone in the organization is pushing for you every step of the way."])
+      ShowText([""])
       Empty([])
 
     BranchEnd([])
     ConditionalBranch([1, 1141, 0, 32, 1])
       ShowTextAttributes(["", 0, 0, 2])
-      ShowText(["【神官】"])
-      ShowText(["このゴルド大陸に張られていた、ワープ阻止のフィールド……"])
-      ShowText(["それが、どうやら今は消えているそうです。"])
+      ShowText(["\\n<Priest>"])
+      ShowText(["The warp disruption field extending across the Gold continent seems to have disappeared now."])
+      ShowText([""])
       ShowTextAttributes(["", 0, 0, 2])
-      ShowText(["【神官】"])
-      ShowText(["同時に、グランゴルドへの天使の往来も盛んになりました。"])
-      ShowText(["あなた達の攻撃を、警戒しているのでしょうね……"])
+      ShowText(["\\n<Priest>"])
+      ShowText(["At the same time, angel soldiers have started flooding into Grangold. It seems they're going on high alert against any raids from you..."])
+      ShowText([""])
       ShowTextAttributes(["alice_fc1", 0, 0, 2])
-      ShowText(["【アリス】"])
-      ShowText(["ワープの阻止自体は、面倒だが大した障害にはならんからな。"])
-      ShowText(["防御側の機動力を重視する方針に転換したか……"])
+      ShowText(["\\n<Alice>"])
+      ShowText(["The warp disruption field was annoying, but couldn't actually interfere with our plans. It seems now they're prioritizing the mobility of their defensive line..."])
+      ShowText([""])
       Empty([])
 
     BranchEnd([])
@@ -493,17 +493,17 @@ Name = "EV039"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【職人】"])
-    ShowText(["例の宇宙船、残った燃料が引火して爆発する危険がある……"])
-    ShowText(["あんた達の仲間、科学者の女の子がそう言ってたからな。"])
+    ShowText(["\\n<Craftsman>"])
+    ShowText(["Your scientist friend over there told us that those spaceship capsules had the risk of igniting their remaining fuel in an explosion."])
+    ShowText([""])
     ShowTextAttributes(["stein_fc2", 0, 0, 2])
-    ShowText(["【プロメスティン】"])
-    ShowText(["はい、私です。"])
-    ShowText(["大丈夫だとは思いますが、もしもの可能性はありますので。"])
+    ShowText(["\\n<Promestein>"])
+    ShowText(["Yup, that was me. They should be fine, but just in case..."])
+    ShowText([""])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【職人】"])
-    ShowText(["そういうわけで、言われた通り村はずれに運んでいったぜ。"])
-    ShowText(["あそこなら、爆発しても大丈夫だ。"])
+    ShowText(["\\n<Craftsman>"])
+    ShowText(["With that in mind, we carried all of them to outside the village. That way there won't be a problem even if they explode."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 40
@@ -511,13 +511,13 @@ Name = "EV040"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【行商人】"])
-    ShowText(["この町も、ひどい有様だが……"])
-    ShowText(["二級市民の開拓地なんてのは、もっと悲惨だよ。"])
+    ShowText(["\\n<Merchant>"])
+    ShowText(["The living conditions here are pretty awful, but the brand new developments for second-class citizens are even worse."])
+    ShowText([""])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【行商人】"])
-    ShowText(["物資の納入に行った時、ひどい強制労働の光景を見たんだ。"])
-    ShowText(["あいつらは天使なんかじゃない、悪魔そのものさ。"])
+    ShowText(["\\n<Merchant>"])
+    ShowText(["When I visited one to purchase supplies, everyone there was forced into brutal slave labor. There were no angels there, only devils."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 41
@@ -525,13 +525,13 @@ Name = "EV041"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【役人】"])
-    ShowText(["実は、少ないながらも優しい天使はいるんだ。"])
-    ShowText(["収奪の際、運び忘れのように見せてわざと物資を残していったり……"])
+    ShowText(["\\n<Government Official>"])
+    ShowText(["While there aren't many of them, there are some kinder angels out there. For instance, when stealing the fruits of our labor, some feign forgetfulness and leave some supplies for us..."])
+    ShowText([""])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【役人】"])
-    ShowText(["だから、天使全員が敵だとは思えないよ。"])
-    ShowText(["なんとか、分かり合えないものかねぇ……"])
+    ShowText(["\\n<Government Official>"])
+    ShowText(["That's why I can't think of all angels as evil. If only there was some way for us to come to a mutual understanding..."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 42
@@ -539,9 +539,9 @@ Name = "EV042"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【役人】"])
-    ShowText(["生かさず殺さず、極貧の中で希望を奪うのが天使のやり方さ。"])
-    ShowText(["貧しさと惨めさは反抗の意さえ奪う事を、連中は知っているんだ。"])
+    ShowText(["\\n<Government Official>"])
+    ShowText(["The angels steal our resources and our hope, leaving us on the edge of life and death in extreme poverty. They know that enough suffering and cruelty can rob even our will to fight them."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 43
@@ -549,9 +549,9 @@ Name = "EV043"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【農婦】"])
-    ShowText(["作物の大半は、私達の口には入らないよ。"])
-    ShowText(["ほとんど天使に持って行かれるからねぇ……"])
+    ShowText(["\\n<Farmer Woman>"])
+    ShowText(["We only get to eat a small fraction of the crops we grow. Most of it gets carried off by the angels..."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 44
@@ -559,13 +559,13 @@ Name = "EV044"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【青年】"])
-    ShowText(["サバサをぶっ壊したのも良かったけど……"])
-    ShowText(["グランゴルド大監獄からまんまと脱獄したのも痛快だな！"])
+    ShowText(["\\n<Youth>"])
+    ShowText(["It's great that you tore down Sabasa and all, but breaking out of Grangold's great prison is seriously insane stuff!"])
+    ShowText([""])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【青年】"])
-    ShowText(["今まであの監獄は、恐怖と絶望の象徴だったんだ。"])
-    ShowText(["そこから脱出したとなれば、武勇伝は天界中に轟くぜ！"])
+    ShowText(["\\n<Youth>"])
+    ShowText(["That prison's been the face of terror and despair for longer than any of us have been alive. You breaking free from there is a legend that will go down in history!"])
+    ShowText([""])
     Empty([])
 
 CommonEvent 45
@@ -573,25 +573,25 @@ Name = "EV045"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【老人】"])
-    ShowText(["子孫の代まで、ひたすらに続くと思われた絶望……"])
-    ShowText(["それを一気に晴らしたのが、お主達の活躍じゃ。"])
+    ShowText(["\\n<Old Man>"])
+    ShowText(["Despair's all I've known my whole life, and I had thought our descendants would face the same fate. Instead, your efforts have painted a bright future for all of us."])
+    ShowText([""])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【老人】"])
-    ShowText(["魔王様は、この町のみならず、全ての二級市民達の希望。"])
-    ShowText(["どうか、我々に光をもたらしたまえ……"])
+    ShowText(["\\n<Old Man>"])
+    ShowText(["As Monster Lord, you are a shining beacon of hope for not just this town, but all second-class citizens. May you show us all the light once again..."])
+    ShowText([""])
     ShowTextAttributes(["alice_fc1", 0, 0, 2])
-    ShowText(["【アリス】"])
-    ShowText(["まさか、よりにもよって天界で崇拝されるとはな。"])
-    ShowText(["しかし余はあくまで地に足付く存在、祈りには応えられん。"])
+    ShowText(["\\n<Alice>"])
+    ShowText(["Huh, to think I would be worshipped in the Angelic Dominion of all places. However, I live on the same ground that you do; I cannot answer to prayers."])
+    ShowText([""])
     ShowTextAttributes(["alice_fc1", 3, 0, 2])
-    ShowText(["【アリス】"])
-    ShowText(["ゆえに、余と共に戦うのだ！"])
-    ShowText(["老骨に無理はさせられんが、心は天使に屈するでないぞ。"])
+    ShowText(["\\n<Alice>"])
+    ShowText(["Instead, join our fight! I can't ask that the elderly become combatants, but never surrender to the angels in your heart."])
+    ShowText([""])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【老人】"])
-    ShowText(["おお、魔王アリスフィーズ様……"])
-    ShowText(["あなたこそ、虐げられた者達の救い主じゃ……"])
+    ShowText(["\\n<Old Man>"])
+    ShowText(["Understood, Monster Lord Alipheese... You are the true savior of the oppressed..."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 46
@@ -599,9 +599,9 @@ Name = "EV046"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【青年】"])
-    ShowText(["よし、決めたぞ！"])
-    ShowText(["俺もリバースクロイツに入って、天使と戦うんだ！"])
+    ShowText(["\\n<Youth>"])
+    ShowText(["Alright, I've decided! I'll join Reverse Kreuz and fight the angels!"])
+    ShowText([""])
     Empty([])
 
 CommonEvent 47
@@ -609,27 +609,27 @@ Name = "EV047"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【あらくれ】"])
-    ShowText(["この町には、老人が少ないだろう……"])
-    ShowText(["つまりは、そういう事さ。"])
+    ShowText(["\\n<Ruffian>"])
+    ShowText(["You don't see many old people in this town, right? I'm sure you can guess at why."])
+    ShowText([""])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【あらくれ】"])
-    ShowText(["どうせ俺達に、未来はないんだ。"])
-    ShowText(["リバースクロイツに入って、玉砕覚悟で暴れてやるぜ！"])
+    ShowText(["\\n<Ruffian>"])
+    ShowText(["None of us have a future either way. I'll join Reverse Kreuz and fight to the death with honor!"])
+    ShowText([""])
     ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
-    ShowText(["【ラザロ】"])
-    ShowText(["なるほど、分かった。"])
-    ShowText(["……お前は荷物運びな。"])
+    ShowText(["\\n<Lazarus>"])
+    ShowText(["Alright, got it.\n...You'll be delivering supplies."])
+    ShowText([""])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【あらくれ】"])
-    ShowText(["えっ、なんで！？"])
+    ShowText(["\\n<Ruffian>"])
+    ShowText(["What? Why?!"])
     ShowTextAttributes(["lazarus3_fc1", 0, 0, 2])
-    ShowText(["【ラザロ】"])
-    ShowText(["お前みたいな奴は、荷物運びだと決まってんだよ……"])
-    ShowText(["……俺の組織じゃな。"])
+    ShowText(["\\n<Lazarus>"])
+    ShowText(["Guys like you are always put to work handling supply lines...\n...In my organization, anyway."])
+    ShowText([""])
     ShowTextAttributes(["merlin_fc1", 0, 0, 2])
-    ShowText(["【マーリン】"])
-    ShowText(["あなたの組織じゃありませんけどね、リバースクロイツは。"])
+    ShowText(["\\n<Merlin>"])
+    ShowText(["Reverse Kreuz isn't actually your organization, after all."])
     Empty([])
 
 CommonEvent 48
@@ -637,13 +637,13 @@ Name = "EV048"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【農婦】"])
-    ShowText(["あんた達に協力したいのは、ヤマヤマだけど……"])
-    ShowText(["この町が、余計に危ない目に遭わないか心配だねぇ。"])
+    ShowText(["\\n<Farmer Woman>"])
+    ShowText(["I'd love to help you all out, but I'm worried that doing that will cause more problems for this town."])
+    ShowText([""])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【農婦】"])
-    ShowText(["あんた達に触発された若い者達も、見てて危なっかしいよ。"])
-    ShowText(["こんなこと言っちゃ、水差すってのは分かってるんだけどねぇ。"])
+    ShowText(["\\n<Farmer Woman>"])
+    ShowText(["All the young men and women you've inspired to fight will draw more attention to this town, too... Sorry that I can't be more enthusiastic about this."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 49
@@ -651,9 +651,9 @@ Name = "EV049"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【農夫】"])
-    ShowText(["俺達に出来る事はほとんどないから、ここで野菜作ってるぜ。"])
-    ShowText(["収穫が増えれば、活動の蓄えにはなるだろ。"])
+    ShowText(["\\n<Farmer>"])
+    ShowText(["We can't do much of anything else here, so we're focusing on growing more vegetables. A bigger harvest should help with your reserves."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 50
@@ -661,9 +661,9 @@ Name = "EV050"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【男の子】"])
-    ShowText(["僕も大きくなったら、リバースクロイツに入るよ！"])
-    ShowText(["悪い天使をやっつけるんだ！"])
+    ShowText(["\\n<Young Boy>"])
+    ShowText(["I wanna join Reverse Kreuz when I grow up! I'll beat up all the bad angels!"])
+    ShowText([""])
     Empty([])
 
 CommonEvent 51
@@ -671,13 +671,13 @@ Name = "EV051"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【あらくれ】"])
-    ShowText(["このゴルド大陸にある大都市は、グランゴルドだけさ。"])
-    ShowText(["それ以外は、ここみたいな二級市民の村落ばかりだな。"])
+    ShowText(["\\n<Ruffian>"])
+    ShowText(["The only big city here on the Gold continent is Grangold. Everywhere else is just second-class citizen settlements like this one."])
+    ShowText([""])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【あらくれ】"])
-    ShowText(["ノア大陸も、似たような状況らしい。"])
-    ShowText(["俺達と同じように、天使の圧政に苦しめられているんだろうな……"])
+    ShowText(["\\n<Ruffian>"])
+    ShowText(["I've heard the Noah continent is in a similar situation. Their people are probably suffering under the angels' oppression just like us..."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 52
@@ -685,13 +685,13 @@ Name = "EV052"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【あらくれ】"])
-    ShowText(["一級市民の贅沢な生活は、俺達の犠牲で成り立ってる。"])
-    ShowText(["ごく一部の特権階級のために、俺達は奪い尽くされてるのさ。"])
+    ShowText(["\\n<Ruffian>"])
+    ShowText(["The luxuries that first-class citizens enjoy are built upon our sacrifices. They steal from all of us just to support a tiny special upper class."])
+    ShowText([""])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【あらくれ】"])
-    ShowText(["これが、天使連中の言う平等らしい。"])
-    ShowText(["あいつら、都会にしか人間はいないと本気で思ってやがる。"])
+    ShowText(["\\n<Ruffian>"])
+    ShowText(["The angels still call this equality. They really don't see anyone outside the major cities as human."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 53
@@ -699,13 +699,13 @@ Name = "EV053"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【農夫】"])
-    ShowText(["二級市民の敵は、天使だけじゃない。"])
-    ShowText(["俺達を犠牲にして、豪華な生活をしてる一級市民も敵なのさ。"])
+    ShowText(["\\n<Farmer>"])
+    ShowText(["Us second-class citizens aren't just against the angels. Those first-class citizens, with their lives of luxury built on our blood, sweat, and tears, are our enemy too."])
+    ShowText([""])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【農夫】"])
-    ShowText(["天使の支配から解き放たれる日が来たら……"])
-    ShowText(["一級市民の連中を、まとめて絞首台に送ってやるぜ。"])
+    ShowText(["\\n<Farmer>"])
+    ShowText(["If we see the day where we're freed from the angels' rule, we're sending those first-class citizens straight to the gallows."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 54
@@ -713,9 +713,9 @@ Name = "EV054"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【中年】"])
-    ShowText(["まさか、月の民が襲撃してくるとはね……"])
-    ShowText(["こんな貧しい町じゃなくて、一級市民の町を襲えばいいのに。"])
+    ShowText(["\\n<Middle-Aged Man>"])
+    ShowText(["I can't believe the Moon Dwellers attacked us here... Why would they target our poor town, instead of a wealthy first-class citizen city?"])
+    ShowText([""])
     Empty([])
 
 CommonEvent 55
@@ -723,9 +723,9 @@ Name = "EV055"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【リバースクロイツの戦士】"])
-    ShowText(["月の民を追い返すなんて、今回が史上初の例じゃないか？"])
-    ShowText(["あんた達、本当にとんでもないな……"])
+    ShowText(["\\n<Reverse Kreuz Warrior>"])
+    ShowText(["Isn't this the first time in history the Moon Dwellers ever got driven back? You all are really something else..."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 56
@@ -733,9 +733,9 @@ Name = "EV056"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【青年】"])
-    ShowText(["リバースクロイツの声望は、各地でも高まってるぜ。"])
-    ShowText(["何でも協力するから、これからも頑張ってくれよ！"])
+    ShowText(["\\n<Youth>"])
+    ShowText(["Voices in support of Reverse Kreuz are getting stronger all around the Dominion. We'll help you out with anything, so keep up the good work!"])
+    ShowText([""])
     Empty([])
 
 CommonEvent 57
@@ -743,9 +743,9 @@ Name = "EV057"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【農夫】"])
-    ShowText(["どれだけの数の人間が、天使によって理不尽に処刑されたか……"])
-    ShowText(["ここの作物は、恨みと怒りで出来ているのさ。"])
+    ShowText(["\\n<Farmer>"])
+    ShowText(["Every day, I think of how many people were unfairly executed by the angels... Our crops are made with rage and resentment in our hearts."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 58
@@ -753,9 +753,9 @@ Name = "EV058"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【中年】"])
-    ShowText(["この町じゃ、50歳まで生きられれば上等だ。"])
-    ShowText(["一級市民の連中は、80歳まで生きて当たり前らしいな。"])
+    ShowText(["\\n<Middle-Aged Man>"])
+    ShowText(["In this town, living to 50 makes you lucky.\nI heard first-class citizens never die before 80..."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 59
@@ -763,9 +763,9 @@ Name = "EV059"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【少女】"])
-    ShowText(["お兄ちゃん達が、英雄ルカ？"])
-    ShowText(["別の世界から来たんだよね……？"])
+    ShowText(["\\n<Young Girl>"])
+    ShowText(["Are you the Hero Luka?\nYou came from another world, right...?"])
+    ShowText([""])
     Empty([])
 
 CommonEvent 60
@@ -821,8 +821,8 @@ Name = "EV064"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【少年】"])
-    ShowText(["ひゃぅぅ……メルちゃん、すごいよぉ……"])
+    ShowText(["\\n<Young Boy>"])
+    ShowText(["Hyaaa... Mell's too good..."])
     Empty([])
 
 CommonEvent 65
@@ -830,8 +830,8 @@ Name = "EV065"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【少年】"])
-    ShowText(["もっと……メルちゃんと遊びたいよぉ……"])
+    ShowText(["\\n<Young Boy>"])
+    ShowText(["More... Mell, I want to play more..."])
     Empty([])
 
 CommonEvent 66
@@ -839,6 +839,6 @@ Name = "EV066"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["【少年】"])
-    ShowText(["おちんちんが……おちんちんが……"])
+    ShowText(["\\n<Young Boy>"])
+    ShowText(["My penis is... My penis is..."])
     Empty([])
