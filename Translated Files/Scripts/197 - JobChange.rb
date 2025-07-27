@@ -3216,7 +3216,7 @@ module NWConst::JobChange
       ]],
     7069 => # 万職ヲ極メシ仕事人 / Jack of All Trades
       [[
-        "Forbidden job for those who have mastered all manner of professions and acquired numerous skills, said to be capable of bringing the employment scene of society and the laws of nature to collapse all on their own. Learns many forbidden abilities that greatly enhance job skills. Their ability to peform job skills twice at a time in particular is extremely powerful.",
+        "Forbidden job for those who have mastered all manner of professions and acquired numerous skills, said to be capable of bringing the employment scene of society and the laws of nature to collapse all on their own. Learns many forbidden abilities that greatly enhance job skills. Their ability to perform job skills twice at a time in particular is extremely powerful.",
         "",
         "",
         "",
@@ -3301,8 +3301,6 @@ module NWConst::JobChange
         "      Robe,Helmet,Heavy Helmet,Magic Hat,Shield,Heavy Shield",
         "Skills: Sword,Dark,Heroism",
         "Passive: Dark Skill Booster 300%,All Attacks Demise Element,",
-        "        Battle Start SP 100%,All Weapons High Mastery+",
-        "Passive: Holy Skill Booster 300%,All Attacks Demise Element,",
         "        All Weapons High Mastery+,Time Stop Immunity",
       ]],
     7074 => # 虚職 / Neveremployed
