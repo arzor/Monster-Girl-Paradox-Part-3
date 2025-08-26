@@ -3073,7 +3073,7 @@ module NWConst::JobChange
         "Skills: Throwing,Unarmed,White Magic,Holy",
         "Passive: Dual Shield,Crit Rate +30%,Holy Skill Booster 100%,",
         "       Holy Resist 50%,All Damage Resist 50%,Ultimate Endure,",
-        "       Super Appeal,Ultimate Defensae,Fist/Boomerang/Shield",
+        "       Super Appeal,Ultimate Defense,Fist/Boomerang/Shield",
         "       High Mastery+",
       ]],
     7062 => # 千ノ武具ヲ極メシ者 / Weapon Master
