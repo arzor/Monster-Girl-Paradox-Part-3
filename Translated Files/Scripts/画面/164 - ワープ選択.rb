@@ -2,13 +2,13 @@
 # ■ NWConst::Warp
 #==============================================================================
 module NWConst::Warp
-  AREA_SELECT_TEXT  = "Please select a region."
+  AREA_SELECT_TEXT  = "Please select a world."
   PLACE_SELECT_TEXT = "Please select a location."
   CONFIRM_TEXT      = "Warping to %s. Is that okay?"
   MOVE_SE           = RPG::SE.new("Wind1")
-  GROUND = :地上
-  HEAVEN = :天界
-  HELL = :魔界
+  GROUND = :"Singularity World"
+  HEAVEN = :"Angelic Dominion"
+  HELL = :"Monster Realm"
 end
 
 # 重複防止用ネームスペース

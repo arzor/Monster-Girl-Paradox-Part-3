@@ -3193,7 +3193,7 @@ module NWConst::JobChange
         "Skills: Whip,Unarmed,Sexcraft,Psychic",
         "Passive: Crit Rate +30%, Eva 20%,Auto-Hit Eva 10%,",
         "        Horny/Trance/Seduction/Incontinence Strike 15%,",
-        "        Whip/Fan/Sex Toy High Mastery, ",
+        "        Whip/Fan/Sex Toy High Mastery+",
         "",
       ]],
     7068 => # 真理ノ探究者 / Truth Seeker
@@ -7229,8 +7229,9 @@ module NWConst::JobChange
       ],
       [
         "Equip: Clothes,Breastplate,Hat,Helmet,Fancy Cap",
-        "Skills: Giant",
-        "Passive: None",
+        "Skills: Axe,Club,Flail,Giant",
+        "Passive: Crit Rate 15%,Crit Damage +50%,",
+        "         Axe/Club/Flail/Giant Skill Booster 50%/SP Cost*2",
       ]],
     7409 => # ギガース / Gigas
       [[
@@ -7244,8 +7245,9 @@ module NWConst::JobChange
       ],
       [
         "Equip: Clothes,Breastplate,Hat,Helmet,Fancy Cap",
-        "Skills: Giant",
-        "Passive: None",
+        "Skills: Axe,Club,Flail,Giant",
+        "Passive: Crit Rate 15%,Crit Damage +50%,",
+        "         Axe/Club/Flail/Giant Skill Booster 50%/SP Cost*2",
       ]],
     7410 => # 巨神 / Titan
       [[
@@ -7258,8 +7260,9 @@ module NWConst::JobChange
       ],
       [
         "Equip: Clothes,Breastplate,Hat,Helmet,Fancy Cap",
-        "Skills: Giant",
-        "Passive: None",
+        "Skills: Axe,Club,Flail,Giant",
+        "Passive: Crit Rate 15%,Crit Damage +50%,",
+        "         Axe/Club/Flail/Giant Skill Booster 50%/SP Cost*2",
       ]],
     7445 => # 巨神王  / Titan Lord
       [[

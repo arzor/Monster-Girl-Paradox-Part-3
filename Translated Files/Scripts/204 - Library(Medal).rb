@@ -577,8 +577,8 @@ module NWConst::Library
     },
     95 => {
       :icon_id => 193,
-      :title => "ラファエラとの思わぬ共闘",
-      :description => "混沌に取り込まれそうになったコスモスを倒した",
+      :title => "An Unexpected Team with Raphaela",
+      :description => "You defeated Cosmos before she could fully absorb chaos.",
       :priority => 95,
     },
     96 => {
@@ -614,12 +614,12 @@ module NWConst::Library
     101 => {
       :icon_id => 193,
       :title => "One Small Step for Man...",
-      :description => "魔導船で月面へと降り立った",
+      :description => "You landed on the Moon's surface with the Arcane Ship.",
       :priority => 101,
     },
     102 => {
       :icon_id => 192,
-      :title => "母の助け・大陸突入編",
+      :title => "A Mother's Help: Ilias Continent Invasion Edition",
       :description => "You've enlisted the aid of Lucifina on the moon.",
       :priority => 102,
     },
@@ -715,7 +715,7 @@ module NWConst::Library
     },
     118 => {
       :icon_id => 193,
-      :title => "ﾄﾘと和解せよ",
+      :title => "Birds' Reconciliation",
       :description => "You ended the strife amongst the harpies of Finoa.",
       :priority => 210,
     },
@@ -751,13 +751,13 @@ module NWConst::Library
     },
     124 => {
       :icon_id => 193,
-      :title => "機械の村の人形草子",
+      :title => "Machine Village's Puppet Story",
       :description => "You repelled the Puppet Circus' invasion of Monster Realm Yamatai.",
       :priority => 216,
     },
     125 => {
       :icon_id => 192,
-      :title => "姉との別れ",
+      :title => "Farewell to My Sister",
       :description => "You defeated Kagetsumugi and dismantled the Puppet Circus.",
       :priority => 217,
     },
@@ -781,7 +781,7 @@ module NWConst::Library
     },
     129 => {
       :icon_id => 193,
-      :title => "迫撃！　トリプル・エデン",
+      :title => "Triple Eden Attack!",
       :description => "You repelled Hiruko's invasion of the hidden village of Enrika.",
       :priority => 221,
     },
@@ -799,7 +799,7 @@ module NWConst::Library
     },
     132 => {
       :icon_id => 193,
-      :title => "母の助け・妖星攻略編",
+      :title => "A Mother's Help: Calamity Star Attack Edition",
       :description => "You've enlisted the aid of Lucifina on the moon.",
       :priority => 224,
     },
@@ -811,8 +811,8 @@ module NWConst::Library
     },
     134 => {
       :icon_id => 193,
-      :title => "封牢の解放",
-      :description => "魔界の封牢に閉じ込められていた者達を解き放った",
+      :title => "Sealed Prison Liberation",
+      :description => "You have freed everyone being held in the Monster Realm's Sealed Sinner's Prison.",
       :priority => 226,
     },
     135 => {
