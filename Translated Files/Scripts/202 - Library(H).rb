@@ -45079,7 +45079,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（全身蹂躙）",
+          :name => "Request 1 (Full Body Violation)",
           :common => 6311,
           :condition => {
             :type => 1,
@@ -47131,7 +47131,7 @@ module NWConst::Library
           }
         },
         3 => {
-          :name => "おねだり2（パンツ）",
+          :name => "Request 2 (Panty Rub)",
           :common => 6417,
           :condition => {
             :type => 1,
@@ -47144,7 +47144,7 @@ module NWConst::Library
           }
         },
         4 => {
-          :name => "おねだり3（パンツ被せ）",
+          :name => "Request 3 (Panty Cover)",
           :common => 6418,
           :condition => {
             :type => 1,
@@ -51568,7 +51568,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（ハーレム）",
+          :name => "Request 1 (Harem)",
           :common => 6746,
           :condition => {
             :type => 1,
@@ -52890,7 +52890,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（泥搾精）",
+          :name => "Request 1 (Mud Squeezing)",
           :common => 6856,
           :condition => {
             :type => 1,

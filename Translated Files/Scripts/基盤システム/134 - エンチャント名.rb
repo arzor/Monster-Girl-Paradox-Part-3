@@ -578,7 +578,7 @@ module RPG
     #--------------------------------------------------------------------------
     def battle_start_skill_name(ft)
       name   = $data_skills[ft.value[:id]].name
-      prefix = ft.value[:per] == 1.0 ? "" : ft.value[:per].to_s + "%"
+      prefix = ft.value[:per] == 1.0 ? "" : (ft.value[:per]*100).to_i.to_s + "%"
       "Battle Start #{prefix}:Auto #{name}"
     end
 
