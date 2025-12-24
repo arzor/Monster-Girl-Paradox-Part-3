@@ -237,8 +237,14 @@ unless defined? ScriptSyntaxError
           lines = $2.to_i
           unless ($RGSS_SCRIPTS.at(nums).at(3)).nil?
             details = show_details_source_code( nums , lines )
+            details = details.to_s.encode("UTF-8", invalid: :replace, undef: :replace, replace: "?")
             unless details.empty?
-             error_message += "\n** script source code：\n#{details}"
+              begin
+                error_message += "\n** script source code：\n#{details}"
+              rescue Exception => e
+                puts details
+                puts e.to_s
+              end
             else
               error_message += 
               "\n** script source code：#{lines} unknown data.\n"
@@ -246,7 +252,15 @@ unless defined? ScriptSyntaxError
           end
         end
       end
-      error_message.gsub!(/^(?:Section)?{?(\d+)}?:/){"( #{extra} )：#{$1}：lines "}
+
+      begin
+        error_message.gsub!(/^(?:Section)?{?(\d+)}?:/){"( #{extra} )：#{$1}：lines "}
+      rescue Exception => e
+        puts extra
+        puts $1.to_s
+        puts e.to_s
+      end
+
       error_message
     end
     #--------------------------------------------------------------------------

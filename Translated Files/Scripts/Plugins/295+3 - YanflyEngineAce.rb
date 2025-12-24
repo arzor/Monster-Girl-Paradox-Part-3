@@ -1283,7 +1283,7 @@ class Word
   end
 end
 
-##Исправление имен в выкриках
+##Correcting Nameboxes in Skillwords
 class Word
   def initialize(word_data, face_name, face_index)
     w = word_data.gsub("\\n<"){"\\<n"}
@@ -1304,19 +1304,10 @@ class Word
   def replace_name(b, a)
     return if @common
 
-    w = Marshal.load(Marshal.dump(self))
-
-    w.instance_eval do
-      if @words.class == Array
-        @words.map! do |line|
-          line.gsub(/\\n<#{b}>/, "\\n<#{a}>")
-          line.gsub(/\\<n#{b}>/, "\\n<#{a}>")
-        end
-      else
-        @words.gsub!(/\\n<#{b}>/, "\\n<#{a}>")
-      end
+    @words.map! do |line|
+      line.gsub(/\\n<#{b}>/, "\\n<#{a}>")
+      line.gsub(/\\<n#{b}>/, "\\n<#{a}>")
     end
-    w
   end
 end
 

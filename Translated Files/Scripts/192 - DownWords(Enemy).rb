@@ -2079,7 +2079,7 @@ module NWConst::Enemy
     },
     296 => { # エミリ
       :dead_word => ["\\n<Emily>Already? No way...", "emily_fc1", 3],
-      :orgasm_word => ["\\n<Emily>I'll remember this...ahh..", "emily_fc1", 3],
+      :orgasm_word => ["\\n<Emily>I'll remember this...ahh...", "emily_fc1", 3],
       :predation_word => ["\\n<Emily>Don't eat me, I'll do anything...\nEyaaah...!!", "emily_fc1", 3],
       :incontinence_word => ["\\n<Emily>You're the worst... Don't look, don't look at me...!", "emily_fc1", 3],
       :premortal_graphic => "50_emily_st03",
@@ -3297,7 +3297,7 @@ module NWConst::Enemy
     },
     471 => { #リラ
       :dead_word => ["\\n<Lyla>I... I can't move...", "lira_fc1", 0],
-      :orgasm_word => ["\\n<Lyla>T...this.. kind of thiiing... aaah...", "lira_fc1", 0],
+      :orgasm_word => ["\\n<Lyla>T...this... kind of thiiing... aaah...", "lira_fc1", 0],
       :predation_word => ["\\n<Lyla>HiiiII! W-What is this?!?!", "lira_fc1", 0],
       :incontinence_word => ["\\n<Lyla>Hafuu...uuu...", "lira_fc1", 0],
       :premortal_graphic => "80_lira_st11",
@@ -3388,7 +3388,7 @@ module NWConst::Enemy
     },
     484 => { #リラ
       :dead_word => ["\\n<Lyla>I... I can't move...", "lira_fc1", 0],
-      :orgasm_word => ["\\n<Lyla>T...this.. kind of thiiing... aaah...", "lira_fc1", 0],
+      :orgasm_word => ["\\n<Lyla>T...this... kind of thiiing... aaah...", "lira_fc1", 0],
       :predation_word => ["\\n<Lyla>HiiiII! W-What is this?!?!", "lira_fc1", 0],
       :incontinence_word => ["\\n<Lyla>Hafuu...uuu...", "lira_fc1", 0],
       :premortal_graphic => "80_lira_st11",

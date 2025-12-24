@@ -1811,6 +1811,16 @@ class Window_ModLog < Window_Selectable
 end
 
 class Scene_Battle < Scene_Base
+###For hiding remaining actions popup###
+  def update_actions_window
+    return unless @actions_window
+    if @status_window.index < 0 || @actor_command_window.close? || @skill_window.visible || @item_window.visible || @description_window.visible || @selstate_window.visible
+      return @actions_window.hide
+    end
+
+    @actions_window.show
+  end
+
   alias x_create_all_windows :create_all_windows
   def create_all_windows
     x_create_all_windows

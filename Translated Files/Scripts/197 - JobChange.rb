@@ -92,7 +92,7 @@ module NWConst::JobChange
         "Equip: Dagger,Rapier,Spear,Heavy Spear,Armor,Heavy Armor,Helmet",
         "   Heavy Helmet,Shield,Heavy Shield",
         "Skills: Rapier,Spear,White Magic,Holy",
-        "Passive: None",
+        "Passive: Holy Skill Booster 50%",
         "",
       ]],
     6 => # ホーリーナイト / Holy Knight
@@ -108,7 +108,7 @@ module NWConst::JobChange
         "Equip: Dagger,Rapier,Spear,Heavy Spear,Armor,Heavy Armor",
         "   Helmet,Heavy Helmet,Shield,Heavy Shield",
         "Skills: Rapier,Spear,White Magic,Holy",
-        "Passive: Rapier Mastery,Spear Mastery",
+        "Passive: Holy Skill Booster 50%,Rapier Mastery,Spear Mastery",
         "",
       ]],
     7 => # 魔法戦士 / Spellsword
@@ -267,7 +267,7 @@ module NWConst::JobChange
         "Equip: Great Sword,Axe,Club,Flail,Armor,Heavy Armor,Helmet",
         "   Heavy Helmet,Shield,Heavy Shield",
         "Skills: Axe,Club,Flail",
-        "Passive: Crit +20%,Super Endure,Power Mastery",
+        "Passive: Crit +20%,Super Endure,Power Weapon Mastery",
       ]],
     17 => # 狂戦士 / Savage Warrior
       [[
@@ -296,7 +296,7 @@ module NWConst::JobChange
         "Equip: Great Sword,Axe,Club,Flail,Armor,Helmet,Shield",
         "Skills: Axe,Club,Flail",
         "Passive: Crit +30%,Triple SP Charge,SP Regen +30%",
-        "   Power Mastery,Rampage",
+        "         Power Weapon Mastery,Rampage",
       ]],
     19 => # 陰陽剣士 / Tao Swordsman
       [[
@@ -430,7 +430,7 @@ module NWConst::JobChange
       [
         "Equip: Dagger,Fist,Club,Staff,Gi",
         "Skills: Unarmed,White Magic,Holy",
-        "Passive: Crit +15%",
+        "Passive: Crit Rate +15%,Holy Skill Booster 50%",
         "",
       ]],
     29 => # ゴッドハンド / God Hand
@@ -445,7 +445,7 @@ module NWConst::JobChange
       [
         "Equip: Dagger,Fist,Club,Staff,Gi",
         "Skills: Unarmed,White Magic,Holy",
-        "Passive: Crit +20%,Fist Mastery",
+        "Passive: Crit Rate +20%,Holy Skill Booster 50%,Fist Mastery",
         "",
       ]],
     30 => # バトルマスター / Battle Master
@@ -520,7 +520,7 @@ module NWConst::JobChange
         "Equip: Dagger,Rapier,Scythe,Magic Sword,Rod,Grimoire,Robe",
         "   Magic Hat",
         "Skills: Black Magic,Dark",
-        "Passive: Magic Mastery",
+        "Passive: Dark Skill Booster 50%,Magic Weapon Mastery",
         "",
       ]],
     36 => # 輝氷魔導師 / Arctic Mage
@@ -536,7 +536,7 @@ module NWConst::JobChange
         "Equip: Dagger,Rapier,Scythe,Magic Sword,Rod,Grimoire,Robe",
         "   Magic Hat",
         "Skills: Black Magic,Dark",
-        "Passive: Magic Mastery",
+        "Passive: Dark Skill Booster 50%,Magic Weapon Mastery",
         "",
       ]],
     37 => # 極雷魔導師 / Gigavolt Mage
@@ -553,7 +553,7 @@ module NWConst::JobChange
         "Equip: Dagger,Rapier,Magic Sword,Scythe,Rod,Grimoire,Robe",
         "   Magic Hat",
         "Skills: Black Magic,Dark",
-        "Passive: Magic Mastery",
+        "Passive: Dark Skill Booster 50%,Magic Weapon Mastery",
         "",
       ]],
     38 => # 時魔導師 / Time Mage
@@ -583,7 +583,7 @@ module NWConst::JobChange
         "Equip: Dagger,Rapier,Magic Sword,Scythe,Rod,Grimoire,Robe",
         "   Magic Hat",
         "Skills: Time Magic",
-        "Passive: Magic Mastery",
+        "Passive: Magic Weapon Mastery",
         "",
       ]],
     40 => # 召喚士 / Summoner
@@ -613,7 +613,7 @@ module NWConst::JobChange
         "Equip: Dagger,Rapier,Scythe,Magic Sword,Rod,Grimoire,Robe",
         "   Magic Hat",
         "Skills: Summoning",
-        "Passive: Magic Mastery",
+        "Passive: Magic Weapon Mastery",
         "",
       ]],
     42 => # 陰陽師 / Taoist
@@ -640,7 +640,7 @@ module NWConst::JobChange
       [
         "Equip: Dagger,Magic Sword,Scythe,Rod,Fan,Robe,Magic Hat",
         "Skills: Taoism",
-        "Passive: Eva/Mag Eva +5%,Magic Mastery, Fan Mastery",
+        "Passive: Eva/Mag Eva +5%,Magic Weapon Mastery,Fan Mastery",
         "",
       ]],
     44 => # 僧侶 / Priest
@@ -683,7 +683,7 @@ module NWConst::JobChange
       [
         "Equip: Club,Staff,Whip,Grimoire,Robe,Magic Hat",
         "Skills: White Magic,Holy",
-        "Passive: Magic Mastery",
+        "Passive: Holy Skill Booster 50%,Magic Weapon Mastery",
         "",
       ]],
     47 => # 賢者 / Sage
@@ -711,10 +711,11 @@ module NWConst::JobChange
       ],
       [
         "Equip: Dagger,Rapier,Magic Sword,Club,Scythe,Whip,Staff,Rod",
-        "   Fan,Grimoire,Robe,Magic Hat",
+        "       Fan,Grimoire,Robe,Magic Hat",
         "Skills: White Magic,Black Magic,Time Magic,Summoning,Holy,Dark",
-        "   Taoism",
-        "Passive: MP Cost 50%,Magic Mastery",
+        "        Taoism",
+        "Passive: Holy/Dark Skill Booster 50%,MP Cost 50%,",
+        "         Magic Weapon Mastery",
       ]],
     49 => # 魔法少女 / Magical Girl
       [[
@@ -744,8 +745,8 @@ module NWConst::JobChange
       ],
       [
         "Equip: Dagger,Magic Sword,Scythe,Staff,Rod,Bow,Grimoire,Gun",
-        "Skills: White Magic,Black Magic,Time Magic,Heroism",
-        "Passive: MP Regen +2%,Magic Mastery",
+        "Skills: White Magic,Black Magic,Time Magic",
+        "Passive: MP Regen +2%,Magic Weapon Mastery",
         "",
       ]],
     52 => # 狩人 / Hunter
@@ -1035,7 +1036,7 @@ module NWConst::JobChange
       [
         "Equip: Dagger,Sword,Rapier,Spear,Boomerang,Armor,Helmet,Shield",
         "Skills: Sword,Spear",
-        "Passive: City Strength",
+        "Passive: Town Strength",
         "",
       ]],
     73 => # 王宮騎士 / Royal Guard
@@ -1050,7 +1051,7 @@ module NWConst::JobChange
         "   Boomerang,Armor,Heavy Armor,Helmet,Heavy Helmet,Shield",
         "   Heavy Shield",
         "Skills: Dagger,Sword,Rapier,Spear",
-        "Passive: City Strength",
+        "Passive: Town Strength",
       ]],
     74 => # ナイツオブラウンド / Knight of the Round
       [[
@@ -1526,7 +1527,7 @@ module NWConst::JobChange
       [
         "Equip: Rod,Scalpel,Grimoire,Gun",
         "Skills: Magic Science,Alchemy,Grimoire",
-        "Passive: Magic Mastery",
+        "Passive: Magic Weapon Mastery",
         "",
       ]],
     106 => # 錬金術士 / Alchemist
@@ -1557,8 +1558,8 @@ module NWConst::JobChange
       [
         "Equip: Dagger,Staff,Rod,Grimoire",
         "Skills: Magic Science,Alchemy,Grimoire",
-        "Passive: Alchemy Material Auto-collection 50%, Magic Mastery",
-        "",
+        "Passive: Alchemy Material Auto-collection 50%,",
+        "         Magic Weapon Mastery",
       ]],
     108 => # 魔導司書 / Magical Librarian
       [[
@@ -1585,7 +1586,7 @@ module NWConst::JobChange
       [
         "Equip: Staff,Rod,Grimoire",
         "Skills: Magic Science,Alchemy,Grimoire",
-        "Passive: Magic Mastery",
+        "Passive: Magic Weapon Mastery",
         "",
       ]],
     110 => # 技師 / Engineer
@@ -1668,7 +1669,7 @@ module NWConst::JobChange
       [
         "Equip: Scythe,Rod,Whip,Scalpel,Grimoire,Robe,Magic Hat",
         "Skills: Scythe,Summoning,Medicine,Corpse",
-        "Passive: Magic Mastery",
+        "Passive: Magic Weapon Mastery",
         "",
       ]],
     116 => # 降霊術師 / Medium
@@ -1695,7 +1696,7 @@ module NWConst::JobChange
       [
         "Equip: Scythe,Staff,Rod,Grimoire,Robe,Magic Hat",
         "Skills: Scythe,Black Magic,Summoning,Corpse",
-        "Passive: Magic Mastery",
+        "Passive: Magic Weapon Mastery",
         "",
       ]],
     118 => # からくり人形師 / Puppeteer
@@ -1722,7 +1723,7 @@ module NWConst::JobChange
       [
         "Equip: Scythe,Rod,Grimoire,Gun,Robe,Magic Hat",
         "Skills: Scythe,Summoning,Makina,Artificial",
-        "Passive: Magic Mastery",
+        "Passive: Magic Weapon Mastery",
         "",
       ]],
     120 => # 情報屋 / Informant
@@ -1955,7 +1956,7 @@ module NWConst::JobChange
         "Equip: Dagger,Magic Sword,Staff,Rod,Grimoire,Robe,Magic Hat",
         "Skills: White Magic,Black Magic,Time Magic,Summoning",
         "   Magic Science,Alchemy,Grimoire,Ruling",
-        "Passive: Mag Eva +20%,MP Regen +4%,Magic Mastery",
+        "Passive: Mag Eva +20%,MP Regen +4%,Magic Weapon Mastery",
         "",
       ]],
     138 => # 法王 / Pope
@@ -1969,7 +1970,7 @@ module NWConst::JobChange
       [
         "Equip: Dagger,Magic Sword,Club,Staff,Grimoire,Robe,Magic Hat",
         "Skills: White Magic,Holy,Ruling",
-        "Passive: Mag Eva +20%,Mag Ref +30%",
+        "Passive: Mag Eva +20%,Magic Reflect 30%,Holy Skill Booster 50%",
         "",
       ]],
     139 => # 神聖法王 / Sacred Pope
@@ -1985,8 +1986,8 @@ module NWConst::JobChange
       [
         "Equip: Dagger,Magic Sword,Club,Staff,Grimoire",
         "Skills: White Magic,Holy,Ruling",
-        "Passive: Magic Reflect +50%,Magic Mastery",
-        "",
+        "Passive: Magic Reflect 50%,Holy Skill Booster 50%,",
+        "         Magic Weapon Mastery",
       ]],
     140 => # 機甲法王 / Armored Pope
       [[
@@ -2001,7 +2002,7 @@ module NWConst::JobChange
       [
         "Equip: Dagger,Magic Sword,Club,Staff,Grimoire,Gun",
         "Skills: Gun,White Magic,Makina,Ruling",
-        "Passive: Magic Reflect +50%,Gun Mastery",
+        "Passive: Magic Reflect 50%,Holy Skill Booster 50%,Gun Mastery",
         "",
       ]],
     141 => # 見習い勇者 / Apprentice Hero
@@ -2049,7 +2050,7 @@ module NWConst::JobChange
         "       Heavy Spear,Axe,Club,Scythe,Boomerang,Armor,Heavy Armor,",
         "       Helmet,Heavy Helmet,Shield,Heavy Shield",
         "Skills: Dagger,Sword,Holy,Heroism",
-        "Passive: Crit Rate 20%,Holy Skill Booster +50%,SP Regen 20%,",
+        "Passive: Crit Rate 20%,Holy Skill Booster 50%,SP Regen 20%,",
         "         Sword Mastery+",
       ]],
     144 => # 闇の勇者 / Hero of Darkness
@@ -2066,7 +2067,7 @@ module NWConst::JobChange
         "       Heavy Spear,Axe,Club,Scythe,Boomerang,Armor,Heavy Armor,",
         "       Helmet,Heavy Helmet,Shield,Heavy Shield",
         "Skills: Dagger,Sword,Dark,Heroism",
-        "Passive: Crit Rate 20%,Dark Skill Booster +50%,SP Regen 20%,",
+        "Passive: Crit Rate 20%,Dark Skill Booster 50%,SP Regen 20%,",
         "         Sword Mastery+",
       ]],
     149 => # 無職 / Unemployed
@@ -2337,13 +2338,12 @@ module NWConst::JobChange
         "Equip: Great Sword,Axe,Club,Flail,Armor,Heavy Armor,Helmet,",
         "       Heavy Helmet,Shield,Heavy Shield",
         "Skills: Axe,Club,Flail",
-        "Passive: Crit Rate 35%, Ultimate Endure,Power Mastery+,",
+        "Passive: Crit Rate 35%, Ultimate Endure,Power Weapon Mastery+,",
         "         Double SP Charge",
       ]],
     7016 => # 拳神 / Fist Sage
       [[
         "A peerless martial artist who has mastered holy and dark martial arts, reaching the realm of chaos. Boasts overwhelming attack and agility to annihilate foes before they can act. Readily counters most attacks and has excellent evasion and critical rate as well. Despite having flawed defensive capabilities, their specialization in swift attacks make them incredibly reassuring.",
-        "",
         "",
         "",
         "",
@@ -2356,6 +2356,7 @@ module NWConst::JobChange
         "Skills: Unarmed",
         "Passive: Eva 25%,Auto-Hit Eva 15%,Crit Rate 35%,",
         "         Counter/Mag Counter 100%,Fist Mastery+",
+        "",
       ]],
     7017 => # 神の守護者 / Guardian of God
       [[
@@ -2370,7 +2371,7 @@ module NWConst::JobChange
       [
         "Equip: Fist,Club,Staff",
         "Skills: Unarmed,White Magic,Holy",
-        "Passive: Crit Rate 25%,Holy Skill Booster +100%,Fist Mastery+",
+        "Passive: Crit Rate 25%,Holy Skill Booster 100%,Fist Mastery+",
         "",
       ]],
     7018 => # 終焉魔導師 / Demise Mage
@@ -2386,7 +2387,7 @@ module NWConst::JobChange
         "Equip: Dagger,Rapier,Magic Sword,Scythe,Rod,Grimoire,Robe,",
         "       Magic Hat",
         "Skills: Black Magic,Dark",
-        "Passive: Dark Skill Booster +100%,Magic Mastery+",
+        "Passive: Dark Skill Booster +100%,Magic Weapon Mastery+",
         "",
       ]],
     7019 => # 銀河魔導師 / Galaxy Mage
@@ -2403,7 +2404,7 @@ module NWConst::JobChange
         "Equip: Dagger,Rapier,Magic Sword,Scythe,Rod,Grimoire,Robe,",
         "       Magic Hat",
         "Skills: Time Magic",
-        "Passive: Magic Mastery+",
+        "Passive: Magic Weapon Mastery+",
         "",
       ]],
     7020 => # 混沌召喚士 / Chaos Summoner
@@ -2419,7 +2420,7 @@ module NWConst::JobChange
         "Equip: Dagger,Rapier,Magic Sword,Scythe,Rod,Grimoire,Robe,",
         "       Magic Hat",
         "Skills: Summoning",
-        "Passive: Magic Mastery+",
+        "Passive: Magic Weapon Mastery+",
         "",
       ]],
     7021 => # 太極陰陽師 / Taiji Immortal Taoist
@@ -2451,7 +2452,7 @@ module NWConst::JobChange
       [
         "Equip: Club,Whip,Staff,Grimoire",
         "Skills: White Magic,Holy",
-        "Passive: Holy Skill Booster +100%,Magic Mastery+",
+        "Passive: Holy Skill Booster +100%,Magic Weapon Mastery+",
         "",
       ]],
     7023 => # ソーサラースプリーム / Magus Supreme
@@ -2468,7 +2469,8 @@ module NWConst::JobChange
         "       Grimoire,Robe,Magic Hat",
         "Skills: White Magic,Black Magic,Time Magic,Summoning,Holy,Dark,",
         "        Taoism",
-        "Passive:Holy/Dark Skill Booster +100%,MP Cost 50%,Magic Mastery+",
+        "Passive: Holy/Dark Skill Booster +100%,MP Cost 50%,",
+        "         Magic Weapon Mastery+",
       ]],
     7024 => # アルティメット魔法少女 / Ultimate Magical Girl
       [[
@@ -2484,7 +2486,8 @@ module NWConst::JobChange
         "Equip: Magic Sword,Scythe,Staff,Rod,Bow,Grimoire,Gun,Robe,",
         "       Magic Hat",
         "Skills: White Magic,Black Magic,Time Magic,Holy",
-        "Passive: Holy Booster +100%, MP Regen 6%,Magic Mastery+",
+        "Passive: Holy Booster +100%, MP Regen 6%,",
+        "         Magic Weapon Mastery+",
       ]],
     7025 => # 狩神 / Supreme Hunter
       [[
@@ -2732,7 +2735,7 @@ module NWConst::JobChange
       [
         "Equip: Rod,Scalpel,Grimoire,Gun",
         "Skills: Magic Science,Alchemy,Grimoire",
-        "Passive: Magic Mastery+",
+        "Passive: Magic Weapon Mastery+",
         "",
       ]],
     7041 => # トリスメギストス / Trismegistus
@@ -2747,8 +2750,8 @@ module NWConst::JobChange
       [
         "Equip: Dagger,Staff,Rod,Grimoire",
         "Skills: Magic Science,Alchemy,Grimoire",
-        "Passive: Alchemy Material Auto-collection 50%,Magic Mastery+",
-        "",
+        "Passive: Alchemy Material Auto-collection 50%,",
+        "         Magic Weapon Mastery+",
       ]],
     7042 => # アカシックレコード Akashic Record
       [[
@@ -2762,7 +2765,7 @@ module NWConst::JobChange
       [
         "Equip: Staff,Rod,Grimoire",
         "Skills: Magic Science,Alchemy,Grimoire",
-        "Passive: Magic Mastery+",
+        "Passive: Magic Weapon Mastery+",
         "",
       ]],
     7043 => # ゴッドマシーナリー / God of Machinery
@@ -2795,7 +2798,7 @@ module NWConst::JobChange
         "Equip: Scythe,Staff,Rod,Whip,Scalpel,Grimoire,Gun,Robe,Magic Hat",
         "Skills: Scythe,Black Magic,Summoning,Makina,Medicine,Corpse,",
         "        Artificial",
-        "Passive: Magic Mastery+",
+        "Passive: Magic Weapon Mastery+",
         "",
       ]],
     7045 => # 言霊神 / Word Weaver
@@ -2890,7 +2893,7 @@ module NWConst::JobChange
         "Skills: Sword,Black Magic,White Magic,Time Magic,Holy,Ruling",
         "Passive: Crit Rate 20%,Magic Eva 20%,Auto-Hit Eva 10%,",
         "         Holy Skill Booster +100%, HP Regen 20%,MP Regen 4%,",
-        "         Magic Reflect 50%,Sword/Magic Mastery+",
+        "         Magic Reflect 50%,Sword/Magic Weapon Mastery+",
       ]],
     7051 => # 混沌の勇者 / Hero of Chaos
       [[
@@ -3108,7 +3111,7 @@ module NWConst::JobChange
         "       Taoism",
         "Passive: Eva/Magic Eva/Auto-Hit Eva 10%,MP Cost 25%,",
         "       Holy/Dark Skill Booster 200%,Magic Skill Expansion,",
-        "       Witch Time,Time Stop Immunity,Magic High Mastery+",
+        "       Witch Time,Time Stop Immunity,Magic Weapon High Mastery+",
       ]],
     7080 => # 全てを癒す者 / All-Healer
       [[
@@ -3252,7 +3255,7 @@ module NWConst::JobChange
         "Passive: Crit Rate +30%,Mag Eva 25%,Auto-Hit Eva 10%,",
         "        HP/SP Regen 20%,MP Regen 4%,Holy Skill Booster 100%,",
         "        Boss Slayer 50%,Boss Resist 30%,Battle Start SP 100%,",
-        "        SP Cost 50%,Sword/Magic High Mastery+",
+        "        SP Cost 50%,Sword/Magic Weapon High Mastery+",
       ]],
     7073 => # 破滅事象 / Phenomenon of Ruin
       [[
@@ -3394,12 +3397,12 @@ module NWConst::JobChange
       ],
       [
         "Equip: Sword,Scythe,Clothes,Armor,Heavy Armor,Robe,Dress,Skimpy,",
-        "   Hat,Helmet,Heavy Helmet,Magic Hat,Fancy Cap,Buckler,Shield,",
-        "   Heavy Shield",
-        "Skills: Sword,Scythe,Unarmed,Black Magic,Time Magic,",
-        "　　　Dark,Demon Arts",
-        "Passive: Sword/Katana/Fist/Scythe/Magic Mastery, Contract of Darkness",
-        "",
+        "       Hat,Helmet,Heavy Helmet,Magic Hat,Fancy Cap,Buckler,Shield,",
+        "       Heavy Shield",
+        "Skills: Sword,Scythe,Unarmed,Black Magic,Time Magic,Dark,",
+        "        Demon Arts",
+        "Passive: Dark Skill Booster 50%,Sword/Katana/Fist/Scythe/",
+        "         Magic Weapon Mastery,HP Cost 50%",
       ]],
     153 => # 魔神 / Archfiend
       [[
@@ -3411,12 +3414,11 @@ module NWConst::JobChange
         "",
       ],
       [
-        "Equip: Sword,Scythe,Clothes,Armor,Heavy Armor,Robe,Dress,Skimpy,",
-        "   Hat,Helmet,Heavy Helmet,Magic Hat,Fancy Cap,Buckler,Shield,",
-        "   Heavy Shield",
-        "Skills: Scythe,Time Magic,Holy,Dark",
-        "Passive: Null HP Cost, Sword/Scythe/Magic Mastery+",
-        "",
+        "Equip: Scythe,All Armor B",
+        "Skills: Sword,Scythe,Unarmed,Black Magic,Time Magic,Holy,Dark,",
+        "        Demon Arts",
+        "Passive: Null HP Cost, Holy/Dark Skill Booster 50%,",
+        "         Sword/Katana/Fist/Scythe/Magic Weapon Mastery+",
       ]],
     154 => # 超魔神 / Super Archfiend (Original description states it can equip scythes, but isn't present in class data)
       [[
@@ -3429,25 +3431,27 @@ module NWConst::JobChange
         "",
       ],
       [
-        "Equip: All Armors A",
+        "Equip: All Armor A",
         "Skills: Sword,Scythe,Unarmed,Time Magic,Holy,Dark",
         "Passive: Holy/Dark Skill Booster 100%, Null HP Cost,",
-        "　        Time Stop Immunity Sword/Scythe Mastery+",
+        "         Time Stop Immunity Sword/Scythe Mastery+",
         "",
       ]],
-    7412 => # 混沌の魔神
+    7412 => # 混沌の魔神 / Archfiend of Chaos (Original description states it can equip scythes, but isn't present in class data)
       [[
-        "混沌の力をも極めた究極の魔神",
-        "神の領域をも超越し、混沌そのものに極めて近い",
-        "絶大なる能力値と耐性を備え、その力は万能にして究極",
-        "習得できるアビリティも極めて強力である",
+        "The ultimate Archfiend who has even mastered the powers of chaos, transcending the realm of godhood and becoming extremely similar to chaos itself. The Archfiend of Chaos posesses tremendous stats and resistances, granting ultimate power all-around. The abilities they learn are also extremely powerful.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 全防具SSS",
-        "Skills: 剣技　鎌技　格闘　時魔法　聖技　闇技　カオス",
-        "Passive: 聖技・闇技最大限威力アップ　鎌・重装備可能",
-        "　　　　　　闇の支配者　物理・快楽反射　時間停止無視",
-        "　　　　　　剣・鎌・魔法マスタリー＋",
+        "Equip: All Armor SSS",
+        "Skills: Sword,Scythe,Unarmed,Time Magic,Holy,Dark,Chaos",
+        "Passive: Holy/Dark Skill Booster 200%,Null HP Cost,",
+        "         Physical/Pleasure Element Reflect,Time Stop Immunity",
+        "         Sword/Scythe/Magic Weapon Mastery+",
       ]],
     155 => # ワームサマナー / Worm Summoner
       [[
@@ -3496,18 +3500,21 @@ module NWConst::JobChange
         "Passive: Mag Eva 20%,Auto-Hit Eva 10%,MP Regen 4%,",
         "         Crisis MP Cost 50%",
       ]],
-    7413 => # 万魔の宿主
+    7413 => # 万魔の宿主 / Legion Host
       [[
-        "あらゆる魔物細胞をその身に宿す禁断の存在",
-        "次元侵蝕者の干渉を受けているがゆえ、禁種とされていた",
-        "魔力によってワームを操り、次元規模の魔導も発動可能",
-        "快楽や属性耐性も高く、強大な魔力を存分に行使できる",
+        "A forbidden being harboring all manner of monster cells within their body, it became a forbidden race due the Dimensional Eroder's intervening. Their magic enables them to control worms at even a dimensional scale, and with their high resistance to pleasure and the magical elements, they can use their immense magical power with ease.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SS　胸当てS　ローブSSS　ドレスSS",
-        "　　　　　薄着SS　帽子SS　魔帽SSS　軽盾S",
-        "Skills: 黒魔法　召喚　触手技",
-        "Passive: 毎ターンMP8%回復　瀕死時MP消費ゼロ",
+        "Equip: Clothes SS,Breastplate S,Robe SSS,Dress SS,Skimpy SS,",
+        "       Heavy Armor SS,Magic Hat SSS,Buckler S",
+        "Skills: Black Magic,Summoning,Tentacle",
+        "Passive: Magic Eva +20%,Auto-Hit Eva 10%,MP Regen 8%,",
+        "         Crisis MP Cost Zero",
       ]],
     158 => # 妖魔 / Yoma
       [[
@@ -3520,9 +3527,9 @@ module NWConst::JobChange
       ],
       [
         "Equip: Clothes,Armor,Heavy Armor,Robe,Dress,Skimpy,Hat,Helmet",
-        "   Heavy Helmet,Fancy Cap,Buckler,Shield,Heavy Shield",
+        "       Heavy Helmet,Fancy Cap,Buckler,Shield,Heavy Shield",
         "Skills: Rapier,Black Magic,Dark,Demon Arts",
-        "Passive: Rapier Booster 20%",
+        "Passive: Rapier Booster 20%,Dark Skill Booster 50%",
         "",
       ]],
     159 => # 上級妖魔 / High Yoma
@@ -3535,9 +3542,9 @@ module NWConst::JobChange
       ],
       [
         "Equip: Clothes,Armor,Heavy Armor,Robe,Dress,Skimpy,Hat,Helmet",
-        "   Heavy Helmet,Fancy Cap,Buckler,Shield,Heavy Shield",
+        "       Heavy Helmet,Fancy Cap,Buckler,Shield,Heavy Shield",
         "Skills: Rapier,Black Magic,Dark,Demon Arts",
-        "Passive: Rapier Booster 20%",
+        "Passive: Rapier Booster 20%,Dark Skill Booster 50%",
         "",
       ]],
     160 => # 妖魔貴族 / Noble Yoma
@@ -3550,12 +3557,12 @@ module NWConst::JobChange
       ],
       [
         "Equip: Clothes,Armor,Heavy Armor,Robe,Dress,Skimpy,Hat,Helmet",
-        "   Heavy Helmet,Fancy Cap,Buckler,Shield,Heavy Shield",
+        "       Heavy Helmet,Fancy Cap,Buckler,Shield,Heavy Shield",
         "Skills: Rapier,Black Magic,Dark,Demon Arts",
-        "Passive: Rapier Booster 20%",
+        "Passive: Rapier Booster 20%,Dark Skill Booster 50%",
         "",
       ]],
-	161 => # 聖魔 / Holy Yoma
+    161 => # 聖魔 / Holy Yoma
       [[
         "An unusual Yoma who acquired holy power through mutation. Learns Holy attacks in addition to White Magic. Can use magic eyes to heal allies. Attack power is less than a yoma, but their magic is extremely strong.",
         "",
@@ -3565,9 +3572,9 @@ module NWConst::JobChange
       ],
       [
         "Equip: Clothes,Armor,Robe,Dress,Skimpy,Hat,Helmet,Magic Hat",
-        "   Fancy Cap,Buckler,Shield",
+        "       Fancy Cap,Buckler,Shield",
         "Skills: Rapier,White Magic,Black Magic,Holy,Dark,Demon Arts",
-        "Passive: Rapier Booster 20%",
+        "Passive: Rapier Booster 20%,Holy/Dark Skill Booster 50%",
         "",
       ]],
     162 => # 神魔 / Divine Yoma
@@ -3581,9 +3588,9 @@ module NWConst::JobChange
       ],
       [
         "Equip: Clothes,Armor,Robe,Dress,Skimpy,Hat,Helmet,Magic Hat",
-        "   Fancy Cap,Buckler,Shield",
+        "       Fancy Cap,Buckler,Shield",
         "Skills: Rapier,White Magic,Black Magic,Holy,Dark,Demon Arts",
-        "Passive: Rapier Booster 20%",
+        "Passive: Rapier Booster 20%,Holy/Dark Skill Booster 50%",
         "",
       ]],
     163 => # 半獣妖魔 / Bestial Yoma
@@ -3596,10 +3603,10 @@ module NWConst::JobChange
       ],
       [
         "Equip: Fang,Clothes,Breastplate,Armor,Robe,Dress,Skimpy,Hat",
-        "   Helmet,Fancy Cap,Buckler,Shield",
+        "       Helmet,Fancy Cap,Buckler,Shield",
         "Skills: Rapier,Black Magic,Dark,Demon Arts,Beast",
-        "Passive: Crit +15%,Eva +20%,Rumble,Rapier Booster 20%",
-        "",
+        "Passive: Eva +20%,Crit Rate +15%,Rumble,",
+        "         Rapier/Fang Booster 20%,Dark Skill Booster 50%",
       ]],
     164 => # 邪獣妖魔 / Feral Yoma
       [[
@@ -3612,10 +3619,10 @@ module NWConst::JobChange
       ],
       [
         "Equip: Fang,Clothes,Breastplate,Armor,Robe,Dress,Skimpy",
-        "   Hat,Helmet,Fancy Cap,Buckler,Shield",
+        "       Hat,Helmet,Fancy Cap,Buckler,Shield",
         "Skills: Rapier,Black Magic,Dark,Demon Arts,Beast",
-        "Passive: Crit +15%,Eva +20%,War Rumble",
-        "   Rapier Booster 20%",
+        "Passive: Eva +20%,Crit Rate +15%,War Rumble,",
+        "         Rapier/Fang Booster 20%,Dark Skill Booster 50%",
       ]],
     165 => # 古神 / Ancient Deity
       [[
@@ -3629,10 +3636,11 @@ module NWConst::JobChange
       ],
       [
         "Equip: Fang,Clothes,Breastplate,Armor,Robe,Dress,Skimpy",
-        "   Hat,Helmet,Fancy Cap,Buckler,Shield",
+        "       Hat,Helmet,Fancy Cap,Buckler,Shield",
         "Skills: Rapier,White Magic,Black Magic,Holy,Dark,Demon Arts",
-        "   Beast",
-        "Passive: Eva +20%,Rapier Booster 30%",
+        "        Beast",
+        "Passive: Eva +20%,Rapier Booster 30%,Fang Booster 20%,",
+        "         Dark Skill Booster 50%",
       ]],
     166 => # 魔王 / Monster Lord
       [[
@@ -3649,22 +3657,25 @@ module NWConst::JobChange
         "       Magic Hat A,Fancy Cap A,Buckler B,Shield B,Heavy Shield A,",
         "Skills: Rapier,White Magic,Black Magic,Dark,Demon Arts,Beast",
         "Passive: Rapier/Fang Booster 20%,Dark Skill/",
-        "         Dark Element Booster 100%,Dark skill HP Cost 50%",
+        "         Dark Element Booster 100%,HP Cost 50%",
       ]],
-    7414 => # 大魔王
+    7414 => # 大魔王 / Great Monster Lord
       [[
-        "闇の世界に君臨する究極の魔王",
-        "その力は神に並ぶとされ、存在自体が禁じられている",
-        "究極の炎魔法や尖剣技、また世界を闇に閉ざす奥義を修得",
-        "攻撃力も魔力も最高クラスを誇り、あらゆる敵を破壊する",
+        "The ultimate Monster Lord who reigns over the world of darkness. With power said to be on par with the goddesses, her existence itself was made forbidden. The Great Monster Lord learns the ultimate rapier arts and fire magic, as well as secret arts to shroud the world in darkness. Boasting both top-class attack and magic stats, she can destroy any foe.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SS　胸当てSS　鎧SSS　重鎧SSS　ローブSSS",
-        "　　　　　ドレスSSS　薄着SSS　帽子SS　兜SSS　重兜SSS",
-        "　　　　　魔帽SSS　高級帽SSS　軽盾SS　盾SS　重盾SSS",
-        "Skills: 尖剣技　白魔法　黒魔法　闇技　魔技　獣技",
-        "Passive: 尖剣・牙威力アップ　闇技最大限威力アップ",
-        "　　　　　　闇属性スキルHP消費1/4　牙装備可能",
+        "Equip: Fang,Clothes SS,Breastplate SS,Armor SSS,Heavy Armor SSS,",
+        "       Robe SSS,Dress SSS,Skimpy SSS,Heavy Armor SS,Helmet SSS,",
+        "       Heavy Helmet SSS,Magic Hat SSS,Fancy Cap SSS,Buckler SS,",
+        "       Shield SS,Heavy Shield SSS",
+        "Skills: Rapier,White Magic,Black Magic,Dark,Demon Arts,Beast",
+        "Passive: Rapier/Fang Booster 20%,Dark Skill Booster 200%,",
+        "         HP Cost 25%",
       ]],
     167 => # 亜人 / Demi-Human
       [[
@@ -3787,19 +3798,22 @@ module NWConst::JobChange
         "Passive: Crit Rate 15%,Crit Damage +50%,Scythe Booster 20%,",
         "         Battle Start SP Overlimit +20%,SP Cost 50%",
       ]],
-    7415 => # マガツオオミカミ
+    7415 => # マガツオオミカミ / Magatsu-Omikami
       [[
-        "女神によって兵器として作り出された究極の人造亜人",
-        "黄泉の力で稼働し、異世界においては世界を消滅させた",
-        "多腕に様々な神器を携え、ひたすらに破壊と殺戮を行う",
-        "SP消費も非常に少なく、圧倒的な攻撃性能を誇る",
+        "The ultimate artificial demi-human built as a weapon by the Goddess of Creation, she drew her power from the underworld and brought about the annihilation of another world. Wielding various divine weapons with her multiple arms, she focuses solely on slaughter and destruction, and displays overwhelming offensive performance while consuming very little SP.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SSS　武道着SSS　胸当てSS　鎧SS　ドレスS",
-        "　　　　　薄着S　帽子SSS　兜SS　軽盾SS　盾SS",
-        "Skills: 刀技　鎌技　斧技　棍技　陰陽術　魔技",
-        "Passive: 鎌威力アップ　戦闘開始時SP150%　SP消費1/4",
-        "　　　　　　会心ダメージ100%アップ　三刀流　三刀流強化",
+        "Equip: Clothes SSS,Gi SSS,Breastplate SS,Armor SS,Dress S,",
+        "       Skimpy S,Heavy Armor SSS,Helmet SS,Buckler SS,Shield SS",
+        "Skills: Katana,Club,Axe,Scythe,Taoism,Multiweapon,Demon Arts",
+        "Passive: Crit Rate 15%,Crit Damage +100%,Scythe Booster 20%,",
+        "         Battle Start SP Overlimit +50%, SP Cost 25%,",
+        "         Triple Wield, Triple Wield Enhancer",
       ]],
     175 => # インプ / Imp
       [[
@@ -3936,21 +3950,22 @@ module NWConst::JobChange
         "Passive: Eva/Mag Eva/Auto-Hit Eva 15%,Horny/Trance/Seduction/",
         "         Incontinence Strike 20%,Wind/Hadron Res Pierce",
       ]],
-    7416 => # バビロンの大淫婦
+    7416 => # バビロンの大淫婦 / Great Whore of Babylon (Has Untyped pierce intead of Nightmare pierce in the raw game)
       [[
-        "太古の伝説にのみ名を残す最大最悪の大淫魔",
-        "快楽によって全ての男を堕落させ、滅びに導くとされる",
-        "強大な淫術など、数々の淫らなスキルを習得可能",
-        "器用さはもちろん魔力と素早さも卓越し、無類の強さを誇る",
+        "The greatest and most dreadful succubus whose name only remains in ancient legends. Her pleasure was said to corrupt all men and lead them to their ruin. The Great Whore learns many powerful sexcraft skills, and displays unrivaled strength with not just exceptional dexterity, but great agility and magic as well.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SS　武道着SSS　ローブSS　ドレスSSS　薄着SSS",
-        "　　　　　帽子SS　魔帽SS　高級帽SSS　軽盾SSS",
-        "Skills: 格闘　黒魔法　召喚　淫技　魔技　自然感応",
-			"Passive: 淫具装備可能　通常攻撃敏感30%　通常攻撃恍惚30%",
-			"　　　　　　通常攻撃誘惑30%　通常攻撃失禁30%　快楽・風耐性貫通",
-			"　　　　　　全スキルの威力が器用さに依存する",
-        "",
+        "Equip: Sex Toy,Clothes SS,Gi SSS,Robe SS,Dress SSS,Skimpy SSS,",
+        "       Hat SS,Magic Hat SS,Fancy Cap SSS,Buckler SSS",
+        "Skills: Unarmed,Black Magic,Summoning,Sexcraft,Demon Arts,Nature",
+        "Passive: Eva/Mag Eva/Auto-Hit Eva 25%Horny/Trance/Seduction/",
+        "         Incontinence Strike 30%,All Skills Use Dexterity,",
+        "         Wind/Hadron/Pleasure/Nightmare Res Pierce",
       ]],
     184 => # ヴァンパイア / Vampire
       [[
@@ -3963,7 +3978,7 @@ module NWConst::JobChange
         "Equip: Fang,Clothes,Armor,Heavy Armor,Robe,Dress,Hat,Helmet",
         "   Heavy Helmet,Fancy Cap,Buckler,Shield,Heavy Shield",
         "Skills: Dagger,Black Magic,Dark,Demon Arts",
-        "Passive: Dagger Booster 20%",
+        "Passive: Dagger Booster 20%,Dark Skill Booster 50%",
         "",
       ]],
     185 => # ノスフェラトゥ / Nosferatu
@@ -3978,7 +3993,7 @@ module NWConst::JobChange
         "Equip: Fang,Clothes,Armor,Heavy Armor,Robe,Dress,Hat,Helmet",
         "   Heavy Helmet,Fancy Cap,Buckler,Shield,Heavy Shield",
         "Skills: Dagger,Black Magic,Dark,Demon Arts",
-        "Passive: Dagger Booster 20%",
+        "Passive: Dagger Booster 20%,Dark Skill Booster 50%",
         "",
       ]],
     186 => # 夜の帝王 / Night Emperor
@@ -3994,7 +4009,7 @@ module NWConst::JobChange
         "Equip: Fang,Clothes,Armor,Heavy Armor,Robe,Dress,Hat,Helmet",
         "   Heavy Helmet,Fancy Cap,Buckler,Shield,Heavy Shield",
         "Skills: Dagger,Black Magic,Dark,Demon Arts",
-        "Passive: Dagger Booster 20%",
+        "Passive: Dagger Booster 20%,Dark Skill Booster 50%",
       ]],
     187 => # マージヴァンパイア / Vampire Magus
       [[
@@ -4009,7 +4024,7 @@ module NWConst::JobChange
         "Equip: Fang,Clothes,Armor,Robe,Dress,Hat,Helmet,Magic Hat",
         "   Fancy Cap,Buckler,Shield",
         "Skills: Dagger,Black Magic,Summoning,Dark,Demon Arts",
-        "Passive: None",
+        "Passive: Dark Skill Booster 50%",
         "",
       ]],
     188 => # アークヴァンパイア / Arc Vampire
@@ -4025,7 +4040,7 @@ module NWConst::JobChange
         "Equip: Fang,Clothes,Armor,Robe,Dress,Hat,Helmet,Magic Hat",
         "   Fancy Cap,Buckler,Shield",
         "Skills: Dagger,Black Magic,Summoning,Dark,Demon Arts",
-        "Passive: None",
+        "Passive: Dark Skill Booster 50%",
         "",
       ]],
     189 => # シノビヴァンパイア / Vampire Shinobi
@@ -4040,7 +4055,7 @@ module NWConst::JobChange
       [
         "Equip: Clothes,Armor,Robe,Dress,Hat,Helmet,Fancy Cap",
         "Skills: Dagger,Dark,Ninjutsu,Demon Arts",
-        "Passive: Eva +20%,Dual Wield",
+        "Passive: Eva +20%,Dual Wield,Dark Skill Booster 50%",
         "",
       ]],
     190 => # クノイチナイトメア / Nightmare Kunoichi
@@ -4055,7 +4070,7 @@ module NWConst::JobChange
       [
         "Equip: Clothes,Armor,Robe,Dress,Hat,Helmet,Fancy Cap",
         "Skills: Dagger,Dark,Ninjutsu,Demon Arts",
-        "Passive: Eva +20%,Dual Wield",
+        "Passive: Eva +20%,Dual Wield,Dark Skill Booster 50%",
         "",
       ]],
     192 => # クイーンヴァンパイア / Queen Vampire
@@ -4070,7 +4085,7 @@ module NWConst::JobChange
         "Equip: Fang,Clothes,Gi,Armor,Heavy Armor,Robe,Dress,Hat,Helmet",
         "   Heavy Helmet,Fancy Cap,Buckler,Shield,Heavy Shield",
         "Skills: Dagger,Ninjutsu,Black Magic,Summoning,Dark,Demon Arts",
-        "Passive: Eva +20%,Dagger Booster 20%",
+        "Passive: Eva +20%,Dagger Booster 20%,Dark Skill Booster 50%%",
         "",
       ]],
     193 => # ドラキュリーナ / Draculina
@@ -4087,23 +4102,26 @@ module NWConst::JobChange
         "       Hat C,Helmet B,Heavy Helmet B,Fancy Cap A,Buckler B,",
         "       Shield B,Heavy Shield B",
         "Skills: Dagger,Ninjutsu,Black Magic,Summoning,Dark,Demon Arts",
-        "Passive: Eva 20%,Auto-Hit Eva 10%,Dagger Booster 20%,Dark Skill",
+        "Passive: Eva 20%,Auto-Hit Eva 10%,Dagger Booster +20%,Dark Skill",
         "         Booster 100%,Lightning/Ion Res Pierce,Fang Mastery+",
       ]],
-    7417 => # 神祖
+    7417 => # 神祖 / Progenitor
       [[
-        "あらゆる吸血鬼の祖である究極のヴァンパイア",
-        "その膨大な魔力は、世界を夜で覆い尽くすほどだという",
-        "強力な魔技の他に、短剣技の最終奥義を修得する",
-        "また強力な防御スキルを習得し、耐性の穴も補完可能",
+        "The ultimate vampire who is the Progenitor to all of her kind, her vast magical power is said to be capable of shrouding the world in night. In addition to powerful demon arts, the Progenitor also learns the ultimate dagger skills, as well as acquiring strong defensive abilities to cover her weaknesses.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服S　武道着S　鎧SS　重鎧SS　ローブSSS",
-        "　　　　　ドレスSSS　帽子S　兜SS　重兜SS　高級帽SSS",
-        "　　　　　軽盾SS　盾SS　重盾SS",
-        "Skills: 短剣技　忍術　黒魔法　召喚　闇技　魔技",
-        "Passive: 短剣威力アップ　闇技最大限威力アップ　雷耐性貫通",
-        "　　　　　　闇の衣　牙装備可能　牙ハイマスタリー＋",
+        "Equip: Fang,Clothes S,Gi S,Armor SS,Heavy Armor SS,Robe SSS,",
+        "       Dress SSS,Heavy Armor S,Helmet SS,Heavy Helmet SS,",
+        "       Fancy Cap SSS,Buckler SS,Shield SS,Heavy Shield SS",
+        "Skills: Dagger,Ninjutsu,Black Magic,Summoning,Dark,Demon Arts",
+        "Passive: Eva 20%,Auto-Hit Eva 10%,Dagger Booster +20%,",
+        "         Dark Skill Booster 200%,Lightning/Ion Res Pierce,",
+        "         Cloak of Darkness,Fang High Mastery+",
       ]],
     194 => # マーメイド / Mermaid
       [[
@@ -4241,20 +4259,24 @@ module NWConst::JobChange
         "Passive: Sleep Strike 40%,Recovery Booster 50%,Super Sea",
         "         Strength",
       ]],
-    7418 => # ワールドドロウン
+    7418 => # ワールドドロウン / World Drown (Possibly description inaccuracy in the raw text?)
       [[
-        "世界全体を水没させ、文明を滅ぼした悪夢のマーメイド",
-        "その歌声さえも滅びの能力を有し、あらゆる生命を否定する",
-        "破壊だけでなく癒しの力も極限に達し、カウンターで味方を回復強化",
-        "絶大な魔力に隙はなく、いかなる役割もこなす事ができる",
+        "A nightmarish mermaid who submerged the entire world and destroyed all civilization, whose singing even has the capability of denying and destroying all life. Not only have her destructive powers reached their extremes, but her recovery as well, countering attacks by healing and strengthening allies. Her immense magical powers leaves no openings in her defenses, making her capable of fulfilling any role.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SSS　胸当てSS　鎧S　ローブSSS　帽子SSS",
-        "　　　　　兜S　魔帽SSS　高級帽SSS　軽盾S　盾S",
-        "Skills: 白魔法　黒魔法　海賊技　商技　歌う　海技",
-        "Passive: 回復超強化　通常攻撃睡眠50%　海超強化",
-        "　　　　　　ラピッド・ディレイヒールに全状態異常治療効果付加",
-        "　　　　　　敵の攻撃に対し頻繁にリープタイムを発生させる",
+        "Equip: Clothes SSS,Breastplate SS,Armor S,Robe SSS,",
+        "       Heavy Armor SSS,Helmet S,Magic Hat SSS,Fancy Cap SSS,",
+        "       Buckler S,Shield S",
+        "Skills: White Magic,Black Magic,Piracy,Mercantile,Singing,Ocean",
+        "Passive: Sleep Strike 50%,Recovery Booster 75%,",
+        "         Super Sea Strength,Rapid/Delay Heal Cures All Status,",
+        "         Leap Time Counter 30% (15% for Auto-Hit)",
       ]],
     203 => # エルフ / Elf
       [[
@@ -4335,10 +4357,10 @@ module NWConst::JobChange
       ],
       [
         "Equip: Clothes,Gi,Armor,Robe,Dress,Skimpy,Hat,Helmet,Magic Hat",
-        "   Fancy Cap,Buckler,Shield",
+        "       Fancy Cap,Buckler,Shield",
         "Skills: Sword,Black Magic,Dark,Sexcraft,Demon Arts,Tentacle",
-        "   Nature",
-        "Passive: Forest Strength",
+        "        Nature",
+        "Passive: Dark Skill Booster 50%,Forest Strength",
       ]],
     209 => # アークエルフ / Arc Elf
       [[
@@ -4349,10 +4371,10 @@ module NWConst::JobChange
       ],
       [
         "Equip: Clothes,Gi,Armor,Robe,Dress,Skimpy,Hat,Helmet,Magic Hat",
-        "   Fancy Cap,Buckler,Shield",
+        "       Fancy Cap,Buckler,Shield",
         "Skills: Sword,Black Magic,Dark,Sexcraft,Demon Arts,Tentacle",
-        "   Nature",
-        "Passive: Forest Strength",
+        "        Nature",
+        "Passive: Dark Skill Booster 50%,Forest Strength",
       ]],
     210 => # デュラハン / Dullahan
       [[
@@ -4392,10 +4414,10 @@ module NWConst::JobChange
       ],
       [
         "Equip: Clothes,Gi,Armor,Robe,Dress,Skimpy,Hat,Helmet",
-        "   Fancy Cap,Buckler,Shield",
-        "Skills: Sword,Bow,White Magic,Black Magic,Dark,Spellblade",
-        "   Sexcraft,Demon Arts,Plant,Nature",
-        "Passive: Eva +10%,Super Forest Strength,Slayer Boost 100%",
+        "       Fancy Cap,Buckler,Shield",
+        "Skills: Sword,Bow,White Magic,Black Magic,Spellblade",
+        "        Sexcraft,Demon Arts,Plant,Nature",
+        "Passive: Eva +10%,Super Forest Strength,Slayer Booster 100%",
       ]],
     213 => # アルフ神族 / Alph Divine Clan
       [[
@@ -4414,21 +4436,24 @@ module NWConst::JobChange
         "Passive: Eva 10%,Auto-Hit Eva 5%,Slayer/Condition Booster 50%,",
         "         Alph's Protection,Super Forest Strength",
       ]],
-    7419 => # アンゴルモア
+    7419 => # アンゴルモア / Angolmois (Triple Wielding is not mentioned in the raw passives text)
       [[
-        "恐怖の大王と称された史上最強のアルフ神族",
-        "原初ヒトの遺伝子の元ともなった、強大なる破壊的存在",
-        "複腕で幾多の武器を使いこなすが、最も得意なのはやはり弓矢",
-        "能力も総じて高く、目立った弱点は存在しない",
+        "The strongest among the Alph Divine Clan that existed, known as the Great King of Terror. She was a powerful being of destruction who was also the source for the first human genes. While Angolmois has multiple arms she can wield several weapons with, she specializes most in the bow and arrow. Her stats are high all-around and she has no glaring weaknesses.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SSS　武道着SSS　鎧S　ローブSS　ドレスSS",
-        "　　　　　薄着SSS　帽子SSS　兜S　魔帽SS　高級帽SSS",
-        "　　　　　軽盾SS　盾S",
-        "Skills: 剣技　弓技　白魔法　黒魔法　魔法剣　淫技",
-        "　　　　魔技　植物技　自然感応",
-        "Passive: 種族特攻超強化　状態異常特攻超強化",
-        "　　　　　　アンゴルモアの護り　森超強化",
+        "Equip: Clothes SSS,Gi SSS,Armor S,Robe SS,Dress SS,Skimpy SSS,",
+        "       Heavy Armor SSS,Helmet S,Magic Hat SS,Fancy Cap SSS,",
+        "       Buckler SS,Shield S",
+        "Skills: Sword,Bow,White Magic,Black Magic,Spellblade,Sexcraft,",
+        "        Demon Arts,Plant,Nature",
+        "Passive: Eva 10%,Auto-Hit Eva 5%,Slayer/Condition Booster 100%,",
+        "         Angolmois' Protection, Super Forest Strength,",
+        "         Triple Wield,Triple Wield Enhancer",
       ]],
     214 => # フェアリー / Fairy
       [[
@@ -4514,9 +4539,9 @@ module NWConst::JobChange
       [
         "Equip: Robe,Fancy Cap",
         "Skills: White Magic,Black Magic,Summoning,Dark,Dancing,Oracle",
-        "   Nature",
-        "Passive: Eva/Mag Eva +40%,MP Regen +1%,Item Drop 200%",
-        "   Gambling Luck II",
+        "        Nature",
+        "Passive: Eva/Mag Eva +40%,MP Regen +1%,Dark Skill Booster 50%",
+        "         Item Drop Rate 200%,Gambling Luck II",
       ]],
     220 => # アークフェアリー / Arc Fairy
       [[
@@ -4529,9 +4554,9 @@ module NWConst::JobChange
       [
         "Equip: Robe,Fancy Cap",
         "Skills: White Magic,Black Magic,Summoning,Dark,Dancing,Oracle",
-        "   Nature",
-        "Passive: Eva/Mag Eva +40%,MP Regen +2%,Item Drop 300%",
-        "   Gambling Luck III",
+        "        Nature",
+        "Passive: Eva/Mag Eva +40%,MP Regen +2%,Dark Skill Booster 50%,",
+        "         Item Drop Rate 300%,Gambling Luck III",
         "",
       ]],
     221 => # クィーンフェアリー / Queen Fairy
@@ -4544,10 +4569,10 @@ module NWConst::JobChange
       ],
       [
         "Equip: Robe,Fancy Cap",
-        "Skills: White Magic,Black Magic,Summoning,Dark,Oracle,Dancing",
-        "   Plant,Nature",
+        "Skills: White Magic,Black Magic,Summoning,Oracle,Dancing",
+        "        Plant,Nature",
         "Passive: Eva/Mag Eva +50%,MP Regen +4%,MP Cost 50%",
-        "   Item Drop 300%,Gambling Luck III",
+        "         Item Drop Rate 300%,Gambling Luck III",
       ]],
     222 => # コスモフェアリー / Cosmo Fairy
       [[
@@ -4566,19 +4591,21 @@ module NWConst::JobChange
         "         MP Regen 6%,MP Cost 50%,Item Drop Rate 300%,",
         "         Gambling Luck III",
       ]],
-    7420 => # コスモス
+    7420 => # コスモス / Cosmos
       [[
-        "星の意志そのものとも言われる、破壊と守護の神蝶",
-        "生命を栄えさせるのも文明を滅ぼすのも、その意のままだとされる",
-        "銀河の力で全てを消滅させるほどの圧倒的魔力を持ち、素早さも高い",
-        "また、付き従う者達に様々な幸運をもたらすという",
+        "A divine butterfly of protection and destruction said to be the will of the planet itself. Cosmos can make life and civilization either flourish or perish according to her will. She is very agile and possesses overwhelming magical power that can annihilate everything with the galaxy's power. She is also said to bring good luck to those she accompanies.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: ローブSSS　高級帽SSS",
-        "Skills: 白魔法　黒魔法　召喚　オラクル　踊る",
-        "　　　　植物技　自然感応",
-        "Passive: 銀河属性100%アップ　毎ターンMP8%回復　MP消費1/4",
-        "　　　　　　アイテムドロップ5倍",
+        "Equip: Robe SSS,Fancy Cap SSS",
+        "Skills: White Magic,Black Magic,Summoning,Oracle,Dancing,Plant,",
+        "        Nature",
+        "Passive: Eva/Mag Eva/Auto-Hit Eva 50%,Galactic Booster 100%,",
+        "         MP Regen 8%,MP Cost 25%,Item Drop Rate 500%",
         "",
       ]],
     223 => # スライム / Slime
@@ -4693,7 +4720,8 @@ module NWConst::JobChange
       [
         "Equip: Shell,Robe,Fancy Cap",
         "Skills:White Magic,Throwing,Slime",
-        "Passive:Slime Strike 30%,Digestion Strike 20%,Boomerang Booster 30%",
+        "Passive:Slimed Strike 30%,Digestion Strike 20%,",
+        "        Boomerang Booster 30%",
       ]],
     231 => # 究極群体生命 / Ultimate Colony Lifeform
       [[
@@ -4708,21 +4736,25 @@ module NWConst::JobChange
       [
         "Equip: Shell A,Robe A,Fancy Cap A",
         "Skills: White Magic,Throwing,Slime",
-        "Passive: Boomerang Booster 20%,Slime Strike 40%,",
+        "Passive: Boomerang Booster 20%,Slimed Strike 40%,",
         "         Digestion Strike 50%",
       ]],
-    7421 => # カナデ
+    7421 => # カナデ / Kanade
       [[
-        "スライム達の間で祖神として知られている原初の群体生命",
-        "世界を自身の生命で満たすほどの力を誇り、その能力は圧倒的",
-        "究極の分裂技など、強大な力を持つ粘体スキルを習得可能",
-        "属性攻撃と状態異常には弱いが、物理面では無類の防御力を誇る",
+        "The original colony lifeform known as the acestors to all slimes, who revere her like a god. Her abilities are overwhelming, boasting the power to fill the world with her own life. She can learn powerful slime skills such as the ultimate division technique, and while she is weak against elemental attacks and status ailments, her physical defenses are otherwise unmatched.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 甲羅SSS　ローブSSS　高級帽SSS",
-        "Skills: 白魔法　投擲技　粘液技",
-        "Passive: ブーメラン威力アップ　通常攻撃ヌルヌル75%",
-        "　　　　　　通常攻撃消化50%　分裂しても能力低下しない",
+        "Equip: Shell SSS,Robe SSS,Fancy Cap SSS",
+        "Skills: White Magic,Throwing,Slime",
+        "Passive: Boomerang Booster 20%,Slimed Strike 75%,",
+        "         Digestion Strike 50%,Nullify Division Stat Down",
+        "",
       ]],
     232 => # 魔獣 / Beast
       [[
@@ -4905,21 +4937,23 @@ module NWConst::JobChange
         "         Counter Rate 100%,Fang Booster 20%,Blind Strike 40%,",
         "         Fang Mastery+",
       ]],
-    7422 => # 時の神獣
+    7422 => # 時の神獣 / Divine Beast of Time
       [[
-        "時間を管理すると言われている混沌の神獣",
-        "管理者に属する存在ゆえ、神に禁種として指定されていた",
-        "時を自在に操り、異なる空間を行き来するという",
-        "獣としての力も凄まじく、究極の獣技を習得可能",
+        "A divine beast of chaos said to control time. Because her existence is affiliated with the Administrators, she was designated a forbidden race by the goddesses. She can freely manipulate time and travel across different dimensions. Her bestial strength is also incredible, and she is able to learn the ultimate beast skills.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 武道着SS　胸当てSSS　鎧S　甲羅SSS　ローブS",
-        "　　　　　帽子SSS　高級帽SS　軽盾S　盾S",
-        "Skills: 斧技　棍技　鉄球技　格闘　時魔法　盗賊技",
-        "　　　　踊る　獣技",
-        "Passive: 牙威力アップ　通常攻撃暗闇50%　牙装備可能",
-        "　　　　　　牙ハイマスタリー＋　頻繁にリープタイム発動",
-        "",
+        "Equip: Fang,Gi SS,Breastplate SSS,Armor S,Shell SSS,Robe S,",
+        "       Hat SSS,Fancy Cap SS,Buckler S,Shield S",
+        "Skills: Axe,Club,Flail,Unarmed,Time Magic,Thievery,Dancing,Beast",
+        "Passive: Eva 30%,Auto-Hit Eva 25%,Crit Rate 30%, ",
+        "         Counter Rate 100%,Fang Booster 20%,Blind Strike 50%,",
+        "         Leap Time Counter 25% (10% for Auto-Hit),",
+        "         Fang High Mastery+",
       ]],
     245 => # 妖狐 / Kitsune
       [[
@@ -5065,21 +5099,24 @@ module NWConst::JobChange
         "Passive: Eva/Mag Eva/Auto-hit Eva 10%,Fan Booster 20%,",
         "         MP Regen 4%,SP Regen 20%,Earth/Terra Res Pierce",
       ]],
-    7423 => # 白面金毛九尾の狐
+    7423 => # 白面金毛九尾の狐 / Golden Nine-Tailed Kitsune
       [[
-        "全ての力を解き放った禁断の妖狐",
-        "月を喰らい世界を滅ぼすと伝えられ、禁種として指定された",
-        "膨大な魔力を誇り、禁じられた秘術を使いこなす",
-        "陰陽術に忍術、扇技と、いずれも究極の技を修得可能",
+        "A forbidden kitsune that has unleashed her full power. Said to be capable of eating the moon and destroying the world, she was designated a forbidden race. Boasting vast magical powers, she is a master in the use of secret forbidden arts, able to learn the ultimate taoism, ninjutus, and fan skills.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SSS　武道着SS　胸当てSS　鎧SS　ローブSSS",
-        "　　　　　ドレスSSS　薄着SSS　帽子SSS　兜SS　魔帽SSS",
-        "　　　　　高級帽SSS　軽盾SS　盾SS",
-        "Skills: 扇技　黒魔法　陰陽術　忍術　踊る　歌う",
-        "　　　　料理　淫技　獣技　自然感応",
-        "Passive: 扇威力アップ　土耐性貫通　毎ターンSP30%回復",
-        "　　　　　　毎ターンMP8%回復　全スキルの威力が魔力に依存",
+        "Equip: Clothes SSS,Gi SS,Breastplate SS,Armor SS,Robe SSS,",
+        "       Dress SSS,Skimpy SSS,Heavy Armor SSS,Helmet SS,",
+        "       Magic Hat SSS,Fancy Cap SSS,Buckler SS,Shield SS",
+        "Skills: Fan,Black Magic,Taoism,Ninjutsu,Dancing,Singing,Cooking,",
+        "        Sexcraft,Beast,Nature",
+        "Passive: Eva/Mag Eva/Auto-hit Eva 10%,Fan Booster 20%,",
+        "         MP Regen 8%,SP Regen 20%,Earth/Terra Res Pierce,",
+        "         All Skills Use Magic",
       ]],
     254 => # ラミア / Lamia
       [[
@@ -5249,20 +5286,23 @@ module NWConst::JobChange
         "Passive: Counter Rate 75%,Stun Strike 40%,Flail Booster 20%,",
         "         Crisis All Stats Up",
       ]],
-    7424 => # 淫欲の堕蛇
+    7424 => # 淫欲の堕蛇 / Serpent of Lust
       [[
-        "神の楽園に潜み、ヒトを堕落させる悪魔の蛇",
-        "人間全てを失楽させる存在として、神に禁種として指定された",
-        "強力な快楽技や巻き付き技で、全てを堕落させる",
-        "最強の鉄球奥義も修得し、戦闘能力は神にも匹敵する",
+        "A devilish serpent lurking within the Goddess' paradise who corrupts humans. Designated as a forbidden race by the Goddess, the Serpent's mere presence brought depraving joy to all humans. Uses powerful pleasure and coiling skills to corrupt everyone, and with their additional mastery of the ultimate flail skills, the Serpent of Lust's combat capabilities are comparable to a god's.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服S　武道着S　胸当てSSS　鎧SSS　ローブS",
-        "　　　　　薄着S　帽子S　兜SSS　高級帽S　軽盾SSS　盾SSS",
-        "Skills: 鉄球技　白魔法　踊る　魔技　蛇技",
-        "Passive: 鉄球威力アップ　カウンター100%　通常攻撃スタン75%",
-        "　　　　　　瀕死時超強化　鉄球技・蛇技防御力無視",
-        "　　　　　　拘束された仲間がいると無限蛇の踊り発動",
+        "Equip: Clothes S,Gi S,Breastplate SSS,Armor SSS,Robe S,Skimpy S,",
+        "       Hat S,Helmet SSS,Fancy Cap S,Buckler SSS,Shield SSS",
+        "Skills: Flail,White Magic,Dancing,Demon Arts,Snake",
+        "Passive: Counter Rate 100%,Stun Strike 75%,Flail Booster 20%,",
+        "         Crisis All Stats Up*3,Flail/Snake Defense Ignore,",
+        "         Auto Endless Snake Dance (if ally is bound)",
       ]],
     265 => # スキュラ / Scylla
       [[
@@ -5404,19 +5444,22 @@ module NWConst::JobChange
         "Passive: Chaotic Attack,Tentacle Skill +1,Tentacle Combo +1",
         "         Whip Booster 20%",
       ]],
-    7425 => # 正体不明触手禍
+    7425 => # 正体不明触手禍 / Unidentified Tentacle Disaster
       [[
-        "非常に謎の多い触手生命体",
-        "異世界の触手生物の遺伝子を持ち、神によって禁種とされた",
-        "世界を触手で覆い尽くし、生あるものを嫐り尽くすという",
-        "究極の触手技を習得できる他、多武器の扱いにも長けている",
+        "A very enigmatic tentacled lifeform possessing the genes of an extradimensional tentacled being, it was declared a forbidden race by the goddesses. Said to be capable of covering the entire world with their tentacles to ravage all life on it. In addition to being able to master the ultimate tentacle skills, it also excels at wielding multiple weapons.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SSS　武道着SSS　胸当てSS　鎧S　ローブS",
-        "　　　　　薄着S　帽子SSS　兜S　高級帽SS",
-        "Skills: 刀技　多武器技　御奉仕　触手技",
-        "Passive: 皆伝乱れ撃ち　触手技三連続発動　鞭威力アップ",
-        "　　　　　　触手技連撃回数2アップ",
+        "Equip: Clothes SSS　Gi SSS,Breastplate SS,Armor S,Robe S,",
+        "       Skimpy S,Hat SSS,Helmet S,Fancy Cap SS",
+        "Skills: Katana,Multiweapon,Service,Tentacle",
+        "Passive: Chaotic Assault,Tentacle Skill +2,Tentacle Combo +2,",
+        "         Whip Booster 20%",
       ]],
     274 => # ハーピー / Harpy
       [[
@@ -5555,20 +5598,22 @@ module NWConst::JobChange
         "Passive: Eva/Mag Eva/Auto-Hit Eva 40%,Crit Rate 15%,",
         "         Fan Booster 20%,1-time Auto-Revive",
       ]],
-    7426 => # フェニックス
+    7426 => # フェニックス / Phoenix
       [[
-        "燃えさかる巨鳥の姿をなした宇宙波動生命体",
-        "不滅の生命力を備えており、神によって禁種とされた",
-        "生命エネルギーを支配し、惑星の全てを無に還すという",
-        "何度倒されても蘇り、防御の薄さはものともしない",
+        "A cosmic wave lifeform that assumes the form of a gigantic fiery bird. Possessing immortal life force, it was designated a forbidden race by the goddesses. She controls life energy, and is capable of returning the entire planet to nothingness. No matter how many times she is defeated, she can revive again, making her otherwise weak defenses irrelevant.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SS　武道着SS　胸当てSSS　鎧S　薄着SSS",
-        "　　　　　帽子SSS　兜S　高級帽SSS",
-        "Skills: 槍技　扇技　盗賊技　踊る　獣技　翼技",
-        "　　　　ブレス",
-        "Passive: 扇威力アップ　戦闘不能時3回自動復活",
-        "",
+        "Equip: Clothes SS,Gi SS,Breastplate SSS,Armor S,Skimpy SSS,",
+        "       Hat SSS,Helmet S,Fancy Cap SSS",
+        "Skills: Spear,Fan,Thievery,Dancing,Beast,Wing,Breath",
+        "Passive: Eva/Mag Eva/Auto-Hit Eva 40%,Crit Rate 15%,",
+        "         Fan Booster 20%,3-time Auto-Revive",
       ]],
     283 => # ドラゴン / Dragon
       [[
@@ -5626,7 +5671,7 @@ module NWConst::JobChange
         "   Heavy Helmet,Buckler,Shield,Heavy Shield",
         "Skills: White Magic,Black Magic,Time Magic,Holy,Dark,Beast",
         "   Breath",
-        "Passive: None",
+        "Passive: Holy/Dark Skill Booster 50%",
       ]],
     287 => # 飛竜 / Wyvern
       [[
@@ -5706,22 +5751,25 @@ module NWConst::JobChange
         "Passive: Triple SP Charge,Fang Booster 20%,Fang Mastery+,",
         "         Physical/Carnage Res Pierce",
       ]],
-    7427 => # 虚竜
+    7427 => # 虚竜 / Koron
       [[
-        "邪神によって存在が抹消された零番目の六祖",
-        "あらゆる存在と比しても最強と賞され、禁種として指定された",
-        "凄まじい威力のブレスや、独自に編み出した剣技を修得",
-        "能力も耐性も極めて高く、神をも上回る力を誇る",
+        "The Zeroth Ancestor, whose existence was erased by the Dark Goddess. Hailed as the strongest being of all, she was designated a forbidden race. Learns tremendously powerful breath attacks and sword skills of her own devising. With all-around extremely high stats and resistances as well, she boasts power surpassing even the goddesses.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服S　胸当てSS　鎧SS　重鎧SSS　帽子S　兜SS",
-        "　　　　　重兜SSS　軽盾S　盾SS　重盾SSS",
-        "Skills: 短剣技　剣技　刀技　格闘　白魔法　黒魔法",
-        "　　　　時魔法　聖技　闇技　魔法剣　獣技　翼技",
-        "　　　　自然感応　ブレス",
-        "Passive: 聖技・闇技大幅威力アップ　牙威力アップ　牙装備可能",
-        "　　　　　　SPチャージ5倍　物理耐性貫通　瀕死時SP消費なし",
-        "　　　　　　牙ハイマスタリー＋",
+        "Equip: Fang,Clothes S,Breastplate SS,Armor SS,Heavy Armor SSS,",
+        "       Hat S,Helmet SS,Heavy Helmet SSS,Buckler S,Shield SS,",
+        "       Heavy Shield SSS",
+        "Skills: Dagger,Sword,Katana,Unarmed,White Magic,Black Magic,",
+        "        Time Magic,Holy,Dark,Spellblade,Beast,Wing,Nature,",
+        "        Breath",
+        "Passive: Critical Rate +30%,Holy/Dark Skill Booster 100%,",
+        "         Fang Booster 20%,Penta SP Charge,Physical/Carnage",
+        "         Res Pierce,Crisis SP Cost Zero,Fang High Mastery+",
       ]],
     293 => # 陸棲種 / Land-Dweller
       [[
@@ -5840,23 +5888,26 @@ module NWConst::JobChange
         "Equip: Clothes C,Gi C,Breastplate B,Shell A,Robe C,Hat A,",
         "       Fancy Cap B,Buckler C",
         "Skills: Bow,Slime,Beast,Tentacle,Breath",
-        "Passive: Slime Strike 30%,Ultimate Metabolism,Nullify Ambush,",
+        "Passive: Slimed Strike 30%,Ultimate Metabolism,Nullify Ambush,",
         "         Preemptive Strike Up,Super Endure,Null Dmg <= 3000",
       ]],
-    7428 => # 次元侵蝕者
+    7428 => # 次元侵蝕者 / Dimensional Eroder
       [[
-        "異なる次元から侵蝕してくる正体不明の触手粘液生命体",
-        "世界を触手と粘液で満たし同一化、神をも恐れさせる存在である",
-        "非常に高い防御性能を備え、卓越した生命力を誇る",
-        "習得できるスキルも極めて強力で、無類の力を発揮する",
+        "An unidentified slimy tentacled lifeform invading from another dimension. Filling the world with slime and tentacles and making it one with her, she is a being feared by even the goddesses. She boasts incredible vitality and has very high defensive capabilities. The skills she acquires are also extremely powerful, allowing her to display unparalleled might",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服S　武道着S　胸当てSS　甲羅SSS　ローブS",
-        "　　　　　帽子SSS　高級帽SS　軽盾S",
-        "Skills: 弓技　粘液技　獣技　触手技　ブレス",
-        "Passive: 究極代謝　不意打ち無効　先制攻撃アップ",
-        "　　　　　　超食いしばり　50000以下ダメージ無効",
-        "　　　　　　ターン終了時自動捕食",
+        "Equip: Clothes S　Gi S,Breastplate SS,Shell SSS,Robe S,",
+        "       Hat SSS,Fancy Cap SS,Buckler S",
+        "Skills: Bow,Slime,Beast,Tentacle,Breath",
+        "Passive: Slimed Strike 50%,Ultimate Metabolism,Nullify Ambush,",
+        "         Preemptive Strike Up,Ultimate Endure,",
+        "         Null Dmg <= 50000,Turn End Auto Digestive Space",
+        "         (requires bound/digested/slimed/entranced foes)",
       ]],
     301 => # 海棲種 / Sea-Dweller
       [[
@@ -5979,19 +6030,22 @@ module NWConst::JobChange
         "Passive: Super Sea/Deep Sea Strength,Water/Nano Res Pierce",
         "         Tentacle Defense Ignore",
       ]],
-    7429 => # 名状しがたきもの
+    7429 => # 名状しがたきもの / Nameless One
       [[
-        "太古の昔、外宇宙から飛来した異界の邪神",
-        "深い海底で眠り続け、強大なる力ゆえに禁種とされた",
-        "惑星そのものを消滅させるほど強力なスキルを習得可能",
-        "各種耐性も卓越しており、万能の強さを誇る",
+        "An evil god from another world who came to this one from outer space long, long ago. She slumbered deep beneath the sea, and was designated a forbidden race for her immense power. The Nameless One is able to learn skills powerful enough to wipe out the entire planet and has excellent resistances to many types of attacks, making her very strong all-around.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 胸当てSS　甲羅SSS　ローブSS　薄着SS　魔帽SS",
-        "　　　　　高級帽SSS　軽盾SS",
-        "Skills: 踊る　歌う　淫技　海技　触手技",
-        "Passive: 水耐性貫通　触手技防御力無視　海超強化　深海超強化",
-        "　　　　　　敵の状態異常に応じてクトゥルフの呼び声発動",
+        "Equip: Breastplate SS,Shell SSS,Robe SS,Skimpy SS,Magic Hat SS,",
+        "       Fancy Cap SSS,Buckler SS",
+        "Skills: Dancing,Singing,Sexcraft,Ocean,Tentacle",
+        "Passive: Super Sea/Deep Sea Strength,Water/Nano Res Pierce,",
+        "         Tentacle Defense Ignore,Auto Call of Cthulhu",
+        "         (requires bound/sleeping/confused foes)",
       ]],
     309 => # 妖虫 / Insect
       [[
@@ -6127,22 +6181,24 @@ module NWConst::JobChange
         "Equip: Clothes C,Gi C,Breastplate B,Shell A,Robe C,Dress C,",
         "       Skimpy C,Hat A,Magic Hat C,Fancy Cap A",
         "Skills: Unarmed,Time Magic,Insect",
-        "Passive: Perfect Counter,Counter Damage *10,Ultimate Defense,",
+        "Passive: Perfect Counter,Counter Damage*10,Ultimate Defense,",
         "         Super Desert Strength",
       ]],
-    7430 => # バアル・ゼブル
+    7430 => # バアル・ゼブル / Baal Zebub
       [[
-        "高き天空に君臨するという禁断の幻蟲",
-        "集合意識を通じ、世界そのものと統合しようとしている",
-        "万物をハイブマインドに誘う強力スキルを複数習得",
-        "また卓越した防御性能を誇り、生残性が極めて高い",
+        "A forbidden phantasmal insect who rules from high in the skies, attempting to integrate the world itself with a collective consciousness. Baal Zebub learns many powerful skills to lure all things into her hivemind, as well as boasting outstanding defensive abilities and incredible survivability.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服S　武道着S　胸当てSS　甲羅SSS　ローブS",
-        "　　　　　ドレスS　薄着S　帽子SSS　魔帽S　高級帽SSS",
-        "Skills: 格闘　時魔法　虫技",
-        "Passive: 超究極防御　砂漠超強化　反撃ダメージ4段階強化",
-        "　　　　　　完全カウンター",
+        "Equip: Clothes S,Gi S,Breastplate SS,Shell SSS,Robe S,Dress S,",
+        "       Skimpy S,Hat SSS,Magic Hat S,Fancy Cap SSS",
+        "Skills: Unarmed,Time Magic,Insect",
+        "Passive: Perfect Counter,Counter Damage*20,Ultimate Defense,",
+        "         Super Desert Strength",
       ]],
     319 => # アルラウネ / Alraune
       [[
@@ -6281,23 +6337,25 @@ module NWConst::JobChange
         "Skills: Whip,White Magic,Black Magic,Slime,Plant",
         "Passive: Whip Booster 20%,Poison/Confusion/Paralyze Strike 20%,",
         "         Digestion/Trance Strike 15%,Recovery Booster 50%,",
-        "         Ultimate Medicine,Pollen Success Up",
+        "         Ultimate Medicine,Pollen Success Up 50%",
       ]],
-    7431 => # 千樹華音
+    7431 => # 千樹華音 / Thousand Trees Kanon
       [[
-        "星の精を吸い上げ成長するという究極の魔樹",
-        "大地の命と引き替えに花を咲かせ、禁種に指定された",
-        "そのツタは大地を埋め、その花粉は終末をもたらすという",
-        "また鞭技の究極奥義を修得し、絶大な力を発揮する",
+        "The ultimate tree monster that grew by absorbing the energy of the planet, her flowers blooming in exchange for the earth's life force, and was designated a forbidden race. Her ivy can cover the earth while her pollen can bring life to its end. She can also master the ultimate whip skills, displaying tremendous power with them. ",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 武道着S　胸当てSS　ローブSSS　帽子SS",
-        "　　　　　魔帽SSS　高級帽SSS　軽盾SS",
-        "Skills: 鞭技　白魔法　黒魔法　粘液技　植物技",
-        "Passive: 通常攻撃毒30%　通常攻撃混乱30%　通常攻撃麻痺30%",
-        "　　　　　　究極薬効　鞭威力アップ　植物技状態異常率アップ",
-        "　　　　　　植物技の全体回復・治療技を控えの仲間にも適用",
-        "",
+        "Equip: Gi S,Breastplate SS,Robe SSS,Hat SS,Magic Hat SSS,",
+        "       Fancy Cap SSS,Buckler SS",
+        "Skills: Whip,White Magic,Black Magic,Slime,Plant",
+        "Passive: Whip Booster 20%,Poison/Confusion/Paralyze Strike 30%,",
+        "         Digestion/Trance Strike 20%,Recovery Booster 50%,",
+        "         Ultimate Medicine,Pollen Success Up 50%,",
+        "         Plant Reserve Ally Recovery",
       ]],
     328 => # ゾンビ / Zombie
       [[
@@ -6419,20 +6477,23 @@ module NWConst::JobChange
         "Passive: Poison/Mini/Zombie/Petrify Strike 20%,",
         "         Club/Medicine/Corpse Persistence",
       ]],
-    7432 => # ノーライフキング
+    7432 => # ノーライフキング / No Life King
       [[
-        "世の摂理を否定した不滅の反生命存在",
-        "物理法則のバグを利用した形で、消滅せず現世に残り続ける",
-        "それゆえに戦闘不能になっても毎ターン終了時に自動復活",
-        "生命力や攻撃力も非常に高く、肉弾戦で力を発揮する",
+        "An immortal anti-life being who defies the natural laws of the world, and remains in the present world without dying by taking advantage of a bug in the laws of physics. Thus the No Life King will automatically revive at the end of each turn whenever rendered unable to fight. Also very effective in straight-up combat, possessing extremely high vitality and offensive strength.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SSS　胸当てSSS　鎧SS　重鎧S　ローブS",
-        "　　　　　帽子SSS　兜SS　重兜S　魔帽S",
-        "Skills: 棍技　黒魔法　踊る　魔導科学　錬金術　医術",
-        "　　　　魔技　屍技　ブレス",
-        "Passive: 通常攻撃毒30%　通常攻撃ミニマム30%　通常攻撃ゾンビ30%",
-        "　　　　　　通常攻撃石化30%　棍技・医術・屍技頑強発動　不滅の肉体",
+        "Equip: Clothes SSS,Breastplate SSS,Armor SS,Heavy Armor S,",
+        "       Robe S,Hat SSS,Helmet SS,Heavy Helmet S,Magic Hat S",
+        "Skills: Club,Black Magic,Dancing,Magic Science,Alchemy,Medicine,",
+        "        Demon Arts,Corpse,Breath",
+        "Passive: Poison/Mini/Zombie/Petrify Strike 30%,",
+        "         Club/Medicine/Corpse Persistence,Immortal Body",
       ]],
     336 => # ゴースト / Ghost
       [[
@@ -6444,7 +6505,7 @@ module NWConst::JobChange
       [
         "Equip: Robe,Magic Hat",
         "Skills: Scythe,Black Magic,Corpse",
-        "Passive: Eva +30%,Scythe Booster 20%,Mag Ref +10%",
+        "Passive: Eva +30%,Scythe Booster 20%,Magic Reflect 10%",
         "   Death Strike +5%",
         "",
       ]],
@@ -6460,7 +6521,7 @@ module NWConst::JobChange
       [
         "Equip: Robe,Magic Hat",
         "Skills: Scythe,Black Magic,Corpse",
-        "Passive: Eva +30%,Scythe Booster 20%,Mag Ref +30%",
+        "Passive: Eva +30%,Scythe Booster 20%,Magic Reflect 30%",
         "   Death Strike +10%",
         "",
       ]],
@@ -6475,7 +6536,7 @@ module NWConst::JobChange
       [
         "Equip: Robe,Magic Hat",
         "Skills: Scythe,Black Magic,Corpse",
-        "Passive: Eva +30%,Scythe Booster 20%,Mag Ref +50%",
+        "Passive: Eva +30%,Scythe Booster 20%,Magic Reflect 50%",
         "   Death Strike +20%",
         "",
       ]],
@@ -6554,19 +6615,21 @@ module NWConst::JobChange
         "         Death Strike 50%,Scythe Booster 20%,",
         "         Dark Skill Booster 100%,Super Cave Strength",
       ]],
-    7433 => # 死神
+    7433 => # 死神 / Reaper
       [[
-        "冥府に君臨し、万物の死を統括する支配者",
-        "神にも届かぬ力を疎んじられ、禁種として指定された",
-        "鎌技の究極奥義や、強力な炎術を修得可能",
-        "魔法を全て反射するという、強力な能力を持つ",
+        "The ruler of Hades, who governs the death of all living things. Her power, which surpasses even the goddesses, was shunned, and her race was designated as forbidden. The Reaper learns the ultimate scythe skills and powerful fire arts, in addition to possessing the strong innate ability to reflect magic.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: ローブSSS　帽子SSS　魔帽SSS　軽盾S　盾S",
-        "Skills: 鎌技　黒魔法　闇技　錬金術　魔本術　粘液技",
-        "　　　　屍技",
-        "Passive: 通常攻撃即死100%　完全魔法反射　鎌威力アップ",
-        "　　　　　　屍技頑強発動　洞窟超強化　闇技最大限威力アップ",
+        "Equip: Robe SSS,Hat SSS,Magic Hat SSS,Buckler S,Shield S",
+        "Skills: Scythe,Black Magic,Dark,Alchemy,Grimoire,Slime,Corpse",
+        "Passive: Eva 30%,Auto-Hit Eva 15%,Magic Reflect 100%,",
+        "         Death Strike 100%,Scythe Booster 20%,Corpse Persistence,",
+        "         Dark Skill Booster 100%,Super Cave Strength",
       ]],
     344 => # ドール / Doll
       [[
@@ -6685,20 +6748,21 @@ module NWConst::JobChange
         "Skills: Gun,Dancing,Singing,Makina,Service,Demon Arts,Artificial",
         "Passive: Ultimate Endure",
       ]],
-    7434 => # 影、紬ぐ人形
+    7434 => # 影、紬ぐ人形 / Kagetsumugi Doll
       [[
-        "禁術に手を出した天才人形遣いが仕上げた禁断の人形",
-        "人知を超えた技術により、史上類を見ない強さを誇る",
-        "あまりにも危険な技能や、未知の踊りに歌を習得",
-        "混沌属性に対する耐性も僅かながら増している",
+        "A forbidden doll created by a genius puppeteer who dabbled in taboo arts. Built with technology beyond human comprehension, she boasts unprecedented strength. Learns to use skills far too dangerous for mortals, in addition to unknown songs and dances. She is also resistant to most chaos elements as well.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SSS　胸当てS　甲羅S　ローブSS　ドレスSSS",
-        "　　　　　薄着SSS　帽子SSS　高級帽SSS　兜S　軽盾SS",
-        "　　　　　盾SS",
-        "Skills: 銃技　踊る　歌う　マキナ　御奉仕　魔技",
-        "　　　　造技",
-        "Passive: 究極食いしばり　混沌属性軽減",
+        "Equip: Clothes SSS,Breastplate S,Shell S,Robe SS,Dress SSS,",
+        "       Skimpy SSS,Hat SSS,Fancy Cap SSS,Helmet S,Buckler SS,",
+        "       Shield SS",
+        "Skills: Gun,Dancing,Singing,Makina,Service,Demon Arts,Artificial",
+        "Passive: Ultimate Endure",
       ]],
     354 => # キメラ / Chimera
       [[
@@ -6820,19 +6884,21 @@ module NWConst::JobChange
         "        Artificial,Breath",
         "Passive: 6-Turn MP/SP Cost 50%",
       ]],
-    7435 => # オメガタイプ
+    7435 => # オメガタイプ / Omega Type
       [[
-        "神の技術を投入して完成した究極のウェポンタイプ",
-        "無尽蔵の力で、文明を灰燼に帰するほどの力を所持している",
-        "習得スキルも極めて強力で、究極兵器の名に相応しい",
-        "また戦闘開始時に魔力や気力の消費はなく、縦横に荒れ狂う",
+        "The ultimate Weapon Type created using the technology of the gods. It possessed inexhaustible power and was strong enough to reduce civilizations to ashes. The Omega Type learns extremely powerful skills worthy of the title of Ultimate Weapon, and its ability to consume no MP or SP for the first few turns of battle also allows it to immediately go all-out.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 胸当てSSS　甲羅SSS　薄着SS　帽子SS　兜SSS",
-        "　　　　　軽盾SS　盾SS",
-        "Skills: 銃技　白魔法　黒魔法　マキナ　魔技",
-        "　　　　獣技　造技　ブレス",
-        "Passive: 戦闘開始後4ターンMPおよびSP消費ゼロ",
+        "Equip: Breastplate SSS,Shell SSS,Skimpy SS,Hat SS,Helmet SSS,",
+        "       Buckler SS,Shield SS",
+        "Skills: Gun,White Magic,Black Magic,Makina,Demon Arts,Beast,",
+        "        Artificial,Breath",
+        "Passive: 4-Turn MP/SP Cost Zero",
         "",
       ]],
     362 => # 下位天使 / Lowly Angel
@@ -6846,8 +6912,8 @@ module NWConst::JobChange
         "Equip: Clothes,Armor,Heavy Armor,Robe,Dress,Skimpy,Hat,Helmet",
         "   Heavy Helmet,Magic Hat,Fancy Cap,Buckler,Shield,Heavy Shield",
         "Skills: Dagger,Sword,Rapier,White Magic,Holy",
-        "Passive: Eva/Mag Eva +10%,Body of Divine Protection",
-        "",
+        "Passive: Eva/Mag Eva +10%,Holy Skill Booster 50%,",
+        "         Body of Divine Protection",
       ]],
     363 => # 中位天使 / Mid-Ranking Angel
       [[
@@ -6862,7 +6928,7 @@ module NWConst::JobChange
         "Equip: Clothes,Armor,Heavy Armor,Robe,Dress,Skimpy,Hat,Helmet",
         "   Heavy Helmet,Magic Hat,Fancy Cap,Buckler,Shield,Heavy Shield",
         "Skills: Dagger,Sword,Rapier,White Magic,Holy",
-        "Passive: Eva/Mag Eva +10%,Body of Grace",
+        "Passive: Eva/Mag Eva +10%,Holy Skill Booster 50%,Body of Grace",
         "",
       ]],
     364 => # 上位天使 / High Angel
@@ -6877,8 +6943,8 @@ module NWConst::JobChange
         "Equip: Clothes,Armor,Heavy Armor,Robe,Dress,Skimpy,Hat,Helmet",
         "   Heavy Helmet,Magic Hat,Fancy Cap,Buckler,Shield,Heavy Shield",
         "Skills: Dagger,Sword,Rapier,White Magic,Holy",
-        "Passive: Eva/Mag Eva +10%,Body of Miracles",
-        "",
+        "Passive: Eva/Mag Eva +10%,Holy Skill Booster 50%,",
+        "         Body of Miracles",
       ]],
     365 => # 堕天使 / Fallen Angel
       [[
@@ -6893,8 +6959,8 @@ module NWConst::JobChange
         "Equip: Clothes,Armor,Heavy Armor,Robe,Dress,Skimpy,Hat,Helmet",
         "   Heavy Helmet,Magic Hat,Fancy Cap,Buckler,Shield,Heavy Shield",
         "Skills: Dagger,Sword,Rapier,Black Magic,Holy,Dark",
-        "Passive: Eva/Mag Eva +10%,Body of Miracles",
-        "",
+        "Passive: Eva/Mag Eva +10%,Holy/Dark Skill Booster 50%,",
+        "         Body of Miracles",
       ]],
     366 => # ヴァルキリー / Valkyrie
       [[
@@ -6908,7 +6974,7 @@ module NWConst::JobChange
         "Equip: Clothes,Armor,Heavy Armor,Robe,Dress,Skimpy,Hat,Helmet",
         "   Heavy Helmet,Magic Hat,Fancy Cap,Buckler,Shield,Heavy Shield",
         "Skills: Dagger,Sword,Rapier,Spear,Holy,Spellblade",
-        "Passive: Eva/Mag Eva +10%,Body of Grace",
+        "Passive: Eva/Mag Eva +10%,Holy Skill Booster 50%,Body of Grace",
         "",
       ]],
     367 => # ロードヴァルキリア / Valkyrie Lord
@@ -6939,8 +7005,8 @@ module NWConst::JobChange
         "Equip: Clothes,Gi,Robe,Dress,Skimpy,Hat,Magic Hat,Fancy Cap",
         "   Buckler",
         "Skills: Bow,White Magic,Black Magic,Holy,Sexcraft",
-        "Passive: Eva/Mag Eva +30%,Body of Grace",
-        "   Seduction Strike 20%",
+        "Passive: Eva/Mag Eva +30%,Holy Skill Booster 50%,",
+        "         Seduction Strike 10%,Body of Grace",
       ]],
     369 => # 淫欲のクピド / Cupid of Lust
       [[
@@ -6954,8 +7020,8 @@ module NWConst::JobChange
         "Equip: Clothes,Gi,Robe,Dress,Skimpy,Hat,Magic Hat,Fancy Cap",
         "   Buckler",
         "Skills: Bow,White Magic,Black Magic,Holy,Sexcraft",
-        "Passive: Eva/Mag Eva +30%,Body of Miracles",
-        "   Seduction Strike +40%",
+        "Passive: Eva/Mag Eva +30%,Holy Skill Booster 50%,",
+        "         Seduction Strike +20%,Body of Miracles",
         "",
       ]],
     370 => # 熾天使 / Seraph
@@ -6975,110 +7041,129 @@ module NWConst::JobChange
         "Passive: Eva/Mag Eva/Auto-Hit Eva 10%,Holy Skill Booster 100%,",
         "         Body of Divinity",
       ]],
-    7436 => # 天の軍団長
+    7436 => # 天の軍団長 / Commander of Heaven's Army
       [[
-        "あらゆる天使の頂点に立つ最高位の天使",
-        "神に天上の武力を委託され、天使の軍団を率いる",
-        "究極の剣技と呼ばれる天軍の剣を修得可能",
-        "また聖なる力を操り、神敵を滅ぼし尽くす",
-      ],
-      [
-        "Equip: 服SS　武道着SS　鎧SSS　重鎧SSS　ローブS",
-        "　　　　　ドレスSS　薄着SS　帽子SS　兜SSS　重兜SSS　魔帽S",
-        "　　　　　高級帽SS　軽盾SSS　盾SSS　重盾SSS",
-        "Skills: 短剣技　剣技　尖剣技　白魔法　時魔法　聖技",
-        "Passive: 聖技最大限威力アップ　神代の肉体　物理反射",
-      ]],
-    7437 => # 明けの明星
-      [[
-        "最高位の天使でありながら堕天し、神に背いた存在",
-        "最強の堕天使と伝えられ、世界を破滅へと回帰させるという",
-        "自らの異名を冠した奥義「明けの明星」を使用可能",
-        "弓の腕前も凄まじく、天地に及ぶ者はないという",
-      ],
-      [
-        "Equip: 服SS　武道着SS　鎧SS　重鎧SS　ローブSSS",
-        "　　　　　ドレスSSS　薄着SSS　帽子SS　兜SS　重兜SS",
-        "　　　　　魔帽SSS　高級帽SSS　軽盾SSS　盾SSS　重盾SSS",
-        "Skills: 弓技　白魔法　黒魔法　時魔法　聖技　闇技",
-        "Passive: 聖技・闇技最大限威力アップ　神代の肉体　魔法反射",
-      ]],
-    7438 => # 慈愛の聖百合
-      [[
-        "女神により新たに創造された七大天使の一人",
-        "慈愛と審判を告げる聖百合とされている",
-        "癒やしの力を極め、聖技と癒やしの技を同時に発動可能",
-        "また植物を自在に操り、己の手足として使いこなす",
-      ],
-      [
-        "Equip: 服SS　武道着SS　鎧S　重鎧S　ローブSSS",
-        "　　　　　ドレスSSS　薄着SSS　帽子SS　兜S　重兜S",
-        "　　　　　魔帽SSS　高級帽SSS　軽盾SS",
-        "Skills: 鞭技　白魔法　聖技　植物技",
-        "Passive: 聖技最大限威力アップ　神代の肉体",
-        "　　　　　　戦闘開始時「ガブリエラの大加護」発動",
+        "The highest-ranking angel who stands at the top above all others, entrusted by Ilias with Heaven's military might and commands the angel armies. The Commander learns the ultimate sword skill, Sword of Heaven's Army, and wields holy powers to purge the enemies of the Goddess.",
         "",
-      ]],
-    7439 => # 律法の守護者
-      [[
-        "女神により新たに創造された七大天使の一人",
-        "律法を守護し、古今東西の魔法を修めていると言われる",
-        "聖技を使用した際、全ての味方を守護する事が可能",
-        "また清純な外見とは裏腹に、淫らな本性を備えているという",
-      ],
-      [
-        "Equip: 服SS　武道着SS　鎧S　重鎧S　ローブSSS",
-        "　　　　　ドレスSSS　薄着SSS　帽子SS　兜S　重兜S",
-        "　　　　　魔帽SSS　高級帽SSS　軽盾SS",
-        "Skills: 白魔法　黒魔法　時魔法　聖技　魔本術　淫技",
-        "Passive: 聖技最大限威力アップ　神代の肉体",
-        "　　　　　　聖技後「聖者の守護」発動",
         "",
-      ]],
-    7440 => # 天界決戦兵器
-      [[
-        "女神により新たに創造された七大天使の一人",
-        "破壊と憤怒を司り、神の炎を統べるとされる",
-        "その力は絶大であり、全身に破壊兵器を組み込んでいるという",
-        "聖技を使用した際、同時に複数のミサイルを発射する",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SS　武道着SS　鎧SSS　重鎧SSS　ローブS",
-        "　　　　　ドレスS　薄着S　帽子SS　兜SSS　重兜SSS　魔帽S",
-        "　　　　　高級帽S　軽盾SS　盾SS　重盾SS",
-        "Skills: 格闘　聖技　マキナ　造技",
-        "Passive: 聖技最大限威力アップ　神代の肉体",
-        "　　　　　　聖技後「マイティミサイル」発動",
+        "Equip: Clothes SS,Gi SS,Armor SSS,Heavy Armor SSS,Robe S,",
+        "       Dress SS,Skimpy SS,Hat SS,Helmet SSS,Heavy Helmet SSS,",
+        "       Magic Hat S,Fancy Cap SS,Buckler SSS,Shield SSS,",
+        "       Heavy Shield SSS",
+        "Skills: Dagger,Sword,Rapier,White Magic,Time Magic,Holy",
+        "Passive: Eva/Mag Eva/Auto-Hit Eva 10%,Holy Skill Booster +200%,",
+        "         Body of Divinity,Physical Element Reflect",
       ]],
-    7441 => # 死の契約者
+    7437 => # 明けの明星 / Daystar
       [[
-        "女神により新たに創造された七大天使の一人",
-        "死を司る外法の天使で、堕天使であるとも言われている",
-        "天使でありながら闇の力を使いこなし、大いなる災いをもたらす",
-        "毎ターンごとに蘇生し、決して滅びる事がない",
+        "An angel of the highest rank who betrayed the Goddess Ilias and fell from Heaven, she is said to be the strongest of the fallen angels who will return the world to ruin. Can use the secret technique \"Daystar\" that bears her alias, and has incredible expertise with a bow that is unmatched on the surface or in Heaven.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SS　武道着SS　鎧S　重鎧S　ローブSS",
-        "　　　　　ドレスSSS　薄着SSS　帽子SS　兜S　重兜S",
-        "　　　　　魔帽SS　高級帽SSS　軽盾SS　盾SS",
-        "Skills: 鎌技　黒魔法　時魔法　聖技　闇技　魔技　屍技",
-        "Passive: 聖技・闇技最大限威力アップ　神代の肉体",
-        "　　　　　　闇属性スキルHP消費1/4　不滅の肉体",
+        "Equip: Clothes SS,Gi SS,Armor SS,Heavy Armor SS,Robe SSS,",
+        "       Dress SSS,Skimpy SSS,Hat SS,Helmet SS,Heavy Helmet SS,",
+        "       Magic Hat SSS,Fancy Cap SSS,Buckler SSS,Shield SSS,",
+        "       Heavy Shield SSS",
+        "Skills: Bow,White Magic,Black Magic,Time Magic,Holy,Dark",
+        "Passive: Eva/Mag Eva/Auto-Hit Eva 20%,Magic Reflect 100%",
+        "         Holy/Dark Skill Booster +200%,Body of Divinity",
       ]],
-    7442 => # 核動力天使
+    7438 => # 慈愛の聖百合 / Holy Lily of Compassion
       [[
-        "女神により新たに創造された七大天使の双子",
-        "弓や銃などの射撃武器に優れ、無類の連射性能と狙撃性能を誇る",
-        "また戦闘開始後の5ターンは、SPの消費なく強力スキルを連発可能",
-        "ただし5ターンが過ぎると、冷却のため各種性能が大幅に低下する",
+        "One of the Seven Archangels newly created by the Goddess Ilias, who is regarded as a sacred lily that heralds mercy and judgement. She is a master of healing powers, able to use holy and recovery skills simultaneously, and is also able to freely control plants, using them like they were her own limbs.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SS　武道着SS　鎧S　重鎧S　ローブS",
-        "　　　　　ドレスSS　薄着SSS　帽子SS　兜S　重兜S　魔帽S",
-        "　　　　　高級帽SSS　軽盾S　盾S　重盾S",
-        "Skills: 弓技　銃技　白魔法　黒魔法　聖技　マキナ　造技",
-        "Passive: 聖技最大限威力アップ　神代の肉体　核動力",
-        "　　　　　　全スキルSPハイバースト",
+        "Equip: Clothes SS,Gi SS,Armor S,Heavy Armor S,Robe SSS,",
+        "       Dress SSS,Skimpy SSS,Hat SS,Helmet S,Heavy Helmet S",
+        "       Magic Hat SSS,Fancy Cap SSS,Buckler SS",
+        "Skills: Whip,White Magic,Holy,Plant",
+        "Passive: Eva/Mag Eva/Auto-Hit Eva 10%,Holy Skill Booster +200%,",
+        "         Body of Divinity,Preemptive Gabriela's Great Protection",
+      ]],
+    7439 => # 律法の守護者 / Guardian of the Law
+      [[
+        "One of the Seven Archangels newly created by the Goddess Ilias, who is said to protect the law and has mastered magic across all times and places. She can protect her allies whenever she uses holy skills and also possesses a lewd nature contrary to her pure appearance.",
+        "",
+        "",
+        "",
+        "",
+        "",
+      ],
+      [
+        "Equip: Clothes SS,Gi SS,Armor S,Heavy Armor S,Robe SSS,",
+        "       Dress SSS,Skimpy SSS,Hat SS,Helmet S,Heavy Helmet S,",
+        "       Magic Hat SSS,Fancy Cap SSS,Buckler SS",
+        "Skills: White Magic,Black Magic,Time Magic,Holy,Grimoire,",
+        "        Sexcraft",
+        "Passive: Eva/Mag Eva/Auto-Hit Eva 10%,Holy Skill Booster +200%,",
+        "         Body of Divinity,Holy Skills Activate Saint's Protection",
+      ]],
+    7440 => # 天界決戦兵器 / Dominion's Decisive Weapon
+      [[
+        "One of the Seven Archangels newly created by the Goddess Ilias who is said to rule over destruction and wrath with divine flames at her command. Destructive armaments are built into her entire body, giving her tremendous power. Whenever she uses holy skills, she can also launch several missiles at the same time.",
+        "",
+        "",
+        "",
+        "",
+        "",
+      ],
+      [
+        "Equip: Clothes SS,Gi SS,Armor SSS,Heavy Armor SSS,Robe S,",
+        "       Dress S,Skimpy S,Hat SS,Helmet SSS,Heavy Helmet SSS,",
+        "       Magic Hat S,Fancy Cap S,Buckler SS,Shield SS,",
+        "       Heavy Shield SS",
+        "Skills: Unarmed,Holy,Makina,Artificial",
+        "Passive: Holy Skill Booster +200%,Body of Divinity,",
+        "         Holy Skills Activate Mighty Missile",
+      ]],
+    7441 => # 死の契約者 / Warden of Death
+      [[
+        "One of the Seven Archangels newly created by the Goddess Ilias who is an unorthodox angel that rules over death, and is said to be a fallen angel. Despite being an angel, she wields the powers of darkness to cause great calamities and will revive at the end of each turn so that she will never die.",
+        "",
+        "",
+        "",
+        "",
+        "",
+      ],
+      [
+        "Equip: Clothes SS,Gi SS,Armor S,Heavy Armor S,Robe SS,",
+        "       Dress SSS,Skimpy SSS,Hat SS,Helmet S,Heavy Helmet S,",
+        "       Magic Hat SS,Fancy Cap SSS,Buckler SS,Shield SS",
+        "Skills: Scythe,Black Magic,Time Magic,Holy,Dark,Demon Arts,",
+        "        Corpse",
+        "Passive: Holy/Dark Skill Booster +200%,Body of Divinity",
+        "         HP Cost 25%,Immortal Body",
+      ]],
+    7442 => # 核動力天使 / Nuclear-Powered Angel
+      [[
+        "Twins of the Seven Archangels newly created by the Goddess Ilias who excel with ranged weapons such as bows and guns, boasting unrivaled rapid fire and sharpshooting capabilities. In addition, they fully regenerate SP for the first five turns of every battle. After the fifth turn however, all of their stats will drop considerably as their reactors need to cool down.",
+        "",
+        "",
+        "",
+        "",
+        "",
+      ],
+      [
+        "Equip: Clothes SS,Gi SS,Armor S,Heavy Armor S,Robe S,Dress SS,",
+        "       Skimpy SSS,Hat SS,Helmet S,Heavy Helmet S,Magic Hat S,",
+        "       Fancy Cap SSS,Buckler S,Shield S,Heavy Shield S",
+        "Skills: Bow,Gun,White Magic,Black Magic,Holy,Makina,Artificial",
+        "Passive: Eva/Mag Eva/Auto-Hit Eva 20%,Holy Skill Booster +200%,",
+        "         Body of Divinity,Nuclear Power,All Skills SP High Burst",
       ]],
     7401 => # 試作ロイド / Prototype Roid
       [[
@@ -7202,21 +7287,23 @@ module NWConst::JobChange
         "         Adv. CIWS,Assist Full Burst,Artificial ATK Append 50%",
         
       ]],
-    7444 => # シンギュラリティ
+    7444 => # シンギュラリティ / Singularity
       [[
-        "技術的飽和点に達した究極人工知性体",
-        "あらゆる無機物に侵蝕し、自身の一部として機械化する",
-        "その絶大なる力は、複数の世界を破滅に導いたとされる",
-        "習得スキルは非常に強力で、戦闘能力も防御性能も極めて高い",
+        "The ultimate artificial intelligence that has attained technological singularity, it invades all inorganic matter, mechanizing it into a part of itself. That immense power is said to have led multiple worlds to their ruin. The skills it acquires are all incredibly strong, and it has extremely high offensive and defensive capabilities.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SS　胸当てS　甲羅S　鎧SSS　重鎧SSS　薄着SS",
-        "　　　　　帽子SS　兜SSS　重兜SSS　軽盾SS　盾SS",
-        "Skills: 剣技　銃技　マキナ　造技",
-        "Passive: 剣・銃装備可能　完全量子化　二刀流",
-        "　　　　　　オメガビット　オーバーロックオン　オメガCIWS",
-        "　　　　　　アシストギガバースト　アサルトシステム",
-        "　　　　　　ターン終了時、ソフィスティケイトを確率発動",
+        "Equip: Sword,Gun,Clothes SS,Breastplate S,Shell S,Armor SSS,",
+        "       Heavy Armor SSS,Skimpy SS,Hat SS,Helmet SSS,",
+        "       Heavy Helmet SSS,Buckler SS,Shield SS",
+        "Skills: Sword,Gun,Makina,Artificial",
+        "Passive: Complete Quantization,Dual Wield,Omega Bit,",
+        "         Over Lock-On,Omega CIWS,Assist Giga Burst,",
+        "         Artificial ATK Append 50%, Turn End Sophisticate 25%",
       ]],
     7408 => # 巨人 / Giant
       [[
@@ -7280,19 +7367,21 @@ module NWConst::JobChange
         "Passive: Crit Rate 15%,Crit Damage +75%,",
         "         Axe/Club/Flail/Giant Skill Booster 50%/SP Cost*2",
       ]],
-    7446 => # 星喰い
+    7446 => # 星喰い / Star Eater
       [[
-        "惑星そのものを喰らうという宇宙の大巨人",
-        "滅びをもたらす存在として、神によって禁種とされた",
-        "その力は絶大であり、圧倒的な破壊をもたらす",
-        "耐性は高くないが、有り余る生命力でそれを補っている",
+        "A cosmic giant that devours the planets themselves, she is an entity that was designated as a forbidden race by the goddesses for bringing about ruin. The Star Eater causes overwhelming destruction with her tremendous strength, and while her resistances aren't very impressive, her abundant vitality more than makes up for it.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服S　胸当てSSS　帽子SSS　兜S　高級帽SS",
-        "Skills: 棍技　斧技　鉄球技　巨技",
-        "Passive: 会心率アップ　会心ダメージ100%アップ",
-        "　　　　　　棍技・斧技・鉄球技・巨技威力究極アップ、消費SP三倍",
-        "　　　　　　銀河属性100%アップ",
+        "Equip: Clothes S,Breastplate SSS,Heavy Armor SSS,Helmet S,",
+        "       Fancy Cap SS",
+        "Skills: Axe,Club,Flail,Giant",
+        "Passive: Crit Rate 25%,Crit Damage +100%,Galactic Booster +100%,",
+        "         Axe/Club/Flail/Giant Skill Booster 75%/SP Cost*3,",
       ]],
     351 => # 下位アポトーシス / Lowly Apoptosis
       [[
@@ -7307,7 +7396,7 @@ module NWConst::JobChange
         "Equip: Clothes,Breastplate,Shell,Robe,Dress,Skimpy,Hat",
         "   Helmet,Fancy Cap,Buckler,Shield",
         "Skills: Gun,Time Magic,Dark,Makina,Artificial",
-        "Passive: None",
+        "Passive: Dark Skill Booster 50%",
         "",
       ]],
     352 => # 上位アポトーシス / High Apoptosis
@@ -7323,7 +7412,7 @@ module NWConst::JobChange
         "Equip: Clothes,Breastplate,Shell,Robe,Dress,Skimpy,Hat",
         "   Helmet,Fancy Cap,Buckler,Shield",
         "Skills: Gun,Time Magic,Dark,Makina,Artificial",
-        "Passive: None",
+        "Passive: Dark Skill Booster 50%",
         "",
       ]],
     7447 => # X型アポトーシス / X-Class Apoptosis
@@ -7343,126 +7432,149 @@ module NWConst::JobChange
         "Passive: Holy/Dark Skill Booster 100%",
         "",
       ]],
-    7448 => # XX型アポトーシス
+    7448 => # XX型アポトーシス / XX-Class Apoptosis
       [[
-        "「管理者」とも呼ばれる超越者的な存在",
-        "その枠はアポトーシスにとどまらず、物理法則の運行を司る",
-        "当然ながら強大な力を持ち、戦闘能力も極めて高い",
-        "能力値も耐性も極めて高く、あらゆる戦場で活躍できる",
+        "A transcendent being, also known as an \"Administrator\", their framework extends beyond the functions of controlling apoptosis, governing the very laws of physics. They naturally possess immense power and extremely high combat capabilities. With incredibly high stats and resistances all around, they are suited to fighting on any battlefront.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SS　胸当てSSS　甲羅SSS　ローブSSS　ドレスSS",
-        "薄着SS　帽子SS　高級帽SSS　兜SSS　軽盾SS　盾SS",
-        "Skills: 銃技　時魔法　聖技　闇技　マキナ　造技　カオス",
-        "Passive: 聖技・闇技最大限威力アップ　全状態異常無効",
+        "Equip: Clothes SS,Breastplate SSS,Shell SSS,Robe SSS,Dress SS,",
+        "       Skimpy SS,Heavy Armor SS,Fancy Cap SSS,Helmet SSS,",
+        "       Buckler SS,Shield SS",
+        "Skills: Gun,Time Magic,Holy,Dark,Makina,Artificial,Chaos",
+        "Passive: Holy/Dark Skill Booster 200%",
         "",
       ]],
-    7449 => # 混沌の使徒
+    7449 => # 混沌の使徒 / Apostle of Chaos
       [[
-        "カオスの受胎に準じて受肉した物理法則の管理者達",
-        "もはやアポトーシスの枠も越え、神に等しい力を有している",
-        "戦闘においても、万物を超越した力を発揮",
-        "圧倒的な力で、全てを混沌に還す",
+        "Administrators of the physical laws who were incarnated following the conception of Chaos. They have already surpassed the framework of apoptosis, possessing power rivaling the goddeses. Even in combat, they display capabilities that transcend all creation, and can return everything to chaos with their overwhelming power.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SS　胸当てSSS　甲羅SSS　ローブSSS　ドレスSS",
-        "薄着SS　帽子SS　高級帽SSS　兜SSS　軽盾SS　盾SS",
-        "Skills: 銃技　時魔法　聖技　闇技　マキナ　造技　カオス",
-        "Passive: 聖技・闇技究極威力アップ　全状態異常無効　",
-        "　　　　　　時間停止無視　カウンターで乾坤一擲発動",
+        "Equip: Clothes SS,Breastplate SSS,Shell SSS,Robe SSS,Dress SS,",
+        "       Skimpy SS,Heavy Armor SS,Fancy Cap SSS,Helmet SSS,",
+        "       Buckler SS,Shield SS",
+        "Skills: Gun,Time Magic,Holy,Dark,Makina,Artificial,Chaos",
+        "Passive: Holy/Dark Skill Booster 300%,Time Stop Immunity,",
+        "         Heaven or Hell Counter 30% (10% for Auto-Hit)",
       ]],
-    7450 => # 創世の女神
+    7450 => # 創世の女神 / Goddess of Creation
       [[
-        "原初の光とされる、究極の聖素生命体",
-        "この世界を創世した女神として、天地に君臨する",
-        "絶対者としての力を備え、邪神以外に及ぶ者はない",
-        "究極の力を秘めた神聖スキルを修得できる",
+        "The ultimate holy lifeform, born from the primordial light, she rules over Heaven and the earth as the Goddess who created the world. She wields absolute power rivaled by none but the Dark Goddess, and can learn holy skills bearing her ultimate power.",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SS　武道着SS　鎧S　重鎧S　ローブSSS",
-        "　　　　　ドレスSSS　薄着SSS　帽子SS　兜S　重兜S　魔帽SSS",
-        "　　　　　高級帽SSS　軽盾SS　盾SS　重盾S",
-        "Skills: 白魔法　時魔法　聖技",
-        "Passive: 聖技究極威力アップ　聖耐性貫通　MP究極消費ダウン",
-        "　　　　　　神代の肉体",
+        "Equip: Clothes SS,Gi SS,Armor S,Heavy Armor S,Robe SSS,",
+        "       Dress SSS,Skimpy SSS,Heavy Armor SS,Helmet S,",
+        "       Heavy Helmet S,Magic Hat SSS,Fancy Cap SSS,Buckler SS,",
+        "       Shield SS,Heavy Shield S",
+        "Skills: White Magic,Time Magic,Holy",
+        "Passive: Eva/Mag Eva/Auto-Hit Eva 20%,Holy Skill Booster 300%,",
+        "         Holy/Eternal Res Pierce,MP Cost 10%,Body of Divinity",
       ]],
-    7451 => # 邪神
+    7451 => # 邪神 / Dark Goddess
       [[
-        "原初の闇とされる、究極の暗黒生命体",
-        "邪神として、あらゆる魔物から崇められている",
-        "その力は神そのものであり、女神以外に及ぶ者はない",
-        "究極の力を秘めた暗黒スキルを修得できる",
+        "The ultimate dark lifeform born from the primordial darkness, who is revered by all monsters as the Dark Goddess. Wielding the very powers of a god, she is rivaled by none but the Goddess of Creation, and can learn dark skills bearing her ultimate power.",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SS　武道着SS　鎧SSS　重鎧SSS　ローブS",
-        "　　　　　ドレスS　薄着S　帽子SS　兜SSS　重兜SSS　魔帽S",
-        "　　　　　高級帽SS　軽盾SSS　盾SSS　重盾SSS",
-        "Skills: 剣技　尖剣技　鎌技　黒魔法　時魔法　闇技　魔技　獣技",
-        "　　　　蛇技　触手技　翼技　虫技　植物技　自然感応　ブレス",
-        "Passive: 闇技究極威力アップ　闇耐性貫通　SP究極消費ダウン",
-        "　　　　　　闇属性スキルHP消費なし",
+        "Equip: Clothes SS,Gi SS,Armor SSS,Heavy Armor SSS,Robe S",
+        "       Dress S,Skimpy S,Heavy Armor SS,Helmet SSS,",
+        "       Heavy Helmet SSS,Magic Hat S,Fancy Cap SS,Buckler SSS,",
+        "       Shield SSS,Heavy Shield SSS",
+        "Skills: Sword,Rapier,Scythe,Black Magic,Time Magic,Dark,",
+        "        Demon Arts,Beast,Snake,Tentacle,Wing,Insect,Plant,",
+        "        Nature,Breath",
+        "Passive: Dark Skill Booster 300%,Dark/Demise Res Pierce,",
+        "         SP Cost 10%,Null HP Cost",
       ]],
-    7452 => # 第三の神
+    7452 => # 第三の神 / Third Goddess
       [[
-        "混沌の力に覚醒し、女神と邪神に並ぶ力を持った三番目の神",
-        "聖と闇の力を併せ持ち、混沌に属する力をも使用できる",
-        "時間や空間に干渉する力を持つほか、空間から生命力を回帰",
-        "攻防共に超越し、まさに神と呼ぶに相応しい力を行使する",
+        "The Third Goddess who awakened to the powers of chaos, able to wield holy and dark energy simultaneously with powers rivaling the Goddess of Creation and the Dark Goddess. In addition to having the power to meddle with spacetime, she can also return life force from space. With transcendant levels of offense and defense, she wields power worthy of the goddess title.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SS　武道着SS　鎧S　重鎧S　ローブSSS",
-        "　　　　　ドレスSSS　薄着SSS　帽子SS　兜S　重兜S　魔帽SSS",
-        "　　　　　高級帽SSS　軽盾SS　盾SS　重盾SS",
-        "Skills: 白魔法　黒魔法　時魔法　聖技　闇技　魔技　獣技　蛇技",
-        "　　　　触手技　翼技　虫技　植物技　自然感応　ブレス　カオス",
-        "Passive: 聖技・闇技究極威力アップ　聖・闇耐性貫通　SP・MP消費1/2",
-        "　　　　　　闇の支配者　万能耐性25%アップ　時間停止無視",
+        "Equip: Clothes SS,Gi SS,Armor S,Heavy Armor S,Robe SSS,",
+        "       Dress SSS,Skimpy SSS,Heavy Armor SS,Helmet S,",
+        "       Heavy Helmet S,Magic Hat SSS,Fancy Cap SSS,Buckler SS,",
+        "       Shield SS,Heavy Shield SS",
+        "Skills: White Magic,Black Magic,Time Magic,Holy,Dark,Demon Arts,",
+        "        Beast,Snake,Tentacle,Wing,Insect,Plant,Nature,Breath,Chaos",
+        "Passive: MP/SP Cost 50%,Holy/Dark Skill Booster 300%,",
+        "         Holy/Eternal/Dark/Demise Res Pierce,Ruler of Darkness,",
+        "         Time Stop Immunity",
       ]],
-    7453 => # カオス
+    7453 => # カオス / Chaos
       [[
-        "意志を持った混沌であり、時空そのものと同一である存在",
-        "時間と空間の管理者として、混沌の狭間に存在する",
-        "闇技や時魔法の最終奥義を修得し、時間を自在に操作可能",
-        "超越者に相応しい、絶対にして究極の力を誇る",
+        "Chaos with a will of its own that is no different from space-time itself, administering it from between the gaps of chaos. Learns the ultimate dark and time magic skills, able to freely manipulate time, and boasts absolute as well as ultimate power befitting a transcendant entity.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 全防具SSS",
-        "Skills: 全スキル",
-        "Passive: 聖技・闇技究極威力アップ　聖・闇耐性貫通",
-        "　　　　　　生命回帰　魔導回帰　気力回帰　闇の支配者",
-        "　　　　　　万能耐性50%アップ　時間停止無視　時間停止カウンター",
+        "Equip: All Armor SSS",
+        "Skills: All",
+        "Passive: HP/MP/SP Regen 100%,Holy/Dark Skill Booster 300%,",
+        "         Holy/Eternal/Dark/Demise Res Pierce,Time Stop Immunity,",
+        "         Ruler of Darkness,Null+Counter Time Stop",
       ]],
-    7454 => # 混沌の精霊
+    7454 => # 混沌の精霊 / Spirit of Chaos
       [[
-        "未知の侵蝕生物が媒介となり、混沌の瘴気から生じた精霊",
-        "混沌を喰らう能力を備え、自身の体に蓄えたり放出する事が可能",
-        "その体から伸びる無数の触手は、混沌そのものだとされる",
-        "混沌の侵蝕および中和能力により、圧倒的な戦闘能力を誇る",
+        "A spirit born from the miasma of chaos that was the offshoot of an unknown invasive being. She has the ability to consume chaos, able to store it in and release it from her body. The countless tentacles she extends from herself are said to originate from chaos itself, and with her ability to erode and neutralize chaos, she she boasts overwhelming fighting capabilities.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SSS　胸当てSSS　甲羅SSS　ローブSSS　ドレスSS",
-        "薄着SS　帽子SSS　高級帽SSS　兜SSS　軽盾SS　盾SS",
-        "Skills: 銃技　時魔法　聖技　闇技　マキナ　触手技　造技",
-        "　　　　自然感応　カオス",
-        "Passive: 聖技・闇技究極威力アップ　全状態異常無効",
-        "　　　　　　時間停止無視　カウンターでバレットタイム発動",
+        "Equip: Clothes SSS,Breastplate SSS,Shell SSS,Robe SSS,Dress SS,",
+        "       Skimpy SS,Heavy Armor SSS,Fancy Cap SSS,Helmet SSS,",
+        "       Buckler SS,Shield SS",
+        "Skills: Gun,Time Magic,Holy,Dark,Makina,Tentacle,Artificial,",
+        "        Nature,Chaos",
+        "Passive: Holy/Dark Skill Booster 300%,Time Stop Immunity,",
+        "         Bullet Time Counter 5%",
       ]],
-    7455 => # デウスエクスマキナ
+    7455 => # デウスエクスマキナ / Deus Ex Machina
       [[
-        "時間と空間を管理しているという究極の支配人形",
-        "混沌の中で、永遠のまどろみに就いているとされる",
-        "時空を支配する能力は、戦闘でも圧倒的な力を発揮",
-        "闇の力をも自在に操り、空間の絶対者として君臨する",
+        "The ultimate doll who controls time and space that is said be in an eternal slumber within chaos. She displays overwhelming power in combat with her ability to control spacetime, and can freely wield the power of darkness to reign as the absolute master of space.",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       [
-        "Equip: 服SSS　胸当てSSS　鎧SSS　重鎧SSS　甲羅S",
-        "　　　　　ローブSS　ドレスSSS 薄着SSS　帽子SSS　兜SSS",
-        "　　　　　重兜SSS　高級帽SSS　軽盾SS　盾SS　重盾SS",
-        "Skills: 銃技　時魔法　聖技　闇技　踊る　歌う　マキナ",
-        "　　　　御奉仕　魔技　造技　カオス",
-        "Passive: 聖技・闇技究極威力アップ　究極食いしばり",
-        "　　　　　　混沌属性ダメージ半減　時間停止無視",
-        "　　　　　　カウンターでウィッチタイム発動",
+        "Equip: Clothes SSS,Breastplate SSS,Armor SSS,Heavy Armor SSS,",
+        "       Shell S,Robe SS,Dress SSS Skimpy SSS,Heavy Armor SSS,",
+        "       Helmet SSS,Heavy Helmet SSS,Fancy Cap SSS,Buckler SS,",
+        "       Shield SS,Heavy Shield SS",
+        "Skills: Gun,Time Magic,Holy,Dark,Dancing,Singing,Makina,Service,",
+        "        Demon Arts,Artificial,Chaos",
+        "Passive: Holy/Dark Skill Booster 300%,Ultimate Endure",
+        "         Witch Time Counter 5%,Time Stop Immunity",
       ]],
   }
   

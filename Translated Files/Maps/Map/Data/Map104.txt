@@ -1,4 +1,4 @@
-Display Name = "ヤマタイ村 3F"
+Display Name = "Yamatai Village 3F"
 Parallax Name = "BlueSky"
 Note = ""
 
@@ -25,9 +25,9 @@ Name = "EV003"
 
   Page 0
     ShowTextAttributes(["eden_fc2", 0, 0, 2])
-    ShowText(["【エデン】"])
-    ShowText(["どうか、この場はエデンにお任せ下さい。"])
-    ShowText(["片付き次第、ただちに馳せ参じますので。"])
+    ShowText(["\\n<Eden>Please leave this place to me.\nI shall come with you right after I deal with these."])
+    ShowText([""])
+    ShowText([""])
     Empty([])
 
 CommonEvent 4
@@ -35,63 +35,63 @@ Name = "EV004"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["廊下の向こうから押し寄せる人形達。"])
-    ShowText(["単身でそれを押しとどめているのは――"])
+    ShowText(["Puppets are marching towards us from the corridor.\nFending them all off on her own was--"])
+    ShowText([""])
     PlayBGM(["RPG::BGM(@name=\"boss_eden\", @volume=100, @pitch=100)"])
     ShowTextAttributes(["eden_fc2", 4, 0, 2])
-    ShowText(["【エデン】"])
-    ShowText(["どれだけ来ても、無駄なこと……はぁっ！"])
+    ShowText(["\\n<Eden>No matter how many times you come at me, it's useless... Haaa!"])
+    ShowText([""])
     ShowAnimation([16, 208, false])
     Wait([60])
     ControlVariables([1152, 1152, 0, 0, 2])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["エデンの聖エネルギーが、人形達を破壊した！"])
+    ShowText(["Eden's holy energy destroyed the puppets!"])
     ShowPicture([5, "80_eden_st35", 0, 0, 0, 0, 100, 100, 0, 0])
     MovePicture([5, nil, 0, 0, 0, 0, 100, 100, 255, 0, 30, true])
     ShowTextAttributes(["eden_fc2", 4, 0, 2])
-    ShowText(["【エデン】"])
-    ShowText(["いかなる者も、この私が通しはしません！"])
+    ShowText(["\\n<Eden>None shall get past me!"])
+    ShowText([""])
     ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
-    ShowText(["【イリアス】"])
-    ShowText(["私も、通してくれないのですか……？"])
+    ShowText(["\\n<Ilias>So you're not letting us through either...?"])
+    ShowText([""])
     SetMoveRoute([3, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
     Unnamed(["RPG::MoveCommand(@code=17, @parameters=[])"])
     ShowPicture([5, "80_eden_st36", 0, 0, 0, 0, 100, 100, 255, 0])
     ShowTextAttributes(["eden_fc2", 5, 0, 2])
-    ShowText(["【エデン】"])
-    ShowText(["こ、これはイリアス様！"])
-    ShowText(["もちろんイリアス様はお通ししますよ！"])
+    ShowText(["\\n<Eden>I-it's you, Ilias!\nOf course I shall let you pass."])
+    ShowText([""])
+    ShowText([""])
     ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
-    ShowText(["【イリアス】"])
-    ShowText(["ところで、あなた以外に強力な味方がいるようですね。"])
-    ShowText(["いったい何者なのです……？"])
+    ShowText(["\\n<Ilias>Incidentally, it seems like you have a powerful ally besides yourself here. Just who are they?"])
+    ShowText([""])
+    ShowText([""])
     ShowPicture([5, "80_eden_st34", 0, 0, 0, 0, 100, 100, 255, 0])
     ShowTextAttributes(["eden_fc2", 3, 0, 2])
-    ShowText(["【エデン】"])
-    ShowText(["あの者は……上の階にて、魔王人形と戦っています。"])
-    ShowText(["この私が雑魚の足止めとは、口惜しい……"])
+    ShowText(["\\n<Eden>That one... is fighting the Monster Lord Puppet on the top floor. It's frustrating that I'm being held up by these weaklings."])
+    ShowText([""])
+    ShowText([""])
     ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
-    ShowText(["【イリアス】"])
-    ShowText(["それでは、私達が上階へと加勢に行きましょう。"])
-    ShowText(["あなたは、このフロアを防衛して下さい。"])
+    ShowText(["\\n<Ilias>All right then, we're going upstairs to help them out.\nYou must defend this floor in the meantime."])
+    ShowText([""])
+    ShowText([""])
     ShowPicture([5, "80_eden_st31", 0, 0, 0, 0, 100, 100, 255, 0])
     SetMoveRoute([3, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=16, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
     Unnamed(["RPG::MoveCommand(@code=16, @parameters=[])"])
     ShowTextAttributes(["eden_fc2", 0, 0, 2])
-    ShowText(["【エデン】"])
-    ShowText(["お任せ下さい、イリアス様！"])
-    ShowText(["これ以上、上の階には敵を上げません！"])
+    ShowText(["\\n<Eden>You can count on me, Ilias!\nNo more foes shall reach the top floor!"])
+    ShowText([""])
+    ShowText([""])
     ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
-    ShowText(["【イリアス】"])
-    ShowText(["それでは、この場はエデンに任せて……"])
-    ShowText(["私達は、上の階に急ぎましょう！"])
+    ShowText(["\\n<Ilias>Then we shall leave this place to Eden...\nLet us hurry to the top floor!"])
+    ShowText([""])
+    ShowText([""])
     ConditionalBranch([4, 383, 0])
       ShowTextAttributes(["eden_fc1", 0, 0, 2])
-      ShowText(["【エデン】"])
-      ShowText(["頼みましたよ、エデン。"])
+      ShowText(["\\n<Eden>We're counting on you, Eden."])
+      ShowText([""])
       ShowTextAttributes(["eden_fc2", 0, 0, 2])
-      ShowText(["【エデン】"])
-      ShowText(["頼まれましたよ、エデン。"])
+      ShowText(["\\n<Eden>I'm counting on you too, Eden."])
+      ShowText([""])
       Empty([])
 
     BranchEnd([])
@@ -124,9 +124,9 @@ Name = "EV007"
 
   Page 0
     ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
-    ShowText(["【イリアス】"])
-    ShowText(["この場はエデンに任せましょう。"])
-    ShowText(["私達は、上の階に急ぎますよ！"])
+    ShowText(["\\n<Ilias>Let's leave this place to Eden.\nWe need to hurry to the top floor!"])
+    ShowText([""])
+    ShowText([""])
     SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
     Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
     Empty([])
@@ -136,9 +136,9 @@ Name = "EV008"
 
   Page 0
     ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
-    ShowText(["【イリアス】"])
-    ShowText(["この場はエデンに任せましょう。"])
-    ShowText(["私達は、上の階に急ぎますよ！"])
+    ShowText(["\\n<Ilias>Let's leave this place to Eden.\nWe need to hurry to the top floor!"])
+    ShowText([""])
+    ShowText([""])
     SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
     Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
     Empty([])
@@ -148,9 +148,9 @@ Name = "EV009"
 
   Page 0
     ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
-    ShowText(["【イリアス】"])
-    ShowText(["この場はエデンに任せましょう。"])
-    ShowText(["私達は、上の階に急ぎますよ！"])
+    ShowText(["\\n<Ilias>Let's leave this place to Eden.\nWe need to hurry to the top floor!"])
+    ShowText([""])
+    ShowText([""])
     SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
     Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
     Empty([])
@@ -160,9 +160,9 @@ Name = "EV010"
 
   Page 0
     ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
-    ShowText(["【イリアス】"])
-    ShowText(["この場はエデンに任せましょう。"])
-    ShowText(["私達は、上の階に急ぎますよ！"])
+    ShowText(["\\n<Ilias>Let's leave this place to Eden.\nWe need to hurry to the top floor!"])
+    ShowText([""])
+    ShowText([""])
     SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
     Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
     Empty([])
@@ -172,9 +172,9 @@ Name = "EV011"
 
   Page 0
     ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
-    ShowText(["【イリアス】"])
-    ShowText(["この場はエデンに任せましょう。"])
-    ShowText(["私達は、上の階に急ぎますよ！"])
+    ShowText(["\\n<Ilias>Let's leave this place to Eden.\nWe need to hurry to the top floor!"])
+    ShowText([""])
+    ShowText([""])
     SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
     Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
     Empty([])
@@ -184,9 +184,9 @@ Name = "EV012"
 
   Page 0
     ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
-    ShowText(["【イリアス】"])
-    ShowText(["この場はエデンに任せましょう。"])
-    ShowText(["私達は、上の階に急ぎますよ！"])
+    ShowText(["\\n<Ilias>Let's leave this place to Eden.\nWe need to hurry to the top floor!"])
+    ShowText([""])
+    ShowText([""])
     SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=1, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
     Unnamed(["RPG::MoveCommand(@code=1, @parameters=[])"])
     Empty([])
@@ -196,9 +196,9 @@ Name = "EV013"
 
   Page 0
     ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
-    ShowText(["【イリアス】"])
-    ShowText(["この場はエデンに任せましょう。"])
-    ShowText(["私達は、上の階に急ぎますよ！"])
+    ShowText(["\\n<Ilias>Let's leave this place to Eden.\nWe need to hurry to the top floor!"])
+    ShowText([""])
+    ShowText([""])
     SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
     Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
     Empty([])
@@ -208,9 +208,9 @@ Name = "EV014"
 
   Page 0
     ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
-    ShowText(["【イリアス】"])
-    ShowText(["この場はエデンに任せましょう。"])
-    ShowText(["私達は、上の階に急ぎますよ！"])
+    ShowText(["\\n<Ilias>Let's leave this place to Eden.\nWe need to hurry to the top floor!"])
+    ShowText([""])
+    ShowText([""])
     SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
     Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
     Empty([])
@@ -220,9 +220,9 @@ Name = "EV015"
 
   Page 0
     ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
-    ShowText(["【イリアス】"])
-    ShowText(["この場はエデンに任せましょう。"])
-    ShowText(["私達は、上の階に急ぎますよ！"])
+    ShowText(["\\n<Ilias>Let's leave this place to Eden.\nWe need to hurry to the top floor!"])
+    ShowText([""])
+    ShowText([""])
     SetMoveRoute([-1, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=4, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
     Unnamed(["RPG::MoveCommand(@code=4, @parameters=[])"])
     Empty([])
@@ -241,7 +241,7 @@ Name = "EV017"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["粉砕された人形が転がっている……"])
+    ShowText(["A smashed puppet lies in pieces..."])
     Empty([])
 
 CommonEvent 18
@@ -249,7 +249,7 @@ Name = "EV018"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["粉砕された人形が転がっている……"])
+    ShowText(["A smashed puppet lies in pieces..."])
     Empty([])
 
 CommonEvent 19
@@ -257,7 +257,7 @@ Name = "EV019"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["粉砕された人形が転がっている……"])
+    ShowText(["A smashed puppet lies in pieces..."])
     Empty([])
 
 CommonEvent 20
@@ -265,7 +265,7 @@ Name = "EV020"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["粉砕された人形が転がっている……"])
+    ShowText(["A smashed puppet lies in pieces..."])
     Empty([])
 
 CommonEvent 21
@@ -315,7 +315,7 @@ Name = "EV027"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["粉砕された人形が転がっている……"])
+    ShowText(["A smashed puppet lies in pieces..."])
     Empty([])
 
 CommonEvent 28
@@ -323,7 +323,7 @@ Name = "EV028"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["粉砕された人形が転がっている……"])
+    ShowText(["A smashed puppet lies in pieces..."])
     Empty([])
 
 CommonEvent 29
@@ -356,7 +356,7 @@ Name = "EV030"
     Unnamed(["RPG::MoveCommand(@code=18, @parameters=[])"])
     Unnamed(["RPG::MoveCommand(@code=15, @parameters=[3])"])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["宝箱はパンドラだった！"])
+    ShowText(["The treasure chest was a Pandora!"])
     BattleProcessing([0, 1787, false, false])
     ControlSwitches([2677, 2677, 0])
     Empty([])

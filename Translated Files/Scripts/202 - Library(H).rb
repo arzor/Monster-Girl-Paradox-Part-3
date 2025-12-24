@@ -6372,7 +6372,7 @@ module NWConst::Library
           }
         },
         3 => {
-          :name => "おねだり2（オナホール）",
+          :name => "Request 2 (Extraction Hole)",
           :common => 6217,
           :condition => {
             :type => 1,
@@ -6385,7 +6385,7 @@ module NWConst::Library
           }
         },
         4 => {
-          :name => "おねだり3（アナルバイブ）",
+          :name => "Request 3 (Anal Vibrator)",
           :common => 6218,
           :condition => {
             :type => 1,
@@ -6398,7 +6398,7 @@ module NWConst::Library
           }
         },
         5 => {
-          :name => "おねだり4（素股）",
+          :name => "Request 4 (Intercrural)",
           :common => 6219,
           :condition => {
             :type => 1,
@@ -6424,7 +6424,7 @@ module NWConst::Library
           }
         },
         7 => {
-          :name => "おねだり6（ミルキング）",
+          :name => "Request 6 (Milking)",
           :common => 6221,
           :condition => {
             :type => 1,
@@ -40795,7 +40795,7 @@ module NWConst::Library
         },
         2 => {
           :name => "Request 1 (Reverse Rape)",
-          :common => 6092,
+          :common => 6096,
           :condition => {
             :type => 1,
             :id => 3433,
@@ -43418,7 +43418,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（植物搾死）",
+          :name => "Request 1 (Plant Draining)",
           :common => 6201,
           :condition => {
             :type => 1,
@@ -43431,7 +43431,7 @@ module NWConst::Library
           }
         },
         3 => {
-          :name => "おねだり2（植物搾死？）",
+          :name => "Request 2 (Plant Draining...?)",
           :common => 6202,
           :condition => {
             :type => 1,
@@ -43484,7 +43484,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（蹂躙捕食）",
+          :name => "Request 1 (Violating Predation)",
           :common => 6206,
           :condition => {
             :type => 1,
@@ -43497,7 +43497,7 @@ module NWConst::Library
           }
         },
         3 => {
-          :name => "おねだり2（蹂躙捕食？）",
+          :name => "Request 2 (Violating Predation...?)",
           :common => 6207,
           :condition => {
             :type => 1,
@@ -43552,7 +43552,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（蹂躙捕食）",
+          :name => "Request 1 (Violating Predation)",
           :common => 6211,
           :condition => {
             :type => 1,
@@ -43565,7 +43565,7 @@ module NWConst::Library
           }
         },
         3 => {
-          :name => "おねだり2（蹂躙捕食？）",
+          :name => "Request 2 (Violating Predation...?)",
           :common => 6212,
           :condition => {
             :type => 1,
@@ -49997,7 +49997,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（尻尾搾死）",
+          :name => "Request 1 (Tail Drain)",
           :common => 6656,
           :condition => {
             :type => 1,
@@ -50010,7 +50010,7 @@ module NWConst::Library
           }
         },
         3 => {
-          :name => "おねだり2（尻尾搾死？）",
+          :name => "Request 2 (Tail Drain...?)",
           :common => 6657,
           :condition => {
             :type => 1,
@@ -50067,7 +50067,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（逆レイプ搾死）",
+          :name => "Request 1 (Reverse Rape)",
           :common => 6661,
           :condition => {
             :type => 1,
@@ -50080,7 +50080,7 @@ module NWConst::Library
           }
         },
         3 => {
-          :name => "おねだり2（逆レイプ搾死？）",
+          :name => "Request 2 (Reverse Rape...?)",
           :common => 6662,
           :condition => {
             :type => 1,
@@ -50817,7 +50817,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（懺悔陵辱）",
+          :name => "Request 1 (Confession Rape)",
           :common => 6701,
           :condition => {
             :type => 1,
@@ -50843,7 +50843,7 @@ module NWConst::Library
           }
         },
         4 => {
-          :name => "おねだり3（聖人形肉床）",
+          :name => "Request 3 (Sacred Puppet's Flesh Bed)",
           :common => 6703,
           :condition => {
             :type => 1,
@@ -50958,7 +50958,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（懺悔陵辱）",
+          :name => "Request 1 (Confession Rape)",
           :common => 6701,
           :condition => {
             :type => 1,
@@ -50984,7 +50984,7 @@ module NWConst::Library
           }
         },
         4 => {
-          :name => "おねだり3（聖人形肉床）",
+          :name => "Request 3 (Sacred Puppet's Flesh Bed)",
           :common => 6703,
           :condition => {
             :type => 1,
@@ -51041,7 +51041,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（逆レイプ搾死）",
+          :name => "Request 1 (Reverse Rape)",
           :common => 6706,
           :condition => {
             :type => 1,
@@ -51054,7 +51054,7 @@ module NWConst::Library
           }
         },
         3 => {
-          :name => "おねだり2（逆レイプ搾死？）",
+          :name => "Request 2 (Reverse Rape...?)",
           :common => 6707,
           :condition => {
             :type => 1,
@@ -52331,7 +52331,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（多腕手コキ）",
+          :name => "Request 1 (Multi-armed Handjob)",
           :common => 6811,
           :condition => {
             :type => 1,
@@ -52596,7 +52596,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（授乳）",
+          :name => "Request 1 (Breastfeeding)",
           :common => 6831,
           :condition => {
             :type => 1,
@@ -52674,7 +52674,7 @@ module NWConst::Library
           }
         },
         2 => {
-          :name => "おねだり1（逆レイプ搾死）",
+          :name => "Request 1 (Reverse Rape)",
           :common => 6836,
           :condition => {
             :type => 1,
@@ -52687,7 +52687,7 @@ module NWConst::Library
           }
         },
         3 => {
-          :name => "おねだり2（逆レイプ搾死？）",
+          :name => "Request 2 (Reverse Rape...?)",
           :common => 6837,
           :condition => {
             :type => 1,
@@ -52771,7 +52771,7 @@ module NWConst::Library
           }
         },
         3 => {
-          :name => "おねだり2（尻尾コキ）",
+          :name => "Request 2 (Tailjob)",
           :common => 6847,
           :condition => {
             :type => 1,

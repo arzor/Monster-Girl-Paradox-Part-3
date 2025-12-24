@@ -4,7 +4,7 @@
 #===============================#
 
 class Integer
-  UNIT = ["Mil.", "Bil.", "Trl.", "Qdr.", "Qnt..", "Sxt.", "Spt.", "Oct.", "N", "D", "U", "Do", "Tre", "Qd", "Qit", "Sx", "Sp", "O", "N", "V"]
+  UNIT = ["Mil.", "Bil.", "Trl.", "Qdr.", "Qnt.", "Sxt.", "Spt.", "Oct.", "N", "D", "U", "Do", "Tre", "Qd", "Qit", "Sx", "Sp", "O", "N", "V"]
   UNIT_LAST_WIDTH = UNIT.last.width
   def give_unit
 

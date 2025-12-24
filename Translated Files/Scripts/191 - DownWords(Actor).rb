@@ -1651,7 +1651,7 @@ module NWConst::Actor
     },
     294 => { # エミリ / Emily
       :dead_word => ["\\n<Emily>Already? No way...", "emily_fc1", 3],
-      :orgasm_word => ["\\n<Emily>I'll remember this...ahh..", "emily_fc1", 3],
+      :orgasm_word => ["\\n<Emily>I'll remember this...ahh...", "emily_fc1", 3],
       :predation_word => ["\\n<Emily>Don't eat me, I'll do anything...\nEyaaah...!!", "emily_fc1", 3],
       :incontinence_word => ["\\n<Emily>You're the worst... Don't look, don't look at me...!", "emily_fc1", 3],
     },
@@ -3075,7 +3075,7 @@ module NWConst::Actor
       :dead_word => ["\\n<Santos>Росе буд...", "santos_fc1", 0],
       :orgasm_word => ["\\n<Santos>.........", "santos_fc1", 0],
       :predation_word => ["\\n<Santos>Тхе хоррор! Тхе хоррор!", "santos_fc1", 0],
-      :incontinence_word => ["\\n<Santos>Чилдхоодь’с Енд...", "santos_fc1", 0],
+      :incontinence_word => ["\\n<Santos>Чилдхоодь'с Енд...", "santos_fc1", 0],
     },
     544 => { # マリー / Marie
       :dead_word => ["\\n<Marie>I just need a little rest...", "mob_maid_fc1", 0],
@@ -4687,7 +4687,7 @@ module NWConst::Actor
     },
     821 => { #リラ
       :dead_word => ["\\n<Lyla>I... I can't move...", "lira_fc1", 0],
-      :orgasm_word => ["\\n<Lyla>T...this.. kind of thiiing... aaah...", "lira_fc1", 0],
+      :orgasm_word => ["\\n<Lyla>T...this... kind of thiiing... aaah...", "lira_fc1", 0],
       :predation_word => ["\\n<Lyla>HiiiII! W-What is this?!?!", "lira_fc1", 0],
       :incontinence_word => ["\\n<Lyla>Hafuu...uuu...", "lira_fc1", 0],
     },
