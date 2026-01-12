@@ -85,7 +85,7 @@ module RPG
         FEATURE_TERRAIN_BOOSTER => :terrain_booster_name,
         FEATURE_EQUIP_MASTERY => :equip_mastery_name,
         FEATURE_ELEMENT_DRAIN => :element_drain_name,
-        FEATURE_ADD_DUMMY_ENCHANT => :dummy_enchant_name,
+        FEATURE_ADD_DUMMY_ENCHANT => :add_dummy_enchant_name, #Changed duplicate function, uses new function for additional effect text
         FEATURE_BLOCK_RATE => :block_rate_name
       }
     end
@@ -1005,6 +1005,11 @@ module RPG
         end
       end
       value
+    end
+
+   #New function for displaying equipment effect text with additional descriptions
+    def add_dummy_enchant_name(ft)
+      "#{ft.value}"
     end
 
     def dummy_enchant_value(ft, value)

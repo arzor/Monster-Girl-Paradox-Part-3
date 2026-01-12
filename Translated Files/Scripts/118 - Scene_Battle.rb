@@ -699,19 +699,12 @@ class Scene_Battle < Scene_Base
   def show_normal_animation(targets, animation_id, mirror = false)
     animation = $data_animations[animation_id]
     if animation
-      if animation.to_screen?
-        if !targets.empty?
-          targets[0].animation_id = animation_id
-          targets[0].animation_mirror = mirror
-        end
-        abs_wait_short
-      else
-        targets.each do |target|
-          target.animation_id = animation_id
-          target.animation_mirror = mirror
-          abs_wait_short
-        end
+      targets.each do |target|
+        target.animation_id = animation_id
+        target.animation_mirror = mirror
+        abs_wait_short unless animation.to_screen?
       end
+      abs_wait_short if animation.to_screen?
     end
   end
 end

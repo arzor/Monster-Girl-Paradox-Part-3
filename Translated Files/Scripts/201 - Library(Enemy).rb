@@ -2552,7 +2552,7 @@ module NWConst::Library
       "her catch to feed.",
       "",
       "Once she catches a male in her slimy",
-	  "mucus membrane, they are forced to",
+	  "mucous membrane, they are forced to",
       "ejaculate with surprising ease.",
       "With that, she is able to feed.",
 	  "",
