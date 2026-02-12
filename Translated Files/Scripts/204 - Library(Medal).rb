@@ -1301,7 +1301,7 @@ module NWConst::Library
     1005 => {
       :icon_id => 191,
       :title => "Shopping Master",
-      :description => "You bought 3,000,000G worth of goods; you are a master of shopping.",
+      :description => "You bought 30,000,000G worth of goods; you are a master of shopping.",
       :priority => 1005,    
     },
     # 鍛冶利用数

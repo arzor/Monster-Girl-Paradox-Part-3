@@ -2531,7 +2531,7 @@ module NWConst::JobChange
       ],
       [
         "Equip: Scythe,Whip,Boomerang",
-        "Skills; Scythe,Whip",
+        "Skills: Scythe,Whip",
         "Passive: Recruit Rate x5,Slayer Booster 50%,Whip Mastery+",
         "",
       ]],

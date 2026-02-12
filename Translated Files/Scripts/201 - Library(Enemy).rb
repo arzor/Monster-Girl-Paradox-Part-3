@@ -20756,7 +20756,7 @@ module NWConst::Library
       "she was the mother of Black Alice who",
       "Kagetsumugi respects and admires, she",
       "has been treated with special care",
-      "and rather than detracting from the.",
+      "and rather than detracting from the",
       "gaudy appearance she had in life, she",
       "was made to look even more alluring.",
       "In addition to having great magical",
