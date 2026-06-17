@@ -1,4 +1,4 @@
-Display Name = "エンリカ"
+Display Name = "Enrika"
 Parallax Name = ""
 Note = ""
 
@@ -8,8 +8,8 @@ Name = "EV001"
   Page 0
     ConditionalBranch([1, 1142, 0, 59, 2])
       ShowTextAttributes(["", 0, 0, 2])
-      ShowText(["扉は閉ざされている。"])
-      ShowText(["住民に拒絶されているようだ……"])
+      ShowText(["The door is locked.\nIt seems like the residents are refusing visitors..."])
+      ShowText([""])
       ExitEventProcessing([])
       Empty([])
 
@@ -38,8 +38,8 @@ Name = "EV002"
   Page 0
     ConditionalBranch([1, 1142, 0, 59, 2])
       ShowTextAttributes(["", 0, 0, 2])
-      ShowText(["扉は閉ざされている。"])
-      ShowText(["住民に拒絶されているようだ……"])
+      ShowText(["The door is locked.\nIt seems like the residents are refusing visitors..."])
+      ShowText([""])
       ExitEventProcessing([])
       Empty([])
 
@@ -68,14 +68,14 @@ Name = "EV003"
   Page 0
     ConditionalBranch([0, 2712, 1])
       ShowTextAttributes(["", 0, 0, 2])
-      ShowText(["扉は施錠されている。"])
-      ShowText(["中からは人の気配がせず、空き家のようだ……"])
+      ShowText(["The door is locked.\nThis appears to be an empty house, as there's no signs of anyone inside.."])
+      ShowText([""])
       Empty([])
 
     BranchEnd([])
     ConditionalBranch([0, 2712, 0])
       ShowTextAttributes(["", 0, 0, 2])
-      ShowText(["ルカは仲間を外に待たせ、一人で民家に入った……"])
+      ShowText(["Luka leaves his party members outside and enters the house alone..."])
       ChangePlayerFollowers([1])
       PlaySE(["RPG::SE(@name=\"Open1\", @pitch=100, @volume=80)"])
       SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=19, @parameters=[])\", \"RPG::MoveCommand(@code=37, @parameters=[])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
@@ -100,8 +100,8 @@ Name = "EV004"
   Page 0
     ConditionalBranch([1, 1142, 0, 59, 2])
       ShowTextAttributes(["", 0, 0, 2])
-      ShowText(["扉は閉ざされている。"])
-      ShowText(["住民に拒絶されているようだ……"])
+      ShowText(["The door is locked.\nIt seems like the residents are refusing visitors..."])
+      ShowText([""])
       ExitEventProcessing([])
       Empty([])
 
@@ -130,8 +130,8 @@ Name = "EV005"
   Page 0
     ConditionalBranch([1, 1142, 0, 59, 2])
       ShowTextAttributes(["", 0, 0, 2])
-      ShowText(["扉は閉ざされている。"])
-      ShowText(["住民に拒絶されているようだ……"])
+      ShowText(["The door is locked.\nIt seems like the residents are refusing visitors..."])
+      ShowText([""])
       ExitEventProcessing([])
       Empty([])
 
@@ -210,17 +210,17 @@ Name = "EV012"
   Page 0
     ControlSelfSwitch(["A", 0])
     ShowTextAttributes(["iriasu_fc4", 2, 0, 2])
-    ShowText(["【イリアス】"])
-    ShowText(["ここは……エンリカですね。"])
-    ShowText(["なぜ、目的もなくこのような場所に来たのです？"])
+    ShowText(["\\n<Ilias>This is... Enrika, isn't it?\nWhy have we come to such a place without any reason?"])
+    ShowText([""])
+    ShowText([""])
     ShowTextAttributes(["ruka_fc1", 0, 0, 2])
-    ShowText(["【ルカ】"])
-    ShowText(["村の中が静まり返ってるね……"])
-    ShowText(["僕達が来たから、みんな家の中に閉じこもってるみたいだ。"])
+    ShowText(["\\n<Luka>The village is dead silent...\nSeems like everyone decided to hole up inside their homes as soon as we arrived."])
+    ShowText([""])
+    ShowText([""])
     ShowTextAttributes(["sonia_fc2", 2, 0, 2])
-    ShowText(["【ソニア】"])
-    ShowText(["用も無いし、帰らない？"])
-    ShowText(["私達、すっごく迷惑だと思うんだけど……"])
+    ShowText(["\\n<Sonya>We don't have any business being here, so why don't we just turn back? I think we're being really annoying hanging around here..."])
+    ShowText([""])
+    ShowText([""])
     Empty([])
 
   Page 1
@@ -229,26 +229,26 @@ Name = "EV012"
   Page 2
     ControlSelfSwitch(["B", 0])
     ShowTextAttributes(["iriasu_fc4", 7, 0, 2])
-    ShowText(["【イリアス】"])
-    ShowText(["ようやくエンリカに到着しましたね……"])
-    ShowText(["……村の中から言い争う声が聞こえます！"])
+    ShowText(["\\n<Ilias>We have finally arrived at Enrika...\n...I can hear people quarreling from somewhere in the village!"])
+    ShowText([""])
+    ShowText([""])
     ConditionalBranch([4, 36, 0])
       ShowTextAttributes(["rucyfinac_fc1", 2, 0, 2])
-      ShowText(["【ルシフィナちゃん】"])
-      ShowText(["エデンお姉ちゃんの声と……"])
-      ShowText(["……あれ？　これって……"])
+      ShowText(["\\n<Lucifina-chan>It sounds like Eden and...\n...Huh? That other voice..."])
+      ShowText([""])
+      ShowText([""])
       ConditionalBranch([4, 34, 0])
         ShowTextAttributes(["micaelac_fc1", 4, 0, 2])
-        ShowText(["【ミカエラちゃん】"])
-        ShowText(["まさか、この声は……"])
+        ShowText(["\\n<Micaela-chan>Could that other voice be..."])
+        ShowText([""])
         Empty([])
       BranchEnd([])
       Empty([])
 
     BranchEnd([])
     ShowTextAttributes(["ruka_fc1", 0, 0, 2])
-    ShowText(["【ルカ】"])
-    ShowText(["行ってみよう！"])
+    ShowText(["\\n<Luka>Let's check it out!"])
+    ShowText([""])
     Empty([])
 
   Page 3
@@ -289,6 +289,7 @@ Name = "EV016"
     Wait([60])
     ChangeTransparency([1])
     ControlSwitches([31, 31, 1])
+    ControlSwitches([5352, 5352, 0])
     TransferPlayer([0, 813, 19, 38, 8, 2])
     FadeinScreen([])
     Empty([])
@@ -346,6 +347,7 @@ Name = "EV022"
     Wait([60])
     ChangeTransparency([1])
     ControlSwitches([31, 31, 1])
+    ControlSwitches([5352, 5352, 0])
     TransferPlayer([0, 813, 19, 38, 8, 2])
     FadeinScreen([])
     Empty([])
@@ -367,11 +369,11 @@ Name = "EV024"
 
   Page 0
     ShowTextAttributes(["angels_fc1", 0, 0, 2])
-    ShowText(["【天使兵】"])
-    ShowText(["お前達か……村の中を案内しよう。"])
-    Script(["unlimited_choices(11, [\"宿屋に行く\","])
-    ScriptMore(["\"道具・鍛冶屋に行く\",\"教会に行く\","])
-    ScriptMore(["\"ミカエラの家に行く\",\"やめる\"])"])
+    ShowText(["\\n<Angel Soldier>"])
+    ShowText(["It's you folks... Allow me to show you around the village."])
+    Script(["unlimited_choices(11, [\"Inn\","])
+    ScriptMore(["\"Item Shop/Blacksmith\",\"Church\","])
+    ScriptMore(["\"Micaela's house\",\"Never mind\"])"])
     ConditionalBranch([1, 11, 0, 0, 0])
       TransferPlayer([0, 469, 37, 18, 2, 0])
       ExitEventProcessing([])
@@ -408,9 +410,9 @@ Name = "EV025"
 
   Page 0
     ShowTextAttributes(["angels_fc1", 0, 0, 2])
-    ShowText(["【天使兵】"])
-    ShowText(["ここは天使の隠れ里……"])
-    ShowText(["聖魔大戦後に散った天使達が、流れ着いた場所だ。"])
+    ShowText(["\\n<Angel Soldier>This is the hidden village of angels...\nIt is the place where the angels who fell following the Great Monster Wars drifted to."])
+    ShowText([""])
+    ShowText([""])
     Empty([])
 
 CommonEvent 26
@@ -431,18 +433,18 @@ Name = "EV027"
   Page 0
     ConditionalBranch([0, 2712, 1])
       ShowTextAttributes(["angels_fc1", 0, 0, 2])
-      ShowText(["【天使兵】"])
-      ShowText(["この家は、半年ほど前から空き家になっている。"])
-      ShowText(["新たな住人など、めったに現れないからな……"])
+      ShowText(["\\n<Angel Soldier>This house has been vacant for the past six months. We rarely get any new residents, as you can see..."])
+      ShowText([""])
+      ShowText([""])
       ExitEventProcessing([])
       Empty([])
 
     BranchEnd([])
     ConditionalBranch([0, 2712, 0])
       ShowTextAttributes(["angels_fc1", 0, 0, 2])
-      ShowText(["【天使兵】"])
-      ShowText(["罪人の封牢から解放された者達が、この里に身を寄せている。"])
-      ShowText(["魔界最強のバトルファッカーも、この家に住む事となったぞ。"])
+      ShowText(["\\n<Angel Soldier>The people who were freed from the Sealed Sinner's Prison have taken refuge in this village. Even the Monster Realm's strongest battle fucker has started living in this house."])
+      ShowText([""])
+      ShowText([""])
       ExitEventProcessing([])
       Empty([])
 
@@ -456,27 +458,27 @@ Name = "EV028"
     ConditionalBranch([2, "A", 1])
       ControlSelfSwitch(["A", 0])
       ShowTextAttributes(["angels_fc1", 0, 0, 2])
-      ShowText(["【天使兵】"])
-      ShowText(["このゲートだが……"])
-      ShowText(["別の場所に移せないのか？"])
+      ShowText(["\\n<Angel Soldier>About this gate...\nCouldn't you move it somewhere else?"])
+      ShowText([""])
+      ShowText([""])
       ShowTextAttributes(["ruka_fc1", 0, 0, 2])
-      ShowText(["【ルカ】"])
-      ShowText(["ごめん、無理みたい……"])
+      ShowText(["\\n<Luka>Sorry, that might be too much for me..."])
+      ShowText([""])
       ShowTextAttributes(["angels_fc1", 0, 0, 2])
-      ShowText(["【天使兵】"])
-      ShowText(["まあ、向こうから何かが出て来るような事はないようだ。"])
-      ShowText(["特に害はないが、村の真ん中にこれは……"])
+      ShowText(["\\n<Angel Soldier>Well, it doesn't look like anything is going to come out of it from the other side. It's not like it's causing us any harm, but just leaving it open in the middle of the village..."])
+      ShowText([""])
+      ShowText([""])
       ShowTextAttributes(["ruka_fc1", 0, 0, 2])
-      ShowText(["【ルカ】"])
-      ShowText(["ごめん……"])
+      ShowText(["\\n<Luka>Sorry..."])
+      ShowText([""])
       Empty([])
 
     BranchEnd([])
     ConditionalBranch([2, "A", 0])
       ShowTextAttributes(["angels_fc1", 0, 0, 2])
-      ShowText(["【天使兵】"])
-      ShowText(["このゲート……"])
-      ShowText(["うっかり入り込まないように注意しないとな。"])
+      ShowText(["\\n<Angel Soldier>This gate...\nI'll need to be careful not to accidentally walk into it."])
+      ShowText([""])
+      ShowText([""])
       Empty([])
 
     BranchEnd([])
@@ -487,9 +489,9 @@ Name = "EV030"
 
   Page 0
     ShowTextAttributes(["angels_fc1", 0, 0, 2])
-    ShowText(["【天使兵】"])
-    ShowText(["どうか、我々を放っておいてほしい。"])
-    ShowText(["もはや戦いなど望んではいないのだ……"])
+    ShowText(["\\n<Angel Soldier>Please, just leave us be.\nWe no longer wish to fight..."])
+    ShowText([""])
+    ShowText([""])
     Empty([])
 
 CommonEvent 31
@@ -497,7 +499,7 @@ Name = "EV031"
 
   Page 0
     ShowTextAttributes(["angels_fc1", 0, 0, 2])
-    ShowText(["【天使兵】"])
-    ShowText(["ここは、忘れられた大陸……"])
-    ShowText(["聖魔大戦以来、時が止まっているようなものだ。"])
+    ShowText(["\\n<Angel Soldier>This continent has been forgotten...\nEver since the Great Monster Wars, it feels like time has stood still here."])
+    ShowText([""])
+    ShowText([""])
     Empty([])

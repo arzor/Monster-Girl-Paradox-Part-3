@@ -7433,7 +7433,7 @@ class Game_Party < Game_Unit
   def max_item_number(item)
     return 99 unless item.uniq_item?
 
-    return 0 if storehouse_item_number(item) > 0
+    return 1 if storehouse_item_number(item) > 0
 
     1
   end

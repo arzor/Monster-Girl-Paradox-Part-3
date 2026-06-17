@@ -203,8 +203,8 @@ class RPG::BaseItem
   # ● Special Sale                    特殊売却
   #--------------------------------------------------------------------------
   def selld_draw
-    if @data_ex.key?(:selld_draw)
-      sale_text = @data_ex[:selld_draw]
+    if data_ex.key?(:selld_draw)
+      sale_text = data_ex[:selld_draw]
       NWConst::Library::SPECIAL_SALE.each{|index, jap_text, tran_text|
         if jap_text == sale_text
           sale_text = tran_text

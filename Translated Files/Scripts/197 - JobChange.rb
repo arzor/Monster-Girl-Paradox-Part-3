@@ -3396,9 +3396,7 @@ module NWConst::JobChange
         "",
       ],
       [
-        "Equip: Sword,Scythe,Clothes,Armor,Heavy Armor,Robe,Dress,Skimpy,",
-        "       Hat,Helmet,Heavy Helmet,Magic Hat,Fancy Cap,Buckler,Shield,",
-        "       Heavy Shield",
+        "Equip: Scythe,All Armor",
         "Skills: Sword,Scythe,Unarmed,Black Magic,Time Magic,Dark,",
         "        Demon Arts",
         "Passive: Dark Skill Booster 50%,Sword/Katana/Fist/Scythe/",
@@ -4085,7 +4083,7 @@ module NWConst::JobChange
         "Equip: Fang,Clothes,Gi,Armor,Heavy Armor,Robe,Dress,Hat,Helmet",
         "   Heavy Helmet,Fancy Cap,Buckler,Shield,Heavy Shield",
         "Skills: Dagger,Ninjutsu,Black Magic,Summoning,Dark,Demon Arts",
-        "Passive: Eva +20%,Dagger Booster 20%,Dark Skill Booster 50%%",
+        "Passive: Eva +20%,Dagger Booster 20%,Dark Skill Booster 50%",
         "",
       ]],
     193 => # ドラキュリーナ / Draculina
@@ -6728,7 +6726,7 @@ module NWConst::JobChange
       ],
       [
         "Equip: Clothes,Breastplate,Heavy Armor,Helmet,Fancy Cap",
-        "Skills: Artificial",
+        "Skills: Artificial,Giant",
         "Passive: Super Endure",
         "",
       ]],

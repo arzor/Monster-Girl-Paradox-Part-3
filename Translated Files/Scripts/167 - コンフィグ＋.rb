@@ -203,7 +203,7 @@ module NWConst::Config
     :volume_bgs => 70,
     :volume_se => 70,
     :volume_me => 70,
-    :key_text => :gamepad,
+    :key_text => :keyboard,
     :map_dash => false,
     :map_speed => 0,
     :bt_skip => false,

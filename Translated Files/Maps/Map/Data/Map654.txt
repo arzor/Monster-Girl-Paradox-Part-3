@@ -1,4 +1,4 @@
-Display Name = "サン・イリア"
+Display Name = "San Ilia"
 Parallax Name = "CloudySky2"
 Note = ""
 
@@ -202,13 +202,13 @@ Name = "EV025"
       ConditionalBranch([2, "A", 1])
         ControlSelfSwitch(["A", 0])
         ShowTextAttributes(["alice_fc1", 0, 0, 2])
-        ShowText(["【アリス】"])
-        ShowText(["これは、クリスタルの欠片……"])
-        ShowText(["ワープの魔力が、まだ残っているようだな。"])
+        ShowText(["\\n<Alice>"])
+        ShowText(["Crystal fragments... They've still got warp magic swirling around inside them."])
+        ShowText([""])
         ShowTextAttributes(["ruka_fc1", 0, 0, 2])
-        ShowText(["【ルカ】"])
-        ShowText(["妖精の島へのゲートだね。"])
-        ShowText(["まだ使えるみたいだけど……"])
+        ShowText(["\\n<Luka>"])
+        ShowText(["It's a gate to Fairy's Island. Looks like it still works..."])
+        ShowText([""])
         Empty([])
       BranchEnd([])
       Empty([])
@@ -218,21 +218,21 @@ Name = "EV025"
       ConditionalBranch([2, "A", 1])
         ControlSelfSwitch(["A", 0])
         ShowTextAttributes(["alice_fc1", 0, 0, 2])
-        ShowText(["【アリス】"])
-        ShowText(["これは、クリスタルの欠片……"])
-        ShowText(["ワープの魔力がこもっているようだな。"])
+        ShowText(["\\n<Alice>"])
+        ShowText(["Crystal fragments... There's warp magic packed inside them."])
+        ShowText([""])
         ShowTextAttributes(["ruka_fc1", 0, 0, 2])
-        ShowText(["【ルカ】"])
-        ShowText(["なんで、こんな所に……"])
-        ShowText(["とりあえず、ワープしてみようかな？"])
+        ShowText(["\\n<Luka>"])
+        ShowText(["Why would these be here of all places... Think we should try warping?"])
+        ShowText([""])
         Empty([])
       BranchEnd([])
       Empty([])
 
     BranchEnd([])
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["妖精の島に行きますか？"])
-    ShowChoices([["妖精の島に行く", "行かない"], 2])
+    ShowText(["Travel to Fairy's Island?"])
+    ShowChoices([["Go to Fairy's Island", "Stay"], 2])
     When([0, "妖精の島に行く"])
       PlaySE(["RPG::SE(@name=\"Move\", @pitch=100, @volume=80)"])
       TransferPlayer([0, 193, 46, 340, 2, 1])
@@ -251,8 +251,8 @@ Name = "EV026"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["激しい衝撃を受け、宝箱の上部が割れている。"])
-    ShowText(["鍵を開けなくても中身を取り出せそうだ！"])
+    ShowText(["The impact cracked the top of the treasure chest wide open. No key needed to grab the goods inside!"])
+    ShowText([""])
     PlaySE(["RPG::SE(@name=\"Chest\", @pitch=100, @volume=80)"])
     SetMoveRoute([0, "RPG::MoveRoute(@repeat=false, @skippable=false, @wait=true, @list=[\"RPG::MoveCommand(@code=36, @parameters=[])\", \"RPG::MoveCommand(@code=17, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=18, @parameters=[])\", \"RPG::MoveCommand(@code=15, @parameters=[3])\", \"RPG::MoveCommand(@code=0, @parameters=[])\"])"])
     Unnamed(["RPG::MoveCommand(@code=36, @parameters=[])"])
@@ -275,9 +275,9 @@ Name = "EV027"
     ControlSwitches([2597, 2597, 0])
     ChangeItems([666, 0, 0, 1])
     ShowTextAttributes(["alice_fc1", 3, 0, 2])
-    ShowText(["【アリス】"])
-    ShowText(["これは、封印職の解禁アイテムか。"])
-    ShowText(["なぜこんな貴重なものが、こんな所に……？"])
+    ShowText(["\\n<Alice>"])
+    ShowText(["This item can unlock a Sealed Job... What's something this rare doing in a place like this?"])
+    ShowText([""])
     Empty([])
 
   Page 1
@@ -288,9 +288,9 @@ Name = "EV028"
 
   Page 0
     ShowTextAttributes(["whiteyel_fc1", 0, 0, 2])
-    ShowText(["【ワイティエル】"])
-    ShowText(["店の品も全て破損し、使える物は残っていません。"])
-    ShowText(["グランゴルドでは、ここと同じ品が流通しているとか……"])
+    ShowText(["\\n<Whiteyel>"])
+    ShowText(["Every last piece of merchandise was destroyed in the fighting. Nothing salvageable remains. I hear Grangold carries the same inventory, though..."])
+    ShowText([""])
     Empty([])
 
 CommonEvent 49
@@ -310,7 +310,7 @@ Name = "EV059"
 
   Page 0
     ShowTextAttributes(["", 0, 0, 2])
-    ShowText(["扉は歪んで中に入れなくなっている……"])
+    ShowText(["The door's been bent so far out of shape that there's no way to get through..."])
     Empty([])
 
 CommonEvent 64
