@@ -4980,7 +4980,7 @@ module NWConst::Library
     ],
     727 => ["Pretend Medium",
       "Deal +30% Dark damage. Can always use Summoning and Dark",
-      "skills. Oracle skills execute an additional time, but have",
+      "skills. Summoning skills execute an additional time, but have",
       "133% MP/SP cost.",
     ],
     728 => ["Pretend Rabbit", #NOTE: Oracle skill use and double execution, but SP cost increase applied to Holy skills not mentioned in original text.

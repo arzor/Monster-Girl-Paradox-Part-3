@@ -2320,7 +2320,7 @@ module NWConst::JobChange
         "",
       ],
       [
-        "Equip: Katana,",
+        "Equip: Katana",
         "Skills: Katana",
         "Passive: Eva +20%,Auto-Hit Eva 10%,Crit Rate 35%,Katana Mastery+",
         "",
