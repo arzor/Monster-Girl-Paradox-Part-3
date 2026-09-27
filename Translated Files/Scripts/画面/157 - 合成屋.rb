@@ -73,7 +73,7 @@ class Window_SynthesizeStatus < Window_Base
   # ● オブジェクト初期化
   #--------------------------------------------------------------------------
   def initialize
-    super(304, 120, window_width, 360)
+    super(304, 168, window_width, 312) #Synthesize window adjusted from 120 and 360 in translation
     @item = nil
     @befores = nil
     @page_index = 0
@@ -260,7 +260,7 @@ class Window_SynthesizeLineUp < Window_Selectable
   # ● オブジェクト初期化
   #--------------------------------------------------------------------------
   def initialize(shop_id)
-    super(0, 120, window_width, 360)
+    super(0, 168, window_width, 312) #Synthesize window adjusted from 120 and 360 in translation
     @shop_id = shop_id
     @money = 0
     refresh

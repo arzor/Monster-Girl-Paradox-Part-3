@@ -2050,7 +2050,7 @@ class Window_Library_RightMain < Window_Selectable
     get_item_drop[0...GET_ITEM_DROP_MAX].each{|id|
       rect.y += rect.height
       reset_font_settings
-      enemy_name = $game_library.enemy.had?(id) ? $data_enemies[id].lib_name : "？" * 8
+      enemy_name = $game_library.enemy.had?(id) ? $data_enemies[id].lib_name : "?" * 8
       draw_text(rect, enemy_name)
     }
     draw_etc_common(rect.y) if GET_ITEM_DROP_MAX < get_item_drop.size
@@ -2069,7 +2069,7 @@ class Window_Library_RightMain < Window_Selectable
     get_item_steal[0...GET_ITEM_STEAL_MAX].each{|id|
       rect.y += rect.height
       reset_font_settings
-      enemy_name = $game_library.enemy.had?(id) ? $data_enemies[id].lib_name : "？" * 8
+      enemy_name = $game_library.enemy.had?(id) ? $data_enemies[id].lib_name : "?" * 8
       draw_text(rect, enemy_name)
     }
     draw_etc_common(rect.y) if GET_ITEM_STEAL_MAX < get_item_steal.size

@@ -335,6 +335,7 @@ class Foo::Status::Window_MainStatus < Window_Selectable
                      :hit, :cri,:magical_critical,:booster_critical, :eva, :mev,:certain_evasion, :cnt, :magical_counter,:certain_counter]
     rect = Rect.new(0, 0, 220, line_height)
     param_symbols.each_with_index do |sym, i|
+      rect.width = 180 #Added in translation to squish text in character status screen instead of overlapping
       change_color(system_color)
       rect.x = x + (235 * (i % 2))
       rect.y = y + (line_height * (i / 2))
@@ -346,6 +347,7 @@ class Foo::Status::Window_MainStatus < Window_Selectable
       else
         param = param.give_unit_floor(12) if param >= 10_000_000
       end
+      rect.width = 220
       draw_text(rect, param, 2)
     end
   end
@@ -360,6 +362,7 @@ class Foo::Status::Window_MainStatus < Window_Selectable
     ]
     rect = Rect.new(0, 0, 220, line_height)
     param_symbols.each_with_index do |sym, i|
+      rect.width = 180 #Added in translation to squish text in character status screen instead of overlapping
       change_color(system_color)
       rect.x = x + (235 * (i % 2))
       rect.y = y + (line_height * (i / 2))
@@ -367,6 +370,7 @@ class Foo::Status::Window_MainStatus < Window_Selectable
       change_color(normal_color)
       param = @actor.method(sym).call
       param = "#{Integer(param * 100)}%"
+      rect.width = 220
       draw_text(rect, param, 2)
     end
   end

@@ -18,7 +18,7 @@ class Integer
     UNIT.each do |u|
 
       if self.abs <= p
-        return sign + ('%.3f' % (self / (p / 10**3.to_f))) + u
+        return sign + ('%.2f' % (self / (p / 10**3.to_f))) + u #Adjusted for wider stat number display in Equipment menu
       end
 
       p *= 10**3

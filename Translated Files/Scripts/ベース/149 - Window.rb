@@ -2673,13 +2673,13 @@ class Window_EquipStatus < Window_Base
   def draw_current_param(x, y, param_id)
     change_color(normal_color)
     @params[param_id] ||= @actor.param(param_id)
-    draw_number_unit(x, y, 42, line_height, @params[param_id], 2)
+    draw_number_unit(x, y, 60, line_height, @params[param_id], 2) #Adjusted from original width for wider stat number display
   end
 
   def draw_new_param(x, y, param_id)
     new_value = @temp_actor.param(param_id)
     change_color(param_change_color(new_value - @params[param_id]))
-    draw_number_unit(x, y, 42, line_height, new_value, 2)
+    draw_number_unit(x, y, 60, line_height, new_value, 2) #Adjusted from original width for wider stat number display
   end
 
   def refresh_temp
@@ -2700,9 +2700,9 @@ class Window_EquipStatus < Window_Base
   #--------------------------------------------------------------------------
   def draw_item(x, y, param_id)
     draw_param_name(x + 4, y, param_id)
-    draw_current_param(x + 74, y, param_id) if @actor
-    draw_right_arrow(x + 116, y)
-    draw_new_param(x + 140, y, param_id) if @temp_actor
+    draw_current_param(x + 80, y, param_id) if @actor
+    draw_right_arrow(x + 138, y)
+    draw_new_param(x + 162, y, param_id) if @temp_actor #Draw values widths adjusted from original for wider stat number display
   end
 end
 
@@ -4216,6 +4216,7 @@ class Window_SkillCommand < Window_Command
 
     all_skill_types = @actor.skills.collect { |skill| skill.stype_id }.uniq
     all_skill_types.reject! { |stype_id| NWConst::Ability::ABILITY_SKILL_TYPE.include?(stype_id) }
+    all_skill_types.reject! { |stype_id| stype_id == 999} #Added to prevent Proofs from appearing in the usable skillsets
     enable_skill_types = @actor.added_skill_types
     enable_skill_types.reject! { |stype_id| @actor.skill_type_sealed?(stype_id) }
 

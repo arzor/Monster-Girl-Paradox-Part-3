@@ -2923,7 +2923,7 @@ module NWConst::JobChange
         "",
       ],
       [
-        "Equip: Magic Sword,Rod,Sexy Toy",
+        "Equip: Magic Sword,Rod,Sex Toy",
         "Skills: Sword,Black Magic,Psychic,Sexcraft",
         "Passive: MP Regen 6%,Sword/Sex Toy Mastery+",
         "",

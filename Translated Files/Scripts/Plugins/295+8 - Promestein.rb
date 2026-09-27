@@ -778,3 +778,933 @@ module RPG
     end
   end
 end
+
+#----
+# Accessory type fix
+#----
+class Window_Library_RightMain < Window_Selectable
+  def draw_accessory_basic(y, accessory)
+    rect = standard_rect
+    rect.y = draw_items_common(accessory)
+    # 5行目左半分 種別
+    rect = half_left_rect(rect.y)
+    txt = "Type:"
+    change_color(system_color)
+    draw_text(rect, txt)
+    reset_font_settings
+    txt = $data_system.armor_types[accessory.atype_id]
+    draw_text(rect, txt, 2)
+    # 5行目右半分 価格の描画
+    rect = half_right_rect(rect.y)
+    txt = "Cost:"
+    w = text_size(txt).width
+    change_color(system_color)
+    draw_text(rect, txt)
+    reset_font_settings
+    self.draw_currency_value(accessory.price, Vocab.currency_unit, rect.x + w, rect.y, rect.width - w)
+    rect.y += rect.height + LINE_HEIGHT
+    # 6行目左半分 装備箇所
+    rect = standard_rect(rect.y)
+    txt = "Slot:"
+    change_color(system_color)
+    draw_text(rect, txt)
+    reset_font_settings
+    txt = Vocab.etype(accessory.etype_id)
+    rect.x = 89
+    draw_text(rect, txt)
+    rect.y += rect.height + LINE_HEIGHT
+    # 7行目～ 能力補正
+    rect.y = draw_equips_common(rect.y, accessory)
+  end
+end
+
+#---
+# Removing non-recruited members equipment fix
+#----
+class Game_Interpreter
+  def delete_actor_ex(actor_id)
+    if $game_switches[447] && $game_party.exist_all_actor_id?(actor_id)
+      $game_actors[actor_id].clear_equipments
+    end  
+    $game_party.remove_actor(actor_id)
+  end
+
+  def clear_actor_equip(actor_id)
+    if $game_party.exist_all_actor_id?(actor_id)
+      $game_actors[actor_id].clear_equipments
+    end  
+  end
+end
+
+#----
+# Fixes and additions for item effects
+#----
+module RPG
+  class BaseItem
+    def get_enchant_names(fts)
+      names = []
+      dummy = nil
+
+      fts.sort_by { |ft| [-ft.priority, ft.code, ft.data_id] }.each do |ft|
+        method_name = enchant_method_table[ft.code]
+        if method_name == :dummy_enchant_name
+          dummy ||= []
+          dummy += send(method_name, ft)
+        elsif method_name == :skill_type_state_add || method_name == :stype_add_param
+          data = send(method_name, ft)
+          if !names.include?(data)
+            names.push(data) if data
+          end
+        elsif method_name
+          data = send(method_name, ft)
+          names.push(data) if data
+        end
+      end
+      data_ex.each do |nft|
+        if non_feature_table.include?(nft[0])
+          method_name = non_feature_table[nft[0]]
+          data = send(method_name, nft[1])
+          names.push(data) if data
+        end
+      end
+      names = dummy if dummy
+      names.flatten.compact
+    end
+
+    def enchant_method_table
+      {
+        FEATURE_ELEMENT_RATE => :element_rate_name,
+        FEATURE_DEBUFF_RATE => :debuff_rate_name,
+        FEATURE_STATE_RATE => :state_rate_name,
+        FEATURE_STATE_RESIST => :state_resist_name,
+        FEATURE_PARAM => :param_name,
+        FEATURE_XPARAM => :xparam_name,
+        FEATURE_XPARAM_EX => :xparam_name,
+        FEATURE_SPARAM => :sparam_name,
+        FEATURE_ATK_ELEMENT => :atk_element_name,
+        FEATURE_ATK_STATE => :atk_state_name,
+        FEATURE_ATK_SPEED => :atk_speed_name,
+        FEATURE_ATK_TIMES => :atk_times_name,
+        FEATURE_STYPE_ADD => :stype_add_name,
+        FEATURE_STYPE_SEAL => :stype_seal_name,
+        FEATURE_EQUIP_WTYPE => :equip_wtype_name,
+        FEATURE_EQUIP_ATYPE => :equip_atype_name,
+        FEATURE_EQUIP_FIX => :equip_fix_name,
+        FEATURE_EQUIP_SEAL => :equip_seal_name,
+        FEATURE_SLOT_TYPE => :slot_type_name,
+        FEATURE_ACTION_PLUS => :action_plus_name,
+        FEATURE_SPECIAL_FLAG => :special_flag_name,
+        FEATURE_COLLAPSE_TYPE => :collaplse_type_name,
+        FEATURE_PARTY_ABILITY => :party_ability_name,
+        FEATURE_XPARAM_EX => :xparam_ex_name,
+        FEATURE_PARTY_EX_ABILITY => :party_ex_ability_name,
+        FEATURE_BATTLER_ABILITY => :battler_ability_name,
+        FEATURE_MULTI_BOOSTER => :multi_booster_name,
+        FEATURE_DUMMY_ENCHANT => :dummy_enchant_name,
+        FEATURE_TERRAIN_BOOSTER => :terrain_booster_name,
+        FEATURE_EQUIP_MASTERY => :equip_mastery_name,
+        FEATURE_ELEMENT_DRAIN => :element_drain_name,
+        FEATURE_ADD_DUMMY_ENCHANT => :add_dummy_enchant_name, #Changed duplicate function, uses new function for additional effect text
+        FEATURE_BLOCK_RATE => :block_rate_name,
+        FEATURE_SKILL_STATE_ADD => :skill_state_add,
+        FEATURE_SKILL_TYPE_STATE_ADD => :skill_type_state_add,
+        FEATURE_SUCCUBUS => :fsuccubus,
+        FEATURE_ALL_ADD_ELEMENT => :all_add_element,
+        FEATURE_PENETRATION_ELEMENT => :penetration_element,
+        FEATURE_EX_CATEGORY_ATTACK => :ex_category_attack,
+        FEATURE_EX_CATEGORY_DEFENCE => :ex_category_defence,
+        FEATURE_STYPE_ADD_PARAM => :stype_add_param,
+        FEATURE_SKILL_COMBO => :skill_combo,
+        FEATURE_SKILL_TYPE_COMBO => :skill_type_combo,
+        FEATURE_ADD_ELEMENT => :add_element,
+        FEATURE_EX_CATEGORY_ATTACK_BONUS => :ex_category_attack_bonus,
+        FEATURE_SKILL_PLUS_ATTACK => :skill_plus_attack,
+        FEATURE_SKILL_TYPE_PLUS_ATTACK => :skill_type_plus_attack,
+        FEATURE_STATE_RATE_FIX => :state_rate_fix,
+        FEATURE_ELEMENT_RATE_FIX => :element_rate_fix,
+        FEATURE_AUTO_SKILL_INVALID => :auto_skill_invalid,
+        FEATURE_SKILL_PLUS_ATTACK_ONE_RANDOM => :skill_plus_attack_one_random,
+        FEATURE_SKILL_SCOPE_ALL => :skill_scope_all,
+        FEATURE_SKILL_TYPE_SCOPE_ALL => :skill_type_scope_all,
+        FEATURE_SKILL_SCOPE_ONE => :skill_scope_one,
+        FEATURE_SKILL_TYPE_SCOPE_ONE => :skill_type_scope_one,
+        FEATURE_ENEMY_MULTI_SKILL_TYPE_BOOST => :enemy_multi_skill_type_boost,
+        FEATURE_ENEMY_SINGLE_SKILL_TYPE_BOOST => :enemy_single_skill_type_boost,
+        FEATURE_WIELD_BOOST => :wield_boost,
+        FEATURE_BATTLE_START_STATE => :battle_start_state,
+        FEATURE_MULTI_ELEMENT => :multi_element,
+        FEATURE_SKILL_TYPE_COST_ZERO => :skill_type_cost_zero,
+        FEATURE_STATE_BOOST_PLUS => :state_boost_plus,
+        FEATURE_LEARNING => :learning,
+        FEATURE_FAST_MOVE_ALL => :fast_move_all,
+        FEATURE_SLOW_MOVE_ALL => :slow_move_all,
+        FEATURE_SKILL_TYPE_DEFENCE_PENETRATION => :skill_type_defence_penetration,
+        FEATURE_DUAL_SHIELD_ADD_ABILITY => :dual_shield_add_ability,
+        FEATURE_STATE_CHAIN => :state_chain,
+        FEATURE_FULL_HP_BOOST => :full_hp_boost,
+        FEATURE_MAX_AP_RATE => :max_ap_rate,
+        FEATURE_SKILL_CHAIN => :skill_chain,
+        FEATURE_SKILL_CHAIN_BOOST => :skill_chain_boost,
+        FEATURE_SKILL_CHAIN_COST_RATE => :skill_chain_cost_rate,
+        FEATURE_SKILL_COUNTER_EX => :skill_counter_ex,
+        FEATURE_SKILL_TIMING_BOOST => :skill_timing_boost,
+        FEATURE_SKILL_TIMING_REPEAT => :skill_timing_repeat,
+        FEATURE_TURN_END_REVIVE => :turn_end_revive,
+        FEATURE_UNDEAD => :undead,
+        FEATURE_SKILL_UNSTOPPABLE => :skill_unstoppable,
+        FEATURE_SKILL_TYPE_UNSTOPPABLE => :skill_type_unstoppable,
+        FEATURE_ELEMENT_DRAIN => :element_drain,
+        FEATURE_MAGICAL_CRITICAL => :magical_critical,
+        FEATURE_FULL_SP_STYPE_BOOST => :full_sp_stype_boost,
+        FEATURE_FULL_MP_STYPE_BOOST => :full_mp_stype_boost,
+        FEATURE_ADD_STEAL_STYPE => :add_steal_stype,
+        FEATURE_ADD_RESTORATION_STYPE_HP => :add_restoration_stype_hp,
+        FEATURE_ADD_RESTORATION_STYPE_MP => :add_restoration_stype_mp,
+        FEATURE_AUTO_REVIVE => :auto_revive,
+        FEATURE_ID_ITEM_BOOST => :id_item_boost,
+        FEATURE_STYPE_ITEM_COST_RATE => :stype_item_cost_rate,
+        FEATURE_STYPE_ITEM_GET_RATE => :stype_item_get_rate,
+        FEATURE_ONCE_TURN_END_STATE => :once_turn_end_state,
+        FEATURE_SINGLE_SKILL_BOOST => :single_skill_boost,
+        FEATURE_FAST_MOVE_SID => :fast_move_sid,
+        FEATURE_FAST_MOVE_STYPE => :fast_move_stype,
+        FEATURE_SLOW_MOVE_SID => :slow_move_sid,
+        FEATURE_SLOW_MOVE_STYPE => :slow_move_stype,
+        FEATURE_ADD_ELEMENT_STYPE => :add_element_stype,
+        FEATURE_HIT_DAMAGE_BOOST => :hit_damage_boost,
+        FEATURE_TURN_HIT_DAMAGE_RATE => :turn_hit_damage_rate,
+        FEATURE_MAX_AP_BONUS => :max_ap_bonus,
+        FEATURE_EX_CATEGORY_STYPE => :ex_category_stype,
+        FEATURE_REDUCE_BOOST_DAMAGE => :reduce_boost_damage,
+        FEATURE_ALTERNATE_TP_TO_MP => :alternate_tp_to_mp,
+        FEATURE_AUTO_SKILL_PRIORITY_INVALID => :auto_skill_priority_invalid,
+      }
+    end
+    
+    def invoke_repeats_type_names(ft)
+      names = []
+      ft.value.each do |key, val|
+        names.push("#{$data_system.skill_types[key]} Skills Repeat +#{val-1} #{val-1 == 1 ? "Time" : "Times"}")
+      end
+      names
+    end
+
+    def invoke_repeats_skill_names(ft)
+      names = []
+      ft.value.each do |key, val|
+        names.push("#{$data_skills[key].name} Repeat #{val-1} +#{val-1 == 1 ? "Time" : "Times"}")
+      end
+      names
+    end
+
+    def ex_category_attack_bonus(ft)
+      "#{State_Data::SLAYER[ft.data_id-10]} Slayer Effect +#{(ft.value * 100).floor}%"
+    end
+
+    def skill_plus_attack(ft)
+      "#{$data_skills[ft.data_id].name} +#{ft.value} Hits"
+    end
+
+    def skill_type_plus_attack(ft)
+      "Multi-Hit #{$data_system.skill_types[ft.data_id]} Skills +#{ft.value} Hits"
+    end
+
+    def state_rate_fix(ft)
+      "#{$data_states[ft.data_id].name} Resist = Fixed #{(ft.value * 100).floor}%"
+    end
+
+    def element_rate_fix(ft)
+      "#{$data_system.elements[ft.data_id]} Resist = Fixed #{(ft.value * 100).floor}%"
+    end
+
+    def auto_skill_invalid(ft)
+      case ft.data_id
+      when 12; "Disable On-Death Skills" 
+      when 13; "Disable Battle Start Skills" 
+      when 14; "Disable Turn Start Skills" 
+      when 15; "Disable Turn End Skills" 
+      end
+    end
+
+    def skill_plus_attack_one_random(ft)
+      "#{$data_skills[ft.data_id].name}: #{ft.value} Hits to Random Target"
+    end
+
+    def skill_scope_all(ft)
+      "#{$data_skills[ft.data_id].name}: Target - All Foes"
+    end
+
+    def skill_type_scope_all(ft)
+      "#{$data_system.skill_types[ft.data_id]} Skills: Target - All Foes"
+    end
+
+    def skill_scope_one(ft)
+      "#{$data_skills[ft.data_id].name}: Target - One Foe"
+    end
+
+    def skill_type_scope_one(ft)
+      "#{$data_system.skill_types[ft.data_id]} Skills: Target - One Foe"
+    end
+
+    def enemy_multi_skill_type_boost(ft)
+      "#{$data_system.skill_types[ft.data_id]} Skill Damage +#{(ft.value * 100).floor}% if Foe is Not Alone"
+    end
+
+    def enemy_single_skill_type_boost(ft)
+      "#{$data_system.skill_types[ft.data_id]} Skill Damage +#{(ft.value * 100).floor}% if Foe is Alone"
+    end
+
+    def wield_boost(ft)
+      case ft.data_id
+      when 1; "Single Wield: +#{(ft.value[0] * 100).floor}% to Weapon Stats"
+      when 2; "Dual Wield: +#{(ft.value[0] * 100).floor}% to Weapon Stats"
+      when 3; "Triple Wield: +#{(ft.value[0] * 100).floor}% to Weapon Stats"
+      end
+    end
+
+    def battle_start_state(ft)
+      "On-battle start:#{$data_states[ft.value[0]].name} for #{ft.value[1]} Turns"
+    end
+
+    def multi_element(ft)
+      names = []
+      ft.value.each{|st|
+        names.push("#{$data_system.elements[st]} Strike")
+      }
+      return names
+    end
+
+    def skill_type_cost_zero(ft)
+      case ft.value[0]
+      when :hp; "#{$data_system.skill_types[ft.value[1]]} Skills Cost No HP"
+      when :mp; "#{$data_system.skill_types[ft.value[1]]} Skills Cost No MP"
+      when :tp; "#{$data_system.skill_types[ft.value[1]]} Skills Cost No SP"
+      end
+    end
+
+    def equip_mastery_name(ft)
+      "#{ft.data_id[0] == 0 ? ($data_system.weapon_types[ft.data_id[1]]) : ($data_system.armor_types[ft.data_id[1]])} Mastery +#{(ft.value * 100 - 100).floor}%"
+    end
+
+    def auto_stand_name(ft)
+      "Endure above #{(ft.value * 100).floor}% HP"
+    end
+
+    def get_gold_rate_name(ft)
+      rate = (ft.value * 100.0).to_i - 100
+      "Gold Drop Rate #{0 < rate ? "+" : "-"}#{rate}%"
+    end
+
+    def get_item_rate_name(ft)
+      rate = (ft.value * 100.0).to_i - 100
+      "Item Drop Rate #{0 < rate ? "+" : "-"}#{rate}%"
+    end
+
+    def state_boost_plus(ft)
+      "Condition bonus +#{(ft.value * 100).floor}%"
+    end
+
+    def learning(ft)
+      "Sorcery Learning"
+    end
+
+    def fast_move_all(ft)
+      "All Skills Haste"
+    end
+
+    def slow_move_all(ft)
+      "All Skills Delay"
+    end
+
+    def skill_type_defence_penetration(ft)
+      "#{$data_system.skill_types[ft.data_id]} Skills Ignore Defense"
+    end
+
+    def dual_shield_add_ability(ft)
+      case ft.data_id
+      when 5210
+        ["Dual Shield:Physical Damage Taken = 80%",
+         "Dual Shield:Magical Damage Taken = 80%",
+         "Dual Shield:Auto-Hit Damage Taken = 80%",
+         "Dual Shield:Throwing Skills use Defense"]
+      when 5212
+        ["Dual Shield:Defense +30%",
+         "Dual Shield:Willpower +30%",
+         "Dual Shield:Physical Damage Taken = 80%",
+         "Dual Shield:Magical Damage Taken = 80%",
+         "Dual Shield:Auto-Hit Damage Taken = 80%"]
+      when 5214
+        ["Dual Shield:Defense +60%",
+         "Dual Shield:Willpower +60%",
+         "Dual Shield:Physical Damage Taken = 60%",
+         "Dual Shield:Magical Damage Taken = 60%",
+         "Dual Shield:Auto-Hit Damage Taken = 60%"]
+      end
+    end
+
+    def state_chain(ft)
+      "#{$data_states[ft.data_id].name} Also Adds #{$data_states[ft.value].name}"
+    end
+
+    def full_hp_boost(ft)
+      "+#{(ft.value * 100 - 100).floor}% to All Stats at Max HP"
+    end
+
+    def max_ap_rate(ft)
+      "#{$data_system.skill_types[ft.data_id]} #{ft.value < 0 ? "" : "+"}#{(ft.value * 100).floor}%"
+    end
+
+    def skill_chain(ft)
+      names = ["#{$data_system.skill_types[ft.data_id]} Skills Chain >"]
+      name = [""]
+      ft.value.each{|st|
+        name = "  to #{$data_system.skill_types[st]} Skills >"
+        names.push(name)
+      }
+      names[names.size-1] = name[0,name.size-1]
+      return names
+    end
+
+    def skill_chain_boost(ft)
+      "Chained Skills Damage +#{(ft.value * 100).floor}%"
+    end
+
+    def skill_chain_cost_rate(ft)
+      "Chained Skills Cost = #{(ft.value * 100).floor}%"
+    end
+
+    def skill_counter_ex(ft)
+      "Counter #{$data_skills[ft.data_id].name} with #{$data_skills[ft.value].name}"
+    end
+
+    def skill_timing_boost(ft)
+      case ft.data_id
+      when 0; "+#{(ft.value * 100).floor}% Damage when Acting First"
+      when 1; "+#{(ft.value * 100).floor}% Damage when Acting Last"
+      end
+    end
+
+    def skill_timing_repeat(ft)
+      case ft.data_id
+      when 0; "Skills Repeat +1 Time when Acting First"
+      when 1; "Skills Repeat +1 time when Acting Last"
+      end
+    end
+
+    def turn_end_revive(ft)
+      "End of Turn Revive"
+    end
+
+    def undead(ft)
+      ["Can Act when Incapacitated", "Considered Dead"]
+    end
+
+    def skill_unstoppable(ft)
+      "Persistent #{$data_skills[ft.data_id].name}" if $data_skills[ft.data_id].name != ""
+    end
+
+    def skill_type_unstoppable(ft)
+      "#{$data_system.skill_types[ft.data_id]} Persistence"
+    end
+
+    def element_drain(ft)
+      "Absorb #{$data_system.elements[ft.data_id]}"
+    end
+
+    def magical_critical(ft)
+      "Magic Critical Rate = #{(ft.value * 100).floor}%"
+    end
+
+    def full_sp_stype_boost(ft)
+      "+#{(ft.value * 100).floor}% to #{$data_system.skill_types[ft.data_id]} Skills at Max SP"
+    end
+
+    def full_mp_stype_boost(ft)
+      "+#{(ft.value * 100).floor}% to #{$data_system.skill_types[ft.data_id]} Skills at Max MP"
+    end
+
+    def add_steal_stype(ft)
+      "#{$data_system.skill_types[ft.data_id]} Skills Mug"
+    end
+
+    def add_restoration_stype_hp(ft)
+      "#{$data_system.skill_types[ft.data_id]} Skills Drain #{(ft.value * 100).floor}% HP"
+    end
+
+    def add_restoration_stype_mp(ft)
+      "#{$data_system.skill_types[ft.data_id]} Skills Drain #{(ft.value * 100).floor}% MP"
+    end
+
+    def auto_revive(ft)
+      case ft.data_id
+      when 0; "Auto-Revive #{ft.value.floor} #{ft.value == 1 ? "time" : "times"}"
+      when 1; "Auto-Revive with #{(ft.value * 100).floor}% HP"
+      end
+    end
+
+    def id_item_boost(ft)
+      "#{$data_items[ft.data_id].name} damage +#{(ft.value * 100).floor}%"
+    end
+
+    def stype_item_cost_rate(ft)
+      "#{$data_system.skill_types[ft.data_id]} Skills Item Cost ×#{ft.value}"
+    end
+
+    def stype_item_get_rate(ft)
+      "#{$data_system.skill_types[ft.data_id]} Skills Item Production ×#{ft.value}"
+    end
+
+    def once_turn_end_state(ft)
+      "After #{ft.data_id} turns #{$data_states[ft.value].name}"
+    end
+
+    def single_skill_boost(ft)
+      "Single-Hit Skill Damage +#{(ft.value * 100 - 100).floor}%"
+    end
+
+    def fast_move_sid(ft)
+      "#{$data_skills[ft.data_id].name} Haste" if $data_skills[ft.data_id].name != ""
+    end
+
+    def fast_move_stype(ft)
+      "#{$data_system.skill_types[ft.data_id]} Skill Haste"
+    end
+
+    def slow_move_sid(ft)
+      "#{$data_skills[ft.data_id].name} Delay" if $data_skills[ft.data_id].name != ""
+    end
+
+    def slow_move_stype(ft)
+      "#{$data_system.skill_types[ft.data_id]} Skill Delay"
+    end
+
+    def add_element_stype(ft)
+      "#{$data_system.skill_types[ft.data_id]} Skills Deal #{$data_system.elements[ft.value]} Damage"
+    end
+
+    def hit_damage_boost(ft)
+      "Multi-Hit Skill Damage +#{(ft.value * 100 - 100).floor}% per Successive Hit"
+    end
+
+    def turn_hit_damage_rate(ft)
+      "Damage Recieved #{(ft.value * 100 - 100).floor}% per Successive Hit"
+    end
+
+    def max_ap_bonus(ft)
+      "#{$data_system.skill_types[ft.data_id]} +#{ft.value.floor} Max AP"
+    end
+
+    def ex_category_stype(ft)
+      "#{$data_system.skill_types[ft.data_id[0]]} Skill Damage +#{(ft.value * 100).floor}% to #{State_Data::SLAYER[ft.data_id[1]-10]}"
+    end
+
+    def reduce_boost_damage(ft)
+      "Recieved Slayer and Cond. Bonuses -#{(ft.value * 100).floor}%"
+    end
+
+    def alternate_tp_to_mp(ft)
+      "Use MP When SP Empty at #{(ft.value * 100).floor}% cost"
+    end
+
+    def auto_skill_priority_invalid(ft)
+      case ft.data_id
+      when 12; "Disable On-Death Skills" 
+      when 13; "Disable Battle Start Skills" 
+      when 14; "Disable Turn Start Skills" 
+      when 15; "Disable Turn End Skills" 
+      end
+    end
+    
+    def add_element(ft)
+      "Add #{$data_system.elements[ft.value]} to #{$data_system.elements[ft.data_id]} Element"
+    end
+    
+    def skill_type_combo(ft)
+      "[#{$data_system.skill_types[ft.data_id]} Skills > #{$data_skills[ft.value].name}] Combo"
+    end
+    
+    def skill_combo(ft)
+      "[#{$data_skills[ft.data_id].name} > #{$data_skills[ft.value].name}] Combo"
+    end
+    
+    def stype_add_param(ft)
+      "#{$data_system.skill_types[ft.data_id]} Skills Power +#{(ft.value[2] * 100).floor}% #{$data_system.terms.params[ft.value[1]]}"
+    end
+    
+    def ex_category_defence(ft)
+      "Damage from #{State_Data::SLAYER[ft.data_id-10]} -#{100 - (ft.value * 100).floor}%"
+    end
+    
+    def ex_category_attack(ft)
+      "Damage to #{State_Data::SLAYER[ft.data_id-10]} +#{(ft.value * 100).floor}%"
+    end
+    
+    def penetration_element(ft)
+      "#{$data_system.elements[ft.data_id]} Element Ignore Resistance"
+    end
+    
+    def all_add_element(ft)
+      "#{$data_system.elements[ft.data_id]} Strike for All Skills"
+    end
+    
+    def fsuccubus(ft)
+      "Nightmare attribute"
+    end
+    
+    def skill_type_state_add(ft)
+      if !ft.value[:self].empty?
+        names = []
+        ft.value[:self].each{|st,val|
+          name = "#{$data_system.skill_types[ft.data_id]} Skills Add to Self "
+          name += "#{$data_states[st].name} "
+          name += "#{(val*100).floor}%"
+          names.push(name)
+        }
+        return names
+      elsif !ft.value[:opponents].empty?
+        names = []
+        ft.value[:opponents].each{|st,val|
+          name = "#{$data_system.skill_types[ft.data_id]} Skills Add to Foes "
+          name += "#{$data_states[st].name} "
+          name += "#{(val*100).floor}%"
+          names.push(name)
+        }
+        return names
+      elsif !ft.value[:friends].empty?
+        names = []
+        ft.value[:friends].each{|st,val|
+          name = "#{$data_system.skill_types[ft.data_id]} Skills Add to Party "
+          name += "#{$data_states[st].name} "
+          name += "#{(val*100).floor}%"
+          names.push(name)
+        }
+        return names
+      end
+    end
+    
+    def skill_state_add(ft)
+      if !ft.value[:self].empty?
+        pt2 = ft.value[:self].collect{|st,val| "#{$data_states[st].name}:#{(val*100).floor}%"}
+        "#{$data_skills[ft.data_id].name} Adds #{pt2[0]}"
+      elsif !ft.value[:target].empty?
+        pt2 = ft.value[:target].collect{|st,val| "#{$data_states[st].name}:#{(val*100).floor}%"}
+        "#{$data_skills[ft.data_id].name} Inflict #{pt2[0]}"
+      end
+    end
+      
+    def action_plus_name(ft)
+      if ft.value < 1
+        "#{(ft.value * 100).floor}% Chance to +1 Action"
+      else
+        "#{ft.value.floor + 1} Actions"
+      end
+    end
+    
+    
+
+    def battler_ability_name(ft)
+      method_table = {
+        STEAL_SUCCESS => :steal_success_name,
+        AUTO_STAND => :auto_stand_name,
+        HEEL_REVERSE => :heel_reverse_name,
+        AUTO_STATE => :auto_state_names,
+        TRIGGER_STATE => :trigger_state_name,
+        METAL_BODY => :metal_body_name,
+        DEFENSE_WALL => :defense_wall_name,
+        INVALIDATE_WALL => :invalidate_wall_name,
+        DAMAGE_MP_CONVERT => :damage_mp_convert_name,
+        DAMAGE_GOLD_CONVERT => :damage_gold_convert_name,
+        DAMAGE_MP_DRAIN => :damage_mp_drain_name,
+        DAMAGE_GOLD_DRAIN => :damage_gold_drain_name,
+        DEAD_SKILL => :dead_skill_name,
+        BATTLE_START_SKILL => :battle_start_skill_name,
+        TURN_START_SKILL => :turn_start_skill_name,
+        TURN_END_SKILL => :turn_end_skill_name,
+        CHANGE_ACTION => :change_action_names,
+        STYPE_COST_RATE => :stype_cost_rate_name,
+        SKILL_COST_RATE => :skill_cost_rate_name,
+        TP_COST_RATE => :tp_cost_rate_name,
+        HP_COST_RATE => :hp_cost_rate_name,
+        GOLD_COST_RATE => :gold_cost_rate_name,
+        INCREASE_TP => :increase_tp_name,
+        START_TP_RATE => :start_tp_rate_name,
+        BATTLE_END_HEEL_HP => :battle_end_heel_hp_name,
+        BATTLE_END_HEEL_MP => :battle_end_heel_mp_name,
+        Battler::NORMAL_ATTACK => :normal_attack_name,
+        FINAL_INVOKE => :final_invoke_names,
+        CERTAIN_COUNTER => :certain_counter_name,
+        MAGICAL_COUNTER => :magical_counter_name,
+        PHYSICAL_COUNTER_EX => :physical_counter_ex_name,
+        MAGICAL_COUNTER_EX => :magical_counter_ex_name,
+        CERTAIN_COUNTER_EX => :certain_counter_ex_name,
+        CONSIDERATE => :considerate_name,
+        GET_EXP_RATE => :get_exp_rate_name,
+        GET_CLASSEXP_RATE => :get_classexp_rate_name,
+        INVOKE_REPEATS_TYPE => :invoke_repeats_type_names,
+        INVOKE_REPEATS_SKILL => :invoke_repeats_skill_names,
+        OWN_CRUSH_RESIST => :own_crush_resist_name,
+        IGNORE_OVER_DRIVE => :ignore_over_drive_name,
+        INSTANT_DEAD_REVERSE => :instant_dead_reverse_name,
+        CHANGE_SKILL => :change_skill_name,
+        PHYSICAL_REFLECTION => :physical_reclection_name,
+        SLOT_CANNOT_DUAL_WIELD => :slot_cannot_dual_wield_name,
+        HP_REGEN_INVALID => :hp_regen_invalid_name,
+        CANT_MOVE => :cant_move_name,
+        BATTLE_START_HP => :battle_start_hp_name,
+        CERTAIN_DAMAGE_RATE => :certain_damage_rate_name,
+        ELEMENT_REFLECTION => :element_reflection_name,
+        SELF_STATE_ETERNAL => :self_state_eternal_name,
+        TARGET_STATE_ETERNAL => :target_state_eternal_name,
+        EQUIP_ABILITY_BOOST => :equip_ability_boost_name,
+        ITEM_COST_SCRIMP_TYPE => :item_cost_scrimp_type_name,
+        NORMAL_ATTACK_FORCE_ELEMENT => :normal_attack_force_element_name,
+        CERTAIN_REFLECTION => :certain_reflection_name,
+        COUNTER_SKILL => :counter_skill_name,
+        MAGICAL_COUNTER_SKILL => :magical_counter_skill_name,
+        CERTAIN_COUNTER_SKILL => :certain_counter_skill_name,
+        COUNTER_EX_SKILL => :counter_ex_skill_name,
+        MAGICAL_COUNTER_EX_SKILL => :magical_counter_ex_skill_name,
+        CERTAIN_COUNTER_EX_SKILL => :certain_counter_ex_skill_name,
+        EVASION_SKILL => :evasion_skill_name,
+      }
+      method_name = method_table[ft.data_id]
+      method_name ? send(method_name, ft) : nil
+      # return method_name ? send(method_name, ft) : "UNKNOWN:BattlerAbility #{ft.data_id}"★
+    end
+
+    def hp_regen_invalid_name(ft)
+      "Disable HP Regen"
+    end
+    
+    def cant_move_name(ft)
+      "Cannot Act"
+    end
+    
+    def battle_start_hp_name(ft)
+      "Start Battle at #{(ft.value * 100).floor}% HP"
+    end
+    
+    def certain_damage_rate_name(ft)
+      "Auto-Hit Damage Taken = #{(ft.value * 100).floor}%"
+    end
+    
+    def element_reflection_name(ft)
+      "Reflects #{$data_system.elements[ft.value]} Damage"
+    end
+    
+    def self_state_eternal_name(ft)
+      names = []
+      ft.value.each{|st|
+        names.push("#{$data_states[st].name} is Permanent on Self")
+      }
+      return names
+    end
+
+    def target_state_eternal_name(ft)
+      names = []
+      ft.value.each{|st|
+        names.push("#{$data_states[st].name} is Permanent on Targets")
+      }
+      return names
+    end  
+
+    def equip_ability_boost_name(ft)
+      "#{$data_system.terms.etypes[ft.value]} Equipment Special Effects Doubled"
+    end
+    
+    def item_cost_scrimp_type_name(ft)
+      names = []
+      ft.value.each{|st,val|
+        names.push("#{$data_system.skill_types[st]} Skills Consume No Items at #{(val * 100).floor}% Chance")
+      }
+      return names
+    end
+    
+    def normal_attack_force_element_name(ft)
+      "Normal Attack Fixed Element"
+    end
+    
+    def certain_reflection_name(ft)
+      "Auto-Hit Reflection +#{(ft.value * 100).floor}%"
+    end
+    
+    def counter_skill_name(ft)
+      "Phys. Counter with #{$data_skills[ft.value[:id]].name} #{(ft.value[:per] * 100).floor}%"
+    end
+
+    def magical_counter_skill_name(ft)
+      "Mag. Counter with #{$data_skills[ft.value[:id]].name} #{(ft.value[:per] * 100).floor}%"
+    end
+    
+    def certain_counter_skill_name(ft)
+      "Auto-Hit Counter with #{$data_skills[ft.value[:id]].name} #{(ft.value[:per] * 100).floor}%"
+    end
+    
+    def counter_ex_skill_name(ft)
+      "Null+Phys. Counter with #{$data_skills[ft.value[:id]].name} #{(ft.value[:per] * 100).floor}%"
+    end
+    
+    def magical_counter_ex_skill_name(ft)
+      "Null+Mag. Counter with #{$data_skills[ft.value[:id]].name} #{(ft.value[:per] * 100).floor}%"
+    end
+    
+    def certain_counter_ex_skill_name(ft)
+      "Null+Auto-Hit Counter with #{$data_skills[ft.value[:id]].name} #{(ft.value[:per] * 100).floor}%"
+    end
+    
+    def evasion_skill_name(ft)
+      "#{$data_skills[ft.value[:id]].name} After Evasion"
+    end
+
+    def multi_booster_name(ft)
+      method_table = {
+        ELEMENT => :booster_element_name,
+        WEAPON_PHYSICAL => :booster_weapon_physical_name,
+        WEAPON_MAGICAL => :booster_weapon_magical_name,
+        WEAPON_CERTAIN => :booster_weapon_certain_name,
+        Booster::NORMAL_ATTACK => :booster_normal_attack_name,
+        STATE_RATIO_TYPE => :booster_state_ratio_type_name,
+        STATE_FIX_TYPE => :booster_state_fix_type_name,
+        SKILL_TYPE => :booster_skill_type_name,
+        STATE_RATIO_SKILL => :booster_state_ratio_skill_name,
+        SKILL => :booster_skill_name,
+        WTYPE_SKILL => :booster_wtype_skill_name,
+        COUNTER => :booster_counter_name,
+        FALL_HP => :booster_fall_hp_name,
+        OVER_SOUL => :over_soul_name,
+        CRITICAL => :booster_critical_name,
+        REFLECTION => :booster_reflection_name,
+        ACTOR_PARAM => :booster_actor_param_name,
+        ACTOR_EXIST_PARAM => :booster_actor_exist_param_name,
+        SELF_STATE => :booster_self_state_name,
+        TARGET_STATE => :booster_target_state_name,
+        STATE_SKILL_TYPE => :booster_state_skill_type_name,
+        STATE_NORMAL_ATACK => :booster_state_normal_atack_name,
+        PINCHI_SKILL_TYPE => :booster_pinchi_skill_type_name,
+        BATTLE_COUNT => :booster_battle_count_name,
+        ACTOR_DEFEAT => :booster_actor_defeat_name,
+        ACTOR_CARRY => :booster_actor_carry_name,
+        ACTOR_DOWN => :booster_actor_down_name,
+        ACTOR_ORGASM => :booster_actor_orgasm_name,
+        ACTOR_STEAL => :booster_actor_steal_name,
+        ACTOR_LOVE => :booster_actor_love_name
+      }
+      method_name = method_table[ft.data_id]
+      method_name ? send(method_name, ft) : nil
+      # return method_name ? send(method_name, ft) : "UNKNOWN:MultiBooster" ★
+    end
+
+    def booster_reflection_name(ft)
+      "Reflected Damage = #{(ft.value * 100).floor}"
+    end
+    
+    def booster_actor_param_name(ft)
+      names = []
+      ft.value.each{|st,val|
+        names.push("+#{(val * 100).floor}% All Stats for #{$data_actors[st].name}")
+      }
+      return names
+    end
+    
+    def booster_actor_exist_param_name(ft)
+      names = []
+      ft.value.each{|st,val|
+        names.push("+#{(val * 100).floor}% All Stats When #{$data_actors[st].name} in Party")
+      }
+      return names
+    end
+    
+    def booster_self_state_name(ft)
+      names = []
+      ft.value.each{|st,val|
+        names.push("Duration of #{$data_states[st].name} +#{val} on Self")
+      }
+      return names
+    end
+    
+    def booster_target_state_name(ft)
+      names = []
+      ft.value.each{|st,val|
+        names.push("Duration of #{$data_states[st].name} +#{val} on Targets")
+      }
+      return names
+    end
+
+    
+    def booster_state_skill_type_name(ft)
+      names = []
+      ft.value.each{|st,val|
+        names.push("#{$data_system.skill_types[st[0]]} Skill Damage +#{(val * 100).floor}% to foes in #{$data_states[st[1]].name}")
+      }
+      return names
+    end
+    
+    def booster_state_normal_atack_name(ft)
+      names = []
+      ft.value.each{|st,val|
+        names.push("Normal Attack Damage +#{(val * 100).floor}% to foes in #{$data_states[st].name}")
+      }
+      return names
+    end
+    
+    def booster_pinchi_skill_type_name(ft)
+      names = []
+      ft.value.each{|st,val|
+        names.push("#{$data_system.skill_types[st]} Skills do +#{(val * 100).floor}% when below 20% HP")
+      }
+      return names
+    end
+    
+    def booster_battle_count_name(ft)
+      "+1% damage for every #{(ft.value * 100).floor} Battles Fought"
+    end
+    
+    def booster_actor_defeat_name(ft)
+      "+1% damage for every #{(ft.value * 100).floor} Enemy Defeated"
+    end
+    
+    def booster_actor_carry_name(ft)
+      "+1% damage for every #{(ft.value * 100).floor} Enemy Orgasmed"
+    end
+    
+    def booster_actor_down_name(ft)
+      "+1% Damage for every #{(ft.value * 100).floor} Defeats"
+    end
+    
+    def booster_actor_orgasm_name(ft)
+      "+1% Damage for every #{(ft.value * 100).floor} Orgasms"
+    end
+    
+    def booster_actor_steal_name(ft)
+      "+1% Damage for every #{(ft.value * 100).floor} Stolen Items"
+    end
+    
+    def booster_actor_love_name(ft)
+      "+1% Damage for every #{(ft.value * 100).floor} Affection"
+    end
+    
+    def non_feature_table
+      {
+      :skill_convert_param_data => :non_feature_convert_param_data,
+      :weapon_rate_bonus => :non_feature_weapon_rate_bonus,
+      }
+    end
+
+    def non_feature_convert_param_data(nft)
+      names = []
+      nft.each{|st,val|
+        val = val.flatten
+        names.push("#{$data_system.skill_types[st]} Skills use #{$data_system.terms.params[val[1]]}")
+      }
+      return names
+    end
+
+    def non_feature_weapon_rate_bonus(nft)
+      names = []
+      nft.each{|wt|
+        names.push("#{$data_system.weapon_types[wt]} Compatibility")
+      }
+      return names
+    end
+  end
+end

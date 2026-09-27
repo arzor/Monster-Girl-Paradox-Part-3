@@ -25,7 +25,7 @@ class Window_GainMedal < Window_Base
   # ● ウィンドウ幅の取得
   #--------------------------------------------------------------------------
   def window_width
-    return 240
+    return 360 #Widened from 240 in translation to fit longer achievement names
   end
   #--------------------------------------------------------------------------
   # ● ウィンドウを開く

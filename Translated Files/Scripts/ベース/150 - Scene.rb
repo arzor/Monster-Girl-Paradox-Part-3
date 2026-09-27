@@ -2309,7 +2309,7 @@ class Scene_ItemBase < Scene_MenuBase
     param_name = $data_system.terms.params[effects[0].data_id]
     actor_name = item_target_actors[0].name
     actor_name += "達" if item_target_actors.size > 1
-    open_popup_window("#{actor_name}の#{param_name}はこれ以上成長しない…")
+    open_popup_window("#{actor_name}'s #{param_name} cannot be increased any higher...")
   end
 
   def open_popup_window(text)

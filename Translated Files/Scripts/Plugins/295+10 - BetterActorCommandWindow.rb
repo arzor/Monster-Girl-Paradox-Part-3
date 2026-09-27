@@ -19,7 +19,7 @@ NAME_TO_ICON = {'Attack' => 11, 'Sword' => 463, 'Katana' => 922, 'Spear' => 836,
                 'Ocean' => 155, 'Spellblade' => 181, 'Oracle' => 220, 'Psychic' => 180,
                 'Taoism' => 233, 'Justice' => 227, 'Mercantile' => 3444, 'Cooking' => 224,
                 'Ruling' => 226, 'Snake' => 3973, 'Insect' => 3975, 'Plant' => 3355,
-                'Struggle' => 32, 'Fan' => 1540}
+                'Struggle' => 32, 'Fan' => 1540, 'Chaos' => 172}
 
 module NWConst::Config
   CONTENTS.insert(-3, { :key => :actor_command, :name => "Actor Command Window", :sub => true,
@@ -153,6 +153,9 @@ class Window_ActorCommand < Window_Command
     end
 
     case item_icons.length
+    when 0
+      return
+
     when 1
       draw_icon(item_icons[0], rect.x, rect.y)
 

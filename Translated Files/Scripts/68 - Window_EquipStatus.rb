@@ -18,7 +18,7 @@ class Window_EquipStatus < Window_Base
   # ● ウィンドウ幅の取得
   #--------------------------------------------------------------------------
   def window_width
-    return 208
+    return 248 #Adjusted from original width for wider stat number display
   end
   #--------------------------------------------------------------------------
   # ● ウィンドウ高さの取得

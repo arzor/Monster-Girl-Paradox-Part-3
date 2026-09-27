@@ -30,7 +30,7 @@ module NWConst::Config
     { :key => :bt_skip_enemy_cutin, :name => "Enemy Cut-Ins", :sub => true,
       :help => "【Battle】Change display of enemy skill cut-ins.\r\n←/→ Select" },
     { :key => :bt_skip_chain_action_cutin, :name => "Skill Chain Cut-Ins", :sub => true,
-      :help => "【Battle】Change display of cut-ins when using skills in a chain.\r\n←/→ Select"},
+      :help => "【Battle】Change display of cut-ins when using skills in a\r\nchain.\r\n←/→ Select"},
     { :key => :bt_auto,      :name => "Battle Log", :sub => true,
       :help => "【Battle】Change battle log display setting.\r\n←/→ Select"},
     { :key => :bt_wait,      :name => "Battle Wait", :sub => true,
